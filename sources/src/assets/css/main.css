@@ -108,19 +108,31 @@ h3 {
 }
 
 h1.main-header {
-  text-align: center;
   font-size: 20px;
   font-size: 6rem;
   line-height: 0.9;
-  color: #000;
-}
-
-h1.main-header::first-line {
   color: #fff;
 }
 
+.main-header::before {
+  content: "ROBO";
+  color: #000;
+}
+
+.main-header::after {
+  content: "CON";
+  color: #000;
+}
+
+.img-header {
+  float: left;
+  margin-top: 11px;
+  width: 160px;
+  margin-right: 50px;
+}
+
 .main-header-container {
-  width: 340px;
+  width: 780px;
   margin: 10px auto;
   padding-bottom: 50px;
 }
@@ -128,7 +140,7 @@ h1.main-header::first-line {
 .header {
   background-color: rgb(0, 192, 181);
   margin: 0;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .white-box {
@@ -209,10 +221,22 @@ hr {
   min-width: 180px;
   text-align: center;
   height: 100vh;
-  text-transform: uppercase
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);
 }
 
-#navigation.sidebar {
+#navigation.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  text-transform: uppercase;
   background-color: rgb(0, 0, 0);
 }
 
@@ -224,12 +248,19 @@ hr {
   color: rgb(0, 192, 181);
 }
 
+.nav-item {
+  display: inline;
+}
+
+.nav-link {
+  display: inline;
+}
+
 #navigation .nav-item a.nav-link {
   font-family: 'OCRA';
   color: #fff;
   text-align: left;
   font-size: 0.8rem;
-  padding-left: 16%;
 }
 
 #navigation-collapsed {
@@ -345,5 +376,19 @@ table {
 @media (max-width: 992px) {
   h1 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .main-header {
+    font-size: 4rem !important;
+  }
+
+  .main-header-container {
+    width: 350px !important;
+  }
+
+  .img-header {
+    display: none;
   }
 }

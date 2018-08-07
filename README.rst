@@ -1,8 +1,7 @@
-Robot Framework ecosystem front page
+Robocon 2019 Website
 ====================================
 
-This repository hosts Robot Framework's public website source code. The site
-itself is available at http://robotframework.org.
+This repository hosts RoboCon 2019 source code.
 
 Readme for editing this page `<sources/README.md>`__
 

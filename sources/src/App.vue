@@ -1,10 +1,9 @@
 <template>
     <div class="row no-gutters">
-     <div class="col-md-2">
-         <navigation-vertical :pages="pages"/>
-     </div>
 
-    <div class="col-md-10" id="scroller"
+         <navigation-horizontal :pages="pages"/>
+
+    <div class="col-md-12" id="scroller"
     ref="content" style="position:relative;height:100vh;overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling: touch;">
         <app-header/>
         <page-block v-for="(page, index) in pages"

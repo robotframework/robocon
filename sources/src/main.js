@@ -16,6 +16,7 @@ import VueAnalytics from 'vue-analytics'
 import AppHeader from '@/components/AppHeader'
 import AppFooter from '@/components/AppFooter'
 import NavigationVertical from '@/components/NavigationVertical'
+import NavigationHorizontal from '@/components/NavigationHorizontal'
 import BootstrapVue from 'bootstrap-vue'
 
 Vue.use(BootstrapVue)
@@ -34,6 +35,7 @@ Vue.config.productionTip = false
 
 Vue.component('app-header', AppHeader)
 Vue.component('navigation-vertical', NavigationVertical)
+Vue.component('navigation-horizontal', NavigationHorizontal)
 Vue.component('app-footer', AppFooter)
 
 new Vue({
