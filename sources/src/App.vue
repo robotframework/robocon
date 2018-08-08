@@ -10,7 +10,7 @@
           v-bind:page="page"
           v-bind:index="index"
           v-bind:key="index"
-          class="pl-md-5 px-lg-2 p-sm-3 py-5 p-xs-1"/>
+          class="pl-md-5 px-lg-2 p-sm-3 p-xs-1 link-fix"/>
         <app-footer class="mt-0 py-5"/>
       </div>
     </div>
@@ -36,7 +36,7 @@ export default {
               twitter: false,
               header: "Welcome to ROBOCON 2019!",
               text:
-                '<p> <b>RoboCon</b> is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers.</p> Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
+                '<p>RoboCon is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers. <br> <br> Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
             }
           }
         },
@@ -148,7 +148,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p> <b>RoboCon</b> is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers.</p> Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
+                '<p> RoboCon is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers. Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
             }
           }
         },
@@ -163,7 +163,22 @@ export default {
               twitter: false,
               header: "Program",
               text:
-                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><a class='color mt-5' href='http://www.siili.com'>Matti Möttönen</a>, Siili Solutions Oy<p>Keynote: How did we get here? Where do we go next?</p><a class='color mt-5' href='http://www.kone.fi'>Kyllikki Mörkö</a>, Kone Oy<p>Keynote: How did we get here? Where do we go next?</p><h2 class='mt-5'>Hallway Track</h3><p>In addition to the main conference room, there is dedicated space for an official “hallway track”. There you can chat with other users, show demos, work together, organize ad-hoc open space sessions, meet sponsor companies, and so on. This space can be used between the presentations, but it’s fine to use it also during presentations that aren’t so relevant for you.</p></div>"
+                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><a class='color mt-5 text-left' href='http://www.siili.com'>Matti Möttönen, Siili Solutions Oy</a><p>Keynote: How did we get here? Where do we go next?</p><a class='color mt-5 text-left' href='http://www.kone.fi'>Kyllikki Mörkö, Kone Oy</a><p>Keynote: How did we get here? Where do we go next?</p><h2 class='mt-5'>Hallway Track</h3><p>In addition to the main conference room, there is dedicated space for an official “hallway track”. There you can chat with other users, show demos, work together, organize ad-hoc open space sessions, meet sponsor companies, and so on. This space can be used between the presentations, but it’s fine to use it also during presentations that aren’t so relevant for you.</p></div>"
+            }
+          }
+        },
+        {
+          title: "Sprints",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Sprints",
+              text:
+                "<p>After the main conference we still have Friday, January 19, dedicated for development sprints. This event is for those who’d like to contribute to Robot Framework or any library or tool in its ecosystem. The event is free and open for everyone, including those not participating the conference itself. Sprint facilities are provided by Eficode and the address is Pohjoinen Rautatiekatu 25. Food and drinks will be available.<p><div class='ml-3'><h2 class='mb-3'>Agenda</h2><p>10:00 Welcome words. Introduction to participating projects and tasks they have available. </p><p>10:30 Introduction to contributing to open source projects. Git and GitHub introduction. Those familiar with these topics can skip this. </p><p>11:00 Development! Participants can work with tasks they find interesting either alone, in pairs, or in small groups. Project leaders help as much as they can. </p><p>16:00 Presenting what we have accomplished. </p><p>17:00 Official program ends. Sauna opens. Coding continues.</p></div><p>Confirmed project represented in the sprints are Robot Framework (Pekka Klärck), SeleniumLibrary (Tatu Aalto) and Jenkins plugin (Tatu Kairi and others), but it is also possible to work with other projects and even start totally new ones. If you have a project you’d like others to work with, please send an email to info@robocon.io and we can add it here. Especially with new projects, consider also presenting the project to others in lighting talks during the conference.</p>"
             }
           }
         },
@@ -171,7 +186,8 @@ export default {
           title: "Support",
           text_block: false,
           text_block_centered: true,
-          tab_box: true,
+          tab_box: false,
+          tab_box_centered: true,
           feature_box: false,
           data: {
             text: {

@@ -7,7 +7,7 @@
 
 body {
   background-color: #fff;
-  font-family: Georgia;
+  font-family: Roboto;
   font-size: 1.2rem;
   ;
   text-align: left;
@@ -38,6 +38,7 @@ footer h2 {
 
 a {
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  font-family: CourierCodeRoman;
 }
 
 a:hover {
@@ -49,7 +50,7 @@ header a.nav-link:hover {
 }
 
 p {
-  font-family: Georgia;
+  font-family: CourierCodeRoman;
   margin-bottom: 1rem;
 }
 
@@ -73,10 +74,6 @@ code {
   margin: 0;
   font-size: 1rem;
   font-weight: bold;
-}
-
-section {
-  margin-bottom: 50px;
 }
 
 h1,
@@ -141,7 +138,7 @@ h1.main-header {
 }
 
 .main-header-container {
-  width: 780px;
+  width: 760px;
   margin: 10px auto;
   padding-bottom: 50px;
 }
@@ -153,7 +150,7 @@ h1.main-header {
 }
 
 .white-box {
-  font-family: Georgia;
+  font-family: CourierCodeRoman;
   color: #000;
   background-color: #fff;
   padding: 10px;
@@ -332,7 +329,7 @@ hr {
   padding: 30px;
   color: #666;
   line-height: 1.1rem;
-  font-family: Georgia;
+  font-family: Roboto;
   border-radius: 0;
   border: none;
   background-color: #e7e7e7;
@@ -366,7 +363,7 @@ hr {
 
 .card-body {
   padding: 5px;
-  font-family: Georgia;
+  font-family: Roboto;
   text-align: left;
   font-size: 1rem;
   line-height: 1.3;
@@ -425,4 +422,12 @@ table {
   .logo-center {
     display: block;
   }
+}
+
+.link-fix::before {
+  content: "a"; 
+  margin-top: -285px; 
+  height: 285px; 
+  visibility: hidden; 
+  pointer-events: none;
 }
