@@ -102,9 +102,18 @@ h2 {
   font-size: 2.5rem;
 }
 
-h3 {
-  font-size: 2rem;
-  margin-top: 3rem;
+h2 {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+h2::before {
+  content: '> ';
+  color: rgb(0, 192, 181);
+}
+
+.color {
+  color: rgb(0, 192, 181);
 }
 
 h1.main-header {
@@ -409,5 +418,11 @@ table {
 
   .img-header {
     display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .logo-center {
+    display: block;
   }
 }

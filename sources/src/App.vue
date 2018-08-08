@@ -163,7 +163,7 @@ export default {
               twitter: false,
               header: "Program",
               text:
-                '<h4>Speakers</h1><p>'
+                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><a class='color mt-5' href='http://www.siili.com'>Matti Möttönen</a>, Siili Solutions Oy<p>Keynote: How did we get here? Where do we go next?</p><a class='color mt-5' href='http://www.kone.fi'>Kyllikki Mörkö</a>, Kone Oy<p>Keynote: How did we get here? Where do we go next?</p><h2 class='mt-5'>Hallway Track</h3><p>In addition to the main conference room, there is dedicated space for an official “hallway track”. There you can chat with other users, show demos, work together, organize ad-hoc open space sessions, meet sponsor companies, and so on. This space can be used between the presentations, but it’s fine to use it also during presentations that aren’t so relevant for you.</p></div>"
             }
           }
         },
