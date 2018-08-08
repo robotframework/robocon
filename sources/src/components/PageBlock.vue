@@ -6,6 +6,7 @@
     <text-block-centered v-if="page.text_block_centered == true" :data="page.data.text"/>
     <tab-box v-if="page.tab_box == true" :data="page.data.tabs"/>
     <user-box v-if="page.user_box == true" :data="page.data.users"/>
+    <user-box-centered v-if="page.user_box_centered == true" :data="page.data"/>
 
 </section>
 </template>
@@ -16,6 +17,7 @@ import TabBox from "@/Components/TabBox.vue";
 import TextBlock from "@/Components/TextBlock.vue";
 import TextBlockCentered from "@/Components/TextBlockCentered.vue";
 import UserBox from "@/Components/UserBox.vue";
+import UserBoxCentered from "@/Components/UserBoxCentered.vue";
 
 import Examples from "@/components/pages/Examples";
 
@@ -26,6 +28,7 @@ export default {
     TextBlockCentered,
     TabBox,
     UserBox,
+    UserBoxCentered,
     Examples
   },
   props: ["page"]

@@ -235,7 +235,7 @@ hr {
   padding-right: 0;
   width: 100%;
   text-align: center;
-  height: 40px;
+  height: 32px;
   text-transform: uppercase;
   background-color: rgb(0, 0, 0);
 }
@@ -283,18 +283,19 @@ hr {
   font-family: OCRA;
   text-transform: uppercase;
   margin-bottom: 20px;
+  display: block;
 }
 
 .no-border {
   border: none !important;
 }
 
-.pointy-header > h1{
+.dashed-header > h1{
   color: #000;
 }
 
-.pointy-header > h1::before{
-  content: '>> ';
+.dashed-header > h1::before{
+  content: '// ';
   color: rgb(0, 192, 181);
 }
 
@@ -347,6 +348,11 @@ hr {
   padding-top: 5px;
   padding-bottom: 30px;
   background: none;
+}
+
+.logo-center {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .card-body {
