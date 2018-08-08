@@ -26,16 +26,17 @@ export default {
     return {
       pages: [
         {
-          title: "Introduction",
-          text_block: true,
+          title: "Welcome",
+          text_block: false,
+          text_block_centered: true,
           tab_box: false,
           feature_box: false,
           data: {
             text: {
-              twitter: true,
-              header: "Introduction",
+              twitter: false,
+              header: "Welcome to ROBOCON 2019!",
               text:
-                '<p> <b>Robot Framework</b> is a generic test automation framework for acceptance testing and acceptance test-driven development (ATDD). It has easy-to-use tabular test data syntax and it utilizes the keyword-driven testing approach. Its testing capabilities can be extended by test libraries implemented either with Python or Java, and users can create new higher-level keywords from existing ones using the same syntax that is used for creating test cases. </p> <p> Robot Framework project is hosted on <a href="https://github.com/robotframework/robotframework" target="_blank">GitHub</a> where you can find further documentation, source code, and issue tracker. Downloads are hosted at <a href="https://pypi.python.org/pypi/robotframework" target="_blank">PyPI</a>. The framework has a rich ecosystem around it consisting of various generic <a href="#libraries">test libraries</a> and <a href="#tools">tools</a> that are developed as separate projects. </p> <p> Robot Framework is operating system and application independent. The core framework is implemented using <a href="http://python.org" target="_blank">Python</a> and runs also on <a href="http://jython.org" target="_blank">Jython</a> (JVM) and <a href="http://ironpython.net" target="_blank">IronPython</a> (.NET). </p> <p> Robot Framework itself is open source software released under <a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache License 2.0</a>, and most of the libraries and tools in the ecosystem are also open source. The framework was initially developed at <a href="http://networks.nokia.com" target="_blank">Nokia Networks</a> and it is nowadays sponsored by <a href="http://robotframework.org/foundation" target="_blank">Robot Framework Foundation</a>. </p>'
+                '<p> <b>RoboCon</b> is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers.</p> Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
             }
           }
         },
