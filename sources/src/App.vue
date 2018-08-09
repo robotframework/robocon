@@ -3,14 +3,13 @@
 
          <navigation-horizontal :pages="pages"/>
 
-    <div class="col-md-12" id=""
-    ref="content" style="">
+    <div class="col-md-12" ref="content">
         <app-header/>
         <page-block v-for="(page, index) in pages"
           v-bind:page="page"
           v-bind:index="index"
           v-bind:key="index"
-          class="pl-md-5 px-lg-2 p-sm-3 p-xs-1 link-fix"/>
+          class="pl-md-5 px-lg-2 p-sm-2 p-xs-1 link-fix"/>
         <app-footer class="mt-0 py-5"/>
       </div>
     </div>

@@ -7,8 +7,15 @@
 
  <b-navbar  toggleable="md" fixed="top" type="dark" id="navigation-collapsed" class="d-md-none">
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+  <div class="mobile-header"><div style="float: left">RBCN></div>
+    <transition name="header-slide" mode="out-in">
+      <div :key="currentPageMutable" class="color" style="float: left">
+        {{currentPageMutable}}
+      </div>
+    </transition> 
+  </div>
   <b-navbar-brand class="p-0 m-0 d-block d-md-none" href="#">
-    ROBOCON 2019 <b-img :src="require('@/assets/img/ROBOTFW_Mark_White_LOW_cropped.png')" class="" style="height:30px;"  alt="Robot Frameworkg logo"/>
+    <b-img :src="require('@/assets/img/ROBOTFW_Mark_White_LOW_cropped.png')" class="" style="height:33px;"  alt="Robot Frameworkg logo"/>
   </b-navbar-brand>
   <b-collapse is-nav id="nav_collapse">
     <b-navbar-nav class="align-middle">
@@ -22,13 +29,19 @@
 
 <script>
 export default {
-  props: ["pages"],
+  props: ["pages", "currentPage"],
+  data () {
+  return {
+      currentPageMutable: this.currentPage
+    }
+  },
   methods: {
-    onActivate(target) {},
+    onActivate(target) {
+      this.currentPageMutable = target.substring(1).toUpperCase();
+    },
     click(a) {
-      console.log(a);
       document.getElementById(a).scrollIntoView();
-      }
+    }
   },
   created() {
     this.$root.$on("bv::scrollspy::activate", this.onActivate);
