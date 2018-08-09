@@ -3,8 +3,8 @@
 
          <navigation-horizontal :pages="pages"/>
 
-    <div class="col-md-12" id="scroller"
-    ref="content" style="position:relative;height:100vh;overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling: touch;">
+    <div class="col-md-12" id=""
+    ref="content" style="">
         <app-header/>
         <page-block v-for="(page, index) in pages"
           v-bind:page="page"
@@ -34,9 +34,10 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Welcome to ROBOCON 2019!",
+              src: "https://www.youtube.com/embed/6Kb1M3NECic?rel=0",
+              header: "Welcome",
               text:
-                '<p>RoboCon is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers. <br> <br> Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
+                '<p><b>ALL TEXTS ARE PLACEHOLDER!</b><br><br>RoboCon is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers. <br> <br> Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
             }
           }
         },
@@ -148,7 +149,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p> RoboCon is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers. Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
+                '<p>Early bird tickets are available until 10.12.2017 with 250€ (incl. VAT 24%). </p><p>Starting from 11.12.2017 the conference ticket price is 470€ (incl. VAT 24%). </p><p>If you would like to purchase tickets with an invoice, contact tickets@robocon.io and include your billing information into the message. All invoiced tickets will be delivered as a one-time promocode that can be used to reclaim tickets from the online store. </p><p>If you are a member of the Robot Framework Foundation, you will receive your membership tickets similarly as a promocode.</p>'
             }
           }
         },
@@ -163,7 +164,37 @@ export default {
               twitter: false,
               header: "Program",
               text:
-                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><a class='color mt-5 text-left' href='http://www.siili.com'>Matti Möttönen, Siili Solutions Oy</a><p>Keynote: How did we get here? Where do we go next?</p><a class='color mt-5 text-left' href='http://www.kone.fi'>Kyllikki Mörkö, Kone Oy</a><p>Keynote: How did we get here? Where do we go next?</p><h2 class='mt-5'>Hallway Track</h3><p>In addition to the main conference room, there is dedicated space for an official “hallway track”. There you can chat with other users, show demos, work together, organize ad-hoc open space sessions, meet sponsor companies, and so on. This space can be used between the presentations, but it’s fine to use it also during presentations that aren’t so relevant for you.</p></div>"
+                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><a class='color mt-5 text-left' href='http://www.siili.com'>Anssi Syrjäsalo, Siili</a><p>Keynote: How did we get here? Where do we go next?</p><a class='color mt-5 text-left' href='http://www.kone.fi'>Martin Taylor, Nymi</a><p>Design Patterns for Efficient Multi-Platform and Multi-Device Testing with Robot Framework</p><a class='color mt-5 text-left' href='http://www.kone.fi'>Aldina Codesso-Lipponen, Kone</a><p>Keynote: How did we get here? Where do we go next?</p><h2 class='mt-5'>Hallway Track</h3><p>In addition to the main conference room, there is dedicated space for an official “hallway track”. There you can chat with other users, show demos, work together, organize ad-hoc open space sessions, meet sponsor companies, and so on. This space can be used between the presentations, but it’s fine to use it also during presentations that aren’t so relevant for you.</p><h2 class='mt-5'>Lightning Talks</h3><p>After the presentations there is a time allocation for 10 minute lightning talks. Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day.</p><h2 class='mt-5'>After Party</h3><p>Official after party starting at 6:30pm at Vala offices close to the conference venue. The address is Erottajankatu 11 B 9, 3rd floor. The entrance B is located in the inner courtyard. There will be some finger food and drinks to be served. In case you have trouble finding the right entrance you can call the number +358 45 633 8743 for more detailed information.</p><p>Sign up to after party and other extra activities here.</p></div>"
+            }
+          }
+        },
+        {
+          title: "Accomodation",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Accomodation",
+              text:
+                "<p>We have partner agreement with Scandic Hotel Grand Marina located close to the venue and you can book your stay here.</p><p>Promotion code: <b>BBOB160118</b></p><p>The negotiated price is valid from 16th of January until 21st of January.</p><p>Prices:<br>Single room – 120€ / night<br>Twin room – 140€ / night</p>"
+            }
+          }
+        },
+        {
+          title: "Sauna-and-Dinner",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Sauna and Dinner",
+              text:
+                "<p>We start the conference activities with sauna, swimming and dinner at Allas Sea Pool on Wednesday, January 17.</p><p>Sauna and swimming starts at 6pm. The sauna that is reserved for us is mixed and swimsuit is obligatory. In addition to that, there are separate public saunas for men and woman. The open air swimming pool at the harbour in the heart of Helsinki is magnificent. Don’t worry the weather possibly being cold as the water is warm (except for the cold seawater pool for the brave).</p><p>After getting fresh at the sauna we continue with a dinner at the same premises at 8pm.</p><p>Sauna is free of charge for conference participants, but there’s only room for 40 people. Possible friends and family members can buy normal tickets if they want to join. Dinner is on own costs, except for conference speakers, and you need to select a set menu beforehand. Dinner is open for everyone and has same 40 people limit as sauna.</p><p>Registration for sauna and dinner opens during the first week of 2018. Conference participants will be informed about the exact time beforehand.</p><p>Sign up to sauna, dinner and other extra activities here.</p>"
             }
           }
         },
@@ -183,7 +214,7 @@ export default {
           }
         },
         {
-          title: "Support",
+          title: "Misc",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -191,7 +222,7 @@ export default {
           feature_box: false,
           data: {
             text: {
-              header: "Support"
+              header: "Misc"
             },
             tabs: [
               {
@@ -270,90 +301,16 @@ export default {
                 ]
               },
               {
-                title: "Vendors",
+                title: "Video",
                 items: [
                   {
-                    title: "Comiq",
-                    href: "http://comiq.fi/",
-                    text:
-                      "Comiq is a Finnish software quality service provider founded in                2003 employing around 60 QA consultants."
+                    src: "https://www.youtube.com/embed/sZ_-yb-TN9M?rel=0"
                   },
                   {
-                    title: "Digia",
-                    href: "http://www.digia.com",
-                    text:
-                      "Digia is a IT service company that helps its customers developing and innovating solutions that support business operations together with customers."
+                    src: "https://www.youtube.com/embed/8vIT2da6N_o?rel=0"
                   },
                   {
-                    title: "Eficode",
-                    href: "http://www.eficode.com/",
-                    text:
-                      "Eficode is the leading devops company in Finland relying on automation, virtualisation and smart tool choices."
-                  },
-                  {
-                    title: "Eliga",
-                    href: "http://eliga.fi/",
-                    text:
-                      "Eliga is a one-man company by Pekka Klärck, the lead developer of Robot Framework. It provides top-notch training, consultation and support services related to Robot Framework and Python programming."
-                  },
-                  {
-                    title: "Etteplan",
-                    href: "http://www.espotel.com/",
-                    text:
-                      "Etteplan is a specialist in industrial equipment engineering, embedded systems and IoT and technical documentation solutions and services with deep knowledge in QA from network edge to cloud in Nordics."
-                  },
-                  {
-                    title: "HiQ",
-                    href: "http://www.hiqfinland.fi/",
-                    text:
-                      "HiQ is a Nordic ICT service and consultancy company focusing on streamlining our customers' businesses and simplifying people's lives."
-                  },
-                  {
-                    title: "Knowit",
-                    href: "https://www.knowit.fi/",
-                    text:
-                      "Knowit is a consulting company that helps its clients succeed by operating close and in an innovative, business-oriented way."
-                  },
-                  {
-                    title: "Mykhailo Poliarush",
-                    href: "http://poliarush.com/trainings/robotframework",
-                    text: "Commercial Robot Framework training по-русски."
-                  },
-                  {
-                    title: "Q-Factory",
-                    href: "http://www.q-factory.fi/",
-                    text:
-                      "Q-Factory is specialized in test automation and quality assurance services."
-                  },
-                  {
-                    title: "Qentinel",
-                    href: "https://qentinel.com/",
-                    text:
-                      "Qentinel is a Finnish company that specialises in information system quality assurance."
-                  },
-                  {
-                    title: "Reaktor",
-                    href: "https://www.reaktor.com/",
-                    text:
-                      "Reaktor is a creative technology house that constructs exceptional digital services for clients."
-                  },
-                  {
-                    title: "Siili",
-                    href: "http://siili.com/",
-                    text:
-                      "Siili is a modern, full-service technology company, helping you create better business and meaningful digital experiences by combining strategic insight, creative design, data management, and technology expertise."
-                  },
-                  {
-                    title: "Symbio",
-                    href: "https://www.symbio.com/",
-                    text:
-                      "Symbio is international co-creation innovation partner. We help our customers create high quality products and future services in digital world."
-                  },
-                  {
-                    title: "VALA Group",
-                    href: "http://www.valagroup.com/",
-                    text:
-                      "VALA Group provides outstanding software development and quality assurance services by utilizing automation, co-operation and intelligent tool selection for companies ranging from start-ups to major publicly listed companies."
+                    src: "https://www.youtube.com/embed/K_CjzCjmggY?rel=0"
                   }
                 ]
               }

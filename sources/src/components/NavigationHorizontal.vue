@@ -1,7 +1,7 @@
 <template>
 <section>
 <b-nav  v-b-scrollspy:scroller.50 tag="nav" toggleable="md" id="navigation" class="d-none d-md-block topbar">
-    <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true" v-bind:key="item.title" :href="'#'+item.title.toLowerCase()">{{item.title}}</b-nav-item>
+    <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true" v-bind:key="item.title" v-scroll-to="'#'+item.title.toLowerCase()" :href="'#'+item.title.toLowerCase()">{{item.title.replace(/-and-/g,' & ')}}</b-nav-item>
 </b-nav>
 
 
@@ -12,7 +12,7 @@
   </b-navbar-brand>
   <b-collapse is-nav id="nav_collapse">
     <b-navbar-nav class="align-middle">
-      <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true" v-bind:key="item.title" :href="'#'+item.title.toLowerCase()">{{item.title}}</b-nav-item>
+      <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true" v-bind:key="item.title" :href="'#'+item.title.toLowerCase()" v-scroll-to="'#'+item.title.toLowerCase()">{{item.title}}</b-nav-item>
     </b-navbar-nav>
   </b-collapse>
 
@@ -24,7 +24,11 @@
 export default {
   props: ["pages"],
   methods: {
-    onActivate(target) {}
+    onActivate(target) {},
+    click(a) {
+      console.log(a);
+      document.getElementById(a).scrollIntoView();
+      }
   },
   created() {
     this.$root.$on("bv::scrollspy::activate", this.onActivate);

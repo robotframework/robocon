@@ -241,9 +241,10 @@ hr {
   padding-right: 0;
   width: 100%;
   text-align: center;
-  height: 32px;
+  height: 42px;
   text-transform: uppercase;
   background-color: rgb(0, 0, 0);
+  padding-top: 6px;
 }
 
 #navigation .nav-item.active a.nav-link {

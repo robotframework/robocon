@@ -12,6 +12,7 @@ import VueRouter from 'vue-router'
 import Vue from 'vue'
 import App from './App'
 import VueAnalytics from 'vue-analytics'
+import VueScrollTo from 'vue-scrollto'
 
 import AppHeader from '@/components/AppHeader'
 import AppFooter from '@/components/AppFooter'
@@ -21,6 +22,11 @@ import BootstrapVue from 'bootstrap-vue'
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
+
+Vue.use(VueScrollTo, {
+  duration: 300,
+  easing: "ease"
+})
 
 /* if (/robotframework.org/.test(window.location.href)) {
   Vue.use(VueAnalytics, {
