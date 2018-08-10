@@ -17,7 +17,7 @@
   <b-navbar-brand class="p-0 m-0 d-block d-md-none" href="#">
     <b-img :src="require('@/assets/img/ROBOTFW_Mark_White_LOW_cropped.png')" class="" style="height:33px;"  alt="Robot Frameworkg logo"/>
   </b-navbar-brand>
-  <b-collapse is-nav id="nav_collapse">
+  <b-collapse is-nav id="nav_collapse" transition-duration="10">
     <b-navbar-nav class="align-middle">
       <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true" v-bind:key="item.title" :href="'#'+item.title.toLowerCase()" v-scroll-to="'#'+item.title.toLowerCase()">{{item.title}}</b-nav-item>
     </b-navbar-nav>

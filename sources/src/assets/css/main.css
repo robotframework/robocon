@@ -443,7 +443,7 @@ table {
 }
 
 .header-slide-enter-active {
-  transition: all .1s ease;
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .header-slide-leave-active {
   transition: all .2s cubic-bezier(0.075, 0.660, 0.295, 0.980);
@@ -456,4 +456,8 @@ table {
 .header-slide-leave-to{
   transform: translateY(30px) scale(1, 0);
   opacity: 0;
+}
+
+.collapsing {
+  transition: 0.3s cubic-bezier(.17, .67, .56, 1.03);
 }
