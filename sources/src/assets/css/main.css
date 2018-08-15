@@ -410,8 +410,12 @@ table {
     font-size: 4rem !important;
   }
 
+  .main-header-container h1 {
+    text-align: center;
+  }
+
   .main-header-container {
-    width: 350px !important;
+    width: 100% !important;
   }
 
   .img-header {
@@ -437,16 +441,16 @@ table {
   font-family: OCRA;
   color: #fff;
   position: absolute;
-  left: 84px;
+  left: 60px;
   display: inline;
   top: 13px;
 }
 
 .header-slide-enter-active {
-  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .15s cubic-bezier(0.075, 0.660, 0.295, 0.980);
 }
 .header-slide-leave-active {
-  transition: all .2s cubic-bezier(0.075, 0.660, 0.295, 0.980);
+  transition: all .3s cubic-bezier(0.075, 0.660, 0.295, 0.980);
 }
 .header-slide-enter{
   transform: translateY(-30px) scale(1, 0);

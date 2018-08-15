@@ -3,7 +3,7 @@
 
          <navigation-horizontal :pages="pages"/>
 
-    <div class="col-md-12" ref="content">
+    <div class="col-md-12" ref="content" style="width:unset">
         <app-header/>
         <page-block v-for="(page, index) in pages"
           v-bind:page="page"
