@@ -9,6 +9,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueRouter from 'vue-router'
 
+import Es6Promise from 'es6-promise'
+Es6Promise.polyfill()
+
 import Vue from 'vue'
 import App from './App'
 import VueAnalytics from 'vue-analytics'
