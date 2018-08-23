@@ -2,19 +2,15 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 /* eslint-disable no-new */
 
-// for IE11 support (https://bootstrap-vue.js.org/docs/#browsers-support)
-import 'babel-polyfill'
+import Es6Promise from 'es6-promise'
+Es6Promise.polyfill()
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueRouter from 'vue-router'
 
-import Es6Promise from 'es6-promise'
-Es6Promise.polyfill()
-
 import Vue from 'vue'
 import App from './App'
-import VueAnalytics from 'vue-analytics'
 import VueScrollTo from 'vue-scrollto'
 
 import AppHeader from '@/components/AppHeader'
@@ -28,7 +24,7 @@ Vue.use(VueRouter)
 
 Vue.use(VueScrollTo, {
   duration: 300,
-  easing: "ease"
+  easing: 'ease'
 })
 
 /* if (/robotframework.org/.test(window.location.href)) {
