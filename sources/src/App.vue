@@ -33,10 +33,9 @@ export default {
           data: {
             text: {
               twitter: false,
-              src: "https://www.youtube.com/embed/6Kb1M3NECic?rel=0",
               header: "Welcome",
               text:
-                '<p><b>ALL TEXTS ARE PLACEHOLDER!</b><br><br>RoboCon is the first, annual, gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and, most importantly, meet fellow Robot Framework users as well as its developers. <br> <br> Date: 18.1.2018, klo 09:00 – 18:00 Place: Valkoinen sali, Aleksanterinkatu 16-18, 00170 Helsinki RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
+                '<p>RoboCon is an annual gathering for the Robot Framework community. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br> <br> On top of the RoboCon seminar we have interesting side events where you have a change to network with people from the same community. The schedule for the event week is: <br> <br> 16.1 Workshops & Social Dinner (additional cost) <br> 17.1 RoboCon Conference + Afterparty (Afterparty included in the ticket) <br> 18.1 Sprint & sauna (free) <br> <br> Date: Thursday 17.1.2019, klo 09:00 – 18:00 <br> Place: Bio Rex Helsinki, Mannerheimintie 22-24, 00100 Helsinki <br> <br> RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
             }
           }
         },
@@ -50,90 +49,10 @@ export default {
           user_box_centered: true,
           data: {
             text: {
-              header: "Sponsors"
+              header: "Sponsors",
+              text: '<p>Contact <a href="mailto:info@robocon.io">info@robocon.io</a> about becoming a sponsor.</p>'
             },
             users: [
-              {
-                title: "Nokia",
-                href: "http://www.nokia.com",
-                img: require("@/assets/img/users/nokia.png")
-              },
-              {
-                title: "KONE",
-                href: "http://www.kone.com",
-                img: require("@/assets/img/users/kone.png")
-              },
-              {
-                title: "Finnair",
-                href: "http://www.finnair.com",
-                img: require("@/assets/img/users/finnair.png")
-              },
-              {
-                title: "ABB",
-                href: "http://www.abb.com",
-                img: require("@/assets/img/users/abb.png")
-              },
-              {
-                title: "metso",
-                href: "http://www.metso.com",
-                img: require("@/assets/img/users/metso.png")
-              },
-              {
-                title: "FICOSA",
-                href: "http://www.ficosa.com",
-                img: require("@/assets/img/users/ficosa.png")
-              },
-              {
-                title: "OpenDaylight",
-                href: "http://www.opendaylight.org",
-                img: require("@/assets/img/users/opendaylight.png")
-              },
-              {
-                title: "Adwisit",
-                href: "http://www.adwisit.se",
-                img: require("@/assets/img/users/adwisit.png")
-              },
-              {
-                title: "ryerson",
-                href: "http://www.ryerson.org",
-                img: require("@/assets/img/users/ryerson.png")
-              },
-
-              {
-                title: "axon",
-                href: "http://www.axon.tv",
-                img: require("@/assets/img/users/axon.png")
-              },
-              {
-                title: "CENX",
-                href: "http://www.cenx.com",
-                img: require("@/assets/img/users/cenx.png")
-              },
-              {
-                title: "Conde Nast",
-                href: "https://technology.condenast.com/",
-                img: require("@/assets/img/users/condenast.png")
-              },
-              {
-                title: "Opuscapita",
-                href: "https://www.opuscapita.com/",
-                img: require("@/assets/img/users/opuscapita.png")
-              },
-              {
-                title: "steeri",
-                href: "http://www.steeri.fi/en",
-                img: require("@/assets/img/users/steeri.png")
-              },
-              {
-                title: "NRL",
-                href: "https://www.nrl.navy.mil",
-                img: require("@/assets/img/users/nrl.png")
-              },
-              {
-                title: "zilogic",
-                href: "http://www.zilogic.com",
-                img: require("@/assets/img/users/zilogic.png")
-              }
             ]
           }
         },
@@ -148,7 +67,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p>Early bird tickets are available until 10.12.2017 with 250€ (incl. VAT 24%). </p><p>Starting from 11.12.2017 the conference ticket price is 470€ (incl. VAT 24%). </p><p>If you would like to purchase tickets with an invoice, contact tickets@robocon.io and include your billing information into the message. All invoiced tickets will be delivered as a one-time promocode that can be used to reclaim tickets from the online store. </p><p>If you are a member of the Robot Framework Foundation, you will receive your membership tickets similarly as a promocode.</p>'
+                '<p><a target="blank" href="https://www.lyyti.fi/reg/RoboCon_2019_6627">Tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until October 31st 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31st 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17th 2019. <br> </p>'
             }
           }
         },
@@ -163,7 +82,7 @@ export default {
               twitter: false,
               header: "Program",
               text:
-                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><a class='color mt-5 text-left' href='http://www.siili.com'>Anssi Syrjäsalo, Siili</a><p>Keynote: How did we get here? Where do we go next?</p><a class='color mt-5 text-left' href='http://www.kone.fi'>Martin Taylor, Nymi</a><p>Design Patterns for Efficient Multi-Platform and Multi-Device Testing with Robot Framework</p><a class='color mt-5 text-left' href='http://www.kone.fi'>Aldina Codesso-Lipponen, Kone</a><p>Keynote: How did we get here? Where do we go next?</p><h2 class='mt-5'>Hallway Track</h3><p>In addition to the main conference room, there is dedicated space for an official “hallway track”. There you can chat with other users, show demos, work together, organize ad-hoc open space sessions, meet sponsor companies, and so on. This space can be used between the presentations, but it’s fine to use it also during presentations that aren’t so relevant for you.</p><h2 class='mt-5'>Lightning Talks</h3><p>After the presentations there is a time allocation for 10 minute lightning talks. Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day.</p><h2 class='mt-5'>After Party</h3><p>Official after party starting at 6:30pm at Vala offices close to the conference venue. The address is Erottajankatu 11 B 9, 3rd floor. The entrance B is located in the inner courtyard. There will be some finger food and drinks to be served. In case you have trouble finding the right entrance you can call the number +358 45 633 8743 for more detailed information.</p><p>Sign up to after party and other extra activities here.</p></div>"
+                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><p>TBA</p><h2 class='mt-5'>Lightning Talks</h3><p>After the presentations there is a time allocation for 10 minute lightning talks. Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day.</p><h2 class='mt-5'>After Party</h3><p>Official after party starting at 6:30pm at Vala offices close to the conference venue.</p></div>"
             }
           }
         },
@@ -178,7 +97,7 @@ export default {
               twitter: false,
               header: "Accomodation",
               text:
-                "<p>We have partner agreement with Scandic Hotel Grand Marina located close to the venue and you can book your stay here.</p><p>Promotion code: <b>BBOB160118</b></p><p>The negotiated price is valid from 16th of January until 21st of January.</p><p>Prices:<br>Single room – 120€ / night<br>Twin room – 140€ / night</p>"
+                "<p>More info coming later</p>"
             }
           }
         },
@@ -193,7 +112,7 @@ export default {
               twitter: false,
               header: "Sauna and Dinner",
               text:
-                "<p>We start the conference activities with sauna, swimming and dinner at Allas Sea Pool on Wednesday, January 17.</p><p>Sauna and swimming starts at 6pm. The sauna that is reserved for us is mixed and swimsuit is obligatory. In addition to that, there are separate public saunas for men and woman. The open air swimming pool at the harbour in the heart of Helsinki is magnificent. Don’t worry the weather possibly being cold as the water is warm (except for the cold seawater pool for the brave).</p><p>After getting fresh at the sauna we continue with a dinner at the same premises at 8pm.</p><p>Sauna is free of charge for conference participants, but there’s only room for 40 people. Possible friends and family members can buy normal tickets if they want to join. Dinner is on own costs, except for conference speakers, and you need to select a set menu beforehand. Dinner is open for everyone and has same 40 people limit as sauna.</p><p>Registration for sauna and dinner opens during the first week of 2018. Conference participants will be informed about the exact time beforehand.</p><p>Sign up to sauna, dinner and other extra activities here.</p>"
+                "<p>More info coming later</p>"
             }
           }
         },
@@ -208,7 +127,7 @@ export default {
               twitter: false,
               header: "Sprints",
               text:
-                "<p>After the main conference we still have Friday, January 19, dedicated for development sprints. This event is for those who’d like to contribute to Robot Framework or any library or tool in its ecosystem. The event is free and open for everyone, including those not participating the conference itself. Sprint facilities are provided by Eficode and the address is Pohjoinen Rautatiekatu 25. Food and drinks will be available.<p><div class='ml-3'><h2 class='mb-3'>Agenda</h2><p>10:00 Welcome words. Introduction to participating projects and tasks they have available. </p><p>10:30 Introduction to contributing to open source projects. Git and GitHub introduction. Those familiar with these topics can skip this. </p><p>11:00 Development! Participants can work with tasks they find interesting either alone, in pairs, or in small groups. Project leaders help as much as they can. </p><p>16:00 Presenting what we have accomplished. </p><p>17:00 Official program ends. Sauna opens. Coding continues.</p></div><p>Confirmed project represented in the sprints are Robot Framework (Pekka Klärck), SeleniumLibrary (Tatu Aalto) and Jenkins plugin (Tatu Kairi and others), but it is also possible to work with other projects and even start totally new ones. If you have a project you’d like others to work with, please send an email to info@robocon.io and we can add it here. Especially with new projects, consider also presenting the project to others in lighting talks during the conference.</p>"
+                "<p>More info coming later</p>"
             }
           }
         },
@@ -296,20 +215,6 @@ export default {
                       "http://groups.google.com/group/robotframework-announce",
                     text:
                       "Mailing list for just release announcements, nothing more."
-                  }
-                ]
-              },
-              {
-                title: "Video",
-                items: [
-                  {
-                    src: "https://www.youtube.com/embed/sZ_-yb-TN9M?rel=0"
-                  },
-                  {
-                    src: "https://www.youtube.com/embed/8vIT2da6N_o?rel=0"
-                  },
-                  {
-                    src: "https://www.youtube.com/embed/K_CjzCjmggY?rel=0"
                   }
                 ]
               }
