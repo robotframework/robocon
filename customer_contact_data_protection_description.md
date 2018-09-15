@@ -4,6 +4,7 @@ European Union general data protection regulation ((EU) 2016/679) compliant vers
 
 ## Data Controller:
 Robot Framework Ry, Finnish Business ID 2754775-1
+
 Address: Pohjoinen Rautatiekatu 25, 00100 Helsinki, Finland
  
 ## Contact in Data File Related Matters:
