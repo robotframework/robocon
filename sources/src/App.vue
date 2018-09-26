@@ -87,7 +87,7 @@ export default {
           }
         },
         {
-          title: "Accomodation",
+          title: "Accommodation",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -95,7 +95,7 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Accomodation",
+              header: "Accommodation",
               text:
                 "<p>More info coming later</p>"
             }
