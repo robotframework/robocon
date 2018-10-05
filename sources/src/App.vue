@@ -57,6 +57,21 @@ export default {
           }
         },
         {
+          title: "Speakers",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          user_box: false,
+          user_box_centered: true,
+          data: {
+            text: {
+              header: "Speakers and workshops",
+              text: '<p>Interested in becoming a speaker or hosting a workshop? Submit a topic at <a href="https://papercall.io/robocon2019" target="blank">papercall.io/robocon2019</a>. Deadline for submissions is Monday, November 5, 2018.</p>'
+            }
+          }
+        },
+        {
           title: "Tickets",
           text_block: false,
           text_block_centered: true,
