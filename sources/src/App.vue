@@ -82,7 +82,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p><a target="blank" href="https://www.lyyti.in/robocon2019">Tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until October 31st 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31st 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17th 2019. <br> </p>'
+                '<p><a target="blank" href="https://www.lyyti.in/robocon2019">Tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until November 15, 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31, 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17, 2019. <br> </p>'
             }
           }
         },
