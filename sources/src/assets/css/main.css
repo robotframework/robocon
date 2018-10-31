@@ -6,10 +6,10 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #000;
   font-family: Roboto;
   font-size: 1.2rem;
-  ;
+  color: #fff;
   text-align: left;
   overflow-x: hidden;
 }
@@ -29,7 +29,7 @@ body {
 }
 
 footer {
-  background-color: rgb(0, 192, 181);
+  background-color: #ff5152;
 }
 
 footer h2 {
@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-  color: #000;
+  color: #fff;
 }
 
 header a.nav-link:hover {
@@ -79,7 +79,7 @@ code {
 h1,
 h2,
 h3 {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 h1,
@@ -89,6 +89,7 @@ div.card-header {
   font-family: "OCRA";
   text-transform: uppercase;
   text-align: left;
+  color: #ff5152;
 }
 
 h1 {
@@ -101,33 +102,32 @@ h2 {
 
 h2 {
   font-size: 1.1rem;
-  color: #000;
 }
 
 h2::before {
   content: '> ';
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 .color {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 h1.main-header {
   font-size: 20px;
   font-size: 6rem;
   line-height: 0.9;
-  color: #fff;
+  color: #000;
 }
 
 .main-header::before {
   content: "ROBO";
-  color: #000;
+  color: #fff;
 }
 
 .main-header::after {
   content: "CON";
-  color: #000;
+  color: #fff;
 }
 
 .img-header {
@@ -144,7 +144,7 @@ h1.main-header {
 }
 
 .header {
-  background-color: rgb(0, 192, 181);
+  background-color: #ff5152;
   margin: 0;
   padding-top: 80px;
 }
@@ -173,7 +173,7 @@ small.info::after {
 }
 
 .card.feature-box {
-  background-color: rgb(0, 192, 181);
+  background-color: #ff5152;
   color: #fff;
 }
 
@@ -189,7 +189,7 @@ a {
 
 #nav_collapse .nav-item a.active,
 a {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 hr {
@@ -206,7 +206,7 @@ hr {
   padding-bottom: 20px;
   white-space: pre-line;
   line-height: 0.9;
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 .navbar-brand .img-fluid {
@@ -248,11 +248,11 @@ hr {
 }
 
 #navigation .nav-item.active a.nav-link {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 #navigation .nav-item a.nav-link:hover {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 .nav-item {
@@ -281,7 +281,7 @@ hr {
 }
 
 #nav_collapse .nav-item a:hover {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
   text-decoration: none;
 }
 
@@ -298,21 +298,21 @@ hr {
 }
 
 .dashed-header > h1{
-  color: #000;
+  color: #ff5152;
 }
 
 .dashed-header > h1::before{
   content: '// ';
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 .nav-pills li a {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
   padding: 0.3rem 0.5rem;
   font-size: 1rem;
   background: none;
   margin-right: 4px;
-  border: 1px solid rgb(0, 192, 181);
+  border: 1px solid #ff5152;
 }
 
 .nav-pills li:last-child a {
@@ -321,19 +321,20 @@ hr {
 
 .nav-pills li.nav-item .nav-link.active {
   color: #fff;
-  border: 1px solid rgb(0, 192, 181);
+  border: 1px solid #ff5152;
   border-radius: 0;
-  background: rgb(0, 192, 181);
+  background: #ff5152;
 }
 
 .card {
   padding: 30px;
-  color: #666;
+  color: #fff;
   line-height: 1.1rem;
   font-family: Roboto;
   border-radius: 0;
   border: none;
-  background-color: #e7e7e7;
+  border: solid 5px #ff5152;
+  background-color: #000;
   height: 100%;
   -webkit-border-radius: 5px 5px 5px 5px;
   -moz-border-radius: 5px 5px 5px 5px;
@@ -375,7 +376,7 @@ hr {
 }
 
 .card a {
-  color: rgb(0, 192, 181);
+  color: #ff5152;
 }
 
 .link {
@@ -396,7 +397,7 @@ table {
 }
 
 .textblock-left {
-  border-top: 1px solid rgb(0, 192, 181);
+  border-top: 1px solid #ff5152;
 }
 
 @media (max-width: 992px) {
