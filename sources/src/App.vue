@@ -45,14 +45,49 @@ export default {
           text_block_centered: true,
           tab_box: false,
           feature_box: false,
-          user_box: false,
-          user_box_centered: true,
+          user_box: true,
           data: {
             text: {
               header: "Sponsors",
-              text: '<p>Contact <a href="mailto:info@robocon.io">info@robocon.io</a> about becoming a sponsor.</p>'
+              text: "<h2 class='mb-0'>Gold sponsors</h2>"
             },
             users: [
+              {
+                title: "HiQ",
+                href: "https://hiqfinland.fi/",
+                img: require("@/assets/img/users/s_hiq.png")
+              },
+              {
+                title: "knowit",
+                href: "https://www.knowit.fi/",
+                img: require("@/assets/img/users/s_knowit.png")
+              },
+              {
+                title: "Qentinel",
+                href: "https://qentinel.com/",
+                img: require("@/assets/img/users/s_qentinel.jpg")
+              },
+              {
+                title: "Q-factory",
+                href: "https://www.q-factory.fi/",
+                img: require("@/assets/img/users/s_qfactory.png")
+              },
+              {
+                title: "Testimate",
+                href: "https://www.testimate.fi/",
+                img: require("@/assets/img/users/s_testimate.jpg")
+              },
+              {
+                title: "Vala Group",
+                href: "https://www.valagroup.com/",
+                img: require("@/assets/img/users/s_vala.png")
+              },
+              {
+                title: "Symbio",
+                href: "https://www.symbio.com/",
+                img: require("@/assets/img/users/s_symbio.png"),
+                silver: true
+              }
             ]
           }
         },
@@ -67,7 +102,7 @@ export default {
           data: {
             text: {
               header: "Speakers and workshops",
-              text: '<p>Interested in becoming a speaker or hosting a workshop? Submit a topic at <a href="https://papercall.io/robocon2019" target="blank">papercall.io/robocon2019</a>. Deadline for submissions is Monday, November 5, 2018.</p>'
+              text: "<div><p>Initial list of presentations. Schedule and speaker bios coming soon.</p><h2 class='mb-0'>Tatu Aalto</h2><p>Decade with SeleniumLibrary and browsers UI automation</p><h2 class='mb-0'>Joonas Lehtimäki</h2><p>Dynamically scalable test environment on top of Kubernetes</p><h2 class='mb-0'>Juho Saarinen</h2><p>Evolution of Robot Framework user</p><h2 class='mb-0'>Päivi Raulamo-Jurvanen</h2><p>Practical Experiences on Evaluating Software Testing Tools with focus on Robot Framework</p><h2 class='mb-0'>Nguyen Huu Bach</h2><p>RENAT - a network testing plugin based on Robot Framework</p><h2 class='mb-0'>Brady Hill</h2><p>RobotFramework for Embedded Software Testing</p><h2 class='mb-0'>Mikael Siirtola</h2><p>Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland</p><h2 class='mb-0'>Nicholas Bollweg / Asko Soukka</h2><p>Robots from Jupyter – The Future of Authoring Tests and Tasks in Robot Framework</p><h2 class='mb-0'>Antti Karjalainen</h2><p>The start of the open source RPA movement</p></div>"
             }
           }
         },
@@ -97,7 +132,7 @@ export default {
               twitter: false,
               header: "Program",
               text:
-                "<div class='ml-3'><h2 class='mb-3'>Speakers</h2><p>TBA</p><h2 class='mt-5'>Lightning Talks</h3><p>After the presentations there is a time allocation for 10 minute lightning talks. Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day.</p><h2 class='mt-5'>After Party</h3><p>Official after party starting at 6:30pm at Vala offices close to the conference venue.</p></div>"
+                "<div><h2>Lightning Talks</h3><p>After the presentations there is a time allocation for 10 minute lightning talks. Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day.</p><h2 class='mt-5'>After Party</h3><p>Official after party starting at 6:30pm at Vala offices close to the conference venue.</p></div>"
             }
           }
         },
