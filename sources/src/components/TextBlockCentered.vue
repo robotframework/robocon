@@ -16,7 +16,7 @@
     <div
         class="row">
         <div v-html="data.text" class="col-lg-7 order-2 block-text textblock-right p-3 no-border text-justify"/>
-     <div class="col-md-12 col-lg-4 order-3 textblock-right ml-1 p-3">
+     <div class="col-md-12 col-lg-5 order-3 textblock-right ml-0 p-3">
        <twitter-timeline class="p-xs-5 p-lg-0" id="robotframework" widget-class="twitterprofile" sourceType="profile" :style="isMobile ? '' : isTablet ? 'height: 850px; overflow: scroll' : 'height: 700px; overflow: scroll'" :options="options"/>
      </div>
         </div>
