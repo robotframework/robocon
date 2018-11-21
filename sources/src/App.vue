@@ -32,7 +32,7 @@ export default {
           feature_box: false,
           data: {
             text: {
-              twitter: false,
+              twitter: true,
               header: "Welcome",
               text:
                 '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: Thursday, January 17, 2019, 09:00–18:00 (UTC+2) <br> Place: Bio Rex Helsinki, Mannerheimintie 22-24, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a change to network with people from the same community. The schedule for the event week is: <br> <br>Wed, Jan 16: Workshops & Social Dinner (additional cost) <br>Thu, Jan 17: RoboCon Conference & Afterparty<br>Fri, Jan 18: Sprint & sauna (free) <br> <br> RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
@@ -48,6 +48,7 @@ export default {
           user_box: true,
           data: {
             text: {
+              twitter: false,
               header: "Sponsors",
               text: "<h2 class='mb-0'>Gold sponsors</h2>"
             },
@@ -65,7 +66,7 @@ export default {
               {
                 title: "Qentinel",
                 href: "https://qentinel.com/",
-                img: require("@/assets/img/users/s_qentinel.jpg")
+                img: require("@/assets/img/users/s_qentinel.png")
               },
               {
                 title: "Q-factory",
@@ -101,6 +102,7 @@ export default {
           user_box_centered: true,
           data: {
             text: {
+              twitter: false,
               header: "Speakers and workshops",
               text: "<div><p>Initial list of presentations. Schedule and speaker bios coming soon.</p><h2 class='mb-0'>Tatu Aalto</h2><p>Decade with SeleniumLibrary and browsers UI automation</p><h2 class='mb-0'>Joonas Lehtimäki</h2><p>Dynamically scalable test environment on top of Kubernetes</p><h2 class='mb-0'>Juho Saarinen</h2><p>Evolution of Robot Framework user</p><h2 class='mb-0'>Päivi Raulamo-Jurvanen</h2><p>Practical Experiences on Evaluating Software Testing Tools with focus on Robot Framework</p><h2 class='mb-0'>Nguyen Huu Bach</h2><p>RENAT - a network testing plugin based on Robot Framework</p><h2 class='mb-0'>Brady Hill</h2><p>RobotFramework for Embedded Software Testing</p><h2 class='mb-0'>Mikael Siirtola</h2><p>Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland</p><h2 class='mb-0'>Nicholas Bollweg / Asko Soukka</h2><p>Robots from Jupyter – The Future of Authoring Tests and Tasks in Robot Framework</p><h2 class='mb-0'>Antti Karjalainen</h2><p>The start of the open source RPA movement</p></div>"
             }
@@ -205,6 +207,7 @@ export default {
           feature_box: false,
           data: {
             text: {
+              twitter: false,
               header: "Misc"
             },
             tabs: [
