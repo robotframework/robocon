@@ -53,6 +53,11 @@ export default {
             },
             users: [
               {
+                title: "Siili",
+                href: "https://www.siili.com",
+                img: require("@/assets/img/users/s_siili.png")
+              },
+              {
                 title: "Comiq",
                 href: "https://www.comiq.fi/",
                 img: require("@/assets/img/users/s_comiq.png")
