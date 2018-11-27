@@ -49,10 +49,14 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Sponsors",
-              text: "<h2 class='mb-0'>Gold sponsors</h2>"
+              header: "Sponsors"
             },
             users: [
+              {
+                title: "Comiq",
+                href: "https://www.comiq.fi/",
+                img: require("@/assets/img/users/s_comiq.png")
+              },
               {
                 title: "HiQ",
                 href: "https://hiqfinland.fi/",
@@ -86,14 +90,13 @@ export default {
               {
                 title: "Symbio",
                 href: "https://www.symbio.com/",
-                img: require("@/assets/img/users/s_symbio.png"),
-                silver: true
+                img: require("@/assets/img/users/s_symbio.png")
               }
             ]
           }
         },
         {
-          title: "Speakers",
+          title: "Schedule",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -103,8 +106,24 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Speakers and workshops",
-              text: "<div><p>Initial list of presentations. Schedule and speaker bios coming soon.</p><h2 class='mb-0'>Tatu Aalto</h2><p>Decade with SeleniumLibrary and browsers UI automation</p><h2 class='mb-0'>Joonas Lehtimäki</h2><p>Dynamically scalable test environment on top of Kubernetes</p><h2 class='mb-0'>Juho Saarinen</h2><p>Evolution of Robot Framework user</p><h2 class='mb-0'>Päivi Raulamo-Jurvanen</h2><p>Practical Experiences on Evaluating Software Testing Tools with focus on Robot Framework</p><h2 class='mb-0'>Nguyen Huu Bach</h2><p>RENAT - a network testing plugin based on Robot Framework</p><h2 class='mb-0'>Brady Hill</h2><p>RobotFramework for Embedded Software Testing</p><h2 class='mb-0'>Mikael Siirtola</h2><p>Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland</p><h2 class='mb-0'>Nicholas Bollweg / Asko Soukka</h2><p>Robots from Jupyter – The Future of Authoring Tests and Tasks in Robot Framework</p><h2 class='mb-0'>Antti Karjalainen</h2><p>The start of the open source RPA movement</p></div>"
+              header: "Schedule and speakers",
+              text: "<div><h2 class='mb-0'>8:00 - Registration, coffee</h2><p></p></p><h2 class='mb-0'>9:00 - Pekka Klärck</h2><p>State of the Robot Framework union</p><h2 class='mb-0'>9:30 - Antti Karjalainen</h2><p>The start of the open source RPA movement</p><h2 class='mb-0'>10:00 - Break</h2><p></p><h2 class='mb-0'>10:30 - Juho Saarinen</h2><p>Evolution of Robot Framework user</p><h2 class='mb-0'>11:00 - Tatu Aalto</h2><p>Decade with SeleniumLibrary and browsers' UI automation</p><h2 class='mb-0'>11:30 - Lunch</h2><p></p><h2 class='mb-0'>12:30 - Brady Hill</h2><p>RobotFramework for Embedded Software Testing </p><h2 class='mb-0'>12:55 - Nguyen Huu Bach</h2><p>RENAT - a network testing plugin based on Robot Framework </p><h2 class='mb-0'>13:20 - Mikael Siirtola</h2><p>Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland </p><h2 class='mb-0'>13:45 - Break</h2><p></p><h2 class='mb-0'>14:00 - Päivi Raulamo-Jurvanen</h2><p>Practical Experiences on Evaluating Software Testing Tools with focus on Robot Framework </p><h2 class='mb-0'>14:30 - Nicholas Bollweg / Asko Soukka</h2><p>Robots from Jupyter – The Future of Authoring Tests and Tasks in Robot Framework</p><h2 class='mb-0'>15:00 - Coffee</h2><p></p><h2 class='mb-0'>15:30 - Joonas Lehtimäki</h2><p>Dynamically scalable test environment on top of Kubernetes</p><h2 class='mb-0'>16:00 - Oleksandr Kravchenko</h2><p>Dynamic Generation of Model Based Testcases Using Listener Interface Version 3 </p><h2 class='mb-0'>16:30 - Break</h2><p></p><h2 class='mb-0'>17:00 - Lightning talks</h2><p>Topics of the day - you decide!</p><h2 class='mb-0'>18:00 - Networking</h2><p></p><h2 class='mb-0'>19:00 - Venue closes, after party starts</h2><p></p></div>"
+            }
+          }
+        },
+        {
+          title: "Workshops",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          user_box: false,
+          user_box_centered: true,
+          data: {
+            text: {
+              twitter: false,
+              header: "Workshops",
+              text: "<div><p>Sign up for workshops coming soon!</p><h2 class='mb-0'>Asko Soukka / Nicholas Bollweg</h2><p>Authoring Robot Framework test and task suites with JupyterLab</p><h2 class='mb-0'>Ismo Aro</h2><p>Hands-on Windows desktop testing with Robot Framework</p><h2 class='mb-0'>Joshua Gorospe</h2><p>Robot Framework strategies for the lone tester</p><h2 class='mb-0'>Ed Manlove / Tatu Aalto</h2><p>Web Testing using Selenium Library and Robot Framework</p><h2 class='mb-0'>-</h2><p>Robot Framework basics</p><h2 class='mb-0'>Pekka Klärck</h2><p>Extending Robot Framework</p></div>"
             }
           }
         },
@@ -199,94 +218,17 @@ export default {
           }
         },
         {
-          title: "Misc",
+          title: "Previous talks",
           text_block: false,
-          text_block_centered: true,
+          text_block_centered: false,
           tab_box: false,
-          tab_box_centered: true,
-          feature_box: false,
+          tab_box_centered: false,
+          feature_box: true,
           data: {
             text: {
-              twitter: false,
-              header: "Misc"
-            },
-            tabs: [
-              {
-                title: "General",
-                items: [
-                  {
-                    title: "@robotframework",
-                    href: "http://twitter.com/robotframework",
-                    text: "Announcements in Twitter."
-                  },
-                  {
-                    title: "#robotframework",
-                    href:
-                      "http://webchat.freenode.net/?channels=robotframework&amp;prompt=1",
-                    text: "#robotframework IRC channel on freenode."
-                  },
-                  {
-                    title: "Slack",
-                    href: "https://robotframework-slack-invite.herokuapp.com/",
-                    text: "Robot Framework Slack community."
-                  },
-                  {
-                    title: "robotframework-users",
-                    href: "http://groups.google.com/group/robotframework-users",
-                    text: "Community mailing list."
-                  },
-                  {
-                    title: "Robot Framework issue tracker",
-                    href:
-                      "https://github.com/robotframework/robotframework/issues",
-                    text:
-                      "Notice that external libraries and tools developed as separate projects have their own issue trackers."
-                  }
-                ]
-              },
-              {
-                title: "Other",
-                items: [
-                  {
-                    title: "LinkedIn",
-                    href:
-                      "http://www.linkedin.com/groups/Robot-Framework-3710899",
-                    text: "Robot Framework group on LinkedIn."
-                  },
-                  {
-                    title: "AT.info",
-                    href:
-                      "http://automated-testing.info/category/robot-framework",
-                    text: "Robot Framework help forum по-русски."
-                  },
-                  {
-                    title: "robotframework-devel",
-                    href: "http://groups.google.com/group/robotframework-devel",
-                    text:
-                      "Mailing list for contributors and developers of the Robot Framework ecosystem."
-                  },
-                  {
-                    title: "Helsinki Meetup group",
-                    href: "https://www.meetup.com/Robot-Framework-Helsinki/",
-                    text: "Robot Framework Meetup group in Helsinki, Finland."
-                  },
-                  {
-                    title: "Stack Overflow",
-                    href:
-                      "http://stackoverflow.com/questions/tagged/robotframework",
-                    text:
-                      "Questions in Stack Overflow tagged with Robot Framework."
-                  },
-                  {
-                    title: "robotframework-announce",
-                    href:
-                      "http://groups.google.com/group/robotframework-announce",
-                    text:
-                      "Mailing list for just release announcements, nothing more."
-                  }
-                ]
-              }
-            ]
+              header: "Previous talks",
+              src: "https://www.youtube.com/embed/?listType=playlist&list=PLSK6YK5OGX1AUdykW4DYwNeSN_6qDE_-z"
+            }
           }
         }
       ]
