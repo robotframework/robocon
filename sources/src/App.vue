@@ -128,7 +128,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: "<div><p>Sign up for workshops coming soon!</p><h2 class='mb-0'>Asko Soukka / Nicholas Bollweg</h2><p>Authoring Robot Framework test and task suites with JupyterLab</p><h2 class='mb-0'>Ismo Aro</h2><p>Hands-on Windows desktop testing with Robot Framework</p><h2 class='mb-0'>Joshua Gorospe</h2><p>Robot Framework strategies for the lone tester</p><h2 class='mb-0'>Ed Manlove / Tatu Aalto</h2><p>Web Testing using Selenium Library and Robot Framework</p><h2 class='mb-0'>-</h2><p>Robot Framework basics</p><h2 class='mb-0'>Pekka Klärck</h2><p>Extending Robot Framework</p></div>"
+              text: "<div><p>Sign up for workshops coming soon!</p><h2 class='mb-0'>Asko Soukka / Nicholas Bollweg</h2><p>Authoring Robot Framework test and task suites with JupyterLab</p><h2 class='mb-0'>Ismo Aro / Eeva Terkki</h2><p>Hands-on Windows desktop testing with Robot Framework</p><h2 class='mb-0'>Joshua Gorospe</h2><p>Robot Framework strategies for the lone tester</p><h2 class='mb-0'>Ed Manlove / Tatu Aalto</h2><p>Web Testing using Selenium Library and Robot Framework</p><h2 class='mb-0'>--</h2><p>Robot Framework hands-on</p><h2 class='mb-0'>Pekka Klärck</h2><p>Extending Robot Framework</p></div>"
             }
           }
         },
