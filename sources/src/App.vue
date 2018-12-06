@@ -112,7 +112,8 @@ export default {
             text: {
               twitter: false,
               header: "Schedule and speakers",
-              text: "<div><h2 class='mb-0'>8:00 - Registration, coffee</h2><p></p></p><h2 class='mb-0'>9:00 - Pekka Klärck</h2><p>State of the Robot Framework union</p><h2 class='mb-0'>9:30 - Antti Karjalainen</h2><p>The start of the open source RPA movement</p><h2 class='mb-0'>10:00 - Break</h2><p></p><h2 class='mb-0'>10:30 - Juho Saarinen</h2><p>Evolution of Robot Framework user</p><h2 class='mb-0'>11:00 - Tatu Aalto</h2><p>Decade with SeleniumLibrary and browsers' UI automation</p><h2 class='mb-0'>11:30 - Lunch</h2><p></p><h2 class='mb-0'>12:30 - Brady Hill</h2><p>RobotFramework for Embedded Software Testing </p><h2 class='mb-0'>12:55 - Nguyen Huu Bach</h2><p>RENAT - a network testing plugin based on Robot Framework </p><h2 class='mb-0'>13:20 - Mikael Siirtola</h2><p>Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland </p><h2 class='mb-0'>13:45 - Break</h2><p></p><h2 class='mb-0'>14:00 - Päivi Raulamo-Jurvanen</h2><p>Practical Experiences on Evaluating Software Testing Tools with focus on Robot Framework </p><h2 class='mb-0'>14:30 - Nicholas Bollweg / Asko Soukka</h2><p>Robots from Jupyter – The Future of Authoring Tests and Tasks in Robot Framework</p><h2 class='mb-0'>15:00 - Coffee</h2><p></p><h2 class='mb-0'>15:30 - Joonas Lehtimäki</h2><p>Dynamically scalable test environment on top of Kubernetes</p><h2 class='mb-0'>16:00 - Oleksandr Kravchenko</h2><p>Dynamic Generation of Model Based Testcases Using Listener Interface Version 3 </p><h2 class='mb-0'>16:30 - Break</h2><p></p><h2 class='mb-0'>17:00 - Lightning talks</h2><p>Topics of the day - you decide!</p><h2 class='mb-0'>18:00 - Networking</h2><p></p><h2 class='mb-0'>19:00 - Venue closes, after party starts</h2><p></p></div>"
+              text: "<div><h2 class='mb-0'>8:00 - Registration, coffee</h2><p></p><h2 class='mb-0'>9:00 - Pekka Klärck</h2><p>State of the Robot Framework union</p><h2 class='mb-0'>9:30 - Antti Karjalainen</h2><p>The start of the open source RPA movement</p><h2 class='mb-0'>10:00 - Break</h2><p></p><h2 class='mb-0'>10:30 - Juho Saarinen</h2><p>Evolution of Robot Framework user</p><h2 class='mb-0'>11:00 - Tatu Aalto</h2><p>Decade with SeleniumLibrary and browsers' UI automation</p><h2 class='mb-0'>11:30 - Lunch</h2><p></p><h2 class='mb-0'>12:30 - Brady Hill</h2><p>RobotFramework for Embedded Software Testing </p><h2 class='mb-0'>12:55 - Nguyen Huu Bach</h2><p>RENAT - a network testing plugin based on Robot Framework </p><h2 class='mb-0'>13:20 - Mikael Siirtola</h2><p>Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland </p><h2 class='mb-0'>13:45 - Break</h2><p></p><h2 class='mb-0'>14:00 - Päivi Raulamo-Jurvanen</h2><p>Practical Experiences on Evaluating Software Testing Tools with focus on Robot Framework </p><h2 class='mb-0'>14:30 - Nicholas Bollweg / Asko Soukka</h2><p>Robots from Jupyter – The Future of Authoring Tests and Tasks in Robot Framework</p><h2 class='mb-0'>15:00 - Coffee</h2><p></p><h2 class='mb-0'>15:30 - Joonas Lehtimäki</h2><p>Dynamically scalable test environment on top of Kubernetes</p><h2 class='mb-0'>16:00 - Oleksandr Kravchenko</h2><p>Dynamic Generation of Model Based Testcases Using Listener Interface Version 3 </p><h2 class='mb-0'>16:30 - Break</h2><p></p><h2 class='mb-0'>17:00 - Lightning talks</h2><p>Topic of the day, you decide! Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day and get ready to present a 10 minute lightning talk on the big stage.</p><h2 class='mb-0'>18:00 - Networking</h2><p></p><h2 class='mb-0'>19:00 - Venue closes, after party starts.</h2><p>Official after party starting at 6:30pm at Vala offices close to the conference venue.</p></div>"
+
             }
           }
         },
@@ -128,7 +129,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: "<div><p>Sign up for workshops coming soon!</p><h2 class='mb-0'>Asko Soukka / Nicholas Bollweg</h2><p>Authoring Robot Framework test and task suites with JupyterLab</p><h2 class='mb-0'>Ismo Aro / Eeva Terkki</h2><p>Hands-on Windows desktop testing with Robot Framework</p><h2 class='mb-0'>Joshua Gorospe</h2><p>Robot Framework strategies for the lone tester</p><h2 class='mb-0'>Ed Manlove / Tatu Aalto</h2><p>Web Testing using Selenium Library and Robot Framework</p><h2 class='mb-0'>--</h2><p>Robot Framework hands-on</p><h2 class='mb-0'>Pekka Klärck</h2><p>Extending Robot Framework</p></div>"
+              text: "<div><p>Sign up for workshops coming soon!</p><h2 class='mb-0'>Asko Soukka / Nicholas Bollweg</h2><p>Authoring Robot Framework test and task suites with JupyterLab</p><h2 class='mb-0'>Ismo Aro / Eeva Terkki</h2><p>Hands-on Windows desktop testing with Robot Framework</p><h2 class='mb-0'>Joshua Gorospe</h2><p>Robot Framework strategies for the lone tester</p><h2 class='mb-0'>Ed Manlove / Tatu Aalto</h2><p>Web Testing using Selenium Library and Robot Framework</p><h2 class='mb-0'>Jenna Kaisanlahti</h2><p>Robot Framework hands-on</p><h2 class='mb-0'>Pekka Klärck</h2><p>Extending Robot Framework</p></div>"
             }
           }
         },
@@ -144,21 +145,6 @@ export default {
               header: "Tickets",
               text:
                 '<p><a target="blank" href="https://www.lyyti.in/robocon2019">Tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until November 15, 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31, 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17, 2019. <br> </p>'
-            }
-          }
-        },
-        {
-          title: "Program",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Program",
-              text:
-                "<div><h2>Lightning Talks</h3><p>After the presentations there is a time allocation for 10 minute lightning talks. Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day.</p><h2 class='mt-5'>After Party</h3><p>Official after party starting at 6:30pm at Vala offices close to the conference venue.</p></div>"
             }
           }
         },
