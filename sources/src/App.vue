@@ -93,6 +93,11 @@ export default {
                 img: require("@/assets/img/users/s_vala.png")
               },
               {
+                title: "Etteplan",
+                href: "https://www.etteplan.com/expertise/embedded-systems-and-iot/rd-testing-and-validation",
+                img: require("@/assets/img/users/s_etteplan.png")
+              },
+              {
                 title: "Symbio",
                 href: "https://www.symbio.com/",
                 img: require("@/assets/img/users/s_symbio.png")
