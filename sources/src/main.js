@@ -10,7 +10,6 @@ import VueRouter from 'vue-router'
 
 import Vue from 'vue'
 import App from './App'
-import Talks from './Talks'
 import VueScrollTo from 'vue-scrollto'
 
 import AppHeader from '@/components/AppHeader'
@@ -21,17 +20,7 @@ import BootstrapVue from 'bootstrap-vue'
 
 Es6Promise.polyfill()
 
-const router = new VueRouter({
-  routes: [
-    { path: '/', component: App },
-    { path: '/talks', component: Talks }
-  ]
-})
-
-console.log(router)
-
 Vue.use(BootstrapVue)
-Vue.use(VueRouter)
 
 Vue.use(VueScrollTo, {
   duration: 300,
@@ -57,7 +46,6 @@ Vue.component('app-footer', AppFooter)
 new Vue({
   el: '#app',
   template: '<App/>',
-  router,
   components: {
     App
   }
