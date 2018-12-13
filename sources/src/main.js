@@ -3,7 +3,6 @@
 /* eslint-disable no-new */
 
 import Es6Promise from 'es6-promise'
-Es6Promise.polyfill()
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -19,8 +18,9 @@ import NavigationVertical from '@/components/NavigationVertical'
 import NavigationHorizontal from '@/components/NavigationHorizontal'
 import BootstrapVue from 'bootstrap-vue'
 
+Es6Promise.polyfill()
+
 Vue.use(BootstrapVue)
-Vue.use(VueRouter)
 
 Vue.use(VueScrollTo, {
   duration: 300,
