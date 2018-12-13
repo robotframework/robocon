@@ -3,7 +3,6 @@
 /* eslint-disable no-new */
 
 import Es6Promise from 'es6-promise'
-Es6Promise.polyfill()
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -11,6 +10,7 @@ import VueRouter from 'vue-router'
 
 import Vue from 'vue'
 import App from './App'
+import Talks from './Talks'
 import VueScrollTo from 'vue-scrollto'
 
 import AppHeader from '@/components/AppHeader'
@@ -18,6 +18,17 @@ import AppFooter from '@/components/AppFooter'
 import NavigationVertical from '@/components/NavigationVertical'
 import NavigationHorizontal from '@/components/NavigationHorizontal'
 import BootstrapVue from 'bootstrap-vue'
+
+Es6Promise.polyfill()
+
+const router = new VueRouter({
+  routes: [
+    { path: '/', component: App },
+    { path: '/talks', component: Talks }
+  ]
+})
+
+console.log(router)
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
@@ -46,6 +57,7 @@ Vue.component('app-footer', AppFooter)
 new Vue({
   el: '#app',
   template: '<App/>',
+  router,
   components: {
     App
   }

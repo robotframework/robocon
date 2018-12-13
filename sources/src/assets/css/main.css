@@ -18,6 +18,19 @@ body {
   padding: 0;
 }
 
+.justify {
+  text-align: justify;
+}
+
+.clickable-title {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.word-break {
+  word-break: break-word;
+}
+
 .b-card-body p a {
   color: #fff;
 }
@@ -87,21 +100,24 @@ h2,
 h3,
 div.card-header {
   font-family: "OCRA";
-  text-transform: uppercase;
   text-align: left;
   color: #ff5152;
+}
+
+h1, h2, div.card-header {
+  text-transform: uppercase;
 }
 
 h1 {
   font-size: 1.8rem;
 }
 
-h2 {
-  font-size: 2.5rem;
+h3 {
+  font-size: 1rem;
 }
 
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 h2::before {
@@ -431,10 +447,10 @@ table {
 }
 
 .link-fix::before {
-  content: "a"; 
-  margin-top: -285px; 
-  height: 285px; 
-  visibility: hidden; 
+  content: "a";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -465,4 +481,11 @@ table {
 
 .collapsing {
   transition: 0.3s cubic-bezier(.17, .67, .56, 1.03);
+}
+
+.toggle-content-enter-active, .toggle-content-leave-active {
+  transition: opacity 0.1s;
+}
+.toggle-content-enter, .toggle-content-leave-to {
+  opacity: 0;
 }
