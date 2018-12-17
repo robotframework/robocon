@@ -314,7 +314,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Workhops provide a possibility to learn more about Robot Framework and related libraries and tools. They are mostly hands-on and participation is limited to 12-20 persons. They are organized on Wednesday, January 16, a day before the main conference at Ruoholahti, Helsinki. Click the titles below for more information.</p><p>Full day workshops cost 300€ and half day workshops are 150€. These prices are for people participating the main conference and for employeers of <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a> member organizations. For others the prices are 400€ and 200€, respectively.</p><p>Workshop enrollment opens soon. Most likely on Wednesday, December 19, 2018, at 6am UTC.</p>',
+              text: '<p>Workhops provide a possibility to learn more about Robot Framework and related libraries and tools. They are mostly hands-on and participation is limited to 12-20 persons. They are organized on Wednesday, January 16, a day before the main conference at Ruoholahti, Helsinki. Click the titles below for more information.</p><p>Full day workshops cost 300€ and half day workshops are 150€. These prices are for people participating the main conference and for employees of <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a> member organizations. For others the prices are 400€ and 200€, respectively.</p><p>Workshop enrollment opens soon. Most likely on Wednesday, December 19, 2018, at 6am UTC.</p>',
               talks: [
                 {
                   title: "09:00-12:00 - Asko Soukka / Nicholas Bollweg",
