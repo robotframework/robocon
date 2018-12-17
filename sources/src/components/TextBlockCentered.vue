@@ -3,7 +3,7 @@
     <div v-if="data.twitter === false" class="col-lg-12 col-md-12 mx-auto">
       <div class="row-md-5 row-lg-4 order-1 textblock-left no-border dashed-header link-fix">
         <h1 :class="{'mb-0' : data.talks}"v-html="data.header"/>
-        <p style="font-size: 1rem" v-if="data.talks">(Click on a speaker for more info)</p>
+        <p style="font-size: 1rem" v-if="data.talks">(Click the name for more info)</p>
       </div>
       <div
         v-html="data.text"

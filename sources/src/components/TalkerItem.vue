@@ -11,10 +11,18 @@
       mode="out-in">
       <div v-if="expanded">
         <div class="row mt-3">
-          <div class="col-lg-4">
-            <img class="mb-3" style="width: 100%" :src="require(`@/assets/img/users/${imgUrl}`)">
+          <div v-if="imgUrl !== ''"class="col-lg-4">
+              <div v-for="image in imgUrl">
+                  <img class="mb-3" style="width: 100%" :src="require(`@/assets/img/users/${image}`)">
+              </div>
           </div>
-          <div class="col-lg-8 justify word-break">
+          <div v-if="imgUrl !== ''" class="col-lg-8 justify word-break">
+            <h3>{{ description }}</h3>
+            <p v-html="descriptionExpanded"></p>
+            <h3>Bio</h3>
+            <p v-html="bio"></p>
+          </div>
+          <div v-else class="col-lg-12">
             <h3>{{ description }}</h3>
             <p v-html="descriptionExpanded"></p>
             <h3>Bio</h3>
@@ -40,8 +48,8 @@ export default {
       default: ''
     },
     imgUrl: {
-      type: String,
-      default: ''
+      type: Array,
+      default: () => []
     },
     descriptionExpanded: {
       type: String,
