@@ -36,7 +36,7 @@ export default {
               twitter: true,
               header: "Welcome",
               text:
-                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: Thursday, January 17, 2019, 09:00–18:00 (UTC+2) <br> Place: Bio Rex Helsinki, Mannerheimintie 22-24, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a change to network with people from the same community. The schedule for the event week is: <br> <br>Wed, Jan 16: Workshops & Social Dinner (additional cost) <br>Thu, Jan 17: RoboCon Conference & Afterparty<br>Fri, Jan 18: Sprint & sauna (free) <br> <br> RoboCon is organized by Robot Framework Foundation, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
+                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: Thursday, January 17, 2019, 09:00–18:00 (UTC+2) <br> Place: Bio Rex Helsinki, Mannerheimintie 22-24, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a change to network with people from the same community. The schedule for the event week is: <br> <br>Wed, Jan 16: Workshops & Social Dinner (additional cost) <br>Thu, Jan 17: RoboCon Conference & Afterparty<br>Fri, Jan 18: Sprint & sauna (free) <br> <br> RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
             }
           }
         },
@@ -314,7 +314,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Workhops provide a possibility to learn more about Robot Framework and related libraries and tools. They are mostly hands-on and participation is limited to 12-20 persons. They are organized on Wednesday, January 16, a day before the main conference at Ruoholahti, Helsinki. Click the titles below for more information.</p><p>Full day workshops cost 300€ and half day workshops are 150€. These prices are for people participating the main conference and for employees of <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a> member organizations. For others the prices are 400€ and 200€, respectively.</p><p>Workshop enrollment opens soon. Most likely on Wednesday, December 19, 2018, at 6am UTC.</p>',
+              text: '<p>Workhops provide a possibility to learn more about Robot Framework and related libraries and tools. They are mostly hands-on and participation is limited to 12-20 persons. They are organized on Wednesday, January 16, a day before the main conference at Ruoholahti, Helsinki. Click the titles below for more information.</p><p>Full day workshops cost 300€ and half day workshops are 150€. These prices are for people participating the main conference and for employees of <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a> member organizations. For others the prices are 400€ and 200€, respectively.</p><p>Workshop enrollment opens on Wednesday, December 19, 2018, 8am Finnish time <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20181219T08&p1=101">(6am UTC)</a>.</p>',
               talks: [
                 {
                   title: "09:00-12:00 - Asko Soukka / Nicholas Bollweg",
@@ -388,7 +388,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p><a target="blank" href="https://www.lyyti.in/robocon2019">Tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until November 15, 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31, 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17, 2019. <br> </p>'
+                '<p><a target="blank" href="https://www.lyyti.in/robocon2019">Conference tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until November 15, 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31, 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17, 2019. <br> </p>'
             }
           }
         },
