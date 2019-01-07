@@ -408,7 +408,7 @@ export default {
           }
         },
         {
-          title: "Sauna-and-Dinner",
+          title: "Dinner",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -416,8 +416,8 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Sauna and Dinner",
-              text: "<p>More info coming later</p>"
+              header: "Pre-conference dinner",
+              text: "<p>The conference activities start already on Wednesday, January 16, with <a href='#workshops'>workshops</a> during the day and a pre-conference dinner in the evening. The dinner starts at 19:00 and it is held at <a href='https://www.ravintolalasipalatsi.fi/lang=en'>Restaurant Lasipalatsi</a>, in the same building where the actual <a href='#arrival'>conference is organized</a> the day after.</p><p>The dinner is open for everyone but has maximum limit of 50 persons. It is on own costs, except for conference speakers and workshop organizers, and you need to sign up and select a set menu beforehand. Join us and meet other conference participants, including speakers, already before the conference!</p><p><a href='https://response.questback.com/knowitoy/p2tqav2fo3'>Sign up for the dinner here</a> latest on Friday, January 11!</p>"
             }
           }
         },
