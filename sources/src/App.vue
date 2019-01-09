@@ -451,7 +451,7 @@ export default {
           }
         },
         {
-          title: "Previous talks",
+          title: "Previous-talks",
           text_block: false,
           text_block_centered: false,
           tab_box: false,
