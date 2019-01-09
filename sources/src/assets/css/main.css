@@ -62,7 +62,7 @@ header a.nav-link:hover {
   color: #fff;
 }
 
-p {
+p, li {
   font-family: CourierCodeRoman;
   margin-bottom: 1rem;
 }
