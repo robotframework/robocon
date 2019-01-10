@@ -36,7 +36,22 @@ export default {
               twitter: true,
               header: "Welcome",
               text:
-                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: Thursday, January 17, 2019, 09:00–18:00 (UTC+2) <br> Place: Bio Rex Helsinki, Mannerheimintie 22-24, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a chance to network with people from the same community. The schedule for the event week is: <br> <br>Wed, Jan 16: Workshops & Social Dinner (additional cost) <br>Thu, Jan 17: RoboCon Conference & Afterparty<br>Fri, Jan 18: Sprint & sauna (free) <br> <br> RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p>'
+                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: Thursday, January 17, 2019, 09:00–18:00 (UTC+2) <br> Place: Bio Rex Helsinki, <a target="blank" href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a>, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a chance to network with people from the same community. The schedule for the event week is: <br> <br>Wed, Jan 16: <a href="#workshops">Workshops</a> & <a href="#dinner">Dinner</a> (additional cost) <br>Thu, Jan 17: <a href="#program">RoboCon Conference & After party</a><br>Fri, Jan 18: <a href="#sprints">Sprint & Sauna</a> (free) <br> <br> RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p><p>Conference hashtag to use on Twitter and elsewhere is <code><b>#robocon</b></code>. <a href="https://robotframework-slack-invite.herokuapp.com/" target="blank">Robot Framework Slack community</a> also has a dedicated <code>#robocon</code> channel to ask question and chat with other participants. To contact the organizers directly, use <a href="mailto:info&#64;robocon.io">info&#64;robocon.io</a>.</p>'
+            }
+          }
+        },
+        {
+          title: "Tickets",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Tickets",
+              text:
+                '<p><a target="blank" href="https://www.lyyti.in/robocon2019">Conference tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until November 15, 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31, 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17, 2019. <br> <br><a href="#workshops">Workshop</a> tickets are sold separately.</p>'
             }
           }
         },
@@ -108,12 +123,17 @@ export default {
                 title: "Symbio",
                 href: "https://www.symbio.com/",
                 img: require("@/assets/img/users/s_symbio.png")
+              },
+              {
+                title: "Eficode",
+                href: "https://www.eficode.com/home",
+                img: require("@/assets/img/users/s_eficode.jpg")
               }
             ]
           }
         },
         {
-          title: "Schedule",
+          title: "Program",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -292,13 +312,13 @@ export default {
                 {
                   title: "19:00 - Venue closes, after party starts.",
                   description:
-                    "Official after party starting at 6:30pm at Vala offices close to the conference venue.",
+                    "Official after party starting at 6:30pm at Vala offices close to the conference venue at <a target='blank' href='https://goo.gl/maps/UNh2MSy24BU2'>Erottajankatu 11</a>.",
                   imgUrl: [],
                   descriptionExpanded: "",
                   bio: ""
                 }
               ],
-              header: "Schedule and speakers"
+              header: "Conference program"
             }
           }
         },
@@ -314,7 +334,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<a target="blank" href="https://www.lyyti.fi/reg/roboconworkshops">Workshop tickets available here.</a><p><br>Workhops provide a possibility to learn more about Robot Framework and related libraries and tools. They are mostly hands-on and participation is limited to 12-20 persons. They are organized on Wednesday, January 16, a day before the main conference at Ruoholahti, Helsinki. Click the titles below for more information.</p><p>Full day workshops cost 300€ and half day workshops are 150€. These prices are for people participating the main conference and for employees of <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a> member organizations. For others the prices are 400€ and 200€, respectively.</p>',
+              text: '<a target="blank" href="https://www.lyyti.fi/reg/roboconworkshops">Workshop tickets available here.</a><p><br>Workshops provide a possibility to learn more about Robot Framework and related libraries and tools. They are mostly hands-on and participation is limited to 12-20 persons. They are organized on Wednesday, January 16, a day before the main conference at Ruoholahti, Helsinki. Click the titles below for more information.</p><p>Full day workshops cost 300€ and half day workshops are 150€. These prices are for people participating the main conference and for employees of <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a> member organizations. For others the prices are 400€ and 200€, respectively.</p>',
               talks: [
                 {
                   title: "09:00-12:00 - Asko Soukka / Nicholas Bollweg",
@@ -366,7 +386,7 @@ export default {
                 },
                 {
                   title: "09:00-16:00 - Pekka Klärck",
-                  description: "Extending Robot Framework",
+                  description: "Extending Robot Framework (sold out)",
                   descriptionExpanded:
                     "<p>Pekka Klärck<br>Eliga</p><p>09:00-16:00<br>300€ / 400€</p><p>Max 12 participants</p><h2>Description</h2><p>In this workshop you will learn how to extend Robot Framework using various different interfaces. The first half of the workshop is dedicated to the library API. We will start from the basics and quickly continue to more advanced topics like the dynamic library interface (used nowadays by SeleniumLibrary) and automatic argument type conversion (new feature in RF 3.1). During the second half you will get familiar with other extending and integration possibilities such as the listener API, variable files, modifying tests dynamically before execution, starting execution programmatically and analyzing results.</p><p>This workshop is for you if you already know basics of using Robot Framework, possibly also basics of writing tests libraries, and want to take your skills to the next level. The workshop is 100% hands-on, no slides, learn-by-doing, and there should be something new for even experienced Robot Framework users. In addition to learning about these powerful extension APIs, you have a chance to ask hard questions related to Robot Framework from its creator. </p><p>Extending Robot Framework means coding, and participants should thus know the basics of Python programming. You should bring your own laptop with Python 3.6 or newer and Robot Framework 3.1 or newer installed. You should also have adequate admin rights to install possible additional Python modules using pip. An editor for writing Python code and Robot Framework tests is needed as well.</p>",
                   bio:
@@ -374,36 +394,6 @@ export default {
                   imgUrl: ["Pekka_Klarck.jpg"]
                 }
               ]
-            }
-          }
-        },
-        {
-          title: "Tickets",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Tickets",
-              text:
-                '<p><a target="blank" href="https://www.lyyti.in/robocon2019">Conference tickets available here.</a> <br><br> Prices are valid as follows: <br> <b>Blind robot</b> 300€ (excluding VAT 24%) until November 15, 2018. <br> <b>Early robot</b> 400€ (excluding VAT 24%) until December 31, 2018. <br> <b>Late robot</b> 500€ (excluding VAT 24%) until January 17, 2019. <br> </p>'
-            }
-          }
-        },
-        {
-          title: "Arrival",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Arrival and Accommodation",
-              text:
-                "<div><h2>TRANSPORTATION: AIRPORT</h2><p>The distance from Helsinki airport to Bio Rex is 21 km. Trains marked as “I” and “P” go from the airport to Helsinki Central Station. From the Helsinki Central Station it is only 5 minutes' walk to Bio Rex.</p><p>Buses operate between Helsinki airport and Helsinki Central Station. The bus stops for both arriving and departing buses are located in front of the terminals (T1 & T2). Finnair bus goes from airport to Eliel Square and bus nr. 615 goes from airport to Rautatientori. There is a short walk to Bio Rex from both Eliel Square (300 meters) and Rautatientori (350 meters).</p><p>Time estimation for the journey is 40 minutes by bus and about 30-35 minutes by train or taxi. Taxi cost is approximately 40-55 euros depending on the traffic and the taxi company.</p><p>At Helsinki airport there are informative signage for trains, buses and taxis to ensure that you won’t get lost.</p><h2>TRANSPORTATION: RAILWAY STATION</h2><p>Railway station is only 5 minutes’ walk (350 meters) from Bio Rex.</p><h2>TRANSPORTATION: BUS STATION</h2><p>Intercity bus connections from Kamppi bus station (400 meters away) and bus connections for Helsinki's internal traffic from Rautatientori (350 meters) located close to Helsinki Central Station. Buses to Helsinki Airport leave from Eliel Square (300 meters) and Rautatientori (350 meters).</p><h2>Hotel deals</h2><p><a href='https://www.sokoshotels.fi/en/helsinki/sokos-hotel-presidentti'>Original Sokos Hotel Presidentti</a> – reservation code <span style='color: #ff5152'>BRobocon2019</span><br>- Reservations for 14-21 Jan, 2019. Code valid until 31 Dec 2018<br>- Standard single room: 145€ / night<br>- Standard double room: 165€ / night<br><br><a href='https://www.sokoshotels.fi/en/helsinki/sokos-hotel-vaakuna'>Original Sokos Hotel Vaakuna</a> – reservation code <span style='color: #ff5152'>BRobocon19</span><br>- Reservations for 14-21 Jan, 2019. Code valid until 31 Dec 2018<br>- Standard single room: 155€ / night<br>- Standard double room: 175€ / night</p></div>"
             }
           }
         },
@@ -431,7 +421,22 @@ export default {
             text: {
               twitter: false,
               header: "Sprints",
-              text: "<p>After the main conference we still have development sprints on Friday, January 18. Sprints are for you if you want to contribute to some existing project in Robot Framework ecosystem, have a project or project idea you'd like to work with others, or just want to meet with other Robot Framework users and developers. We'll also have sauna afterwards!</p><p>Confirmed project represented in the sprints (send email to <a href='mailto:info&#64;robocon.io'>info&#64;robocon.io</a> to add yours):</p><ul style='text-align: left; width: 100%'><li><a href='https://github.com/robotframework/robotframework'>Robot Framework</a> (Pekka Klärck)</li><li><a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a> (Tatu Aalto)</li><li><a href='https://github.com/robots-from-jupyter/robotkernel'>Jupyter plugin</a> (Asko Soukka and Nick Bollweg)</li></ul><p>Developers from the aforementioned projects will select tasks suitable for new contributors beforehand (typically labeled with <tt>good new issue</tt> or <tt>help wanted</tt> in their issue trackers), but participants can obviously select issues they’d like to work with themselves. Many of the tasks are likely to involve coding, but there certainly are also non-coding tasks like testing, documentation and work with infrastructure like CI.</p> <p>If you are new to contributing to open source, we recommend you to take a look at the <a href='https://opensource.guide/how-to-contribute/'>How to Contribute to Open Source</a> guide. Individual projects typically also have their own contribution guidelines you can find via their project pages and may want to study beforehand.</p> <p>Agenda:</p> <p>10:00 Welcome! Introduction to participating projects and tasks they have available.</p> <p>10:30 Development! Participants can work with tasks they find interesting either alone, in pairs, or in small groups. Project leaders help as much as they can.</p> <p>15:30 Presenting what has been accomplished.</p> <p>16:00 Official program ends. Sauna opens. Coding can continue.</p> <p>Sprints are free of charge and open for everyone, including those not participating the conference itself. Sprint facilities are provided by <a href='https://eficode.com'>Eficode</a>. The address is <a href='https://goo.gl/maps/YoeBPqtGyGo'>Pohjoinen Rautatiekatu 25</a>. Food and drinks will be available.</p>"
+              text: "<div><p>After the main conference we still have development sprints on Friday, January 18. Sprints are for you if you want to contribute to some existing project in Robot Framework ecosystem, have a project or project idea you'd like to work with others, or just want to meet with other Robot Framework users and developers. We'll also have sauna afterwards!</p><p>Confirmed project represented in the sprints (send email to <a href='mailto:info&#64;robocon.io'>info&#64;robocon.io</a> to add yours):</p><ul style='text-align: left; width: 100%'><li><a href='https://github.com/robotframework/robotframework'>Robot Framework</a> (Pekka Klärck)</li><li><a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a> (Tatu Aalto)</li><li><a href='https://github.com/robots-from-jupyter/robotkernel'>Jupyter plugin</a> (Asko Soukka and Nick Bollweg)</li><li><a href='https://github.com/Omenia/robotframework-whitelibrary'>WhiteLibrary</a> (Ismo Aro and Eeva Terkki)</li></ul><p>Developers from the aforementioned projects will select tasks suitable for new contributors beforehand (typically labeled with <tt>good new issue</tt> or <tt>help wanted</tt> in their issue trackers), but participants can obviously select issues they’d like to work with themselves. Many of the tasks are likely to involve coding, but there certainly are also non-coding tasks like testing, documentation and work with infrastructure like CI.</p> <p>If you are new to contributing to open source, we recommend you to take a look at the <a href='https://opensource.guide/how-to-contribute/'>How to Contribute to Open Source</a> guide. Individual projects typically also have their own contribution guidelines you can find via their project pages and may want to study beforehand.</p> <p>Agenda:<br></p><p>10:00 - Welcome! Introduction to participating projects and tasks they have available.</p> <p>10:30 - Development! Participants can work with tasks they find interesting either alone, in pairs, or in small groups. Project leaders help as much as they can.</p> <p>15:30 - Presenting what has been accomplished.</p> <p>16:00 -  Official program ends. Sauna opens. Coding can continue.</p> <p>Sprints are free of charge and open for everyone, including those not participating the conference itself. Sprint facilities are provided by Eficode. The address is <a target='blank' href='https://goo.gl/maps/YoeBPqtGyGo'>Pohjoinen Rautatiekatu 25</a>. Food and drinks will be available.</p></div>"
+            }
+          }
+        },
+        {
+          title: "Arrival",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Arrival and Accommodation",
+              text:
+                "<div><p>The main conference venue is Bio Rex Helsinki, <a target='blank' href='https://goo.gl/maps/gnd4duvnunP2'>Mannerheimintie 22-24</a>.</p><h2>TRANSPORTATION: AIRPORT</h2><p>The distance from Helsinki airport to Bio Rex is 21 km. Trains marked as “I” and “P” go from the airport to Helsinki Central Station. From the Helsinki Central Station it is only 5 minutes' walk to Bio Rex.</p><p>Buses operate between Helsinki airport and Helsinki Central Station. The bus stops for both arriving and departing buses are located in front of the terminals (T1 & T2). Finnair bus goes from airport to Eliel Square and bus nr. 615 goes from airport to Rautatientori. There is a short walk to Bio Rex from both Eliel Square (300 meters) and Rautatientori (350 meters).</p><p>Time estimation for the journey is 40 minutes by bus and about 30-35 minutes by train or taxi. Taxi cost is approximately 40-55 euros depending on the traffic and the taxi company.</p><p>At Helsinki airport there are informative signage for trains, buses and taxis to ensure that you won’t get lost.</p><h2>TRANSPORTATION: RAILWAY STATION</h2><p>Railway station is only 5 minutes’ walk (350 meters) from Bio Rex.</p><h2>TRANSPORTATION: BUS STATION</h2><p>Intercity bus connections from Kamppi bus station (400 meters away) and bus connections for Helsinki's internal traffic from Rautatientori (350 meters) located close to Helsinki Central Station. Buses to Helsinki Airport leave from Eliel Square (300 meters) and Rautatientori (350 meters).</p><h2>Hotel deals</h2><p><a href='https://www.sokoshotels.fi/en/helsinki/sokos-hotel-presidentti'>Original Sokos Hotel Presidentti</a> – reservation code <span style='color: #ff5152'>BRobocon2019</span><br>- Reservations for 14-21 Jan, 2019. Code valid until 31 Dec 2018<br>- Standard single room: 145€ / night<br>- Standard double room: 165€ / night<br><br><a href='https://www.sokoshotels.fi/en/helsinki/sokos-hotel-vaakuna'>Original Sokos Hotel Vaakuna</a> – reservation code <span style='color: #ff5152'>BRobocon19</span><br>- Reservations for 14-21 Jan, 2019. Code valid until 31 Dec 2018<br>- Standard single room: 155€ / night<br>- Standard double room: 175€ / night</p></div>"
             }
           }
         },
