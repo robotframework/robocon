@@ -101,12 +101,12 @@ export default {
               {
                 title: "Sogeti",
                 href: "https://www.sogeti.com/",
-                img: require("@/assets/img/users/s_sogeti.jpg")
+                img: require("@/assets/img/users/s_sogeti.png")
               },
               {
                 title: "Testimate",
                 href: "https://www.testimate.fi/",
-                img: require("@/assets/img/users/s_testimate.jpg")
+                img: require("@/assets/img/users/s_testimate.png")
               },
               {
                 title: "Vala Group",
@@ -127,7 +127,7 @@ export default {
               {
                 title: "Eficode",
                 href: "https://www.eficode.com/home",
-                img: require("@/assets/img/users/s_eficode.jpg")
+                img: require("@/assets/img/users/s_eficode.png")
               }
             ]
           }
