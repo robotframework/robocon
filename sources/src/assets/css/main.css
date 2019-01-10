@@ -82,11 +82,11 @@ header ul {
 
 code {
   font-family: "Courier";
-  color: black;
+  color: white;
   padding: 4px;
   margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
+  letter-spacing: 0.08rem;
+  font-size: 1.2rem;
 }
 
 h1,

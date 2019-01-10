@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 
+    <h2
       class="mb-0"
       :class="{ 'clickable-title' : descriptionExpanded !== ''}"
       @click="descriptionExpanded !== '' ? expanded = !expanded : false">
@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <p v-else>{{ description }}</p>
+      <p v-else v-html="description"></p>
     </transition>
   </div>
 </template>
