@@ -312,7 +312,7 @@ export default {
                 {
                   title: "19:00 - Venue closes, after party starts.",
                   description:
-                    "Official after party starting at 6:30pm at Vala offices close to the conference venue at <a target='blank' href='https://goo.gl/maps/UNh2MSy24BU2'>Erottajankatu 11</a>.",
+                    "Official after party starting at 6:30pm at Vala offices close to the conference venue at <a target='blank' href='https://goo.gl/maps/UNh2MSy24BU2'>Erottajankatu 11 B</a>.",
                   imgUrl: [],
                   descriptionExpanded: "",
                   bio: ""
