@@ -26,7 +26,7 @@ export default {
     return {
       pages: [
         {
-          title: "Robocon 2019",
+          title: "Videos",
           text_block: false,
           text_block_centered: false,
           tab_box: false,
@@ -41,7 +41,7 @@ export default {
           }
         },
         {
-          title: "Thank You",
+          title: "Thank-You",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
