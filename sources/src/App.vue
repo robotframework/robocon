@@ -26,7 +26,22 @@ export default {
     return {
       pages: [
         {
-          title: "Welcome",
+          title: "Robocon 2019",
+          text_block: false,
+          text_block_centered: false,
+          tab_box: false,
+          tab_box_centered: false,
+          feature_box: true,
+          data: {
+            text: {
+              header: "",
+              src:
+                "https://www.youtube.com/embed/?listType=playlist&list=PLSK6YK5OGX1D-QpVap5C7NlfurQ1dsGbt"
+            }
+          }
+        },
+        {
+          title: "Thank You",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -34,9 +49,9 @@ export default {
           data: {
             text: {
               twitter: true,
-              header: "Welcome",
+              header: "Thank You",
               text:
-                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: Thursday, January 17, 2019, 09:00–18:00 (UTC+2) <br> Place: Bio Rex Helsinki, <a target="blank" href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a>, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a chance to network with people from the same community. The schedule for the event week is: <br> <br>Wed, Jan 16: <a href="#workshops">Workshops</a> & <a href="#dinner">Dinner</a> (additional cost) <br>Thu, Jan 17: <a href="#program">RoboCon Conference & After party</a><br>Fri, Jan 18: <a href="#sprints">Sprint & Sauna</a> (free) <br> <br> RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p><p>Conference hashtag to use on Twitter and elsewhere is <code><b>#robocon</b></code>. <a href="https://robotframework-slack-invite.herokuapp.com/" target="blank">Robot Framework Slack community</a> also has a dedicated <code>#robocon</code> channel to ask question and chat with other participants. To contact the organizers directly, use <a href="mailto:info&#64;robocon.io">info&#64;robocon.io</a>.</p>'
+                '<p>RoboCon 2019 was organised on January 17, 2019 in Helsinki. Thank you for everyone who attended! Before new information is released on upcoming RoboCon 2020, enjoy the videos of our previous conferences on Youtube.</p><br><p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br> RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p><p>Conference hashtag to use on Twitter and elsewhere is <code><b>#robocon</b></code>. <a href="https://robotframework-slack-invite.herokuapp.com/" target="blank">Robot Framework Slack community</a> also has a dedicated <code>#robocon</code> channel to ask question and chat with other participants. To contact the organizers directly, use <a href="mailto:info&#64;robocon.io">info&#64;robocon.io</a>.</p>'
             }
           }
         },
