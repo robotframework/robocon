@@ -1,7 +1,7 @@
 <template>
   <div class="row no-gutters">
     <navigation-horizontal :pages="pages"/>
-
+    <b-img :src="require('@/assets/img/ROBOTFW_Mark_White_LOW_cropped.png')" class="logo-fixed" alt="Robot Frameworkg logo"/>
     <div class="col-md-12" ref="content" style="width:unset">
       <app-header/>
       <page-block
