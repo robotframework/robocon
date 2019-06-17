@@ -11,7 +11,7 @@
       mode="out-in">
       <div v-if="expanded">
         <div class="row mt-3">
-          <div v-if="imgUrl !== ''"class="col-lg-4">
+          <div v-if="imgUrl !== ''" class="col-lg-4">
               <div v-for="image in imgUrl">
                   <img class="mb-3" style="width: 100%" :src="require(`@/assets/img/users/${image}`)">
               </div>

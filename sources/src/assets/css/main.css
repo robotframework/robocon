@@ -170,6 +170,12 @@ h1.main-header {
   z-index: 999;
 }
 
+@media (max-width: 1100px) {
+  .logo-fixed {
+    display: none;
+  }
+}
+
 .white-box {
   font-family: CourierCodeRoman;
   color: #000;
@@ -398,6 +404,10 @@ hr {
 
 .card a {
   color: #20f73f;
+}
+
+.center {
+  text-align: center;
 }
 
 .link {
