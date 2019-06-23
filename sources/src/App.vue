@@ -11,7 +11,7 @@
         v-bind:key="index"
         class="pl-md-5 px-lg-2 p-sm-2 p-xs-1 link-fix"
       />
-      <app-footer class="mt-0 py-5"/>
+      <app-footer class="mt-3 py-5"/>
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>Hello, Robocon is coming soon!</p>'
+                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: January 15-16 (Wed-Thu), 2020 <br> Place: Bio Rex Helsinki, <a target="blank" href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a>, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a chance to network with people from the same community. The schedule for the event week is: <br> <br>Tue, Jan 14: <a href="#workshops">Workshops</a> <br>Wed - Thu, Jan 15-16: <a href="#program">RoboCon Conference</a><br>Fri, Jan 17: <a href="#sprints">Sprints</a><br> <br> RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p><p>Conference hashtag to use on Twitter and elsewhere is <code><b>#robocon</b></code>. <a href="https://robotframework-slack-invite.herokuapp.com/" target="blank">Robot Framework Slack community</a> also has a dedicated <code>#robocon</code> channel to ask question and chat with other participants. To contact the organizers directly, use <a href="mailto:info&#64;robocon.io">info&#64;robocon.io</a>.</p>'
             }
           }
         },
@@ -51,7 +51,7 @@ export default {
               twitter: false,
               header: "Call for Proposals",
               text:
-                "<p>papercall.io</p>"
+                "<p>Call for proposals starting soon!</p>"
             }
           }
         },
@@ -175,9 +175,8 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              /*text: '<a target="blank" href="https://www.lyyti.fi/reg/roboconworkshops">Workshop tickets available here.</a><p><br>Workshops provide a possibility to learn more about Robot Framework and related libraries and tools. They are mostly hands-on and participation is limited to 12-20 persons. They are organized on Wednesday, January 16, a day before the main conference. Workshops are held in <a href="https://goo.gl/maps/xaUHT6s3Uao" target="blank">Siili facilities</a>. If parking is needed see instructions <a href="https://www.europark.fi/hki-ruoholahti-eng/" target="blank">here</a>. Further info about the exact room for each workshop is provided in the workshops venue. Click the titles below for more information.</p><p>Full day workshops cost 300€ and half day workshops are 150€. These prices are for people participating the main conference and for employees of <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a> member organizations. For others the prices are 400€ and 200€, respectively.</p>',*/
-              text: '<p>Workshops are held on January 14th. Workshop tickets and topics will be available soon!</p>'
-              /* talks: [
+              text: '<p>Workshops coming soon!</p>',
+              /*talks: [
                 {
                   title: "09:00-12:00 - Asko Soukka / Nicholas Bollweg",
                   description:
@@ -188,8 +187,7 @@ export default {
                     "<p>Asko, an established Robot ecosystem contributor, bootstrapped the work on Robot support for interactive computing in Jupyter at the sprints of RoboCon 2018, and continues to explore new ways to ease test and task authoring with Jupyter. Asko works as a Systems Designer at Digital Services of University of Jyväskylä, where Robot Framework is used for both acceptance testing and process automation.</p><p>Nick, while a newcomer to the Robot ecosystem, is a long-time contributor to many Jupyter, Python, and JavaScript projects, bringing skills and knowledge to integrate Robot across many parts of the Jupyter ecosystem and beyond. Nick works at the Georgia Tech Research Institute as a Systems Architect, while also providing code, design and architecture contributions as a Jupyter Project core team member and local Jupyter User Group organizer.</p>",
                   imgUrl: ["Asko_Soukka.jpg", "Nicholas_Bollweg.jpg"]
                 }]*/
-            }
-          }
+            }}
         },
         {
           title: "Sprints",
@@ -201,7 +199,7 @@ export default {
             text: {
               twitter: false,
               header: "Sprints",
-              text: "<div><p>Sprints are on January 17th.</p></div>"
+              text: "<div><p>Sprints coming soon!</p></div>"
             }
           }
         },
@@ -236,22 +234,72 @@ export default {
           }
         },
         {
-          title: "Previous-talks",
+          title: "talks-2019",
           text_block: false,
-          text_block_centered: false,
+          text_block_centered: true,
           tab_box: false,
-          tab_box_centered: false,
-          feature_box: true,
+          feature_box: false,
+          user_box: false,
+          user_box_centered: false,
           data: {
             text: {
-              header: "Previous talks",
-              src:
-                "https://www.youtube.com/embed/?listType=playlist&list=PLSK6YK5OGX1AUdykW4DYwNeSN_6qDE_-z"
+              twitter: false,
+              header: "Previous talks - 2019",
+              text: '<p>(Click title for video)</p>',
+              talks: [
+                { author: "Ismo Aro / Pekka Klärck", title: "Welcome back! What's new since RoboCon 2018?", url: "https://www.youtube.com/embed/wBhY5Z2RoqQ" },
+                { author: "Antti Karjalainen", title: "The start of the open source RPA movement", url: "https://www.youtube.com/embed/uv6dvcoxdvU" },
+                { author: "Juho Saarinen", title: "Evolution of Robot Framework user", url: "https://www.youtube.com/embed/ynUmfWvZxpw" },
+                { author: "Tatu Aalto", title: "Decade with SeleniumLibrary and browsers' UI automation", url: "https://www.youtube.com/embed/HVAnWH8t4rU" },
+                { author: "Brady Hill", title: "RobotFramework for Embedded Software Testing", url: "https://www.youtube.com/embed/0q4-AjqpO9M" },
+                { author: "Nguyen Huu Bach", title: "RENAT - a network testing plugin based on Robot Framework", url: "https://www.youtube.com/embed/FSjmJLq4S4A" },
+                { author: "Mikael Siirtola", title: "Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland", url: "https://www.youtube.com/embed/gxbz5QJWdq4" },
+                { author: "Päivi Raulamo-Jurvanen", title: "Practical Experiences on Evaluating Software Testing Tools", url: "https://www.youtube.com/embed/2qKa3GEqcvY" },
+                { author: "Nicholas Bollweg / Asko Soukka", title: "Robots from Jupyter The Future of Authoring Tests and Tasks", url: "https://www.youtube.com/embed/rbYF_RmiAR8" },
+                { author: "Joonas Lehtimäki", title: "Dynamically scalable test environment on top of Kubernetes", url: "https://www.youtube.com/embed/ivLsjU77Q6c" },
+                { author: "Oleksandr Kravchenko", title: "Dynamic Generation of Model Based Testcases Using Listener Interface Version 3", url: "https://www.youtube.com/embed/qtEYZ5Om1Qk" },
+                { title: "Lightning Talks I", url: "https://www.youtube.com/embed/ck_zvTq4zz8" },
+                { title: "Lightning Talks II", url: "https://www.youtube.com/embed/a-27Ot_suEU" },
+                { title: "Lightning Talks III", url: "https://www.youtube.com/embed/hA99dYnlb-s" },
+                { title: "Lightning Talks IV", url: "https://www.youtube.com/embed/g98m3XpE8gw" },
+                { title: "Lightning Talks V", url: "https://www.youtube.com/embed/YJ4FTjxVG3o" },
+                { title: "Lightning Talks VI", url: "https://www.youtube.com/embed/9HHgrLb41go" },
+                { title: "Lightning Talks VII", url: "https://www.youtube.com/embed/fb42449bdz0" }]
+            }
+          }
+        },
+
+        {
+          title: "talks-2018",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          user_box: false,
+          user_box_centered: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Previous talks - 2018",
+              text: '<p>(Click title for video)</p>',
+              talks: [
+                { author: "Ismo Aro", title: "Robot Framework Foundation: Welcome to RoboCon", url: "https://www.youtube.com/embed/eAG18mS8UXA" },
+                { author: "Pekka Klärck", title: "How Did We Get Here? Where Do We Go Next?", url: "https://www.youtube.com/embed/6Kb1M3NECic" },
+                { author: "Régis Déau", title: "The Naked Truth About Successful Test Automation Journey", url: "https://www.youtube.com/embed/Z-9XIGZBf9U" },
+                { author: "Aldina Codesso-Lipponen", title: "Mega Robot Projects - What To Expect", url: "https://www.youtube.com/embed/KsRP9TsZwEQ" },
+                { author: "Asko Soukka", title: "Robot Framework in Plone CMS Project", url: "https://www.youtube.com/embed/iJEWobuwPeI" },
+                { author: "Ed Manlove", title: "The Importance of Open Source Communities", url: "https://www.youtube.com/embed/2GDrtvz_1Ds" },
+                { author: "Anssi Syrjäsalo", title: "Towards Contract - Based API Testing with a New Rest Json Test Library", url: "https://www.youtube.com/embed/TMU4WCIq3NA" },
+                { author: "Tatu Aalto", title: "Extending SeleniumLibrary 3.0", url: "https://www.youtube.com/embed/ZPqQ-RozkYQ" },
+                { author: "Martin Taylor", title: "Design Patterns for Efficient Multi-Platform", url: "https://www.youtube.com/embed/QDaXTkiviT0" },
+                { author: "Mikko Korpela", title: "Parallel test execution with Pabot", url: "https://www.youtube.com/embed/i0RV6SJSIn8" },
+                { author: "", title: "Lightning Talks", url: "https://www.youtube.com/embed/xb1Udosom6o" },
+              ]
             }
           }
         }
       ]
-    };
+    }
   }
-};
+}
 </script>

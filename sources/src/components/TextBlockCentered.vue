@@ -14,11 +14,13 @@
         <talker-item
           v-for="talk in data.talks"
           :key="talk.title"
+          :author="talk.author"
           :title="talk.title"
           :description="talk.description"
           :description-expanded="talk.descriptionExpanded"
           :bio="talk.bio"
-          :img-url="talk.imgUrl"/>
+          :img-url="talk.imgUrl"
+          :url="talk.url"/>
       </div>
     </div>
     <div v-else>

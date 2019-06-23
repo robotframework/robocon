@@ -33,12 +33,12 @@ export default {
   props: ["pages", "currentPage"],
   data () {
   return {
-      currentPageMutable: this.currentPage || "17012019"
+      currentPageMutable: this.currentPage || "15-16012020"
     }
   },
   methods: {
     onActivate(target) {
-      this.currentPageMutable = target.substring(1).toUpperCase().replace(/-AND-/g,'&');
+      this.currentPageMutable = target.substring(1).toUpperCase().replace(/-AND-/g,'&').replace('-', ' ')
     },
     click(a) {
       document.getElementById(a).scrollIntoView();
