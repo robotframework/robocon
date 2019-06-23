@@ -51,7 +51,7 @@ export default {
               twitter: false,
               header: "Call for Proposals",
               text:
-                "<p>Call for proposals starting soon!</p>"
+                "<p>Call for proposals opens on Friday 28.6!</p>"
             }
           }
         },
@@ -66,7 +66,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p>Ticket sales starting soon!</p>'
+                '<p>Ticket sales starting on Friday 28.6!</p>'
             }
           }
         },
