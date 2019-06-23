@@ -3,7 +3,7 @@
     <div v-if="data.twitter === false" class="col-lg-12 col-md-12 mx-auto">
       <div class="row-md-5 row-lg-4 order-1 textblock-left no-border dashed-header link-fix">
         <h1 :class="{'mb-0' : data.talks}" v-html="data.header"/>
-        <p style="font-size: 1rem" v-if="data.talks">(Click person's name for more info)</p>
+        <!--<p style="font-size: 1rem" v-if="data.talks">(Click person's name for more info)</p>-->
       </div>
       <div
         v-html="data.text"
@@ -14,11 +14,13 @@
         <talker-item
           v-for="talk in data.talks"
           :key="talk.title"
+          :author="talk.author"
           :title="talk.title"
           :description="talk.description"
           :description-expanded="talk.descriptionExpanded"
           :bio="talk.bio"
-          :img-url="talk.imgUrl"/>
+          :img-url="talk.imgUrl"
+          :url="talk.url"/>
       </div>
     </div>
     <div v-else>

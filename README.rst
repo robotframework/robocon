@@ -1,7 +1,7 @@
-Robocon 2019 Website
+Robocon 2020 Website
 ====================================
 
-This repository hosts RoboCon 2019 source code.
+This repository hosts RoboCon 2020 source code.
 
 Readme for editing this page `<sources/README.md>`__
 

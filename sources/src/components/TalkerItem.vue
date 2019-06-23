@@ -1,9 +1,14 @@
 <template>
-  <div>
+  <div class="mb-3 mt-3">
+    <h3
+      class="white mb-0"
+      v-if="author !== ''">
+      {{ author }}
+      </h3>
     <h2
       class="mb-0"
-      :class="{ 'clickable-title' : descriptionExpanded !== ''}"
-      @click="descriptionExpanded !== '' ? expanded = !expanded : false">
+      :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
+      @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
       {{ title }}
     </h2>
     <transition
@@ -11,22 +16,32 @@
       mode="out-in">
       <div v-if="expanded">
         <div class="row mt-3">
-          <div v-if="imgUrl !== ''"class="col-lg-4">
-              <div v-for="image in imgUrl">
-                  <img class="mb-3" style="width: 100%" :src="require(`@/assets/img/users/${image}`)">
-              </div>
+          <div v-if="url !== ''" class="col-lg-12">
+            <b-embed
+              type="iframe"
+              :src="url"
+              allowfullscreen />
           </div>
-          <div v-if="imgUrl !== ''" class="col-lg-8 justify word-break">
-            <h3>{{ description }}</h3>
-            <p v-html="descriptionExpanded"></p>
-            <h3>Bio</h3>
-            <p v-html="bio"></p>
-          </div>
-          <div v-else class="col-lg-12">
-            <h3>{{ description }}</h3>
-            <p v-html="descriptionExpanded"></p>
-            <h3>Bio</h3>
-            <p v-html="bio"></p>
+          <div v-else>
+            <div v-if="imgUrl !== ''" class="col-lg-4">
+                <div
+                  v-for="image in imgUrl"
+                  :key="image">
+                    <img class="mb-3" style="width: 100%" :src="require(`@/assets/img/users/${image}`)">
+                </div>
+            </div>
+            <div v-if="imgUrl !== ''" class="col-lg-8 justify word-break">
+              <h3>{{ description }}</h3>
+              <p v-html="descriptionExpanded"></p>
+              <h3>Bio</h3>
+              <p v-html="bio"></p>
+            </div>
+            <div v-else class="col-lg-12">
+              <h3>{{ description }}</h3>
+              <p v-html="descriptionExpanded"></p>
+              <h3>Bio</h3>
+              <p v-html="bio"></p>
+            </div>
           </div>
         </div>
       </div>
@@ -56,6 +71,14 @@ export default {
       default: ''
     },
     bio: {
+      type: String,
+      default: ''
+    },
+    author: {
+      type: String,
+      default: ''
+    },
+    url: {
       type: String,
       default: ''
     }
