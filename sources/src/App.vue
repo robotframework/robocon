@@ -2,7 +2,7 @@
   <div class="row no-gutters">
     <navigation-horizontal :pages="pages"/>
     <b-img :src="require('@/assets/img/ROBOTFW_Mark_White_LOW_cropped.png')" class="logo-fixed" alt="Robot Frameworkg logo"/>
-    <div class="col-md-12" ref="content" style="width:unset">
+    <div class="col-md-12" ref="content" style="width: 100%">
       <app-header/>
       <page-block
         v-for="(page, index) in pages"
@@ -41,7 +41,7 @@ export default {
           }
         },
         {
-          title: "proposals",
+          title: "CFP",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -51,7 +51,7 @@ export default {
               twitter: false,
               header: "Call for Proposals",
               text:
-                "<p>Call for proposals opens on Friday 28.6!</p>"
+                "<p>RoboCon 2020 call for proposals is open at <a href='https://www.papercall.io/robocon2020'>papercall.io/robocon2020</a> and closes on September 16, 2019. We are proud to partner with <a href='https://speaking-easy.com'>SpeakEasy</a> — a technical conference diversity initiative supporting first time international conference speakers with a focus on women and people of color.</p>"
             }
           }
         },
@@ -66,7 +66,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p>Ticket sales starting on Friday 28.6!</p>'
+                '<p><a target="blank" style="text-align: unset" href="https://www.lyyti.in/robocon2019">Conference tickets available here.</a></p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td>Blind Robot</td><td>-</td><td>600€</td><td>30.09.2019</td></tr><tr><td>Early Robot</td><td>600€</td><td>900€</td><td>31.12.2019</td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>15.01.2020</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
             }
           }
         },
@@ -175,7 +175,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Workshops coming soon!</p>',
+              text: '<p>Workshops are announced on October 1, 2019.</p>'
               /*talks: [
                 {
                   title: "09:00-12:00 - Asko Soukka / Nicholas Bollweg",
@@ -199,7 +199,7 @@ export default {
             text: {
               twitter: false,
               header: "Sprints",
-              text: "<div><p>Sprints coming soon!</p></div>"
+              text: "<div><p>Sprints are free of charge and open for everyone, including those not participating the conference itself. Sprint facilities are provided by Eficode. The address is <a target='blank' href='https://goo.gl/maps/YoeBPqtGyGo'>Pohjoinen Rautatiekatu 25</a>. Food and drinks will be available.</p></div>"
             }
           }
         },
