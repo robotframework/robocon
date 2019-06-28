@@ -66,7 +66,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p>Ticket sales opening soon!</p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td>Blind Robot</td><td>-</td><td>600€</td><td>30.09.2019</td></tr><tr><td>Early Robot</td><td>600€</td><td>900€</td><td>31.12.2019</td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>15.01.2020</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
+                '<p>Ticket sales opening soon!</p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td>Blind Robot</td><td>-</td><td>600€</td><td>2019-09-30</td></tr><tr><td>Early Robot</td><td>600€</td><td>900€</td><td>2019-12-31</td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>2020-01-15</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
             }
           }
         },
