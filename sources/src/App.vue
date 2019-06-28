@@ -158,7 +158,7 @@ export default {
           data: {
             text: {
               twitter: false,
-              text: '<p>Conference program TBA</p>',
+              text: '<p>Conference program will be announced on October 1, 2019.</p>',
               header: "Conference program"
             }
           }
@@ -175,7 +175,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Workshops are announced on October 1, 2019.</p>'
+              text: '<p>Workshops will be announced on October 1, 2019.</p>'
               /*talks: [
                 {
                   title: "09:00-12:00 - Asko Soukka / Nicholas Bollweg",
