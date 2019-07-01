@@ -33,7 +33,7 @@ export default {
   props: ["pages", "currentPage"],
   data () {
   return {
-      currentPageMutable: this.currentPage || "15-16012020"
+      currentPageMutable: this.currentPage || "14-17012020"
     }
   },
   methods: {
