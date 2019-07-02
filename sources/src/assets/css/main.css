@@ -243,6 +243,10 @@ hr {
   width: 150px;
 }
 
+.navbar-toggler {
+  padding-right: 0;
+}
+
 #navigation.sidebar {
   position: fixed;
   top: 0;
@@ -301,11 +305,16 @@ hr {
 #navigation-collapsed {
   background-color: rgb(0, 0, 0);
   text-align: center;
+  border-bottom: solid #20f73f 2px;
 }
 
 #nav_collapse .nav-item a {
   color: #fff;
   text-transform: uppercase
+}
+
+#nav_collapse {
+  padding-top: 1rem;
 }
 
 #nav_collapse .nav-item a:hover {
