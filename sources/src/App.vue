@@ -36,7 +36,7 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br> Date: January 15-16 (Wed-Thu), 2020 <br> Place: Bio Rex Helsinki, <a target="blank" href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a>, 00100 Helsinki, Finland<br><br> On top of the RoboCon conference day we have interesting side events where you have a chance to network with people from the same community. The schedule for the event week is: <br> <br>Tue, Jan 14: <a href="#workshops">Workshops</a> <br>Wed - Thu, Jan 15-16: <a href="#program">RoboCon Conference</a><br>Fri, Jan 17: <a href="#sprints">Sprints</a><br> <br> RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p><p>Conference hashtag to use on Twitter and elsewhere is <code><b>#robocon</b></code>. <a href="https://robotframework-slack-invite.herokuapp.com/" target="blank">Robot Framework Slack community</a> also has a dedicated <code>#robocon</code> channel to ask question and chat with other participants. To contact the organizers directly, use <a href="mailto:info&#64;robocon.io">info&#64;robocon.io</a>.</p>'
+                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br>RoboCon 2020 is organized at Helsinki, Finland, in January 14-17. The agenda for the conference week is as follows:<br><br>Jan 14: <a href="#workshops">Workshops</a><br>Jan 15-16: <a href="#program">RoboCon Conference</a><br>Jan 17: <a href="#sprints">Sprints</a><br><br>RoboCon is organized by <a href="http://robotframework.org/foundation/">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p><p>Conference hashtag to use on Twitter and elsewhere is <code><b>#robocon</b></code>. <a href="https://robotframework-slack-invite.herokuapp.com/" target="blank">Robot Framework Slack community</a> also has a dedicated <code>#robocon</code> channel to ask question and chat with other participants. To contact the organizers directly, use <a href="mailto:info&#64;robocon.io">info&#64;robocon.io</a>.</p>'
             }
           }
         },
@@ -51,7 +51,7 @@ export default {
               twitter: false,
               header: "Call for Proposals",
               text:
-                "<p>RoboCon 2020 call for proposals is open at <a href='https://www.papercall.io/robocon2020'>papercall.io/robocon2020</a> and closes on September 16, 2019. We are proud to partner with <a href='https://speaking-easy.com'>SpeakEasy</a> — a technical conference diversity initiative supporting first time international conference speakers with a focus on women and people of color.</p>"
+                "<p>RoboCon 2020 call for proposals is open at <a href='https://www.papercall.io/robocon2020'>Papercall</a> and closes on September 16, 2019. We are proud to partner with <a href='https://speaking-easy.com'>SpeakEasy</a> — a technical conference diversity initiative supporting first time international conference speakers with a focus on women and people of color.</p>"
             }
           }
         },
@@ -70,99 +70,6 @@ export default {
             }
           }
         },
-        /*{
-          title: "Sponsors",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          user_box: true,
-          data: {
-            text: {
-              twitter: false,
-              header: "Sponsors"
-            },
-            users: [
-              {
-                title: "Siili",
-                href: "https://www.siili.com",
-                img: require("@/assets/img/users/s_siili.png")
-              },
-              {
-                title: "Comiq",
-                href: "https://www.comiq.fi/",
-                img: require("@/assets/img/users/s_comiq.png")
-              },
-              {
-                title: "HiQ",
-                href: "https://hiqfinland.fi/",
-                img: require("@/assets/img/users/s_hiq.png")
-              },
-              {
-                title: "knowit",
-                href: "https://www.knowit.fi/",
-                img: require("@/assets/img/users/s_knowit.png")
-              },
-              {
-                title: "Qentinel",
-                href: "https://qentinel.com/",
-                img: require("@/assets/img/users/s_qentinel.png")
-              },
-              {
-                title: "Q-factory",
-                href: "https://www.q-factory.fi/",
-                img: require("@/assets/img/users/s_qfactory.png")
-              },
-              {
-                title: "Sogeti",
-                href: "https://www.sogeti.com/",
-                img: require("@/assets/img/users/s_sogeti.png")
-              },
-              {
-                title: "Testimate",
-                href: "https://www.testimate.fi/",
-                img: require("@/assets/img/users/s_testimate.png")
-              },
-              {
-                title: "Vala Group",
-                href: "https://www.valagroup.com/",
-                img: require("@/assets/img/users/s_vala.png")
-              },
-              {
-                title: "Etteplan",
-                href:
-                  "https://www.etteplan.com/expertise/embedded-systems-and-iot/rd-testing-and-validation",
-                img: require("@/assets/img/users/s_etteplan.png")
-              },
-              {
-                title: "Symbio",
-                href: "https://www.symbio.com/",
-                img: require("@/assets/img/users/s_symbio.png")
-              },
-              {
-                title: "Eficode",
-                href: "https://www.eficode.com/home",
-                img: require("@/assets/img/users/s_eficode.png")
-              }
-            ]
-          }
-        },*/
-        {
-          title: "Program",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          user_box: false,
-          user_box_centered: true,
-          data: {
-            text: {
-              twitter: false,
-              text: '<p>Conference program will be announced on October 1, 2019.</p>',
-              header: "Conference program"
-            }
-          }
-        },
         {
           title: "Workshops",
           text_block: false,
@@ -175,19 +82,24 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Workshops will be announced on October 1, 2019.</p>'
-              /*talks: [
-                {
-                  title: "09:00-12:00 - Asko Soukka / Nicholas Bollweg",
-                  description:
-                    "Authoring Robot Framework test and task suites with JupyterLab",
-                  descriptionExpanded:
-                    '<p>Asko Soukka<br>University of Jyväskylä</p><p>Nicholas Bollweg<br>Georgia Tech Research Institute &amp; Project Jupyter</p><p>09:00-12:00<br>150€ / 200€</p><p>Max 12 participants</p><p><a href="https://jupyterlab.readthedocs.io/">JupyterLab</a> is a browser based power user environment for interactive computing. For Robot Framework test and task suite authors, JupyterLab\'s user-friendly authoring environment provides a new fun way to learn, practice and even share Robot Framework. JupyterLab encourages fast iterations and learning by discovering, and <a href="https://youtu.be/-gU4srzslpc">our dedicated SeleniumLibrary support with &quot;sticky session&quot;</a> makes it an extremely productive for testing and automating with web browsers. At least for small projects, JupyterLab can replace traditional test and tasksuite authoring tools.</p><p>We welcome all level of Robot Framework users to our workshop. At our workshop, beginners will learn the very basics of Robot Framework for browser testing and automation in a new and fun way. Advanced Robot Framework users may not learn much new about Robot Framework, but will get a new open source tool into their toolbox from JupyterLab.</p><p>This is a hands-on workshops for maximum of 12 participants. Asko is native in Finnish and Nick in English. Own laptop is required with permissions to install new software. We provide a "single click installer" for the JupyterLab environment used in the workshop for Windows, MacOS and Linux. Installing JupyterLab with the installer is part of the workshop. The installation  provides uninstaller for Windows and single removable directory for MacOS and Linux.</p><p>In this workshop we cover:</p><ul><li>installing JupyterLab with Robot Framework integration</li><li>walkthrough JupyterLab IDE features for Robot Framework</li><li>authoring and executing Robot notebooks with JupyterLab</li><li>authoring and using custom keyword libraries with JupyterLab</li><li>authoring and using Python keyword libraries with JupyterLab</li><li>advanced features of our Robot Framework Jupyter integrations</li><li>writing inline documentation into notebooks in JupyterLab</li><li>executing Robot notebooks from command line</li><li>exporting Robot notebooks into .robot-files</li><li>highlights of the current JupyterLab extension ecosystem</li></ul><p>JupyterLab is being developed and maintained by <a href="http://jupyter.org/">Project Jupyter</a> and its large community. The hosts of this workshop are the authors of Robot Framework support for Jupyter environments, including JupyterLab. 100% of the registration fees for this workshop will be used to cover the costs and support the Robot Framework foundation.</p><p>Participants should bring their own laptop with Windows, OSX or Linux. Local admin rights are also needed for JupyterLab installations.</p>',
-                  bio:
-                    "<p>Asko, an established Robot ecosystem contributor, bootstrapped the work on Robot support for interactive computing in Jupyter at the sprints of RoboCon 2018, and continues to explore new ways to ease test and task authoring with Jupyter. Asko works as a Systems Designer at Digital Services of University of Jyväskylä, where Robot Framework is used for both acceptance testing and process automation.</p><p>Nick, while a newcomer to the Robot ecosystem, is a long-time contributor to many Jupyter, Python, and JavaScript projects, bringing skills and knowledge to integrate Robot across many parts of the Jupyter ecosystem and beyond. Nick works at the Georgia Tech Research Institute as a Systems Architect, while also providing code, design and architecture contributions as a Jupyter Project core team member and local Jupyter User Group organizer.</p>",
-                  imgUrl: ["Asko_Soukka.jpg", "Nicholas_Bollweg.jpg"]
-                }]*/
+              text: '<p>Date: January 14, 2020<br>Location: Siili Solutions, <a href="https://goo.gl/maps/CPUAifmpZ56sTUaH9">Ruoholahdenkatu 21</a><br><br>Workshops will be announced on October 1, 2019.</p>'
             }}
+        },
+        {
+          title: "Program",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          user_box: false,
+          user_box_centered: true,
+          data: {
+            text: {
+              twitter: false,
+              text: '<p>Date: January 15-16, 2020<br>Location: Bio Rex, <a href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a><br><br>Conference program will be announced on October 1, 2019.</p>',
+              header: "Conference program"
+            }
+          }
         },
         {
           title: "Sprints",
@@ -199,7 +111,7 @@ export default {
             text: {
               twitter: false,
               header: "Sprints",
-              text: "<div><p>Sprints are free of charge and open for everyone, including those not participating the conference itself. Sprint facilities are provided by Eficode. The address is <a target='blank' href='https://goo.gl/maps/YoeBPqtGyGo'>Pohjoinen Rautatiekatu 25</a>. Food and drinks will be available.</p></div>"
+              text: "<div><p>Date: January 17, 2020<br>Location: Eficode, <a href='https://goo.gl/maps/h3FYLAHAW8TCvadX6'>Pohjoinen Rautatiekatu 25</a><br><br>After the main conference we have development sprints. Sprints are for you if you want to contribute to some existing project in Robot Framework ecosystem, have a project or project idea you'd like to work with others, or just want to meet with other Robot Framework users and developers. We'll also have sauna afterwards!<br><br>Developers will select tasks suitable for new contributors beforehand (typically labeled with <code>good new issue</code> or <code>help wanted</code> in their issue trackers), but participants can obviously select issues they’d like to work with themselves. Many of the tasks are likely to involve coding, but there certainly are also non-coding tasks like testing, documentation and work with infrastructure like CI.</p> <p>If you are new to contributing to open source, we recommend you to take a look at the <a target='blank' href='https://opensource.guide/how-to-contribute/'>How to Contribute to Open Source</a> guide. Individual projects typically also have their own contribution guidelines you can find via their project pages and may want to study beforehand.<br><br>Sprints are free of charge and open for everyone, including those not participating the conference itself. Sprint facilities are provided by Eficode. The address is <a target='blank' href='https://goo.gl/maps/YoeBPqtGyGo'>Pohjoinen Rautatiekatu 25</a>. Food and drinks will be available.</p></div>"
             }
           }
         },
@@ -214,7 +126,7 @@ export default {
               twitter: false,
               header: "Arrival and Accommodation",
               text:
-                "<div><p>The main conference venue is Bio Rex Helsinki, <a target='blank' href='https://goo.gl/maps/gnd4duvnunP2'>Mannerheimintie 22-24</a>.</p><h2>TRANSPORTATION: AIRPORT</h2><p>The distance from Helsinki airport to Bio Rex is 21 km. Trains marked as “I” and “P” go from the airport to Helsinki Central Station. From the Helsinki Central Station it is only 5 minutes' walk to Bio Rex.</p><p>Buses operate between Helsinki airport and Helsinki Central Station. The bus stops for both arriving and departing buses are located in front of the terminals (T1 & T2). Finnair bus goes from airport to Eliel Square and bus nr. 615 goes from airport to Rautatientori. There is a short walk to Bio Rex from both Eliel Square (300 meters) and Rautatientori (350 meters).</p><p>Time estimation for the journey is 40 minutes by bus and about 30-35 minutes by train or taxi. Taxi cost is approximately 40-55 euros depending on the traffic and the taxi company.</p><p>At Helsinki airport there are informative signage for trains, buses and taxis to ensure that you won’t get lost.</p><h2>TRANSPORTATION: RAILWAY STATION</h2><p>Railway station is only 5 minutes’ walk (350 meters) from Bio Rex.</p><h2>TRANSPORTATION: BUS STATION</h2><p>Intercity bus connections from Kamppi bus station (400 meters away) and bus connections for Helsinki's internal traffic from Rautatientori (350 meters) located close to Helsinki Central Station. Buses to Helsinki Airport leave from Eliel Square (300 meters) and Rautatientori (350 meters).</p></div>"
+                "<div><p>The main conference venue is Bio Rex, <a href='https://goo.gl/maps/gnd4duvnunP2'>Mannerheimintie 22-24</a>. Pre-conference workshops are organize at Siili, <a href='https://goo.gl/maps/CPUAifmpZ56sTUaH9'>Ruoholahdenkatu 21</a>, and post-conference sprints at Eficode, <a href='https://goo.gl/maps/h3FYLAHAW8TCvadX6'>Pohjoinen Rautatiekatu 25</a></p><h2>TRANSPORTATION: AIRPORT</h2><p>The distance from Helsinki airport to Bio Rex is 21 km. Trains marked as “I” and “P” go from the airport to Helsinki Central Station. From the Helsinki Central Station it is only 5 minutes' walk to Bio Rex.</p><p>Buses operate between Helsinki airport and Helsinki Central Station. The bus stops for both arriving and departing buses are located in front of the terminals (T1 & T2). Finnair bus goes from airport to Eliel Square and bus nr. 615 goes from airport to Rautatientori. There is a short walk to Bio Rex from both Eliel Square (300 meters) and Rautatientori (350 meters).</p><p>Time estimation for the journey is 40 minutes by bus and about 30-35 minutes by train or taxi. Taxi cost is approximately 40-55 euros depending on the traffic and the taxi company.</p><p>At Helsinki airport there are informative signage for trains, buses and taxis to ensure that you won’t get lost.</p><h2>TRANSPORTATION: RAILWAY STATION</h2><p>Railway station is only 5 minutes’ walk (350 meters) from Bio Rex. To reach Siili's and Eficode's offices you can either walk or go one stop with the metro departing from Railway station.</p><h2>TRANSPORTATION: BUS STATION</h2><p>Intercity bus connections from Kamppi bus station (400 meters away) and bus connections for Helsinki's internal traffic from Rautatientori (350 meters) located close to Helsinki Central Station. Buses to Helsinki Airport leave from Eliel Square (300 meters) and Rautatientori (350 meters).</p><h2>Hotel deals</h2><p><a href='https://www.sokoshotels.fi/en/helsinki/sokos-hotel-presidentti'>Original Sokos Hotel Presidentti</a><br>- Standard single room: 150€ / night<br>- Standard double room: 170€ / night<br>- Breakfast and Wi-Fi included<br>- Promo code will be sent after ticket purchase</p></div>"
             }
           }
         },
