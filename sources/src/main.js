@@ -24,7 +24,13 @@ Vue.use(BootstrapVue)
 
 Vue.use(VueScrollTo, {
   duration: 300,
-  easing: 'ease'
+  easing: 'ease',
+  onDone: function (element) {
+    const elementHasId = typeof element.id !== 'undefined'
+    if (elementHasId) {
+        window.location.hash = element.id
+    }
+  }
 })
 
 /* if (/robotframework.org/.test(window.location.href)) {

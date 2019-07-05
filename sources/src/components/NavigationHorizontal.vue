@@ -1,7 +1,7 @@
 <template>
 <section>
 <b-nav  v-b-scrollspy:scroller.50 tag="nav" toggleable="lg" id="navigation" class="d-none d-md-block topbar" style="height: unset; padding-bottom: 6px">
-    <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true" v-bind:key="item.title" v-scroll-to="'#'+item.title.toLowerCase()" :href="'#'+item.title.toLowerCase()">{{item.title.replace(/-and-/g,' & ').replace('-', ' ')}}</b-nav-item>
+    <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true && item.title !== ''" v-bind:key="item.title" v-scroll-to="'#'+item.title.toLowerCase()" :href="'#'+item.title.toLowerCase()">{{item.title.replace(/-and-/g,' & ').replace('-', ' ')}}</b-nav-item>
 </b-nav>
 
 
@@ -41,7 +41,8 @@ export default {
       this.currentPageMutable = target.substring(1).toUpperCase().replace(/-AND-/g,'&').replace('-', ' ')
     },
     click(a) {
-      document.getElementById(a).scrollIntoView();
+      document.getElementById(a).scrollIntoView()
+      location.hash = a
     }
   },
   created() {
