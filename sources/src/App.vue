@@ -92,7 +92,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p><a href="https://www.lyyti.fi/reg/Robocon2020">Tickets available here!</a></p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td>Blind Robot</td><td>-</td><td>600€</td><td>2019-09-30</td></tr><tr><td>Early Robot</td><td>600€</td><td>900€</td><td>2019-12-31</td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>2020-01-15</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
+                '<p><a href="https://www.lyyti.fi/reg/Robocon2020">Tickets available here!</a></p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td><del>Blind Robot</del></td><td>-</td><td><del>600€</del></td><td><del>2019-09-30</del></td></tr><tr><td>Early Robot</td><td>600€</td><td>900€</td><td>2019-12-31</td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>2020-01-15</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
             }
           }
         },
@@ -108,7 +108,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Date: January 14, 2020<br>Location: Siili Solutions, <a href="https://goo.gl/maps/CPUAifmpZ56sTUaH9">Ruoholahdenkatu 21</a><br><br>Detailed workshop descriptions coming soon!</p>',
+              text: '<p>Date: January 14, 2020<br>Location: Siili Solutions, <a href="https://goo.gl/maps/CPUAifmpZ56sTUaH9">Ruoholahdenkatu 21</a><br><br>Detailed workshop descriptions coming soon!<br>Ticket sale opening soon!</p>',
               talks: [
                 { header: 'Half-day workshops' },
                 { author: "Elias Hachichou, Kristina Sabotic", title: "End-to-end testing through multiple interfaces" },
