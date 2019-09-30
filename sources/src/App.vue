@@ -96,7 +96,7 @@ export default {
           data: {
             text: {
               twitter: false,
-              text: '<p>Date: January 15-16, 2020<br>Location: Bio Rex, <a href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a><br><br>Conference program will be announced on October 1, 2019.</p>',
+              text: '<p>Date: January 15-16, 2020<br>Location: Bio Rex, <a href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a><br><br>Conference program will be announced on October 1, 2019!</p>',
               header: "RoboCon Conference"
             }
           }
