@@ -1,23 +1,16 @@
 <template>
   <div class="mb-3 mt-3">
-    <div v-if="margin" class="mt-5" />
-    <div v-if="header !== ''">
-      <h2 class="white no-arrow mt-4">{{ header }}</h2>
-    </div>
-    <div v-else class="ml-4">
-      <h3
-        class="white mb-0"
-        v-if="author !== ''">
-        {{ author }}
-        </h3>
-      <div v-else class="mt-4" />
-      <h2
-        class="mb-0"
-        :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
-        @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
-        {{ title }}
-      </h2>
-    </div>
+    <h3
+      class="white mb-0"
+      v-if="author !== ''">
+      {{ author }}
+      </h3>
+    <h2
+      class="mb-0"
+      :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
+      @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
+      {{ title }}
+    </h2>
     <transition
       name="toggle-content"
       mode="out-in">
@@ -88,14 +81,6 @@ export default {
     url: {
       type: String,
       default: ''
-    },
-    header: {
-      type: String,
-      default: ''
-    },
-    margin: {
-      type: Boolean,
-      default: false
     }
   },
   data: () => ({

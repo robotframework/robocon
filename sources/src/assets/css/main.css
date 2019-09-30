@@ -121,7 +121,7 @@ h2 {
   font-size: 1.2rem;
 }
 
-h2:not(.no-arrow)::before {
+h2::before {
   content: '> ';
   color: #20f73f;
 }

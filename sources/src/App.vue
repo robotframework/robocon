@@ -41,45 +41,17 @@ export default {
           }
         },
         {
-          title: "Conference",
+          title: "CFP",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
           feature_box: false,
-          user_box: false,
-          user_box_centered: false,
           data: {
             text: {
               twitter: false,
-              header: "Conference Program",
-              text: '<p>Detailed descriptions coming soon!</p>',
-              talks: [
-                { header: 'Wednesday' },
-                { author: "Esko Valtaoja", title: "Keynote: Topic to be announced" },
-                { author: "Jeff King", title: "Robot Framework and the One Man Robot Band" },
-                { author: "Anaïs van Asselt", title: "A Robot Rainbow Cake: Implementing a test automation architecture in a government organization" },
-                { author: "Antti Karjalainen", title: "The Open RPA Ecosystem" },
-                { author: "Petteri Mannersalo", title: "Robot Framework as an enabler for Intelligent Process Automation" },
-                { author: "Tuomas Lempiäinen", title: "QA driven RPA at Veikkaus" },
-                { author: "Mikael Siirtola", title: "RPA on Rails: Automating manual processes at VR" },
-                { author: "Kristina Sabotic", title: "End-to-end testing for end-users" },
-                { author: "Luca Giovenzana, Angelo Caovilla", title: "Bewere the Brittle Dragon" },
-                { author: "", title: "Lighning talks" },
-                { author: "", title: "Dinner and evening program at Bio Rex" },
-                { header: 'Thursday', margin: true },
-                { author: "Pekka Klärck", title: "Keynote: What's new? What's next? Who are we?" },
-                { author: "Akseli Lukkarila", title: "Acceptance testing a real-time music education application with audio" },
-                { author: "Maria Prokhorova", title: "New Image Library for advanced image processing" },
-                { author: "Tatu Aalto", title: "SeleniumLibrary 4.0: Plugin API and Event Firing WebDriver support" },
-                { author: "René Rohner", title: "DataDriver or: How I learned to stop worrying and love open source" },
-                { author: "Tommi Oinonen", title: "Self managing testing pipelines" },
-                { author: "Juho Saarinen", title: "Robot Framework Remote library in practice (with demos)" },
-                { author: "Joonas Köppä", title: "Orchestrating Robot Framework test containers and remote libraries in Kubernetes" },
-                { author: "Maciej Brzozowski", title: "Microservices testing using Argo: container-native workflows for Kubernetes" },
-                { author: "", title: "Lightning talks" },
-                { author: "", title: "Networking" },
-                { author: "", title: "After party at Vala" }
-              ]
+              header: "Call for Proposals",
+              text:
+                "<p>RoboCon 2020 call for proposals is open at <a href='https://www.papercall.io/robocon2020'>Papercall</a> and closes on September 16, 2019. We are proud to partner with <a href='https://speaking-easy.com'>SpeakEasy</a> — a technical conference diversity initiative supporting first time international conference speakers with a focus on women and people of color.</p>"
             }
           }
         },
@@ -112,6 +84,22 @@ export default {
               header: "Workshops",
               text: '<p>Date: January 14, 2020<br>Location: Siili Solutions, <a href="https://goo.gl/maps/CPUAifmpZ56sTUaH9">Ruoholahdenkatu 21</a><br><br>Workshops will be announced on October 1, 2019.</p>'
             }}
+        },
+        {
+          title: "Conference",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          user_box: false,
+          user_box_centered: true,
+          data: {
+            text: {
+              twitter: false,
+              text: '<p>Date: January 15-16, 2020<br>Location: Bio Rex, <a href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a><br><br>Conference program will be announced on October 1, 2019.</p>',
+              header: "RoboCon Conference"
+            }
+          }
         },
         {
           title: "Sprints",
