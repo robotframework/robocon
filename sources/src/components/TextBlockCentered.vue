@@ -6,6 +6,7 @@
         <!--<p style="font-size: 1rem" v-if="data.talks">(Click person's name for more info)</p>-->
       </div>
       <div
+        v-if="data.text"
         v-html="data.text"
         class="row order-2 block-text textblock-right p-3 no-border text-justify"
       />
@@ -14,6 +15,8 @@
         <talker-item
           v-for="talk in data.talks"
           :key="talk.title"
+          :header="talk.header"
+          :margin="talk.margin"
           :author="talk.author"
           :title="talk.title"
           :description="talk.description"

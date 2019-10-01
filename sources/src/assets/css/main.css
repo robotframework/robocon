@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'OCRA';
-  src: url('../../assets/fonts/OCRA.woff') format('woff');
+  src: url('../../assets/fonts/OCRAEXT.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -121,7 +121,7 @@ h2 {
   font-size: 1.2rem;
 }
 
-h2::before {
+h2:not(.no-arrow)::before {
   content: '> ';
   color: #20f73f;
 }

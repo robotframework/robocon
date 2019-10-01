@@ -41,17 +41,45 @@ export default {
           }
         },
         {
-          title: "CFP",
+          title: "Conference",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
           feature_box: false,
+          user_box: false,
+          user_box_centered: false,
           data: {
             text: {
               twitter: false,
-              header: "Call for Proposals",
-              text:
-                "<p>RoboCon 2020 call for proposals is open at <a href='https://www.papercall.io/robocon2020'>Papercall</a> and closes on September 16, 2019. We are proud to partner with <a href='https://speaking-easy.com'>SpeakEasy</a> — a technical conference diversity initiative supporting first time international conference speakers with a focus on women and people of color.</p>"
+              header: "Conference Program",
+              text: '<p>Detailed talk descriptions coming soon!</p>',
+              talks: [
+                { header: 'Wednesday, January 15' },
+                { author: "Esko Valtaoja", title: "Keynote: Topic to be announced" },
+                { author: "Jeff King", title: "Robot Framework and the One Man Robot Band" },
+                { author: "Anaïs van Asselt", title: "A Robot Rainbow Cake: Implementing a test automation architecture in a government organization" },
+                { author: "Antti Karjalainen", title: "The Open RPA Ecosystem" },
+                { author: "Petteri Mannersalo", title: "Robot Framework as an enabler for Intelligent Process Automation" },
+                { author: "Tuomas Lempiäinen", title: "QA driven RPA at Veikkaus" },
+                { author: "Mikael Siirtola", title: "RPA on Rails: Automating manual processes at VR" },
+                { author: "Kristina Sabotic", title: "End-to-end testing for end-users" },
+                { author: "Luca Giovenzana, Angelo Caovilla", title: "Bewere the Brittle Dragon" },
+                { author: "", title: "Lighning talks" },
+                { author: "", title: "Dinner and evening program at Bio Rex" },
+                { header: 'Thursday, January 16', margin: true },
+                { author: "Pekka Klärck", title: "Keynote: What's new? What's next? Who are we?" },
+                { author: "Akseli Lukkarila", title: "Acceptance testing a real-time music education application with audio" },
+                { author: "Maria Prokhorova", title: "New Image Library for advanced image processing" },
+                { author: "Tatu Aalto", title: "SeleniumLibrary 4.0: Plugin API and Event Firing WebDriver support" },
+                { author: "René Rohner", title: "DataDriver or: How I learned to stop worrying and love open source" },
+                { author: "Tommi Oinonen", title: "Self managing testing pipelines" },
+                { author: "Juho Saarinen", title: "Robot Framework Remote library in practice (with demos)" },
+                { author: "Joonas Köppä", title: "Orchestrating Robot Framework test containers and remote libraries in Kubernetes" },
+                { author: "Maciej Brzozowski", title: "Microservices testing using Argo: container-native workflows for Kubernetes" },
+                { author: "", title: "Lightning talks" },
+                { author: "", title: "Networking" },
+                { author: "", title: "After party at Vala" }
+              ]
             }
           }
         },
@@ -66,7 +94,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p><a href="https://www.lyyti.fi/reg/Robocon2020">Tickets available here!</a></p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td>Blind Robot</td><td>-</td><td>600€</td><td>2019-09-30</td></tr><tr><td>Early Robot</td><td>600€</td><td>900€</td><td>2019-12-31</td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>2020-01-15</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
+                '<p><a href="https://www.lyyti.fi/reg/Robocon2020">Tickets available here!</a></p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td><del>Blind Robot</del></td><td>-</td><td><del>600€</del></td><td><del>2019-09-30</del></td></tr><tr><td>Early Robot</td><td>600€</td><td>900€</td><td>2019-12-31</td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>2020-01-15</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
             }
           }
         },
@@ -77,27 +105,28 @@ export default {
           tab_box: false,
           feature_box: false,
           user_box: false,
-          user_box_centered: true,
+          user_box_centered: false,
           data: {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Date: January 14, 2020<br>Location: Siili Solutions, <a href="https://goo.gl/maps/CPUAifmpZ56sTUaH9">Ruoholahdenkatu 21</a><br><br>Workshops will be announced on October 1, 2019.</p>'
-            }}
-        },
-        {
-          title: "Conference",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          user_box: false,
-          user_box_centered: true,
-          data: {
-            text: {
-              twitter: false,
-              text: '<p>Date: January 15-16, 2020<br>Location: Bio Rex, <a href="https://goo.gl/maps/gnd4duvnunP2">Mannerheimintie 22-24</a><br><br>Conference program will be announced on October 1, 2019!</p>',
-              header: "RoboCon Conference"
+              text: '<p>Date: January 14, 2020<br>Location: Siili Solutions, <a href="https://goo.gl/maps/CPUAifmpZ56sTUaH9">Ruoholahdenkatu 21</a><br><br>Detailed workshop descriptions coming soon!<br>Ticket sale opening soon!</p>',
+              talks: [
+                { header: 'Half-day workshops' },
+                { author: "Elias Hachichou, Kristina Sabotic", title: "End-to-end testing through multiple interfaces" },
+                { author: "Tommi Oinonen", title: "Get to grips with your test results" },
+                { author: "Adrian Yorke", title: "Test Automation for the Enterprise Data Warehouse or Teaching an Old Dog New Tricks!" },
+                { author: "Joshua Gorospe", title: "Strategies for creating your own conversational test assistant with Robot Framework and other tools" },
+                { author: "Jani Mikkonen", title: "Moving from Python 2 to Python 3 and learn new tricks while doing it" },
+                { author: "Asko Soukka", title: "Authoring Robot Framework tests and tasks with JupyterLab " },
+                { header: 'Full-day workshops', margin: true },
+                { author: "Jenna Kaisanlahti, Valtteri Kukkola", title: "Robot Framework hands-on" },
+                { author: "Ed Manlove", title: "Introduction to Web Testing using SeleniumLibrary and Robot Framework" },
+                { author: "Tatu Aalto", title: "Advanced SeleniumLibrary and Robot Framework" },
+                { author: "Eeva Terkki, Ismo Aro", title: "Hands-on Windows GUI automation with Robot Framework" },
+                { author: "Markus Stahl, Christian Kokoska", title: "Integrating Robot Framework to devops infrastructure" },
+                { author: "Pekka Klärck", title: "Extending Robot Framework (advanced)" }
+              ]
             }
           }
         },
