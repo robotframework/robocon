@@ -19,6 +19,7 @@
           :margin="talk.margin"
           :author="talk.author"
           :title="talk.title"
+          :type="talk.type || ''"
           :description="talk.description"
           :description-expanded="talk.descriptionExpanded"
           :bio="talk.bio"
