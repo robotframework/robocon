@@ -1,18 +1,18 @@
 <template>
-  <div class="mb-3 mt-3">
+  <div :class="header === '' ? 'mb-5 pb-4' : 'mb-4'" :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' ? 'border-bottom: dashed 2px #20f73f' : ''">
     <div v-if="margin" class="mt-5" />
     <div v-if="header !== ''">
-      <h2 class="white no-arrow mt-4">{{ header }}</h2>
+      <h1 class="white no-arrow mt-4">{{ header }}</h1>
     </div>
-    <div v-else class="ml-4">
+    <div v-else class="ml-0">
       <h3
-        class="white mb-0"
+        class="white mb-0 ml-4"
         v-if="author !== ''">
         {{ author }}
         </h3>
       <div v-else class="mt-4" />
       <h2
-        class="mb-0"
+        class="mb-0 ml-4"
         :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
         @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
         {{ title }}
@@ -22,7 +22,7 @@
       name="toggle-content"
       mode="out-in">
       <div v-if="expanded">
-        <div class="row mt-3">
+        <div class="row mt-0">
           <div v-if="url !== ''" class="col-lg-12">
             <b-embed
               type="iframe"
@@ -37,22 +37,24 @@
                     <img class="mb-3" style="width: 100%" :src="require(`@/assets/img/users/${image}`)">
                 </div>
             </div>
-            <div v-if="imgUrl !== ''" class="col-lg-8 justify word-break">
+            <div v-if="imgUrl !== '' && imgUrl.length" class="col-lg-8 justify word-break">
               <h3>{{ description }}</h3>
               <p v-html="descriptionExpanded"></p>
               <h3>Bio</h3>
               <p v-html="bio"></p>
             </div>
-            <div v-else class="col-lg-12">
-              <h3>{{ description }}</h3>
+            <div v-else class="col-lg-12 word-break ml-4 pr-4 mt-2 workshop-description">
+              <p v-if="author !== 'Ed Manlove'">{{ description }}</p>
               <p v-html="descriptionExpanded"></p>
-              <h3>Bio</h3>
+              <template v-if="bio">
+              <h2 class="no-arrow mb-0">Bio</h2>
               <p v-html="bio"></p>
+              </template>
             </div>
           </div>
         </div>
       </div>
-      <p v-else v-html="description"></p>
+      <p v-else-if="header === ''" class="workshop-description ml-4 mt-2 cursor--pointer" v-html="description" @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false"></p>
     </transition>
   </div>
 </template>

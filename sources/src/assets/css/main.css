@@ -124,6 +124,8 @@ h2 {
 h2:not(.no-arrow)::before {
   content: '> ';
   color: #20f73f;
+  position: absolute;
+  left: 1rem;
 }
 
 .color {
@@ -526,4 +528,12 @@ table {
 }
 .toggle-content-enter, .toggle-content-leave-to {
   opacity: 0;
+}
+
+.workshop-description {
+  font-size: 1rem;
+}
+
+.cursor--pointer {
+  cursor: pointer;
 }
