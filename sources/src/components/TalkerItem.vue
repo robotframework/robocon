@@ -11,12 +11,14 @@
         {{ author }}
         </h3>
       <div v-else class="mt-4" />
-      <h2
-        class="mb-0 ml-4"
+      <a
+        class="mb-0 ml-4 link-title"
+        style="color: #20f73f"
+        :id="title.replace(/ /g, '-').toLowerCase()"
         :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
         @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
         {{ title }}
-      </h2>
+      </a>
     </div>
     <transition
       name="toggle-content"
@@ -106,6 +108,17 @@ export default {
   },
   data: () => ({
     expanded: false
-  })
+  }),
+  watch: {
+    expanded: {
+      handler() {
+        if(this.expanded) history.pushState(null, null, `#${this.title.replace(/ /g, '-').toLowerCase()}`)
+      }
+    }
+  },
+  mounted() {
+    const anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null
+    if (anchor === this.title.replace(/ /g, '-').toLowerCase()) this.expanded = true
+  }
 };
 </script>

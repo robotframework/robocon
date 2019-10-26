@@ -23,7 +23,7 @@ body {
 }
 
 .clickable-title {
-  text-decoration: underline;
+  text-decoration: underline !important;
   cursor: pointer;
 }
 
@@ -92,20 +92,27 @@ code {
 
 h1,
 h2,
+.link-title,
 h3 {
   color: #20f73f;
+}
+
+.link-title {
+  padding-top: 90px;
+  margin-top: -90px;
 }
 
 h1,
 h2,
 h3,
+.link-title
 div.card-header {
   font-family: "OCRA";
   text-align: left;
   color: #20f73f;
 }
 
-h1, h2, div.card-header {
+h1, h2, div.card-header, .link-title {
   text-transform: uppercase;
 }
 
@@ -117,11 +124,18 @@ h3 {
   font-size: 1rem;
 }
 
-h2 {
+h2, .link-title {
   font-size: 1.2rem;
 }
 
 h2:not(.no-arrow)::before {
+  content: '> ';
+  color: #20f73f;
+  position: absolute;
+  left: 1rem;
+}
+
+.link-title::before {
   content: '> ';
   color: #20f73f;
   position: absolute;
