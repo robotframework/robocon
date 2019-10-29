@@ -41,6 +41,56 @@ export default {
           }
         },
         {
+          title: "",
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          user_box: true,
+          data: {
+            text: {
+              header: "Sponsors",
+              twitter: false
+            },
+            users: [
+              {
+                title: "Eficode",
+                href: "https://www.eficode.com",
+                img: require("@/assets/img/sponsors/eficode.png")
+              },
+              {
+                title: "Etteplan",
+                href: "https://www.etteplan.com/expertise/software-and-embedded-solutions/rd-testing-and-validation",
+                img: require("@/assets/img/sponsors/etteplan.png")
+              },
+              {
+                title: "Knowit Oy",
+                href: "https://www.knowit.fi/",
+                img: require("@/assets/img/sponsors/knowit.png")
+              },
+              {
+                title: "Q-Factory Oy",
+                href: "https://q-factory.fi/",
+                img: require("@/assets/img/sponsors/q-factory.png")
+              },
+              {
+                title: "Robocorp",
+                href: "https://www.robocorp.com",
+                img: require("@/assets/img/sponsors/robocorp.png")
+              },
+              {
+                title: "Siili Solutions Oyj",
+                href: "https://www.siili.com",
+                img: require("@/assets/img/sponsors/siili.png")
+              },
+              {
+                title: "VALA Group Oy",
+                href: "https://www.valagroup.com/",
+                img: require("@/assets/img/sponsors/vala.png")
+              },
+            ]
+          }
+        },
+        {
           title: "Conference",
           text_block: false,
           text_block_centered: true,

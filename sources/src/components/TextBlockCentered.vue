@@ -8,7 +8,7 @@
       <div
         v-if="data.text"
         v-html="data.text"
-        class="row order-2 block-text textblock-right p-3 no-border text-justify"
+        class="row order-2 block-text textblock-right p-3 no-border"
       />
       <div
         v-if="data.talks">
@@ -35,7 +35,7 @@
         <div class="row">
           <div
             v-html="data.text"
-            class="col-lg-7 order-2 block-text textblock-right p-3 no-border text-justify"
+            class="col-lg-7 order-2 block-text textblock-right p-3 no-border"
           />
           <div class="col-md-12 col-lg-5 order-3 textblock-right ml-0 p-3">
             <twitter-timeline
@@ -43,7 +43,7 @@
               id="robotframework"
               widget-class="twitterprofile"
               sourceType="profile"
-              :style="isMobile ? '' : isTablet ? 'height: 850px; overflow: scroll' : 'height: 820px; overflow: scroll'"
+              :style="isMobile ? '' : isTablet ? 'height: 850px; overflow: scroll' : 'height: 700px; overflow: scroll'"
               :options="options"
             />
           </div>

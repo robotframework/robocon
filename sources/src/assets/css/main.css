@@ -333,6 +333,10 @@ hr {
   padding-top: 1rem;
 }
 
+a:not(.nav-link) {
+  text-decoration: underline;
+}
+
 #nav_collapse .nav-item a:hover {
   color: #20f73f;
   text-decoration: none;

@@ -2,7 +2,7 @@
   <div :class="header === '' && type === 'workshop' ? 'mb-5 pb-4' : 'mb-5'" :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
     <div v-if="margin" class="mt-5" />
     <div v-if="header !== ''">
-      <h1 class="white no-arrow mt-4">{{ header }}</h1>
+      <h2 class="white no-arrow mt-4">{{ header }}</h2>
     </div>
     <div v-else class="ml-0">
       <h3
