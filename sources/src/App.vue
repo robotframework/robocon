@@ -132,7 +132,7 @@ export default {
                 { author: "Luca Giovenzana, Angelo Caovilla",
                   title: "Beware the Brittle Dragon",
                   descriptionExpanded: "At the beginning there was chaos; manual tests ruled the world. A chosen few showed the automating path, the light was seen and everyone started to write automation disregarding the prophecy. But soon their weapons raised up against themselves and waken the Brittle Dragon. Automation was abandoned...<br><br>Everyone that is used to test automation knows that having automated tests is not enough to get real value from them. In order to put a test suite in a continuous test cycle many different aspects of the tests need to be considered. We've been recently passed through the Calvary of rewrite, fix, optimize our suite of 1000+ test cases we want to share what we learned." },
-                { author: "", title: "Lighning talks" },
+                { author: "", title: "Lightning talks" },
                 { author: "", title: "Dinner and evening program at Bio Rex" },
                 { header: 'Thursday, January 16', margin: true },
                 { author: "Pekka Klärck",
