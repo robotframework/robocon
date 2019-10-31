@@ -68,6 +68,11 @@ export default {
                 img: require("@/assets/img/sponsors/knowit.png")
               },
               {
+                title: "Nets",
+                href: "https://www.nets.eu/",
+                img: require("@/assets/img/sponsors/nets.png")
+              },
+              {
                 title: "Q-Factory Oy",
                 href: "https://q-factory.fi/",
                 img: require("@/assets/img/sponsors/q-factory.png")
