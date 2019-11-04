@@ -73,14 +73,14 @@ export default {
                 img: require("@/assets/img/sponsors/nets.png")
               },
               {
-                title: "Q-Factory Oy",
-                href: "https://q-factory.fi/",
-                img: require("@/assets/img/sponsors/q-factory.png")
-              },
-              {
                 title: "Qentinel",
                 href: "https://www.qentinel.com",
                 img: require("@/assets/img/sponsors/qentinel.png")
+              },
+              {
+                title: "Q-Factory Oy",
+                href: "https://q-factory.fi/",
+                img: require("@/assets/img/sponsors/q-factory.png")
               },
               {
                 title: "Robocorp",
