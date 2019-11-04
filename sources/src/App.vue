@@ -78,6 +78,11 @@ export default {
                 img: require("@/assets/img/sponsors/q-factory.png")
               },
               {
+                title: "Qentinel",
+                href: "https://www.qentinel.com",
+                img: require("@/assets/img/sponsors/qentinel.png")
+              },
+              {
                 title: "Robocorp",
                 href: "https://www.robocorp.com",
                 img: require("@/assets/img/sponsors/robocorp.png")
