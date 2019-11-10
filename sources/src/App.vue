@@ -93,6 +93,11 @@ export default {
                 img: require("@/assets/img/sponsors/siili.png")
               },
               {
+                title: "Testimate Oy",
+                href: "https://www.testimate.fi",
+                img: require("@/assets/img/sponsors/testimate.png")
+              },
+              {
                 title: "VALA Group Oy",
                 href: "https://www.valagroup.com/",
                 img: require("@/assets/img/sponsors/vala.png")
