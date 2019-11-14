@@ -93,6 +93,11 @@ export default {
                 img: require("@/assets/img/sponsors/siili.png")
               },
               {
+                title: "Signant Health",
+                href: "https://signanthealth.com/",
+                img: require("@/assets/img/sponsors/signant.png")
+              },
+              {
                 title: "Testimate Oy",
                 href: "https://www.testimate.fi",
                 img: require("@/assets/img/sponsors/testimate.png")
