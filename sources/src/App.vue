@@ -177,7 +177,7 @@ export default {
                 { author: "Juho Saarinen",
                   title: "Robot Framework Remote library in practice (with demos)",
                   descriptionExpanded: "In the talk I'll present Robot's Remote Library, and then show demos how that can be used to e.g. create dynamic free environment to the GCP's AppEngine, 'hide' credentials to access services or offer a way to access services that are not directly accessible from current network." },
-                { author: "Joonas Köppä",
+                { author: "Joonas Köppä, Riku Halonen",
                   title: "Orchestrating Robot Framework test containers and remote libraries in Kubernetes",
                   descriptionExpanded: "Kubernetes enables building a distributed testing environment with remote keyword libraries and disposable test containers. This session displays how Robot Framework tests and keyword libraries can be deployed and run in Kubernetes to build powerful acceptance testing as part of a CI/CD pipeline." },
                 { author: "Maciej Brzozowski",

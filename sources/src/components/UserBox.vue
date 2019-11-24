@@ -10,6 +10,9 @@
         <p v-html="user.text"></p>
         </div>
     </div>
+    <p style="text-align: end; width: 100%; font-size: 0.85rem;">
+    Want your logo here? More information: info@robocon.io
+    </p>
   </div>
 </div>
 </template>
