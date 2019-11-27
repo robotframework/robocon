@@ -13,8 +13,8 @@
       <div
         v-if="data.talks">
         <talker-item
-          v-for="talk in data.talks"
-          :key="talk.title"
+          v-for="(talk, key) in data.talks"
+          :key="key"
           :header="talk.header"
           :margin="talk.margin"
           :author="talk.author"

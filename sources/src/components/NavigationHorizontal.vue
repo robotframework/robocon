@@ -20,7 +20,7 @@
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
   <b-collapse is-nav id="nav_collapse" transition-duration="10">
     <b-navbar-nav class="align-middle">
-      <b-nav-item v-for="item in pages" v-if="item.hide_from_nav != true" v-bind:key="item.title" :href="'#'+item.title.toLowerCase()" v-scroll-to="'#'+item.title.toLowerCase()" @click="click(item.title)">{{item.title.replace(/-and-/g,' & ').replace('-', ' ')}}</b-nav-item>
+      <b-nav-item v-for="(item, key) in pages" v-if="item.hide_from_nav != true" :key="key" :href="'#'+item.title.toLowerCase()" v-scroll-to="'#'+item.title.toLowerCase()" @click="click(item.title)">{{item.title.replace(/-and-/g,' & ').replace('-', ' ')}}</b-nav-item>
     </b-navbar-nav>
   </b-collapse>
 
