@@ -53,6 +53,11 @@ export default {
             },
             users: [
               {
+                title: "Business Finland",
+                href: "https://www.businessfinland.fi/en/for-finnish-customers/services/programs/ai-business/",
+                img: require("@/assets/img/sponsors/businessfinland.png")
+              },
+              {
                 title: "Eficode",
                 href: "https://www.eficode.com",
                 img: require("@/assets/img/sponsors/eficode.png")
@@ -86,6 +91,11 @@ export default {
                 title: "Robocorp",
                 href: "https://www.robocorp.com",
                 img: require("@/assets/img/sponsors/robocorp.png")
+              },
+              {
+                title: "Segron",
+                href: "https://segron.com/",
+                img: require("@/assets/img/sponsors/segron.png")
               },
               {
                 title: "Siili Solutions Oyj",
