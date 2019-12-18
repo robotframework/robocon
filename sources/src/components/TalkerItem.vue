@@ -46,7 +46,7 @@
               <p v-html="bio"></p>
             </div>
             <div v-else class="col-lg-12 word-break ml-4 pr-4 mt-2 workshop-description">
-              <p>{{ description }}</p>
+              <p v-html="description"></p>
               <p v-html="descriptionExpanded"></p>
               <template v-if="bio">
               <h2 class="no-arrow mb-0">Bio</h2>
