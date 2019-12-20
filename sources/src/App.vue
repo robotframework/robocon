@@ -93,6 +93,11 @@ export default {
                 img: require("@/assets/img/sponsors/robocorp.png")
               },
               {
+                title: "Saucelabs",
+                href: "https://saucelabs.com/",
+                img: require("@/assets/img/sponsors/saucelabs.png")
+              },
+              {
                 title: "Segron",
                 href: "https://segron.com/",
                 img: require("@/assets/img/sponsors/segron.png")
