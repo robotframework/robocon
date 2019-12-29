@@ -141,8 +141,9 @@ export default {
               talks: [
                 { header: 'Wednesday, January 15' },
                 { author: "Esko Valtaoja",
-                  title: "Keynote: Topic to be announced",
-                  descriptionExpanded: "" },
+                  title: "Matter, energy and knowledge: saving the world with technology",
+                  descriptionExpanded: "A long time ago, Karl Marx sketched in his notebooks the true goal of communism: a stateless and classless society based on automation and abundance. Without, it seems, anybody noticing, we are creeping closer and closer to Marx's goal. Technology, machines, automation and digitalization continue to increase our wealth and decrease our work load. But is this process sustainable: can technology also save our planet, not just ourselves? And what is the role of mere humans in a world run by machines and AI?",
+                  bio: "Esko Valtaoja is Professor Emeritus of Space Astronomy at Turku University. The NASA ADS database lists 269 scientific publications under his name. He has published a dozen nonfiction books, with total sales well over 200 000 copies. According to the three latest Science Barometers, he is by far the best known living scientist in Finland. One of his favorite pastimes is to ponder, nonmetaphysically, Paul Gauguin's famous questions: \"Where do we come from? What are we? Where are we going?\"." },
                 { author: "Jeff King",
                   title: "Robot Framework and the One Man Robot Band",
                   descriptionExpanded: "Being the sole automation engineer in a small organization is like being a musician in one-man band. Robot Framework's toolkit is the perfect instrument for a QA and process automation Rock Star!",
