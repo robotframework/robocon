@@ -186,7 +186,7 @@ export default {
                 { author: "18:00", title: "Dinner and networking", descriptionExpanded: 'After the exciting conference day you still have a change to chat and mingle with your old and new Robot-friends. There is food available (included into the conference ticket) and the bar is open (own costs). <br><br>We also have <a href="https://www.esgrove.fi/">DJ Esgrove</a> (<a href="https://soundcloud.com/dj-esgrove">SoundCloud</a>, <a href="https://www.mixcloud.com/djesgrove/">Mixcloud</a>) a.k.a. Akseli Lukkarila, playing some cool disco/funk/house/lounge tunes for us. All this happens at Bio Rex, our conference venue, so there\'s no need to move anywhere.' },
                 { author: "22:00", title: "Venue closes" },
                 { header: 'Thursday, January 16', margin: true },
-                { author: "08:30", title: "Registration and breakfast" },
+                { author: "08:30", title: "Doors open, registration, breakfast" },
                 { author: "09:00 Pekka Klärck",
                   title: "Keynote: What's new? What's next? Who are we?",
                   descriptionExpanded: "In his keynote Pekka will take a look at the Robot Framework community at large. We will first learn about the latest enhancements and the planned future features to Robot Framework and its ecosystem. Once we know where we are coming from and where we are going to, we will look who we are. What kind of domains is Robot Framework used at? Is it used for testing or other kind of automation? Where is everyone coming from?",
@@ -231,7 +231,7 @@ export default {
                 { author: "16:30", title: "Break" },
                 { author: "17:00", title: "Lightning talks", descriptionExpanded: 'Topic of the day, you decide! Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day and get ready to present a 10 minute lightning talk on the big stage.' },
                 { author: "18:00", title: "Networking" },
-                { author: "19:00", title: "After party at Vala", description: 'Sign up for the afterparties <a href="https://spiikresearch.typeform.com/to/IenZT9">here!</a>' }
+                { author: "19:00", title: "After party at Vala", description: 'Official after party at Vala offices close to the conference venue at <a target="blank" href="https://goo.gl/maps/UNh2MSy24BU2">Erottajankatu 11 B</a>. <br><br>Sign up for the afterparties <a href="https://spiikresearch.typeform.com/to/IenZT9">here</a>!' }
               ]
             }
           }
