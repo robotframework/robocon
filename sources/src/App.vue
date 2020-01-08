@@ -142,7 +142,7 @@ export default {
                 { header: 'Wednesday, January 15' },
                 { author: "08:00", title: "Doors open, registration, breakfast" },
                 { author: "09:00 Pekka Klärck", title: "Welcome to Robocon 2020!" },
-                { author: "09:05 Esko Valtaoja",
+                { author: "09:10 Esko Valtaoja",
                   title: "KEYNOTE: Matter, energy and knowledge: saving the world with technology",
                   descriptionExpanded: "A long time ago, Karl Marx sketched in his notebooks the true goal of communism: a stateless and classless society based on automation and abundance. Without, it seems, anybody noticing, we are creeping closer and closer to Marx's goal. Technology, machines, automation and digitalization continue to increase our wealth and decrease our work load. But is this process sustainable: can technology also save our planet, not just ourselves? And what is the role of mere humans in a world run by machines and AI?",
                   bio: "Esko Valtaoja is Professor Emeritus of Space Astronomy at Turku University. The NASA ADS database lists 269 scientific publications under his name. He has published a dozen nonfiction books, with total sales well over 200 000 copies. According to the three latest Science Barometers, he is by far the best known living scientist in Finland. One of his favorite pastimes is to ponder, nonmetaphysically, Paul Gauguin's famous questions: \"Where do we come from? What are we? Where are we going?\"." },
@@ -264,7 +264,7 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Date: January 14, 2020<br>Location: Siili Solutions, <a href="https://goo.gl/maps/CPUAifmpZ56sTUaH9">Ruoholahdenkatu 21</a>.<br>Detailed location information will be sent to workshops participants separately.<br><br>Prices:<br><table style="width: 100%; display: flex; margin-top: 0; margin-bottom: 5px"><tr><th></th><th>Normal</th><th>Members *)</th></tr><tr><td>Half-day</td><td>350€</td><td>250€</td></tr><tr><td>Full-day</td><td>450€</td><td>350€</td></tr></table><p style="font-size: 0.95rem">*) Member price is for <a href="https://robotframework.org/foundation/" target="blank">Robot Framework Foundation</a> member organizations.</p><a class="col-sm-12 pl-0 mb-5 mt-3" href="https://www.lyyti.fi/reg/robocon2020workshops" target="blank">Tickets available here!</a>',
+              text: '<p>Date: January 14, 2020<br>Location: Technopolis Ruoholahti, <a href="https://goo.gl/maps/LyrLSoMJF3S6PCvz7">Energiakuja 3 & 4, Helsinki</a>.<br>Detailed location information will be sent to workshops participants separately.<br><br>Prices:<br><table style="width: 100%; display: flex; margin-top: 0; margin-bottom: 5px"><tr><th></th><th>Normal</th><th>Members *)</th></tr><tr><td>Half-day</td><td>350€</td><td>250€</td></tr><tr><td>Full-day</td><td>450€</td><td>350€</td></tr></table><p style="font-size: 0.95rem">*) Member price is for <a href="https://robotframework.org/foundation/" target="blank">Robot Framework Foundation</a> member organizations.</p><a class="col-sm-12 pl-0 mb-5 mt-3" href="https://www.lyyti.fi/reg/robocon2020workshops" target="blank">Tickets available here!</a>',
               talks: [
                 { type: "workshop", header: 'Half-day workshops' },
                 { type: "workshop", author: "Elias Hachichou, Kristina Sabotic",
