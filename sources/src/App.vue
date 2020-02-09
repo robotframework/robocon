@@ -36,7 +36,7 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>RoboCon is an annual gathering for the <a href="http://robotframework.org" target="blank">Robot Framework community</a>. It provides a great possibility to learn from the experts, hear how the framework is used in different places, and most importantly, meet fellow Robot Framework users as well as its developers. <br><br>RoboCon 2020 is organized at Helsinki, Finland, in January 14-17. The agenda for the conference week is as follows:<br><br>Jan 14: <a href="#workshops">Workshops</a><br>Jan 15-16: <a href="#conference">RoboCon Conference</a><br>Jan 17: <a href="#sprints">Sprints</a><br><br>RoboCon is organized by <a href="http://robotframework.org/foundation/" target="blank">Robot Framework Foundation</a>, a non-profit consortium that also sponsors the development of Robot Framework. Possible profits from the conference will be used for this purpose too. </p><p>Conference hashtag to use on Twitter and elsewhere is <code><b>#robocon</b></code>. <a href="https://robotframework-slack-invite.herokuapp.com/" target="blank">Robot Framework Slack community</a> also has a dedicated <code>#robocon</code> channel to ask question and chat with other participants. To contact the organizers directly, use <a href="mailto:info&#64;robocon.io" target="blank">info&#64;robocon.io</a>.</p>'
+                '<p>Thanks to everyone who attended Robocon 2020, see you next year!<br><br><a href="#previous-talks">Videos of 2020 talks here!</a></p>'
             }
           }
         },
@@ -398,8 +398,58 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Previous talks - 2019",
+              header: "Previous talks - 2020",
               text: '<p>(Click title for video)</p>',
+              talks: [
+                { author: "Jeff King", title: "ROBOT FRAMEWORK AND THE ONE MAN ROBOT BAND", url: "https://www.youtube.com/embed/0yEnJt6Sf50" },
+                { author: "Anaïs van Asselt", title: "IMPLEMENTING A TEST AUTOMATION ARCHITECTURE IN A GOVERNMENT ORGANIZATION", url: "https://www.youtube.com/embed/Asy5xHl0uRA" },
+                { author: "Antti Karjalainen", title: "THE OPEN RPA ECOSYSTEM", url: "https://www.youtube.com/embed/cO6FxG-RAtQ" },
+                { author: "Petteri Mannersalo", title: "ROBOT FRAMEWORK AS AN ENABLER FOR INTELLIGENT PROCESS AUTOMATION", url: "https://www.youtube.com/embed/ViSKJiuT6xo" },
+                { author: "Tuomas Lempiäinen", title: "QA DRIVEN RPA AT VEIKKAUS", url: "https://www.youtube.com/embed/3Drlg1q4fkM" },
+                { author: "Virpi Luostarinen, Mikael Siirtola", title: "RPA ON RAILS: AUTOMATING MANUAL PROCESSES AT VR", url: "https://www.youtube.com/embed/R7bNgxPjDJ4" },
+                { author: "Kristina Sabotic", title: "END-TO-END TESTING FOR END-USERS", url: "https://www.youtube.com/embed/qkQpzGA51go" },
+                { author: "Luca Giovenzana, Angelo Caovilla", title: "BEWARE THE BRITTLE DRAGON", url: "https://www.youtube.com/embed/rgpqyPblo28" },
+                { title: "Lightning Talks I", url: "https://www.youtube.com/embed/0sKyczF0SDE" },
+                { title: "Lightning Talks II", url: "https://www.youtube.com/embed/Xb9npqzJkFY" },
+                { title: "Lightning Talks III", url: "https://www.youtube.com/embed/5axgakabN_0" },
+                { title: "Lightning Talks IV", url: "https://www.youtube.com/embed/AZOZIW1BJJs" },
+                { title: "Lightning Talks V", url: "https://www.youtube.com/embed/G24aU0unvVE" },
+                { title: "Lightning Talks VI", url: "https://www.youtube.com/embed/oo11OlAaWWA" },
+                { title: "Lightning Talks VII", url: "https://www.youtube.com/embed/7Ks8XSM2Uoc" },
+                { title: "Lightning Talks VIII", url: "https://www.youtube.com/embed/jS-HZqLwmIY" },
+                { title: "Lightning Talks IX", url: "https://www.youtube.com/embed/HTZ-R3HgByg" },
+                { author: "Ismo Aro", title: "Day II", url: "https://www.youtube.com/embed/m1KA3PVukhg" },
+                { author: "KEYNOTE: Pekka Klärck", title: "WHAT'S NEW? WHAT'S NEXT? WHO ARE WE?", url: "https://www.youtube.com/embed/DRAu1du3UFU" },
+                { author: "Akseli Lukkarila", title: "ACCEPTANCE TESTING A REAL-TIME MUSIC EDUCATION APPLICATION WITH AUDIO", url: "https://www.youtube.com/embed/IubCejghz_I" },
+                { author: "Maria Prokhorova", title: "NEW IMAGE LIBRARY FOR ADVANCED IMAGE PROCESSING", url: "https://www.youtube.com/embed/AWuh-r-T6Yo" },
+                { author: "Tatu Aalto", title: "SELENIUMLIBRARY 4.0: PLUGIN API AND EVENT FIRING WEBDRIVER SUPPORT", url: "https://www.youtube.com/embed/zyNZRTR821Q" },
+                { author: "René Rohner", title: "DATADRIVER OR: HOW I LEARNED TO STOP WORRYING AND LOVE OPEN SOURCE", url: "https://www.youtube.com/embed/RtEUr1i4x3s" },
+                { author: "Tommi Oinonen", title: "SELF MANAGING TESTING PIPELINES", url: "https://www.youtube.com/embed/W3JUzeV8lp4" },
+                { author: "Juho Saarinen", title: "ROBOT FRAMEWORK REMOTE LIBRARY IN PRACTICE (WITH DEMOS)", url: "https://www.youtube.com/embed/B-67yPvMh8Q" },
+                { author: "Maciej Brzozowski", title: "MICROSERVICES TESTING USING ARGO: CONTAINER-NATIVE WORKFLOWS FOR KUBERNETES", url: "https://www.youtube.com/embed/xBBTvv4mz0U" },
+                { author: "Joonas Köppä, Riku Halonen", title: "ORCHESTRATING ROBOT FRAMEWORK TEST CONTAINERS AND REMOTE LIBRARIES IN KUBERNETES", url: "https://www.youtube.com/embed/SypNjILTRl0" },
+                { title: "Day II - Lightning Talks I", url: "https://www.youtube.com/embed/Yjlsl3eHGMI" },
+                { title: "Day II - Lightning Talks II", url: "https://www.youtube.com/embed/jDQWBrYD-w8" },
+                { title: "Day II - Lightning Talks III", url: "https://www.youtube.com/embed/_T_PCx-tVFk" },
+                { title: "Day II - Lightning Talks IV", url: "https://www.youtube.com/embed/-dBWW_77QG4" },
+                { title: "Day II - Lightning Talks V", url: "https://www.youtube.com/embed/TZiJLT1fShk" },
+                { title: "Day II - Lightning Talks VI", url: "https://www.youtube.com/embed/_XkgOcvKgtc" }]
+            }
+          }
+        },
+        {
+          title: "",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          user_box: false,
+          user_box_centered: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Previous talks - 2019",
+              text: '<p></p>',
               talks: [
                 { author: "Ismo Aro / Pekka Klärck", title: "Welcome back! What's new since RoboCon 2018?", url: "https://www.youtube.com/embed/wBhY5Z2RoqQ" },
                 { author: "Antti Karjalainen", title: "The start of the open source RPA movement", url: "https://www.youtube.com/embed/uv6dvcoxdvU" },
@@ -435,7 +485,7 @@ export default {
             text: {
               twitter: false,
               header: "Previous talks - 2018",
-              text: '<p>(Click title for video)</p>',
+              text: '<p></p>',
               talks: [
                 { author: "Ismo Aro", title: "Robot Framework Foundation: Welcome to RoboCon", url: "https://www.youtube.com/embed/eAG18mS8UXA" },
                 { author: "Pekka Klärck", title: "How Did We Get Here? Where Do We Go Next?", url: "https://www.youtube.com/embed/6Kb1M3NECic" },
