@@ -5,6 +5,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'CourierCodeRoman';
+  src: url('../../assets/fonts/courier-code_regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CourierCodeRoman';
+  src: url('../../assets/fonts/courier-code_bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   background-color: #000;
   font-family: Roboto;
