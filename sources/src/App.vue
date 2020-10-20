@@ -36,11 +36,11 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>Thanks to everyone who attended Robocon 2020, see you next year!<br><br><a href="#previous-talks">Videos of 2020 talks here!</a></p>'
+                '<p>Robocon is here again! The conference will be held online on week 11, March 2021.</p><p>Ticket sales and CFP will be opened soon. Stay tuned for more information!</p>'
             }
           }
         },
-        {
+        /* {
           title: "",
           text_block_centered: true,
           tab_box: false,
@@ -124,7 +124,7 @@ export default {
               },
             ]
           }
-        },
+        }, */
         {
           title: "Conference",
           text_block: false,
@@ -137,8 +137,8 @@ export default {
             text: {
               twitter: false,
               header: "Conference Program",
-              text: "<p>Click talk's title for description!</p>",
-              talks: [
+              text: "<p>TBA!</p>",
+              /* talks: [
                 { header: 'Wednesday, January 15' },
                 { author: "08:00", title: "Doors open, registration, breakfast" },
                 { author: "09:00 Pekka Klärck", title: "Welcome to Robocon 2020!" },
@@ -233,7 +233,7 @@ export default {
                 { author: "17:00", title: "Lightning talks", descriptionExpanded: 'Topic of the day, you decide! Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day and get ready to present a 10 minute lightning talk on the big stage.' },
                 { author: "18:00", title: "Networking" },
                 { author: "19:00", title: "After party at Vala", description: 'Official after party at Vala offices close to the conference venue at <a target="blank" href="https://goo.gl/maps/UNh2MSy24BU2">Erottajankatu 11 B</a>. <br><br>Sign up for the afterparties <a href="https://spiikresearch.typeform.com/to/IenZT9" target="blank">here</a>!' }
-              ]
+              ] */
             }
           }
         },
@@ -248,7 +248,7 @@ export default {
               twitter: false,
               header: "Tickets",
               text:
-                '<p><a href="https://www.lyyti.in/Robocon_2020_6339" target="blank">Tickets available here!</a></p> <table style="width: 100%; display: flex; margin-top: 10px"><tr><th></th><th>1 day</th><th>2 days</th><th>Available until</th></tr><tr><td><del>Blind Robot</del></td><td>-</td><td><del>600€</del></td><td><del>2019-09-30</del></td></tr><tr><td><del>Early Robot</del></td><td><del>600€</del></td><td><del>900€</del></td><td><del>2019-12-31</del></td></tr><tr><td>Late Robot</td><td>800€</td><td>1200€</td><td>2020-01-15</td></tr></table><br><p>All prices are exclusive of 24 % VAT. <a href="#workshops">Workshop</a> tickets are sold separately.</p>'
+                '<p>TBA!</p>'
             }
           }
         },
@@ -264,8 +264,8 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>Date: January 14, 2020<br>Location: Technopolis Ruoholahti, <a href="https://goo.gl/maps/LyrLSoMJF3S6PCvz7" target="blank">Energiakuja 3 & 4, Helsinki</a>.<br>Detailed location information will be sent to workshops participants separately.<br><br>Prices:<br>Remaining workshop tickets are sold with 250€ (full day) and 180€ (half day) with no additional member discount. Ticket sale closes on Monday, January 13, at 14:00 EET (12:00 UTC).<table style="width: 100%; display: flex; margin-top: 0; margin-bottom: 5px"><tr><th></th><th>Normal</th><th>Members *)</th></tr><tr><td>Half-day</td><td><del>350€</del></td><td><del>250€</del></td></tr><tr><td>Full-day</td><td><del>450€</del></td><td><del>350€</del></td></tr></table><p style="font-size: 0.95rem">*) Member price is for <a href="https://robotframework.org/foundation/" target="blank">Robot Framework Foundation</a> member organizations.</p><a class="col-sm-12 pl-0 mb-5 mt-3" href="https://www.lyyti.fi/reg/robocon2020workshops" target="blank">Tickets available here!</a>',
-              talks: [
+              text: '<p>TBA!</a>',
+              /* talks: [
                 { type: "workshop", header: 'Half-day workshops' },
                 { type: "workshop", author: "Elias Hachichou, Kristina Sabotic",
                   title: "End-to-end testing through multiple interfaces",
@@ -324,11 +324,11 @@ export default {
                   description: "In this workshop you will learn how to extend Robot Framework using various different interfaces. The first half of the workshop is dedicated to the library API, starting from basics and quickly continuing to more advanced topics like the dynamic library interface (used nowadays by SeleniumLibrary) and automatic argument type conversion. During the second half you will get familiar with other extending and integration possibilities such as the listener API, modifying tests dynamically before execution, starting execution programmatically, analyzing results, and new parsing APIs in Robot Framework 3.2.",
                   descriptionExpanded: "This workshop is for you if you already know basics of using Robot Framework, preferably also basics of writing tests libraries, and want to take your skills to the next level. These skills make it easier to adapt the framework to your own needs in different contexts.<br><br>The workshop is 100% hands-on, no slides, learn-by-doing. In addition to learning from the person who has designed these powerful APIs, you have a change to ask hard questions related to Robot Framework from its creator.<br><br>Participants should know basics of Robot Framework, including test library API, and Python programming. Participants should bring their own laptop with Python 3.6 or newer and Robot Framework 3.2 or newer installed. They should also have adequate admin rights to install possible additional Python modules using pip. A text editor or an IDE for writing Python code and Robot Framework tests is needed as well.<br><br><h3>Recommended for advanced users.</h3><h3>Max number of participants: 16</h3>",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework."}
-              ]
+              ] */
             }
           }
         },
-        {
+        /* {
           title: "Sprints",
           text_block: false,
           text_block_centered: true,
@@ -371,7 +371,7 @@ export default {
                 "<div><h2 class='no-arrow'>Hotel deals</h2><p><a href='https://www.sokoshotels.fi/en/helsinki/sokos-hotel-presidentti' target='blank'>Original Sokos Hotel Presidentti</a><br>- Standard single room: 150€ / night<br>- Standard double room: 170€ / night<br>- Breakfast and Wi-Fi included<br>- Promo code will be sent after ticket purchase</p></div>"
             }
           }
-        },
+        }, */
         {
           title: "CoC",
           text_block: false,
