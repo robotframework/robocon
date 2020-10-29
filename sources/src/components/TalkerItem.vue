@@ -11,14 +11,16 @@
         {{ author }}
         </h3>
       <div v-else class="mt-4" />
-      <a
-        class="mb-0 ml-4 link-title"
-        style="color: #20f73f"
-        :id="title.replace(/ /g, '-').toLowerCase()"
-        :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
-        @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
-        {{ title }}
-      </a>
+      <button>
+        <a
+          class="mb-0 ml-4 link-title"
+          style="color: #01ffd9"
+          :id="title.replace(/ /g, '-').toLowerCase()"
+          :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
+          @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
+          {{ title }}
+        </a>
+      </button>
     </div>
     <transition
       name="toggle-content"

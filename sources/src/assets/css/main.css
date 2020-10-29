@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'RBTFNT';
+  src: url('../../assets/fonts/RBTFNT.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'CourierCodeRoman';
   src: url('../../assets/fonts/courier-code_regular.woff') format('woff');
   font-weight: normal;
@@ -26,6 +33,11 @@ body {
   color: #fff;
   text-align: left;
   overflow-x: hidden;
+}
+
+button {
+  background-color: unset;
+  border: unset;
 }
 
 #header-robologo {
@@ -56,7 +68,7 @@ body {
 }
 
 footer {
-  background-color: #20f73f;
+  background-color: #262330;
 }
 
 footer h2 {
@@ -109,13 +121,9 @@ h1,
 h2,
 .link-title,
 h3 {
-  color: #20f73f;
+  color: #01ffd9;
 }
 
-.link-title {
-  padding-top: 70px;
-  margin-top: -70px;
-}
 
 h1,
 h2,
@@ -124,7 +132,11 @@ h3,
 div.card-header {
   font-family: "OCRA";
   text-align: left;
-  color: #20f73f;
+  color: #01ffd9;
+}
+
+.rbtfnt {
+  font-family: "RBTFNT";
 }
 
 h1, h2, div.card-header, .link-title {
@@ -145,20 +157,20 @@ h2, .link-title {
 
 h2:not(.no-arrow)::before {
   content: '> ';
-  color: #20f73f;
+  color: #01ffd9;
   position: absolute;
   left: 1rem;
 }
 
 .link-title::before {
   content: '> ';
-  color: #20f73f;
+  color: #01ffd9;
   position: absolute;
   left: 1rem;
 }
 
 .color {
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 .white {
@@ -169,8 +181,7 @@ h1.main-header {
   font-size: 20px;
   font-size: 6rem;
   line-height: 0.9;
-  color: #000;
-  text-align: center;
+  color: #fff;
 }
 
 .img-header {
@@ -188,7 +199,7 @@ h1.main-header {
 }
 
 .header {
-  background-color: #20f73f;
+  background-color: #262330;
   margin: 0;
   padding-top: 80px;
 }
@@ -196,7 +207,7 @@ h1.main-header {
 .logo-fixed {
   position: fixed;
   top: 50px;
-  right: 30px;
+  right: 20px;
   width: 50px;
   height: 50px;
   z-index: 999;
@@ -232,7 +243,7 @@ small.info::after {
 }
 
 .card.feature-box {
-  background-color: #20f73f;
+  background-color: #01ffd9;
   color: #fff;
 }
 
@@ -248,7 +259,7 @@ a {
 
 #nav_collapse .nav-item a.active,
 a {
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 hr {
@@ -265,7 +276,7 @@ hr {
   padding-bottom: 20px;
   white-space: pre-line;
   line-height: 0.9;
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 .navbar-brand .img-fluid {
@@ -311,11 +322,11 @@ hr {
 }
 
 #navigation .nav-item.active a.nav-link {
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 #navigation .nav-item a.nav-link:hover {
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 .nav-item {
@@ -336,7 +347,7 @@ hr {
 #navigation-collapsed {
   background-color: rgb(0, 0, 0);
   text-align: center;
-  border-bottom: solid #20f73f 2px;
+  border-bottom: solid #01ffd9 2px;
 }
 
 #nav_collapse .nav-item a {
@@ -353,7 +364,7 @@ a:not(.nav-link) {
 }
 
 #nav_collapse .nav-item a:hover {
-  color: #20f73f;
+  color: #01ffd9;
   text-decoration: none;
 }
 
@@ -370,21 +381,21 @@ a:not(.nav-link) {
 }
 
 .dashed-header > h1{
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 .dashed-header > h1::before{
   content: '// ';
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 .nav-pills li a {
-  color: #20f73f;
+  color: #01ffd9;
   padding: 0.3rem 0.5rem;
   font-size: 1rem;
   background: none;
   margin-right: 4px;
-  border: 1px solid #20f73f;
+  border: 1px solid #01ffd9;
 }
 
 .nav-pills li:last-child a {
@@ -393,9 +404,9 @@ a:not(.nav-link) {
 
 .nav-pills li.nav-item .nav-link.active {
   color: #fff;
-  border: 1px solid #20f73f;
+  border: 1px solid #01ffd9;
   border-radius: 0;
-  background: #20f73f;
+  background: #01ffd9;
 }
 
 .card {
@@ -405,7 +416,7 @@ a:not(.nav-link) {
   font-family: Roboto;
   border-radius: 0;
   border: none;
-  border: solid 5px #20f73f;
+  border: solid 5px #01ffd9;
   background-color: #000;
   height: 100%;
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -448,7 +459,7 @@ a:not(.nav-link) {
 }
 
 .card a {
-  color: #20f73f;
+  color: #01ffd9;
 }
 
 .center {
@@ -462,7 +473,7 @@ a:not(.nav-link) {
 th, td {
   padding: 10px 30px;
   font-size: 1rem;
-  border: 1px solid #20f73f;
+  border: 1px solid #01ffd9;
 }
 
 @media (max-width: 992px) {
@@ -470,7 +481,7 @@ th, td {
     padding-left: 5px;
     padding-right: 5px;
     font-size: 0.85rem;
-    border: 1px solid #20f73f;
+    border: 1px solid #01ffd9;
   }
 }
 
@@ -486,7 +497,7 @@ table {
 }
 
 .textblock-left {
-  border-top: 1px solid #20f73f;
+  border-top: 1px solid #01ffd9;
 }
 
 @media (max-width: 992px) {
