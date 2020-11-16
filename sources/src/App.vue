@@ -36,11 +36,11 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>Robocon is here again! The conference will be held online <span style="color: #01ffd9;">16-18, March 2021</span>.</p><p>Ticket sales will be opened soon.<br><br>Call for proposals is open!<br><a href="https://www.papercall.io/robocon2021">Click here to submit a CFP.</a></p>'
+                '<p>Robocon is here again! The conference will be held online <span style="color: #01ffd9;">16-18, March 2021</span>.</p><br><br><p>Ticket sales will be opened mid December.<br><br><br><span style="color: #01ffd9;">Would you like to share something with the fellow community?</span><br>Call for proposals is open! Your contribution can be an online presentation, a workshop or a lightning talk.<br><a href="https://www.papercall.io/robocon2021">More information about the CFP.</a></p>'
             }
           }
         },
-        /* {
+        {
           title: "",
           text_block_centered: true,
           tab_box: false,
@@ -53,78 +53,13 @@ export default {
             },
             users: [
               {
-                title: "Business Finland",
-                href: "https://www.businessfinland.fi/en/for-finnish-customers/services/programs/ai-business/",
-                img: require("@/assets/img/sponsors/businessfinland.png")
-              },
-              {
-                title: "Eficode",
-                href: "https://www.eficode.com",
-                img: require("@/assets/img/sponsors/eficode.png")
-              },
-              {
-                title: "Etteplan",
-                href: "https://www.etteplan.com/expertise/software-and-embedded-solutions/rd-testing-and-validation",
-                img: require("@/assets/img/sponsors/etteplan.png")
-              },
-              {
-                title: "Knowit Oy",
-                href: "https://www.knowit.fi/",
-                img: require("@/assets/img/sponsors/knowit.png")
-              },
-              {
-                title: "Nets",
-                href: "https://www.nets.eu/",
-                img: require("@/assets/img/sponsors/nets.png")
-              },
-              {
-                title: "Qentinel",
-                href: "https://www.qentinel.com",
-                img: require("@/assets/img/sponsors/qentinel.png")
-              },
-              {
-                title: "Q-Factory Oy",
-                href: "https://q-factory.fi/",
-                img: require("@/assets/img/sponsors/q-factory.png")
-              },
-              {
-                title: "Robocorp",
-                href: "https://www.robocorp.com",
-                img: require("@/assets/img/sponsors/robocorp.png")
-              },
-              {
-                title: "Saucelabs",
-                href: "https://saucelabs.com/",
-                img: require("@/assets/img/sponsors/saucelabs.png")
-              },
-              {
-                title: "Segron",
-                href: "https://segron.com/",
-                img: require("@/assets/img/sponsors/segron.png")
-              },
-              {
-                title: "Siili Solutions Oyj",
-                href: "https://www.siili.com",
-                img: require("@/assets/img/sponsors/siili.png")
-              },
-              {
-                title: "Signant Health",
-                href: "https://signanthealth.com/",
-                img: require("@/assets/img/sponsors/signant.png")
-              },
-              {
-                title: "Testimate Oy",
-                href: "https://www.testimate.fi",
-                img: require("@/assets/img/sponsors/testimate.png")
-              },
-              {
-                title: "VALA Group Oy",
-                href: "https://www.valagroup.com/",
-                img: require("@/assets/img/sponsors/vala.png")
-              },
+                title: "Humanitec",
+                href: "https://humanitec.com/",
+                img: require("@/assets/img/sponsors/humanitec.png")
+              }
             ]
           }
-        }, */
+        },
         {
           title: "Conference",
           text_block: false,

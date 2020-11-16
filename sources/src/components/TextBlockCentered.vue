@@ -43,7 +43,7 @@
               id="robotframework"
               widget-class="twitterprofile"
               sourceType="profile"
-              :style="isMobile ? '' : isTablet ? 'height: 850px; overflow: scroll' : 'height: 700px; overflow: scroll'"
+              :style="isMobile ? '' : isTablet ? 'height: 850px; overflow: scroll' : 'height: 400px; overflow: scroll'"
               :options="options"
             />
           </div>
