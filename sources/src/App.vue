@@ -53,10 +53,40 @@ export default {
             },
             users: [
               {
+                title: "Eficode",
+                href: "https://www.eficode.com/",
+                img: require("@/assets/img/sponsors/eficode.png")
+              },
+              {
                 title: "Humanitec",
                 href: "https://humanitec.com/",
                 img: require("@/assets/img/sponsors/humanitec.png")
-              }
+              },
+              {
+                title: "Northcode",
+                href: "https://www.northcode.fi/",
+                img: require("@/assets/img/sponsors/northcode.png")
+              },
+              {
+                title: "Qentinel",
+                href: "https://qentinel.com/",
+                img: require("@/assets/img/sponsors/qentinel2.png")
+              },
+              {
+                title: "Reaktor",
+                href: "https://www.reaktor.com/",
+                img: require("@/assets/img/sponsors/reaktor.png")
+              },
+              {
+                title: "Robocorp",
+                href: "https://robocorp.com/",
+                img: require("@/assets/img/sponsors/robocorp.png")
+              },
+              {
+                title: "Vala",
+                href: "https://www.valagroup.com/",
+                img: require("@/assets/img/sponsors/vala.png")
+              },
             ]
           }
         },
