@@ -12,19 +12,26 @@
       />
       <div
         v-if="data.talks">
-        <talker-item
-          v-for="(talk, key) in data.talks"
-          :key="key"
-          :header="talk.header"
-          :margin="talk.margin"
-          :author="talk.author"
-          :title="talk.title"
-          :type="talk.type || ''"
-          :description="talk.description"
-          :description-expanded="talk.descriptionExpanded"
-          :bio="talk.bio"
-          :img-url="talk.imgUrl"
-          :url="talk.url"/>
+        <button type="button" @click="talksShown = !talksShown" class="button-primary mt-4">
+          {{ talksShown ? 'Hide' : 'Show' }}
+        </button>
+        <transition appear name="fade">
+          <div v-if="talksShown" class="mt-4">
+            <talker-item
+              v-for="(talk, key) in data.talks"
+              :key="key"
+              :header="talk.header"
+              :margin="talk.margin"
+              :author="talk.author"
+              :title="talk.title"
+              :type="talk.type || ''"
+              :description="talk.description"
+              :description-expanded="talk.descriptionExpanded"
+              :bio="talk.bio"
+              :img-url="talk.imgUrl"
+              :url="talk.url"/>
+          </div>
+        </transition>
       </div>
     </div>
     <div v-else>
@@ -70,7 +77,8 @@ export default {
         tweetLimit: window.innerWidth < 992 ? 3 : 10,
         chrome:
           window.innerWidth < 992 ? ["nofooter", "noscroll"] : ["nofooter"]
-      }
+      },
+      talksShown: false
     };
   },
   computed: {
@@ -80,6 +88,11 @@ export default {
     isTablet() {
       return window.innerWidth < 1200;
     }
+  },
+  created() {
+    if (!this.data.talks) return
+    const anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null
+    if (this.data.talks.some(({ title }) => anchor === title.replace(/ /g, '-').toLowerCase())) this.talksShown = true
   }
 };
 </script>

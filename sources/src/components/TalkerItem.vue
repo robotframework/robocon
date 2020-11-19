@@ -11,15 +11,22 @@
         {{ author }}
         </h3>
       <div v-else class="mt-4" />
-      <button>
-        <a
-          class="mb-0 ml-4 link-title"
-          style="color: #01ffd9"
-          :id="title.replace(/ /g, '-').toLowerCase()"
-          :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
-          @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
-          {{ title }}
-        </a>
+      <button style="text-align: left; width: 100%;">
+        <div class="row">
+          <div style="color: #01ffd9; flex: 0 0 2rem; max-width: 2rem;">
+            >
+          </div>
+          <div style="flex: 0 0 calc(100% - 2rem); max-width: calc(100% - 2rem);">
+            <a
+              class="link-title"
+              style="color: #01ffd9"
+              :id="title.replace(/ /g, '-').toLowerCase()"
+              :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
+              @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
+              {{ title }}
+            </a>
+          </div>
+        </div>
       </button>
     </div>
     <transition

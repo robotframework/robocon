@@ -374,7 +374,6 @@ export default {
             text: {
               twitter: false,
               header: "Previous talks - 2020",
-              text: '<p>(Click title for video)</p>',
               talks: [
                 { author: "Jeff King", title: "ROBOT FRAMEWORK AND THE ONE MAN ROBOT BAND", url: "https://www.youtube.com/embed/0yEnJt6Sf50" },
                 { author: "Anaïs van Asselt", title: "IMPLEMENTING A TEST AUTOMATION ARCHITECTURE IN A GOVERNMENT ORGANIZATION", url: "https://www.youtube.com/embed/Asy5xHl0uRA" },
@@ -424,7 +423,6 @@ export default {
             text: {
               twitter: false,
               header: "Previous talks - 2019",
-              text: '<p></p>',
               talks: [
                 { author: "Ismo Aro / Pekka Klärck", title: "Welcome back! What's new since RoboCon 2018?", url: "https://www.youtube.com/embed/wBhY5Z2RoqQ" },
                 { author: "Antti Karjalainen", title: "The start of the open source RPA movement", url: "https://www.youtube.com/embed/uv6dvcoxdvU" },
@@ -460,7 +458,6 @@ export default {
             text: {
               twitter: false,
               header: "Previous talks - 2018",
-              text: '<p></p>',
               talks: [
                 { author: "Ismo Aro", title: "Robot Framework Foundation: Welcome to RoboCon", url: "https://www.youtube.com/embed/eAG18mS8UXA" },
                 { author: "Pekka Klärck", title: "How Did We Get Here? Where Do We Go Next?", url: "https://www.youtube.com/embed/6Kb1M3NECic" },

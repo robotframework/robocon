@@ -162,13 +162,6 @@ h2:not(.no-arrow)::before {
   left: 1rem;
 }
 
-.link-title::before {
-  content: '> ';
-  color: #01ffd9;
-  position: absolute;
-  left: 1rem;
-}
-
 .color {
   color: #01ffd9;
 }
@@ -216,6 +209,18 @@ h1.main-header {
 
 .logo-fixed:hover {
   transform: rotate(90deg);
+}
+
+.button-primary {
+  border: solid 1px #01ffd9;
+  color: #01ffd9;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
 @media (max-width: 1100px) {
