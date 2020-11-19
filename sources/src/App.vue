@@ -68,6 +68,11 @@ export default {
                 img: require("@/assets/img/sponsors/northcode.png")
               },
               {
+                title: "Q-factory",
+                href: "https://q-factory.fi/en/",
+                img: require("@/assets/img/sponsors/q-factory.png")
+              },
+              {
                 title: "Qentinel",
                 href: "https://qentinel.com/",
                 img: require("@/assets/img/sponsors/qentinel2.png")
@@ -81,6 +86,11 @@ export default {
                 title: "Robocorp",
                 href: "https://robocorp.com/",
                 img: require("@/assets/img/sponsors/robocorp.png")
+              },
+              {
+                title: "Signant Health",
+                href: "https://www.signanthealth.com/",
+                img: require("@/assets/img/sponsors/signant.png")
               },
               {
                 title: "Vala",

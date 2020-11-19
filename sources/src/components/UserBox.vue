@@ -11,7 +11,7 @@
         </div>
     </div>
     <p style="text-align: end; width: 100%; font-size: 0.85rem;">
-    Want your logo here? More information: info@robocon.io
+    Want your logo here?<br><a href="https://forms.gle/qcf8MjwcQ1tgNhDq8">Fill out the form and become a sponsor</a>
     </p>
   </div>
 </div>
