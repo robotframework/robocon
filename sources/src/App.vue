@@ -53,6 +53,11 @@ export default {
             },
             users: [
               {
+                title: "Cinia",
+                href: "https://www.cinia.fi/",
+                img: require("@/assets/img/sponsors/cinia.png")
+              },
+              {
                 title: "Eficode",
                 href: "https://www.eficode.com/",
                 img: require("@/assets/img/sponsors/eficode.png")
