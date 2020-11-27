@@ -6,7 +6,7 @@
     <text-block-centered v-if="page.text_block_centered == true" :data="page.data.text"/>
     <tab-box v-if="page.tab_box == true" :data="page.data.tabs"/>
     <tab-box-centered v-if="page.tab_box_centered == true" :data="page.data.tabs"/>
-    <user-box v-if="page.user_box == true" :data="page.data.users"/>
+    <user-box v-if="page.user_box == true" :data="page.data"/>
     <user-box-centered v-if="page.user_box_centered == true" :data="page.data"/>
 
 </section>
