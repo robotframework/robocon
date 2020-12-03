@@ -51,7 +51,12 @@ export default {
               header: "Sponsors",
               twitter: false
             },
-            usersGold: [
+            users: [
+              {
+                title: "Cinia",
+                href: "https://www.cinia.fi/",
+                img: require("@/assets/img/sponsors/cinia.png")
+              },
               {
                 title: "Eficode",
                 href: "https://www.eficode.com/",
@@ -96,13 +101,6 @@ export default {
                 title: "Vala",
                 href: "https://www.valagroup.com/",
                 img: require("@/assets/img/sponsors/vala.png")
-              }
-            ],
-            usersSilver: [
-              {
-                title: "Cinia",
-                href: "https://www.cinia.fi/",
-                img: require("@/assets/img/sponsors/cinia.png")
               }
             ]
           }
