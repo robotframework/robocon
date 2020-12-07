@@ -68,6 +68,11 @@ export default {
                 img: require("@/assets/img/sponsors/humanitec.png")
               },
               {
+                title: "Knowit",
+                href: "https://www.knowit.eu/",
+                img: require("@/assets/img/sponsors/knowit.png")
+              },
+              {
                 title: "Northcode",
                 href: "https://www.northcode.fi/",
                 img: require("@/assets/img/sponsors/northcode.png")
