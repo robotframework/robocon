@@ -8,8 +8,19 @@
       <div
         v-if="data.text"
         v-html="data.text"
-        class="row order-2 block-text textblock-right p-3 no-border"
-      />
+        class="row order-2 block-text textblock-right p-3 no-border" />
+      <button
+        v-if="data.textExpanded && data.textExpanded !== ''"
+        class="button-primary mb-3"
+        @click="textExpanded = !textExpanded">
+        {{ textExpanded ? 'View less' : 'View more' }}
+      </button>
+      <transition name="fade">
+        <div
+          v-if="textExpanded"
+          v-html="data.textExpanded"
+          class="row order-2 block-text textblock-right p-3 no-border" />
+      </transition>
       <div
         v-if="data.talks">
         <button type="button" @click="talksShown = !talksShown" class="button-primary mt-4">
@@ -78,7 +89,8 @@ export default {
         chrome:
           window.innerWidth < 992 ? ["nofooter", "noscroll"] : ["nofooter"]
       },
-      talksShown: false
+      talksShown: false,
+      textExpanded: false
     };
   },
   computed: {
