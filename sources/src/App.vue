@@ -48,7 +48,7 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>Robocon is here again! The conference will be held online <span style="color: #01ffd9;">16-18, March 2021</span>.</p><br><br><p>Ticket sales will be opened mid December.<br><br><br><span style="color: #01ffd9;">Would you like to share something with the fellow community?</span><br>Call for proposals is open! Your contribution can be an online presentation, a workshop or a lightning talk.<br><a href="https://www.papercall.io/robocon2021">More information about the CFP.</a></p>'
+                '<p>Robocon is here again! The conference will be held online <span style="color: #01ffd9;">16-18, March 2021</span>.</p><br><br><p><a href="#tickets">Ticket available now!</a><br><br><br><span style="color: #01ffd9;">Would you like to share something with the fellow community?</span><br>Call for proposals is open! Your contribution can be an online presentation, a workshop or a lightning talk.<br><a href="https://www.papercall.io/robocon2021">More information about the CFP.</a></p>'
             }
           }
         },
