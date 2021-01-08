@@ -19,7 +19,8 @@
         <div
           v-if="textExpanded"
           v-html="data.textExpanded"
-          class="row order-2 block-text textblock-right p-3 no-border" />
+          class="row order-2 block-text textblock-right p-3 no-border"
+          style="font-size: 1rem;" />
       </transition>
       <div
         v-if="data.talks">

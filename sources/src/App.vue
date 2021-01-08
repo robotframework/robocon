@@ -426,7 +426,7 @@ export default {
                 `,
               textExpanded: `
                 <h2 class="no-arrow">Harassment includes</h2>
-                <p>• Offensive comments related to gender, gender identity and expression, sexual orientation, disability, mental illness, neuro(a)typicality, physical appearance, body size, age, race, or religion.
+                <p class="mb-0">• Offensive comments related to gender, gender identity and expression, sexual orientation, disability, mental illness, neuro(a)typicality, physical appearance, body size, age, race, or religion.
                 <br>• Unwelcome comments regarding a person’s lifestyle choices and practices, including those related to food, health, parenting, drugs, and employment.
                 <br>• Deliberate misgendering or use of ‘dead’ or rejected names.
                 <br>• Gratuitous or off-topic sexual images or behaviour  in spaces where they’re not appropriate.
@@ -442,8 +442,8 @@ export default {
                 <br>• Continued one-on-one communication after requests to cease.
                 <br>• Deliberate “outing” of any aspect of a person’s identity without their consent except as necessary to protect vulnerable people from intentional abuse.
                 <br>• Publication of non-harassing private communication.
-                <br>• ROBOT FRAMEWORK community prioritizes marginalized people’s safety over privileged people’s comfort. The Robot Framework board reserves the right not to act on complaints regarding:
-                <br>• ‘Reverse’ -isms, including ‘reverse racism,’ ‘reverse sexism,’ and ‘cisphobia’
+                <br>• ROBOT FRAMEWORK community prioritizes marginalized people’s safety over privileged people’s comfort. The Robot Framework board reserves the right not to act on complaints regarding:</p>
+                <p class="ml-4 mt-0">• ‘Reverse’ -isms, including ‘reverse racism,’ ‘reverse sexism,’ and ‘cisphobia’
                 <br>• Reasonable communication of boundaries, such as “leave me alone,” “go away,” or “I’m not discussing this with you.”
                 <br>• Communicating in a ‘tone’ you don’t find congenial
                 <br>• Criticizing racist, sexist, cissexist, or otherwise oppressive behaviour or assumptions</p>
