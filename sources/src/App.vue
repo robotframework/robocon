@@ -20,12 +20,13 @@ import PageBlock from "@/Components/PageBlock.vue"
 import moment, { locale } from "moment-timezone"
 
 setTimeout(() => {
+  const ticketElm = document.getElementById("ticket")
   window.addEventListener("mousemove", (e) => {
-    const ticketElm = document.getElementById("ticket")
     const { x, y, width, height } = ticketElm.getBoundingClientRect()
     const centerPoint = { x: x + width / 2, y: y + height / 2 }
-    const degreeX = (e.screenY - centerPoint.y) * -0.016
-    const degreeY = (e.screenX - centerPoint.x) * 0.016
+    const screenSizeScaling = (1 + 1500 / window.innerWidth) / 2
+    const degreeX = (e.clientY - centerPoint.y) * -0.016 * screenSizeScaling
+    const degreeY = (e.clientX - centerPoint.x) * 0.016 * screenSizeScaling
     ticketElm.style.transform = `perspective(1000px) rotateX(${degreeX}deg) rotateY(${degreeY}deg)`
   })
 }, 500)
