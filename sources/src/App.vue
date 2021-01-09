@@ -19,13 +19,15 @@
 import PageBlock from "@/Components/PageBlock.vue"
 import moment, { locale } from "moment-timezone"
 
+const clamp = (value, max, min) => Math.min(Math.max(value, min), max)
+
 setTimeout(() => {
   const ticketElm = document.getElementById("ticket")
   window.addEventListener("mousemove", (e) => {
     const { x, y, width, height } = ticketElm.getBoundingClientRect()
     const centerPoint = { x: x + width / 2, y: y + height / 2 }
     const screenSizeScaling = (1 + 1500 / window.innerWidth) / 2
-    const degreeX = (e.clientY - centerPoint.y) * -0.016 * screenSizeScaling
+    const degreeX = clamp((e.clientY - centerPoint.y) * -0.016 * screenSizeScaling, 15, -15)
     const degreeY = (e.clientX - centerPoint.x) * 0.016 * screenSizeScaling
     ticketElm.style.transform = `perspective(1000px) rotateX(${degreeX}deg) rotateY(${degreeY}deg)`
   })
@@ -49,7 +51,7 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>Robocon is here again! The conference will be held online <span style="color: #01ffd9;">16-18, March 2021</span>.</p><br><br><p><a href="#tickets">Ticket available now!</a><br><br><br><span style="color: #01ffd9;">Would you like to share something with the fellow community?</span><br>Call for proposals is open! Your contribution can be an online presentation, a workshop or a lightning talk.<br><a href="https://www.papercall.io/robocon2021">More information about the CFP.</a></p>'
+                '<p>Robocon is here again! The conference will be held online <span style="color: #01ffd9;">16-18, March 2021</span>.</p><br><br><p><a href="#tickets">Tickets available now!</a><br><br><br><span style="color: #01ffd9;">Would you like to share something with the fellow community?</span><br>Call for proposals is open! Your contribution can be an online presentation, a workshop or a lightning talk.<br><a href="https://www.papercall.io/robocon2021">More information about the CFP.</a></p>'
             }
           }
         },
