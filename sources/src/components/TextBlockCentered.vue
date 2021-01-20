@@ -10,14 +10,14 @@
         v-html="data.text"
         class="row order-2 block-text textblock-right p-3 no-border" />
       <div
-        v-if="data.talks">
+        v-if="data.previousTalks">
         <button type="button" @click="talksShown = !talksShown" class="button-primary mt-4">
           {{ talksShown ? 'Hide' : 'Show' }}
         </button>
         <transition appear name="fade">
           <div v-if="talksShown" class="mt-4">
             <talker-item
-              v-for="(talk, key) in data.talks"
+              v-for="(talk, key) in data.previousTalks"
               :key="key"
               :header="talk.header"
               :margin="talk.margin"
@@ -31,6 +31,24 @@
               :url="talk.url"/>
           </div>
         </transition>
+      </div>
+      <div
+        v-else-if="data.talks">
+        <div class="mt-4">
+          <talker-item
+            v-for="(talk, key) in data.talks"
+            :key="key"
+            :header="talk.header"
+            :margin="talk.margin"
+            :author="talk.author"
+            :title="talk.title"
+            :type="talk.type || ''"
+            :description="talk.description"
+            :description-expanded="talk.descriptionExpanded"
+            :bio="talk.bio"
+            :img-url="talk.imgUrl"
+            :url="talk.url"/>
+        </div>
       </div>
     </div>
     <div v-else>

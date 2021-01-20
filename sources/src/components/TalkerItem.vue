@@ -22,7 +22,7 @@
               style="color: #01ffd9"
               :id="title.replace(/ /g, '-').toLowerCase()"
               :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
-              @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false">
+              @click="hasExpandableContent ? expanded = !expanded : false">
               {{ title }}
             </a>
           </div>
@@ -32,40 +32,56 @@
     <transition
       name="toggle-content"
       mode="out-in">
-      <div v-if="expanded">
-        <div class="row mt-0">
-          <div v-if="url !== ''" class="col-lg-12">
-            <b-embed
-              type="iframe"
-              :src="url"
-              allowfullscreen />
-          </div>
-          <div v-else>
-            <div v-if="imgUrl !== ''" class="col-lg-4">
-                <div
-                  v-for="image in imgUrl"
-                  :key="image">
-                    <img class="mb-3" style="width: 100%" :src="require(`@/assets/img/users/${image}`)">
-                </div>
+      <div
+        v-if="expanded"
+        key="1"
+        class="row mt-0">
+        <!-- YouTube video -->
+        <div v-if="url !== ''" class="col-lg-12">
+          <b-embed
+            type="iframe"
+            :src="url"
+            allowfullscreen />
+        </div>
+        <!-- talk description expanded -->
+        <div v-else class="row ml-4 mt-2 talk-description">
+          <p
+            class="col-12"
+            v-html="description" />
+          <p
+            v-if="descriptionExpanded !== ''"
+            class="col-12"
+            v-html="descriptionExpanded" />
+          <!-- bio with img -->
+          <div v-if="imgUrl !== '' && bio !== ''" class="mt-3 display--flex flex--wrap">
+            <div class="col-sm-12 col-md-3">
+              <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: 100%;">
             </div>
-            <div v-if="imgUrl !== '' && imgUrl.length" class="col-lg-8 justify word-break">
-              <h3>{{ description }}</h3>
-              <p v-html="descriptionExpanded"></p>
+            <div
+              class="col-sm-12 col-md-9"
+              :class="isMobile ? 'mt-4' : ''">
               <h3>Bio</h3>
-              <p v-html="bio"></p>
+              <p v-html="bio" />
             </div>
-            <div v-else class="col-lg-12 word-break ml-4 pr-4 mt-2 workshop-description">
-              <p v-html="description"></p>
-              <p v-html="descriptionExpanded"></p>
-              <template v-if="bio">
-              <h2 class="no-arrow mb-0">Bio</h2>
-              <p v-html="bio"></p>
-              </template>
-            </div>
+          </div>
+          <!-- bio with no img img -->
+          <div v-if="imgUrl === '' && bio !== ''">
+            <h3>Bio</h3>
+            <p>
+              {{ bio }}
+            </p>
           </div>
         </div>
       </div>
-      <p v-else-if="header === ''" class="workshop-description ml-4 mt-2 cursor--pointer" v-html="description" @click="descriptionExpanded !== '' || url !== '' ? expanded = !expanded : false"></p>
+      <div
+        v-else-if="description !== ''"
+        key="2"
+        class="talk-description ml-4 mt-2 cursor--pointer"
+        @click="hasExpandableContent ? expanded = !expanded : null">
+        <p>
+          {{ description.slice(0, 200).trim() }}...
+        </p>
+      </div>
     </transition>
   </div>
 </template>
@@ -83,8 +99,8 @@ export default {
       default: ''
     },
     imgUrl: {
-      type: Array,
-      default: () => []
+      type: String,
+      default: ''
     },
     descriptionExpanded: {
       type: String,
@@ -118,10 +134,18 @@ export default {
   data: () => ({
     expanded: false
   }),
+  computed: {
+    hasExpandableContent () {
+      return this.descriptionExpanded !== '' || this.url !== '' || this.bio !== ''
+    },
+    isMobile () {
+      return window.innerWidth < 692
+    }
+  },
   watch: {
     expanded: {
       handler() {
-        if(this.expanded) history.pushState(null, null, `#${this.title.replace(/ /g, '-').toLowerCase()}`)
+        if (this.expanded) history.pushState(null, null, `#${this.title.replace(/ /g, '-').toLowerCase()}`)
       }
     }
   },

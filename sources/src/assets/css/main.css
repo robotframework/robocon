@@ -124,6 +124,11 @@ h3 {
   color: #01ffd9;
 }
 
+.link-title {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
 
 h1,
 h2,
@@ -510,6 +515,18 @@ table {
   border-top: 1px solid #01ffd9;
 }
 
+.display--flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
 @media (max-width: 992px) {
   h1 {
     font-size: 1.5rem;
@@ -584,7 +601,7 @@ table {
   opacity: 0;
 }
 
-.workshop-description {
+.talk-description {
   font-size: 1rem;
 }
 
