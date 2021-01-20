@@ -20,7 +20,7 @@
             <a
               class="link-title"
               style="color: #01ffd9"
-              :id="title.replace(/ /g, '-').toLowerCase()"
+              :id="title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()"
               :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
               @click="hasExpandableContent ? expanded = !expanded : false">
               {{ title }}
@@ -145,7 +145,7 @@ export default {
   watch: {
     expanded: {
       handler() {
-        if (this.expanded) history.pushState(null, null, `#${this.title.replace(/ /g, '-').toLowerCase()}`)
+        if (this.expanded) history.pushState(null, null, `#${this.title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()}`)
       }
     }
   },
