@@ -151,7 +151,7 @@ export default {
   },
   mounted() {
     const anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null
-    if (anchor === this.title.replace(/ /g, '-').toLowerCase()) this.expanded = true
+    if (anchor === this.title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()) this.expanded = true
   }
 };
 </script>
