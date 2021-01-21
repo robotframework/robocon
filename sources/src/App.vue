@@ -83,6 +83,11 @@ export default {
                 img: require("@/assets/img/sponsors/humanitec.png")
               },
               {
+                title: "imbus AG",
+                href: "https://www.imbus.de/en/",
+                img: require("@/assets/img/sponsors/imbus.png")
+              },
+              {
                 title: "Knowit",
                 href: "https://www.knowit.eu/",
                 img: require("@/assets/img/sponsors/knowit.png")
