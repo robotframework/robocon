@@ -51,7 +51,16 @@ export default {
               twitter: true,
               header: "Hello",
               text:
-                '<p>Robocon is here again! The conference will be held online <span style="color: #01ffd9;">16-18, March 2021</span>.</p><br><br><p><a href="#tickets">Tickets available now!</a><br><br><br><span style="color: #01ffd9;">Would you like to share something with the fellow community?</span><br>Call for proposals is open! Your contribution can be an online presentation, a workshop or a lightning talk.<br><a href="https://www.papercall.io/robocon2021">More information about the CFP.</a></p>'
+                `
+                  <p>
+                    Come, join us for the 4th Annual Robot Framework conference. Through the talks and workshops you will learn from your fellow Robot Framework experts. There will be opportunities to network with users and developers. As this year will be online we are bringing you those hallway conversations to you where you are live in the world.
+                  </p>
+                  <p>
+                    By buying a ticket you are supporting the ongoing development of Robot Framework.
+                  </p>
+                  <span style="color: #01ffd9;">Would you like to share something with the fellow community?</span><br>
+                  Call for proposals is open! Your contribution can be an online presentation, a workshop or a lightning talk.<br>
+                  <a href="https://www.papercall.io/robocon2021">More information about the CFP.</a></p>`
             }
           }
         },
