@@ -58,6 +58,7 @@ export default {
                   <p>
                     By buying a ticket you are supporting the ongoing development of Robot Framework.
                   </p>
+                `
             }
           }
         },
