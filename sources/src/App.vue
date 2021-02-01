@@ -302,7 +302,7 @@ In 5 minutes you'll get updated to all changes.",
                 { author: "Pekka Klärck",
                   title: "Creating Robot Framework libraries: Why and how?",
                   description: "Robot Framework has rich syntax making it possible to create complex tests or tasks using ready-made libraries. Sometimes complexity grows too much and it's better to create custom libraries and move logic there.",
-                  descriptionExpanded: "Robot Framework has rich syntax making it possible to create complex tests or tasks using ready-made libraries. Sometimes complexity grows too much, though, and it's better to create custom libraries and move complex logic into them. In this presentation we'll first see some complicated keywords implemented using Robot Framework syntax and discuss problems in them. After that we'll learn how easy it is to get started writing custom libraries and see how the earlier examples can be simplified by moving the logic to Python based libraries.",
+                  descriptionExpanded: "In this presentation we'll first see some complicated keywords implemented using Robot Framework syntax and discuss problems in them. After that we'll learn how easy it is to get started writing custom libraries and see how the earlier examples can be simplified by moving the logic to Python based libraries.",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -359,9 +359,7 @@ Output
 ======
 Because of simple yet powerful features of robot framework our entire team could become productive with test automation within a sprint and we continued that journey so far for more than an year. As an output we have around 1000+ end-to-end large testcases automated by our entire team so far, which continue to execute daily and uphold our confidence about quality of our application. 
 Though we cannot quantitatively measure it, but a major output of Bazar model was also to instill a deep sense of ownership about quality of our application in each of the team member's mind, we don't consider this output less than the automation produced.",
-                  bio: "I am Deepak Chourasia, Principal Software Development Engineer In Test at SAS R&D, Pune, India. 
-I have 13+ years of experience with automation development using various tools and technologies. I have worked with 10+ programming languages for various tasks and still continue to learn more. I have worked on design and development of many tools internally for various needs along with couple of automation frameworks developed from scratch.
-Technology is my passion and Quality is my way to express it. I love to interact with like-minded people who are passionate towards technology.",
+                  bio: "<p>I am Deepak Chourasia, Principal Software Development Engineer In Test at SAS R&D, Pune, India. I have 13+ years of experience with automation development using various tools and technologies. I have worked with 10+ programming languages for various tasks and still continue to learn more. I have worked on design and development of many tools internally for various needs along with couple of automation frameworks developed from scratch.</p><p>Technology is my passion and Quality is my way to express it. I love to interact with like-minded people who are passionate towards technology.</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -369,20 +367,9 @@ Technology is my passion and Quality is my way to express it. I love to interact
                 { author: "Antti Karjalainen",
                   title: "Open-source stack for RPA",
                   description: "RPA is the fastest-growing area of Robot Framework adoption. To further enable this growth, we present an open-source stack for RPA based on Robot Framework that simplifies the work of a software robot developer.",
-                  descriptionExpanded: "At Robocon 2020, the landscape in Robot Framework RPA was described as “a loosely coupled collection of projects, tools, methods, and ways of working.”
-
-A year later, we’ve seen fast growth in new projects around Robot Framework, especially its use in RPA. Importantly, we have developed a new standardized way of working for software robot developers that simplifies building RPA solutions with Robot Framework.
-
-The design of the Open-Source Stack for RPA was driven by two goals:
-1. Simplify and streamline the RPA development process and provide a standard template for robots.
-2. Enable anyone to share and distribute robots seamlessly.
-
-First, we set out to create a developer experience that would be easy and seamless. We wanted to let our developers write automation code without worrying about environment configuration and dependency management so that their experience would feel joyful rather than tedious. When a developer hits the “run” button in VS Code, everything should already be in place.
-
-Second, we had a vision where you could easily create, ship, and Python-based automation code to target environments in real-time. The automation stack allows anyone to seamlessly share their robots and experiment with robots that have been built by others simply by writing a line on their terminal.
-
-In this talk, we present the Open-Source Automation stack built on Robot Framework. It creates a unified way of developing robots that can be shared and re-used. With this work, we enable developers to focus on automating instead of configuring.
-",
+                  descriptionExpanded: "<p>At Robocon 2020, the landscape in Robot Framework RPA was described as “a loosely coupled collection of projects, tools, methods, and ways of working.” A year later, we’ve seen fast growth in new projects around Robot Framework, especially its use in RPA. Importantly, we have developed a new standardized way of working for software robot developers that simplifies building RPA solutions with Robot Framework.</p><p>The design of the Open-Source Stack for RPA was driven by two goals:
+<ol><li>Simplify and streamline the RPA development process and provide a standard template for robots.</li>
+<li>Enable anyone to share and distribute robots seamlessly.</li></p><p>First, we set out to create a developer experience that would be easy and seamless. We wanted to let our developers write automation code without worrying about environment configuration and dependency management so that their experience would feel joyful rather than tedious. When a developer hits the “run” button in VS Code, everything should already be in place.</p><p>Second, we had a vision where you could easily create, ship, and Python-based automation code to target environments in real-time. The automation stack allows anyone to seamlessly share their robots and experiment with robots that have been built by others simply by writing a line on their terminal.</p><p>In this talk, we present the Open-Source Automation stack built on Robot Framework. It creates a unified way of developing robots that can be shared and re-used. With this work, we enable developers to focus on automating instead of configuring.</p>",
                   bio: "Founder and CEO of Robocorp, a San Francisco and Helsinki based company that is set out to change the RPA market with open-source technologies. Member of the board at Robot Framework foundation since 2019.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -390,18 +377,9 @@ In this talk, we present the Open-Source Automation stack built on Robot Framewo
 
                 { author: "Tuukka Virtanen (Nervanti)",
                   title: "How to find the best Robot Framework libraries?",
-                  description: "Part of Robot Framework's success is the healthy ecosystem of useful Robot Framework libraries. But how do you find these libraries? Most of them are scattered around different websites and there is no central place listing them all. Except now there is, Roboscripts.org(https://www.roboscripts.org).",
-                  descriptionExpanded: "Finding the most relevant Robot Framework keywords can be a hassle. What keywords should I use in this particular project? Someone has probably solved this same problem before, so why reinvent the wheel? The problem is just finding the right library with the correct keywords. But most of them are scattered around different websites and there is no central place listing them all. So, how do you find those libraries?
-
-I have started a website Roboscripts.org (https://www.roboscripts.org) to list all the best Robot Framework libraries under the same roof. All the needed library information, like version numbers and all the keywords and their arguments are listed neatly in one place. With an easy search functionality, it's easy to find the keywords and libraries you are looking for.
-
-In this talk, I would like to start by presenting this problem of locating the correct libraries and continue to talk about Roboscripts.org and how it can help developers to find their libraries faster and easier. I would end the talk with a plea, to send me Robot Framework libraries that could be added to the database.",
-                  bio: "Experienced software automation consultant with multiple years of experience in Agile test automation projects. Teaching Robot Framework, DevOps and test automation lessons at Test Automation Academy. A member and a blogger of SogetiLabs innovator network. 
- 
-Building a website Roboscripts.org to gather all the best Robot Framework libraries, scripts and articles in the same place.
-
-Also, making my own mobile indie game NorseHack for Android (check my Twitter for more information).
-Also, making my electronic music on Youtube (check channel Nervanti).",
+                  description: "Part of Robot Framework's success is the healthy ecosystem of useful Robot Framework libraries. But how do you find these libraries? Most of them are scattered around different websites and there is no central place listing them all. Except now there is, <a href='https://www.roboscripts.org'>Roboscripts.org</a>.",
+                  descriptionExpanded: "Finding the most relevant Robot Framework keywords can be a hassle. What keywords should I use in this particular project? Someone has probably solved this same problem before, so why reinvent the wheel? The problem is just finding the right library with the correct keywords. But most of them are scattered around different websites and there is no central place listing them all. So, how do you find those libraries?</p><p>I have started a website Roboscripts.org (https://www.roboscripts.org) to list all the best Robot Framework libraries under the same roof. All the needed library information, like version numbers and all the keywords and their arguments are listed neatly in one place. With an easy search functionality, it's easy to find the keywords and libraries you are looking for.</p><p>In this talk, I would like to start by presenting this problem of locating the correct libraries and continue to talk about Roboscripts.org and how it can help developers to find their libraries faster and easier. I would end the talk with a plea, to send me Robot Framework libraries that could be added to the database.</p>",
+                  bio: "<p>Experienced software automation consultant with multiple years of experience in Agile test automation projects. Teaching Robot Framework, DevOps and test automation lessons at Test Automation Academy. A member and a blogger of SogetiLabs innovator network. Building a website Roboscripts.org to gather all the best Robot Framework libraries, scripts and articles in the same place.</p><p>Also, making my own mobile indie game NorseHack for Android (check my Twitter for more information). Also, making my electronic music on Youtube (check channel Nervanti).</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -410,11 +388,10 @@ Also, making my electronic music on Youtube (check channel Nervanti).",
                   title: "RobotFramework Language Server",
                   description: "Brief introduction to the language server protocol and debug adapter protocol, how they work and how the RobotFramework Language Server and Robocorp Code extensions can be used for RobotFramework development."
                   descriptionExpanded: "The topics to be covered are:
-- what's the language server protocol
-- what's the debug adapter protocol
-- an overview of the functionalities of the Robot Framework Language Server
-- an overview of the functionalities for creating a Robot Framework project using Robocorp Code
-",
+<ul><li>what's the language server protocol</li>
+<li>what's the debug adapter protocol</li>
+<li>an overview of the functionalities of the Robot Framework Language Server</li>
+<li>an overview of the functionalities for creating a Robot Framework project using Robocorp Code</li></ul>",
                   bio: "I'm currently the main developer for the RobotFramework Language Server, Robocorp Code, PyDev (Python plugin for Eclipse, also available as an extension for VSCode) and the PyDev Debugger (which is the debugger backend used in PyDev, PyCharm, Visual Studio and VSCode).",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -456,25 +433,9 @@ What to make and what to buy",
 
 
                 { author: "Cindy Huffman",
-                  title: "AUTOMATING CUSTOMER JOURNEYS AS UI ACCEPTANCE SCENARIOS",
+                  title: "Automating Customer Journeys As UI Acceptance Scenarios",
                   description: "Testers ensure that features are tested in development environments. Outside of these environments, SAS still needs to verify that products run smoothly. User journeys (user scenarios that outline how customers interact with products) can be used as acceptance criteria to make these verifications.",
-                  descriptionExpanded: "In May 2020, executive leadership at SAS Institute asked Research & Development product teams to provide five user journeys that they considered the most critical to their customer experience. These user journeys would describe how the customer interacted with the product through the user interface, the application programming interface (API), or the software development kit (SDK). The user journeys would become acceptance scenarios that would become automated in a new automated testing layer developed outside the product development teams.
-
-These automated tests would run on any deployment environment, at any point of the development process. While the failure of any test would not stop a promotion gate within a CI/CD pipeline, it would provide the status of the product’s critical customer journey at any point in time for a given environment.
-
-This talk will cover how a small team of testers automated 15 acceptance scenarios using the Robot Framework. The team was new to automation, and one of their first responsibilities was to find an automation tool. The choice was Robot Framework because it was easy to learn and easy to set up quickly, a large part due to well-written documentation and the community of users.
-
-The talk will also cover the strategy behind leadership’s decision to adopt user journeys as acceptance criteria and use BDD to communicate the user journeys. In six months, the team was able to 
-*          complete the scenarios
-*          establish processes for writing BDD and scenario sign-off 
-*          create guidelines for file structure and naming conventions for test names, variables, and tags
-*          build jobs that created data and folders in test environments
-*          create Jenkins jobs to run tests in a container 
-*          create reports that contain a variety of metrics  
-
-The automation team includes seven members from the Customer Lifecycle Testing team. The Customer Lifecycle Testing team is responsible for testing the complete lifecycle (deployment to customer usage) throughout the development cycle.
-
-SAS Institute is a private software company based in Cary, North Carolina, that develops analytics software. Our software analyzes, builds, manages, and reports on data. Our customers use our software in various architectural environments, including high-availability, multi-tenancy, and cloud-based Azure, AWS, and our products must be tested thoroughly within these environments.",
+                  descriptionExpanded: "<p>This talk will cover how a small team of testers automated 15 acceptance scenarios using the Robot Framework. The team was new to automation, and one of their first responsibilities was to find an automation tool. The choice was Robot Framework because it was easy to learn and easy to set up quickly, a large part due to well-written documentation and the community of users.</p><p>The talk will also cover the strategy behind leadership’s decision to adopt user journeys as acceptance criteria and use BDD to communicate the user journeys.</p>",
                   bio: "Cindy Huffman is a Test Automation Engineer at SAS Institute in Cary, North Carolina. She has been with SAS since 1996 and spent most of her career as a User Experience Specialist. She transitioned to test automation using Robot Framework in 2020 and has been hooked ever since. She’s a military brat who attended two elementary schools, two middle schools, and three high schools. She lives in Raleigh, North Carolina with her family, including her two dogs and her cat.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -506,11 +467,7 @@ The way we automate today is simply too slow. We need automation solutions that 
 
 I believe this is how the future of hyper-automation looks like. The next mission of the software automation community to move the world from hype-automation to hyper-automation.
 ",
-                  bio: "Esko Hannula, CEO of Qentinel, is an experienced business leader with a long experience in software and service in general management, R&D and business development positions. Although Esko has never worked in full-time testing roles, software quality, testing, and automation have always been a part of his professional life. For the past many years he has served as the CEO of Qentinel, growing the company to one of the top few QA consultancies in Finland and recently re-shaping it into a SaaS business for test automation. Understanding and communicating the interdepency of software quality and business performance is Esko’s professional passion.
-
-Esko is known for visionary and sometimes controversial ideas and many perceive him as an irritating besserwisser. In 2017, Esko published a book ”Three Skills of Advantage”, that explains his views on how quality creates value. In his spare time, Esko likes wandering around in the woods and developing his crazy ideas.
-
-",
+                  bio: "<p>Esko Hannula, CEO of Qentinel, is an experienced business leader with a long experience in software and service in general management, R&D and business development positions. Although Esko has never worked in full-time testing roles, software quality, testing, and automation have always been a part of his professional life. For the past many years he has served as the CEO of Qentinel, growing the company to one of the top few QA consultancies in Finland and recently re-shaping it into a SaaS business for test automation. Understanding and communicating the interdepency of software quality and business performance is Esko’s professional passion.</p><p>Esko is known for visionary and sometimes controversial ideas and many perceive him as an irritating besserwisser. In 2017, Esko published a book ”Three Skills of Advantage”, that explains his views on how quality creates value. In his spare time, Esko likes wandering around in the woods and developing his crazy ideas.</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -518,13 +475,7 @@ Esko is known for visionary and sometimes controversial ideas and many perceive 
                 { author: "Dave Martin",
                   title: "Zero To Hero In 2 Weeks",
                   description: "I was presented with a huge problem that needed automation. I had heard of Robot Framework, but had no experience with it. I went from no experience with Robot Framework to building a robust, reusable, and scalable automation framework with instant ROI using Robot Framework in 2 weeks. Here's how.",
-                  descriptionExpanded: "Getting started with a new tool is sometimes a daunting task. This is the daunting task that faced me as I was presented with a rather big problem that needed an automation solution. In this talk, I will share the process that I used to go from Robot Framework newbie to building automation for a large regression test faster than I could run the test once manually, to what today is a robust, reusable, scalable test automation solution with 25 contributors designing over 50,000 tests and growing. This talk will focus on the following:
-
-*   Learning Robot Framework
-*   Structuring Robot Framework Resources for Maximum Reuse
-*   Creating an Abstraction Layer
-*   Utilizing Design Patterns
-*   Gaining Organizational Acceptance",
+                  descriptionExpanded: "Getting started with a new tool is sometimes a daunting task. This is the daunting task that faced me as I was presented with a rather big problem that needed an automation solution. In this talk, I will share the process that I used to go from Robot Framework newbie to building automation for a large regression test faster than I could run the test once manually, to what today is a robust, reusable, scalable test automation solution with 25 contributors designing over 50,000 tests and growing.",
                   bio: "I am a seasoned QA professional with over 23 years of experience. My professional experience has been focused on the architecture and implementation of QA automation frameworks (using a wide variety of tools) as well as managing QA and Dev teams. I am passionate about all things QA, automation, process improvement, and customer/client satisfaction. At the end of the day, if I have Wow'ed the client, customer, and/or my team/manager; I have done something right.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
