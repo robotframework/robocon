@@ -1,5 +1,5 @@
 <template>
-  <div :class="header === '' && type === 'workshop' ? 'mb-5 pb-4' : 'mb-5'" :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
+  <div :class="header === '' && type === 'workshop' ? 'mb-5 pb-4' : 'mb-5 pb-3'" :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
     <div v-if="margin" class="mt-5" />
     <div v-if="header !== ''">
       <h2 class="white no-arrow mt-4">{{ header }}</h2>
@@ -11,7 +11,9 @@
         {{ author }}
         </h3>
       <div v-else class="mt-4" />
-      <button style="text-align: left; width: 100%;">
+      <button
+        style="text-align: left; width: 100%;"
+        @click="hasExpandableContent ? expanded = !expanded : false">
         <div class="row">
           <div style="color: #01ffd9; flex: 0 0 2rem; max-width: 2rem;">
             >
@@ -21,10 +23,12 @@
               class="link-title"
               style="color: #01ffd9"
               :id="title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()"
-              :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}"
-              @click="hasExpandableContent ? expanded = !expanded : false">
+              :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}">
               {{ title }}
             </a>
+          </div>
+          <div class="white ml-4 pl-2 type-body">
+            {{ dateString(time.start) }}  <span class="blue">{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
           </div>
         </div>
       </button>
@@ -44,7 +48,10 @@
             allowfullscreen />
         </div>
         <!-- talk description expanded -->
-        <div v-else class="row ml-4 mt-2 talk-description">
+        <div v-else class="row ml-4 talk-description">
+          <div class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
+            {{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
+          </div>
           <p
             class="col-12"
             v-html="description" />
@@ -62,6 +69,9 @@
               :class="isMobile ? 'mt-4' : ''">
               <h3>Bio</h3>
               <p v-html="bio" />
+              <p v-if="sponsoredBy !== ''">
+                Talk sponsored by <span v-html="sponsoredBy" />.
+              </p>
             </div>
           </div>
           <!-- bio with no img img -->
@@ -69,6 +79,9 @@
             <h3>Bio</h3>
             <p>
               {{ bio }}
+            </p>
+            <p v-if="sponsoredBy !== ''">
+              Talk sponsored by <span v-html="sponsoredBy" />
             </p>
           </div>
         </div>
@@ -87,6 +100,8 @@
 </template>
 
 <script>
+import moment from "moment-timezone";
+
 export default {
   name: 'TalkerItem',
   props: {
@@ -129,6 +144,17 @@ export default {
     type: {
       type: String,
       default: ''
+    },
+    time: {
+      type: Object,
+      default: () => ({
+        start: '',
+        end: ''
+      })
+    },
+    sponsoredBy: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
@@ -140,6 +166,9 @@ export default {
     },
     isMobile () {
       return window.innerWidth < 692
+    },
+    local_tz() {
+      return moment.tz.guess();
     }
   },
   watch: {
@@ -152,6 +181,23 @@ export default {
   mounted() {
     const anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null
     if (anchor === this.title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()) this.expanded = true
+  },
+  methods: {
+    dateString(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, "Africa/Freetown").format("DD MMM")
+    },
+    utc_time(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, "Africa/Freetown").format("LT");
+    },
+    local_time(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, moment.tz.guess()).format("LT");
+    }
   }
 };
 </script>
