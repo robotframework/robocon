@@ -185,51 +185,9 @@ export default {
 
 
                 { author: "Kerkko Pelttari",
-                  title: "RobotFramework Browser library",
+                  title: "RobotFramework Browser Library",
                   description: "Bringing RF browser automation to year 2021. We'll cover why Browser was created, why it's being adopted and why you should adopt it. And what makes it cool.",
-                  descriptionExpanded: "Robot Framework deserves a browser automation solution that's designed for the 2020s.
-
-Browser library powered by Playwright provides.
-
-🚀 Speed, ✅ reliability and 🔬 visibility.
-
-    Conscise assertions.
-    Precise and fast browser window and tab control.
-    Chainable selector strategies.
-    Good shadow DOM support.
-    Easy mobile device descriptors.
-    Sending HTTP requests.
-
-See keyword documentation and our project on Github.
-
-🚀SPEED
-
-Robot Framework Browser is fast! With its direct API to the browsers, designed for high performance testing, fast feedback is now only limited by the speed of the test object.
-
-With its innovative Context concept, a clean browser session is started within a less than 10 milliseconds!
-
-Learn more about Browser/Contexts/Pages.
-Browser library is designed to run headless first and brings a ready-to-test docker image to scale your test environments with your needs.
-
-✅RELIABILITY
-
-Wait Until ... and Sleep keywords belong to the past.
-
-The browser library automatically waits for the elements of the page and interacts with them when they are ready for interaction.
-
-Flickering tests that are sometimes PASS and sometimes FAIL are drastically reduced and confidence in test automation increases!
-
-Find real errors instead of fixing your tests...
-🔬VISIBILITY
-
-Robot Framework Browser utilizes a JavaScript based technology called Playwright. Playwright connects directly to the browsers API and has full control of the browser and its content. The Users has full access to all JavaScript object of the page and with the Execute JavaScript keyword you can directly manipulate them.
-
-Browser has also access to the Network Traffic between page and server and gives the user the possibility to interact with the server via HTTP calls from the same browser session.
-
-You have never been closer to your test object!
-
-See https://robotframework-browser.org/ for rendered version.
-",
+                  descriptionExpanded: "<p>Robot Framework deserves a browser automation solution that's designed for the 2020s.</p><p>Browser library powered by Playwright provides.<ul><li>Speed, reliability and visibility.</li><li>Conscise assertions.</li><li>Precise and fast browser window and tab control.</li><li>Chainable selector strategies.</li><li>Good shadow DOM support.</li><li>Easy mobile device descriptors.</li><li>Sending HTTP requests.</li></ul></p>",
                   bio: "Open sourcerer.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -238,13 +196,7 @@ See https://robotframework-browser.org/ for rendered version.
                 { author: "Diogo Rede",
                   title: "E-commerce web automation at scale",
                   description: "Imagine developing 5, 10, 15+ e-commerce websites, all with responsive web design and constant evolution. Do you hire 15+ testers or do you call Robot Framework to the rescue? Leveraging Robot Framework advanced features enables easily testing similar websites using a generic set of tests.",
-                  descriptionExpanded: "<pI>n an e-commerce oriented business where reusability and quick delivery is key, test automation is crucial to reduce release time. E-commerce websites usually follow similar patterns regarding usability and navigation flows, so it is fair to assume that testing different websites will be very similar. Given this assumption, having a common test suite is feasible and so is automating it.In order to make this possible, you can resorted to several Robot Framework features, create custom libraries, listeners and pre-run modifiers to take advantage of its full potential and unlock the support needed for your automation requirements.</p><p>In this talk I will reveal some aspects of a selenium generic tests projects and give some hints about the implementation of:
-<ul><li>Reusable libraries (python keywords and robot test suites)</li>
-<li>Keyword and variable overrides</li>
-<li>Resolution selection (desktop/tablet/mobile)</li>
-<li>Custom Selenium keywords for higher resilience</li>
-<li>Test execution profile mechanism</li>
-<li>Screenshot comparison</li></ul></p>",
+                  descriptionExpanded: "<pI>n an e-commerce oriented business where reusability and quick delivery is key, test automation is crucial to reduce release time. E-commerce websites usually follow similar patterns regarding usability and navigation flows, so it is fair to assume that testing different websites will be very similar. Given this assumption, having a common test suite is feasible and so is automating it.In order to make this possible, you can resorted to several Robot Framework features, create custom libraries, listeners and pre-run modifiers to take advantage of its full potential and unlock the support needed for your automation requirements.</p><p>In this talk I will reveal some aspects of a selenium generic tests projects and give some hints about the implementation of:<ul><li>Reusable libraries (python keywords and robot test suites)</li><li>Keyword and variable overrides</li><li>Resolution selection (desktop/tablet/mobile)</li><li>Custom Selenium keywords for higher resilience</li><li>Test execution profile mechanism</li><li>Screenshot comparison</li></ul></p>",
                   bio: "With over 5 years of experience in test automation, 4 of which using Robot Framework, I have worked in multiple projects automating tests for web applications, mobile applications, REST APIs and other backend services. Having started off my career as a pure manual tester with very little programming experience, my lazy side figured it was easier to learn how to code and automate my daily tasks, which eventually brought me to the position I assume today as a test automation team lead at Farfetch.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -253,7 +205,7 @@ See https://robotframework-browser.org/ for rendered version.
                 { author: "Maciej Wiczk",
                   title: "RfHub2 - new take on RobotFramework asset documentation",
                   description: "The team is using RobotFramework with ease, but over the time, they found out they are reinventing solutions previously made. How to prevent that and focus on what You actually need to develop? To organize themselves, there is a need for interactive documentation. And RfHub2 is the tool they need.",
-                  descriptionExpanded: "This talk is going to present <a href="https://github.com/pbylicki/rfhub2">RfHub2</a>, a new take on solving a problem of collecting documentation and sharing it. Session will start with story that made us create RfHub2, followed by, short, technologies overview. Talk will end with an application demo, showing how to start it and use it.",
+                  descriptionExpanded: "This talk is going to present <a href='https://github.com/pbylicki/rfhub2'>RfHub2</a>, a new take on solving a problem of collecting documentation and sharing it. Session will start with story that made us create RfHub2, followed by, short, technologies overview. Talk will end with an application demo, showing how to start it and use it.",
                   bio: "Software developer during work, cyclist after hours. Currently working as Senior Software Developer in Big Data department in Nordea Bank in Gdańsk, Poland. Python, RobotFramework and SQL enthusiast.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -261,12 +213,8 @@ See https://robotframework-browser.org/ for rendered version.
 
                 { author: "Luca Giovenzana",
                   title: "What's new in RequestsLibrary 0.9",
-                  description: "After discussing a lot at RoboCon 2020, collecting feedback from RobotFramework community and with the help of the Italian RobotFramework Meetup, a new RequestsLibrary version is born.
-In 5 minutes you'll get updated to all changes.",
-                  descriptionExpanded: "<ul><li>What guided the development.
-<li>What is the new keyword structure with session an session-less.</li>
-<li>How the implicit assert mechanism on status works.</li>
-<li>Best practices with nested keywords.</li></ul>",
+                  description: "After discussing a lot at RoboCon 2020, collecting feedback from RobotFramework community and with the help of the Italian RobotFramework Meetup, a new RequestsLibrary version is born. In 5 minutes you'll get updated to all changes.",
+                  descriptionExpanded: "<ul><li>What guided the development.<li>What is the new keyword structure with session an session-less.</li><li>How the implicit assert mechanism on status works.</li><li>Best practices with nested keywords.</li></ul>",
                   bio: "I'm an Open Source and Linux passionate guy. I worked for 9 years in a security company www.endian.com that build up from scratch an Open Source Linux distribution. At Endian I discovered RobotFramework but never used since we already have created our own testing framework in python, based on unittest and around fabric library to remotely control via ssh our firewalls. 2 years ago I moved to a shining streaming company www.chili.com where I made up a 7 people QA team and initiated the company to test automation with RobotFramework. The whole team enjoyed RF, me and Angelo attended the 2019 RoboCon edition. Back in Italy we started contributing and founded RobotFramework Italy/Milan Meetup. I'm now an active contributor to RequestsLibrary and I'm very excited about it!",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -311,54 +259,7 @@ In 5 minutes you'll get updated to all changes.",
                 { author: "Deepak Chourasia",
                   title: "Robot Framework and Journey from Cathedral to Bazar",
                   description: "We at SAS R&D did a unique and exciting experiment to accelerate our automation velocity. We adopted Bazar Automation Model where each member of the team contributes to test automation irrespective of his role. Robot Framework proved to be an excellent implementation partner for this success story.",
-                  descriptionExpanded: "Conventional team structures have cathedral style automation team which is separate from development/testing teams. With limited resources, automation team always feels like a bottleneck and cannot scale their automation velocity. Many places few testing team members also contribute to automation, but still it is not sufficient and scalable with a surge of features.
-
-### Experience with Cathedral
-We also had a cathedral style automation model for many years where a dedicated team with few members own the automation tasks. But over the years we realized the drawbacks of this model. Given the limited resources in cathedral team we always had to be dependent on their availability for any automation task, be it developing new automation or a maintenance activity or as simple as troubleshooting a failed execution. So this approach did not prove to be scalable and had large time gaps between development and automation of application features. This used to result in a need of manual testing of sizable chunk, which consumed additional man-hours along with delayed turn-around time. 
-Another drawback of this model is the cathedral team members tend to build their own custom automation tools for specific needs because only they are supposed to use those tools. Often these tools are not well designed and need frequent updates, they also have higher learning curve in case of transition.
-
-### Moving to Bazar
-To address this problem we did a unique experiment . We implemented Bazar Automation Model, where each and every member of the team contributes to automation irrespective of his/her role or designation. This solved our scalability problem because now we had equal number of hands of all the tasks. We also wanted to get away from custom tools created by Cathedral team so that we can reduce the learning curve.
-We needed a simple but powerful tool which members from all the background can use with least difficulty and learning curve, along with a diverse support for various automation streams. Robot Framework proved to be an excellent implementation partner for Bazar Automation Model. We implemented this model for entire department with a strength of 50+ members. In this talk we plan to share our success story of Bazar Automation Model using Robot Framework.
-
-Why Robot Framework
-==================
-When we started to plan the implementation of team model, biggest hurdle was time management. Different teams have different schedules and priorities. We needed a tool which has small learning curve and less turn-around time, yet it should be powerful enough to cater all diverse requirements for automation. We never wanted to use different tools for different automation areas, we always wanted to use a single tool to keep it simple. Robot Framework proved to have all the qualities we were looking for. Following is a summary of our experience with robot framework:
-
-Easy Syntaxes
-------------------
-Our team had a mix of people from different technical backgrounds. We had developers who never worked on python or robot framework before but we also had testers who had never worked on any kind of programming before. So robot framework's simple format of writing testcases and keyword was really helpful here. People did not at all feel that they need to learn anything new. People with no programming experience also did not feel any technical complexity. Writing testcases like English sentences was very convenient for everyone. Not just developers and testers, we also had management contribute to test automation in this model, all because of these easy syntaxes.
-
-
-Ready to use libraries for diverse areas
------------------------------------------------
-Our application has various areas which need diverse automation support, like API automation, UI automation, mobile automation, data processing etc. We were amazed to see support for all types of automation variations under one umbrella, with so many built-in and external libraries available out of the box. Readily available support for various execution and reporting needs was also highly commendable.
-
-Power of programming languages
-----------------------------------------
-With so simple syntaxes, robot framework has powerful support for writing any custom implementation for specific needs via creating a python library or a remote library in other languages. This was a really great feature for us, because we had multiple such areas where we had to customize and configure our interaction with various third party systems like cloud, messaging queues, sas application etc. Using the same feature we also built a powerful REST automation library for robot framework which we plan to make an opensource soon. Though not entire team contributed to library development, only few people worked on it based on their expertise, but entire team used the generic keywords from these libraries which made their job really easy and they were happy to see how so complex things were available to them as simple parameterized keywords.
-
-Strong Community Support
------------------------------------
-Our entire team was amazed to see such a widespread community actively supporting robot framework. Everyone from the team could easily find answer to their however complex/specific queries just by searching it on google. Team members also got excited by so many available means to connect to robot framework users through slack/google groups.
-
-Execution Specifics
-===============
-Its been around an year since we implemented team automation model. Though not related to robot framework, but we would like to share our execution specifics with everyone which helped us becomes successful with this model.
-
-### Agile Process
-We followed agile process where each team member contributed to test automation each sprint little by little. This really helped us to create a habit of automation rather than considering it as an extra effort. We followed all the agile processes like planning, story creations, scrums, demos, retrospection etc for automation development each sprint.
-
-### Continuous Feedback
-We ensured frequent (at least once a day) execution of all the automation which is contributed by each team member on daily basis to ensure the integrated version works fine and get an early feedback in case of any conflicts.
-
-### Share and Reuse
-We created a documentation server internally to store documentation of all the keywords contributed by various team members to ensure that nobody duplicates the effort. So we always ensured that we reuse what is shared wherever possible and share what everyone contributes.
-
-Output
-======
-Because of simple yet powerful features of robot framework our entire team could become productive with test automation within a sprint and we continued that journey so far for more than an year. As an output we have around 1000+ end-to-end large testcases automated by our entire team so far, which continue to execute daily and uphold our confidence about quality of our application. 
-Though we cannot quantitatively measure it, but a major output of Bazar model was also to instill a deep sense of ownership about quality of our application in each of the team member's mind, we don't consider this output less than the automation produced.",
+                  descriptionExpanded: "<p>Conventional team structures have cathedral style automation team which is separate from development/testing teams. With limited resources, automation team always feels like a bottleneck and cannot scale their automation velocity. Many places few testing team members also contribute to automation, but still it is not sufficient and scalable with a surge of features. We also had a cathedral style automation model for many years where a dedicated team with few members own the automation tasks. But over the years we realized the drawbacks of this model.</p><p>To address this problem we did a unique experiment. We implemented Bazar Automation Model, where each and every member of the team contributes to automation irrespective of his/her role or designation.</p><p>We also wanted to get away from custom tools created by Cathedral team so that we can reduce the learning curve. We needed a simple but powerful tool which members from all the background can use with least difficulty and learning curve, along with a diverse support for various automation streams. Robot Framework proved to be an excellent implementation partner for Bazar Automation Model.</p><p>Because of simple yet powerful features of robot framework our entire team could become productive with test automation within a sprint and we continued that journey so far for more than an year. As an output we have around 1000+ end-to-end large testcases automated by our entire team so far, which continue to execute daily and uphold our confidence about quality of our application.</p>",
                   bio: "<p>I am Deepak Chourasia, Principal Software Development Engineer In Test at SAS R&D, Pune, India. I have 13+ years of experience with automation development using various tools and technologies. I have worked with 10+ programming languages for various tasks and still continue to learn more. I have worked on design and development of many tools internally for various needs along with couple of automation frameworks developed from scratch.</p><p>Technology is my passion and Quality is my way to express it. I love to interact with like-minded people who are passionate towards technology.</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -367,9 +268,7 @@ Though we cannot quantitatively measure it, but a major output of Bazar model wa
                 { author: "Antti Karjalainen",
                   title: "Open-source stack for RPA",
                   description: "RPA is the fastest-growing area of Robot Framework adoption. To further enable this growth, we present an open-source stack for RPA based on Robot Framework that simplifies the work of a software robot developer.",
-                  descriptionExpanded: "<p>At Robocon 2020, the landscape in Robot Framework RPA was described as “a loosely coupled collection of projects, tools, methods, and ways of working.” A year later, we’ve seen fast growth in new projects around Robot Framework, especially its use in RPA. Importantly, we have developed a new standardized way of working for software robot developers that simplifies building RPA solutions with Robot Framework.</p><p>The design of the Open-Source Stack for RPA was driven by two goals:
-<ol><li>Simplify and streamline the RPA development process and provide a standard template for robots.</li>
-<li>Enable anyone to share and distribute robots seamlessly.</li></p><p>First, we set out to create a developer experience that would be easy and seamless. We wanted to let our developers write automation code without worrying about environment configuration and dependency management so that their experience would feel joyful rather than tedious. When a developer hits the “run” button in VS Code, everything should already be in place.</p><p>Second, we had a vision where you could easily create, ship, and Python-based automation code to target environments in real-time. The automation stack allows anyone to seamlessly share their robots and experiment with robots that have been built by others simply by writing a line on their terminal.</p><p>In this talk, we present the Open-Source Automation stack built on Robot Framework. It creates a unified way of developing robots that can be shared and re-used. With this work, we enable developers to focus on automating instead of configuring.</p>",
+                  descriptionExpanded: "<p>At Robocon 2020, the landscape in Robot Framework RPA was described as “a loosely coupled collection of projects, tools, methods, and ways of working.” A year later, we’ve seen fast growth in new projects around Robot Framework, especially its use in RPA. Importantly, we have developed a new standardized way of working for software robot developers that simplifies building RPA solutions with Robot Framework.</p><p>The design of the Open-Source Stack for RPA was driven by two goals:<ol><li>Simplify and streamline the RPA development process and provide a standard template for robots.</li><li>Enable anyone to share and distribute robots seamlessly.</li></p><p>First, we set out to create a developer experience that would be easy and seamless. We wanted to let our developers write automation code without worrying about environment configuration and dependency management so that their experience would feel joyful rather than tedious. When a developer hits the “run” button in VS Code, everything should already be in place.</p><p>Second, we had a vision where you could easily create, ship, and Python-based automation code to target environments in real-time. The automation stack allows anyone to seamlessly share their robots and experiment with robots that have been built by others simply by writing a line on their terminal.</p><p>In this talk, we present the Open-Source Automation stack built on Robot Framework. It creates a unified way of developing robots that can be shared and re-used. With this work, we enable developers to focus on automating instead of configuring.</p>",
                   bio: "Founder and CEO of Robocorp, a San Francisco and Helsinki based company that is set out to change the RPA market with open-source technologies. Member of the board at Robot Framework foundation since 2019.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -386,12 +285,8 @@ Though we cannot quantitatively measure it, but a major output of Bazar model wa
 
                 { author: "Fabio Zadrozny",
                   title: "RobotFramework Language Server",
-                  description: "Brief introduction to the language server protocol and debug adapter protocol, how they work and how the RobotFramework Language Server and Robocorp Code extensions can be used for RobotFramework development."
-                  descriptionExpanded: "The topics to be covered are:
-<ul><li>what's the language server protocol</li>
-<li>what's the debug adapter protocol</li>
-<li>an overview of the functionalities of the Robot Framework Language Server</li>
-<li>an overview of the functionalities for creating a Robot Framework project using Robocorp Code</li></ul>",
+                  description: "Brief introduction to the language server protocol and debug adapter protocol, how they work and how the RobotFramework Language Server and Robocorp Code extensions can be used for RobotFramework development.",
+                  descriptionExpanded: "<p>The topics to be covered are:<ul><li>what's the language server protocol</li><li>what's the debug adapter protocol</li><li>an overview of the functionalities of the Robot Framework Language Server</li><li>an overview of the functionalities for creating a Robot Framework project using Robocorp Code</li></ul></p>",
                   bio: "I'm currently the main developer for the RobotFramework Language Server, Robocorp Code, PyDev (Python plugin for Eclipse, also available as an extension for VSCode) and the PyDev Debugger (which is the debugger backend used in PyDev, PyCharm, Visual Studio and VSCode).",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -399,34 +294,8 @@ Though we cannot quantitatively measure it, but a major output of Bazar model wa
 
                 { author: "Markus Stahl",
                   title: "How to start with Open Source RPA",
-                  description: ""Make" or "Buy": Typical RPA requires an investment plan, so: BUY, because RPA is new. But is it? In this talk, I'd like to emphasize what is actually "new" in RPA and share my experience in starting RPA in a company with "only" what was available - and this MAKE approach fits everywhere.",
-                  descriptionExpanded: "# Content
-
-## RPA introduction
-
-## Compenents required for RPA
-1. Low level technology (programming language, interfaces)
-1. Orchestration
-1. Execution
-1. Peripheries: logging, reporting, monitoring
-1. Staff
-
-## Show Case: RPA at Deutsche Post Adress
-
-1. How we realized we already had all RPA components available
-
-## Learnings
-
-1. Cost comparison: MAKE vs. BUY
-1. Success factors
-
-## Practice
-
-1. How to apply learnings in your company
-
-## Conclusion
-
-What to make and what to buy",
+                  description: "'Make' or 'Buy': Typical RPA requires an investment plan, so: BUY, because RPA is new. But is it? In this talk, I'd like to emphasize what is actually 'new' in RPA and share my experience in starting RPA in a company with 'only' what was available - and this MAKE approach fits everywhere.",
+                  descriptionExpanded: "",
                   bio: "Markus has 10 years working experience as system administrator, java developer and lean management consultant. Since 2016 he's Automation Engineer for the quality assurance department at Deutsche Post Adress. His favorite tools are Robot Framework, Gitlab and Mattermost. Besides automation his favorite activities are gardening and entertaining his kids.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -443,31 +312,8 @@ What to make and what to buy",
 
                 { author: "esko.hannula@qentinel.com",
                   title: "Hyperautomation or hype-automation: the automation landscape of the future",
-                  description: "Software automation helped accelerate value delivery and reduce costly work. Now, it is, paradoxically, becoming an expensive bottle-neck itself.
-
-This presentation discusses the trends in hyper-automation and the drivers behind them, trying to pave the road to the future of software automation.",
-                  descriptionExpanded: "
-The humankind is increasingly dependent on their information systems and continuously innovating to create more value with software at an ever-accelerating pace. Applications of software automation, such as test automation and robotic process automation, are not just nerdy phenomena anymore. Software automation, or lack of it, affects cost of software, release pace, and software quality to the extent that can be seen also in the business performance. 
-
-What will the future of software automation landscape look like and how can the community can best serve the industry? Is hyperautomation something real or just hype?
-
-Phenomena, such as DevOps, API economy, open ecosystems, and Artificial Intelligence, have enabled accelerated innovation and value delivery. Now they are coming together in a way that is, again, likely to radically shape the software industry.  
-
-Can current software automation technologies and methods keep up with the pace? Majority of the software that enables digital business processes are still being tested manually or with rudimentary test automation. Meanwhile, robotic process automation is used to patch the wounds of digital business processes. Several forces are driving software automation to the next level.
-
-DevOps is still taking its baby steps. Frankly speaking, majority of DevOps teams are plain Dev, with minimal or non-existent Ops. There is some kind of ”enforced DevOps” bubbling under in the Corporate IT because the software teams that supply them are going DevOps and the ”project to product” thinking is gradually winning space. When large, heterogeneous corporate IT environments, that run big businesses and complex end-to-end business processes, adopt DevOps - or should I say OpsDev - things will look very different.
-
-Machine-learning is becoming commonplace in all kinds of applications. This means new and different challenges for testing and test automation. The whole discipline of testing is based on the concept of test oracle, i.e. being able to determine the expected result of a test in advance. The more AI there is in an application the less deterministic and repeatable its behavior is. Therefore, the process of testing is likely to evolve into a more stochastic direction.
-
-Applications of artificial intelligence in software automation, on the other hand, has opened completely new opportunities, where automation is not restricted to automated execution but software robots become capable of augmenting or replacing the human being in script design and analysis, for example. The route from manual to automated will extend towards autonomus.
-
-The more complex and fast-evolving software systems become the less there is time for human analysis and judgement. All kinds of automated process measurement and analysis, from design to production, will be necessary. Process mining will assist humans by providing insights, detecting anomalies, and predicting trends and events. Those events, in turn, may trigger robots to execute automated, such as re-testing a business process implememented by system A when changes were detected in the behavior of system B that A depends on through various APIs.
-
-The way we automate today is simply too slow. We need automation solutions that release human beings from most of the tasks they do today e.g. in test case design, debugging, and analysis. We also need technologies and business platforms where humans can collaborate and innovate at a much higher pace they do today. This means 1) cloud-based platforms that enable collaboration at ecosystem level; 2) cloud-based open and semi-open data warehouses that collect and supply data for machine-intelligence; 3)open source technologies and possibly other mechanisms for sharing and accelerating innovation; 4) commercial models that enable people and businesses to benefit from such collaborative effort.
-
-I believe this is how the future of hyper-automation looks like. The next mission of the software automation community to move the world from hype-automation to hyper-automation.
-",
-                  bio: "<p>Esko Hannula, CEO of Qentinel, is an experienced business leader with a long experience in software and service in general management, R&D and business development positions. Although Esko has never worked in full-time testing roles, software quality, testing, and automation have always been a part of his professional life. For the past many years he has served as the CEO of Qentinel, growing the company to one of the top few QA consultancies in Finland and recently re-shaping it into a SaaS business for test automation. Understanding and communicating the interdepency of software quality and business performance is Esko’s professional passion.</p><p>Esko is known for visionary and sometimes controversial ideas and many perceive him as an irritating besserwisser. In 2017, Esko published a book ”Three Skills of Advantage”, that explains his views on how quality creates value. In his spare time, Esko likes wandering around in the woods and developing his crazy ideas.</p>",
+                  description: "",
+                  descriptionExpanded: "Software automation helped accelerate value delivery and reduce costly work. Now, it is, paradoxically, becoming an expensive bottle-neck itself. This presentation discusses the trends in hyper-automation and the drivers behind them, trying to pave the road to the future of software automation.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -495,9 +341,9 @@ I believe this is how the future of hyper-automation looks like. The next missio
                 },
                 { author: "Juho Saarinen",
                   title: "Robot Framework after Jython",
-                  description: "Python 2 has been "dead" almost year now, and there's no really single "one way to fit all" path to continue usage of newer libraries and Robot Framework. At the talk I show some routes out from this issue to continue running of tests and RPA as part of Java application development lifecycle.",
-                  descriptionExpanded: "<p>Robot Framework test/RPA execution within Java application lifecycle has been easy, as libraries could have been handled with same mechanism as other dependencies for the project. When end of Python 2 was announced, it was quite clear that some changes are needed. There was a small hope to get some "Jython replacement", but that doesn't seem to be happening.</p><p>There are Java-Python possibilities like [GraalPython](https://github.com/graalvm/graalpython), [JPype](http://jpype.sourceforge.net/index.html) and [Py4J](https://www.py4j.org/), which approach the matter a bit different way than Jython did. Then there's Docker, which has entered to many development processes allowing to also utilize it easier way.</p><p>At the talk I walk through the options and possibilities, and demo how [MavenPlugin](https://github.com/robotframework/MavenPlugin) and [jrobotremoteserver](https://github.com/robotframework/jrobotremoteserver) help to smoothen the transition to time without Jython.</p>",
-                  bio: "Juho has been doing testing since 2005. He is interested of testing and it's efficiency, and eager to make all kind of testings as soon as possible. Juho maintains various java-based RF libraries. His "normal working day" to contain also application development and various operations related things in addition to testing.",
+                  description: "Python 2 has been \"dead\" almost year now, and there's no really single \"one way to fit all\" path to continue usage of newer libraries and Robot Framework. At the talk I show some routes out from this issue to continue running of tests and RPA as part of Java application development lifecycle.",
+                  descriptionExpanded: "<p>Robot Framework test/RPA execution within Java application lifecycle has been easy, as libraries could have been handled with same mechanism as other dependencies for the project. When end of Python 2 was announced, it was quite clear that some changes are needed. There was a small hope to get some \"Jython replacement\", but that doesn't seem to be happening.</p><p>There are Java-Python possibilities like <a href='https://github.com/graalvm/graalpython'>GraalPython</a>, <a href='http://jpype.sourceforge.net/index.html'>JPype</a> and <a href='https://www.py4j.org/'>Py4J</a>, which approach the matter a bit different way than Jython did. Then there's Docker, which has entered to many development processes allowing to also utilize it easier way.</p><p>At the talk I walk through the options and possibilities, and demo how <a href='https://github.com/robotframework/MavenPlugin'>MavenPlugin</a> and <a href='https://github.com/robotframework/jrobotremoteserver'>jrobotremoteserver</a>help to smoothen the transition to time without Jython.</p>",
+                  bio: "Juho has been doing testing since 2005. He is interested of testing and it's efficiency, and eager to make all kind of testings as soon as possible. Juho maintains various java-based RF libraries. His \"normal working day\" to contain also application development and various operations related things in addition to testing.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -515,8 +361,7 @@ I believe this is how the future of hyper-automation looks like. The next missio
                   title: "PythonLibCore the secret behind SeleniumLibrary",
                   description: "PythonLibCore is the secret behind SeleniumLibrary which eases the implementation of the Robot Framework dynamic library API. PythonLibCore made possible of SeleniumLibrary Plugin API and many other things in the library. This live coding session reveals how PythonLibraryCore can be used.",
                   descriptionExpanded: "The PythonLibCore is behind many libraries, like SeleniumLibrary and Browser library. The purpose of the PythonLibCore is the help the libraries to use the Robot Framework dynamic library API. This live coding demonstrates how PythonLibCore can be used, what kind of benefits it offers by using small custom library build on the stage. It also shows what benefits bigger libraries have gained by using PythonLibCore.",
-                  bio: "<p>Tatu Aalto is the current lead developer of the <a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a>and is participating in <a href='https://github.com/MarketSquare/robotframework-browser'>Browser library</a>as one of the core team members. Tatu has been working with Robot Framework since 2011. In the 2011 he was a regular user, by sending many questions and problems to the community. After some time Tatu started to answer questions  send by other users and he did provide his very first pull request to the Robot Framework core in 2012. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer.</p><p>
-Tatu has used the Robot Framework in several work places to to guide and aid companies in their test automation efforts. Currently he is working in F-Secure as a Senior Software Developer In Test, automating windows antivirus client for business users.</p>",
+                  bio: "<p>Tatu Aalto is the current lead developer of the <a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a>and is participating in <a href='https://github.com/MarketSquare/robotframework-browser'>Browser library</a>as one of the core team members. Tatu has been working with Robot Framework since 2011. In the 2011 he was a regular user, by sending many questions and problems to the community. After some time Tatu started to answer questions  send by other users and he did provide his very first pull request to the Robot Framework core in 2012. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer.</p><p>Tatu has used the Robot Framework in several work places to to guide and aid companies in their test automation efforts. Currently he is working in F-Secure as a Senior Software Developer In Test, automating windows antivirus client for business users.</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -550,7 +395,7 @@ Tatu has used the Robot Framework in several work places to to guide and aid com
 
                 { author: "Raphael Roems",
                   title: "Backend Testing using Robot Framework and SoapUI",
-                  description: "Backend testing, which involved data processing, was initiated from a website frontend. Goal was to reuse existing SoapUI opensource webservice tests to replace the frontend requests, integrating with Robot Framework for test orchestration and parallel testing aspects, to reduce test execution time."
+                  description: "Backend testing, which involved data processing, was initiated from a website frontend. Goal was to reuse existing SoapUI opensource webservice tests to replace the frontend requests, integrating with Robot Framework for test orchestration and parallel testing aspects, to reduce test execution time.",
                   descriptionExpanded: "",
                   bio: "",
                   imgUrl: 'rf-icon-500-White.png'
@@ -559,7 +404,7 @@ Tatu has used the Robot Framework in several work places to to guide and aid com
 
                 { author: "Markus Stahl",
                   title: "robotframework-camunda library: Orchestrating robotic tasks with Camunda",
-                  description: "Robot Framework is our favourite tool for automating tasks. Naturally, it requires an orchestrator for triggering executions. Camunda orchestrates process flows and makes processes also visible. With "robotframework-camunda" library you can integrate 2 of the greatest open source projects existing.",
+                  description: "Robot Framework is our favourite tool for automating tasks. Naturally, it requires an orchestrator for triggering executions. Camunda orchestrates process flows and makes processes also visible. With \"robotframework-camunda\" library you can integrate 2 of the greatest open source projects existing.",
                   descriptionExpanded: "",
                   bio: "Markus has 10 years working experience as system administrator, java developer and lean management consultant. Since 2016 he's Automation Engineer for the quality assurance department at Deutsche Post Adress. His favorite tools are Robot Framework, Camunda and Gitlab. Besides automation his favorite activities are gardening and entertaining his kids.",
                   imgUrl: 'rf-icon-500-White.png'
@@ -635,7 +480,7 @@ Tatu has used the Robot Framework in several work places to to guide and aid com
               twitter: false,
               header: "Workshops",
               text: '<p>TBA!</a>',
-              talks: [
+            /*  talks: [
                 { type: "workshop", header: 'Half-day workshops' },
 
                 {
@@ -848,7 +693,7 @@ Any special needs should be requested through the conference organizers, at best
                   imgUrl: 'rf-icon-500-White.png'
                 }
 
-
+		*/
               /*  { type: "workshop", author: "Elias Hachichou, Kristina Sabotic",
                   title: "End-to-end testing through multiple interfaces",
                   description: "13:00-16:00<br>Welcome to this fun group exercise in how to build end-to-end test flows that can cover any type of interface for multiple applications in the same script. It will be a bonanza in problem solving, trying new libraries, exploring new ways of working – and music!",
