@@ -216,6 +216,13 @@ h1.main-header {
   transform: rotate(90deg);
 }
 
+.type-body {
+  font-size: 1rem;
+}
+.type-small {
+  font-size: 0.8rem;
+}
+
 .button-primary {
   border: solid 1px #01ffd9;
   color: #01ffd9;

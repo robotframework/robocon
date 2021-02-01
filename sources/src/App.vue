@@ -154,7 +154,6 @@ export default {
             text: {
               twitter: false,
               header: "Conference Program",
-              text: "<p>More will be announced soon!</p>",
               talks: [
                 { author: "Pekka Klärck",
                   title: "Where's Robot Framework in 2021",
