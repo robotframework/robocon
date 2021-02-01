@@ -169,7 +169,7 @@ export default {
                 { author: "Mateusz Nojek",
                   title: "How to avoid jail for nasty code?",
                   description: "In Roboland, an ugly code is a crime. It makes people sad, creates bugs, is slower to read and harder to understand. Nobody wants to go to jail, especially unintentionally. Fortunately, there are heroes who can protect innocent citizens from this threat - their names are Robocop and Robotidy.",
-                  descriptionExpanded: "In Roboland, an ugly code is a crime. It makes people sad, creates bugs, is slower to read and harder to understand. Nobody wants to go to jail, especially unintentionally. Fortunately, there are heroes who can protect innocent citizens from this threat - their names are Robocop and Robotidy. The talk is concentrated around concept of writing a clean, beautiful and easy to read code in Robot Framework. During the presentation we will present 2 new tools that can help developers and testers to easily write, maintain and refactor the code. Both tools are configurable which makes them perfect for use in projects where coding guidelines are present but also for the ones where they are going to be established. Robocop and Robotidy are the heroes nobody asked for but everyone needed.",
+                  descriptionExpanded: "This talk is concentrated around concept of writing a clean, beautiful and easy to read code in Robot Framework. During the presentation we will present 2 new tools that can help developers and testers to easily write, maintain and refactor the code. Both tools are configurable which makes them perfect for use in projects where coding guidelines are present but also for the ones where they are going to be established. Robocop and Robotidy are the heroes nobody asked for but everyone needed.",
                   bio: "Coming soon ..",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -177,65 +177,9 @@ export default {
 
                 { author: "Many Kasiriha",
                   title: "Print is (not) dead – Visual Document Testing using Robot Framework",
-                  description: "Document Testing in the digital age - is that really a thing? Yes, it is. Because paperless does not mean documentless.
-Let me show you how we test our documents and printer files visually and by their content - using Robot Framework and our own Visual Document Testing Library.",
-                  descriptionExpanded: "## Why we test our documents
-
-Companies rely on correct documents. For us as a global freight forwarder, correct documents are essential. A silly mistake in a document could be awkward – but it might also have legal consequences. Documents in freight forwarding can transfer the ownership of goods from party A to party B. They confirm if cargo has properly been x-rayed for security purposes. They might be barcode labels to identify a package.
-
-## Let's automate it
-
-When a major upgrade of our Output & Document Management System was planned, we had to ensure that our documents look the same as before the upgrade. Given the high number of document types, formats, variants, and rules per documents, we quickly realized that we cannot do that manually.
-So, the question was: Buy or build? Due to the high cost and feature overkill of commercial solutions and our good experience with Robot Framework we decided to build a library for Visual Document Tests. Visual Tests mean: The test document is rendered and compared pixelwise to a reference document. However, we realized that this is not enough.
-
-### We want more
-
-We wanted to have reports with screenshots highlighting the different areas. We wanted to ignore areas from the comparison based on coordinates or text patterns. We wanted to read barcodes. We wanted to define acceptable ranges for moved text blocks. We wanted to compare text content from a PDF or via OCR. We wanted to check additional data like digital signatures. We wanted to interpret and compare printer files like postscript and pcl. We wanted to have a simple GUI to evaluate the test results.
-
-### The Library
-
-The result was a Robot Framework Library purely based on open source components offering features which can only be found in expensive commercial solutions. 
-
-#### Visual Testing Library
-* Filetypes: PDF, PCL, Postscript
-* Visual (pixel wise) comparison of outputs
-* Definition of masks to ignore areas
-   * Based on coordinates
-   * Based on regular expressions (text patterns)
-      * Via OCR and Text Value (only PDF)
-* Reading barcode content
-* Ignore barcode from visual comparison
-* Compare text value for moved text blocks
-* Allow moved text blocks within a defined range
-* Test Report highlighting changes areas
-    * Separate view of reference/candidate output
-    * Merged view of reference/candidate output
-* GUI to support easy result evaluation
-
-#### Printer File Testing Library
-* Filetypes: PCL, Postscript
-* Properties for comparison
-   * PCL
-      * Paper Source, Copies, Duplex, Page Orientation, Paper Format
-   * Postscript
-      * Comments, Pages, Features, Setup, Header, Trailer, PJL Commands
-* Comparison of Reference/Candidate File
-* Check properties of single file (without Reference File)
-
-It’s fascinating what you can do when combining OpenCV, scikit-image, Tesseract OCR, pdfminer, ghostscript, Image Magick and Robot Framework. 
-Let’s have a look together at the capabilities of the library and how to use it.
-",
-                  bio: "My name is Many and I work as a Test Manager at Schenker AG (in Germany/Essen) in the Technology Solution Center.
-
-Even though I like all aspects of testing - somehow I ended up focusing on the implentation of Test Automation Solutions in different projects.
-I love my field of work, as the technology around me is changing constantly. And there's always something new to learn.
-I did my first Kubernetes Deployment recently, and I felt like a little boy starting his C64 for the first time.
-
-Before I was a father, I liked to play a lot of computer games and played the guitar. 
-But currently my Steam Library is just growing and the guitar is catching dust.
-On vacations I like to go hiking and just enjoy nature (and a cold beer).
-
-Beside that, I (still) like Star Wars and always correct people who say that it is Science Fiction (as it is clearly Science Fantasy).",
+                  description: "Document Testing in the digital age - is that really a thing? Yes, it is. Because paperless does not mean documentless. Let me show you how we test our documents and printer files visually and by their content - using Robot Framework and our own Visual Document Testing Library.",
+                  descriptionExpanded: "<p>Companies rely on correct documents. For us as a global freight forwarder, correct documents are essential. A silly mistake in a document could be awkward – but it might also have legal consequences. Documents in freight forwarding can transfer the ownership of goods from party A to party B. They confirm if cargo has properly been x-rayed for security purposes. They might be barcode labels to identify a package.</p><p>When a major upgrade of our Output & Document Management System was planned, we had to ensure that our documents look the same as before the upgrade. Given the high number of document types, formats, variants, and rules per documents, we quickly realized that we cannot do that manually.</p><p>So, the question was: Buy or build? Due to the high cost and feature overkill of commercial solutions and our good experience with Robot Framework we decided to build a library for Visual Document Tests. Visual Tests mean: The test document is rendered and compared pixelwise to a reference document. However, we realized that this is not enough.</p><p>We wanted to have reports with screenshots highlighting the different areas. We wanted to ignore areas from the comparison based on coordinates or text patterns. We wanted to read barcodes. We wanted to define acceptable ranges for moved text blocks. We wanted to compare text content from a PDF or via OCR. We wanted to check additional data like digital signatures. We wanted to interpret and compare printer files like postscript and pcl. We wanted to have a simple GUI to evaluate the test results. The result was a Robot Framework Library purely based on open source components offering features which can only be found in expensive commercial solutions.</p>",
+                  bio: "<p>My name is Many and I work as a Test Manager at Schenker AG (in Germany/Essen) in the Technology Solution Center. Even though I like all aspects of testing - somehow I ended up focusing on the implentation of Test Automation Solutions in different projects. I love my field of work, as the technology around me is changing constantly. And there's always something new to learn. I did my first Kubernetes Deployment recently, and I felt like a little boy starting his C64 for the first time.</p><p>Before I was a father, I liked to play a lot of computer games and played the guitar. But currently my Steam Library is just growing and the guitar is catching dust. On vacations I like to go hiking and just enjoy nature (and a cold beer). Beside that, I (still) like Star Wars and always correct people who say that it is Science Fiction (as it is clearly Science Fantasy).</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -294,18 +238,13 @@ See https://robotframework-browser.org/ for rendered version.
                 { author: "Diogo Rede",
                   title: "E-commerce web automation at scale",
                   description: "Imagine developing 5, 10, 15+ e-commerce websites, all with responsive web design and constant evolution. Do you hire 15+ testers or do you call Robot Framework to the rescue? Leveraging Robot Framework advanced features enables easily testing similar websites using a generic set of tests.",
-                  descriptionExpanded: "In an e-commerce oriented business where reusability and quick delivery is key, test automation is crucial to reduce release time. 
-E-commerce websites usually follow similar patterns regarding usability and navigation flows, so it is fair to assume that testing different websites will be very similar. Given this assumption, having a common test suite is feasible and so is automating it.
-
-In order to make this possible, you can resorted to several Robot Framework features, create custom libraries, listeners and pre-run modifiers to take advantage of its full potential and unlock the support needed for your automation requirements.
-
-In this talk I will reveal some aspects of a selenium generic tests projects and give some hints about the implementation of:
-- Reusable libraries (python keywords and robot test suites)
-- Keyword and variable overrides
-- Resolution selection (desktop/tablet/mobile)
-- Custom Selenium keywords for higher resilience
-- Test execution profile mechanism
-- Screenshot comparison",
+                  descriptionExpanded: "<pI>n an e-commerce oriented business where reusability and quick delivery is key, test automation is crucial to reduce release time. E-commerce websites usually follow similar patterns regarding usability and navigation flows, so it is fair to assume that testing different websites will be very similar. Given this assumption, having a common test suite is feasible and so is automating it.In order to make this possible, you can resorted to several Robot Framework features, create custom libraries, listeners and pre-run modifiers to take advantage of its full potential and unlock the support needed for your automation requirements.</p><p>In this talk I will reveal some aspects of a selenium generic tests projects and give some hints about the implementation of:
+<ul><li>Reusable libraries (python keywords and robot test suites)</li>
+<li>Keyword and variable overrides</li>
+<li>Resolution selection (desktop/tablet/mobile)</li>
+<li>Custom Selenium keywords for higher resilience</li>
+<li>Test execution profile mechanism</li>
+<li>Screenshot comparison</li></ul></p>",
                   bio: "With over 5 years of experience in test automation, 4 of which using Robot Framework, I have worked in multiple projects automating tests for web applications, mobile applications, REST APIs and other backend services. Having started off my career as a pure manual tester with very little programming experience, my lazy side figured it was easier to learn how to code and automate my daily tasks, which eventually brought me to the position I assume today as a test automation team lead at Farfetch.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -314,7 +253,7 @@ In this talk I will reveal some aspects of a selenium generic tests projects and
                 { author: "Maciej Wiczk",
                   title: "RfHub2 - new take on RobotFramework asset documentation",
                   description: "The team is using RobotFramework with ease, but over the time, they found out they are reinventing solutions previously made. How to prevent that and focus on what You actually need to develop? To organize themselves, there is a need for interactive documentation. And RfHub2 is the tool they need.",
-                  descriptionExpanded: "This talk is going to present [RfHub2](https://github.com/pbylicki/rfhub2), a new take on solving a problem of collecting documentation and sharing it. Session will start with story that made us create RfHub2, followed by, short, technologies overview. Talk will end with an application demo, showing how to start it and use it.",
+                  descriptionExpanded: "This talk is going to present <a href="https://github.com/pbylicki/rfhub2">RfHub2</a>, a new take on solving a problem of collecting documentation and sharing it. Session will start with story that made us create RfHub2, followed by, short, technologies overview. Talk will end with an application demo, showing how to start it and use it.",
                   bio: "Software developer during work, cyclist after hours. Currently working as Senior Software Developer in Big Data department in Nordea Bank in Gdańsk, Poland. Python, RobotFramework and SQL enthusiast.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -324,18 +263,11 @@ In this talk I will reveal some aspects of a selenium generic tests projects and
                   title: "What's new in RequestsLibrary 0.9",
                   description: "After discussing a lot at RoboCon 2020, collecting feedback from RobotFramework community and with the help of the Italian RobotFramework Meetup, a new RequestsLibrary version is born.
 In 5 minutes you'll get updated to all changes.",
-                  descriptionExpanded: "What guided the development.
-What is the new keyword structure with session an session-less.
-How the implicit assert mechanism on status works.
-Best practices with nested keywords.",
-                  bio: "https://www.linkedin.com/in/lucagiovenzana/
-
-I'm an Open Source and Linux passionate guy.
-I worked for 9 years in a security company www.endian.com that build up from scratch an Open Source Linux distribution. 
-At Endian I discovered RobotFramework but never used since we already have created our own testing framework in python, based on unittest and around fabric library to remotely control via ssh our firewalls.
-2 years ago I moved to a shining streaming company www.chili.com where I made up a 7 people QA team and initiated the company to test automation with RobotFramework.
-The whole team enjoyed RF, me and Angelo attended the 2019 RoboCon edition. Back in Italy we started contributing and founded RobotFramework Italy/Milan Meetup.
-I'm now an active contributor to RequestsLibrary and I'm very excited about it!",
+                  descriptionExpanded: "<ul><li>What guided the development.
+<li>What is the new keyword structure with session an session-less.</li>
+<li>How the implicit assert mechanism on status works.</li>
+<li>Best practices with nested keywords.</li></ul>",
+                  bio: "I'm an Open Source and Linux passionate guy. I worked for 9 years in a security company www.endian.com that build up from scratch an Open Source Linux distribution. At Endian I discovered RobotFramework but never used since we already have created our own testing framework in python, based on unittest and around fabric library to remotely control via ssh our firewalls. 2 years ago I moved to a shining streaming company www.chili.com where I made up a 7 people QA team and initiated the company to test automation with RobotFramework. The whole team enjoyed RF, me and Angelo attended the 2019 RoboCon edition. Back in Italy we started contributing and founded RobotFramework Italy/Milan Meetup. I'm now an active contributor to RequestsLibrary and I'm very excited about it!",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -344,26 +276,16 @@ I'm now an active contributor to RequestsLibrary and I'm very excited about it!"
                   title: "The journey of building test automation platform in the bank",
                   description: "From custom web tool for data preparation,  through test automation pipelines to in-house mobile devices farm. Every part of our platform is perfect proof that open-source tools including Robot Framework can be really powerful and useable also in an organization such as the biggest bank in Slovakia.",
                   descriptionExpanded: "At the beginning there was an idea to get rid of routine, repetitive work. From automation of the first test cases on local computers to fully integrated test automation platform used by dozens of users. It includes scheduled pipelines, data preparation web tool, in-house mobile devices farm and other components. For successful implementation of the test platform in the bank with various types of applications it was crucial to find a tool that can automate everything. We have found it in Robot Framework.",
-                  bio: "Experienced Test & RPA Developer with economy background. Passionate web developer. 
-
-As a co-creator of test automation platform in the bank I have been in touch with technologies like Robot Framework, Jenkins and so on. The mentioned tech stack and collaboration on DevOps project has also been a perfect start point for my successful implementation of RPA solution in the same business.
-
-I believe that routine, repetitive tasks should be automated, best with an open-source stack.",
+                  bio: "Experienced Test & RPA Developer with economy background. Passionate web developer. As a co-creator of test automation platform in the bank I have been in touch with technologies like Robot Framework, Jenkins and so on. The mentioned tech stack and collaboration on DevOps project has also been a perfect start point for my successful implementation of RPA solution in the same business. I believe that routine, repetitive tasks should be automated, best with an open-source stack.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
 
                 { author: "Simon Meggle",
                   title: "RobotMK: Testing meets Monitoring",
-                  description: "You are running applications? 
-You are monitoring IT infrastructure? 
-You are perhaps overlooking something!",
-                  descriptionExpanded: "**RobotMK** is a tool to enrich the Open Source IT infrastructure monitoring solution **CheckMK** with RobotFramework application tests.
-With RobotMK, it is very easy to monitor the overall state as well as the runtimes of suites, tests and keywords with the same monitoring tool as you use for IT infrastructure monitoring (CheckMK). Get notified whenever runtimes go over their allowed threshold and get graphs about the insidious development of step runtimes in the past. 
-I'll give a technical overview of CheckMK and RobotMK and show how we migrate the End2End monitoring landscape of a big government application landscape to Robot Framework and RobotMK.",
-                  bio: "Simon Meggle works as an independent IT consultant close to Munich and is the founder of ELABIT.
-His focal points are IT infrastructure monitoring, Datacenter automation, End2End testing. 
-He is the author and maintainer of RobotMK, a **Robot Framework integration** for **Checkmk**, written in Python. ",
+                  description: "You are running applications? You are monitoring IT infrastructure? You are perhaps overlooking something!",
+                  descriptionExpanded: "<p><b>RobotMK</b> is a tool to enrich the Open Source IT infrastructure monitoring solution **CheckMK** with RobotFramework application tests.</p><p>With RobotMK, it is very easy to monitor the overall state as well as the runtimes of suites, tests and keywords with the same monitoring tool as you use for IT infrastructure monitoring (CheckMK). Get notified whenever runtimes go over their allowed threshold and get graphs about the insidious development of step runtimes in the past.</p><p>I'll give a technical overview of CheckMK and RobotMK and show how we migrate the End2End monitoring landscape of a big government application landscape to Robot Framework and RobotMK.</p>",
+                  bio: "Simon Meggle works as an independent IT consultant close to Munich and is the founder of ELABIT. His focal points are IT infrastructure monitoring, Datacenter automation, End2End testing. He is the author and maintainer of RobotMK, a <b>Robot Framework integration</b> for <b>Checkmk</b>, written in Python.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -371,19 +293,8 @@ He is the author and maintainer of RobotMK, a **Robot Framework integration** fo
                 { author: "Tuomas Pitkänen",
                   title: "Robot makes music",
                   description: "Does your robot compose music? RPA can be used to automate and increase productivity of any home studio artist. Roboducer helps by quickly creating drafts of composes and inserting them to sequencer for editing process, or it can search Spotify for relevant playlists for pitching purposes.",
-                  descriptionExpanded: "When thinking about music, robots are not the first thing to think about! Still, producing music requires real work and a production pipeline. It's not all just playing and composing. In this talk Tuomas Pitkänen goes through his own music production pipeline and how robots help him in turning up productivity in a creative process.
-
-A robot, named Roboducer, is used to automate production process. In the beginning it creates demo tracks. Producer can order multiple demos at a time, stating wanted genre, instruments to use and so on. Roboducer produces demos with midi library and delivers demos for review. After review, producer can select accepted demos for further processing. Roboducer will then insert selected demos to a sequencer software where editing, adding human touch and post processing will happen.
- 
-Finished tracks can then be automatically uploaded to a vendor portal, or Roboducer can search Spotify playlists suitable for pitching. Spotify lists can be searched based on similarity of other tracks in lists. This is a task that has been largely manual work earlier or limited only to already known lists.",
-                  bio: "
-Tuomas Pitkänen has a long history in music business and past 7 years he has worked as a Sounds of Red Bull -artist through Posthouse Tuomi, composing over 100 tracks for Red Bull Media House. Tuomas is co-founder of Posthouse Tuomi which is two person independent music producer studio. 
-Tuomas has helped several Finnish trade union processes during corona pandemic spring to keep unemployment benefit application handling in time. Tuomas is influenced by metal music but enjoys also python libraries. Tuomas got passion for robotic process automation when he worked in game industry at Veikkaus Oy. 
-
-Now Tuomas is working as a software robot developer at Rewake Oy and developing state of the art robotic process automation for multiple industries including but not limited to accounting, human resources, trade unions, real estate management.
-
-Tuomas is looking forward to take RPA to next level with machine learning and AI. 
- ",
+                  descriptionExpanded: "<p>When thinking about music, robots are not the first thing to think about! Still, producing music requires real work and a production pipeline. It's not all just playing and composing. In this talk Tuomas Pitkänen goes through his own music production pipeline and how robots help him in turning up productivity in a creative process.</p><p>A robot, named Roboducer, is used to automate production process. In the beginning it creates demo tracks. Producer can order multiple demos at a time, stating wanted genre, instruments to use and so on. Roboducer produces demos with midi library and delivers demos for review. After review, producer can select accepted demos for further processing. Roboducer will then insert selected demos to a sequencer software where editing, adding human touch and post processing will happen.</p><p>Finished tracks can then be automatically uploaded to a vendor portal, or Roboducer can search Spotify playlists suitable for pitching. Spotify lists can be searched based on similarity of other tracks in lists. This is a task that has been largely manual work earlier or limited only to already known lists.</p>",
+                  bio: "<p>Tuomas Pitkänen has a long history in music business and past 7 years he has worked as a Sounds of Red Bull -artist through Posthouse Tuomi, composing over 100 tracks for Red Bull Media House. Tuomas is co-founder of Posthouse Tuomi which is two person independent music producer studio.</p><p>Tuomas has helped several Finnish trade union processes during corona pandemic spring to keep unemployment benefit application handling in time. Tuomas is influenced by metal music but enjoys also python libraries. Tuomas got passion for robotic process automation when he worked in game industry at Veikkaus Oy.</p><p>Now Tuomas is working as a software robot developer at Rewake Oy and developing state of the art robotic process automation for multiple industries including but not limited to accounting, human resources, trade unions, real estate management.</p><p>Tuomas is looking forward to take RPA to next level with machine learning and AI.</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
