@@ -481,21 +481,23 @@ I believe this is how the future of hyper-automation looks like. The next missio
                 },
 
 
+                { author: "Elisabeth Hendrickson",
+                  title: "Robot Framework Through the Lens of History",
+                  descriptionExpanded: "Two decades ago, software development looked very different than it does today. Supposed “best practices” involved document-heavy processes that divided work into phases with testing at the end and performed by a separate QA function that did supposedly “independent” verification and validation. The most commonly used test automation tools of the day were from commercial vendors who mostly sold to executives on the promise of making test automation “easy” through record and playback. This was desirable because the QA group was often so removed from the development effort that they had no access to the source code, and often did not have coding skills. So vendors sold supposedly magic solutions that generally turned out to be hugely expensive with very little return. The frustration, pain, and failures stemming from heavyweight phased software development processes gave rise to Agile. At the same time the frustration and pain stemming from specialized test automation tools that often didn’t play nicely with source control gave rise to a new generation of open source test automation tools. The short lived Agile Alliance program, “AAFTT” became for a very brief time in history a gathering place for people working on this new generation of tools, of which Robot Framework is one. In this talk, we’ll look at the history of test automation tools and why Robot Framework was -- and is -- so successful.",
+                  bio: "Elisabeth Hendrickson is an experienced software developer, tester, leader, and executive. She has a track record of creating high functioning organizations and growing strong leadership teams. She co-founded the AAFTT program (with Jennitta Andrea), served on the Agile Alliance board of directors, and received the Agile Alliance's Gordon Pask award in 2010. She is the author of Explore It! from Pragmatic Books. You can find her on Twitter as <a href='https://twitter.com/testobsessed'>@testobsessed</a>",
+                  imgUrl: 'elisabeth.jpg'
+                },
+                { author: "Gojko Adzic",
+                  title: "You're testing WHAT?",
+                  descriptionExpanded: "Gojko presents five universal rules for test automation, that will help you bring continuous integration and testing to the darkest corners of your system. Learn how to wrestle large test suites into something easy to understand, maintain and evolve, at the same time increasing the value from your automated tests. See how to bring aspects that people don't even consider automating, such as layout checks and even video into an automated continuously integrated process.",
+                  bio: "Gojko Adzic is a partner at Neuri Consulting LLP. He one of the 2019 AWS Serverless Heroes, the winner of the 2016 European Software Testing Outstanding Achievement Award, and the 2011 Most Influential Agile Testing Professional Award. Gojko’s book Specification by Example won the Jolt Award for the best book of 2012, and his <a href='https://gojko.net/posts.html'>blog</a> won the UK Agile Award for the best online publication in 2010.",
+                  imgUrl: 'gojko.jpg'
+                },
                 { author: "Juho Saarinen",
                   title: "Robot Framework after Jython",
                   description: "Python 2 has been "dead" almost year now, and there's no really single "one way to fit all" path to continue usage of newer libraries and Robot Framework. At the talk I show some routes out from this issue to continue running of tests and RPA as part of Java application development lifecycle.",
-                  descriptionExpanded: "Robot Framework test/RPA execution within Java application lifecycle has been easy, as libraries could have been handled with same mechanism as other dependencies for the project.
-
-When end of Python 2 was announced, it was quite clear that some changes are needed. There was a small hope to get some "Jython replacement", but that doesn't seem to be happening (or if it does before the talk, it's taken in).
-
-There are Java-Python possibilities like [GraalPython](https://github.com/graalvm/graalpython), [JPype](http://jpype.sourceforge.net/index.html) and [Py4J](https://www.py4j.org/), which approach the matter a bit different way than Jython did. Then there's Docker, which has entered to many development processes allowing to also utilize it easier way.
-
-At the talk I walk through the options and possibilities, and demo how [MavenPlugin](https://github.com/robotframework/MavenPlugin) and [jrobotremoteserver](https://github.com/robotframework/jrobotremoteserver) help to smoothen the transition to time without Jython.",
-                  bio: "Juho has been doing testing since 2005. He is interested of testing and it's efficiency, and eager to make all kind of testings as soon as possible.
-
-Juho maintains various java-based RF libraries.
-
-His "normal working day" to contain also application development and various operations related things in addition to testing.",
+                  descriptionExpanded: "<p>Robot Framework test/RPA execution within Java application lifecycle has been easy, as libraries could have been handled with same mechanism as other dependencies for the project. When end of Python 2 was announced, it was quite clear that some changes are needed. There was a small hope to get some "Jython replacement", but that doesn't seem to be happening.</p><p>There are Java-Python possibilities like [GraalPython](https://github.com/graalvm/graalpython), [JPype](http://jpype.sourceforge.net/index.html) and [Py4J](https://www.py4j.org/), which approach the matter a bit different way than Jython did. Then there's Docker, which has entered to many development processes allowing to also utilize it easier way.</p><p>At the talk I walk through the options and possibilities, and demo how [MavenPlugin](https://github.com/robotframework/MavenPlugin) and [jrobotremoteserver](https://github.com/robotframework/jrobotremoteserver) help to smoothen the transition to time without Jython.</p>",
+                  bio: "Juho has been doing testing since 2005. He is interested of testing and it's efficiency, and eager to make all kind of testings as soon as possible. Juho maintains various java-based RF libraries. His "normal working day" to contain also application development and various operations related things in addition to testing.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
@@ -513,59 +515,16 @@ His "normal working day" to contain also application development and various ope
                   title: "PythonLibCore the secret behind SeleniumLibrary",
                   description: "PythonLibCore is the secret behind SeleniumLibrary which eases the implementation of the Robot Framework dynamic library API. PythonLibCore made possible of SeleniumLibrary Plugin API and many other things in the library. This live coding session reveals how PythonLibraryCore can be used.",
                   descriptionExpanded: "The PythonLibCore is behind many libraries, like SeleniumLibrary and Browser library. The purpose of the PythonLibCore is the help the libraries to use the Robot Framework dynamic library API. This live coding demonstrates how PythonLibCore can be used, what kind of benefits it offers by using small custom library build on the stage. It also shows what benefits bigger libraries have gained by using PythonLibCore.",
-                  bio: "Tatu Aalto is the current lead developer of the [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary) and is participating in [Browser library](https://github.com/MarketSquare/robotframework-browser) as one of the core team members. Tatu has been working with Robot Framework since 2011. In the 2011 he was a regular user, by sending many questions and problems to the community. After some time Tatu started to answer questions  send by other users and he did provide his very first pull request to the Robot Framework core in 2012. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer. 
-
-Tatu has used the Robot Framework in several work places to to guide and aid companies in their test automation efforts. Currently he is working in F-Secure as a Senior Software Developer In Test, automating windows antivirus client for business users.",
+                  bio: "<p>Tatu Aalto is the current lead developer of the <a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a>and is participating in <a href='https://github.com/MarketSquare/robotframework-browser'>Browser library</a>as one of the core team members. Tatu has been working with Robot Framework since 2011. In the 2011 he was a regular user, by sending many questions and problems to the community. After some time Tatu started to answer questions  send by other users and he did provide his very first pull request to the Robot Framework core in 2012. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer.</p><p>
+Tatu has used the Robot Framework in several work places to to guide and aid companies in their test automation efforts. Currently he is working in F-Secure as a Senior Software Developer In Test, automating windows antivirus client for business users.</p>",
                   imgUrl: 'rf-icon-500-White.png'
                 },
 
 
                 { author: "Kerkko Pelttari",
                   title: "RobotFramework Browser library",
-                  description: "Bringing RF browser automation to year 2021. We'll cover why Browser was created, why it's being adopted and why you should adopt it. And what makes it cool.",
-                  descriptionExpanded: "Robot Framework deserves a browser automation solution that's designed for the 2020s.
-
-Browser library powered by Playwright provides.
-
-🚀 Speed, ✅ reliability and 🔬 visibility.
-
-    Conscise assertions.
-    Precise and fast browser window and tab control.
-    Chainable selector strategies.
-    Good shadow DOM support.
-    Easy mobile device descriptors.
-    Sending HTTP requests.
-
-See keyword documentation and our project on Github.
-
-🚀SPEED
-
-Robot Framework Browser is fast! With its direct API to the browsers, designed for high performance testing, fast feedback is now only limited by the speed of the test object.
-
-With its innovative Context concept, a clean browser session is started within a less than 10 milliseconds!
-
-Learn more about Browser/Contexts/Pages.
-Browser library is designed to run headless first and brings a ready-to-test docker image to scale your test environments with your needs.
-
-✅RELIABILITY
-
-Wait Until ... and Sleep keywords belong to the past.
-
-The browser library automatically waits for the elements of the page and interacts with them when they are ready for interaction.
-
-Flickering tests that are sometimes PASS and sometimes FAIL are drastically reduced and confidence in test automation increases!
-
-Find real errors instead of fixing your tests...
-🔬VISIBILITY
-
-Robot Framework Browser utilizes a JavaScript based technology called Playwright. Playwright connects directly to the browsers API and has full control of the browser and its content. The Users has full access to all JavaScript object of the page and with the Execute JavaScript keyword you can directly manipulate them.
-
-Browser has also access to the Network Traffic between page and server and gives the user the possibility to interact with the server via HTTP calls from the same browser session.
-
-You have never been closer to your test object!
-
-See https://robotframework-browser.org/ for rendered version.
-",
+                  description: "A deep dive into the new Browser Library.",
+                  descriptionExpanded: "More information coming shortly ...",
                   bio: "Open sourcerer.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -574,18 +533,7 @@ See https://robotframework-browser.org/ for rendered version.
                 { author: "Nils Balkow-Tychsen",
                   title: "How Kubernetes brings QA and DevOps closer together - A practical approach to DevTestOps",
                   description: "Kubernetes became a key technology for many modern software development teams. We want to show you how it brings QA and DevOps closer together with the help of RF KubeLibrary. It allows you to harden your e2e tests by ensuring the availability and configuration of your system-under-test beforehand.",
-                  descriptionExpanded: "```
-Kubernetes, the final frontier.
-These are the voyages of Testers and DevOps Engineers alike.
-It’s a mission to explore strange new technologies.
-To seek out new ways of testing and new roles like DevTestOps.
-To boldly fulfill quality expectations and release schedules, no one has done before.
-```
-
-**On a more serious note:** 
-By its declarative nature Kubernetes allows bringing testing to the next level. It enables building a holistic approach for Quality Assurance that spans across application, configuration and infrastructure. It can work in both ways, by introducing tests for devops teams and exposing testing teams to platform specifics.
-
-**In this talk we would like to introduce you to the KubeLibrary - RobotFramework library for testing kubernetes. We will explore how it can be used for DevTestOps scenarios by leveraging kubernetes strengths.**",
+                  descriptionExpanded: "<p>Kubernetes, the final frontier.</p><p>These are the voyages of Testers and DevOps Engineers alike.</p><p>It’s a mission to explore strange new technologies.</p><p>To seek out new ways of testing and new roles like DevTestOps.</p><p>To boldly fulfill quality expectations and release schedules, no one has done before.</p><p><b>On a more serious note:</b>By its declarative nature Kubernetes allows bringing testing to the next level. It enables building a holistic approach for Quality Assurance that spans across application, configuration and infrastructure. It can work in both ways, by introducing tests for devops teams and exposing testing teams to platform specifics.</p><p>In this talk we would like to introduce you to the KubeLibrary - RobotFramework library for testing kubernetes. We will explore how it can be used for DevTestOps scenarios by leveraging kubernetes strengths.</p>",
                   bio: "Lead QA Engineer at [Humanitec](https://humanitec.com). 20 year of experience in software testing through-out different industries like finance, games, IoT and developer platforms. Specializing in test automation for web apps based on microservice architectures.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -594,64 +542,7 @@ By its declarative nature Kubernetes allows bringing testing to the next level. 
                 { author: "Samuel Montgomery-Blinn",
                   title: "Abusing robotframework-datadriver for fun and profit",
                   description: "After progressing from duplicating test steps to using test templates, you went a step further and starting using CSV files and datadriver. But did you know that datadriver includes a reader_class initialization parameter that you can (ab)use to generate tests from directory listings and REST APIs?",
-                  descriptionExpanded: "This is a 5-minute lightning talk to get people thinking about how they can use datadriver to outsource the source of truth about some of their test suites to either a directory of files or even a REST API such as from TestRails or JIRA.
-
-After progressing from duplicating test steps to using test templates, you went a step further and started using CSV files and robotframework-datadriver. But did you know that datadriver includes a reader_class intitalization parameter that you can (ab)use to generate tests from directory listings and REST APIs?
-
-I didn't either, until I found myself writing a lot of trivial CSV files that looked like this:
-
-    *** Test Cases ***,${file_name}
-    my test name,my_test_name.json
-    another test name,another_test_name.json
-    yet another test name,yet_another_test_name.json
-
-And then finding that this CSV file would get out of sync with the actual test JSON files. What if "my test name" was removed because it was no longer valid? What if "the best test yet" was added, but not included in the CSV file?
-
-There were a few approaches we could take:
-
-* Generate the CSV file during some earlier part of the CI/build process
-* Generate the CSV file with a --variable-file script...
-* Generate the CSV file with datadriver's config_keyword initialization property
-
-But this still wasn't fully satisfying, because really, this CSV file did not need to exist. So, I dug into datadriver a bit further and starting using the reader_class initialization property.
-
-    *** Resources ***
-    Library    DataDriver    file=/path/to/my/files/**.json
-    ...                       reader_class=DataDriver.GlobDataReader 
-    ...                       file_search_strategy=None 
-
-And all you really have to do is implement a `get_data_from_source` method and you are off and running. For our "trivial" example:
-
-    var_name = self.kwargs["var_name"] if "var_name" in self.kwargs else "${file_name}"
-    self._analyse_header(["*** Test Cases ***", var_name])
-    for f in glob.glob(self.file):
-        self._read_data_from_table([os.path.basename(os.path.splitext(f)[0]),os.path.abspath(f)])
-    return self.data_table
-
-Et voilà! Now:
-
-    My Test Template
-        [Arguments]       ${file_name}
-        My Test Keyword   ${file_name}
-
-Your directory of JSON tests are heading to your test keyword for final disposition.
-
-But wait! you say. What about tags? Documentation? Well, you're already in Python code. You *could* embed these in the JSON files (or YAML files, or a SQL database, or...) but why not just use `requests` to grab that metadata via REST from TestRails or JIRA?
-
-    GET index.php?/api/v2/get_suites/1
-    GET index.php?/api/v2/get_suite/2
-    GET index.php?/api/v2/get_cases/1&suite_id=2&milestone_id=3&priority_id=4...
-
-This also has the advantage of getting rid of painstaking dual tag maintenance and making your PHB happy by making TestRails the source of truth about which tests to run where and when.
-
-You *could* even grab data file(s) themselves:
-
-    GET index.php?/api/v2/get_attachments_for_case/:case_id
-    GET index.php?/api/v2/get_attachment/:attachment_id
-
-Making TestRails the source of truth about the test case data file(s) themselves. Personally, I'd rather have these in Git and on my local filesystem, but hey: Whether it's a good idea or not, Robot Framework will let you do it.
-
-Thank you for your time.",
+                  descriptionExpanded: "",
                   bio: "I went from farmer to software engineer thanks to the professors at Purdue University, and though I have had a few dalliances over the wall in development land, the preponderance of my 20+ year career has been in test automation. From C, Perl, TCL and, yes, PHP, to Java, to Python, back somehow to TCL thanks to Jacl, back to Python though actually Jython, I finally caught the One True Religion of Robot Framework and work to spread its gospel. Which leaves me somehow, still, writing a lot of Python and obsessing even more over whitespace.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -660,26 +551,7 @@ Thank you for your time.",
                 { author: "Raphael Roems",
                   title: "Backend Testing using Robot Framework and SoapUI",
                   description: "Backend testing, which involved data processing, was initiated from a website frontend. Goal was to reuse existing SoapUI opensource webservice tests to replace the frontend requests, integrating with Robot Framework for test orchestration and parallel testing aspects, to reduce test execution time."
-                  descriptionExpanded: "<h1><strong>Existing problems to address</strong></h1>
-
-<p>How would introducing test automation would improve the existing testing problems?   </p>
-
-<h1><strong>Considerations for test automation framework</strong></h1>
-
-<p>Process of testing tool selection for the test automation framework  </p>
-
-<h1><strong>Brief overview of manual testing process</strong></h1>
-
-<p>Diagram of the manual testing process  </p>
-
-<h1><strong>Challenges with implementation</strong></h1>
-
-<p>List of problems encountered and how these were overcome  </p>
-
-<h1><strong>Brief overview of automation process</strong></h1>
-
-<p>Various testing tools and how these interact  </p>
-",
+                  descriptionExpanded: "",
                   bio: "",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -688,23 +560,7 @@ Thank you for your time.",
                 { author: "Markus Stahl",
                   title: "robotframework-camunda library: Orchestrating robotic tasks with Camunda",
                   description: "Robot Framework is our favourite tool for automating tasks. Naturally, it requires an orchestrator for triggering executions. Camunda orchestrates process flows and makes processes also visible. With "robotframework-camunda" library you can integrate 2 of the greatest open source projects existing.",
-                  descriptionExpanded: "# Content
-
-## Motivation
-Why someone would want to integrate Robot Framework and Camunda
-
-## Abstraction layers of a process:
-Each layer has a main focus
-1. Camunda : controlling process flow, deciding what is executed when
-1. Robot Framework: describing the automated task
-1. Python: implementation of the steps within the tasks
-
-## Example Process
-1. demo, running process
-
-## Nudges
-1. Why you still want to automate with Robot Framework despite Camunda's more powerful Java integration
-1. What features to expect next.",
+                  descriptionExpanded: "",
                   bio: "Markus has 10 years working experience as system administrator, java developer and lean management consultant. Since 2016 he's Automation Engineer for the quality assurance department at Deutsche Post Adress. His favorite tools are Robot Framework, Camunda and Gitlab. Besides automation his favorite activities are gardening and entertaining his kids.",
                   imgUrl: 'rf-icon-500-White.png'
                 },
@@ -716,21 +572,9 @@ Each layer has a main focus
                   descriptionExpanded: "When one becomes more familiar with Robot framework, it becomes easier and easier to add layers to you robot code and add complexity there. We know that that complexity in RF should be moved to python as much as possible but that is not always easy. I'll try to show how TestArchiver could really help you there",
                   bio: "Automation expert and toolsmith from Software Automation Labs (SALabs) at Siili.",
                   imgUrl: 'rf-icon-500-White.png'
-                },
-
-
-                { author: "Gojko Adzic",
-                  title: "You're testing WHAT?",
-                  descriptionExpanded: "Gojko presents five universal rules for test automation, that will help you bring continuous integration and testing to the darkest corners of your system. Learn how to wrestle large test suites into something easy to understand, maintain and evolve, at the same time increasing the value from your automated tests. See how to bring aspects that people don't even consider automating, such as layout checks and even video into an automated continuously integrated process.",
-                  bio: "Gojko Adzic is a partner at Neuri Consulting LLP. He one of the 2019 AWS Serverless Heroes, the winner of the 2016 European Software Testing Outstanding Achievement Award, and the 2011 Most Influential Agile Testing Professional Award. Gojko’s book Specification by Example won the Jolt Award for the best book of 2012, and his <a href='https://gojko.net/posts.html'>blog</a> won the UK Agile Award for the best online publication in 2010.",
-                  imgUrl: 'gojko.jpg'
-                },
-                { author: "Elisabeth Hendrickson",
-                  title: "Robot Framework Through the Lens of History",
-                  descriptionExpanded: "Two decades ago, software development looked very different than it does today. Supposed “best practices” involved document-heavy processes that divided work into phases with testing at the end and performed by a separate QA function that did supposedly “independent” verification and validation. The most commonly used test automation tools of the day were from commercial vendors who mostly sold to executives on the promise of making test automation “easy” through record and playback. This was desirable because the QA group was often so removed from the development effort that they had no access to the source code, and often did not have coding skills. So vendors sold supposedly magic solutions that generally turned out to be hugely expensive with very little return. The frustration, pain, and failures stemming from heavyweight phased software development processes gave rise to Agile. At the same time the frustration and pain stemming from specialized test automation tools that often didn’t play nicely with source control gave rise to a new generation of open source test automation tools. The short lived Agile Alliance program, “AAFTT” became for a very brief time in history a gathering place for people working on this new generation of tools, of which Robot Framework is one. In this talk, we’ll look at the history of test automation tools and why Robot Framework was -- and is -- so successful.",
-                  bio: "Elisabeth Hendrickson is an experienced software developer, tester, leader, and executive. She has a track record of creating high functioning organizations and growing strong leadership teams. She co-founded the AAFTT program (with Jennitta Andrea), served on the Agile Alliance board of directors, and received the Agile Alliance's Gordon Pask award in 2010. She is the author of Explore It! from Pragmatic Books. You can find her on Twitter as <a href='https://twitter.com/testobsessed'>@testobsessed</a>",
-                  imgUrl: 'elisabeth.jpg'
                 }
+
+
               ]
             }
           }
