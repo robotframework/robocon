@@ -42,6 +42,7 @@
             :margin="talk.margin"
             :author="talk.author"
             :title="talk.title"
+            :keynote="talk.keynote"
             :time="talk.time"
             :sponsored-by="talk.sponsoredBy"
             :type="talk.type || ''"

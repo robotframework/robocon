@@ -1,5 +1,7 @@
 <template>
-  <div :class="header === '' && type === 'workshop' ? 'mb-5 pb-4' : 'mb-5 pb-3'" :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
+  <div
+    :class="[header === '' && type === 'workshop' ? 'mb-5 pb-4' : `mb-5 ${isMobile ? '' : 'p-3'}`, {['bg-blue pb-3']: keynote}]"
+    :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
     <div v-if="margin" class="mt-5" />
     <div v-if="header !== ''">
       <h2 class="white no-arrow mt-4">{{ header }}</h2>
@@ -28,7 +30,7 @@
             </a>
           </div>
           <div class="white ml-4 pl-2 type-body">
-            {{ dateString(time.start) }}  <span class="blue">{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
+            <span class="blue">{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
           </div>
         </div>
       </button>
@@ -61,7 +63,7 @@
             v-html="descriptionExpanded" />
           <!-- bio with img -->
           <div v-if="imgUrl !== '' && bio !== ''" class="mt-3 display--flex flex--wrap">
-            <div class="col-sm-12 col-md-3">
+            <div class="col-sm-12 col-md-3 mb-3">
               <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: 100%;border-radius: 50px">
             </div>
             <div
@@ -155,6 +157,10 @@ export default {
     sponsoredBy: {
       type: String,
       default: ''
+    },
+    keynote: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({

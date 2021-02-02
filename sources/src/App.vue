@@ -156,11 +156,11 @@ export default {
               header: "Program Day 1 (16th March)",
               talks: [
                 { author: "Pekka Klärck",
-                  title: "Where's Robot Framework in 2021",
-                  description: "A look at what's new and what's coming next related to Robot Framework itself and the wider ecosystem around it. Co-presented by Ismo Aro.",
-                  descriptionExpanded: "In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka will talk about cool new features in Robot Framework 4.0 as well as what has been happening in the wider Robot Framework ecosystem. After looking at the past and present, we'll talk about the plans for the future.",
+                  title: "Keynote: Where's Robot Framework in 2021",
+                  description: "A look at what's new and what's coming next related to Robot Framework itself and the wider ecosystem around it. Co-presented by Ismo Aro. In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka will talk about cool new features in Robot Framework 4.0 as well as what has been happening in the wider Robot Framework ecosystem. After looking at the past and present, we'll talk about the plans for the future.",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
                   imgUrl: 'Pekka_Klarck.jpg',
+                  keynote: true,
                   time: {
                       start: "2021-03-16T11:00:00+0000",
                       end:   "2021-03-16T12:00:00+0000",
@@ -238,7 +238,7 @@ export default {
                   title: "What's new in RequestsLibrary 0.9",
                   description: "After discussing a lot at RoboCon 2020, collecting feedback from RobotFramework community and with the help of the Italian RobotFramework Meetup, a new RequestsLibrary version is born. In 5 minutes you'll get updated to all changes.",
                   descriptionExpanded: "<ul><li>What guided the development.<li>What is the new keyword structure with session an session-less.</li><li>How the implicit assert mechanism on status works.</li><li>Best practices with nested keywords.</li></ul>",
-                  bio: "I'm an Open Source and Linux passionate guy. I worked for 9 years in a security company www.endian.com that build up from scratch an Open Source Linux distribution. At Endian I discovered RobotFramework but never used since we already have created our own testing framework in python, based on unittest and around fabric library to remotely control via ssh our firewalls. 2 years ago I moved to a shining streaming company www.chili.com where I made up a 7 people QA team and initiated the company to test automation with RobotFramework. The whole team enjoyed RF, me and Angelo attended the 2019 RoboCon edition. Back in Italy we started contributing and founded RobotFramework Italy/Milan Meetup. I'm now an active contributor to RequestsLibrary and I'm very excited about it!",
+                  bio: "I'm an Open Source and Linux passionate guy. I worked for 9 years in a security company <a href='https://www.endian.com'>Endian</a> that build up from scratch an Open Source Linux distribution. At Endian I discovered RobotFramework but never used since we already have created our own testing framework in python, based on unittest and around fabric library to remotely control via ssh our firewalls. 2 years ago I moved to a shining streaming company <a href='https://www.chili.com'>Chili</a> where I made up a 7 people QA team and initiated the company to test automation with RobotFramework. The whole team enjoyed RF, me and Angelo attended the 2019 RoboCon edition. Back in Italy we started contributing and founded RobotFramework Italy/Milan Meetup. I'm now an active contributor to RequestsLibrary and I'm very excited about it!",
                   imgUrl: 'Luca_Giovenzana.jpeg',
                   time: {
                       start: "2021-03-16T16:15:00+0000",
@@ -420,11 +420,11 @@ export default {
 
 
                 { author: "Elisabeth Hendrickson",
-                  title: "Robot Framework Through the Lens of History",
-                  descriptionExpanded: "Two decades ago, software development looked very different than it does today. In this talk, we’ll look at the history of test automation tools and why Robot Framework was -- and is -- so successful.",
-                  descriptionExpanded: "Two decades ago, software development looked very different than it does today. Supposed “best practices” involved document-heavy processes that divided work into phases with testing at the end and performed by a separate QA function that did supposedly “independent” verification and validation. The most commonly used test automation tools of the day were from commercial vendors who mostly sold to executives on the promise of making test automation “easy” through record and playback. This was desirable because the QA group was often so removed from the development effort that they had no access to the source code, and often did not have coding skills. So vendors sold supposedly magic solutions that generally turned out to be hugely expensive with very little return. The frustration, pain, and failures stemming from heavyweight phased software development processes gave rise to Agile. At the same time the frustration and pain stemming from specialized test automation tools that often didn’t play nicely with source control gave rise to a new generation of open source test automation tools. The short lived Agile Alliance program, “AAFTT” became for a very brief time in history a gathering place for people working on this new generation of tools, of which Robot Framework is one. In this talk, we’ll look at the history of test automation tools and why Robot Framework was -- and is -- so successful.",
+                  title: "Keynote: Robot Framework Through the Lens of History",
+                  description: "Two decades ago, software development looked very different than it does today. Supposed “best practices” involved document-heavy processes that divided work into phases with testing at the end and performed by a separate QA function that did supposedly “independent” verification and validation. The most commonly used test automation tools of the day were from commercial vendors who mostly sold to executives on the promise of making test automation “easy” through record and playback. This was desirable because the QA group was often so removed from the development effort that they had no access to the source code, and often did not have coding skills. So vendors sold supposedly magic solutions that generally turned out to be hugely expensive with very little return. The frustration, pain, and failures stemming from heavyweight phased software development processes gave rise to Agile. At the same time the frustration and pain stemming from specialized test automation tools that often didn’t play nicely with source control gave rise to a new generation of open source test automation tools. The short lived Agile Alliance program, “AAFTT” became for a very brief time in history a gathering place for people working on this new generation of tools, of which Robot Framework is one. In this talk, we’ll look at the history of test automation tools and why Robot Framework was -- and is -- so successful.",
                   bio: "Elisabeth Hendrickson is an experienced software developer, tester, leader, and executive. She has a track record of creating high functioning organizations and growing strong leadership teams. She co-founded the AAFTT program (with Jennitta Andrea), served on the Agile Alliance board of directors, and received the Agile Alliance's Gordon Pask award in 2010. She is the author of Explore It! from Pragmatic Books. You can find her on Twitter as <a href='https://twitter.com/testobsessed'>@testobsessed</a>",
                   imgUrl: 'elisabeth.jpg',
+                  keynote: true,
                   time: {
                       start: "2021-03-17T17:30:00+0000",
                       end:   "2021-03-17T18:30:00+0000",
@@ -448,10 +448,11 @@ export default {
               header: "Program Day 3 (18th March)",
               talks: [
                 { author: "Gojko Adžić",
-                  title: "You're testing WHAT?",
-                  descriptionExpanded: "Gojko presents five universal rules for test automation, that will help you bring continuous integration and testing to the darkest corners of your system. Learn how to wrestle large test suites into something easy to understand, maintain and evolve, at the same time increasing the value from your automated tests. See how to bring aspects that people don't even consider automating, such as layout checks and even video into an automated continuously integrated process.",
+                  title: "Keynote: You're testing WHAT?",
+                  description: "Gojko presents five universal rules for test automation, that will help you bring continuous integration and testing to the darkest corners of your system. Learn how to wrestle large test suites into something easy to understand, maintain and evolve, at the same time increasing the value from your automated tests. See how to bring aspects that people don't even consider automating, such as layout checks and even video into an automated continuously integrated process.",
                   bio: "Gojko Adžić is a partner at Neuri Consulting LLP. He one of the 2019 AWS Serverless Heroes, the winner of the 2016 European Software Testing Outstanding Achievement Award, and the 2011 Most Influential Agile Testing Professional Award. Gojko’s book Specification by Example won the Jolt Award for the best book of 2012, and his <a href='https://gojko.net/posts.html'>blog</a> won the UK Agile Award for the best online publication in 2010.",
                   imgUrl: 'gojko.jpg',
+                  keynote: true,
                   time: {
                       start: "2021-03-18T11:00:00+0000",
                       end:   "2021-03-18T12:00:00+0000",
@@ -489,7 +490,7 @@ export default {
                   title: "PythonLibCore the secret behind SeleniumLibrary",
                   description: "PythonLibCore is the secret behind SeleniumLibrary which eases the implementation of the Robot Framework dynamic library API. PythonLibCore made possible of SeleniumLibrary Plugin API and many other things in the library. This live coding session reveals how PythonLibraryCore can be used.",
                   descriptionExpanded: "The PythonLibCore is behind many libraries, like SeleniumLibrary and Browser library. The purpose of the PythonLibCore is the help the libraries to use the Robot Framework dynamic library API. This live coding demonstrates how PythonLibCore can be used, what kind of benefits it offers by using small custom library build on the stage. It also shows what benefits bigger libraries have gained by using PythonLibCore.",
-                  bio: "<p>Tatu Aalto is the current lead developer of the <a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a>and is participating in <a href='https://github.com/MarketSquare/robotframework-browser'>Browser library</a>as one of the core team members. Tatu has been working with Robot Framework since 2011. In the 2011 he was a regular user, by sending many questions and problems to the community. After some time Tatu started to answer questions  send by other users and he did provide his very first pull request to the Robot Framework core in 2012. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer.</p><p>Tatu has used the Robot Framework in several work places to to guide and aid companies in their test automation efforts. Currently he is working in F-Secure as a Senior Software Developer In Test, automating windows antivirus client for business users.</p>",
+                  bio: "<p>Tatu Aalto is the current lead developer of the <a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a> and is participating in <a href='https://github.com/MarketSquare/robotframework-browser'>Browser library</a> as one of the core team members. Tatu has been working with Robot Framework since 2011. In the 2011 he was a regular user, by sending many questions and problems to the community. After some time Tatu started to answer questions  send by other users and he did provide his very first pull request to the Robot Framework core in 2012. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer.</p><p>Tatu has used the Robot Framework in several work places to to guide and aid companies in their test automation efforts. Currently he is working in F-Secure as a Senior Software Developer In Test, automating windows antivirus client for business users.</p>",
                   imgUrl: 'Tatu_Aalto.jpg',
                   time: {
                       start: "2021-03-18T14:30:00+0000",
@@ -515,7 +516,7 @@ export default {
                   title: "How Kubernetes brings QA and DevOps closer together - A practical approach to DevTestOps",
                   description: "Kubernetes became a key technology for many modern software development teams. We want to show you how it brings QA and DevOps closer together with the help of RF KubeLibrary. It allows you to harden your e2e tests by ensuring the availability and configuration of your system-under-test beforehand.",
                   descriptionExpanded: "<p>Kubernetes, the final frontier.</p><p>These are the voyages of Testers and DevOps Engineers alike.</p><p>It’s a mission to explore strange new technologies.</p><p>To seek out new ways of testing and new roles like DevTestOps.</p><p>To boldly fulfill quality expectations and release schedules, no one has done before.</p><p><b>On a more serious note:</b>By its declarative nature Kubernetes allows bringing testing to the next level. It enables building a holistic approach for Quality Assurance that spans across application, configuration and infrastructure. It can work in both ways, by introducing tests for devops teams and exposing testing teams to platform specifics.</p><p>In this talk we would like to introduce you to the KubeLibrary - RobotFramework library for testing kubernetes. We will explore how it can be used for DevTestOps scenarios by leveraging kubernetes strengths.</p>",
-                  bio: "Lead QA Engineer at [Humanitec](https://humanitec.com). 20 year of experience in software testing through-out different industries like finance, games, IoT and developer platforms. Specializing in test automation for web apps based on microservice architectures.",
+                  bio: "Lead QA Engineer at <a href='https://humanitec.com'>Humanitec</a>. 20 year of experience in software testing through-out different industries like finance, games, IoT and developer platforms. Specializing in test automation for web apps based on microservice architectures.",
                   imgUrl: 'Nils_Balkow_Tychsen.jpeg',
                   time: {
                       start: "2021-03-18T16:00:00+0000",
@@ -686,9 +687,9 @@ Audience Takeaway:
 A Github repo containing all of the examples and the presentation slides. (coming soon... it will be kept here -> https://github.com/jg8481)",
                   bio: "Currently writing a book. https://leanpub.com/toolstrategiesforlonetesters
 
-Currently working on various vulnerability and threat detection products at Secureworks, as a Principal QA Engineer. Was a Test Engineering Lead in Koala (https://koala.io/) working on web, mobile app, and APIs used for ordering and point-of-sale systems. Was a Senior Test Engineer in Intersection Co. (a Sidewalk Labs and Alphabet owned company) for the Intersection (ICS) Connected Communities Team working on test design and test strategy leadership for several initiatives with Hudson Yards, Related Company, and other clients. I run, monitor, and build the test infrastructure for the ICS (Intersection Consulting & Solutions) Buildkite CI pipelines. I also create and maintain several types of daily tests for the Hudson Yards Technology Platform, a technology platform used to integrate multiple building management systems for security, facial recognition, surveillance, visitor management systems, and building sensor data. I also worked on the Hertz eCommerce Test Tools Team for approximately 5 years. 
+Currently working on various vulnerability and threat detection products at Secureworks, as a Principal QA Engineer. Was a Test Engineering Lead in Koala (https://koala.io/) working on web, mobile app, and APIs used for ordering and point-of-sale systems. Was a Senior Test Engineer in Intersection Co. (a Sidewalk Labs and Alphabet owned company) for the Intersection (ICS) Connected Communities Team working on test design and test strategy leadership for several initiatives with Hudson Yards, Related Company, and other clients. I run, monitor, and build the test infrastructure for the ICS (Intersection Consulting & Solutions) Buildkite CI pipelines. I also create and maintain several types of daily tests for the Hudson Yards Technology Platform, a technology platform used to integrate multiple building management systems for security, facial recognition, surveillance, visitor management systems, and building sensor data. I also worked on the Hertz eCommerce Test Tools Team for approximately 5 years.
 
-I love testing. I research and experiment with software test oracles, machine learning tools, model based test tools, GraphWalker, Kali Linux, Docker security tools, Haskell + Rust + Python + Go-lang + Elixir-lang test tools, Sikuli X IDE, various Robot Framework libraries, Appium, Zapier, Slack + Jenkins integrations with other CI tools (using my own approaches inspired by ChatOps pipeline patterns), headless Firefox Robot Framework scripts using an XVFB library (on Ubuntu), API testing with Robot Framework/Haskell/Rust, researching various test tools for creating cross-platform scalable tests using Docker containers, Kubernetes pods, GCP and AWS. Also created Test Results Metrics dashboards using Robot Framework's results and TestRail. 
+I love testing. I research and experiment with software test oracles, machine learning tools, model based test tools, GraphWalker, Kali Linux, Docker security tools, Haskell + Rust + Python + Go-lang + Elixir-lang test tools, Sikuli X IDE, various Robot Framework libraries, Appium, Zapier, Slack + Jenkins integrations with other CI tools (using my own approaches inspired by ChatOps pipeline patterns), headless Firefox Robot Framework scripts using an XVFB library (on Ubuntu), API testing with Robot Framework/Haskell/Rust, researching various test tools for creating cross-platform scalable tests using Docker containers, Kubernetes pods, GCP and AWS. Also created Test Results Metrics dashboards using Robot Framework's results and TestRail.
 
 ",
                   imgUrl: 'rf-icon-500-White.png'
@@ -784,7 +785,7 @@ Along with some theory about the library in the beginning of the workshop we wil
 1. Introduction lecture
 2. Keywords and concepts explanation with examples
 3. Practice section
-        1) Working in small groups. 
+        1) Working in small groups.
         2) Solving testing tasks with Image Library
         3) Ideas sharing
 4. Discussion
@@ -803,11 +804,11 @@ For those who don't need complex templates' structure - automation simply with i
 - `Animations`
 Some keywords to check the animations.
 - `Buttons`
-New version of Library contains different types of buttons, their settings and ways of implementation. 
+New version of Library contains different types of buttons, their settings and ways of implementation.
 - `Recognition`
 Extracting text information from screen.",
                   bio: "Mobile QA Engineer at Hyundai Mobility Lab
-Over 5 years in Test Automtaion 
+Over 5 years in Test Automtaion
 Lead developer of Image Library (RobotFramework)",
                   imgUrl: 'rf-icon-500-White.png'
                 },
