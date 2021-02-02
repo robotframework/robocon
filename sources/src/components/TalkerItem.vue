@@ -62,7 +62,7 @@
           <!-- bio with img -->
           <div v-if="imgUrl !== '' && bio !== ''" class="mt-3 display--flex flex--wrap">
             <div class="col-sm-12 col-md-3">
-              <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: 100%;">
+              <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: 100%;border-radius: 50px">
             </div>
             <div
               class="col-sm-12 col-md-9"
