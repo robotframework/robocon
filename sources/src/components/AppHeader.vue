@@ -16,8 +16,9 @@
                 EVENT<br>
               </div>
               <div>
-                16-18/Mar-2021<br>
-                UTC+2<br>
+                START: {{ dateString("2021-03-16T11:00:00+0000") }} / <span class="blue">{{ local_time("2021-03-16T11:00:00+0000") }}</span><br>
+                END:  {{ dateString("2021-03-18T19:00:00+0000") }} / <span class="blue">{{ local_time("2021-03-18T19:00:00+0000") }}</span><br>
+                Timezone: {{ local_tz }}<br>
               </div>
               <div style="color: white;">
                 THE 4th ANNUAL<br>
@@ -32,11 +33,35 @@
 </template>
 
 <script>
+import moment from "moment-timezone";
+
 export default {
   data() {
     return {};
   },
-  mounted() {}
+  mounted() {},
+  computed: {
+    local_tz() {
+      return moment.tz.guess();
+    }
+  },
+  methods: {
+    dateString(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, "Africa/Freetown").format("DD MMM")
+    },
+    utc_time(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, "Africa/Freetown").format("LT");
+    },
+    local_time(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, moment.tz.guess()).format("LT");
+    }
+  }
 };
 </script>
 
