@@ -324,7 +324,7 @@ export default {
                   imgUrl: 'Tuomas_Pitkanen.jpeg',
                   time: {
                       start: "2021-03-16T18:00:00+0000",
-                      end:   "2021-03-16T18:15:00+0000",
+                      end:   "2021-03-16T18:30:00+0000",
                   }
                 }
               ]
