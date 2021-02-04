@@ -21,7 +21,7 @@
               :key="key"
               :header="talk.header"
               :margin="talk.margin"
-              :author="talk.author"
+              :authors="talk.authors"
               :title="talk.title"
               :type="talk.type || ''"
               :description="talk.description"
@@ -40,7 +40,7 @@
             :key="key"
             :header="talk.header"
             :margin="talk.margin"
-            :author="talk.author"
+            :authors="talk.authors"
             :title="talk.title"
             :keynote="talk.keynote"
             :time="talk.time"
@@ -49,7 +49,9 @@
             :description="talk.description"
             :description-expanded="talk.descriptionExpanded"
             :bio="talk.bio"
+            :second-bio="talk.secondBio"
             :img-url="talk.imgUrl"
+            :second-img-url="talk.secondImgUrl"
             :url="talk.url"/>
         </div>
       </div>

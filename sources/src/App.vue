@@ -198,7 +198,7 @@ export default {
               twitter: false,
               header: "Program Day 1 (16th March)",
               talks: [
-                { author: "Pekka Klärck",
+                { authors: ["Pekka Klärck"],
                   title: "Keynote: Where's Robot Framework in 2021",
                   description: "A look at what's new and what's coming next related to Robot Framework itself and the wider ecosystem around it. Co-presented by Ismo Aro. In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka will talk about cool new features in Robot Framework 4.0 as well as what has been happening in the wider Robot Framework ecosystem. After looking at the past and present, we'll talk about the plans for the future.",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
@@ -212,12 +212,14 @@ export default {
 
 
 
-                { author: "Mateusz Nojek",
+                { authors: ["Mateusz Nojek", "Bartłomiej Hirsz"],
                   title: "How to avoid jail for nasty code?",
                   description: "In Roboland, an ugly code is a crime. It makes people sad, creates bugs, is slower to read and harder to understand. Nobody wants to go to jail, especially unintentionally. Fortunately, there are heroes who can protect innocent citizens from this threat - their names are Robocop and Robotidy.",
                   descriptionExpanded: "This talk is concentrated around concept of writing a clean, beautiful and easy to read code in Robot Framework. During the presentation we will present 2 new tools that can help developers and testers to easily write, maintain and refactor the code. Both tools are configurable which makes them perfect for use in projects where coding guidelines are present but also for the ones where they are going to be established. Robocop and Robotidy are the heroes nobody asked for but everyone needed.",
                   bio: "Coming soon ..",
+                  secondBio: "I'm Robot Framework and Python enthusiast who loves to contribute to open source projects. As QA I believe in clean and well tested code :)",
                   imgUrl: 'Mateusz_Nojek.jpg',
+                  secondImgUrl: 'Bartlomiej_Hirsz.jpeg',
                   time: {
                       start: "2021-03-16T12:30:00+0000",
                       end:   "2021-03-16T13:00:00+0000",
@@ -225,7 +227,7 @@ export default {
                 },
 
 
-                { author: "Many Kasiriha",
+                { authors: ["Many Kasiriha"],
                   title: "Print is (not) dead – Visual Document Testing using Robot Framework",
                   description: "Document Testing in the digital age - is that really a thing? Yes, it is. Because paperless does not mean documentless. Let me show you how we test our documents and printer files visually and by their content - using Robot Framework and our own Visual Document Testing Library.",
                   descriptionExpanded: "<p>Companies rely on correct documents. For us as a global freight forwarder, correct documents are essential. A silly mistake in a document could be awkward – but it might also have legal consequences. Documents in freight forwarding can transfer the ownership of goods from party A to party B. They confirm if cargo has properly been x-rayed for security purposes. They might be barcode labels to identify a package.</p><p>When a major upgrade of our Output & Document Management System was planned, we had to ensure that our documents look the same as before the upgrade. Given the high number of document types, formats, variants, and rules per documents, we quickly realized that we cannot do that manually.</p><p>So, the question was: Buy or build? Due to the high cost and feature overkill of commercial solutions and our good experience with Robot Framework we decided to build a library for Visual Document Tests. Visual Tests mean: The test document is rendered and compared pixelwise to a reference document. However, we realized that this is not enough.</p><p>We wanted to have reports with screenshots highlighting the different areas. We wanted to ignore areas from the comparison based on coordinates or text patterns. We wanted to read barcodes. We wanted to define acceptable ranges for moved text blocks. We wanted to compare text content from a PDF or via OCR. We wanted to check additional data like digital signatures. We wanted to interpret and compare printer files like postscript and pcl. We wanted to have a simple GUI to evaluate the test results. The result was a Robot Framework Library purely based on open source components offering features which can only be found in expensive commercial solutions.</p>",
@@ -238,7 +240,7 @@ export default {
                 },
 
 
-                { author: "Mikko Korpela, Tatu Aalto, Kerkko Pelttari, René Rohner",
+                { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
                   title: "RobotFramework Browser Library",
                   description: "Bringing RF browser automation to year 2021. We'll cover why Browser was created, why it's being adopted and why you should adopt it. And what makes it cool.",
                   descriptionExpanded: "<p>Robot Framework deserves a browser automation solution that's designed for the 2020s.</p><p>Browser library powered by Playwright provides.<ul><li>Speed, reliability and visibility.</li><li>Conscise assertions.</li><li>Precise and fast browser window and tab control.</li><li>Chainable selector strategies.</li><li>Good shadow DOM support.</li><li>Easy mobile device descriptors.</li><li>Sending HTTP requests.</li></ul></p>",
@@ -251,7 +253,7 @@ export default {
                 },
 
 
-                { author: "Diogo Rede",
+                { authors: ["Diogo Rede"],
                   title: "E-commerce web automation at scale",
                   description: "Imagine developing 5, 10, 15+ e-commerce websites, all with responsive web design and constant evolution. Do you hire 15+ testers or do you call Robot Framework to the rescue? Leveraging Robot Framework advanced features enables easily testing similar websites using a generic set of tests.",
                   descriptionExpanded: "<pI>n an e-commerce oriented business where reusability and quick delivery is key, test automation is crucial to reduce release time. E-commerce websites usually follow similar patterns regarding usability and navigation flows, so it is fair to assume that testing different websites will be very similar. Given this assumption, having a common test suite is feasible and so is automating it.In order to make this possible, you can resorted to several Robot Framework features, create custom libraries, listeners and pre-run modifiers to take advantage of its full potential and unlock the support needed for your automation requirements.</p><p>In this talk I will reveal some aspects of a selenium generic tests projects and give some hints about the implementation of:<ul><li>Reusable libraries (python keywords and robot test suites)</li><li>Keyword and variable overrides</li><li>Resolution selection (desktop/tablet/mobile)</li><li>Custom Selenium keywords for higher resilience</li><li>Test execution profile mechanism</li><li>Screenshot comparison</li></ul></p>",
@@ -264,7 +266,7 @@ export default {
                 },
 
 
-                { author: "Maciej Wiczk",
+                { authors: ["Maciej Wiczk"],
                   title: "RfHub2 - new take on RobotFramework asset documentation",
                   description: "The team is using RobotFramework with ease, but over the time, they found out they are reinventing solutions previously made. How to prevent that and focus on what You actually need to develop? To organize themselves, there is a need for interactive documentation. And RfHub2 is the tool they need.",
                   descriptionExpanded: "This talk is going to present <a href='https://github.com/pbylicki/rfhub2'>RfHub2</a>, a new take on solving a problem of collecting documentation and sharing it. Session will start with story that made us create RfHub2, followed by, short, technologies overview. Talk will end with an application demo, showing how to start it and use it.",
@@ -277,7 +279,7 @@ export default {
                 },
 
 
-                { author: "Luca Giovenzana",
+                { authors: ["Luca Giovenzana"],
                   title: "What's new in RequestsLibrary 0.9",
                   description: "After discussing a lot at RoboCon 2020, collecting feedback from RobotFramework community and with the help of the Italian RobotFramework Meetup, a new RequestsLibrary version is born. In 5 minutes you'll get updated to all changes.",
                   descriptionExpanded: "<ul><li>What guided the development.<li>What is the new keyword structure with session an session-less.</li><li>How the implicit assert mechanism on status works.</li><li>Best practices with nested keywords.</li></ul>",
@@ -290,7 +292,7 @@ export default {
                 },
 
 
-                { author: "Patrik Zakovič",
+                { authors: ["Patrik Zakovič"],
                   title: "The journey of building test automation platform in the bank",
                   description: "From custom web tool for data preparation,  through test automation pipelines to in-house mobile devices farm. Every part of our platform is perfect proof that open-source tools including Robot Framework can be really powerful and useable also in an organization such as the biggest bank in Slovakia.",
                   descriptionExpanded: "At the beginning there was an idea to get rid of routine, repetitive work. From automation of the first test cases on local computers to fully integrated test automation platform used by dozens of users. It includes scheduled pipelines, data preparation web tool, in-house mobile devices farm and other components. For successful implementation of the test platform in the bank with various types of applications it was crucial to find a tool that can automate everything. We have found it in Robot Framework.",
@@ -303,7 +305,7 @@ export default {
                 },
 
 
-                { author: "Simon Meggle",
+                { authors: ["Simon Meggle"],
                   title: "RobotMK: Testing meets Monitoring",
                   description: "You are running applications? You are monitoring IT infrastructure? You are perhaps overlooking something!",
                   descriptionExpanded: "<p><b>RobotMK</b> is a tool to enrich the Open Source IT infrastructure monitoring solution **CheckMK** with RobotFramework application tests.</p><p>With RobotMK, it is very easy to monitor the overall state as well as the runtimes of suites, tests and keywords with the same monitoring tool as you use for IT infrastructure monitoring (CheckMK). Get notified whenever runtimes go over their allowed threshold and get graphs about the insidious development of step runtimes in the past.</p><p>I'll give a technical overview of CheckMK and RobotMK and show how we migrate the End2End monitoring landscape of a big government application landscape to Robot Framework and RobotMK.</p>",
@@ -316,7 +318,7 @@ export default {
                 },
 
 
-                { author: "Tuomas Pitkänen",
+                { authors: ["Tuomas Pitkänen"],
                   title: "Robot makes music",
                   description: "Does your robot compose music? RPA can be used to automate and increase productivity of any home studio artist. Roboducer helps by quickly creating drafts of composes and inserting them to sequencer for editing process, or it can search Spotify for relevant playlists for pitching purposes.",
                   descriptionExpanded: "<p>When thinking about music, robots are not the first thing to think about! Still, producing music requires real work and a production pipeline. It's not all just playing and composing. In this talk Tuomas Pitkänen goes through his own music production pipeline and how robots help him in turning up productivity in a creative process.</p><p>A robot, named Roboducer, is used to automate production process. In the beginning it creates demo tracks. Producer can order multiple demos at a time, stating wanted genre, instruments to use and so on. Roboducer produces demos with midi library and delivers demos for review. After review, producer can select accepted demos for further processing. Roboducer will then insert selected demos to a sequencer software where editing, adding human touch and post processing will happen.</p><p>Finished tracks can then be automatically uploaded to a vendor portal, or Roboducer can search Spotify playlists suitable for pitching. Spotify lists can be searched based on similarity of other tracks in lists. This is a task that has been largely manual work earlier or limited only to already known lists.</p>",
@@ -344,7 +346,7 @@ export default {
               twitter: false,
               header: "Program Day 2 (17th March)",
               talks: [
-                { author: "Pekka Klärck",
+                { authors: ["Pekka Klärck"],
                   title: "Creating Robot Framework libraries: Why and how?",
                   description: "Robot Framework has rich syntax making it possible to create complex tests or tasks using ready-made libraries. Sometimes complexity grows too much and it's better to create custom libraries and move logic there.",
                   descriptionExpanded: "In this presentation we'll first see some complicated keywords implemented using Robot Framework syntax and discuss problems in them. After that we'll learn how easy it is to get started writing custom libraries and see how the earlier examples can be simplified by moving the logic to Python based libraries.",
@@ -357,7 +359,7 @@ export default {
                 },
 
 
-                { author: "Deepak Chourasia",
+                { authors: ["Deepak Chourasia"],
                   title: "Robot Framework and Journey from Cathedral to Bazar",
                   description: "We at SAS R&D did a unique and exciting experiment to accelerate our automation velocity. We adopted Bazar Automation Model where each member of the team contributes to test automation irrespective of his role. Robot Framework proved to be an excellent implementation partner for this success story.",
                   descriptionExpanded: "<p>Conventional team structures have cathedral style automation team which is separate from development/testing teams. With limited resources, automation team always feels like a bottleneck and cannot scale their automation velocity. Many places few testing team members also contribute to automation, but still it is not sufficient and scalable with a surge of features. We also had a cathedral style automation model for many years where a dedicated team with few members own the automation tasks. But over the years we realized the drawbacks of this model.</p><p>To address this problem we did a unique experiment. We implemented Bazar Automation Model, where each and every member of the team contributes to automation irrespective of his/her role or designation.</p><p>We also wanted to get away from custom tools created by Cathedral team so that we can reduce the learning curve. We needed a simple but powerful tool which members from all the background can use with least difficulty and learning curve, along with a diverse support for various automation streams. Robot Framework proved to be an excellent implementation partner for Bazar Automation Model.</p><p>Because of simple yet powerful features of robot framework our entire team could become productive with test automation within a sprint and we continued that journey so far for more than an year. As an output we have around 1000+ end-to-end large testcases automated by our entire team so far, which continue to execute daily and uphold our confidence about quality of our application.</p>",
@@ -370,7 +372,7 @@ export default {
                 },
 
 
-                { author: "Antti Karjalainen",
+                { authors: ["Antti Karjalainen"],
                   title: "Open-source stack for RPA",
                   description: "RPA is the fastest-growing area of Robot Framework adoption. To further enable this growth, we present an open-source stack for RPA based on Robot Framework that simplifies the work of a software robot developer.",
                   descriptionExpanded: "<p>At Robocon 2020, the landscape in Robot Framework RPA was described as “a loosely coupled collection of projects, tools, methods, and ways of working.” A year later, we’ve seen fast growth in new projects around Robot Framework, especially its use in RPA. Importantly, we have developed a new standardized way of working for software robot developers that simplifies building RPA solutions with Robot Framework.</p><p>The design of the Open-Source Stack for RPA was driven by two goals:<ol><li>Simplify and streamline the RPA development process and provide a standard template for robots.</li><li>Enable anyone to share and distribute robots seamlessly.</li></p><p>First, we set out to create a developer experience that would be easy and seamless. We wanted to let our developers write automation code without worrying about environment configuration and dependency management so that their experience would feel joyful rather than tedious. When a developer hits the “run” button in VS Code, everything should already be in place.</p><p>Second, we had a vision where you could easily create, ship, and Python-based automation code to target environments in real-time. The automation stack allows anyone to seamlessly share their robots and experiment with robots that have been built by others simply by writing a line on their terminal.</p><p>In this talk, we present the Open-Source Automation stack built on Robot Framework. It creates a unified way of developing robots that can be shared and re-used. With this work, we enable developers to focus on automating instead of configuring.</p>",
@@ -383,7 +385,7 @@ export default {
                 },
 
 
-                { author: "Tuukka Virtanen (Nervanti)",
+                { authors: ["Tuukka Virtanen (Nervanti)"],
                   title: "How to find the best Robot Framework libraries?",
                   description: "Part of Robot Framework's success is the healthy ecosystem of useful Robot Framework libraries. But how do you find these libraries? Most of them are scattered around different websites and there is no central place listing them all. Except now there is, <a href='https://www.roboscripts.org'>Roboscripts.org</a>.",
                   descriptionExpanded: "Finding the most relevant Robot Framework keywords can be a hassle. What keywords should I use in this particular project? Someone has probably solved this same problem before, so why reinvent the wheel? The problem is just finding the right library with the correct keywords. But most of them are scattered around different websites and there is no central place listing them all. So, how do you find those libraries?</p><p>I have started a website Roboscripts.org (https://www.roboscripts.org) to list all the best Robot Framework libraries under the same roof. All the needed library information, like version numbers and all the keywords and their arguments are listed neatly in one place. With an easy search functionality, it's easy to find the keywords and libraries you are looking for.</p><p>In this talk, I would like to start by presenting this problem of locating the correct libraries and continue to talk about Roboscripts.org and how it can help developers to find their libraries faster and easier. I would end the talk with a plea, to send me Robot Framework libraries that could be added to the database.</p>",
@@ -396,7 +398,7 @@ export default {
                 },
 
 
-                { author: "Fabio Zadrozny",
+                { authors: ["Fabio Zadrozny"],
                   title: "RobotFramework Language Server",
                   description: "Brief introduction to the language server protocol and debug adapter protocol, how they work and how the RobotFramework Language Server and Robocorp Code extensions can be used for RobotFramework development.",
                   descriptionExpanded: "<p>The topics to be covered are:<ul><li>what's the language server protocol</li><li>what's the debug adapter protocol</li><li>an overview of the functionalities of the Robot Framework Language Server</li><li>an overview of the functionalities for creating a Robot Framework project using Robocorp Code</li></ul></p>",
@@ -409,7 +411,7 @@ export default {
                 },
 
 
-                { author: "Markus Stahl",
+                { authors: ["Markus Stahl"],
                   title: "How to start with Open Source RPA",
                   description: "'Make' or 'Buy': Typical RPA requires an investment plan, so: BUY, because RPA is new. But is it? In this talk, I'd like to emphasize what is actually 'new' in RPA and share my experience in starting RPA in a company with 'only' what was available - and this MAKE approach fits everywhere.",
                   descriptionExpanded: "",
@@ -422,7 +424,7 @@ export default {
                 },
 
 
-                { author: "Cindy Huffman",
+                { authors: ["Cindy Huffman"],
                   title: "Automating Customer Journeys As UI Acceptance Scenarios",
                   description: "Testers ensure that features are tested in development environments. Outside of these environments, SAS still needs to verify that products run smoothly. User journeys (user scenarios that outline how customers interact with products) can be used as acceptance criteria to make these verifications.",
                   descriptionExpanded: "<p>This talk will cover how a small team of testers automated 15 acceptance scenarios using the Robot Framework. The team was new to automation, and one of their first responsibilities was to find an automation tool. The choice was Robot Framework because it was easy to learn and easy to set up quickly, a large part due to well-written documentation and the community of users.</p><p>The talk will also cover the strategy behind leadership’s decision to adopt user journeys as acceptance criteria and use BDD to communicate the user journeys.</p>",
@@ -435,7 +437,7 @@ export default {
                 },
 
 
-                { author: "Esko Hannula",
+                { authors: ["Esko Hannula"],
                   title: "Hyperautomation or hype-automation: the automation landscape of the future",
                   description: "Software automation helped accelerate value delivery and reduce costly work. Now, it is, paradoxically, becoming an expensive bottle-neck itself.",
                   descriptionExpanded: "This presentation discusses the trends in hyper-automation and the drivers behind them, trying to pave the road to the future of software automation.",
@@ -449,7 +451,7 @@ export default {
                 },
 
 
-                { author: "Dave Martin",
+                { authors: ["Dave Martin"],
                   title: "Zero To Hero In 2 Weeks",
                   description: "I was presented with a huge problem that needed automation. I had heard of Robot Framework, but had no experience with it. I went from no experience with Robot Framework to building a robust, reusable, and scalable automation framework with instant ROI using Robot Framework in 2 weeks. Here's how.",
                   descriptionExpanded: "Getting started with a new tool is sometimes a daunting task. This is the daunting task that faced me as I was presented with a rather big problem that needed an automation solution. In this talk, I will share the process that I used to go from Robot Framework newbie to building automation for a large regression test faster than I could run the test once manually, to what today is a robust, reusable, scalable test automation solution with 25 contributors designing over 50,000 tests and growing.",
@@ -462,7 +464,7 @@ export default {
                 },
 
 
-                { author: "Elisabeth Hendrickson",
+                { authors: ["Elisabeth Hendrickson"],
                   title: "Keynote: Robot Framework Through the Lens of History",
                   description: "Two decades ago, software development looked very different than it does today. Supposed “best practices” involved document-heavy processes that divided work into phases with testing at the end and performed by a separate QA function that did supposedly “independent” verification and validation. The most commonly used test automation tools of the day were from commercial vendors who mostly sold to executives on the promise of making test automation “easy” through record and playback. This was desirable because the QA group was often so removed from the development effort that they had no access to the source code, and often did not have coding skills. So vendors sold supposedly magic solutions that generally turned out to be hugely expensive with very little return. The frustration, pain, and failures stemming from heavyweight phased software development processes gave rise to Agile. At the same time the frustration and pain stemming from specialized test automation tools that often didn’t play nicely with source control gave rise to a new generation of open source test automation tools. The short lived Agile Alliance program, “AAFTT” became for a very brief time in history a gathering place for people working on this new generation of tools, of which Robot Framework is one. In this talk, we’ll look at the history of test automation tools and why Robot Framework was -- and is -- so successful.",
                   bio: "Elisabeth Hendrickson is an experienced software developer, tester, leader, and executive. She has a track record of creating high functioning organizations and growing strong leadership teams. She co-founded the AAFTT program (with Jennitta Andrea), served on the Agile Alliance board of directors, and received the Agile Alliance's Gordon Pask award in 2010. She is the author of Explore It! from Pragmatic Books. You can find her on Twitter as <a href='https://twitter.com/testobsessed'>@testobsessed</a>",
@@ -490,7 +492,7 @@ export default {
               twitter: false,
               header: "Program Day 3 (18th March)",
               talks: [
-                { author: "Gojko Adžić",
+                { authors: ["Gojko Adžić"],
                   title: "Keynote: You're testing WHAT?",
                   description: "Gojko presents five universal rules for test automation, that will help you bring continuous integration and testing to the darkest corners of your system. Learn how to wrestle large test suites into something easy to understand, maintain and evolve, at the same time increasing the value from your automated tests. See how to bring aspects that people don't even consider automating, such as layout checks and even video into an automated continuously integrated process.",
                   bio: "Gojko Adžić is a partner at Neuri Consulting LLP. He one of the 2019 AWS Serverless Heroes, the winner of the 2016 European Software Testing Outstanding Achievement Award, and the 2011 Most Influential Agile Testing Professional Award. Gojko’s book Specification by Example won the Jolt Award for the best book of 2012, and his <a href='https://gojko.net/posts.html'>blog</a> won the UK Agile Award for the best online publication in 2010.",
@@ -503,7 +505,7 @@ export default {
                 },
 
 
-                { author: "Juho Saarinen",
+                { authors: ["Juho Saarinen"],
                   title: "Robot Framework after Jython",
                   description: "Python 2 has been \"dead\" almost year now, and there's no really single \"one way to fit all\" path to continue usage of newer libraries and Robot Framework. At the talk I show some routes out from this issue to continue running of tests and RPA as part of Java application development lifecycle.",
                   descriptionExpanded: "<p>Robot Framework test/RPA execution within Java application lifecycle has been easy, as libraries could have been handled with same mechanism as other dependencies for the project. When end of Python 2 was announced, it was quite clear that some changes are needed. There was a small hope to get some \"Jython replacement\", but that doesn't seem to be happening.</p><p>There are Java-Python possibilities like <a href='https://github.com/graalvm/graalpython'>GraalPython</a>, <a href='http://jpype.sourceforge.net/index.html'>JPype</a> and <a href='https://www.py4j.org/'>Py4J</a>, which approach the matter a bit different way than Jython did. Then there's Docker, which has entered to many development processes allowing to also utilize it easier way.</p><p>At the talk I walk through the options and possibilities, and demo how <a href='https://github.com/robotframework/MavenPlugin'>MavenPlugin</a> and <a href='https://github.com/robotframework/jrobotremoteserver'>jrobotremoteserver</a>help to smoothen the transition to time without Jython.</p>",
@@ -516,7 +518,7 @@ export default {
                 },
 
 
-                { author: "Bartłomiej Hirsz",
+                { authors: ["Bartłomiej Hirsz"],
                   title: "New parsing API for Robot Framework - how to create your own tool",
                   description: "What is the connection between fast development of recent RF versions and new parsing API? It makes extending Robot Framework code a lot easier! In this talk I will show what is Robot Framework parsing API, how to use it and how to create your own tool using Robocop and Robotidy as the example.",
                   descriptionExpanded: "New Robot Framework parsing API is great for writing your own tools and scripts for improving your workflow. You can easily read Robot code as Python objects and use them. It's not widely known and this talk will try to clarify how Robot Framework code is parsed and how it is possible to use public API for various small tasks or creating bigger tools like Robocop or Robotidy. ",
@@ -529,7 +531,7 @@ export default {
                 },
 
 
-                { author: "Tatu Aalto",
+                { authors: ["Tatu Aalto"],
                   title: "PythonLibCore the secret behind SeleniumLibrary",
                   description: "PythonLibCore is the secret behind SeleniumLibrary which eases the implementation of the Robot Framework dynamic library API. PythonLibCore made possible of SeleniumLibrary Plugin API and many other things in the library. This live coding session reveals how PythonLibraryCore can be used.",
                   descriptionExpanded: "The PythonLibCore is behind many libraries, like SeleniumLibrary and Browser library. The purpose of the PythonLibCore is the help the libraries to use the Robot Framework dynamic library API. This live coding demonstrates how PythonLibCore can be used, what kind of benefits it offers by using small custom library build on the stage. It also shows what benefits bigger libraries have gained by using PythonLibCore.",
@@ -542,7 +544,7 @@ export default {
                 },
 
 
-                { author: "Mikko Korpela, Tatu Aalto, Kerkko Pelttari and René Rohner",
+                { authors: ["Mikko Korpela, Tatu Aalto, Kerkko Pelttari and René Rohner"],
                   title: "RobotFramework Browser library",
                   description: "A deep dive into the new Browser Library.",
                   descriptionExpanded: "More information coming shortly ...",
@@ -555,12 +557,14 @@ export default {
                 },
 
 
-                { author: "Nils Balkow-Tychsen",
+                { authors: ["Nils Balkow-Tychsen", "Michał Wcisło"],
                   title: "How Kubernetes brings QA and DevOps closer together - A practical approach to DevTestOps",
                   description: "Kubernetes became a key technology for many modern software development teams. We want to show you how it brings QA and DevOps closer together with the help of RF KubeLibrary. It allows you to harden your e2e tests by ensuring the availability and configuration of your system-under-test beforehand.",
                   descriptionExpanded: "<p>Kubernetes, the final frontier.</p><p>These are the voyages of Testers and DevOps Engineers alike.</p><p>It’s a mission to explore strange new technologies.</p><p>To seek out new ways of testing and new roles like DevTestOps.</p><p>To boldly fulfill quality expectations and release schedules, no one has done before.</p><p><b>On a more serious note:</b>By its declarative nature Kubernetes allows bringing testing to the next level. It enables building a holistic approach for Quality Assurance that spans across application, configuration and infrastructure. It can work in both ways, by introducing tests for devops teams and exposing testing teams to platform specifics.</p><p>In this talk we would like to introduce you to the KubeLibrary - RobotFramework library for testing kubernetes. We will explore how it can be used for DevTestOps scenarios by leveraging kubernetes strengths.</p>",
                   bio: "Lead QA Engineer at <a href='https://humanitec.com'>Humanitec</a>. 20 year of experience in software testing through-out different industries like finance, games, IoT and developer platforms. Specializing in test automation for web apps based on microservice architectures.",
+                  secondBio: "DevOps engineer at BNY Mellon. During 9 years in IT got a chance to grab experience in different domains of software craft including research, development, QA and operations. Big fan of TDD, DevOps and automation.",
                   imgUrl: 'Nils_Balkow_Tychsen.jpeg',
+                  secondImgUrl: 'Michal_Wcislo.jpeg',
                   time: {
                       start: "2021-03-18T16:00:00+0000",
                       end:   "2021-03-18T16:30:00+0000",
@@ -568,7 +572,7 @@ export default {
                 },
 
 
-                { author: "Samuel Montgomery-Blinn",
+                { authors: ["Samuel Montgomery-Blinn"],
                   title: "Abusing robotframework-datadriver for fun and profit",
                   description: "After progressing from duplicating test steps to using test templates, you went a step further and starting using CSV files and datadriver. But did you know that datadriver includes a reader_class initialization parameter that you can (ab)use to generate tests from directory listings and REST APIs?",
                   descriptionExpanded: "",
@@ -581,7 +585,7 @@ export default {
                 },
 
 
-                { author: "Raphael Roems",
+                { authors: ["Raphael Roems"],
                   title: "Backend Testing using Robot Framework and SoapUI",
                   description: "Backend testing, which involved data processing, was initiated from a website frontend.",
                   descriptionExpanded: "Goal was to reuse existing SoapUI opensource webservice tests to replace the frontend requests, integrating with Robot Framework for test orchestration and parallel testing aspects, to reduce test execution time.",
@@ -594,7 +598,7 @@ export default {
                 },
 
 
-                { author: "Markus Stahl",
+                { authors: ["Markus Stahl"],
                   title: "robotframework-camunda library: Orchestrating robotic tasks with Camunda",
                   description: "Robot Framework is our favourite tool for automating tasks. Naturally, it requires an orchestrator for triggering executions. Camunda orchestrates process flows and makes processes also visible. With \"robotframework-camunda\" library you can integrate 2 of the greatest open source projects existing.",
                   descriptionExpanded: "",
@@ -607,7 +611,7 @@ export default {
                 },
 
 
-                { author: "Tommi Oinonen",
+                { authors: ["Tommi Oinonen"],
                   title: "What is taking so long?! - An attempt to answer this question",
                   description: "One type of data collected by TestArchiver is the keyword executions trees and statistics on their execution times and occurrences. This is a quick example on how this data can help you to find where to focus on when trying to optimise your test suites.",
                   descriptionExpanded: "When one becomes more familiar with Robot framework, it becomes easier and easier to add layers to you robot code and add complexity there. We know that that complexity in RF should be moved to python as much as possible but that is not always easy. I'll try to show how TestArchiver could really help you there",
@@ -722,7 +726,28 @@ In this workshop you will learn how to use the Qweb library, how to deploy those
                   bio: "",
                   imgUrl: 'rf-icon-500-White.png'
                 },
-
+UPDATED MICHAEL TEXT
+Elevator pitch:
+"Get down & dirty with the RF RequestsLibrary!
+This workshop shows how to operate this lib at the lowest, technical level.
+We will take a deep dive into the lib's inner workings and learn, for instance, how to access the session & response objects directly, to benefit optimally from this library." (edited)
+Title:
+A technical introduction to the RF RequestsLibrary - Advanced tips & tricks
+Description:
+Contents:
+- Overview HTTP support within the RF ecosystem (all libraries compared).
+- RequestsLibrary: it’s place in a typical RF tool stack (architectural overview).
+- Installation RequestsLibrary.
+- Creating and maintaining an HTTP session with RequestsLibrary.
+- The session object: exposed methods, attributes and how to access them.
+- The session object: various ways to manipulate it (e.g. def headers, cookies).
+- Making HTTP requests with RequestsLibrary (based on our session object).
+- The response object: exposed methods, attributes and how to access them.
+- Validate the response: ** status code and message ** headers ** cookies ** the response body
+- Required knowledge: * Robot Framework - Excellent * HTTP concepts (sessions, headers, cookies, etc.) - Good * Object oriented programming concepts - Basic
+Participants should have a good grasp of HTTP related concepts, such as sessions, methods (verbs/nouns), status codes/messages, headers and cookies. We will work with all of those, and will assume the concepts themselves to be understood.
+Participants should have broad experience/skill wrt to working with Robot Framework. For instance, we will employ dictionaries, list, tuples and use the extended variable syntax and basic convenience libraries such as the Collections library. Participants must already know all of these, since learning them obviously is not the goal of the workshop. Too much time spent on these basic concepts will prevent other participants from reaching their learning goals.
+Basic programming concepts (such as objects, methods, attributes, arguments, return values) should be known as well. Again, we will use these and presume them known by all participants.
 
                 {
                   type: "workshop",
@@ -983,14 +1008,14 @@ Any special needs should be requested through the conference organizers, at best
               twitter: false,
               header: "Previous talks - 2020",
               previousTalks: [
-                { author: "Jeff King", title: "ROBOT FRAMEWORK AND THE ONE MAN ROBOT BAND", url: "https://www.youtube.com/embed/0yEnJt6Sf50" },
-                { author: "Anaïs van Asselt", title: "IMPLEMENTING A TEST AUTOMATION ARCHITECTURE IN A GOVERNMENT ORGANIZATION", url: "https://www.youtube.com/embed/Asy5xHl0uRA" },
-                { author: "Antti Karjalainen", title: "THE OPEN RPA ECOSYSTEM", url: "https://www.youtube.com/embed/cO6FxG-RAtQ" },
-                { author: "Petteri Mannersalo", title: "ROBOT FRAMEWORK AS AN ENABLER FOR INTELLIGENT PROCESS AUTOMATION", url: "https://www.youtube.com/embed/ViSKJiuT6xo" },
-                { author: "Tuomas Lempiäinen", title: "QA DRIVEN RPA AT VEIKKAUS", url: "https://www.youtube.com/embed/3Drlg1q4fkM" },
-                { author: "Virpi Luostarinen, Mikael Siirtola", title: "RPA ON RAILS: AUTOMATING MANUAL PROCESSES AT VR", url: "https://www.youtube.com/embed/R7bNgxPjDJ4" },
-                { author: "Kristina Sabotic", title: "END-TO-END TESTING FOR END-USERS", url: "https://www.youtube.com/embed/qkQpzGA51go" },
-                { author: "Luca Giovenzana, Angelo Caovilla", title: "BEWARE THE BRITTLE DRAGON", url: "https://www.youtube.com/embed/rgpqyPblo28" },
+                { authors: ["Jeff King"], title: "ROBOT FRAMEWORK AND THE ONE MAN ROBOT BAND", url: "https://www.youtube.com/embed/0yEnJt6Sf50" },
+                { authors: ["Anaïs van Asselt"], title: "IMPLEMENTING A TEST AUTOMATION ARCHITECTURE IN A GOVERNMENT ORGANIZATION", url: "https://www.youtube.com/embed/Asy5xHl0uRA" },
+                { authors: ["Antti Karjalainen"], title: "THE OPEN RPA ECOSYSTEM", url: "https://www.youtube.com/embed/cO6FxG-RAtQ" },
+                { authors: ["Petteri Mannersalo"], title: "ROBOT FRAMEWORK AS AN ENABLER FOR INTELLIGENT PROCESS AUTOMATION", url: "https://www.youtube.com/embed/ViSKJiuT6xo" },
+                { authors: ["Tuomas Lempiäinen"], title: "QA DRIVEN RPA AT VEIKKAUS", url: "https://www.youtube.com/embed/3Drlg1q4fkM" },
+                { authors: ["Virpi Luostarinen", "Mikael Siirtola"], title: "RPA ON RAILS: AUTOMATING MANUAL PROCESSES AT VR", url: "https://www.youtube.com/embed/R7bNgxPjDJ4" },
+                { authors: ["Kristina Sabotic"], title: "END-TO-END TESTING FOR END-USERS", url: "https://www.youtube.com/embed/qkQpzGA51go" },
+                { authors: ["Luca Giovenzana", "Angelo Caovilla"], title: "BEWARE THE BRITTLE DRAGON", url: "https://www.youtube.com/embed/rgpqyPblo28" },
                 { title: "Lightning Talks I", url: "https://www.youtube.com/embed/0sKyczF0SDE" },
                 { title: "Lightning Talks II", url: "https://www.youtube.com/embed/Xb9npqzJkFY" },
                 { title: "Lightning Talks III", url: "https://www.youtube.com/embed/5axgakabN_0" },
@@ -1000,16 +1025,16 @@ Any special needs should be requested through the conference organizers, at best
                 { title: "Lightning Talks VII", url: "https://www.youtube.com/embed/7Ks8XSM2Uoc" },
                 { title: "Lightning Talks VIII", url: "https://www.youtube.com/embed/jS-HZqLwmIY" },
                 { title: "Lightning Talks IX", url: "https://www.youtube.com/embed/HTZ-R3HgByg" },
-                { author: "Ismo Aro", title: "Day II", url: "https://www.youtube.com/embed/m1KA3PVukhg" },
-                { author: "KEYNOTE: Pekka Klärck", title: "WHAT'S NEW? WHAT'S NEXT? WHO ARE WE?", url: "https://www.youtube.com/embed/DRAu1du3UFU" },
-                { author: "Akseli Lukkarila", title: "ACCEPTANCE TESTING A REAL-TIME MUSIC EDUCATION APPLICATION WITH AUDIO", url: "https://www.youtube.com/embed/Fkh-EQ5O7zo" },
-                { author: "Maria Prokhorova", title: "NEW IMAGE LIBRARY FOR ADVANCED IMAGE PROCESSING", url: "https://www.youtube.com/embed/AWuh-r-T6Yo" },
-                { author: "Tatu Aalto", title: "SELENIUMLIBRARY 4.0: PLUGIN API AND EVENT FIRING WEBDRIVER SUPPORT", url: "https://www.youtube.com/embed/zyNZRTR821Q" },
-                { author: "René Rohner", title: "DATADRIVER OR: HOW I LEARNED TO STOP WORRYING AND LOVE OPEN SOURCE", url: "https://www.youtube.com/embed/RtEUr1i4x3s" },
-                { author: "Tommi Oinonen", title: "SELF MANAGING TESTING PIPELINES", url: "https://www.youtube.com/embed/W3JUzeV8lp4" },
-                { author: "Juho Saarinen", title: "ROBOT FRAMEWORK REMOTE LIBRARY IN PRACTICE (WITH DEMOS)", url: "https://www.youtube.com/embed/B-67yPvMh8Q" },
-                { author: "Maciej Brzozowski", title: "MICROSERVICES TESTING USING ARGO: CONTAINER-NATIVE WORKFLOWS FOR KUBERNETES", url: "https://www.youtube.com/embed/xBBTvv4mz0U" },
-                { author: "Joonas Köppä, Riku Halonen", title: "ORCHESTRATING ROBOT FRAMEWORK TEST CONTAINERS AND REMOTE LIBRARIES IN KUBERNETES", url: "https://www.youtube.com/embed/SypNjILTRl0" },
+                { authors: ["Ismo Aro"], title: "Day II", url: "https://www.youtube.com/embed/m1KA3PVukhg" },
+                { authors: ["KEYNOTE: Pekka Klärck"], title: "WHAT'S NEW? WHAT'S NEXT? WHO ARE WE?", url: "https://www.youtube.com/embed/DRAu1du3UFU" },
+                { authors: ["Akseli Lukkarila"], title: "ACCEPTANCE TESTING A REAL-TIME MUSIC EDUCATION APPLICATION WITH AUDIO", url: "https://www.youtube.com/embed/Fkh-EQ5O7zo" },
+                { authors: ["Maria Prokhorova"], title: "NEW IMAGE LIBRARY FOR ADVANCED IMAGE PROCESSING", url: "https://www.youtube.com/embed/AWuh-r-T6Yo" },
+                { authors: ["Tatu Aalto"], title: "SELENIUMLIBRARY 4.0: PLUGIN API AND EVENT FIRING WEBDRIVER SUPPORT", url: "https://www.youtube.com/embed/zyNZRTR821Q" },
+                { authors: ["René Rohner"], title: "DATADRIVER OR: HOW I LEARNED TO STOP WORRYING AND LOVE OPEN SOURCE", url: "https://www.youtube.com/embed/RtEUr1i4x3s" },
+                { authors: ["Tommi Oinonen"], title: "SELF MANAGING TESTING PIPELINES", url: "https://www.youtube.com/embed/W3JUzeV8lp4" },
+                { authors: ["Juho Saarinen"], title: "ROBOT FRAMEWORK REMOTE LIBRARY IN PRACTICE (WITH DEMOS)", url: "https://www.youtube.com/embed/B-67yPvMh8Q" },
+                { authors: ["Maciej Brzozowski"], title: "MICROSERVICES TESTING USING ARGO: CONTAINER-NATIVE WORKFLOWS FOR KUBERNETES", url: "https://www.youtube.com/embed/xBBTvv4mz0U" },
+                { authors: ["Joonas Köppä", "Riku Halonen"], title: "ORCHESTRATING ROBOT FRAMEWORK TEST CONTAINERS AND REMOTE LIBRARIES IN KUBERNETES", url: "https://www.youtube.com/embed/SypNjILTRl0" },
                 { title: "Day II - Lightning Talks I", url: "https://www.youtube.com/embed/Yjlsl3eHGMI" },
                 { title: "Day II - Lightning Talks II", url: "https://www.youtube.com/embed/jDQWBrYD-w8" },
                 { title: "Day II - Lightning Talks III", url: "https://www.youtube.com/embed/_T_PCx-tVFk" },
@@ -1032,17 +1057,17 @@ Any special needs should be requested through the conference organizers, at best
               twitter: false,
               header: "Previous talks - 2019",
               previousTalks: [
-                { author: "Ismo Aro / Pekka Klärck", title: "Welcome back! What's new since RoboCon 2018?", url: "https://www.youtube.com/embed/wBhY5Z2RoqQ" },
-                { author: "Antti Karjalainen", title: "The start of the open source RPA movement", url: "https://www.youtube.com/embed/uv6dvcoxdvU" },
-                { author: "Juho Saarinen", title: "Evolution of Robot Framework user", url: "https://www.youtube.com/embed/ynUmfWvZxpw" },
-                { author: "Tatu Aalto", title: "Decade with SeleniumLibrary and browsers' UI automation", url: "https://www.youtube.com/embed/HVAnWH8t4rU" },
-                { author: "Brady Hill", title: "RobotFramework for Embedded Software Testing", url: "https://www.youtube.com/embed/0q4-AjqpO9M" },
-                { author: "Nguyen Huu Bach", title: "RENAT - a network testing plugin based on Robot Framework", url: "https://www.youtube.com/embed/FSjmJLq4S4A" },
-                { author: "Mikael Siirtola", title: "Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland", url: "https://www.youtube.com/embed/gxbz5QJWdq4" },
-                { author: "Päivi Raulamo-Jurvanen", title: "Practical Experiences on Evaluating Software Testing Tools", url: "https://www.youtube.com/embed/2qKa3GEqcvY" },
-                { author: "Nicholas Bollweg / Asko Soukka", title: "Robots from Jupyter The Future of Authoring Tests and Tasks", url: "https://www.youtube.com/embed/rbYF_RmiAR8" },
-                { author: "Joonas Lehtimäki", title: "Dynamically scalable test environment on top of Kubernetes", url: "https://www.youtube.com/embed/ivLsjU77Q6c" },
-                { author: "Oleksandr Kravchenko", title: "Dynamic Generation of Model Based Testcases Using Listener Interface Version 3", url: "https://www.youtube.com/embed/qtEYZ5Om1Qk" },
+                { authors: ["Ismo Aro", "Pekka Klärck"], title: "Welcome back! What's new since RoboCon 2018?", url: "https://www.youtube.com/embed/wBhY5Z2RoqQ" },
+                { authors: ["Antti Karjalainen"], title: "The start of the open source RPA movement", url: "https://www.youtube.com/embed/uv6dvcoxdvU" },
+                { authors: ["Juho Saarinen"], title: "Evolution of Robot Framework user", url: "https://www.youtube.com/embed/ynUmfWvZxpw" },
+                { authors: ["Tatu Aalto"], title: "Decade with SeleniumLibrary and browsers' UI automation", url: "https://www.youtube.com/embed/HVAnWH8t4rU" },
+                { authors: ["Brady Hill"], title: "RobotFramework for Embedded Software Testing", url: "https://www.youtube.com/embed/0q4-AjqpO9M" },
+                { authors: ["Nguyen Huu Bach"], title: "RENAT - a network testing plugin based on Robot Framework", url: "https://www.youtube.com/embed/FSjmJLq4S4A" },
+                { authors: ["Mikael Siirtola"], title: "Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland", url: "https://www.youtube.com/embed/gxbz5QJWdq4" },
+                { authors: ["Päivi Raulamo-Jurvanen"], title: "Practical Experiences on Evaluating Software Testing Tools", url: "https://www.youtube.com/embed/2qKa3GEqcvY" },
+                { authors: ["Nicholas Bollweg", "Asko Soukka"], title: "Robots from Jupyter The Future of Authoring Tests and Tasks", url: "https://www.youtube.com/embed/rbYF_RmiAR8" },
+                { authors: ["Joonas Lehtimäki"], title: "Dynamically scalable test environment on top of Kubernetes", url: "https://www.youtube.com/embed/ivLsjU77Q6c" },
+                { authors: ["Oleksandr Kravchenko"], title: "Dynamic Generation of Model Based Testcases Using Listener Interface Version 3", url: "https://www.youtube.com/embed/qtEYZ5Om1Qk" },
                 { title: "Lightning Talks I", url: "https://www.youtube.com/embed/ck_zvTq4zz8" },
                 { title: "Lightning Talks II", url: "https://www.youtube.com/embed/a-27Ot_suEU" },
                 { title: "Lightning Talks III", url: "https://www.youtube.com/embed/hA99dYnlb-s" },
@@ -1067,17 +1092,17 @@ Any special needs should be requested through the conference organizers, at best
               twitter: false,
               header: "Previous talks - 2018",
               previousTalks: [
-                { author: "Ismo Aro", title: "Robot Framework Foundation: Welcome to RoboCon", url: "https://www.youtube.com/embed/eAG18mS8UXA" },
-                { author: "Pekka Klärck", title: "How Did We Get Here? Where Do We Go Next?", url: "https://www.youtube.com/embed/6Kb1M3NECic" },
-                { author: "Régis Déau", title: "The Naked Truth About Successful Test Automation Journey", url: "https://www.youtube.com/embed/Z-9XIGZBf9U" },
-                { author: "Aldina Codesso-Lipponen", title: "Mega Robot Projects - What To Expect", url: "https://www.youtube.com/embed/KsRP9TsZwEQ" },
-                { author: "Asko Soukka", title: "Robot Framework in Plone CMS Project", url: "https://www.youtube.com/embed/iJEWobuwPeI" },
-                { author: "Ed Manlove", title: "The Importance of Open Source Communities", url: "https://www.youtube.com/embed/2GDrtvz_1Ds" },
-                { author: "Anssi Syrjäsalo", title: "Towards Contract - Based API Testing with a New Rest Json Test Library", url: "https://www.youtube.com/embed/TMU4WCIq3NA" },
-                { author: "Tatu Aalto", title: "Extending SeleniumLibrary 3.0", url: "https://www.youtube.com/embed/ZPqQ-RozkYQ" },
-                { author: "Martin Taylor", title: "Design Patterns for Efficient Multi-Platform", url: "https://www.youtube.com/embed/QDaXTkiviT0" },
-                { author: "Mikko Korpela", title: "Parallel test execution with Pabot", url: "https://www.youtube.com/embed/i0RV6SJSIn8" },
-                { author: "", title: "Lightning Talks", url: "https://www.youtube.com/embed/xb1Udosom6o" },
+                { authors: ["Ismo Aro"], title: "Robot Framework Foundation: Welcome to RoboCon", url: "https://www.youtube.com/embed/eAG18mS8UXA" },
+                { authors: ["Pekka Klärck"], title: "How Did We Get Here? Where Do We Go Next?", url: "https://www.youtube.com/embed/6Kb1M3NECic" },
+                { authors: ["Régis Déau"], title: "The Naked Truth About Successful Test Automation Journey", url: "https://www.youtube.com/embed/Z-9XIGZBf9U" },
+                { authors: ["Aldina Codesso-Lipponen"], title: "Mega Robot Projects - What To Expect", url: "https://www.youtube.com/embed/KsRP9TsZwEQ" },
+                { authors: ["Asko Soukka"], title: "Robot Framework in Plone CMS Project", url: "https://www.youtube.com/embed/iJEWobuwPeI" },
+                { authors: ["Ed Manlove"], title: "The Importance of Open Source Communities", url: "https://www.youtube.com/embed/2GDrtvz_1Ds" },
+                { authors: ["Anssi Syrjäsalo"], title: "Towards Contract - Based API Testing with a New Rest Json Test Library", url: "https://www.youtube.com/embed/TMU4WCIq3NA" },
+                { authors: ["Tatu Aalto"], title: "Extending SeleniumLibrary 3.0", url: "https://www.youtube.com/embed/ZPqQ-RozkYQ" },
+                { authors: ["Martin Taylor"], title: "Design Patterns for Efficient Multi-Platform", url: "https://www.youtube.com/embed/QDaXTkiviT0" },
+                { authors: ["Mikko Korpela"], title: "Parallel test execution with Pabot", url: "https://www.youtube.com/embed/i0RV6SJSIn8" },
+                { title: "Lightning Talks", url: "https://www.youtube.com/embed/xb1Udosom6o" },
               ]
             }
           }

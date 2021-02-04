@@ -160,13 +160,6 @@ h2, .link-title {
   font-size: 1.2rem;
 }
 
-h2:not(.no-arrow)::before {
-  content: '> ';
-  color: #01ffd9;
-  position: absolute;
-  left: 1rem;
-}
-
 .color {
   color: #01ffd9;
 }
@@ -784,6 +777,9 @@ table {
 
 .blue {
   color: #01ffd9;
+}
+.border-left-blue {
+  border-left: solid 2px #01ffd9;
 }
 .bg-blue {
   background-color: #262330;
