@@ -53,7 +53,7 @@ export default {
               text:
                 `
                   <p>
-                    Come, join us for the 4th Annual Robot Framework conference. Through the talks and workshops you will learn from your fellow Robot Framework experts. There will be opportunities to network with users and developers. As this year will be online we are bringing you the hallway conversations right to you. So join us for this exciting gathering!
+                    Come, join us for the 4th Annual Robot Framework conference. This year it will again be something special!</p><p>RoboCon is for all of you automation enthusiasts all over the world. Whether you are new to Robot Framework or more advanced user, we are sure you will learn something new. As this year will be online we are bringing the hallway conversations right to you. We have pulled together an amazing virtual playground to connect and meet each other. Through the talks and workshops you will learn from your fellow Robot Framework experts and our excellent keynotes. So join us for this exciting gathering!
                   </p>
                   <p>
                     By buying a ticket you are supporting the ongoing development of Robot Framework.
@@ -83,6 +83,11 @@ export default {
                 title: "Eficode",
                 href: "https://www.eficode.com/",
                 img: require("@/assets/img/sponsors/eficode.png")
+              },
+              {
+                title: "Gofore",
+                href: "https://gofore.com/en/",
+                img: require("@/assets/img/sponsors/gofore.png")
               },
               {
                 title: "Humanitec",
@@ -198,31 +203,31 @@ export default {
               twitter: false,
               header: "Program Day 1 (16th March)",
               talks: [
-                { authors: ["Pekka Klärck"],
+                { authors: ["Pekka Klärck", "Ismo Aro"],
                   title: "Keynote: Where's Robot Framework in 2021",
                   description: "A look at what's new and what's coming next related to Robot Framework itself and the wider ecosystem around it. Co-presented by Ismo Aro. In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka will talk about cool new features in Robot Framework 4.0 as well as what has been happening in the wider Robot Framework ecosystem. After looking at the past and present, we'll talk about the plans for the future.",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
+                  secondBio: 'Ismo has been a user of Robot Framework from 2006. During his career at Nokia, he also worked as a Product Owner of Robot Framework. When the Robot Framework Foundation was established in 2015, he has been Chairman of the Board since.',
                   imgUrl: 'Pekka_Klarck.jpg',
+                  secondImgUrl: 'Ismo_Aro.jpg',
                   keynote: true,
                   time: {
-                      start: "2021-03-16T11:00:00+0000",
-                      end:   "2021-03-16T12:00:00+0000",
+                    start: "2021-03-16T11:00:00+0000",
+                    end: "2021-03-16T12:00:00+0000"
                   }
                 },
-
-
 
                 { authors: ["Mateusz Nojek", "Bartłomiej Hirsz"],
                   title: "How to avoid jail for nasty code?",
                   description: "In Roboland, an ugly code is a crime. It makes people sad, creates bugs, is slower to read and harder to understand. Nobody wants to go to jail, especially unintentionally. Fortunately, there are heroes who can protect innocent citizens from this threat - their names are Robocop and Robotidy.",
                   descriptionExpanded: "This talk is concentrated around concept of writing a clean, beautiful and easy to read code in Robot Framework. During the presentation we will present 2 new tools that can help developers and testers to easily write, maintain and refactor the code. Both tools are configurable which makes them perfect for use in projects where coding guidelines are present but also for the ones where they are going to be established. Robocop and Robotidy are the heroes nobody asked for but everyone needed.",
-                  bio: "Coming soon ..",
+                  bio: "There is no day where I don't think about how we can do better. The space for improvements is bigger than we think. I believe that the quality of work inside the company is as important as the quality of end-product. I try to enhance the productivity inside the teams as a way to achieve customer's satisfaction.<br><br>I have spent 5 years on automation including 3 on Robot Framework and now I feel I can give something back to the community. I really want to share with you my tips on how to write beautifully in Robot Framework. I also started contributing in open-source projects and RoboCop (which I am a co-author of) is the one I will be concentrating during the talk. See you!",
                   secondBio: "I'm Robot Framework and Python enthusiast who loves to contribute to open source projects. As QA I believe in clean and well tested code :)",
                   imgUrl: 'Mateusz_Nojek.jpg',
                   secondImgUrl: 'Bartlomiej_Hirsz.jpeg',
                   time: {
-                      start: "2021-03-16T12:30:00+0000",
-                      end:   "2021-03-16T13:00:00+0000",
+                    start: "2021-03-16T12:30:00+0000",
+                    end: "2021-03-16T13:00:00+0000"
                   }
                 },
 
@@ -235,12 +240,12 @@ export default {
                   imgUrl: 'Many_Kasiriha.jpg',
                   time: {
                       start: "2021-03-16T13:00:00+0000",
-                      end:   "2021-03-16T13:30:00+0000",
+                      end:   "2021-03-16T13:30:00+0000"
                   }
                 },
 
 
-                { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
+                { authors: ["Mikko Korpela, Tatu Aalto, Kerkko Pelttari, René Rohner"],
                   title: "RobotFramework Browser Library",
                   description: "Bringing RF browser automation to year 2021. We'll cover why Browser was created, why it's being adopted and why you should adopt it. And what makes it cool.",
                   descriptionExpanded: "<p>Robot Framework deserves a browser automation solution that's designed for the 2020s.</p><p>Browser library powered by Playwright provides.<ul><li>Speed, reliability and visibility.</li><li>Conscise assertions.</li><li>Precise and fast browser window and tab control.</li><li>Chainable selector strategies.</li><li>Good shadow DOM support.</li><li>Easy mobile device descriptors.</li><li>Sending HTTP requests.</li></ul></p>",
@@ -248,7 +253,7 @@ export default {
                   imgUrl: 'Mikko_Tatu_Kerkko_Rene.png',
                   time: {
                       start: "2021-03-16T14:30:00+0000",
-                      end:   "2021-03-16T15:00:00+0000",
+                      end:   "2021-03-16T15:00:00+0000"
                   }
                 },
 
@@ -292,12 +297,14 @@ export default {
                 },
 
 
-                { authors: ["Patrik Zakovič"],
+                { authors: ["Patrik Zakovič", "Marián Macek"],
                   title: "The journey of building test automation platform in the bank",
                   description: "From custom web tool for data preparation,  through test automation pipelines to in-house mobile devices farm. Every part of our platform is perfect proof that open-source tools including Robot Framework can be really powerful and useable also in an organization such as the biggest bank in Slovakia.",
                   descriptionExpanded: "At the beginning there was an idea to get rid of routine, repetitive work. From automation of the first test cases on local computers to fully integrated test automation platform used by dozens of users. It includes scheduled pipelines, data preparation web tool, in-house mobile devices farm and other components. For successful implementation of the test platform in the bank with various types of applications it was crucial to find a tool that can automate everything. We have found it in Robot Framework.",
-                  bio: "Experienced Test & RPA Developer with economy background. Passionate web developer. As a co-creator of test automation platform in the bank I have been in touch with technologies like Robot Framework, Jenkins and so on. The mentioned tech stack and collaboration on DevOps project has also been a perfect start point for my successful implementation of RPA solution in the same business. I believe that routine, repetitive tasks should be automated, best with an open-source stack.",
+                  bio: "Experienced Test & RPA Developer with economy background. Passionate web developer. As a co-creator of test automation platform in the bank I have been in touch with technologies like Robot Framework, Jenkins and so on. The mentioned tech stack and collaboration on DevOps project has also been a perfect start point for my successful implementation of RPA solution in the same business.<br><br>I believe that routine, repetitive tasks should be automated, best with an open-source stack.",
+                  secondBio: 'I am an open minded person with many years of experience in testing of banking systems for two largest banks in Slovakia and Czech Republic. I have strong knowledge in banking business as well as great IT skills. My present career passion is to co-create the test automation platform for Slovenska sporitelna, which is fully based on open source tools. And personally, I\'m very proud, that its part is also the mobile device farm, designed and built from scratch on our own.',
                   imgUrl: 'Patrik_Zakovic.jpeg',
+                  secondImgUrl: 'Marian_Macek.jpg',
                   time: {
                       start: "2021-03-16T16:30:00+0000",
                       end:   "2021-03-16T17:00:00+0000",
@@ -441,7 +448,7 @@ export default {
                   title: "Hyperautomation or hype-automation: the automation landscape of the future",
                   description: "Software automation helped accelerate value delivery and reduce costly work. Now, it is, paradoxically, becoming an expensive bottle-neck itself.",
                   descriptionExpanded: "This presentation discusses the trends in hyper-automation and the drivers behind them, trying to pave the road to the future of software automation.",
-                  bio: `Esko Hannula, CEO of Qentinel, is an experienced business leader with a long experience in software and service in general management, R&D and business development positions. Although Esko has never worked in full-time testing roles, software quality, testing, and automation have always been a part of his professional life. For the past many years he has served as the CEO of Qentinel, growing the company to one of the top few QA consultancies in Finland and recently re-shaping it into a SaaS business for test automation. Understanding and communicating the interdepency of software quality and business performance is Esko’s professional passion.
+                  bio: `Esko Hannula, CEO of Qentinel, is an experienced business leader with a long experience in software and service in general management, R&D and business development positions. Although Esko has never worked in full-time testing roles, software quality, testing, and automation have always been a part of his professional life. For the past many years he has served as the CEO of Qentinel, growing the company to one of the top few QA consultancies in Finland and recently re-shaping it into a SaaS business for test automation. Understanding and communicating the interdepency of software quality and business performance is Esko’s professional passion.<br><br>
                   Esko is known for visionary and sometimes controversial ideas and many perceive him as an irritating besserwisser. In 2017, Esko published a book 'Three Skills of Advantage', that explains his views on how quality creates value. In his spare time, Esko likes wandering around in the woods and developing his crazy ideas.`,
                   imgUrl: 'Esko_Hannula.jpeg',
                   time: {
