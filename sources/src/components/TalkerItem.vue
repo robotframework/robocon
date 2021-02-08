@@ -26,7 +26,7 @@
       <div
         v-if="time.start !== '' && time.end !== ''"
         class="white type-body">
-        <span class="blue">{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
+        <span class="blue">{{ type === 'workshop' ? `${dateString(time.start)} ` : '' }}{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
       </div>
     </div>
     <transition
@@ -48,7 +48,7 @@
           <div
             v-if="time.start !== '' && time.end !== ''"
             class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
-            {{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
+            {{ type === 'workshop' ? `${utc_dateString(time.start)} ` : '' }}{{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
           </div>
           <p
             class="col-12 mt-2"
@@ -201,6 +201,11 @@ export default {
   },
   methods: {
     dateString(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, moment.tz.guess()).format("DD MMM")
+    },
+    utc_dateString(dataTime) {
       const locale = window.navigator.userLanguage || window.navigator.language;
       moment.locale(locale);
       return moment.tz(dataTime, "Africa/Freetown").format("DD MMM")
