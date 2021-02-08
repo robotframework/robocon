@@ -5,17 +5,21 @@
         <h1 :class="{'mb-0' : data.talks}" v-html="data.header"/>
         <!--<p style="font-size: 1rem" v-if="data.talks">(Click person's name for more info)</p>-->
       </div>
+      <button
+        v-if="data.previousTalks || data.textHiddenByDefault"
+        type="button"
+        @click="hiddenContentShown = !hiddenContentShown"
+        class="button-primary mt-4">
+        {{ hiddenContentShown ? 'Hide' : 'Show' }}
+      </button>
       <div
-        v-if="data.text"
+        v-if="data.text && (!data.textHiddenByDefault || hiddenContentShown)"
         v-html="data.text"
         class="row order-2 block-text textblock-right p-3 no-border" />
       <div
         v-if="data.previousTalks">
-        <button type="button" @click="talksShown = !talksShown" class="button-primary mt-4">
-          {{ talksShown ? 'Hide' : 'Show' }}
-        </button>
         <transition appear name="fade">
-          <div v-if="talksShown" class="mt-4">
+          <div v-if="hiddenContentShown" class="mt-4">
             <talker-item
               v-for="(talk, key) in data.previousTalks"
               :key="key"
@@ -100,7 +104,7 @@ export default {
         chrome:
           window.innerWidth < 992 ? ["nofooter", "noscroll"] : ["nofooter"]
       },
-      talksShown: false
+      hiddenContentShown: false
     };
   },
   computed: {
@@ -112,9 +116,10 @@ export default {
     }
   },
   created() {
-    if (!this.data.talks) return
     const anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null
-    if (this.data.talks.some(({ title }) => anchor === title.replace(/ /g, '-').toLowerCase())) this.talksShown = true
+    if (this.data.textHiddenByDefault && anchor === this.data.header.replace(/ /g, '-').toLowerCase()) this.hiddenContentShown = true
+    if (!this.data.talks) return
+    if (this.data.talks.some(({ title }) => title && anchor === title.replace(/ /g, '-').toLowerCase())) this.hiddenContentShown = true
   }
 };
 </script>

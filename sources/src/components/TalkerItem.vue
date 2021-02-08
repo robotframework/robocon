@@ -1,10 +1,8 @@
 <template>
   <div
-    :class="[header === '' && type === 'workshop' ? 'mb-5 pb-4' : `mb-5 ${isMobile ? '' : 'p-3'}`, {['bg-blue pb-3']: keynote}]"
-    :style="header === '' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
-    <div v-if="margin" class="mt-5" />
+    :class="[`mb-5 ${isMobile ? '' : 'p-1'}`, {['bg-blue pb-3']: keynote}]">
     <div v-if="header !== ''">
-      <h2 class="white no-arrow mt-4">{{ header }}</h2>
+      <h2 class="white mt-4">{{ header }}</h2>
     </div>
     <div v-else class="ml-0 pl-2 border-left-blue">
       <h3
@@ -47,11 +45,13 @@
         </div>
         <!-- talk description expanded -->
         <div v-else class="row talk-description">
-          <div class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
+          <div
+            v-if="time.start !== '' && time.end !== ''"
+            class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
             {{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
           </div>
           <p
-            class="col-12"
+            class="col-12 mt-2"
             v-html="description" />
           <p
             v-if="descriptionExpanded !== ''"
@@ -102,9 +102,7 @@
         class="talk-description mt-2 cursor--pointer"
         style="padding-left: calc(0.5rem + 2px);"
         @click="hasExpandableContent ? expanded = !expanded : null">
-        <p>
-          {{ description.slice(0, 200).trim() }}...
-        </p>
+        <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
       </div>
     </transition>
   </div>
@@ -155,10 +153,6 @@ export default {
     header: {
       type: String,
       default: ''
-    },
-    margin: {
-      type: Boolean,
-      default: false
     },
     type: {
       type: String,
