@@ -991,6 +991,25 @@ Any special needs should be requested through the conference organizers, at best
           }
         }, */
         {
+          title: "For-speakers",
+          text_block_centered: true,
+          data: {
+            text: {
+              twitter: false,
+              header: "For speakers",
+              text:
+                `
+                  <p>
+                    Please take a look at <a href="https://guildconferences.com/speakerkit/">SpeakerKit</a> for general guidelines about recording the talk.
+                  </p>
+                  <p>
+                    There is a <a href="${require('./assets/template/RoboCon2021_Templ.potx')}">PowerPoint template</a> that will match the conference theme. If you want to use your own feel free to do so.
+                  </p>
+                `
+            }
+          }
+        },
+        {
           title: "CoC",
           text_block: false,
           text_block_centered: true,
