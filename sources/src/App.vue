@@ -56,6 +56,9 @@ export default {
                     Come, join us for the 4th Annual Robot Framework conference. This year it will again be something special!</p><p>RoboCon is for all of you automation enthusiasts all over the world. Whether you are new to Robot Framework or more advanced user, we are sure you will learn something new. As this year will be online we are bringing the hallway conversations right to you. We have pulled together an amazing virtual playground to connect and meet each other. Through the talks and workshops you will learn from your fellow Robot Framework experts and our excellent keynotes. So join us for this exciting gathering!
                   </p>
                   <p>
+                    Robot Framework is a generic open source automation framework. It can be used for test automation and robotic process automation (RPA). <a href="https://robotframework.org/">More information about Robot Framework.</a>
+                  </p>
+                  <p>
                     By buying a ticket you are supporting the ongoing development of Robot Framework.
                   </p>
                 `
