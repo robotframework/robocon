@@ -649,8 +649,8 @@ export default {
             text: {
               twitter: false,
               header: "Workshops",
-              text: '<p>TBA!</a>',
-            /*  talks: [
+              text: '',
+              talks: [
                 { type: "workshop", header: 'Half-day workshops' },
 
                 {
@@ -658,26 +658,9 @@ export default {
                   author: "Luca Giovenzana",
                   title: "HTTP api testing and RPA with RequestsLibrary",
                   description: "This workshop is about HTTP api for direct test or as prerequisites for your end to end test automation suite.",
-                  descriptionExpanded: "This workshop is about HTTP api for direct test or as prerequisites for your end to end test automation suite.
-
-You will learn:
-- how to setup a basic API testing/rpa project using the RequestsLibrary
-- how to handle shared session and authentication
-- how to validate the response
-- what to address with api testing in your test suite
-- how to use RF for basic stress tests
-- how to use pabot and RequestsLibrary to execute many requests in parallel
-
-We will use the new 0.9 pre-release version and we will talk about the development roadmap.",
-                  bio: "https://www.linkedin.com/in/lucagiovenzana/
-
-Luca Giovenzana is an Open Source and Linux passionate guy.
-Before discovering RobotFramework he built his own Python framework to remotely control and test Linux based firewalls.
-He has been Head of QA for many years and, together with an amazing team, created a full stack test automation suite with more than 2 thousands test cases.
-Now he fosters the Quality culture as an Agile Coach.
-Together with Angelo Caovilla founded the RobotFramework Italian community and Meetup.
-He contributes to the community and he is the maintainer of RequestsLibrary.",
-                  imgUrl: 'rf-icon-500-White.png'
+                  descriptionExpanded: "<p>This workshop is about HTTP api for direct test or as prerequisites for your end to end test automation suite.</p><p>You will learn:<ul><li>how to setup a basic API testing/rpa project using the RequestsLibrary</li><li>how to handle shared session and authentication</li><li>how to validate the response</li><li>what to address with api testing in your test suite</li><li>how to use RF for basic stress tests</li><li>how to use pabot and RequestsLibrary to execute many requests in parallel</li></ul></p><p>We will use the new 0.9 pre-release version and we will talk about the development roadmap.</p>",
+                  bio: "Luca Giovenzana is an Open Source and Linux passionate guy. Before discovering RobotFramework he built his own Python framework to remotely control and test Linux based firewalls. He has been Head of QA for many years and, together with an amazing team, created a full stack test automation suite with more than 2 thousands test cases. Now he fosters the Quality culture as an Agile Coach. Together with Angelo Caovilla founded the RobotFramework Italian community and Meetup. He contributes to the community and he is the maintainer of RequestsLibrary.",
+                  imgUrl: 'Luca_Giovenzana.jpeg'
                 },
 
 
@@ -686,27 +669,9 @@ He contributes to the community and he is the maintainer of RequestsLibrary.",
                   author: "Joshua Gorospe",
                   title: "Getting started with the robotframework-appiumlibrary",
                   description: "This workshop will demonstrate setting up and using the robotframework-appiumlibrary to test iOS and Android apps. This will focus on a beginner audience level.",
-                  descriptionExpanded: "Summary:
-The examples and demonstrations in this workshop session will walk a beginner through the following...
-
-- Set up Appium and robotframework-appiumlibrary on a new machine.
-- Set up iOS simulators on a new machine.
-- Set up Android emulators on a new machine.
-- Demonstrate basic robotframework-appiumlibrary automation workflow examples.
-- Demonstrate robotframework-appiumlibrary examples that utilize PaBot.
-- Bonus Content: Demonstrate useful Appium Desktop features.
-- Bonus Content: Demonstrate combining Charles Proxy with robotframework-appiumlibrary examples.
-
-Audience Takeaway:
-A Github repo containing all of the examples and the presentation slides. (coming soon... it will be kept here -> https://github.com/jg8481)",
-                  bio: "Currently writing a book. https://leanpub.com/toolstrategiesforlonetesters
-
-Currently working on various vulnerability and threat detection products at Secureworks, as a Principal QA Engineer. Was a Test Engineering Lead in Koala (https://koala.io/) working on web, mobile app, and APIs used for ordering and point-of-sale systems. Was a Senior Test Engineer in Intersection Co. (a Sidewalk Labs and Alphabet owned company) for the Intersection (ICS) Connected Communities Team working on test design and test strategy leadership for several initiatives with Hudson Yards, Related Company, and other clients. I run, monitor, and build the test infrastructure for the ICS (Intersection Consulting & Solutions) Buildkite CI pipelines. I also create and maintain several types of daily tests for the Hudson Yards Technology Platform, a technology platform used to integrate multiple building management systems for security, facial recognition, surveillance, visitor management systems, and building sensor data. I also worked on the Hertz eCommerce Test Tools Team for approximately 5 years.
-
-I love testing. I research and experiment with software test oracles, machine learning tools, model based test tools, GraphWalker, Kali Linux, Docker security tools, Haskell + Rust + Python + Go-lang + Elixir-lang test tools, Sikuli X IDE, various Robot Framework libraries, Appium, Zapier, Slack + Jenkins integrations with other CI tools (using my own approaches inspired by ChatOps pipeline patterns), headless Firefox Robot Framework scripts using an XVFB library (on Ubuntu), API testing with Robot Framework/Haskell/Rust, researching various test tools for creating cross-platform scalable tests using Docker containers, Kubernetes pods, GCP and AWS. Also created Test Results Metrics dashboards using Robot Framework's results and TestRail.
-
-",
-                  imgUrl: 'rf-icon-500-White.png'
+                  descriptionExpanded: "<p>Summary: The examples and demonstrations in this workshop session will walk a beginner through the following...</p><p><ul<li>Set up Appium and robotframework-appiumlibrary on a new machine.</li><li>Set up iOS simulators on a new machine.</li><li>Set up Android emulators on a new machine.</li><li>Demonstrate basic robotframework-appiumlibrary automation workflow examples.</li><li>Demonstrate robotframework-appiumlibrary examples that utilize PaBot.</li><li>Bonus Content: Demonstrate useful Appium Desktop features.</li><li>Bonus Content: Demonstrate combining Charles Proxy with robotframework-appiumlibrary examples.</li></ul></p><h2 class='no-arrow'>Audience Takeaway:</h2>A Github repo containing all of the examples and the presentation slides. (coming soon... it will be kept here -> https://github.com/jg8481)</p>",
+                  bio: "<p>Currently writing a book. https://leanpub.com/toolstrategiesforlonetesters</p><p>Currently working on various vulnerability and threat detection products at Secureworks, as a Principal QA Engineer. Was a Test Engineering Lead in Koala (https://koala.io/) working on web, mobile app, and APIs used for ordering and point-of-sale systems. Was a Senior Test Engineer in Intersection Co. (a Sidewalk Labs and Alphabet owned company) for the Intersection (ICS) Connected Communities Team working on test design and test strategy leadership for several initiatives with Hudson Yards, Related Company, and other clients. I run, monitor, and build the test infrastructure for the ICS (Intersection Consulting & Solutions) Buildkite CI pipelines. I also create and maintain several types of daily tests for the Hudson Yards Technology Platform, a technology platform used to integrate multiple building management systems for security, facial recognition, surveillance, visitor management systems, and building sensor data. I also worked on the Hertz eCommerce Test Tools Team for approximately 5 years.</p><p>I love testing. I research and experiment with software test oracles, machine learning tools, model based test tools, GraphWalker, Kali Linux, Docker security tools, Haskell + Rust + Python + Go-lang + Elixir-lang test tools, Sikuli X IDE, various Robot Framework libraries, Appium, Zapier, Slack + Jenkins integrations with other CI tools (using my own approaches inspired by ChatOps pipeline patterns), headless Firefox Robot Framework scripts using an XVFB library (on Ubuntu), API testing with Robot Framework/Haskell/Rust, researching various test tools for creating cross-platform scalable tests using Docker containers, Kubernetes pods, GCP and AWS. Also created Test Results Metrics dashboards using Robot Framework's results and TestRail.</p>",
+                  imgUrl: 'Joshua_Gorospe.png'
                 },
 
 
@@ -715,14 +680,9 @@ I love testing. I research and experiment with software test oracles, machine le
                   author: "Pekka Klärck",
                   title: "Extending Robot Framework with libraries, listeners, and so on",
                   description: "Deep end workshop.",
-                  descriptionExpanded: "In this workshop you will learn how to extend Robot Framework using various different interfaces. The first half of the workshop is dedicated to the library API, starting from basics and quickly continuing to more advanced topics like the dynamic library interface (used e.g. by SeleniumLibrary) and automatic argument type conversion. During the second half you will get familiar with other extending and integration possibilities such as the listener API, parsing API, modifying tests dynamically before execution, starting execution programmatically and analyzing results.
-
-This workshop is for you if you already know basics of using Robot Framework, includingo basics of writing tests libraries, and want to take your skills to the next level. These skills make it easier to adapt the framework to your own needs in different contexts.
-
-The workshop is 100% hands-on, no slides, learn-by-doing. In addition to learning from the person who has designed these powerful APIs, you have a change to ask hard questions related Robot Framework from its creator.
-",
+                  descriptionExpanded: "<p>In this workshop you will learn how to extend Robot Framework using various different interfaces. The first half of the workshop is dedicated to the library API, starting from basics and quickly continuing to more advanced topics like the dynamic library interface (used e.g. by SeleniumLibrary) and automatic argument type conversion. During the second half you will get familiar with other extending and integration possibilities such as the listener API, parsing API, modifying tests dynamically before execution, starting execution programmatically and analyzing results.</p><p>This workshop is for you if you already know basics of using Robot Framework, includingo basics of writing tests libraries, and want to take your skills to the next level. These skills make it easier to adapt the framework to your own needs in different contexts.</p><p>The workshop is 100% hands-on, no slides, learn-by-doing. In addition to learning from the person who has designed these powerful APIs, you have a change to ask hard questions related Robot Framework from its creator.</p>",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
-                  imgUrl: 'rf-icon-500-White.png'
+                  imgUrl: 'Pekka_Klarck.jpg'
                 },
                 { type: "workshop", header: 'Full-day workshops', margin: true },
                 {
@@ -730,11 +690,9 @@ The workshop is 100% hands-on, no slides, learn-by-doing. In addition to learnin
                   author: "Henri Terho",
                   title: "Workshop on Qentinel pace and open source Qweb",
                   description: "One of the main goals of Qentinel this year is to support the community around robot framework and to support this effort we are open sourcing our web technologies and libraries. In this workshop we will share how to use them effectively and how to create the most maintainable web tests possible!",
-                  descriptionExpanded: "Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests usign Qweb (FOR reviewers: the name of the library might change as we brand it as open source) on the local environemnt and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.
-
-In this workshop you will learn how to use the Qweb library, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the Qweb library as standalone in your application and how it compares to Playwright, Selenium and other leading libraries. ",
+                  descriptionExpanded: "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests usign Qweb (FOR reviewers: the name of the library might change as we brand it as open source) on the local environemnt and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use the Qweb library, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the Qweb library as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>",
                   bio: "",
-                  imgUrl: 'rf-icon-500-White.png'
+                  imgUrl: 'Henri-Terho.png'
                 },
 UPDATED MICHAEL TEXT
 Elevator pitch:
@@ -763,46 +721,14 @@ Basic programming concepts (such as objects, methods, attributes, arguments, ret
                   type: "workshop",
                   author: "Michael Hallik",
                   title: "WORKSHOP: HTTP-level testing with the Robot Framework RequestsLibrary",
-                  description: "Experience the power, versatility and simplicity of Robot Framework!
-
-In this workshop, we will cover everything from creating and maintaining an HTTP session, to validating every aspect of the response and everything in between.
-
-Stop testing the GUI exclusively & start automating against the API!",
-                  descriptionExpanded: "Contents:
-
-* Use cases for HTTP-level test automation.
-* HTTP compared to other API-level test automation interfaces (e.g. SOAP).
-* Web-api vs. REST-api.
-* Overview HTTP support within the RF ecosystem (all libraries compared).
-* RequestsLibrary: it's place in a typical RF tool stack (architectural overview).
-* Installation RequestsLibrary.
-* Creating and maintaining an HTTP session with RequestsLibrary.
-* The session object: exposed methods, attributes and how to access them.
-* The session object: various ways to manipulate it (e.g. def headers, cookies).
-* Making HTTP requests with RequestsLibrary (based on our session object).
-* The response object: exposed methods, attributes and how to access them.
-* Validate the response:
-** status code and message
-** headers
-** cookies
-** the response body
-
-Required knowledge:
-* Robot Framework - Excellent
-* HTTP concepts (sessions, headers, cookies, etc.) - Good
-* Object oriented programming concepts - Basic
-
-Participants should have a good grasp of HTTP related concepts, such as sessions, methods (verbs/nouns), status codes/messages, headers and cookies. We will work with all of those, and will assume the concepts themselves to be understood.
-
-Participants should have broad experience/skill wrt to working with Robot Framework. For instance, we will employ dictionaries, list, tuples and use the extended variable syntax and basic convenience libraries such as the Collections library. Participants *must* already know all of these, since learning them obviously is not the goal of the workshop. Too much time spent on these basic concepts will prevent other participants from reaching their learning goals.
-
-Basic programming concepts (such as objects, methods, attributes, arguments, return values) should be known as well. Again, we will use these and presume them known by all participants.",
-                  bio: "Michael has been a software tester since 2000, in various roles.
-
-His first exposure to Robot Framework (and test automation) came as early as 2011. It was love at first sight. Since then he has utilized its unmatched power and versatility within such disparate domains as banking, real estate, insurance and the worlds of CMS, CDP and EDP systems. Just as diverse have been the interfaces that had to be automated against. But regardless whether it were web GUIs, SOAP services, database APIs, REST-APIs, proprietary JAVA APIs, MQ or ILE RPG based mainframe systems: RF and its rich ecosystem always came to the rescue.
-
-Michael has written extensively about various aspects of working with Robot Framework, in the form of a series of blog posts. He has also created his own series of Robot Framework related workshops, around themes such as the Remote Library Interface, the testing of RESTful JSON APIs or the testing of SOAP services. For Michael's profile, please see: linkedin.com/in/michaelhallik/",
-                  imgUrl: 'rf-icon-500-White.png'
+                  time: {
+                      start: "2021-03-15T09:00:00+0000",
+                      end:   "2021-03-15T18:00:00+0000",
+                  },
+                  description: "Experience the power, versatility and simplicity of Robot Framework! Stop testing the GUI exclusively & start automating against the API!",
+                  descriptionExpanded: "<p>In this workshop, we will cover everything from creating and maintaining an HTTP session, to validating every aspect of the response and everything in between.</p><h2 class='no-arrow'>Contents:</h2><ul><li>Use cases for HTTP-level test automation.</li><li>HTTP compared to other API-level test automation interfaces (e.g. SOAP).</li><li>Web-api vs. REST-api.</li><li>Overview HTTP support within the RF ecosystem (all libraries compared).</li><li>RequestsLibrary: it's place in a typical RF tool stack (architectural overview).</li><li>Installation RequestsLibrary.</li><li>Creating and maintaining an HTTP session with RequestsLibrary.</li><li>The session object: exposed methods, attributes and how to access them.</li><li>The session object: various ways to manipulate it (e.g. def headers, cookies).</li><li>Making HTTP requests with RequestsLibrary (based on our session object).</li><li>The response object: exposed methods, attributes and how to access them.</li><li>Validate the response:<ul><li>status code and message</li><li>headers</li><li>cookies</li><li>the response body</li></ul></li></ul><h2 class='no-arrow'>Required knowledge:</h2><ul><li>Robot Framework - Excellent</li><li>HTTP concepts (sessions, headers, cookies, etc.) - Good</li><li>Object oriented programming concepts - Basic</li></ul><p>Participants should have a good grasp of HTTP related concepts, such as sessions, methods (verbs/nouns), status codes/messages, headers and cookies. We will work with all of those, and will assume the concepts themselves to be understood.</p><p>Participants should have broad experience/skill wrt to working with Robot Framework. For instance, we will employ dictionaries, list, tuples and use the extended variable syntax and basic convenience libraries such as the Collections library. Participants *must* already know all of these, since learning them obviously is not the goal of the workshop. Too much time spent on these basic concepts will prevent other participants from reaching their learning goals.</p><p>Basic programming concepts (such as objects, methods, attributes, arguments, return values) should be known as well. Again, we will use these and presume them known by all participants.</p><h2 class='no-arrow'>Schedule:</h2>Note there will be a one hour break starting at UTC 13:00 with the workshop resuming at UTC 14:00.",
+                  bio: "<p>Michael has been a software tester since 2000, in various roles.</p><p>His first exposure to Robot Framework (and test automation) came as early as 2011. It was love at first sight. Since then he has utilized its unmatched power and versatility within such disparate domains as banking, real estate, insurance and the worlds of CMS, CDP and EDP systems. Just as diverse have been the interfaces that had to be automated against. But regardless whether it were web GUIs, SOAP services, database APIs, REST-APIs, proprietary JAVA APIs, MQ or ILE RPG based mainframe systems: RF and its rich ecosystem always came to the rescue.</p><p>Michael has written extensively about various aspects of working with Robot Framework, in the form of a series of blog posts. He has also created his own series of Robot Framework related workshops, around themes such as the Remote Library Interface, the testing of RESTful JSON APIs or the testing of SOAP services. For Michael's profile, please see: linkedin.com/in/michaelhallik/</p>",
+                  imgUrl: 'Michael-Hallik.jpg'
                 },
 
 
@@ -810,81 +736,32 @@ Michael has written extensively about various aspects of working with Robot Fram
                   type: "workshop",
                   author: "Maria Prokhorova",
                   title: "Image Library Workshop",
+                  time: {
+                      start: "2021-03-15T10:00:00+0000",
+                      end:   "2021-03-15T18:00:00+0000",
+                  },
                   description: "The workshop is aimed to acquaint RobotFramework users with the Image Library. The attendees will learn about the library structure and design, get the detailed explanation about its effective usage and appliance along with an ability to try it practically and with their personal cases.",
-                  descriptionExpanded: "Since the new major update of the library will be present soon the workshop is aimed to deep into new updates.
-
-Along with some theory about the library in the beginning of the workshop we will focus on the specificity of keywords which help to automate almost any kind of tasks requiring only interaction with UI elements. Listeners will practice the keywords right during the workshop.
-
-
-##### Agenda
-1. Introduction lecture
-2. Keywords and concepts explanation with examples
-3. Practice section
-        1) Working in small groups.
-        2) Solving testing tasks with Image Library
-        3) Ideas sharing
-4. Discussion
-
-
-##### What to expect from this library:
-The following concepts of the library will be thoroughly discussed:
-- `YAML format`
-To store and organize images entities effectively with the yaml format as a config file for to call them easy in test script.
-- `Windows`
-What is being understood under 'window' and how to deal with it.
-- `Templates`
-Detailed explanation of the templates idea as the key concept of the library.
-- `Images`
-For those who don't need complex templates' structure - automation simply with images is also possible.
-- `Animations`
-Some keywords to check the animations.
-- `Buttons`
-New version of Library contains different types of buttons, their settings and ways of implementation.
-- `Recognition`
-Extracting text information from screen.",
-                  bio: "Mobile QA Engineer at Hyundai Mobility Lab
-Over 5 years in Test Automtaion
-Lead developer of Image Library (RobotFramework)",
-                  imgUrl: 'rf-icon-500-White.png'
+                  descriptionExpanded: "<p>Since the new major update of the library will be present soon the workshop is aimed to deep into new updates.</p><p>Along with some theory about the library in the beginning of the workshop we will focus on the specificity of keywords which help to automate almost any kind of tasks requiring only interaction with UI elements. Listeners will practice the keywords right during the workshop.</p><h2 class='no-arrow'>Agenda</h2><ul><li>Introduction lecture</li><li>Keywords and concepts explanation with examples</li><li>Practice section<ul><li>Working in small groups. </li><li>Solving testing tasks with Image Library</li><li>Ideas sharing</li></ul></li><li>Discussion</li></ul><h2 class='no-arrow'>What to expect from this library:<h2>The following concepts of the library will be thoroughly discussed:<br><h3 class='mb-0'>`YAML format`</h3> - To store and organize images entities effectively with the yaml format as a config file for to call them easy in test script.<br><h3 class='mb-0'>`Windows`</h3> - What is being understood under 'window' and how to deal with it.<br><h3 class='mb-0'>`Templates`</h3> - Detailed explanation of the templates idea as the key concept of the library.<br><h3 class='mb-0'>`Images`</h3> - For those who don't need complex templates' structure - automation simply with images is also possible.<br><h3 class='mb-0'>`Animations`</h3> - Some keywords to check the animations.<br><h3 class='mb-0'>`Buttons`</h3> - New version of Library contains different types of buttons, their settings and ways of implementation. <br><h3 class='mb-0'>`Recognition`</h3> - Extracting text information from screen.",
+                  bio: "Mobile QA Engineer at Hyundai Mobility Lab. Over 5 years in Test Automtaion. Lead developer of Image Library (RobotFramework)",
+                  imgUrl: 'Maria-Prokhorova.jpg'
                 },
 
 
                 {
                   type: "workshop",
-                  author: "Ed Manlove",
+                  author: "Tatu Aalto, Ed Manlove",
                   title: "Advanced SeleniumLibrary and Robot Framework",
+                  time: {
+                      start: "2021-03-15T14:00:00+0000",
+                      end:   "2021-03-15T21:00:00+0000",
+                  },
                   description: "Techniques and tooling to ease up web testing and automation by expert developers and maintainer of the SeleniumLibrary. If you need to beef up your Selenium tests, this is the course for you.",
-                  descriptionExpanded: "Outline/overview of the workshop
-
-Browser Configuration - We will be taking a look at desired capabilities, Selenium options and Firefox profile. Differences between Open Browser and Create WebDriver keywords will be highlighted. Finally we will build small examples showing how to configure the browser in different situations.
-Advanced Debugging - The course will cover when encountering flaky test(s), where to look and how to stabilize them.
-Parallel Execution - We'll discuss running SeleniumLibrary in parallel with pabot and Selenium grid.
-API - SeleniumLibrary has an public API which allows users to extend on top of the SeleniumLibrary. Here we take a look what is available in the public API.
-Expanding the library - Looking at different pros and cons we will talk about how to extend SeleniumLibrary as well as building a new library and the Plugin API. We will show a small example. And we will discuss overriding existing keywords with functionality not covered by Selenium.
-EventFiringWebDriver - Using and abusing EventFiringWebDriver for monitoring events and how they affect the interactions with SUT will be covered.
-Page Objects - What are page objects and where it might be useful.
-Python Page objects verses SeleniumLibrary - Looking inside of a page object library and how to build one.
-Checking for time of tests - We will talk about verifying and reacting to execution times of tests/keywords/suites either via tags or the separate Timer library.
-Using Javascript to interact with SUT - Extending SeleniumLibrary with new keywords where functionality is implemented in Javascript.
-
-Learning Outcomes: At the end of the workshop, user should have broad overview of advanced features of SeleniumLibrary, web automation and ways to extend and debug test tooling.
-
-Target Audience: This workshop is for people with previous hands on experience with testing in Robot Framework & SeleniumLibrary. Students should already have experience testing web applications, know how to identify locators for web elements and validate those locators, and feel comfortable working with SeleniumLibrary. Although the course will take a measured pace through the material, students should be prepared for advanced topics that will be thoroughly explained.
-
-This workshop will be presented in English with two presenters, one who is bi-lingual in Finnish and English and the other English only.
-
-Prerequisites:
-* All participates will need to bring a laptop pre-configured to the workshop.
-* Participates must have access to add and modify software on their laptops.
-* Detailed setup instructions will be shared couple of weeks before workshop day.
-* Configure your laptops well before the workshop day.
-
-Any special needs should be requested through the conference organizers, at best two weeks prior to the workshop. We will do our best to accommodate any needs and will communicate back either our ability or inability to meet those needs.",
-                  bio: "Ed Manlove has been a part of the Robot Framework community since 2011. He inherited the leadership of the Selenium2Library project from Ryan Tomac sharing it with Jeremy Johnson and recently passing on that role to Tatu Aalto. He is the author of a couple libraries dealing with timing issues within AJAX enabled websites. Ed is currently a Senior Software Test Engineer testing with Robot Framework and taught several teams how to test with Robot Framework. A member of the Selenium user community Ed has presented at the Selenium Conference, ran an unconference focusing on user issues, and volunteered at the conferences (even being a maître d').",
-                  imgUrl: 'rf-icon-500-White.png'
+                  descriptionExpanded: "<h2 class='no-arrow mb-3 mt-5'>Outline/overview of the workshop</h2><h3 class='mb-0 mt-2'>Browser Configuration</h3>We will be taking a look at desired capabilites, Selenium options and Firefox profile. Differences between Open Browser and Create WebDriver keywords will be highlighted. Finally we will build small examples showing how to configure the browser in diffrent situations.<h3 class='mb-0 mt-2'>Advanced Debuging</h3>The course will cover when encountering flaky test(s), where to look and how to stabilise them.<h3 class='mb-0 mt-2'>Parallel Execution</h3>We'll discuss running SeleniumLibrary in parallel with pabot and Selenium grid.<h3 class='mb-0 mt-2'>API</h3>SeleniumLibrary has an public API which allows users to extend on top of the SeleniumLibrary. Here we take a look what is available in the public API.<h3 class='mb-0 mt-2'>Expanding the library</h3>Looking at different pros and cons we will talk about how to extend SeleniumLibrary as well as building a new library and the Plugin API. We will show a small exmample. And we will discuss overriding existing keywords with functionality not covered by Selenium.<h3 class='mb-0 mt-2'>EventFiringWebDriver</h3>Using and abusing EventFiringWebDriver for monitoring events and how they affect the interactions with SUT will be covered.<h3 class='mb-0 mt-2'>Page Objects</h3>What are page objects and where it might be useful.<h3 class='mb-0 mt-2'>Python Page objects verses SeleniumLibrary</h3>Looking inside of a page object library and how to build one.<h3 class='mb-0 mt-2'>Checking for time of tests</h3>We will talk about verifying and reacting to execution times of tests/keywords/suites either via tags or the separate Timer library.<h3 class='mb-0 mt-2'>Using Javascript to interact with SUT</h3>Extending SeleniumLibrary with new keywords where functionality is implemented in Javascript.<h2 class='no-arrow mb-3 mt-5'>Learning Outcomes</h2>At the end of the workshop, user should have broad overview of advanced features of SeleniumLibrary, web automation and ways to extend and debug test tooling.<h2 class='no-arrow mb-3 mt-5'>Target Audience</h2>This workshop is for people with previous hands on experience with testing in Robot Framework & SeleniumLibrary. Students should already have experience testing web applications, know how to identify locators for webelements and validate those loctors, and feel comfortable working with SeleniumLibrary. Although the course will take a measured pace through the material, students should be prepared for advanced topics that will be thoroughly explained.<br><br>This workshop will be presented in English with two presentors, both who are bi-lingual in Finnish and English.<h2 class='no-arrow mb-3 mt-5'>Prerequisites</h2>* All participates will need to bring a laptop preconfigured to the workshop.<br>* Particapte must have access to add and modify software on their laptops.<br>* Detailed setup instructions will be shared couple of weeks before workshop day.<br>* Configure your laptops well before the workshop day<br><br>Any special needs should be requested through the conference organizers, at best two weeks prior to the workshop. We will do our best to accomidate any needs and will communicate back either our ability or inability to meet those needs.",
+                  bio: "<h3 class='mb-0 mt-2'>Tatu Aalto</h3>Tatu Aalto is the current lead developer of the <a href='https://github.com/robotframework/SeleniumLibrary'>SeleniumLibrary</a> and is participating in <a href='https://github.com/MarketSquare/robotframework-browser'>Browser library</a> as one of the core team members. Tatu has been working with Robot Framework since 2011. In the 2011 he was a regular user, by sending many questions and problems to the community. After some time Tatu started to answer questions  send by other users and he did provide his very first pull request to the Robot Framework core in 2012. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer.<br>Tatu has used the Robot Framework in several work places to to guide and aid companies in their test automation efforts. Currently he is working in F-Secure as a Senior Software Developer In Test, automating windows antivirus client for business users.<h3 class='mb-0 mt-2'>Ed Manlove</h3>Ed Manlove has been a part of the Robot Framework community since 2011. He inherited the leadership of the Selenium2Library project from Ryan Tomac sharing it with Jeremy Johnson and recently passing on that role to Tatu Aalto. He is the author of a couple libraries dealing with timing issues within AJAX enabled websites. Ed is currently a Senior Software Test Engineer testing with Robot Framework and taught several teams how to test with Robot Framework. A member of the Selenium user community Ed has presented at the Selenium Conference, ran an unconference focusing on user issues, and volunteered at the conferences (even being a maître d').",
+                  imgUrl: 'Tatu_Aalto.jpg'
                 }
 
-		*/
+		
               /*  { type: "workshop", author: "Elias Hachichou, Kristina Sabotic",
                   title: "End-to-end testing through multiple interfaces",
                   description: "13:00-16:00<br>Welcome to this fun group exercise in how to build end-to-end test flows that can cover any type of interface for multiple applications in the same script. It will be a bonanza in problem solving, trying new libraries, exploring new ways of working – and music!",
@@ -943,6 +820,7 @@ Any special needs should be requested through the conference organizers, at best
                   descriptionExpanded: "This workshop is for you if you already know basics of using Robot Framework, preferably also basics of writing tests libraries, and want to take your skills to the next level. These skills make it easier to adapt the framework to your own needs in different contexts.<br><br>The workshop is 100% hands-on, no slides, learn-by-doing. In addition to learning from the person who has designed these powerful APIs, you have a change to ask hard questions related to Robot Framework from its creator.<br><br>Participants should know basics of Robot Framework, including test library API, and Python programming. Participants should bring their own laptop with Python 3.6 or newer and Robot Framework 3.2 or newer installed. They should also have adequate admin rights to install possible additional Python modules using pip. A text editor or an IDE for writing Python code and Robot Framework tests is needed as well.<br><br><h3>Recommended for advanced users.</h3><h3>Max number of participants: 16</h3>",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework."}
               ] */
+	      ]
             }
           }
         },
