@@ -71,6 +71,17 @@ module.exports = {
           limit: 50000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.(potx)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'RoboCon2021_Templ.potx'
+            }
+          }
+        ]
       }
     ]
   }

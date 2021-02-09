@@ -1,37 +1,33 @@
 <template>
-  <div :class="header === '' && type === 'workshop' ? 'mb-5 pb-4' : 'mb-5 pb-3'" :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
-    <div v-if="margin" class="mt-5" />
+  <div
+    :class="[`mb-5 ${isMobile ? '' : 'p-1'}`, {['bg-blue pb-3']: keynote}]">
     <div v-if="header !== ''">
-      <h2 class="white no-arrow mt-4">{{ header }}</h2>
+      <h2 class="white mt-4">{{ header }}</h2>
     </div>
-    <div v-else class="ml-0">
+    <div v-else class="ml-0 pl-2 border-left-blue">
       <h3
-        class="white mb-0 ml-4"
-        v-if="author !== ''">
-        {{ author }}
-        </h3>
+        class="white mb-0"
+        v-if="authors && authors.length">
+        {{ authors.join(', ') }}
+      </h3>
       <div v-else class="mt-4" />
       <button
-        style="text-align: left; width: 100%;"
+        class="pl-0"
+        style="text-align: left;"
         @click="hasExpandableContent ? expanded = !expanded : false">
-        <div class="row">
-          <div style="color: #01ffd9; flex: 0 0 2rem; max-width: 2rem;">
-            >
-          </div>
-          <div style="flex: 0 0 calc(100% - 2rem); max-width: calc(100% - 2rem);">
-            <a
-              class="link-title"
-              style="color: #01ffd9"
-              :id="title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()"
-              :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}">
-              {{ title }}
-            </a>
-          </div>
-          <div class="white ml-4 pl-2 type-body">
-            {{ dateString(time.start) }}  <span class="blue">{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
-          </div>
-        </div>
+        <a
+          class="link-title"
+          style="color: #01ffd9"
+          :id="title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()"
+          :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}">
+          {{ title }}
+        </a>
       </button>
+      <div
+        v-if="time.start !== '' && time.end !== ''"
+        class="white type-body">
+        <span class="blue">{{ type === 'workshop' ? `${dateString(time.start)} ` : '' }}{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
+      </div>
     </div>
     <transition
       name="toggle-content"
@@ -39,7 +35,7 @@
       <div
         v-if="expanded"
         key="1"
-        class="row mt-0">
+        style="padding-left: calc(0.5rem + 2px);">
         <!-- YouTube video -->
         <div v-if="url !== ''" class="col-lg-12">
           <b-embed
@@ -48,33 +44,47 @@
             allowfullscreen />
         </div>
         <!-- talk description expanded -->
-        <div v-else class="row ml-4 talk-description">
-          <div class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
-            {{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
+        <div v-else class="row talk-description">
+          <div
+            v-if="time.start !== '' && time.end !== ''"
+            class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
+            {{ type === 'workshop' ? `${utc_dateString(time.start)} ` : '' }}{{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
           </div>
           <p
-            class="col-12"
+            class="col-12 mt-2"
             v-html="description" />
           <p
             v-if="descriptionExpanded !== ''"
             class="col-12"
             v-html="descriptionExpanded" />
           <!-- bio with img -->
-          <div v-if="imgUrl !== '' && bio !== ''" class="mt-3 display--flex flex--wrap">
-            <div class="col-sm-12 col-md-3">
-              <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: 100%;">
+          <div
+            v-if="imgUrl !== '' && bio !== ''" class="mt-3 display--flex flex--wrap">
+            <div class="col-sm-12 col-md-2 mb-3">
+              <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
             </div>
             <div
               class="col-sm-12 col-md-9"
               :class="isMobile ? 'mt-4' : ''">
-              <h3>Bio</h3>
+              <h3>{{ authors[0] }}</h3>
               <p v-html="bio" />
-              <p v-if="sponsoredBy !== ''">
-                Talk sponsored by <span v-html="sponsoredBy" />.
-              </p>
             </div>
+            <template v-if="secondBio !== ''">
+              <div class="col-sm-12 col-md-2 mb-3">
+                <img :src="require(`@/assets/img/talkers/${secondImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
+              </div>
+              <div
+                class="col-sm-12 col-md-9"
+                :class="isMobile ? 'mt-4' : ''">
+                <h3>{{ authors[1] || '' }}</h3>
+                <p v-html="secondBio" />
+              </div>
+            </template>
+            <p v-if="sponsoredBy !== ''">
+              Talk sponsored by <span v-html="sponsoredBy" />.
+            </p>
           </div>
-          <!-- bio with no img img -->
+          <!-- bio with no img -->
           <div v-if="imgUrl === '' && bio !== ''">
             <h3>Bio</h3>
             <p>
@@ -89,11 +99,10 @@
       <div
         v-else-if="description !== ''"
         key="2"
-        class="talk-description ml-4 mt-2 cursor--pointer"
+        class="talk-description mt-2 cursor--pointer"
+        style="padding-left: calc(0.5rem + 2px);"
         @click="hasExpandableContent ? expanded = !expanded : null">
-        <p>
-          {{ description.slice(0, 200).trim() }}...
-        </p>
+        <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
       </div>
     </transition>
   </div>
@@ -117,6 +126,10 @@ export default {
       type: String,
       default: ''
     },
+    secondImgUrl: {
+      type: String,
+      default: ''
+    },
     descriptionExpanded: {
       type: String,
       default: ''
@@ -125,9 +138,13 @@ export default {
       type: String,
       default: ''
     },
-    author: {
+    secondBio: {
       type: String,
       default: ''
+    },
+    authors: {
+      type: Array,
+      default: () => []
     },
     url: {
       type: String,
@@ -136,10 +153,6 @@ export default {
     header: {
       type: String,
       default: ''
-    },
-    margin: {
-      type: Boolean,
-      default: false
     },
     type: {
       type: String,
@@ -155,6 +168,10 @@ export default {
     sponsoredBy: {
       type: String,
       default: ''
+    },
+    keynote: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -184,6 +201,11 @@ export default {
   },
   methods: {
     dateString(dataTime) {
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, moment.tz.guess()).format("DD MMM")
+    },
+    utc_dateString(dataTime) {
       const locale = window.navigator.userLanguage || window.navigator.language;
       moment.locale(locale);
       return moment.tz(dataTime, "Africa/Freetown").format("DD MMM")
