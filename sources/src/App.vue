@@ -690,9 +690,9 @@ export default {
                 {
                   type: "workshop",
                   authors: ["Henri Terho"],
-                  title: "Workshop on Qentinel pace and open source Qweb",
+                  title: "Workshop on Qentinel pace and open source",
                   description: "One of the main goals of Qentinel this year is to support the community around Robot Framework and to support this effort we are open sourcing our web technologies and libraries. In this workshop we will share how to use them effectively and how to create the most maintainable web tests possible!",
-                  descriptionExpanded: "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests usign Qweb on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use the Qweb library, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the Qweb library as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>",
+                  descriptionExpanded: "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use Qentinel's libraries, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the libraries as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>",
                   bio: "",
                   imgUrl: 'Henri-Terho.png'
                 },
