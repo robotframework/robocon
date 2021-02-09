@@ -61,6 +61,7 @@ export default {
                   <p>
                     By buying a ticket you are supporting the ongoing development of Robot Framework.
                   </p>
+                `
             }
           }
         },
@@ -597,8 +598,8 @@ export default {
                 { authors: ["Raphael Roems"],
                   title: "Backend Testing using Robot Framework and SoapUI",
                   description: "Backend testing, which involved data processing, was initiated from a website frontend.",
-                  descriptionExpanded: "Goal was to reuse existing SoapUI opensource webservice tests to replace the frontend requests, integrating with Robot Framework for test orchestration and parallel testing aspects, to reduce test execution time.",
-                  bio: "coming soon...",
+                  descriptionExpanded: "A test automation implementation was undertaken to reuse existing SoapUI web service tests, also integrating with Robot Framework for test orchestration and parallel testing, to reduce test execution time.",
+                  bio: "Raphael Roems is a software testing professional with 15 years experience in IT, of which 10 years have been specifically in software testing. He is currently the Test Automation Lead at TFG (The Foschini Group), and has a keen interest in implementing testing tools and processes. Outside of work he enjoys exercising and the outdoors.",
                   imgUrl: 'Raphael_Roems.jpeg',
                   time: {
                       start: "2021-03-18T16:45:00+0000",
