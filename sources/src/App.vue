@@ -61,6 +61,7 @@ export default {
                   <p>
                     By buying a ticket you are supporting the ongoing development of Robot Framework.
                   </p>
+                `
             }
           }
         },
@@ -654,9 +655,9 @@ export default {
                 {
                   type: "workshop",
                   authors: ["Luca Giovenzana"],
-                  title: "HTTP api testing and RPA with RequestsLibrary",
+                  title: "Introduction to HTTP and REST API testing",
                   description: "This workshop is about HTTP api for direct test or as prerequisites for your end to end test automation suite.",
-                  descriptionExpanded: "<p>You will learn:<ul><li>how to setup a basic API testing/rpa project using the RequestsLibrary</li><li>how to handle shared session and authentication</li><li>how to validate the response</li><li>what to address with api testing in your test suite</li><li>how to use RF for basic stress tests</li><li>how to use pabot and RequestsLibrary to execute many requests in parallel</li></ul></p><p>We will use the new 0.9 pre-release version and we will talk about the development roadmap.</p>",
+                  descriptionExpanded: "<p>You will learn:<ul><li>how to setup a basic API testing/rpa project using the RequestsLibrary</li><li>how to handle shared session and authentication</li><li>how to validate the response</li><li>what to address with api testing in your test suite</li><li>how to use RF for basic stress tests</li><li>how to use pabot and RequestsLibrary to execute many requests in parallel</li></ul></p><p>We will use the new 0.9 pre-release version and we will talk about the RequestsLibrary development roadmap.</p><p>Most of the workshop is hands on and highly interactive: we will use mob programming techniques.</p>",
                   bio: "Luca Giovenzana is an Open Source and Linux passionate guy. Before discovering RobotFramework he built his own Python framework to remotely control and test Linux based firewalls. He has been Head of QA for many years and, together with an amazing team, created a full stack test automation suite with more than 2 thousands test cases. Now he fosters the Quality culture as an Agile Coach. Together with Angelo Caovilla founded the RobotFramework Italian community and Meetup. He contributes to the community and he is the maintainer of RequestsLibrary.",
                   imgUrl: 'Luca_Giovenzana.jpeg'
                 },
@@ -685,7 +686,6 @@ export default {
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
                   imgUrl: 'Pekka_Klarck.jpg'
                 },
-                { type: "workshop", header: 'Full-day workshops', margin: true },
                 {
                   type: "workshop",
                   authors: ["Henri Terho"],
@@ -695,6 +695,7 @@ export default {
                   bio: "",
                   imgUrl: 'Henri-Terho.png'
                 },
+                { type: "workshop", header: 'Full-day workshops', margin: true },
                 {
                   type: "workshop",
                   authors: ["Michael Hallik"],
