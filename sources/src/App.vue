@@ -563,7 +563,12 @@ export default {
                 { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
                   title: "RobotFramework Browser library",
                   description: "A deep dive into the new Browser Library.",
-                  descriptionExpanded: "More information coming shortly ...",
+                  descriptionExpanded: `<ul>
+                  <li>Assertion engine, how to use it for your own library</li>
+                  <li>Typing with Enums and TypedDicts and RF 4.0</li>
+                  <li>Javascript keywords & plugining</li>
+                  <li>Integrating NodeJS <-> Python</li>
+                  <li>How to use Browser from Python (without RF)</li></ul>`,
                   bio: "Mikko Korpela is a consultant and occasional Robot Framework core developer from Reaktor. He was the initiator of Robot Framework Browser and its spiritual father. Mikko also created awesome robot projects like RoboZombie and Pabot.",
                   secondBio: "Tatu Aalto is core team member of Robot Framework Browser library, current lead developer of the SeleniumLibrary and he has been working with Robot Framework since 2011. Tatu has been active community member all these years and 2016 he started as an SeleniumLibrary lead developer.<br><br>Tatu has used Robot Framework in several work places to guide and aid companies in their test automation efforts. Currently he is working at F-Secure as a Software Developer In Test, automating windows antivirus client for business users.",
                   thirdBio: "Kerkko worked as a Reaktor consultant in building the Robot Framework Browser library in summer of 2020. Now he participates through open-source work and creates Robot Framework based RPA-tooling at Robocorp.",
