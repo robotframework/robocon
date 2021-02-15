@@ -667,6 +667,10 @@ export default {
                   type: "workshop",
                   authors: ["Joshua Gorospe"],
                   title: "Getting started with the robotframework-appiumlibrary",
+                  time: {
+                      start: "2021-03-15T18:00:00+0000",
+                      end:   "2021-03-15T24:00:00+0000",
+                  },
                   description: `<p>
                   This workshop will demonstrate setting up and using the robotframework-appiumlibrary to test iOS and Android apps. This will focus on a beginner audience level.<br>
                   <h3>Summary</h3>
