@@ -656,6 +656,10 @@ export default {
                   type: "workshop",
                   authors: ["Luca Giovenzana"],
                   title: "Introduction to HTTP and REST API testing",
+                  time: {
+                      start: "2021-03-15T13:00:00+0000",
+                      end:   "2021-03-15T17:00:00+0000",
+                  },
                   description: "This workshop is about HTTP api for direct test or as prerequisites for your end to end test automation suite.",
                   descriptionExpanded: "<p>You will learn:<ul><li>how to setup a basic API testing/rpa project using the RequestsLibrary</li><li>how to handle shared session and authentication</li><li>how to validate the response</li><li>what to address with api testing in your test suite</li><li>how to use RF for basic stress tests</li><li>how to use pabot and RequestsLibrary to execute many requests in parallel</li></ul></p><p>We will use the new 0.9 pre-release version and we will talk about the RequestsLibrary development roadmap.</p><p>Most of the workshop is hands on and highly interactive: we will use mob programming techniques.</p>",
                   bio: "Luca Giovenzana is an Open Source and Linux passionate guy. Before discovering RobotFramework he built his own Python framework to remotely control and test Linux based firewalls. He has been Head of QA for many years and, together with an amazing team, created a full stack test automation suite with more than 2 thousands test cases. Now he fosters the Quality culture as an Agile Coach. Together with Angelo Caovilla founded the RobotFramework Italian community and Meetup. He contributes to the community and he is the maintainer of RequestsLibrary.",
@@ -681,6 +685,10 @@ export default {
                   type: "workshop",
                   authors: ["Pekka Klärck"],
                   title: "Extending Robot Framework with libraries, listeners, and so on",
+                  time: {
+                      start: "2021-03-15T13:00:00+0000",
+                      end:   "2021-03-15T19:00:00+0000",
+                  },
                   description: "<p>Deep end workshop.</p>",
                   descriptionExpanded: "<p>Deep end workshop. In this workshop you will learn how to extend Robot Framework using various different interfaces. The first half of the workshop is dedicated to the library API, starting from basics and quickly continuing to more advanced topics like the dynamic library interface (used e.g. by SeleniumLibrary) and automatic argument type conversion. During the second half you will get familiar with other extending and integration possibilities such as the listener API, parsing API, modifying tests dynamically before execution, starting execution programmatically and analyzing results.</p><p>This workshop is for you if you already know basics of using Robot Framework, including basics of writing tests libraries, and want to take your skills to the next level. These skills make it easier to adapt the framework to your own needs in different contexts.</p><p>The workshop is 100% hands-on, no slides, learn-by-doing. In addition to learning from the person who has designed these powerful APIs, you have a change to ask hard questions related Robot Framework from its creator.</p>",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
@@ -688,12 +696,45 @@ export default {
                 },
                 {
                   type: "workshop",
-                  authors: ["Henri Terho"],
-                  title: "Workshop on Qentinel pace and open source",
+                  authors: ["Tuomas Koukkari", "Antti Heimola"],
+                  title: "QWeb - a Robot Framework Library for Web application testing",
+                  time: {
+                      start: "2021-03-15T10:00:00+0000",
+                      end:   "2021-03-15T14:00:00+0000",
+                  },
                   description: "One of the main goals of Qentinel this year is to support the community around Robot Framework and to support this effort we are open sourcing our web technologies and libraries. In this workshop we will share how to use them effectively and how to create the most maintainable web tests possible!",
-                  descriptionExpanded: "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use Qentinel's libraries, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the libraries as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>",
-                  bio: "",
-                  imgUrl: 'Henri-Terho.png'
+                  descriptionExpanded: `
+		  <p>Launch of a new library and techniques to ease up maintenance effort of your web application testing – 18 000 test cases and 14.29% maintenance effort. The workshop is 80% hands-on, just a short introduction of a new library for you to use and a bit of Principles of Design before the hands-on.</p>
+		  <h3>Content of the workshop:</h3>
+		  <ul><li>QWeb library introduction</li>
+		  <li>Principles of Design – how to automate with low maintenance</li>
+		  <li>Hands-on - Each section has its material, exercises, and exercise solutions:
+                      <ol type="a">
+                      <li>Controlling browser</li>
+                      <li>Basic interactions</li>
+                      <li>Assertions</li>
+                      <li>Getting data</li>
+                      <li>Advanced clicking</li>
+                      <li>Timeouts</li>
+                      <li>Anchors</li>
+                      <li>Handling Alerts</li>
+                      <li>Blocks</li>
+                      <li>Table keywords</li>
+                      <li>Debugging</li>
+                      <li>Settings / Configuration</li>
+                      <li>Extending QWeb</li>
+		      </ol>
+		  </li></ul>    
+		  <h3>Prerequisites</h3>
+		  <ul><li>Setup instructions will be provided by March 10 – ‘pip install qweb’</li>
+		  <li>Configure your laptops before the workshop</li></ul>
+		  <p>This workshop is for all with some test automation experience, no coding skills needed. The workshop language is English.</p>
+		  `,
+/* "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use Qentinel's libraries, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the libraries as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>", */
+                  bio: "Product Specialist, Qentinel",
+		  secondBio: "Senior Automation Architect, Qentinel",
+                  imgUrl: 'Qentinel_logo_symbol_color_web_png.png',
+                  secondImgUrl: 'Qentinel_logo_symbol_color_web_png.png'
                 },
                 { type: "workshop", header: 'Full-day workshops', margin: true },
                 {
