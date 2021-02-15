@@ -23,6 +23,7 @@
           {{ title }}
         </a>
       </button>
+        <a v-if="ticketId !== ''" :href="'https://tickets.robotframework.org/workshop/' + ticketId" target="blank" ><h3 class="white" @click="sendEvent(ticketId)">&gt; Buy Tickets</h3></a>
       <div
         v-if="time.start !== '' && time.end !== ''"
         class="white type-body">
@@ -80,6 +81,28 @@
                 <p v-html="secondBio" />
               </div>
             </template>
+            <template v-if="thirdBio !== ''">
+              <div class="col-sm-12 col-md-2 mb-3">
+                <img :src="require(`@/assets/img/talkers/${thirdImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
+              </div>
+              <div
+                class="col-sm-12 col-md-9"
+                :class="isMobile ? 'mt-4' : ''">
+                <h3>{{ authors[2] || '' }}</h3>
+                <p v-html="thirdBio" />
+              </div>
+            </template>
+            <template v-if="fourthBio !== ''">
+              <div class="col-sm-12 col-md-2 mb-3">
+                <img :src="require(`@/assets/img/talkers/${fourthImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
+              </div>
+              <div
+                class="col-sm-12 col-md-9"
+                :class="isMobile ? 'mt-4' : ''">
+                <h3>{{ authors[3] || '' }}</h3>
+                <p v-html="fourthBio" />
+              </div>
+            </template>
             <p v-if="sponsoredBy !== ''">
               Talk sponsored by <span v-html="sponsoredBy" />.
             </p>
@@ -130,6 +153,14 @@ export default {
       type: String,
       default: ''
     },
+    thirdImgUrl: {
+      type: String,
+      default: ''
+    },
+    fourthImgUrl: {
+      type: String,
+      default: ''
+    },
     descriptionExpanded: {
       type: String,
       default: ''
@@ -139,6 +170,14 @@ export default {
       default: ''
     },
     secondBio: {
+      type: String,
+      default: ''
+    },
+    thirdBio: {
+      type: String,
+      default: ''
+    },
+    fourthBio: {
       type: String,
       default: ''
     },
@@ -164,6 +203,10 @@ export default {
         start: '',
         end: ''
       })
+    },
+    ticketId: {
+      type: String,
+      default: ''
     },
     sponsoredBy: {
       type: String,

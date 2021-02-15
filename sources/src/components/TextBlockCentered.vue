@@ -48,14 +48,19 @@
             :title="talk.title"
             :keynote="talk.keynote"
             :time="talk.time"
+            :ticket-id="talk.ticketId"
             :sponsored-by="talk.sponsoredBy"
             :type="talk.type || ''"
             :description="talk.description"
             :description-expanded="talk.descriptionExpanded"
             :bio="talk.bio"
             :second-bio="talk.secondBio"
+            :third-bio="talk.thirdBio"
+            :fourth-bio="talk.fourthBio"
             :img-url="talk.imgUrl"
             :second-img-url="talk.secondImgUrl"
+            :third-img-url="talk.thirdImgUrl"
+            :fourth-img-url="talk.fourthImgUrl"
             :url="talk.url"/>
         </div>
       </div>
