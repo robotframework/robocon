@@ -23,111 +23,130 @@
           {{ title }}
         </a>
       </button>
-        <a v-if="ticketId !== ''" :href="'https://tickets.robotframework.org/workshop/' + ticketId" target="blank" ><h3 class="white" @click="sendEvent(ticketId)">&gt; Buy Tickets</h3></a>
       <div
         v-if="time.start !== '' && time.end !== ''"
         class="white type-body">
         <span class="blue">{{ type === 'workshop' ? `${dateString(time.start)} ` : '' }}{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
       </div>
     </div>
-    <transition
-      name="toggle-content"
-      mode="out-in">
-      <div
-        v-if="expanded"
-        key="1"
-        style="padding-left: calc(0.5rem + 2px);">
-        <!-- YouTube video -->
-        <div v-if="url !== ''" class="col-lg-12">
-          <b-embed
-            type="iframe"
-            :src="url"
-            allowfullscreen />
+    <div
+      v-if="expanded"
+      key="1"
+      style="padding-left: calc(0.5rem + 2px);">
+      <!-- YouTube video -->
+      <div v-if="url !== ''" class="col-lg-12">
+        <b-embed
+          type="iframe"
+          :src="url"
+          allowfullscreen />
+      </div>
+      <!-- talk description expanded -->
+      <div v-else class="row talk-description">
+        <div
+          v-if="time.start !== '' && time.end !== ''"
+          class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
+          {{ type === 'workshop' ? `${utc_dateString(time.start)} ` : '' }}{{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
         </div>
-        <!-- talk description expanded -->
-        <div v-else class="row talk-description">
-          <div
-            v-if="time.start !== '' && time.end !== ''"
-            class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
-            {{ type === 'workshop' ? `${utc_dateString(time.start)} ` : '' }}{{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
+        <p
+          class="col-12 mt-0 mb-0"
+          v-html="description" />
+        <p
+          v-if="descriptionExpanded !== ''"
+          class="col-12 mb-0"
+          v-html="descriptionExpanded" />
+        <!-- ticket link -->
+        <div v-if="type === 'workshop' && ticketId !== ''" class="col-12 mt-3 mb-3">
+          <div style="display: flex; align-items: center;">
+            <svg viewBox="0 0 530 530" style="stroke: white; stroke-width: 8; stroke: #01ffd9; width: 50px; height: 50px;">
+              <path d="M448.678,128.219l-10.607,10.608c-8.667,8.667-20.191,13.44-32.449,13.44c-12.258,0-23.78-4.773-32.448-13.44
+                c-8.667-8.667-13.44-20.191-13.44-32.448s4.773-23.781,13.44-32.449l10.608-10.608L320.459,0L0,320.459l63.322,63.322
+                l10.608-10.608c8.667-8.667,20.191-13.44,32.449-13.44c12.258,0,23.78,4.773,32.448,13.44c8.667,8.667,13.44,20.191,13.44,32.448
+                s-4.773,23.781-13.44,32.449l-10.608,10.608L191.541,512L512,191.541L448.678,128.219z M169.61,447.636
+                c8.237-12.343,12.662-26.839,12.662-42.015c0-20.272-7.894-39.33-22.229-53.664c-14.334-14.335-33.393-22.229-53.664-22.229
+                c-15.176,0-29.672,4.425-42.015,12.662l-21.932-21.931L320.459,42.432l21.931,21.932c-8.237,12.343-12.662,26.839-12.662,42.015
+                c0,20.272,7.894,39.33,22.229,53.664c14.334,14.335,33.393,22.229,53.664,22.229c15.176,0,29.672-4.425,42.015-12.662
+                l21.932,21.931L191.541,469.568L169.61,447.636z"/>
+              <rect x="284.001" y="197.94" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -63.0395 273.8137)" width="30.004" height="30.124"/>
+              <rect x="241.404" y="155.325" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -45.3819 231.2119)" width="30.004" height="30.124"/>
+              <rect x="326.607" y="240.541" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -80.684 316.4184)" width="30.004" height="30.124"/>
+            </svg>
+            <a
+              class="ml-3"
+              :href="`https://tickets.robotframework.org/workshop/${ticketId}/`"
+              target="_blank">
+              Buy ticket - {{ title }}
+            </a>
           </div>
-          <p
-            class="col-12 mt-2"
-            v-html="description" />
-          <p
-            v-if="descriptionExpanded !== ''"
-            class="col-12"
-            v-html="descriptionExpanded" />
-          <!-- bio with img -->
+        </div>
+        <!-- bio with img -->
+        <div
+          v-if="imgUrl !== '' && bio !== ''" class="mt-3 display--flex flex--wrap">
+          <div class="col-sm-12 col-md-2 mb-3">
+            <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
+          </div>
           <div
-            v-if="imgUrl !== '' && bio !== ''" class="mt-3 display--flex flex--wrap">
+            class="col-sm-12 col-md-9"
+            :class="isMobile ? 'mt-4' : ''">
+            <h3>{{ authors[0] }}</h3>
+            <p v-html="bio" />
+          </div>
+          <template v-if="secondBio !== ''">
             <div class="col-sm-12 col-md-2 mb-3">
-              <img :src="require(`@/assets/img/talkers/${imgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
+              <img :src="require(`@/assets/img/talkers/${secondImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
             </div>
             <div
               class="col-sm-12 col-md-9"
               :class="isMobile ? 'mt-4' : ''">
-              <h3>{{ authors[0] }}</h3>
-              <p v-html="bio" />
+              <h3>{{ authors[1] || '' }}</h3>
+              <p v-html="secondBio" />
             </div>
-            <template v-if="secondBio !== ''">
-              <div class="col-sm-12 col-md-2 mb-3">
-                <img :src="require(`@/assets/img/talkers/${secondImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
-              </div>
-              <div
-                class="col-sm-12 col-md-9"
-                :class="isMobile ? 'mt-4' : ''">
-                <h3>{{ authors[1] || '' }}</h3>
-                <p v-html="secondBio" />
-              </div>
-            </template>
-            <template v-if="thirdBio !== ''">
-              <div class="col-sm-12 col-md-2 mb-3">
-                <img :src="require(`@/assets/img/talkers/${thirdImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
-              </div>
-              <div
-                class="col-sm-12 col-md-9"
-                :class="isMobile ? 'mt-4' : ''">
-                <h3>{{ authors[2] || '' }}</h3>
-                <p v-html="thirdBio" />
-              </div>
-            </template>
-            <template v-if="fourthBio !== ''">
-              <div class="col-sm-12 col-md-2 mb-3">
-                <img :src="require(`@/assets/img/talkers/${fourthImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
-              </div>
-              <div
-                class="col-sm-12 col-md-9"
-                :class="isMobile ? 'mt-4' : ''">
-                <h3>{{ authors[3] || '' }}</h3>
-                <p v-html="fourthBio" />
-              </div>
-            </template>
-            <p v-if="sponsoredBy !== ''">
-              Talk sponsored by <span v-html="sponsoredBy" />.
-            </p>
-          </div>
-          <!-- bio with no img -->
-          <div v-if="imgUrl === '' && bio !== ''">
-            <h3>Bio</h3>
-            <p>
-              {{ bio }}
-            </p>
-            <p v-if="sponsoredBy !== ''">
-              Talk sponsored by <span v-html="sponsoredBy" />
-            </p>
-          </div>
+          </template>
+          <template v-if="thirdBio !== ''">
+            <div class="col-sm-12 col-md-2 mb-3">
+              <img :src="require(`@/assets/img/talkers/${thirdImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
+            </div>
+            <div
+              class="col-sm-12 col-md-9"
+              :class="isMobile ? 'mt-4' : ''">
+              <h3>{{ authors[2] || '' }}</h3>
+              <p v-html="thirdBio" />
+            </div>
+          </template>
+          <template v-if="fourthBio !== ''">
+            <div class="col-sm-12 col-md-2 mb-3">
+              <img :src="require(`@/assets/img/talkers/${fourthImgUrl}`)" style="width: calc(100% - 0.75rem); border-radius: 20px;">
+            </div>
+            <div
+              class="col-sm-12 col-md-9"
+              :class="isMobile ? 'mt-4' : ''">
+              <h3>{{ authors[3] || '' }}</h3>
+              <p v-html="fourthBio" />
+            </div>
+          </template>
+          <p v-if="sponsoredBy !== ''">
+            Talk sponsored by <span v-html="sponsoredBy" />.
+          </p>
+        </div>
+        <!-- bio with no img -->
+        <div v-if="imgUrl === '' && bio !== ''">
+          <h3>Bio</h3>
+          <p>
+            {{ bio }}
+          </p>
+          <p v-if="sponsoredBy !== ''">
+            Talk sponsored by <span v-html="sponsoredBy" />
+          </p>
         </div>
       </div>
-      <div
-        v-else-if="description !== ''"
-        key="2"
-        class="talk-description mt-2 cursor--pointer"
-        style="padding-left: calc(0.5rem + 2px);"
-        @click="hasExpandableContent ? expanded = !expanded : null">
-        <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
-      </div>
-    </transition>
+    </div>
+    <div
+      v-else-if="description !== ''"
+      key="2"
+      class="talk-description mt-2 cursor--pointer"
+      style="padding-left: calc(0.5rem + 2px);"
+      @click="hasExpandableContent ? expanded = !expanded : null">
+      <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
+    </div>
   </div>
 </template>
 
