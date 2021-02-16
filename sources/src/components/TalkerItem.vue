@@ -73,7 +73,8 @@
             <a
               class="ml-3"
               :href="`https://tickets.robotframework.org/workshop/${ticketId}/`"
-              target="_blank">
+              target="_blank"
+              @click="ga('send', 'event', 'click', `workshopTicketClick-${ticketId}`)">
               Buy ticket - {{ title }}
             </a>
           </div>

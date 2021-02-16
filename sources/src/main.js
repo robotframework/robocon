@@ -33,6 +33,8 @@ Vue.use(VueScrollTo, {
   }
 })
 
+Vue.prototype.ga = window.ga
+
 /* if (/robotframework.org/.test(window.location.href)) {
   Vue.use(VueAnalytics, {
     id: ['UA-106835747-2']
