@@ -690,8 +690,8 @@ export default {
                   authors: ["Joshua Gorospe"],
                   title: "Getting started with the robotframework-appiumlibrary",
                   time: {
-                      start: "2021-03-15T18:00:00+0000",
-                      end:   "2021-03-15T24:00:00+0000",
+                      start: "2021-03-15T22:00:00+0000",
+                      end:   "2021-03-16T02:00:00+0000",
                   },
                   ticketId: "427333",
                   description: `<p>
