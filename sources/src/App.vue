@@ -79,7 +79,7 @@ export default {
             users: [
               {
                 title: "Cinia",
-                href: "https://www.cinia.fi/",
+                href: "https://ohjelmistokehitys.cinia.fi/",
                 img: require("@/assets/img/sponsors/cinia.png")
               },
               {
@@ -141,6 +141,11 @@ export default {
                 title: "Siili Solutions",
                 href: "https://www.siili.com/",
                 img: require("@/assets/img/sponsors/siili.png")
+              },
+              {
+                title: "Testimate",
+                href: "https://www.testimate.fi/en/",
+                img: require("@/assets/img/sponsors/testimate.png")
               },
               {
                 title: "Vala",
