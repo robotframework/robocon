@@ -58,7 +58,7 @@ export default {
                   <p>
                     As this year will be online we are bringing the hallway conversations right to you:
                   </p>
-                  <video width="100%" autoplay muted>
+                  <video width="100%" autoplay muted controls>
                     <source src=${require('./assets/img/RoboCon2DWorld_l.mp4')}>
                   </video>
                   <p class="mt-3">
