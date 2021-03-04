@@ -148,6 +148,22 @@
       @click="hasExpandableContent ? expanded = !expanded : null">
       <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
     </div>
+    <div v-if="videoId && videoId !== ''" class="mb-2">
+      <button
+        v-if="!showVideo"
+        class="button-primary white ml-2"
+        type="button"
+        @click="showVideo = true">
+        Watch
+      </button>
+      <!-- YouTube video -->
+      <div v-if="showVideo" class="col-12">
+        <b-embed
+          type="iframe"
+          :src="`https://www.youtube.com/embed/${videoId}`"
+          allowfullscreen />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -235,10 +251,15 @@ export default {
     keynote: {
       type: Boolean,
       default: false
+    },
+    videoId: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
-    expanded: false
+    expanded: false,
+    showVideo: false
   }),
   computed: {
     hasExpandableContent () {

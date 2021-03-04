@@ -6,9 +6,10 @@
       <app-header/>
       <page-block
         v-for="(page, index) in pages"
-        v-bind:page="page"
-        v-bind:index="index"
-        v-bind:key="index"
+        :page="page"
+        :index="index"
+        :key="index"
+        :show-videos="showVideos"
         class="pl-md-5 px-lg-2 p-sm-2 p-xs-1 link-fix"
       />
       <app-footer class="mt-3 py-5"/>
@@ -17,7 +18,9 @@
 </template>
 <script>
 import PageBlock from "@/Components/PageBlock.vue"
-import moment, { locale } from "moment-timezone"
+import moment from "moment-timezone"
+import jwt from 'jsonwebtoken'
+import { getKey } from '../static/key'
 
 const clamp = (value, max, min) => Math.min(Math.max(value, min), max)
 
@@ -39,6 +42,7 @@ export default {
   },
   data() {
     return {
+      showVideos: false,
       pages: [
         {
           title: "Hello",
@@ -272,9 +276,10 @@ export default {
                   thirdImgUrl: "Kerkko_Pelttari.jpeg",
                   fourthImgUrl: "Rene_Rohner.png",
                   time: {
-                      start: "2021-03-16T14:30:00+0000",
-                      end:   "2021-03-16T15:00:00+0000"
-                  }
+                    start: "2021-03-16T14:30:00+0000",
+                    end: "2021-03-16T15:00:00+0000"
+                  },
+                  videoId:"AoPC0GXSDTw"
                 },
 
 
@@ -1098,6 +1103,19 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
         }
       ]
     }
+  },
+  mounted() {
+    const params = new URLSearchParams(window.location.search)
+    const participant = params.get('participant')
+    const token = params.get('token')
+    if (!participant || !token) return
+    jwt.verify(token, getKey(), (err, decoded) => {
+      if (err) return // wrong key
+      const { name, exp } = decoded
+      if (exp * 1000 < new Date().getTime()) return // expired
+      if (name !== participant) return // wrong name
+      this.showVideos = true
+    })
   }
 }
 

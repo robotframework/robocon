@@ -84,7 +84,8 @@
             :second-img-url="talk.secondImgUrl"
             :third-img-url="talk.thirdImgUrl"
             :fourth-img-url="talk.fourthImgUrl"
-            :url="talk.url"/>
+            :url="talk.url"
+            :video-id="showVideos ? talk.videoId || '' : ''"/>
         </div>
       </div>
     </div>
@@ -119,7 +120,7 @@ import Timeline from "vue-tweet-embed/timeline"
 import TalkerItem from "@/Components/TalkerItem"
 
 export default {
-  props: ["data"],
+  props: ["data", "showVideos"],
   components: {
     "twitter-timeline": Timeline,
     TalkerItem
