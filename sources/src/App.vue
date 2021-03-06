@@ -264,7 +264,7 @@ export default {
 
 
                 { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
-                  title: "RobotFramework Browser Library",
+                  title: "RobotFramework Browser Library - Introduction",
                   description: "Bringing RF browser automation to year 2021. We'll cover why Browser was created, why it's being adopted and why you should adopt it. And what makes it cool.",
                   descriptionExpanded: "<p>Robot Framework deserves a browser automation solution that's designed for the 2020s.</p><p>Browser library powered by Playwright provides.<ul><li>Speed, reliability and visibility.</li><li>Conscise assertions.</li><li>Precise and fast browser window and tab control.</li><li>Chainable selector strategies.</li><li>Good shadow DOM support.</li><li>Easy mobile device descriptors.</li><li>Sending HTTP requests.</li></ul></p>",
                   bio: "Mikko Korpela is a consultant and occasional Robot Framework core developer from Reaktor. He was the initiator of Robot Framework Browser and its spiritual father. Mikko also created awesome robot projects like RoboZombie and Pabot.",
