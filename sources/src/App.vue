@@ -62,7 +62,7 @@ export default {
                     We have created an awesome world to bring community to your desk with physical distance but social proximity:
                     </p>
                   </p>
-                  <video width="100%" autoplay controls>
+                  <video width="100%" autoplay muted controls>
                     <source src=${require('./assets/img/RoboCon2DWorld_l.mp4')}>
                   </video>
                   <p>
