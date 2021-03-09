@@ -745,11 +745,11 @@ export default {
                   ticketId: "427335",
                   description: "One of the main goals of Qentinel this year is to support the community around Robot Framework and to support this effort we are open sourcing our web technologies and libraries. In this workshop we will share how to use them effectively and how to create the most maintainable web tests possible!",
                   descriptionExpanded: `
-		  <p>Launch of a new library and techniques to ease up maintenance effort of your web application testing – 18 000 test cases and 14.29% maintenance effort. The workshop is 80% hands-on, just a short introduction of a new library for you to use and a bit of Principles of Design before the hands-on.</p>
-		  <h3>Content of the workshop:</h3>
-		  <ul><li>QWeb library introduction</li>
-		  <li>Principles of Design – how to automate with low maintenance</li>
-		  <li>Hands-on - Each section has its material, exercises, and exercise solutions:
+                    <p>Launch of a new library and techniques to ease up maintenance effort of your web application testing – 18 000 test cases and 14.29% maintenance effort. The workshop is 80% hands-on, just a short introduction of a new library for you to use and a bit of Principles of Design before the hands-on.</p>
+                    <h3>Content of the workshop:</h3>
+                    <ul><li>QWeb library introduction</li>
+                    <li>Principles of Design – how to automate with low maintenance</li>
+                    <li>Hands-on - Each section has its material, exercises, and exercise solutions:
                       <ol type="a">
                       <li>Controlling browser</li>
                       <li>Basic interactions</li>
@@ -764,18 +764,18 @@ export default {
                       <li>Debugging</li>
                       <li>Settings / Configuration</li>
                       <li>Extending QWeb</li>
-		      </ol>
-		  </li></ul>
-		  <h3>Prerequisites</h3>
-		  <ul><li>Setup instructions will be provided by March 10 – ‘pip install qweb’</li>
-		  <li>Configure your laptops before the workshop</li></ul>
-		  <p>This workshop is for all with some test automation experience, no coding skills needed. The workshop language is English.</p>
-		  `,
-/* "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use Qentinel's libraries, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the libraries as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>", */
-                  bio: "Product Specialist, Qentinel",
-		  secondBio: "Senior Automation Architect, Qentinel",
-                  imgUrl: 'Qentinel_logo_symbol_color_web_png.png',
-                  secondImgUrl: 'Qentinel_logo_symbol_color_web_png.png'
+                          </ol>
+                      </li></ul>
+                      <h3>Prerequisites</h3>
+                      <ul><li>Setup instructions will be provided by March 10 – ‘pip install qweb’</li>
+                      <li>Configure your laptops before the workshop</li></ul>
+                      <p>This workshop is for all with some test automation experience, no coding skills needed. The workshop language is English.</p>
+                      `,
+                /* "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use Qentinel's libraries, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the libraries as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>", */
+                  bio: "Tuomas Koukkari is a Product Specialist working at Qentinel. Tuomas is the go to guy for knowledge on how robot framework works at Qentinel and has a long background in software testing from Nokia.",
+                  secondBio: "Antti Heimola is an ‘automation of things’ guy with a “whatever can be done, can also be automated” mindset. Along with automation projects and his first continuous delivery system design back in 2003, he has also been working as an SW Developer, QA Manager, and Program Manager, before joining the Robot Framework community in 2011. The very first project with Robot Framework started with a library development on the top of the SeleniumLibrary. The roots of the library which is now called QWeb.",
+                  imgUrl: 'tuomas_koukkari.jpg',
+                  secondImgUrl: 'antti_heimola.png'
                 },
                 { type: "workshop", header: 'Full-day workshops', margin: true },
                 {
