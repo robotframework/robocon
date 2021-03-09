@@ -57,14 +57,17 @@ export default {
               text:
                 `
                   <p class="mb-3">
-                    Come, join us for the 4th Annual Robot Framework conference. This year it will again be something special!</p><p>RoboCon is for all of you automation enthusiasts all over the world. Whether you are new to Robot Framework or more advanced user, we are sure you will learn something new. We have pulled together an amazing virtual playground to connect and meet each other. Through the talks and workshops you will learn from your fellow Robot Framework experts and our excellent keynotes. So join us for this exciting gathering!
+                    Come, join us for the 4th Annual Robot Framework conference. This year it will again be something special!
+                    As this year will be online we are bringing the hallway conversations right to you.
+                    We have created an awesome world to bring community to your desk with physical distance but social proximity:
+                    </p>
                   </p>
-                  <p>
-                    As this year will be online we are bringing the hallway conversations right to you:
-                  </p>
-                  <video width="100%" autoplay muted controls>
+                  <video width="100%" autoplay muted controls loop>
                     <source src=${require('./assets/img/RoboCon2DWorld_l.mp4')}>
                   </video>
+                  <p>
+                    RoboCon is for all of you automation enthusiasts all over the world. Whether you are new to Robot Framework or more advanced user, we are sure you will learn something new. We have pulled together an amazing virtual playground to connect and meet each other. Through the talks and workshops you will learn from your fellow Robot Framework experts and our excellent keynotes. So join us for this exciting gathering!
+                  </p>
                   <p class="mt-3">
                     Robot Framework is a generic open source automation framework. It can be used for test automation and robotic process automation (RPA). <a href="https://robotframework.org/">More information about Robot Framework.</a>
                   </p>
