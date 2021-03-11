@@ -60,7 +60,6 @@ export default {
                     Come, join us for the 4th Annual Robot Framework conference. This year it will again be something special!
                     As this year will be online we are bringing the hallway conversations right to you.
                     We have created an awesome world to bring community to your desk with physical distance but social proximity:
-                    </p>
                   </p>
                   <video width="100%" autoplay muted controls loop>
                     <source src=${require('./assets/img/RoboCon2DWorld_l.mp4')}>
@@ -224,19 +223,30 @@ export default {
               twitter: false,
               header: "Program Day 1 (16th March)",
               talks: [
-                { authors: ["Pekka Klärck", "Ismo Aro"],
+                { authors: ["Joe Colantonio"],
+                  title: "Pre-show talk",
+                  time: {
+                    start: "2021-03-16T10:45:00+0000",
+                    end: "2021-03-16T11:00:00+0000"
+                  }
+                },
+                { authors: ["Pekka Klärck", "Ismo Aro", "Ed Manlove"],
                   title: "Keynote: Where's Robot Framework in 2021",
-                  description: "A look at what's new and what's coming next related to Robot Framework itself and the wider ecosystem around it. Co-presented by Ismo Aro. In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka will talk about cool new features in Robot Framework 4.0 as well as what has been happening in the wider Robot Framework ecosystem. After looking at the past and present, we'll talk about the plans for the future.",
+                  description: "In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka explains some of the cool new features in Robot Framework 4.0 and finally Ed talks about our awesome community and how the ecosystem created by it has been growing.",
                   bio: "Pekka Klärck is a tester, developer and independent consultant from Finland. He is the original author and lead developer of Robot Framework.",
                   secondBio: 'Ismo has been a user of Robot Framework from 2006. During his career at Nokia, he also worked as a Product Owner of Robot Framework. When the Robot Framework Foundation was established in 2015, he has been Chairman of the Board since.',
+                  thirdBio: "Ed Manlove has been a part of the Robot Framework community since 2011. He inherited the leadership of the Selenium2Library project from Ryan Tomac sharing it with Jeremy Johnson and recently passing on that role to Tatu Aalto. He is the author of a couple libraries dealing with timing issues within AJAX enabled websites. Ed is currently a Senior Software Test Engineer testing with Robot Framework and taught several teams how to test with Robot Framework. A member of the Selenium user community Ed has presented at the Selenium Conference, ran an unconference focusing on user issues, and volunteered at the conferences (even being a maître d').",
                   imgUrl: 'Pekka_Klarck.jpg',
                   secondImgUrl: 'Ismo_Aro.jpg',
+                  thirdImgUrl: 'Ed_Manlove.jpg',
                   keynote: true,
                   time: {
                     start: "2021-03-16T11:00:00+0000",
                     end: "2021-03-16T12:00:00+0000"
                   }
                 },
+
+                { header: 'Break (30mins)' },
 
                 { authors: ["Mateusz Nojek", "Bartłomiej Hirsz"],
                   title: "How to avoid jail for nasty code?",
@@ -264,6 +274,8 @@ export default {
                       end:   "2021-03-16T13:30:00+0000"
                   }
                 },
+
+                { header: 'Break (60mins)' },
 
 
                 { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
@@ -297,6 +309,8 @@ export default {
                       end:   "2021-03-16T15:30:00+0000",
                   }
                 },
+
+                { header: 'Break (30mins)' },
 
 
                 { authors: ["Maciej Wiczk"],
@@ -338,6 +352,8 @@ export default {
                       end:   "2021-03-16T17:00:00+0000",
                   }
                 },
+
+                { header: 'Break (30mins)' },
 
 
                 { authors: ["Simon Meggle"],
@@ -406,6 +422,8 @@ export default {
                   }
                 },
 
+                { header: 'Break (30mins)' },
+
 
                 { authors: ["Antti Karjalainen"],
                   title: "Open-source stack for RPA",
@@ -445,6 +463,8 @@ export default {
                   }
                 },
 
+                { header: 'Break (60mins)' },
+
 
                 { authors: ["Markus Stahl"],
                   title: "How to start with Open Source RPA",
@@ -470,6 +490,8 @@ export default {
                       end:   "2021-03-17T15:30:00+0000",
                   }
                 },
+
+                { header: 'Break (30mins)' },
 
 
                 { authors: ["Esko Hannula"],
@@ -497,6 +519,8 @@ export default {
                       end:   "2021-03-17T17:00:00+0000",
                   }
                 },
+
+                { header: 'Break (30mins)' },
 
 
                 { authors: ["Elisabeth Hendrickson"],
@@ -539,6 +563,8 @@ export default {
                   }
                 },
 
+                { header: 'Break (30mins)' },
+
 
                 { authors: ["Juho Saarinen"],
                   title: "Robot Framework after Jython",
@@ -564,6 +590,8 @@ export default {
                       end:   "2021-03-18T13:30:00+0000",
                   }
                 },
+
+                { header: 'Break (60mins)' },
 
 
                 { authors: ["Tatu Aalto"],
@@ -601,6 +629,8 @@ export default {
                       end:   "2021-03-18T15:30:00+0000",
                   }
                 },
+
+                { header: 'Break (30mins)' },
 
 
                 { authors: ["Nils Balkow-Tychsen", "Michał Wcisło"],
@@ -643,6 +673,8 @@ export default {
                   }
                 },
 
+                { header: 'Break (30mins)' },
+
 
                 { authors: ["Markus Stahl"],
                   title: "robotframework-camunda library: Orchestrating robotic tasks with Camunda",
@@ -667,7 +699,15 @@ export default {
                       start: "2021-03-18T17:45:00+0000",
                       end:   "2021-03-18T18:00:00+0000",
                   }
-                }
+                },
+
+                { authors: ["Imbus"],
+                  title: "Afterparty at Gather.town",
+                  time: {
+                      start: "2021-03-18T19:00:00+0000",
+                      end:   "2021-03-18T24:00:00+0000",
+                  }
+                },
 
               ]
             }
