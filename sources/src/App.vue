@@ -780,10 +780,10 @@ export default {
                 {
                   type: "workshop",
                   authors: ["Tuomas Koukkari", "Antti Heimola"],
-                  title: "QWeb - a Robot Framework Library for Web application testing",
+                  title: "QWeb - Open sourcing a Robot Framework Library for Web application testing",
                   time: {
                       start: "2021-03-15T10:00:00+0000",
-                      end:   "2021-03-15T14:00:00+0000",
+                      end:   "2021-03-15T13:00:00+0000",
                   },
                   ticketId: "427335",
                   description: "One of the main goals of Qentinel this year is to support the community around Robot Framework and to support this effort we are open sourcing our web technologies and libraries. In this workshop we will share how to use them effectively and how to create the most maintainable web tests possible!",
