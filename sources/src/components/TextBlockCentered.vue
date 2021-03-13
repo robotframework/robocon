@@ -39,6 +39,27 @@
         v-if="data.text && (!data.textHiddenByDefault || hiddenContentShown)"
         v-html="data.text"
         class="row order-2 block-text textblock-right p-3 no-border" />
+      <div v-if="data.calendar" class="mt-5 mb-5">
+          <div style="display: flex; align-items: center;">
+            <svg viewBox="0 0 24 24" style="stroke: white; stroke-width: 1; stroke: #01ffd9; width: 24px; height: 24px;">
+              <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/>
+            </svg>
+            <a
+              class="ml-3"
+              :href="`https://calendar.google.com/calendar/render?cid=eff9ff4rfh4g5jh74vgmnbr314@group.calendar.google.com`"
+              target="_blank"
+              @click="ga('send', 'event', 'click', `Google calendar`)">
+              Add RoboCon to Google Calendar
+            </a>
+          </div>
+          <a
+            class="type-small"
+            :href="`https://calendar.google.com/calendar/ical/eff9ff4rfh4g5jh74vgmnbr314%40group.calendar.google.com/public/basic.ics`"
+            target="_blank"
+            @click="ga('send', 'event', 'click', `Google calendar`)">
+            or download RoboCon as .ics calendar file
+          </a>
+        </div>
       <div
         v-if="data.previousTalks">
         <transition appear name="fade">

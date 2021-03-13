@@ -2,7 +2,7 @@
   <div
     :class="[`mb-5 ${isMobile ? '' : 'p-1'}`, {['bg-blue pb-3']: keynote}]">
     <div v-if="header !== ''">
-      <h2 class="white mt-4">{{ header }}</h2>
+      <h2 class="white mt-4" v-html="header" />
     </div>
     <div v-else class="ml-0 pl-2 border-left-blue">
       <h3
@@ -16,6 +16,15 @@
         style="text-align: left;"
         @click="hasExpandableContent ? expanded = !expanded : false">
         <a
+          v-if="title === 'Community time'"
+          class="link-title"
+          style="color: #01ffd9"
+          href="https://gather.town/app/38f5qjlXAKZ7xIBm/RoboCon"
+          target="_blank">
+          {{ title }}
+        </a>
+        <a
+          v-else
           class="link-title"
           style="color: #01ffd9"
           :id="title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()"

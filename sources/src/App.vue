@@ -222,6 +222,7 @@ export default {
             text: {
               twitter: false,
               header: "Program Day 1 (16th March)",
+              calendar: true,
               talks: [
                 { authors: ["Joe Colantonio"],
                   title: "Pre-show talk",
@@ -246,7 +247,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-16T11:00:00+0000",
+                    end: "2021-03-16T11:30:00+0000"
+                  }
+                },
 
                 { authors: ["Mateusz Nojek", "Bartłomiej Hirsz"],
                   title: "How to avoid jail for nasty code?",
@@ -275,7 +282,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (60mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-16T13:30:00+0000",
+                    end: "2021-03-16T14:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
@@ -310,7 +323,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-16T15:30:00+0000",
+                    end: "2021-03-16T16:00:00+0000"
+                  }
+                },
 
 
                 { authors: ["Maciej Wiczk"],
@@ -353,7 +372,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-16T17:00:00+0000",
+                    end: "2021-03-16T17:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Simon Meggle"],
@@ -422,7 +447,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-17T12:00:00+0000",
+                    end: "2021-03-17T12:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Antti Karjalainen"],
@@ -463,7 +494,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (60mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-17T13:30:00+0000",
+                    end: "2021-03-17T14:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Markus Stahl"],
@@ -491,7 +528,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-17T15:30:00+0000",
+                    end: "2021-03-17T16:00:00+0000"
+                  }
+                },
 
 
                 { authors: ["Esko Hannula"],
@@ -520,7 +563,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-17T17:00:00+0000",
+                    end: "2021-03-17T17:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Elisabeth Hendrickson"],
@@ -563,7 +612,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-18T12:00:00+0000",
+                    end: "2021-03-18T12:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Juho Saarinen"],
@@ -591,7 +646,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (60mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-18T13:30:00+0000",
+                    end: "2021-03-18T14:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Tatu Aalto"],
@@ -630,7 +691,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-18T15:30:00+0000",
+                    end: "2021-03-18T16:00:00+0000"
+                  }
+                },
 
 
                 { authors: ["Nils Balkow-Tychsen", "Michał Wcisło"],
@@ -673,7 +740,13 @@ export default {
                   }
                 },
 
-                { header: 'Break (30mins)' },
+                { authors: ["Robocon Venue"],
+                  title: "Community time",
+                  time: {
+                    start: "2021-03-18T17:00:00+0000",
+                    end: "2021-03-18T17:30:00+0000"
+                  }
+                },
 
 
                 { authors: ["Markus Stahl"],
