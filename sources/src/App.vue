@@ -20,7 +20,8 @@
 import PageBlock from "@/Components/PageBlock.vue"
 import moment from "moment-timezone"
 import jwt from 'jsonwebtoken'
-import { getKey } from '../static/key'
+import { getKey, getEncryptedVideoIds } from '../static/key'
+import CryptoJS from 'crypto-js';
 
 const clamp = (value, max, min) => Math.min(Math.max(value, min), max)
 
@@ -43,7 +44,13 @@ export default {
   data() {
     return {
       showVideos: false,
-      pages: [
+      videoIds: [],
+
+    }
+  },
+  computed: {
+    pages() {
+      return [
         {
           title: "Hello",
           text_block: false,
@@ -284,7 +291,8 @@ export default {
                   time: {
                     start: "2021-03-16T12:30:00+0000",
                     end: "2021-03-16T13:00:00+0000"
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[0] : ''
                 },
 
 
@@ -297,7 +305,8 @@ export default {
                   time: {
                       start: "2021-03-16T13:00:00+0000",
                       end:   "2021-03-16T13:30:00+0000"
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[1] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -325,7 +334,7 @@ export default {
                     start: "2021-03-16T14:30:00+0000",
                     end: "2021-03-16T15:00:00+0000"
                   },
-                  videoId:"AoPC0GXSDTw"
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[2] : 'a'
                 },
 
 
@@ -338,7 +347,8 @@ export default {
                   time: {
                       start: "2021-03-16T15:00:00+0000",
                       end:   "2021-03-16T15:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[3] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -359,7 +369,8 @@ export default {
                   time: {
                       start: "2021-03-16T16:00:00+0000",
                       end:   "2021-03-16T16:15:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[4] : ''
                 },
 
 
@@ -372,7 +383,8 @@ export default {
                   time: {
                       start: "2021-03-16T16:15:00+0000",
                       end:   "2021-03-16T16:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[5] : ''
                 },
 
 
@@ -387,7 +399,8 @@ export default {
                   time: {
                       start: "2021-03-16T16:30:00+0000",
                       end:   "2021-03-16T17:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[6] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -408,7 +421,8 @@ export default {
                   time: {
                       start: "2021-03-16T17:30:00+0000",
                       end:   "2021-03-16T18:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[7] : ''
                 },
 
 
@@ -421,7 +435,8 @@ export default {
                   time: {
                       start: "2021-03-16T18:00:00+0000",
                       end:   "2021-03-16T18:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[8] : ''
                 }
               ]
             }
@@ -449,7 +464,8 @@ export default {
                   time: {
                       start: "2021-03-17T11:00:00+0000",
                       end:   "2021-03-17T11:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : ''
                 },
 
 
@@ -462,7 +478,8 @@ export default {
                   time: {
                       start: "2021-03-17T11:30:00+0000",
                       end:   "2021-03-17T12:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -483,7 +500,8 @@ export default {
                   time: {
                       start: "2021-03-17T12:30:00+0000",
                       end:   "2021-03-17T13:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : ''
                 },
 
 
@@ -496,7 +514,8 @@ export default {
                   time: {
                       start: "2021-03-17T13:00:00+0000",
                       end:   "2021-03-17T13:15:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : ''
                 },
 
 
@@ -509,7 +528,8 @@ export default {
                   time: {
                       start: "2021-03-17T13:15:00+0000",
                       end:   "2021-03-17T13:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -530,7 +550,8 @@ export default {
                   time: {
                       start: "2021-03-17T14:30:00+0000",
                       end:   "2021-03-17T15:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : ''
                 },
 
 
@@ -543,7 +564,8 @@ export default {
                   time: {
                       start: "2021-03-17T15:00:00+0000",
                       end:   "2021-03-17T15:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -565,7 +587,8 @@ export default {
                   time: {
                       start: "2021-03-17T16:00:00+0000",
                       end:   "2021-03-17T16:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : ''
                 },
 
 
@@ -578,7 +601,8 @@ export default {
                   time: {
                       start: "2021-03-17T16:30:00+0000",
                       end:   "2021-03-17T17:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -627,7 +651,8 @@ export default {
                   time: {
                       start: "2021-03-18T11:00:00+0000",
                       end:   "2021-03-18T12:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -648,7 +673,8 @@ export default {
                   time: {
                       start: "2021-03-18T12:30:00+0000",
                       end:   "2021-03-18T13:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : ''
                 },
 
 
@@ -661,7 +687,8 @@ export default {
                   time: {
                       start: "2021-03-18T13:00:00+0000",
                       end:   "2021-03-18T13:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -682,7 +709,8 @@ export default {
                   time: {
                       start: "2021-03-18T14:30:00+0000",
                       end:   "2021-03-18T15:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : ''
                 },
 
 
@@ -706,7 +734,8 @@ export default {
                   time: {
                       start: "2021-03-18T15:00:00+0000",
                       end:   "2021-03-18T15:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -729,7 +758,8 @@ export default {
                   time: {
                       start: "2021-03-18T16:00:00+0000",
                       end:   "2021-03-18T16:30:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : ''
                 },
 
 
@@ -742,7 +772,8 @@ export default {
                   time: {
                       start: "2021-03-18T16:30:00+0000",
                       end:   "2021-03-18T16:45:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : ''
                 },
 
 
@@ -755,7 +786,8 @@ export default {
                   time: {
                       start: "2021-03-18T16:45:00+0000",
                       end:   "2021-03-18T17:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : ''
                 },
 
                 { authors: ["Robocon Venue"],
@@ -776,7 +808,8 @@ export default {
                   time: {
                       start: "2021-03-18T17:30:00+0000",
                       end:   "2021-03-18T17:45:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : ''
                 },
 
 
@@ -789,7 +822,8 @@ export default {
                   time: {
                       start: "2021-03-18T17:45:00+0000",
                       end:   "2021-03-18T18:00:00+0000",
-                  }
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : ''
                 },
 
                 { authors: ["Imbus"],
@@ -1244,11 +1278,14 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
     const token = params.get('token')
     if (!participant || !token) return
     jwt.verify(token, getKey(), (err, decoded) => {
-      console.log(decoded)
       if (err) return // wrong key
       const { name, exp } = decoded
       if (exp * 1000 < new Date().getTime()) return // expired
       if (name !== participant) return // wrong name
+      this.videoIds = getEncryptedVideoIds().map((id) => {
+        const bytes = CryptoJS.AES.decrypt(id, decoded['hash-key'])
+        return bytes.toString(CryptoJS.enc.Utf8)
+      })
       this.showVideos = true
     })
   }

@@ -167,9 +167,12 @@
       </button>
       <!-- YouTube video -->
       <div v-if="showVideo" class="col-12">
-        <b-embed
-          type="iframe"
-          :src="`https://www.youtube.com/embed/${videoId}`"
+        <iframe
+          :src="`https://player.vimeo.com/video/${videoId}`"
+          width="100%"
+          height="600px"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen />
       </div>
     </div>
