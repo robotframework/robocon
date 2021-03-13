@@ -225,6 +225,7 @@ export default {
           feature_box: false,
           data: {
             text: {
+              calendar: true,
               twitter: false,
               header: "For attendees",
               text:
@@ -253,7 +254,6 @@ export default {
             text: {
               twitter: false,
               header: "Program Day 1 (16th March)",
-              calendar: true,
               talks: [
                 { authors: ["Joe Colantonio"],
                   title: "Pre-show talk",
@@ -496,7 +496,7 @@ export default {
                       start: "2021-03-17T11:30:00+0000",
                       end:   "2021-03-17T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -519,7 +519,7 @@ export default {
                       start: "2021-03-17T12:30:00+0000",
                       end:   "2021-03-17T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -534,7 +534,7 @@ export default {
                       start: "2021-03-17T13:00:00+0000",
                       end:   "2021-03-17T13:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -549,7 +549,7 @@ export default {
                       start: "2021-03-17T13:15:00+0000",
                       end:   "2021-03-17T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -572,7 +572,7 @@ export default {
                       start: "2021-03-17T14:30:00+0000",
                       end:   "2021-03-17T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -587,7 +587,7 @@ export default {
                       start: "2021-03-17T15:00:00+0000",
                       end:   "2021-03-17T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -611,7 +611,7 @@ export default {
                       start: "2021-03-17T16:00:00+0000",
                       end:   "2021-03-17T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -626,7 +626,7 @@ export default {
                       start: "2021-03-17T16:30:00+0000",
                       end:   "2021-03-17T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -678,7 +678,7 @@ export default {
                       start: "2021-03-18T11:00:00+0000",
                       end:   "2021-03-18T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -701,7 +701,7 @@ export default {
                       start: "2021-03-18T12:30:00+0000",
                       end:   "2021-03-18T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -716,7 +716,7 @@ export default {
                       start: "2021-03-18T13:00:00+0000",
                       end:   "2021-03-18T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -739,7 +739,7 @@ export default {
                       start: "2021-03-18T14:30:00+0000",
                       end:   "2021-03-18T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -765,7 +765,7 @@ export default {
                       start: "2021-03-18T15:00:00+0000",
                       end:   "2021-03-18T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -790,7 +790,7 @@ export default {
                       start: "2021-03-18T16:00:00+0000",
                       end:   "2021-03-18T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -805,7 +805,7 @@ export default {
                       start: "2021-03-18T16:30:00+0000",
                       end:   "2021-03-18T16:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -820,7 +820,7 @@ export default {
                       start: "2021-03-18T16:45:00+0000",
                       end:   "2021-03-18T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -843,7 +843,7 @@ export default {
                       start: "2021-03-18T17:30:00+0000",
                       end:   "2021-03-18T17:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[26] : '',
                   previewImg: 'Bazar.png'
                 },
 
@@ -858,7 +858,7 @@ export default {
                       start: "2021-03-18T17:45:00+0000",
                       end:   "2021-03-18T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : '',
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[27] : '',
                   previewImg: 'Bazar.png'
                 },
 
