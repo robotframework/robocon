@@ -211,6 +211,24 @@ export default {
           }
         },
         {
+          title: "For-Attendees",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "For attendees",
+              text:
+                `<div>
+                  the floor is yours, Rene!
+              </div>
+              `
+            }
+          }
+        },
+        {
           title: "Day-1",
           text_block: false,
           text_block_centered: true,
@@ -1226,6 +1244,7 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
     const token = params.get('token')
     if (!participant || !token) return
     jwt.verify(token, getKey(), (err, decoded) => {
+      console.log(decoded)
       if (err) return // wrong key
       const { name, exp } = decoded
       if (exp * 1000 < new Date().getTime()) return // expired
