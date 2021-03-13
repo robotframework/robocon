@@ -106,7 +106,8 @@
             :third-img-url="talk.thirdImgUrl"
             :fourth-img-url="talk.fourthImgUrl"
             :url="talk.url"
-            :video-id="showVideos ? talk.videoId || '' : ''"/>
+            :video-id="showVideos ? talk.videoId || '' : ''"
+            :preview-img="talk.previewImg" />
         </div>
       </div>
     </div>

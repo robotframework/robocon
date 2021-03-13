@@ -157,23 +157,44 @@
       @click="hasExpandableContent ? expanded = !expanded : null">
       <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
     </div>
-    <div v-if="videoId && videoId !== ''" class="mb-2">
+    <div v-if="videoId && videoId !== ''" class="mb-5">
       <button
         v-if="!showVideo"
         class="button-primary white ml-2"
         type="button"
+        style="position: relative; width: 240px; height: 135px;"
         @click="showVideo = true">
-        Watch
+        <img
+          :src="require(`../assets/img/previews/${previewImg}`)"
+          style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;" />
+        <svg
+          height="70"
+          viewBox="0 0 24 24"
+          width="70"
+          style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); stroke: white; fill: white; stroke-width: 1px;">
+            <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        </svg>
+        <label
+          style="position: absolute; top: 100%; left: 0; width: 100%;">
+          Watch video
+        </label>
       </button>
-      <!-- YouTube video -->
-      <div v-if="showVideo" class="col-12">
-        <iframe
+      <!-- Vimeo video -->
+      <div v-if="showVideo" class="col-12" style="position: relative;">
+        <b-embed
+          type="iframe"
           :src="`https://player.vimeo.com/video/${videoId}`"
-          width="100%"
-          height="600px"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen />
+        <button
+          style="position: absolute; top: 1rem; right: 2rem; stroke: white; fill: white; stroke-width: 1px;"
+          @click="showVideo = false">
+          <svg
+            height="32"
+            viewBox="0 0 24 24"
+            width="32">
+              <path d="M22,3.41l-5.29,5.29L20,12h-8V4l3.29,3.29L20.59,2L22,3.41z M3.41,22l5.29-5.29L12,20v-8H4l3.29,3.29L2,20.59L3.41,22z"/>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -265,6 +286,10 @@ export default {
       default: false
     },
     videoId: {
+      type: String,
+      default: ''
+    },
+    previewImg: {
       type: String,
       default: ''
     }

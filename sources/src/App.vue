@@ -229,9 +229,15 @@ export default {
               header: "For attendees",
               text:
                 `<div>
-                  the floor is yours, Rene!
-              </div>
-              `
+                  <p>If you have already bought a ticket for RoboCon,
+                  you should have already received a confirmation
+                  email from "RoboCon Online Event" <i>(from: @pretix.eu)</i>.</p>
+                  <p>In this email you will find the access to your online ticket
+                  and the corresponding links to the RoboCon Online Venue and
+                  the possibilities to watch the pre-recorded talks and the live stream.</p>
+                  <p>In case of technical problems or if you cannot find this email,
+                  please contact <a href="mailto: rene@robotframework.org">René</a>.</p>
+                </div>`
             }
           }
         },
@@ -269,7 +275,8 @@ export default {
                   time: {
                     start: "2021-03-16T11:00:00+0000",
                     end: "2021-03-16T12:00:00+0000"
-                  }
+                  },
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -292,7 +299,8 @@ export default {
                     start: "2021-03-16T12:30:00+0000",
                     end: "2021-03-16T13:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[0] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[0] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -306,7 +314,8 @@ export default {
                       start: "2021-03-16T13:00:00+0000",
                       end:   "2021-03-16T13:30:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[1] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[1] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -334,7 +343,8 @@ export default {
                     start: "2021-03-16T14:30:00+0000",
                     end: "2021-03-16T15:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[2] : 'a'
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[2] : 'a',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -348,7 +358,8 @@ export default {
                       start: "2021-03-16T15:00:00+0000",
                       end:   "2021-03-16T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[3] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[3] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -370,7 +381,8 @@ export default {
                       start: "2021-03-16T16:00:00+0000",
                       end:   "2021-03-16T16:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[4] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[4] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -384,7 +396,8 @@ export default {
                       start: "2021-03-16T16:15:00+0000",
                       end:   "2021-03-16T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[5] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[5] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -400,7 +413,8 @@ export default {
                       start: "2021-03-16T16:30:00+0000",
                       end:   "2021-03-16T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[6] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[6] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -422,7 +436,8 @@ export default {
                       start: "2021-03-16T17:30:00+0000",
                       end:   "2021-03-16T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[7] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[7] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -436,7 +451,8 @@ export default {
                       start: "2021-03-16T18:00:00+0000",
                       end:   "2021-03-16T18:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[8] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[8] : '',
+                  previewImg: 'Bazar.png'
                 }
               ]
             }
@@ -465,7 +481,8 @@ export default {
                       start: "2021-03-17T11:00:00+0000",
                       end:   "2021-03-17T11:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -479,7 +496,8 @@ export default {
                       start: "2021-03-17T11:30:00+0000",
                       end:   "2021-03-17T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -501,7 +519,8 @@ export default {
                       start: "2021-03-17T12:30:00+0000",
                       end:   "2021-03-17T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -515,7 +534,8 @@ export default {
                       start: "2021-03-17T13:00:00+0000",
                       end:   "2021-03-17T13:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -529,7 +549,8 @@ export default {
                       start: "2021-03-17T13:15:00+0000",
                       end:   "2021-03-17T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -551,7 +572,8 @@ export default {
                       start: "2021-03-17T14:30:00+0000",
                       end:   "2021-03-17T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -565,7 +587,8 @@ export default {
                       start: "2021-03-17T15:00:00+0000",
                       end:   "2021-03-17T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -588,7 +611,8 @@ export default {
                       start: "2021-03-17T16:00:00+0000",
                       end:   "2021-03-17T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -602,7 +626,8 @@ export default {
                       start: "2021-03-17T16:30:00+0000",
                       end:   "2021-03-17T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -623,7 +648,8 @@ export default {
                   time: {
                       start: "2021-03-17T17:30:00+0000",
                       end:   "2021-03-17T18:30:00+0000",
-                  }
+                  },
+                  previewImg: 'Bazar.png'
                 }
               ]
             }
@@ -652,7 +678,8 @@ export default {
                       start: "2021-03-18T11:00:00+0000",
                       end:   "2021-03-18T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -674,7 +701,8 @@ export default {
                       start: "2021-03-18T12:30:00+0000",
                       end:   "2021-03-18T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -688,7 +716,8 @@ export default {
                       start: "2021-03-18T13:00:00+0000",
                       end:   "2021-03-18T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -710,7 +739,8 @@ export default {
                       start: "2021-03-18T14:30:00+0000",
                       end:   "2021-03-18T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -735,7 +765,8 @@ export default {
                       start: "2021-03-18T15:00:00+0000",
                       end:   "2021-03-18T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -759,7 +790,8 @@ export default {
                       start: "2021-03-18T16:00:00+0000",
                       end:   "2021-03-18T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -773,7 +805,8 @@ export default {
                       start: "2021-03-18T16:30:00+0000",
                       end:   "2021-03-18T16:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -787,7 +820,8 @@ export default {
                       start: "2021-03-18T16:45:00+0000",
                       end:   "2021-03-18T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Robocon Venue"],
@@ -809,7 +843,8 @@ export default {
                       start: "2021-03-18T17:30:00+0000",
                       end:   "2021-03-18T17:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : '',
+                  previewImg: 'Bazar.png'
                 },
 
 
@@ -823,7 +858,8 @@ export default {
                       start: "2021-03-18T17:45:00+0000",
                       end:   "2021-03-18T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : ''
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : '',
+                  previewImg: 'Bazar.png'
                 },
 
                 { authors: ["Imbus"],
