@@ -68,6 +68,13 @@
         </div>
       </div>
       <div
+        v-if="data.stream">
+        <b-embed
+          type="iframe"
+          :src="`https://testguild.com/roboconvimeo`"
+          allowfullscreen />
+      </div>
+      <div
         v-if="data.previousTalks">
         <transition appear name="fade">
           <div v-if="hiddenContentShown" class="mt-4">

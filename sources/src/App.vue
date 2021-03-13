@@ -1,11 +1,11 @@
 <template>
   <div class="row no-gutters">
-    <navigation-horizontal :pages="pages"/>
+    <navigation-horizontal :pages="pages.filter(({ hidden }) => !hidden)"/>
     <b-img :src="require('@/assets/img/ROBOTFW_Mark_White_LOW_cropped.png')" class="logo-fixed" alt="Robot Frameworkg logo"/>
     <div class="col-md-12" ref="content" style="width: 100%">
       <app-header/>
       <page-block
-        v-for="(page, index) in pages"
+        v-for="(page, index) in pages.filter(({ hidden }) => !hidden)"
         :page="page"
         :index="index"
         :key="index"
@@ -239,6 +239,21 @@ export default {
                   <p>In case of technical problems or if you cannot find this email,
                   please contact <a href="mailto: rene@robotframework.org">René</a>.</p>
                 </div>`
+            }
+          }
+        },
+        {
+          title: "Stream",
+          hidden: !this.showVideos,
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              stream: true,
+              header: "Stream"
             }
           }
         },
