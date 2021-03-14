@@ -784,6 +784,9 @@ table {
 .bg-blue {
   background-color: #262330;
 }
+.keynote {
+  font-size: 1.4rem;
+}
 
 @media (max-width: 770px) {
   .ticket-visual_visual {

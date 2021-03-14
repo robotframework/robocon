@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[`mb-5 ${isMobile ? '' : 'p-1'}`, {['bg-blue pb-3']: keynote}]">
+    :class="[`mb-5 ${isMobile ? '' : 'p-1'} ${isCurrentTalk(time.start, time.end) ? 'bg-blue' : ''}`]">
     <div v-if="header !== ''">
       <h2 class="white mt-4" v-html="header" />
     </div>
@@ -25,10 +25,9 @@
         </a>
         <a
           v-else
-          class="link-title"
           style="color: #01ffd9"
           :id="title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()"
-          :class="{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}">
+          :class="['link-title', {['keynote']: keynote},{ 'clickable-title' : descriptionExpanded !== '' || url !== ''}]">
           {{ title }}
         </a>
       </button>
@@ -157,7 +156,7 @@
       @click="hasExpandableContent ? expanded = !expanded : null">
       <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
     </div>
-    <div v-if="videoId && videoId !== ''" class="mb-5">
+    <div v-if="videoId && videoId !== '' && isRelease(time.start)" class="mb-5">
       <button
         v-if="!showVideo"
         class="button-primary white ml-2"
@@ -321,6 +320,12 @@ export default {
     if (anchor === this.title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()) this.expanded = true
   },
   methods: {
+    isCurrentTalk(starttime, endtime){
+        return (Date.now() > Date.parse(starttime) && Date.now() < Date.parse(endtime))
+    },
+    isRelease(dataTime){
+        return (Date.now() > (Date.parse(dataTime) - 604800000)) //set this here to 36h
+    },
     dateString(dataTime) {
       const locale = window.navigator.userLanguage || window.navigator.language;
       moment.locale(locale);
