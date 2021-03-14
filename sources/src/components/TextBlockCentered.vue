@@ -71,7 +71,7 @@
         v-if="data.stream">
         <b-embed
           type="iframe"
-          :src="`https://testguild.com/roboconvimeo`"
+          :src="streamUrl"
           allowfullscreen />
       </div>
       <div

@@ -8,7 +8,7 @@
         v-for="(page, index) in pages.filter(({ hidden }) => !hidden)"
         :page="page"
         :index="index"
-        :key="index"
+        :key="`${page.title}${index}`"
         :show-videos="showVideos"
         class="pl-md-5 px-lg-2 p-sm-2 p-xs-1 link-fix"
       />
