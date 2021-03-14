@@ -922,6 +922,51 @@ export default {
           }
         },
         {
+          title: "Sprints",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Sprints DAY 4 (19TH MARCH)",
+              text: `
+              <div>
+                <p>Date: March 19th, 2021<br>
+                Time: <span class="blue">${local_time('2021-03-19T09:00:00+0000')}</span> - <span class="blue">${local_time('2021-03-19T16:00:00+0000')}</span> (${local_tz()})
+                <span class="type-small"><span>${utc_time('2021-03-19T09:00:00+0000')}</span> - <span>${utc_time('2021-03-19T16:00:00+0000')}</span> (UTC)</span><br>
+                Location:
+                  <a href='https://gather.town/app/38f5qjlXAKZ7xIBm/RoboCon'>
+                    RoboCon Virtual Venue
+                  </a><br>
+                    <br>
+                    After the main conference we have development sprints. Sprints are for you if you
+                    want to contribute to some existing project in Robot Framework ecosystem, have a project or project idea you'd
+                    like to work with others, or just want to meet with other Robot Framework users and developers. We'll also have
+                    sauna afterwards!<br>
+                    <br>
+                    Developers will select tasks suitable for new contributors beforehand (typically
+                    labeled with <code>good new issue</code> or <code>help wanted</code> in their issue trackers), but participants
+                    can obviously select issues they’d like to work with themselves. Many of the tasks are likely to involve coding,
+                    but there certainly are also non-coding tasks like testing, documentation and work with infrastructure like CI.
+                </p>
+                <p>If you are new to contributing to open source, we recommend you to take a look at the
+                  <a target='blank' href='https://opensource.guide/how-to-contribute/'>How to Contribute to Open Source</a>
+                    guide. Individual
+                    projects typically also have their own contribution guidelines you can find via their project pages and may want
+                    to study beforehand.<br>
+                    <br>
+                    <b>Sprints are free of charge and open for everyone</b>, including those not participating
+                    the conference itself. Sprint facilities are provided by Robot Framework Foundation.
+                    The url is <a target='blank'
+                        href='https://gather.town/app/38f5qjlXAKZ7xIBm/RoboCon'>https://gather.town/app/38f5qjlXAKZ7xIBm/RoboCon</a>.<br>
+                    <del>Food and drinks will be available.</del> Bring your own food and drinks...</p>
+              </div>`
+            }
+          }
+        },
+        {
           title: "Workshops",
           text_block: false,
           text_block_centered: true,
@@ -1375,15 +1420,15 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
 }
 
 function utc_time(dataTime) {
-  var locale = window.navigator.userLanguage || window.navigator.language;
-  moment.locale(locale);
-  return moment.tz(dataTime, "Africa/Freetown");
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, "Africa/Freetown").format("LT");
 }
 function local_time(dataTime) {
-  var locale = window.navigator.userLanguage || window.navigator.language;
-  moment.locale(locale);
-  return moment.tz(dataTime, moment.tz.guess());
-}
+      const locale = window.navigator.userLanguage || window.navigator.language;
+      moment.locale(locale);
+      return moment.tz(dataTime, moment.tz.guess()).format("LT");
+    }
 function local_tz() {
   return moment.tz.guess();
 }
