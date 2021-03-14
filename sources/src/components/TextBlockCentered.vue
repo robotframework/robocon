@@ -154,6 +154,9 @@
 <script>
 import Timeline from "vue-tweet-embed/timeline"
 import TalkerItem from "@/Components/TalkerItem"
+import jwt from 'jsonwebtoken'
+import { getKey, getStreamKey } from '../../static/key'
+import CryptoJS from 'crypto-js';
 
 export default {
   props: ["data", "showVideos"],
@@ -161,7 +164,7 @@ export default {
     "twitter-timeline": Timeline,
     TalkerItem
   },
-  data() {
+  data () {
     return {
       options: {
         theme: "dark",
@@ -169,18 +172,30 @@ export default {
         chrome:
           window.innerWidth < 992 ? ["nofooter", "noscroll"] : ["nofooter"]
       },
-      hiddenContentShown: false
-    };
-  },
-  computed: {
-    isMobile() {
-      return window.innerWidth < 992;
-    },
-    isTablet() {
-      return window.innerWidth < 1200;
+      hiddenContentShown: false,
+      streamUrl: ''
     }
   },
-  created() {
+  computed: {
+    isMobile () {
+      return window.innerWidth < 992
+    },
+    isTablet () {
+      return window.innerWidth < 1200
+    }
+  },
+  mounted () {
+    if (!this.data.stream) return
+    const params = new URLSearchParams(window.location.search)
+    const participant = params.get('participant')
+    const token = params.get('token')
+    if (!participant || !token) return
+    jwt.verify(token, getKey(), (err, decoded) => {
+      if (err) return // wrong key
+      this.streamUrl = CryptoJS.AES.decrypt(getStreamKey(), decoded['hash-key']).toString(CryptoJS.enc.Utf8)
+    })
+  },
+  created () {
     const anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null
     if (this.data.textHiddenByDefault && anchor === this.data.header.replace(/ /g, '-').toLowerCase()) this.hiddenContentShown = true
     if (!this.data.talks) return

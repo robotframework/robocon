@@ -27,6 +27,7 @@ const clamp = (value, max, min) => Math.min(Math.max(value, min), max)
 
 setTimeout(() => {
   const ticketElm = document.getElementById("ticket")
+  if (!ticketElm) return
   window.addEventListener("mousemove", (e) => {
     const { x, y, width, height } = ticketElm.getBoundingClientRect()
     const centerPoint = { x: x + width / 2, y: y + height / 2 }

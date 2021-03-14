@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[`mb-5 ${isMobile ? '' : 'p-1'} ${isCurrentTalk(time.start, time.end) ? 'bg-blue' : ''}`]">
+    :class="[`mb-5 ${isMobile ? '' : 'p-1'} ${isCurrentTalk ? 'bg-blue' : ''}`]">
     <div v-if="header !== ''">
       <h2 class="white mt-4" v-html="header" />
     </div>
@@ -156,7 +156,7 @@
       @click="hasExpandableContent ? expanded = !expanded : null">
       <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
     </div>
-    <div v-if="videoId && videoId !== '' && isRelease(time.start)" class="mb-5">
+    <div v-if="videoId && videoId !== '' && isReleased" class="mb-5">
       <button
         v-if="!showVideo"
         class="button-primary white ml-2"
@@ -295,7 +295,8 @@ export default {
   },
   data: () => ({
     expanded: false,
-    showVideo: false
+    showVideo: false,
+    timeNow: Date.now()
   }),
   computed: {
     hasExpandableContent () {
@@ -305,7 +306,15 @@ export default {
       return window.innerWidth < 692
     },
     local_tz() {
-      return moment.tz.guess();
+      return moment.tz.guess()
+    },
+    isCurrentTalk() {
+      if (this.time.start === '') return false
+      return (this.timeNow > Date.parse(this.time.start) && this.timeNow < Date.parse(this.time.end))
+    },
+    isReleased() {
+      if (this.time.start === '') return false
+      return (this.timeNow > (Date.parse(this.time.start) - 604800000)) // set this here to 36h
     }
   },
   watch: {
@@ -318,16 +327,13 @@ export default {
   mounted() {
     const anchor = document.URL.split('#').length > 1 ? document.URL.split('#')[1] : null
     if (anchor === this.title.replace(/ /g, '-').replace(/[?=]/g, '').toLowerCase()) this.expanded = true
+    setInterval(() => {
+      this.timeNow = Date.now()
+    }, 60000) // every 1min
   },
   methods: {
-    isCurrentTalk(starttime, endtime){
-        return (Date.now() > Date.parse(starttime) && Date.now() < Date.parse(endtime))
-    },
-    isRelease(dataTime){
-        return (Date.now() > (Date.parse(dataTime) - 604800000)) //set this here to 36h
-    },
     dateString(dataTime) {
-      const locale = window.navigator.userLanguage || window.navigator.language;
+      const locale = window.navigator.userLanguage || window.navigator.language
       moment.locale(locale);
       return moment.tz(dataTime, moment.tz.guess()).format("DD MMM")
     },

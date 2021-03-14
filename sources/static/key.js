@@ -44,3 +44,5 @@ export const getEncryptedVideoIds = () => [
     'U2FsdGVkX18gCGwaXLKkThEGFa5glkpPbxPfqdROJjk=',
     'U2FsdGVkX19zq7uqoWPns3P7fscaLAUOTh+7pxUE5Ck=',
     'U2FsdGVkX19N8HmoIAsUF+mbwBywXP5S4HahtT9zHhg=']
+
+export const getStreamKey = () => 'U2FsdGVkX1/vbL3/Feq3SUQbmM8wezYO4UL8hx4vm1JlneOIMZapsC4ZgHDggV3sdnghdILSgX3TR0j69q/doQ=='
