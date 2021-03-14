@@ -16,7 +16,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "bootstrap": "^4.5.3",
-    "bootstrap-vue": "^1.5.1",
+    "bootstrap-vue": "^2.0.0",
     "crypto-js": "4.0.0",
     "es6-promise": "^4.2.5",
     "jsonwebtoken": "8.5.1",
