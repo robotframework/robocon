@@ -314,7 +314,7 @@ export default {
     },
     isReleased() {
       if (this.time.start === '') return false
-      return (this.timeNow > (Date.parse(this.time.start) - 604800000)) // set this here to 36h
+      return (this.timeNow > (Date.parse(this.time.start) - (1000 * 60 * 60 * 36))) // set this here to 36h
     }
   },
   watch: {
