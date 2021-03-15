@@ -946,7 +946,7 @@ export default {
                     sauna afterwards!<br>
                     <br>
                     Developers will select tasks suitable for new contributors beforehand (typically
-                    labeled with <code>good new issue</code> or <code>help wanted</code> in their issue trackers), but participants
+                    labeled with <code>good first issue</code> or <code>help wanted</code> in their issue trackers), but participants
                     can obviously select issues they’d like to work with themselves. Many of the tasks are likely to involve coding,
                     but there certainly are also non-coding tasks like testing, documentation and work with infrastructure like CI.
                 </p>
