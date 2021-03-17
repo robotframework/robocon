@@ -25,7 +25,7 @@ export const getEncryptedVideoIds = () => [
     'U2FsdGVkX189j0qG5g8zYIhJriyz15RLGmPAz6Fsh0k=',
     'U2FsdGVkX1/CwkY2lold4ZTdB9vEJ4P7/dZezTUwR2Q=',
     'U2FsdGVkX19xuo7i8HvbXyjuS3sTsUwKvFBXd7EV0Hs=',
-    'U2FsdGVkX1+ZYx3dflBKnM/z6MVs5srvEIb6taoXpUU=',
+    'U2FsdGVkX19E1grrHprB9SZ7UsME2Oi48uXVA7l0NWk=',
     'U2FsdGVkX19xn9RZMK2NMMitEfeAL5loWTE+zQ3NquQ=',
     'U2FsdGVkX187Vh0f+2+yJ6zwliR2yu5lleDsA6UWexU=',
     'U2FsdGVkX19sq0xRDwViKsxAEIPa86GNo30z19NfW/k=',
@@ -43,6 +43,7 @@ export const getEncryptedVideoIds = () => [
     'U2FsdGVkX18U256tK9dMJmH69S5Kv2uL6S2xSn6KRtw=',
     'U2FsdGVkX18gCGwaXLKkThEGFa5glkpPbxPfqdROJjk=',
     'U2FsdGVkX19zq7uqoWPns3P7fscaLAUOTh+7pxUE5Ck=',
-    'U2FsdGVkX19N8HmoIAsUF+mbwBywXP5S4HahtT9zHhg=']
+    'U2FsdGVkX19N8HmoIAsUF+mbwBywXP5S4HahtT9zHhg=',
+    'U2FsdGVkX1+BjN1Nkfn2lhVaFOZ2/vyXN2eJiDPChbs=']
 
 export const getStreamKey = () => 'U2FsdGVkX1/vbL3/Feq3SUQbmM8wezYO4UL8hx4vm1JlneOIMZapsC4ZgHDggV3sdnghdILSgX3TR0j69q/doQ=='

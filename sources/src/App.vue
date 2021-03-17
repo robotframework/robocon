@@ -517,10 +517,24 @@ export default {
                   previewImg: 'bazar.jpeg'
                 },
 
+                { authors: ["Antti Karjalainen", "(Platinum Sponsor Talk)"],
+                  title: "Roborcorp",
+                  description: "This talk will introduce you to RoboCorp.",
+                  descriptionExpanded: "<p>Why was Robocorp build, how does Robocorp contribute to open-source and the Robocorp ecosystem can be used as developer.</p>",
+                  bio: "Founder and CEO of Robocorp, a San Francisco and Helsinki based company that is set out to change the RPA market with open-source technologies. Member of the board at Robot Framework foundation since 2019.",
+                  imgUrl: 'Antti_Karjalainen.jpg',
+                  time: {
+                      start: "2021-03-17T12:00:00+0000",
+                      end:   "2021-03-17T12:10:00+0000",
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[30] : '',
+                  previewImg: 'robocorp.png'
+                },
+
                 { authors: ["Robocon Venue"],
                   title: "Community time",
                   time: {
-                    start: "2021-03-17T12:00:00+0000",
+                    start: "2021-03-17T12:10:00+0000",
                     end: "2021-03-17T12:30:00+0000"
                   }
                 },
