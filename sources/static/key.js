@@ -44,6 +44,9 @@ export const getEncryptedVideoIds = () => [
     'U2FsdGVkX18gCGwaXLKkThEGFa5glkpPbxPfqdROJjk=',
     'U2FsdGVkX19zq7uqoWPns3P7fscaLAUOTh+7pxUE5Ck=',
     'U2FsdGVkX19N8HmoIAsUF+mbwBywXP5S4HahtT9zHhg=',
-    'U2FsdGVkX1+BjN1Nkfn2lhVaFOZ2/vyXN2eJiDPChbs=']
+    'U2FsdGVkX1+BjN1Nkfn2lhVaFOZ2/vyXN2eJiDPChbs=',
+    'U2FsdGVkX1+v9TCpa9XyITljspOWcjqcVv/VAo7lU8g=',
+    'U2FsdGVkX1/pa4AnJ5qMpR/sSQnHqLW/SDye7awHBnw='
+]
 
 export const getStreamKey = () => 'U2FsdGVkX1/vbL3/Feq3SUQbmM8wezYO4UL8hx4vm1JlneOIMZapsC4ZgHDggV3sdnghdILSgX3TR0j69q/doQ=='

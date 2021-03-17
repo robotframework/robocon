@@ -297,6 +297,20 @@ export default {
                   previewImg: 'rf2021.jpeg'
                 },
 
+                { authors: ["Hanna Saari", "(Platinum Sponsor Talk)"],
+                  title: "Mission Robocon 2021 and beyond",
+                  description: "The many ways to use Robot Framework by Knowit.",
+                  descriptionExpanded: "<p>Knowit has years of history in using Robot Framework. In this talk you’ll hear about our use cases and diverse ways to use Robot Framework for different business functions. Since work must be fun we took our intern to join as well, let’s see if you can recognize him!</p>",
+                  bio: "Hanna is member of the board of Robot Framework Foundation and so she and Knowit invest actively to Robot Framework Community. She is also head of RoboCon orga team. RPA and community is one of her passions.",
+                  imgUrl: 'hanna_saari.jpg',
+                  time: {
+                      start: "2021-03-16T12:00:00+0000",
+                      end:   "2021-03-16T12:10:00+0000",
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[31] : '',
+                  previewImg: 'knowit.png'
+                },
+
                 { authors: ["Robocon Venue"],
                   title: "Community time",
                   time: {
@@ -714,10 +728,24 @@ export default {
                   previewImg: 'what.jpeg'
                 },
 
+                { authors: ["Henri-Terho", "(Platinum Sponsor Talk)"],
+                  title: "Mission Robocon 2021 and beyond",
+                  description: "Qentinel has had a long past with robot framework and has been involved in its development from the beginning.",
+                  descriptionExpanded: "<p>We are now launching our QWeb automation library as open source and giving back to the community!</p>",
+                  bio: "Henri Is the R&D Evangelist at Qentinel, working with open source and research communities to make Qentinel Pace known and improve the platform towards being the best place to run RFW on the cloud.  Henri has a background in software engineering and startups and is working on a PhD about software development in startup environmens.",
+                  imgUrl: 'Henri-Terho.jpg',
+                  time: {
+                      start: "2021-03-18T12:00:00+0000",
+                      end:   "2021-03-18T12:10:00+0000",
+                  },
+                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[32] : '',
+                  previewImg: 'qentinel.png'
+                },
+
                 { authors: ["Robocon Venue"],
                   title: "Community time",
                   time: {
-                    start: "2021-03-18T12:00:00+0000",
+                    start: "2021-03-18T12:10:00+0000",
                     end: "2021-03-18T12:30:00+0000"
                   }
                 },
@@ -894,7 +922,7 @@ export default {
                   previewImg: 'takinglong.jpeg'
                 },
 
-                { authors: ["Joe", "Ismo", "Pekka", "René"],
+                { authors: ["Joe", "Ismo", "Pekka", "Hanna"],
                   title: "That was RoboCon 2021",
                   description: "How was it and what to expect next.",
                   descriptionExpanded: "",
