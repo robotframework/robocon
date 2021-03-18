@@ -532,7 +532,7 @@ export default {
                 },
 
                 { authors: ["Antti Karjalainen", "(Platinum Sponsor Talk)"],
-                  title: "Roborcorp",
+                  title: "Robocorp",
                   description: "This talk will introduce you to RoboCorp.",
                   descriptionExpanded: "<p>Why was Robocorp build, how does Robocorp contribute to open-source and the Robocorp ecosystem can be used as developer.</p>",
                   bio: "Founder and CEO of Robocorp, a San Francisco and Helsinki based company that is set out to change the RPA market with open-source technologies. Member of the board at Robot Framework foundation since 2019.",
@@ -729,7 +729,7 @@ export default {
                 },
 
                 { authors: ["Henri-Terho", "(Platinum Sponsor Talk)"],
-                  title: "Mission Robocon 2021 and beyond",
+                  title: "Qweb launch and history of Qentinel and RFW",
                   description: "Qentinel has had a long past with robot framework and has been involved in its development from the beginning.",
                   descriptionExpanded: "<p>We are now launching our QWeb automation library as open source and giving back to the community!</p>",
                   bio: "Henri Is the R&D Evangelist at Qentinel, working with open source and research communities to make Qentinel Pace known and improve the platform towards being the best place to run RFW on the cloud.  Henri has a background in software engineering and startups and is working on a PhD about software development in startup environmens.",
