@@ -141,7 +141,7 @@
               id="robotframework"
               widget-class="twitterprofile"
               sourceType="profile"
-              :style="isMobile ? '' : isTablet ? 'height: 850px; overflow: scroll' : 'height: 980px; overflow: scroll'"
+              :style="isMobile ? '' : isTablet ? 'height: 550px; overflow: scroll' : 'height: 580px; overflow: scroll'"
               :options="options"
             />
           </div>

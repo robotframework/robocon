@@ -21,22 +21,7 @@ import PageBlock from "@/Components/PageBlock.vue"
 import moment from "moment-timezone"
 import jwt from 'jsonwebtoken'
 import { getKey, getEncryptedVideoIds } from '../static/key'
-import CryptoJS from 'crypto-js';
-
-const clamp = (value, max, min) => Math.min(Math.max(value, min), max)
-
-setTimeout(() => {
-  const ticketElm = document.getElementById("ticket")
-  if (!ticketElm) return
-  window.addEventListener("mousemove", (e) => {
-    const { x, y, width, height } = ticketElm.getBoundingClientRect()
-    const centerPoint = { x: x + width / 2, y: y + height / 2 }
-    const screenSizeScaling = (1 + 1500 / window.innerWidth) / 2
-    const degreeX = clamp((e.clientY - centerPoint.y) * -0.016 * screenSizeScaling, 15, -15)
-    const degreeY = (e.clientX - centerPoint.x) * 0.016 * screenSizeScaling
-    ticketElm.style.transform = `perspective(1000px) rotateX(${degreeX}deg) rotateY(${degreeY}deg)`
-  })
-}, 500)
+import CryptoJS from 'crypto-js'
 
 export default {
   components: {
@@ -65,21 +50,7 @@ export default {
               text:
                 `
                   <p class="mb-3">
-                    Come, join us for the 4th Annual Robot Framework conference. This year it will again be something special!
-                    As this year will be online we are bringing the hallway conversations right to you.
-                    We have created an awesome world to bring community to your desk with physical distance but social proximity:
-                  </p>
-                  <video width="100%" autoplay muted controls loop>
-                    <source src=${require('./assets/img/RoboCon2DWorld_l.mp4')}>
-                  </video>
-                  <p>
-                    RoboCon is for all of you automation enthusiasts all over the world. Whether you are new to Robot Framework or more advanced user, we are sure you will learn something new. We have pulled together an amazing virtual playground to connect and meet each other. Through the talks and workshops you will learn from your fellow Robot Framework experts and our excellent keynotes. So join us for this exciting gathering!
-                  </p>
-                  <p class="mt-3">
-                    Robot Framework is a generic open source automation framework. It can be used for test automation and robotic process automation (RPA). <a href="https://robotframework.org/">More information about Robot Framework.</a>
-                  </p>
-                  <p>
-                    By buying a ticket you are supporting the ongoing development of Robot Framework.
+                    Thank you for everyone who attended Robocon this year! <br><br>We had a total of 675 participants, which was the most attendees in RoboCon history.<br><br>See you next year!
                   </p>
                 `
             }
@@ -173,90 +144,6 @@ export default {
                 img: require("@/assets/img/sponsors/vala.png")
               }
             ]
-          }
-        },
-        {
-          title: "Tickets",
-          hidden: this.showVideos,
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Tickets",
-              text:
-                `<div>
-                  <p>The tickets are available for <span class="blue">149€ + 24% VAT</span>.
-                  For those who can't afford the ticket, budget vouchers are available. Please contact <a href="mailto: rene@robotframework.org">René</a> for more info.</p>
-                  <div class="ticket-visual_visual" id="ticket">
-                  <canvas id="ticket-canvas"></canvas>
-                  <div class="ticket-visual-wrapper">
-                    <div class="ticket-visual_profile">
-                      <a href="http://tickets.robotframework.org/" class="row ticket-buy-container p-4" onclick="ga('send', 'event', 'click', 'ticketClick')">
-                        <div class="ticket-link col-12 row m-0 p-0">
-                          <img src="data:image/png;base64,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ERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAhKxekAECicgERdeQIUvAqP4+8RtmQ/8sfH2LW19EeAfN183f+fZV2YHshmFiCHeCrlfwedwmX8CM6R4hbrX2N5AzEts3Zr7x2kUco7q3cO5lY2LQIV0F+iBezj3XZprEaNwC1SNPnFZPSXVlcAUJ1LI3LoztyJGwa5Rrbm7iimhvgR4I7/zKGSXIkahZigYvwaWicAuAQqZT2auzKWIUSF3hXLVdXmTmTZPaXmjCDi7OxGjQHPwqQIy0lD+CHxAn3BVdmHuRIyqfHBRGSURkwAFfBZzgpRjuxJxc3edpgSouYol8K7YyPcCdyVi5CYB7xVYL58lMHv2ncLekIgLK5jCDUagCjZS5oG8iZhf68hEYFQEvIl4VMVTsiJAAt5EvFZZRaAjgW3H88yf5k3EtXniCtAKgbWVQIbG4UrE+JWzGkDoMhF4jQB/59iFuRJxU5E/XFRGScQmsIo9QarxPYr4FvDcfL2TqhFGNs+yeWpzkbY7EaM4FPCNi+ooiRgE2B+XMQbONaY7ERMkhMzVeJULquY1TeC8udGbDvKY4FyKuAFwju3mGBg61z0BCtjdzd2tiJu77Snacum+NZXgawS2OOE9emL52oklvu9WxCwGhQznivweXsNl4yOwRMpv0QfuVuC2lK5F3CbJAsLf4DXFvITXcJlfAmukdgt/g7qfw2vsu7VRfO50Wz0Uk3djt3fkNk9tx0VgFCvxuEqqbMdGQCIeW8WVrzsCErG7kiqhsRGQiMdWceXrjoBE7K6kSmhsBCTisVVc+bojIBG7K6kSGhsBiXhsFVe+7ghIxO5KqoTGRkAiHlvFla87AhKxu5IqobERkIjHVnHl646AROyupEpobARSibgaG1jlKwIgMEtBIZWIf02RjOYQAWMEfkkRTyoRn6VIRnOIgDECSfo+lYgr/AHwuTHACkcEohFAv19g8Em0CXYGTiViTvkRiSVJaic/7YpAcgLo8wqTXqWamCLeJJqMAr6TkBPR1jRZCDT9/RmTJ1uwKOK/E2Y7xVwSckLgmiodgUbAd5iRfZ7MKOJtstm+TyQhJwau6eITyCVgZLZJ+Ti9S1JC3qWh/aIJZBQwudUn/BdB/MNtBttgzlN8lGzqp4EMqWpKjwQyC5h/HOFnrsS01fdN8n+1IidHrglDEcgsYKbxoNtWxF9CJdZjHAm5BzRdkpeAAQETwFf+0z5OT7D/Fw9ktA3m1qN1xgJo6m4EjAj44VGaET+sxM3XpMtuKUQ7SytyNLQaOBQBIwJmOp/anB5WYr5AcBU237if2bQiZy6Apj9MwJCAt4jwTbP4fl+JGTIO1Njccj+zaUXOXABN/5SAIQEzuE+tgPnix0rMF02g99it+DqzaUXOXABN/52AMQFvIOC3u7Vpvzv9cKxR9/nuCRn3tSJnhK+pvxMwJuAtonqiz0ciZtgQ8vrQiXwvg0nIGaBryu8EjAmYQV1Cn3xC7WZIYAG3YvcIZNItcp0lAsMJsN/g7DsrNu+VFaJfWMkAcUjIvaqoi44lgF7zIeA2cSS0gFsxCbktjLZRCKDRfQm4pYTEFlZUjDgk5LYw2gYlgN7yKeCWEhJcwK2YhNwWRtsgBNDYvgXcUkKiCysqRhwSclsYbQcRQC+NQ8AtJSS8gFsxCbktjLa9CKCRxyXglhISX1hRMeKQkNvCaHsUAfTOOAXcUgKABdyKUchVG5u2IvAaAfTLFM6+sWLz12KO8j6yX1ghgDj+gl/DqyjJalAXBNgf8AXcks2HwH30CxB9BgKJBa4bFESfeV+5hj+atn3lHL09PgIVUqZbsnP8KOVySECDRczJjQp5CBddKwIpCAwWMIMMImIOJCGTgkwEOhMIImDOFkzEHExCJgWZCLxKIJiAOVNQEXNACZkUZCLwLIGgAuYswUXMQSVkUpCJwBMCwQXMGaKImANLyKQgE4EfBKIImKNHEzEHl5BJQSYCP0UTMNlGFTEnkJBJQTZiAlEFTK7RRcxJJGRSkI2QQHQBk2kSEXMiCZkUZCMikETA5JlMxJxMQiYF2QgIJBMwWSYVMSeUkElB5phAUgGTY3IRc1IJmRRkDgkkFzAZZhExJ5aQSUHmiEAWAZNfNhFzcgmZFGQOCGQTMNllFTEDkJBJQVYwgawCJrfsImYQEjIpyAokkF3AZGZCxAxEQiYFWUEETAiYvJ78VcRcEE9OTs4x922u+TWvCBxBwIyAGbOZlbgFiBV5jv2PcP0VxBaKtlYI8HPbKOCVlYAYhzkRMygIeYoNP4CPW5kIWCCwRhAUcG0hmN0YzDxO7wYFUBv4WxzjIzbvfjIRyEWgxsQU7ymc++bM5Eq8Swmr8gSvz+BX8AouE4EUBDaY5BOEu0wx2ZA5zIt4N7nmMZuCfgef7b6nfREYSGCL6yncL/CV1VX3UI5FiXg/AYi6wjG6TASGEKhLEu1+ov8HNJr5BA1F6okAAAAASUVORK5CYII=" alt="Robot Framework logo" class="ticket-profile_image" />
-                          <div class="ticket-main-texts">
-                            <p class="ticket-buy-text">Buy your</p>
-                            <p class="ticket-buy-text">ticket here!</p>
-                          </div>
-                        </div>
-                        <div class="col-12 row ticket-event-info ml-1 mr-1 pl-0 pr-0">
-                          <div>Robocon</div>
-                          <div>16-18/MAR-2021</div>
-                          <div>Online</div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="ticket-visual_ticket-number-wrapper">
-                      <h3 class="ticket-visual_ticket-number">№ 20210316-18</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              `
-            }
-          }
-        },
-        {
-          title: "For-Attendees",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          data: {
-            text: {
-              calendar: true,
-              twitter: false,
-              header: "For attendees",
-              text:
-                `<div>
-                  <p>If you have already bought a ticket for RoboCon,
-                  you should have already received a confirmation
-                  email from "RoboCon Online Event" <i>(from: @pretix.eu)</i>.</p>
-                  <p>In this email you will find the access to your online ticket
-                  and the corresponding links to the RoboCon Online Venue and
-                  the possibilities to watch the pre-recorded talks and the live stream.</p>
-                  <p>In case of technical problems or if you cannot find this email,
-                  please contact <a href="mailto: rene@robotframework.org">René</a>.</p>
-                </div>`
-            }
-          }
-        },
-        {
-          title: "Stream",
-          hidden: !this.showVideos,
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          data: {
-            text: {
-              twitter: false,
-              stream: true,
-              header: "Stream"
-            }
           }
         },
         {
@@ -1240,78 +1127,6 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
             }
           }
         }, */
-        {
-          title: "For-speakers",
-          text_block_centered: true,
-          data: {
-            text: {
-              twitter: false,
-              textHiddenByDefault: true,
-              header: "For speakers",
-              text:
-                `<div class="col-12 pl-0">
-                    <h3>Checklist to follow before you start recording</h3>
-                  <p class="type-body">
-                    • When possible record with your monitor resolution set at 1280 x 720. All videos (both slides and demos) must be recorded in the following resolution: 1280 x 720. It is important for video quality that you record at 1280 x 720 and not a higher 16:9 resolution (even if you are using a Retina display).<br>
-                    • Use the <a style="white-space: nowrap;"href="${require('./assets/template/RoboCon2021_Templ.potx')}">RoboCon Slide Template</a><br>
-                    • Remember that some viewers will be watching the conference on devices like tablets, phones, etc. We want your text to be legible on all devices. We recommend increasing font size on all IDEs, text editors, and command line to at least 16.<br>
-                    • Disable system and application notification pop-ups<br>
-                    • Make sure if you’re using a laptop that it is plugged in<br>
-                    • Make sure your camera is stable and not shaky<br>
-                    • Meet audio requirements listed below (DO NOT USE YOUR INTERNAL MICROPHONE)<br>
-                    • Close email, Skype, IM, browsers, or anything else that may interrupt you<br>
-                    • Turn off fans, A/C, other computers/servers in your recording room, or anything else that might “click on” and create background noise while recording<br>
-                    • Clean up your desktop and taskbar<br><br>
-                  </p>
-                  <h3>RoboCon Conference Format</h3>
-                  <p class="type-body">
-                    So what should a RoboCon session video look like?
-                    First sessions should be user-based – not vendor sales pitches. Videos that are skewed towards a vendor sales pitch will not be accepted!<br><br>
-                    • The first few minutes are just you talking to the camera about what you are about to show us.<br>
-                    • Screen share showing the use of a tool, technique or tip that will help us in our day-to-day testing efforts (you don’t need to have your camera turned on during this part if you don’t want to but it is always nice to see the speaker. We recommend to have a Picture in Picture at the lower right corner).<br>
-                    • Also, since the videos are pre-recorded, speakers are encouraged to dive into the actual code to “show us,” not just “tell us” how something can be achieved. This is what will set us apart from a “live,” in person conference — more in-depth with real, hands-on, screen-sharing-type demos. Once again this varies depending on your topic.<br>
-                    • The last minute should just be you on camera wrapping up your session.<br>
-                    • Since this is an online conference it’s critical that you have a quality microphone and video camera. Also since we will be LIVE for QA please make sure that you join using a wired internet connection whenever possible.<br>
-                    • The perfect video length is 20 minutes for a full talk and 10 Minutes for a short talk. (Check the agenda on RoboCon.io if you are not sure what length your talk has.)<br>
-                    • Absolute maximum length accepted for a full talk are 25 Minutes.<br>
-                    • Absolute maximum length accepted for a short talk are 12 Minutes.<br>
-                    • Live Q&A Session will fill up the remaining time to the end of your 30 or 15 Minutes slot.<br><br>
-                    The more actionable the session content the better. Our goal is that a RoboCon attendee will learn a tip, tool, technique, or best practice they can implement right away to get results.<br><br>
-                  </p>
-                  <h3>Recording software Suggestions</h3>
-                  <p class="type-body">
-                    • For Mac, <a href="http://www.telestream.net/screenflow/">Screenflow</a> is recommended<br>
-                    • For PC or Mac the popular is <a href="https://www.techsmith.com/camtasia.html">Camtasia</a><br>
-                    Some more affordable options would be<br>
-                    • <a href="https://www.techsmith.com/screen-capture.html">Snagit</a> and <a href="https://screencast-o-matic.com/home">Screencast-O-Matic</a> or <a href="https://support.apple.com/en-gb/guide/quicktime-player/qtp97b08e666/mac">Quicktime Player</a><br>
-                    • <a href="https://obsproject.com/">OBS</a><br><br>
-                    Speakers are expected to have a quality microphone and video cam (*These are just suggestions. You can use what you have but if you don’t have anything yet here are some suggestions. Since I want to present guild speakers in the best possible light I think it’s critical that you have good audio and video quality)<br><br>
-                  </p>
-                  <div>
-                    <h3>Microphones</h3>
-                  </div>
-                  <p class="type-body">
-                    • RØDE NT-USB Mini (96€)<br>
-                    • RØDE NT-USB (170€)<br>
-                    • Blue Snowball iCE (64€)<br>
-                    • Samson Meteor Shure<br>
-                    • Blue Yeti (140€)<br>
-                    • Webcams (for Live Q&A)<br>
-                    • Logitech HD Pro Webcam C920<br>
-                    • Microsoft LifeCam HD-3000<br>
-                    • Logitech HD Webcam C270<br>
-                    • Logitech C270 Desktop<br><br>
-                  </p>
-                    <h3>Video Cameras for Recording</h3>
-                  <p class="type-body">
-                    You may also use your webcams for recording, but often your SmartPhone (Android or iPhone) has a much higher Quality. Use the real camera on the backside of your phone.
-                    If you have a DSLR or DSLM photo camera that can record video, this might be the best option. These recorded videos maybe put together in post production.
-                  </p>
-                  </div>
-                `
-            }
-          }
-        },
         {
           title: "CoC",
           text_block: false,
