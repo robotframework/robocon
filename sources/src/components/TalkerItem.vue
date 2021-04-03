@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[`mb-5 ${isMobile ? '' : 'p-1'} ${isCurrentTalk ? 'bg-blue' : ''}`]">
+    :class="[`mb-5 ${isMobile ? '' : 'p-1'}`]">
     <div v-if="header !== ''">
       <h2 class="white mt-4" v-html="header" />
     </div>
@@ -156,7 +156,7 @@
       @click="hasExpandableContent ? expanded = !expanded : null">
       <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
     </div>
-    <div v-if="videoId && videoId !== '' && isReleased" class="mb-5">
+    <div v-if="videoId && videoId !== ''" class="mb-5">
       <button
         v-if="!showVideo"
         class="button-primary white ml-2"
@@ -291,6 +291,10 @@ export default {
     previewImg: {
       type: String,
       default: ''
+    },
+    releaseTime: {
+      type: Date,
+      default: new Date('12-12-2022')
     }
   },
   data: () => ({
@@ -308,14 +312,10 @@ export default {
     local_tz() {
       return moment.tz.guess()
     },
-    isCurrentTalk() {
-      if (this.time.start === '') return false
-      return (this.timeNow > Date.parse(this.time.start) && this.timeNow < Date.parse(this.time.end))
+    videoPublic() {
+      return this.releaseTime < new Date()
     },
-    isReleased() {
-      if (this.time.start === '') return false
-      return (this.timeNow > (Date.parse(this.time.start) - (1000 * 60 * 60 * 36))) // set this here to 36h
-    }
+
   },
   watch: {
     expanded: {

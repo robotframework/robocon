@@ -20,7 +20,7 @@
 import PageBlock from "@/Components/PageBlock.vue"
 import moment from "moment-timezone"
 import jwt from 'jsonwebtoken'
-import { getKey, getEncryptedVideoIds } from '../static/key'
+import { getKey, getEncryptedVideoIds, hashKey } from '../static/key'
 import CryptoJS from 'crypto-js'
 
 export default {
@@ -30,8 +30,7 @@ export default {
   data() {
     return {
       showVideos: false,
-      videoIds: [],
-
+      videoIds: getEncryptedVideoIds()
     }
   },
   computed: {
@@ -159,13 +158,6 @@ export default {
               twitter: false,
               header: "Program Day 1 (16th March)",
               talks: [
-                { authors: ["Joe Colantonio"],
-                  title: "Pre-show talk",
-                  time: {
-                    start: "2021-03-16T10:45:00+0000",
-                    end: "2021-03-16T11:00:00+0000"
-                  }
-                },
                 { authors: ["Pekka Klärck", "Ismo Aro", "Ed Manlove"],
                   title: "Keynote: Where's Robot Framework in 2021",
                   description: "In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka explains some of the cool new features in Robot Framework 4.0 and finally Ed talks about our awesome community and how the ecosystem created by it has been growing.",
@@ -180,7 +172,8 @@ export default {
                     start: "2021-03-16T11:00:00+0000",
                     end: "2021-03-16T12:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[0] : '',
+                  videoId: '523432072',
+                  videoPublic: true,
                   previewImg: 'rf2021.jpeg'
                 },
 
@@ -1258,18 +1251,12 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
   },
   mounted() {
     const params = new URLSearchParams(window.location.search)
+    console.log(params)
     const participant = params.get('participant')
     const token = params.get('token')
     if (!participant || !token) return
     jwt.verify(token, getKey(), (err, decoded) => {
       if (err) return // wrong key
-      const { name, exp } = decoded
-      if (exp * 1000 < new Date().getTime()) return // expired
-      if (name !== participant) return // wrong name
-      this.videoIds = getEncryptedVideoIds().map((id) => {
-        const bytes = CryptoJS.AES.decrypt(id, decoded['hash-key'])
-        return bytes.toString(CryptoJS.enc.Utf8)
-      })
       this.showVideos = true
     })
   }

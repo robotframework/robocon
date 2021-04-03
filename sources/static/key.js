@@ -50,3 +50,5 @@ export const getEncryptedVideoIds = () => [
 ]
 
 export const getStreamKey = () => 'U2FsdGVkX1/vbL3/Feq3SUQbmM8wezYO4UL8hx4vm1JlneOIMZapsC4ZgHDggV3sdnghdILSgX3TR0j69q/doQ=='
+
+export const hashKey = () => 'JI8HUabWnmYOmmJEXWAbUr1ahdjNf8xfYpU0b8t3Hy3jhu'
