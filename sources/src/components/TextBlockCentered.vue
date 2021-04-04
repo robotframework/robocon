@@ -121,6 +121,7 @@
             :fourth-img-url="talk.fourthImgUrl"
             :url="talk.url"
             :release-time="talk.releaseTime"
+            :show-all-videos="showVideos"
             :video-id="talk.videoId"
             :video-public="talk.videoPublic"
             :preview-img="talk.previewImg" />

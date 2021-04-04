@@ -19,6 +19,9 @@
 <script>
 import PageBlock from "@/Components/PageBlock.vue"
 import moment from "moment-timezone"
+import jwt from 'jsonwebtoken'
+import { getKey, getEncryptedVideoIds } from '../static/key'
+import CryptoJS from 'crypto-js'
 
 export default {
   components: {
@@ -80,7 +83,10 @@ export default {
               text:
                 `
                   <p class="mb-3">
-                    Thank you for everyone who attended Robocon this year! <br><br>We had a total of 675 participants, which was the most attendees in RoboCon history.<br><br>See you next year!
+                    Thank you for everyone who attended Robocon this year!<br><br>
+                    Conference talks and Q&As will be made publicly available in a staggered manner, please check schedule below. If you attended the conference, you will find a link that unlocks all talks right away from your ticket link page.<br><br>
+                    We had a total of 675 participants, which was the most attendees in RoboCon history.<br><br>
+                    See you next year!
                   </p>
                 `
             }
@@ -177,7 +183,7 @@ export default {
           }
         },
         {
-          title: "Day-1",
+          title: "Talks-2021",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -187,7 +193,7 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Program Day 1 (16th March)",
+              header: "Talks - 2021",
               talks: [
                 { authors: ["Pekka Klärck", "Ismo Aro", "Ed Manlove"],
                   title: "Keynote: Where's Robot Framework in 2021",
@@ -244,6 +250,7 @@ export default {
                     end: "2021-03-16T13:00:00+0000"
                   },
                   videoId: this.videoIds[1],
+                  releaseTime: new Date('2021-04-01'),
                   previewImg: 'robocop.jpeg'
                 },
 
@@ -259,6 +266,7 @@ export default {
                       end:   "2021-03-16T13:30:00+0000"
                   },
                   videoId: this.videoIds[2],
+                  releaseTime: new Date('2021-04-05'),
                   previewImg: 'print.jpeg'
                 },
 
@@ -288,7 +296,7 @@ export default {
                     end: "2021-03-16T15:00:00+0000"
                   },
                   videoId: this.videoIds[3],
-                  releaseTime: new Date('04-01-2021'),
+                  releaseTime: new Date('2021-04-08'),
                   previewImg: 'browser.jpeg'
                 },
 
@@ -304,8 +312,8 @@ export default {
                       end:   "2021-03-16T15:30:00+0000",
                   },
                   videoId: this.videoIds[4],
-                  releaseTime: new Date('04-15-2021'),
-                  previewImg: 'ecommerce.jpeg'
+                  previewImg: 'ecommerce.jpeg',
+                  releaseTime: new Date('2021-05-17')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -328,7 +336,8 @@ export default {
                       end:   "2021-03-16T16:15:00+0000",
                   },
                   videoId: this.videoIds[5],
-                  previewImg: 'rfhub2.jpeg'
+                  previewImg: 'rfhub2.jpeg',
+                  releaseTime: new Date('2021-05-20'),
                 },
 
 
@@ -343,7 +352,8 @@ export default {
                       end:   "2021-03-16T16:30:00+0000",
                   },
                   videoId: this.videoIds[6],
-                  previewImg: 'requests.jpeg'
+                  previewImg: 'requests.jpeg',
+                  releaseTime: new Date('2021-04-12')
                 },
 
 
@@ -360,7 +370,8 @@ export default {
                       end:   "2021-03-16T17:00:00+0000",
                   },
                   videoId: this.videoIds[7],
-                  previewImg: 'bank.jpeg'
+                  previewImg: 'bank.jpeg',
+                  releaseTime: new Date('2021-05-24')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -383,7 +394,8 @@ export default {
                       end:   "2021-03-16T18:00:00+0000",
                   },
                   videoId: this.videoIds[8],
-                  previewImg: 'robotmk.jpeg'
+                  previewImg: 'robotmk.jpeg',
+                  releaseTime: new Date('2021-04-15')
                 },
 
 
@@ -398,25 +410,11 @@ export default {
                       end:   "2021-03-16T18:30:00+0000",
                   },
                   videoId: this.videoIds[9],
-                  previewImg: 'robotmusic.jpeg'
-                }
-              ]
-            }
-          }
-        },
-        {
-          title: "Day-2",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          user_box: false,
-          user_box_centered: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Program Day 2 (17th March)",
-              talks: [
+                  previewImg: 'robotmusic.jpeg',
+                  releaseTime: new Date('2021-05-27')
+                },
+
+
                 { authors: ["Pekka Klärck"],
                   title: "Creating Robot Framework libraries: Why and how?",
                   description: "Robot Framework has rich syntax making it possible to create complex tests or tasks using ready-made libraries. Sometimes complexity grows too much, and it's better to create a custom library and move the logic there. In this presentation we take a look at a somewhat complicated keyword implemented using Robot Framework syntax and discuss why moving such logic into a library is often a good idea. More importantly, I show how to do that in practice and reimplement the keyword in Python explaining all the steps along the way. The presentation is a mini-tutorial that you can either just watch or, if you are interested, follow hands-on so that you create the same library yourself. The presentation isn't too technical, so it is suitable also for non-programmes, but creating the library yourself requires at least some Python knowledge. If you are interested in hands-on work, you can find materials related to the demo as well as instructions how to set it up from <a href='https://github.com/pekkaklarck/robot-libraries-why-and-how/'>https://github.com/pekkaklarck/robot-libraries-why-and-how/</a>.",
@@ -427,7 +425,8 @@ export default {
                       end:   "2021-03-17T11:30:00+0000",
                   },
                   videoId: this.videoIds[10],
-                  previewImg: 'createlib.jpeg'
+                  previewImg: 'createlib.jpeg',
+                  releaseTime: new Date('2021-04-19')
                 },
 
 
@@ -442,7 +441,8 @@ export default {
                       end:   "2021-03-17T12:00:00+0000",
                   },
                   videoId: this.videoIds[11],
-                  previewImg: 'bazar.jpeg'
+                  previewImg: 'bazar.jpeg',
+                  releaseTime: new Date('2021-05-21')
                 },
 
                 { authors: ["Antti Karjalainen", "(Platinum Sponsor Talk)"],
@@ -479,7 +479,8 @@ export default {
                       end:   "2021-03-17T13:00:00+0000",
                   },
                   videoId: this.videoIds[12],
-                  previewImg: 'rpastack.jpeg'
+                  previewImg: 'rpastack.jpeg',
+                  releaseTime: new Date('2021-04-22')
                 },
 
 
@@ -494,7 +495,8 @@ export default {
                       end:   "2021-03-17T13:15:00+0000",
                   },
                   videoId: this.videoIds[13],
-                  previewImg: 'bestlibs.jpeg'
+                  previewImg: 'bestlibs.jpeg',
+                  releaseTime: new Date('2021-04-26')
                 },
 
 
@@ -509,7 +511,8 @@ export default {
                       end:   "2021-03-17T13:30:00+0000",
                   },
                   videoId: this.videoIds[14],
-                  previewImg: 'lsp.jpeg'
+                  previewImg: 'lsp.jpeg',
+                  releaseTime: new Date('2021-04-26')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -532,7 +535,8 @@ export default {
                       end:   "2021-03-17T15:00:00+0000",
                   },
                   videoId: this.videoIds[15],
-                  previewImg: 'howrpa.jpeg'
+                  previewImg: 'howrpa.jpeg',
+                  releaseTime: new Date('2021-06-03')
                 },
 
 
@@ -547,7 +551,8 @@ export default {
                       end:   "2021-03-17T15:30:00+0000",
                   },
                   videoId: this.videoIds[16],
-                  previewImg: 'customerjourney.jpeg'
+                  previewImg: 'customerjourney.jpeg',
+                  releaseTime: new Date('2021-06-07')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -571,7 +576,8 @@ export default {
                       end:   "2021-03-17T16:30:00+0000",
                   },
                   videoId: this.videoIds[17],
-                  previewImg: 'hyper.jpeg'
+                  previewImg: 'hyper.jpeg',
+                  releaseTime: new Date('2021-06-10')
                 },
 
 
@@ -586,7 +592,8 @@ export default {
                       end:   "2021-03-17T17:00:00+0000",
                   },
                   videoId: this.videoIds[18],
-                  previewImg: 'zerohero.jpeg'
+                  previewImg: 'zerohero.jpeg',
+                  releaseTime: new Date('2021-06-14')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -609,25 +616,11 @@ export default {
                       end:   "2021-03-17T18:30:00+0000",
                   },
                   videoId: this.videoIds[19],
-                  previewImg: 'elisabeth.jpeg'
-                }
-              ]
-            }
-          }
-        },
-        {
-          title: "Day-3",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          user_box: false,
-          user_box_centered: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Program Day 3 (18th March)",
-              talks: [
+                  previewImg: 'elisabeth.jpeg',
+                  releaseTime: new Date('2021-04-21')
+                },
+
+
                 { authors: ["Gojko Adžić"],
                   title: "Keynote: You're testing WHAT?",
                   description: "Gojko presents five universal rules for test automation, that will help you bring continuous integration and testing to the darkest corners of your system. Learn how to wrestle large test suites into something easy to understand, maintain and evolve, at the same time increasing the value from your automated tests. See how to bring aspects that people don't even consider automating, such as layout checks and even video into an automated continuously integrated process.",
@@ -639,7 +632,8 @@ export default {
                       end:   "2021-03-18T12:00:00+0000",
                   },
                   videoId: this.videoIds[20],
-                  previewImg: 'what.jpeg'
+                  previewImg: 'what.jpeg',
+                  releaseTime: new Date('2021-06-24')
                 },
 
                 { authors: ["Henri-Terho", "(Platinum Sponsor Talk)"],
@@ -676,7 +670,8 @@ export default {
                       end:   "2021-03-18T13:00:00+0000",
                   },
                   videoId: this.videoIds[21],
-                  previewImg: 'jython.jpeg'
+                  previewImg: 'jython.jpeg',
+                  releaseTime: new Date('2021-04-29')
                 },
 
 
@@ -691,7 +686,8 @@ export default {
                       end:   "2021-03-18T13:30:00+0000",
                   },
                   videoId: this.videoIds[22],
-                  previewImg: 'parsing.jpeg'
+                  previewImg: 'parsing.jpeg',
+                  releaseTime: new Date('2021-05-03')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -714,7 +710,8 @@ export default {
                       end:   "2021-03-18T15:00:00+0000",
                   },
                   videoId: this.videoIds[23],
-                  previewImg: 'libcore.jpeg'
+                  previewImg: 'libcore.jpeg',
+                  releaseTime: new Date('2021-06-05')
                 },
 
 
@@ -740,7 +737,8 @@ export default {
                       end:   "2021-03-18T15:30:00+0000",
                   },
                   videoId: this.videoIds[24],
-                  previewImg: 'browser.jpeg'
+                  previewImg: 'browser.jpeg',
+                  releaseTime: new Date('2021-05-10')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -765,7 +763,8 @@ export default {
                       end:   "2021-03-18T16:30:00+0000",
                   },
                   videoId: this.videoIds[25],
-                  previewImg: 'kube.jpeg'
+                  previewImg: 'kube.jpeg',
+                  releaseTime: new Date('2021-05-13')
                 },
 
 
@@ -780,7 +779,8 @@ export default {
                       end:   "2021-03-18T16:45:00+0000",
                   },
                   videoId: this.videoIds[26],
-                  previewImg: 'datadriver.jpeg'
+                  previewImg: 'datadriver.jpeg',
+                  releaseTime: new Date('2021-05-20')
                 },
 
 
@@ -795,7 +795,8 @@ export default {
                       end:   "2021-03-18T17:00:00+0000",
                   },
                   videoId: this.videoIds[27],
-                  previewImg: 'soap.jpeg'
+                  previewImg: 'soap.jpeg',
+                  releaseTime: new Date('2021-06-17')
                 },
 
                 { authors: ["Robocon Venue"],
@@ -818,7 +819,8 @@ export default {
                       end:   "2021-03-18T17:45:00+0000",
                   },
                   videoId: this.videoIds[28],
-                  previewImg: 'camunda.jpeg'
+                  previewImg: 'camunda.jpeg',
+                  releaseTime: new Date('2021-04-12')
                 },
 
 
@@ -833,7 +835,8 @@ export default {
                       end:   "2021-03-18T18:00:00+0000",
                   },
                   videoId: this.videoIds[29],
-                  previewImg: 'takinglong.jpeg'
+                  previewImg: 'takinglong.jpeg',
+                  releaseTime: new Date('2021-06-17')
                 },
 
                 { authors: ["Joe", "Ismo", "Pekka", "Hanna"],
@@ -870,8 +873,7 @@ export default {
                       end:   "2021-03-18T24:00:00+0000",
                   },
                   imgUrl: 'imbus.png',
-                },
-
+                }
               ]
             }
           }
@@ -1283,6 +1285,24 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
       ]
     }
   },
+  mounted() {
+    const params = new URLSearchParams(window.location.search)
+    const participant = params.get('participant')
+    const token = params.get('token')
+    if (!participant || !token) return
+    jwt.verify(token, getKey(), (err, decoded) => {
+      console.log(decoded)
+      if (err) return // wrong key
+      const { name, exp } = decoded
+      if (exp * 1000 < new Date().getTime()) return // expired
+      if (name !== participant) return // wrong name
+      this.videoIds = this.videoIds.map((id) => {
+        const bytes = CryptoJS.AES.decrypt(id, decoded['hash-key'])
+        return bytes.toString(CryptoJS.enc.Utf8)
+      })
+      this.showVideos = true
+    })
+  }
 }
 
 function utc_time(dataTime) {

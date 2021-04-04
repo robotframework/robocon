@@ -152,7 +152,7 @@
       <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
     </div>
     <!-- watch stream -->
-    <div v-if="videoPublic && videoId !== ''" class="mb-5">
+    <div v-if="(videoPublic || showAllVideos) && videoId !== ''" class="mb-5">
       <button
         v-if="!showVideo"
         class="button-primary white ml-2"
@@ -178,7 +178,7 @@
       <div v-if="showVideo" class="col-12" style="position: relative;">
         <b-embed
           type="iframe"
-          :src="`https://player.vimeo.com/video/${videoIdDecrypted}`"
+          :src="`https://player.vimeo.com/video/${showAllVideos ? videoId : videoIdDecrypted}`"
           allowfullscreen />
         <button
           style="position: absolute; top: 1rem; right: 2rem; stroke: white; fill: white; stroke-width: 1px;"
@@ -293,6 +293,10 @@ export default {
     releaseTime: {
       type: Date,
       required: false
+    },
+    showAllVideos: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
