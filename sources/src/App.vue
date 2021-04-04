@@ -19,9 +19,6 @@
 <script>
 import PageBlock from "@/Components/PageBlock.vue"
 import moment from "moment-timezone"
-import jwt from 'jsonwebtoken'
-import { getKey, getEncryptedVideoIds, hashKey } from '../static/key'
-import CryptoJS from 'crypto-js'
 
 export default {
   components: {
@@ -30,7 +27,41 @@ export default {
   data() {
     return {
       showVideos: false,
-      videoIds: getEncryptedVideoIds()
+      videoIds: [
+        'U2FsdGVkX18N4oqMWCiREnL/fWk10Yk+iPkAdIeDUIY=',
+        'U2FsdGVkX1+CEcGgoF1H35pw91jFmZ9TCe+MBovL08A=',
+        'U2FsdGVkX1+im+NpyXpIn0/AjveccJL+QKVEQabefCY=',
+        'U2FsdGVkX1/YRm1Un9MGV0awJHQApbyd0otcYH8kMgw=',
+        'U2FsdGVkX1+y9U8x0+NCaIdoqBwRajSrzucPadKHliA=',
+        'U2FsdGVkX18n5WM4J7sJoxzVoFsQsF/3rUNeL91ItHI=',
+        'U2FsdGVkX18vt1bbFSgpXmdjG+XMVaNidjyBg0dSYW4=',
+        'U2FsdGVkX18UKhmejOJfBvKJgaP0SoBFmTr87wJZcRQ=',
+        'U2FsdGVkX189j0qG5g8zYIhJriyz15RLGmPAz6Fsh0k=',
+        'U2FsdGVkX1/CwkY2lold4ZTdB9vEJ4P7/dZezTUwR2Q=',
+        'U2FsdGVkX19xuo7i8HvbXyjuS3sTsUwKvFBXd7EV0Hs=',
+        'U2FsdGVkX19E1grrHprB9SZ7UsME2Oi48uXVA7l0NWk=',
+        'U2FsdGVkX19xn9RZMK2NMMitEfeAL5loWTE+zQ3NquQ=',
+        'U2FsdGVkX187Vh0f+2+yJ6zwliR2yu5lleDsA6UWexU=',
+        'U2FsdGVkX19sq0xRDwViKsxAEIPa86GNo30z19NfW/k=',
+        'U2FsdGVkX19EB1uMWhms285p/SVB1spo+vMhQiu0eWU=',
+        'U2FsdGVkX1+/G57NcNs3JNXch16jInf2ACSpEaqvZC0=',
+        'U2FsdGVkX19LjncC64pZrylSOJfAYgkIgK3au+HUA7g=',
+        'U2FsdGVkX1/nYS1Epr6lJ9nj2jZneMUQTuBz9/b0MAw=',
+        'U2FsdGVkX1+CqywWSIOdyMebvibLISuGGOku+evNYLE=',
+        'U2FsdGVkX18w6ubGQ0Lwe710orsVK1rkRmMm5C5681w=',
+        'U2FsdGVkX18ixZbHQHweTRNOa8lG8sHwoGDlbAsruIw=',
+        'U2FsdGVkX1/k+fCihEKMEVx1SCwcCeBcqdfoSUTLWhI=',
+        'U2FsdGVkX19wQOoWK7mNga/LeUkODd4aDD9OHlNz9CM=',
+        'U2FsdGVkX1+tY1RCC5QMRFQos1M0VPJdTMC6LKexxOc=',
+        'U2FsdGVkX18kIIdY/JTBc2jdZGVGNkb+M3tBFBJprvk=',
+        'U2FsdGVkX18U256tK9dMJmH69S5Kv2uL6S2xSn6KRtw=',
+        'U2FsdGVkX18gCGwaXLKkThEGFa5glkpPbxPfqdROJjk=',
+        'U2FsdGVkX19zq7uqoWPns3P7fscaLAUOTh+7pxUE5Ck=',
+        'U2FsdGVkX19N8HmoIAsUF+mbwBywXP5S4HahtT9zHhg=',
+        'U2FsdGVkX1+BjN1Nkfn2lhVaFOZ2/vyXN2eJiDPChbs=',
+        'U2FsdGVkX1+v9TCpa9XyITljspOWcjqcVv/VAo7lU8g=',
+        'U2FsdGVkX1/pa4AnJ5qMpR/sSQnHqLW/SDye7awHBnw='
+      ]
     }
   },
   computed: {
@@ -174,6 +205,7 @@ export default {
                   },
                   videoId: '523432072',
                   videoPublic: true,
+                  releaseTime: new Date('2021-03-29'),
                   previewImg: 'rf2021.jpeg'
                 },
 
@@ -187,7 +219,7 @@ export default {
                       start: "2021-03-16T12:00:00+0000",
                       end:   "2021-03-16T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[31] : '',
+                  videoId: this.videoIds[31],
                   previewImg: 'knowit.png'
                 },
 
@@ -211,7 +243,7 @@ export default {
                     start: "2021-03-16T12:30:00+0000",
                     end: "2021-03-16T13:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[1] : '',
+                  videoId: this.videoIds[1],
                   previewImg: 'robocop.jpeg'
                 },
 
@@ -226,7 +258,7 @@ export default {
                       start: "2021-03-16T13:00:00+0000",
                       end:   "2021-03-16T13:30:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[2] : '',
+                  videoId: this.videoIds[2],
                   previewImg: 'print.jpeg'
                 },
 
@@ -255,7 +287,8 @@ export default {
                     start: "2021-03-16T14:30:00+0000",
                     end: "2021-03-16T15:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[3] : 'a',
+                  videoId: this.videoIds[3],
+                  releaseTime: new Date('04-01-2021'),
                   previewImg: 'browser.jpeg'
                 },
 
@@ -270,7 +303,8 @@ export default {
                       start: "2021-03-16T15:00:00+0000",
                       end:   "2021-03-16T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[4] : '',
+                  videoId: this.videoIds[4],
+                  releaseTime: new Date('04-15-2021'),
                   previewImg: 'ecommerce.jpeg'
                 },
 
@@ -293,7 +327,7 @@ export default {
                       start: "2021-03-16T16:00:00+0000",
                       end:   "2021-03-16T16:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[5] : '',
+                  videoId: this.videoIds[5],
                   previewImg: 'rfhub2.jpeg'
                 },
 
@@ -308,7 +342,7 @@ export default {
                       start: "2021-03-16T16:15:00+0000",
                       end:   "2021-03-16T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[6] : '',
+                  videoId: this.videoIds[6],
                   previewImg: 'requests.jpeg'
                 },
 
@@ -325,7 +359,7 @@ export default {
                       start: "2021-03-16T16:30:00+0000",
                       end:   "2021-03-16T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[7] : '',
+                  videoId: this.videoIds[7],
                   previewImg: 'bank.jpeg'
                 },
 
@@ -348,7 +382,7 @@ export default {
                       start: "2021-03-16T17:30:00+0000",
                       end:   "2021-03-16T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[8] : '',
+                  videoId: this.videoIds[8],
                   previewImg: 'robotmk.jpeg'
                 },
 
@@ -363,7 +397,7 @@ export default {
                       start: "2021-03-16T18:00:00+0000",
                       end:   "2021-03-16T18:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : '',
+                  videoId: this.videoIds[9],
                   previewImg: 'robotmusic.jpeg'
                 }
               ]
@@ -392,7 +426,7 @@ export default {
                       start: "2021-03-17T11:00:00+0000",
                       end:   "2021-03-17T11:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : '',
+                  videoId: this.videoIds[10],
                   previewImg: 'createlib.jpeg'
                 },
 
@@ -407,7 +441,7 @@ export default {
                       start: "2021-03-17T11:30:00+0000",
                       end:   "2021-03-17T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : '',
+                  videoId: this.videoIds[11],
                   previewImg: 'bazar.jpeg'
                 },
 
@@ -421,7 +455,7 @@ export default {
                       start: "2021-03-17T12:00:00+0000",
                       end:   "2021-03-17T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[30] : '',
+                  videoId: this.videoIds[30],
                   previewImg: 'robocorp.png'
                 },
 
@@ -444,7 +478,7 @@ export default {
                       start: "2021-03-17T12:30:00+0000",
                       end:   "2021-03-17T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : '',
+                  videoId: this.videoIds[12],
                   previewImg: 'rpastack.jpeg'
                 },
 
@@ -459,7 +493,7 @@ export default {
                       start: "2021-03-17T13:00:00+0000",
                       end:   "2021-03-17T13:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : '',
+                  videoId: this.videoIds[13],
                   previewImg: 'bestlibs.jpeg'
                 },
 
@@ -474,7 +508,7 @@ export default {
                       start: "2021-03-17T13:15:00+0000",
                       end:   "2021-03-17T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : '',
+                  videoId: this.videoIds[14],
                   previewImg: 'lsp.jpeg'
                 },
 
@@ -497,7 +531,7 @@ export default {
                       start: "2021-03-17T14:30:00+0000",
                       end:   "2021-03-17T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : '',
+                  videoId: this.videoIds[15],
                   previewImg: 'howrpa.jpeg'
                 },
 
@@ -512,7 +546,7 @@ export default {
                       start: "2021-03-17T15:00:00+0000",
                       end:   "2021-03-17T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : '',
+                  videoId: this.videoIds[16],
                   previewImg: 'customerjourney.jpeg'
                 },
 
@@ -536,7 +570,7 @@ export default {
                       start: "2021-03-17T16:00:00+0000",
                       end:   "2021-03-17T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : '',
+                  videoId: this.videoIds[17],
                   previewImg: 'hyper.jpeg'
                 },
 
@@ -551,7 +585,7 @@ export default {
                       start: "2021-03-17T16:30:00+0000",
                       end:   "2021-03-17T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : '',
+                  videoId: this.videoIds[18],
                   previewImg: 'zerohero.jpeg'
                 },
 
@@ -574,7 +608,7 @@ export default {
                       start: "2021-03-17T17:30:00+0000",
                       end:   "2021-03-17T18:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : '',
+                  videoId: this.videoIds[19],
                   previewImg: 'elisabeth.jpeg'
                 }
               ]
@@ -604,7 +638,7 @@ export default {
                       start: "2021-03-18T11:00:00+0000",
                       end:   "2021-03-18T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
+                  videoId: this.videoIds[20],
                   previewImg: 'what.jpeg'
                 },
 
@@ -618,7 +652,7 @@ export default {
                       start: "2021-03-18T12:00:00+0000",
                       end:   "2021-03-18T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[32] : '',
+                  videoId: this.videoIds[32],
                   previewImg: 'qentinel.png'
                 },
 
@@ -641,7 +675,7 @@ export default {
                       start: "2021-03-18T12:30:00+0000",
                       end:   "2021-03-18T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : '',
+                  videoId: this.videoIds[21],
                   previewImg: 'jython.jpeg'
                 },
 
@@ -656,7 +690,7 @@ export default {
                       start: "2021-03-18T13:00:00+0000",
                       end:   "2021-03-18T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : '',
+                  videoId: this.videoIds[22],
                   previewImg: 'parsing.jpeg'
                 },
 
@@ -679,7 +713,7 @@ export default {
                       start: "2021-03-18T14:30:00+0000",
                       end:   "2021-03-18T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : '',
+                  videoId: this.videoIds[23],
                   previewImg: 'libcore.jpeg'
                 },
 
@@ -705,7 +739,7 @@ export default {
                       start: "2021-03-18T15:00:00+0000",
                       end:   "2021-03-18T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : '',
+                  videoId: this.videoIds[24],
                   previewImg: 'browser.jpeg'
                 },
 
@@ -730,7 +764,7 @@ export default {
                       start: "2021-03-18T16:00:00+0000",
                       end:   "2021-03-18T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : '',
+                  videoId: this.videoIds[25],
                   previewImg: 'kube.jpeg'
                 },
 
@@ -745,7 +779,7 @@ export default {
                       start: "2021-03-18T16:30:00+0000",
                       end:   "2021-03-18T16:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[26] : '',
+                  videoId: this.videoIds[26],
                   previewImg: 'datadriver.jpeg'
                 },
 
@@ -760,7 +794,7 @@ export default {
                       start: "2021-03-18T16:45:00+0000",
                       end:   "2021-03-18T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[27] : '',
+                  videoId: this.videoIds[27],
                   previewImg: 'soap.jpeg'
                 },
 
@@ -783,7 +817,7 @@ export default {
                       start: "2021-03-18T17:30:00+0000",
                       end:   "2021-03-18T17:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[28] : '',
+                  videoId: this.videoIds[28],
                   previewImg: 'camunda.jpeg'
                 },
 
@@ -798,7 +832,7 @@ export default {
                       start: "2021-03-18T17:45:00+0000",
                       end:   "2021-03-18T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[29] : '',
+                  videoId: this.videoIds[29],
                   previewImg: 'takinglong.jpeg'
                 },
 
@@ -1249,17 +1283,6 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
       ]
     }
   },
-  mounted() {
-    const params = new URLSearchParams(window.location.search)
-    console.log(params)
-    const participant = params.get('participant')
-    const token = params.get('token')
-    if (!participant || !token) return
-    jwt.verify(token, getKey(), (err, decoded) => {
-      if (err) return // wrong key
-      this.showVideos = true
-    })
-  }
 }
 
 function utc_time(dataTime) {
