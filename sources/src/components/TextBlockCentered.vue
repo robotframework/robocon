@@ -98,7 +98,10 @@
         v-else-if="data.talks">
         <div class="mt-4">
           <talker-item
-            v-for="(talk, key) in data.talks.concat().sort((a, b) => a.releaseTime < b.releaseTime ? -1 : 1)"
+            v-for="(talk, key) in data.talks
+              .concat()
+              .sort((a, b) => (a.releaseTime || new Date()).getTime() < (b.releaseTime || new Date).getTime() ? 1 : -1)
+              .sort((a, b) => a.releaseTime ? -1 : 1)"
             :key="key"
             :header="talk.header"
             :margin="talk.margin"

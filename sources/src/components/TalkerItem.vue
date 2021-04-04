@@ -329,7 +329,7 @@ export default {
       return moment.tz.guess()
     },
     videoPublic() {
-      return this.releaseTime < new Date()
+      return this.releaseTime < new Date() || !this.releaseTime
     },
     videoIdDecrypted() {
       if (!this.videoPublic) return ''

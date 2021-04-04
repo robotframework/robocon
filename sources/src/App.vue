@@ -407,7 +407,7 @@ export default {
                   },
                   videoId: this.videoIds[11],
                   previewImg: 'bazar.jpeg',
-                  releaseTime: new Date('2021-05-21')
+                  releaseTime: new Date('2021-05-31')
                 },
 
                 { authors: ["Antti Karjalainen", "(Platinum Sponsor Talk)"],
@@ -546,7 +546,7 @@ export default {
                   },
                   videoId: this.videoIds[19],
                   previewImg: 'elisabeth.jpeg',
-                  releaseTime: new Date('2021-04-21')
+                  releaseTime: new Date('2021-06-21')
                 },
 
 
@@ -622,7 +622,7 @@ export default {
                   },
                   videoId: this.videoIds[23],
                   previewImg: 'libcore.jpeg',
-                  releaseTime: new Date('2021-06-05')
+                  releaseTime: new Date('2021-05-06')
                 },
 
 
@@ -730,9 +730,9 @@ export default {
                   videoId: this.videoIds[29],
                   previewImg: 'takinglong.jpeg',
                   releaseTime: new Date('2021-06-17')
-                },
+                }
 
-                { authors: ["Joe", "Ismo", "Pekka", "Hanna"],
+                /* { authors: ["Joe", "Ismo", "Pekka", "Hanna"],
                   title: "That was RoboCon 2021",
                   description: "How was it and what to expect next.",
                   descriptionExpanded: "",
@@ -740,9 +740,9 @@ export default {
                       start: "2021-03-18T18:00:00+0000",
                       end:   "2021-03-18T18:30:00+0000",
                   }
-                },
+                } */
 
-                { authors: ["imbus"],
+                /* { authors: ["imbus"],
                   title: "AFTERPARTY AT ROBOCON",
                   description: `This years afterparty is sponsored by <a href="https://www.imbus.de/en/" target="blank">imbus</a> who create the RoboCon online venue world.`,
                   descriptionExpanded: `
@@ -766,12 +766,12 @@ export default {
                       end:   "2021-03-18T24:00:00+0000",
                   },
                   imgUrl: 'imbus.png',
-                }
+                } */
               ]
             }
           }
         },
-        {
+        /* {
           title: "Sprints",
           text_block: false,
           text_block_centered: true,
@@ -815,8 +815,8 @@ export default {
               </div>`
             }
           }
-        },
-        {
+        }, */
+        /* {
           title: "Workshops",
           text_block: false,
           text_block_centered: true,
@@ -917,7 +917,6 @@ export default {
                       <li>Configure your laptops before the workshop</li></ul>
                       <p>This workshop is for all with some test automation experience, no coding skills needed. The workshop language is English.</p>
                       `,
-                /* "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use Qentinel's libraries, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the libraries as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>", */
                   bio: "Tuomas Koukkari is a Product Specialist working at Qentinel. Tuomas is the go to guy for knowledge on how robot framework works at Qentinel and has a long background in software testing from Nokia.",
                   secondBio: "Antti Heimola is an ‘automation of things’ guy with a “whatever can be done, can also be automated” mindset. Along with automation projects and his first continuous delivery system design back in 2003, he has also been working as an SW Developer, QA Manager, and Program Manager, before joining the Robot Framework community in 2011. The very first project with Robot Framework started with a library development on the top of the SeleniumLibrary. The roots of the library which is now called QWeb.",
                   imgUrl: 'tuomas_koukkari.jpg',
@@ -934,8 +933,8 @@ export default {
                   },
                   ticketId: "427336",
                   description: `Get down & dirty with the RF RequestsLibrary!
-This workshop shows how to operate this lib at the lowest, technical level.
-We will take a deep dive into the lib's inner workings and learn, for instance, how to access the session & response objects directly, to benefit optimally from this library.`,
+                  This workshop shows how to operate this lib at the lowest, technical level.
+                  We will take a deep dive into the lib's inner workings and learn, for instance, how to access the session & response objects directly, to benefit optimally from this library.`,
                   descriptionExpanded: `<p>In this workshop, we will cover everything from creating and maintaining an HTTP session, to validating every aspect of the response and everything in between.</p><h3>Contents:</h3>
                   <ul>
                   <li>Overview HTTP support within the RF ecosystem (all libraries compared).</li>
@@ -1001,10 +1000,10 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
                   imgUrl: 'Tatu_Aalto.jpg',
                   secondImgUrl: 'Ed_Manlove.jpg'
                 }
-	      ]
+	            ]
             }
           }
-        },
+        }, */
         /* {
           title: "Sprints",
           text_block: false,
