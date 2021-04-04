@@ -20,7 +20,7 @@
 import PageBlock from "@/Components/PageBlock.vue"
 import moment from "moment-timezone"
 import jwt from 'jsonwebtoken'
-import { getKey, getEncryptedVideoIds } from '../static/key'
+import { getKey } from '../static/key'
 import CryptoJS from 'crypto-js'
 
 export default {
@@ -229,14 +229,6 @@ export default {
                   previewImg: 'knowit.png'
                 },
 
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T11:00:00+0000",
-                    end: "2021-03-16T11:30:00+0000"
-                  }
-                },
-
                 { authors: ["Mateusz Nojek", "Bartłomiej Hirsz"],
                   title: "How to avoid jail for nasty code?",
                   description: "In Roboland, an ugly code is a crime. It makes people sad, creates bugs, is slower to read and harder to understand. Nobody wants to go to jail, especially unintentionally. Fortunately, there are heroes who can protect innocent citizens from this threat - their names are Robocop and Robotidy.",
@@ -269,15 +261,6 @@ export default {
                   releaseTime: new Date('2021-04-05'),
                   previewImg: 'print.jpeg'
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T13:30:00+0000",
-                    end: "2021-03-16T14:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
                   title: "RobotFramework Browser Library - Introduction",
@@ -315,15 +298,6 @@ export default {
                   previewImg: 'ecommerce.jpeg',
                   releaseTime: new Date('2021-05-17')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T15:30:00+0000",
-                    end: "2021-03-16T16:00:00+0000"
-                  }
-                },
-
 
                 { authors: ["Maciej Wiczk"],
                   title: "RfHub2 - new take on RobotFramework asset documentation",
@@ -373,15 +347,6 @@ export default {
                   previewImg: 'bank.jpeg',
                   releaseTime: new Date('2021-05-24')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T17:00:00+0000",
-                    end: "2021-03-16T17:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Simon Meggle"],
                   title: "RobotMK: Testing meets Monitoring",
@@ -459,15 +424,6 @@ export default {
                   previewImg: 'robocorp.png'
                 },
 
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T12:10:00+0000",
-                    end: "2021-03-17T12:30:00+0000"
-                  }
-                },
-
-
                 { authors: ["Antti Karjalainen"],
                   title: "Open-source stack for RPA",
                   description: "RPA is the fastest-growing area of Robot Framework adoption. To further enable this growth, we present an open-source stack for RPA based on Robot Framework that simplifies the work of a software robot developer.",
@@ -515,15 +471,6 @@ export default {
                   releaseTime: new Date('2021-04-26')
                 },
 
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T13:30:00+0000",
-                    end: "2021-03-17T14:30:00+0000"
-                  }
-                },
-
-
                 { authors: ["Markus Stahl"],
                   title: "How to start with Open Source RPA",
                   description: "'Make' or 'Buy': Typical RPA requires an investment plan, so: BUY, because RPA is new. But is it? In this talk, I'd like to emphasize what is actually 'new' in RPA and share my experience in starting RPA in a company with 'only' what was available - and this MAKE approach fits everywhere.",
@@ -554,15 +501,6 @@ export default {
                   previewImg: 'customerjourney.jpeg',
                   releaseTime: new Date('2021-06-07')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T15:30:00+0000",
-                    end: "2021-03-17T16:00:00+0000"
-                  }
-                },
-
 
                 { authors: ["Esko Hannula"],
                   title: "Hyperautomation or hype-automation: the automation landscape of the future",
@@ -595,15 +533,6 @@ export default {
                   previewImg: 'zerohero.jpeg',
                   releaseTime: new Date('2021-06-14')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T17:00:00+0000",
-                    end: "2021-03-17T17:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Elisabeth Hendrickson"],
                   title: "Keynote: Robot Framework Through the Lens of History",
@@ -650,15 +579,6 @@ export default {
                   previewImg: 'qentinel.png'
                 },
 
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T12:10:00+0000",
-                    end: "2021-03-18T12:30:00+0000"
-                  }
-                },
-
-
                 { authors: ["Juho Saarinen"],
                   title: "Robot Framework after Jython",
                   description: "Python 2 has been \"dead\" almost year now, and there's no really single \"one way to fit all\" path to continue usage of newer libraries and Robot Framework. At the talk I show some routes out from this issue to continue running of tests and RPA as part of Java application development lifecycle.",
@@ -689,15 +609,6 @@ export default {
                   previewImg: 'parsing.jpeg',
                   releaseTime: new Date('2021-05-03')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T13:30:00+0000",
-                    end: "2021-03-18T14:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Tatu Aalto"],
                   title: "PythonLibCore the secret behind SeleniumLibrary",
@@ -740,15 +651,6 @@ export default {
                   previewImg: 'browser.jpeg',
                   releaseTime: new Date('2021-05-10')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T15:30:00+0000",
-                    end: "2021-03-18T16:00:00+0000"
-                  }
-                },
-
 
                 { authors: ["Nils Balkow-Tychsen", "Michał Wcisło"],
                   title: "How Kubernetes brings QA and DevOps closer together - A practical approach to DevTestOps",
@@ -798,15 +700,6 @@ export default {
                   previewImg: 'soap.jpeg',
                   releaseTime: new Date('2021-06-17')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T17:00:00+0000",
-                    end: "2021-03-18T17:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Markus Stahl"],
                   title: "robotframework-camunda library: Orchestrating robotic tasks with Camunda",
