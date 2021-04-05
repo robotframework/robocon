@@ -20,7 +20,7 @@
 import PageBlock from "@/Components/PageBlock.vue"
 import moment from "moment-timezone"
 import jwt from 'jsonwebtoken'
-import { getKey, getEncryptedVideoIds } from '../static/key'
+import { getKey } from '../static/key'
 import CryptoJS from 'crypto-js'
 
 export default {
@@ -30,8 +30,41 @@ export default {
   data() {
     return {
       showVideos: false,
-      videoIds: [],
-
+      videoIds: [
+        'U2FsdGVkX1/Lq8PE7E0J2NNmGriv/57uj8tArWRK8Gc=',
+        'U2FsdGVkX18WJP2YYnGgt7pAsopYVDktFfbLktW/538=',
+        'U2FsdGVkX1/ZdbzmrwPSph9DvkZVXdD6vR9HNq4M4Hw=',
+        'U2FsdGVkX19R01ALvXm3krU53RuDT3vsR/wcpJbl7BU=',
+        'U2FsdGVkX19OVxwa2AYFWOqiai01QYYQDPUx3boUBSw=',
+        'U2FsdGVkX19upFwAVqhz2Aff4uFP20KgPGypWitVHyg=',
+        'U2FsdGVkX1/R3txRytz3ysyziBD0JndyHJSV0vERKDM=',
+        'U2FsdGVkX1+ddWe24UNJaussm8lKWEu54O/7w4F5NRY=',
+        'U2FsdGVkX1+f8n2gauRrE13sC2Z8rMCl98AozZ/SjQo=',
+        'U2FsdGVkX1+6FQVpmnF9Ib9E1umIAKABE0nZwZPuaQk=',
+        'U2FsdGVkX1+dlJ5AvhFfwNPgFj3ZaMHCI7KHRpM3lj4=',
+        'U2FsdGVkX19HjgwLFNcrQ4sWrpqAJ4EPxJduDI2dAvk=',
+        'U2FsdGVkX191jMUXkGUyrV6FbPaQp6g+nyqoLLXCmS0=',
+        'U2FsdGVkX1+iEv7qUy4H0K4/I/tDykQmr07HPOKf3oY=',
+        'U2FsdGVkX18DRkGW80gXOB2LcpJX6yv48IyVa8TjNVY=',
+        'U2FsdGVkX19YdboACvmPFvPfro5m0cCc2OInwPAIwC8=',
+        'U2FsdGVkX1/GhQDMJBVoLJ23YqcXrXAR/r7zSxvQRSE=',
+        'U2FsdGVkX192zXkOLBsxMHnhLd7tKhYmK79VibeC22M=',
+        'U2FsdGVkX1+0NgUPG32WiExxL0wmeGIArn27m/joLkw=',
+        'U2FsdGVkX19EjXuMhRQa30FI2Clxpxc0yzBDdBnPYzE=',
+        'U2FsdGVkX18kFJWUOS8eRJl+cRJjyT1J2XggjvSrCaU=',
+        'U2FsdGVkX18avkwCdsTPzlUOsGrGl4tcjj8fHmtmTxs=',
+        'U2FsdGVkX1+XCg2zJFaM5xXtW61Y5095fpRkqKRbhz0=',
+        'U2FsdGVkX1/FU/IfdyyyJO2R/p28IitIYPDRg+nZwzg=',
+        'U2FsdGVkX1/UFFUSl32X2uIiUrFG5MQDbMwC+P+Zr98=',
+        'U2FsdGVkX1+HuVGIqQmi6CvUkMWg4tGb9UjEe4i4n/8=',
+        'U2FsdGVkX1+5XFkwT7p8XKDjddKgzmxrI3/LnaCPUww=',
+        'U2FsdGVkX1/pCnmfVogjYqSm6qnAfp2ovRLAvsbAWHY=',
+        'U2FsdGVkX1/5o03rYipTonPhF5skH45MkowphJSNqEo=',
+        'U2FsdGVkX19PLYJl1FULz2HQWIpphgp2QZzv0yAxsPY=',
+        'U2FsdGVkX1+BjN1Nkfn2lhVaFOZ2/vyXN2eJiDPChbs=',
+        'U2FsdGVkX1+v9TCpa9XyITljspOWcjqcVv/VAo7lU8g=',
+        'U2FsdGVkX1/pa4AnJ5qMpR/sSQnHqLW/SDye7awHBnw='
+        ]
     }
   },
   computed: {
@@ -50,9 +83,37 @@ export default {
               text:
                 `
                   <p class="mb-3">
-                    Thank you for everyone who attended Robocon this year! <br><br>We had a total of 675 participants, which was the most attendees in RoboCon history.<br><br>See you next year!
+                    Thank you for everyone who attended RoboCgiton this year!<br><br>
+                    Conference talks and Q&As will be made publicly available in a staggered manner, please check schedule below. If you attended the conference, you will find a link that unlocks all talks right away from your ticket link page.<br><br>
+                    We had a total of 675 participants, which was the most attendees in RoboCon history.<br><br>
+                    See you next year!
                   </p>
                 `
+            }
+          }
+        },
+        {
+          title: "Recording Tickets",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Recording Ticket",
+              text: `
+              <div>
+                <p>
+                All given talks of RoboCon 2021 including Q&A are available as recordings.<br>
+                <br>
+                If you do not want to wait until all talks are released, you can purchaise a recording ticket and watch them directly.<br>
+                <br>
+                <a href='https://tickets.robotframework.org/2021/1152916/'>
+                    RoboCon Recording Tickets
+                  </a><br>
+                </p>
+              </div>`
             }
           }
         },
@@ -147,7 +208,7 @@ export default {
           }
         },
         {
-          title: "Day-1",
+          title: "Talks-2021",
           text_block: false,
           text_block_centered: true,
           tab_box: false,
@@ -157,15 +218,8 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Program Day 1 (16th March)",
+              header: "Talks - 2021",
               talks: [
-                { authors: ["Joe Colantonio"],
-                  title: "Pre-show talk",
-                  time: {
-                    start: "2021-03-16T10:45:00+0000",
-                    end: "2021-03-16T11:00:00+0000"
-                  }
-                },
                 { authors: ["Pekka Klärck", "Ismo Aro", "Ed Manlove"],
                   title: "Keynote: Where's Robot Framework in 2021",
                   description: "In this keynote we are going to take a look at what's happened since RoboCon 2020. Ismo will first give an update related to Robot Framework Foundation, the consortium sponsoring Robot Framework development and also organizing this event. After that Pekka explains some of the cool new features in Robot Framework 4.0 and finally Ed talks about our awesome community and how the ecosystem created by it has been growing.",
@@ -180,7 +234,9 @@ export default {
                     start: "2021-03-16T11:00:00+0000",
                     end: "2021-03-16T12:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[0] : '',
+                  videoId: this.videoIds[0],
+                  videoPublic: true,
+                  releaseTime: new Date('2021-03-29'),
                   previewImg: 'rf2021.jpeg'
                 },
 
@@ -194,16 +250,8 @@ export default {
                       start: "2021-03-16T12:00:00+0000",
                       end:   "2021-03-16T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[31] : '',
+                  videoId: this.videoIds[31],
                   previewImg: 'knowit.png'
-                },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T11:00:00+0000",
-                    end: "2021-03-16T11:30:00+0000"
-                  }
                 },
 
                 { authors: ["Mateusz Nojek", "Bartłomiej Hirsz"],
@@ -218,7 +266,8 @@ export default {
                     start: "2021-03-16T12:30:00+0000",
                     end: "2021-03-16T13:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[1] : '',
+                  videoId: this.videoIds[1],
+                  releaseTime: new Date('2021-04-01'),
                   previewImg: 'robocop.jpeg'
                 },
 
@@ -233,18 +282,10 @@ export default {
                       start: "2021-03-16T13:00:00+0000",
                       end:   "2021-03-16T13:30:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[2] : '',
+                  videoId: this.videoIds[2],
+                  releaseTime: new Date('2021-04-05'),
                   previewImg: 'print.jpeg'
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T13:30:00+0000",
-                    end: "2021-03-16T14:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Mikko Korpela", "Tatu Aalto", "Kerkko Pelttari", "René Rohner"],
                   title: "RobotFramework Browser Library - Introduction",
@@ -262,7 +303,8 @@ export default {
                     start: "2021-03-16T14:30:00+0000",
                     end: "2021-03-16T15:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[3] : 'a',
+                  videoId: this.videoIds[3],
+                  releaseTime: new Date('2021-04-08'),
                   previewImg: 'browser.jpeg'
                 },
 
@@ -277,18 +319,10 @@ export default {
                       start: "2021-03-16T15:00:00+0000",
                       end:   "2021-03-16T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[4] : '',
-                  previewImg: 'ecommerce.jpeg'
+                  videoId: this.videoIds[4],
+                  previewImg: 'ecommerce.jpeg',
+                  releaseTime: new Date('2021-05-17')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T15:30:00+0000",
-                    end: "2021-03-16T16:00:00+0000"
-                  }
-                },
-
 
                 { authors: ["Maciej Wiczk"],
                   title: "RfHub2 - new take on RobotFramework asset documentation",
@@ -300,8 +334,9 @@ export default {
                       start: "2021-03-16T16:00:00+0000",
                       end:   "2021-03-16T16:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[5] : '',
-                  previewImg: 'rfhub2.jpeg'
+                  videoId: this.videoIds[5],
+                  previewImg: 'rfhub2.jpeg',
+                  releaseTime: new Date('2021-05-20'),
                 },
 
 
@@ -315,8 +350,9 @@ export default {
                       start: "2021-03-16T16:15:00+0000",
                       end:   "2021-03-16T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[6] : '',
-                  previewImg: 'requests.jpeg'
+                  videoId: this.videoIds[6],
+                  previewImg: 'requests.jpeg',
+                  releaseTime: new Date('2021-04-12')
                 },
 
 
@@ -332,18 +368,10 @@ export default {
                       start: "2021-03-16T16:30:00+0000",
                       end:   "2021-03-16T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[7] : '',
-                  previewImg: 'bank.jpeg'
+                  videoId: this.videoIds[7],
+                  previewImg: 'bank.jpeg',
+                  releaseTime: new Date('2021-05-24')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-16T17:00:00+0000",
-                    end: "2021-03-16T17:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Simon Meggle"],
                   title: "RobotMK: Testing meets Monitoring",
@@ -355,8 +383,9 @@ export default {
                       start: "2021-03-16T17:30:00+0000",
                       end:   "2021-03-16T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[8] : '',
-                  previewImg: 'robotmk.jpeg'
+                  videoId: this.videoIds[8],
+                  previewImg: 'robotmk.jpeg',
+                  releaseTime: new Date('2021-04-15')
                 },
 
 
@@ -370,26 +399,12 @@ export default {
                       start: "2021-03-16T18:00:00+0000",
                       end:   "2021-03-16T18:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : '',
-                  previewImg: 'robotmusic.jpeg'
-                }
-              ]
-            }
-          }
-        },
-        {
-          title: "Day-2",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          user_box: false,
-          user_box_centered: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Program Day 2 (17th March)",
-              talks: [
+                  videoId: this.videoIds[9],
+                  previewImg: 'robotmusic.jpeg',
+                  releaseTime: new Date('2021-05-27')
+                },
+
+
                 { authors: ["Pekka Klärck"],
                   title: "Creating Robot Framework libraries: Why and how?",
                   description: "Robot Framework has rich syntax making it possible to create complex tests or tasks using ready-made libraries. Sometimes complexity grows too much, and it's better to create a custom library and move the logic there. In this presentation we take a look at a somewhat complicated keyword implemented using Robot Framework syntax and discuss why moving such logic into a library is often a good idea. More importantly, I show how to do that in practice and reimplement the keyword in Python explaining all the steps along the way. The presentation is a mini-tutorial that you can either just watch or, if you are interested, follow hands-on so that you create the same library yourself. The presentation isn't too technical, so it is suitable also for non-programmes, but creating the library yourself requires at least some Python knowledge. If you are interested in hands-on work, you can find materials related to the demo as well as instructions how to set it up from <a href='https://github.com/pekkaklarck/robot-libraries-why-and-how/'>https://github.com/pekkaklarck/robot-libraries-why-and-how/</a>.",
@@ -399,8 +414,9 @@ export default {
                       start: "2021-03-17T11:00:00+0000",
                       end:   "2021-03-17T11:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : '',
-                  previewImg: 'createlib.jpeg'
+                  videoId: this.videoIds[10],
+                  previewImg: 'createlib.jpeg',
+                  releaseTime: new Date('2021-04-19')
                 },
 
 
@@ -414,8 +430,9 @@ export default {
                       start: "2021-03-17T11:30:00+0000",
                       end:   "2021-03-17T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : '',
-                  previewImg: 'bazar.jpeg'
+                  videoId: this.videoIds[11],
+                  previewImg: 'bazar.jpeg',
+                  releaseTime: new Date('2021-05-31')
                 },
 
                 { authors: ["Antti Karjalainen", "(Platinum Sponsor Talk)"],
@@ -428,18 +445,9 @@ export default {
                       start: "2021-03-17T12:00:00+0000",
                       end:   "2021-03-17T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[30] : '',
+                  videoId: this.videoIds[30],
                   previewImg: 'robocorp.png'
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T12:10:00+0000",
-                    end: "2021-03-17T12:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Antti Karjalainen"],
                   title: "Open-source stack for RPA",
@@ -451,8 +459,9 @@ export default {
                       start: "2021-03-17T12:30:00+0000",
                       end:   "2021-03-17T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : '',
-                  previewImg: 'rpastack.jpeg'
+                  videoId: this.videoIds[12],
+                  previewImg: 'rpastack.jpeg',
+                  releaseTime: new Date('2021-04-22')
                 },
 
 
@@ -466,8 +475,9 @@ export default {
                       start: "2021-03-17T13:00:00+0000",
                       end:   "2021-03-17T13:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : '',
-                  previewImg: 'bestlibs.jpeg'
+                  videoId: this.videoIds[13],
+                  previewImg: 'bestlibs.jpeg',
+                  releaseTime: new Date('2021-04-26')
                 },
 
 
@@ -481,18 +491,10 @@ export default {
                       start: "2021-03-17T13:15:00+0000",
                       end:   "2021-03-17T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : '',
-                  previewImg: 'lsp.jpeg'
+                  videoId: this.videoIds[14],
+                  previewImg: 'lsp.jpeg',
+                  releaseTime: new Date('2021-04-26')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T13:30:00+0000",
-                    end: "2021-03-17T14:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Markus Stahl"],
                   title: "How to start with Open Source RPA",
@@ -504,8 +506,9 @@ export default {
                       start: "2021-03-17T14:30:00+0000",
                       end:   "2021-03-17T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : '',
-                  previewImg: 'howrpa.jpeg'
+                  videoId: this.videoIds[15],
+                  previewImg: 'howrpa.jpeg',
+                  releaseTime: new Date('2021-06-03')
                 },
 
 
@@ -519,18 +522,10 @@ export default {
                       start: "2021-03-17T15:00:00+0000",
                       end:   "2021-03-17T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : '',
-                  previewImg: 'customerjourney.jpeg'
+                  videoId: this.videoIds[16],
+                  previewImg: 'customerjourney.jpeg',
+                  releaseTime: new Date('2021-06-07')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T15:30:00+0000",
-                    end: "2021-03-17T16:00:00+0000"
-                  }
-                },
-
 
                 { authors: ["Esko Hannula"],
                   title: "Hyperautomation or hype-automation: the automation landscape of the future",
@@ -543,8 +538,9 @@ export default {
                       start: "2021-03-17T16:00:00+0000",
                       end:   "2021-03-17T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : '',
-                  previewImg: 'hyper.jpeg'
+                  videoId: this.videoIds[17],
+                  previewImg: 'hyper.jpeg',
+                  releaseTime: new Date('2021-06-10')
                 },
 
 
@@ -558,18 +554,10 @@ export default {
                       start: "2021-03-17T16:30:00+0000",
                       end:   "2021-03-17T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : '',
-                  previewImg: 'zerohero.jpeg'
+                  videoId: this.videoIds[18],
+                  previewImg: 'zerohero.jpeg',
+                  releaseTime: new Date('2021-06-14')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-17T17:00:00+0000",
-                    end: "2021-03-17T17:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Elisabeth Hendrickson"],
                   title: "Keynote: Robot Framework Through the Lens of History",
@@ -581,26 +569,12 @@ export default {
                       start: "2021-03-17T17:30:00+0000",
                       end:   "2021-03-17T18:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : '',
-                  previewImg: 'elisabeth.jpeg'
-                }
-              ]
-            }
-          }
-        },
-        {
-          title: "Day-3",
-          text_block: false,
-          text_block_centered: true,
-          tab_box: false,
-          feature_box: false,
-          user_box: false,
-          user_box_centered: false,
-          data: {
-            text: {
-              twitter: false,
-              header: "Program Day 3 (18th March)",
-              talks: [
+                  videoId: this.videoIds[19],
+                  previewImg: 'elisabeth.jpeg',
+                  releaseTime: new Date('2021-06-21')
+                },
+
+
                 { authors: ["Gojko Adžić"],
                   title: "Keynote: You're testing WHAT?",
                   description: "Gojko presents five universal rules for test automation, that will help you bring continuous integration and testing to the darkest corners of your system. Learn how to wrestle large test suites into something easy to understand, maintain and evolve, at the same time increasing the value from your automated tests. See how to bring aspects that people don't even consider automating, such as layout checks and even video into an automated continuously integrated process.",
@@ -611,8 +585,9 @@ export default {
                       start: "2021-03-18T11:00:00+0000",
                       end:   "2021-03-18T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
-                  previewImg: 'what.jpeg'
+                  videoId: this.videoIds[20],
+                  previewImg: 'what.jpeg',
+                  releaseTime: new Date('2021-06-24')
                 },
 
                 { authors: ["Henri-Terho", "(Platinum Sponsor Talk)"],
@@ -625,18 +600,9 @@ export default {
                       start: "2021-03-18T12:00:00+0000",
                       end:   "2021-03-18T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[32] : '',
+                  videoId: this.videoIds[32],
                   previewImg: 'qentinel.png'
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T12:10:00+0000",
-                    end: "2021-03-18T12:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Juho Saarinen"],
                   title: "Robot Framework after Jython",
@@ -648,8 +614,9 @@ export default {
                       start: "2021-03-18T12:30:00+0000",
                       end:   "2021-03-18T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : '',
-                  previewImg: 'jython.jpeg'
+                  videoId: this.videoIds[21],
+                  previewImg: 'jython.jpeg',
+                  releaseTime: new Date('2021-04-29')
                 },
 
 
@@ -663,18 +630,10 @@ export default {
                       start: "2021-03-18T13:00:00+0000",
                       end:   "2021-03-18T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : '',
-                  previewImg: 'parsing.jpeg'
+                  videoId: this.videoIds[22],
+                  previewImg: 'parsing.jpeg',
+                  releaseTime: new Date('2021-05-03')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T13:30:00+0000",
-                    end: "2021-03-18T14:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Tatu Aalto"],
                   title: "PythonLibCore the secret behind SeleniumLibrary",
@@ -686,8 +645,9 @@ export default {
                       start: "2021-03-18T14:30:00+0000",
                       end:   "2021-03-18T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : '',
-                  previewImg: 'libcore.jpeg'
+                  videoId: this.videoIds[23],
+                  previewImg: 'libcore.jpeg',
+                  releaseTime: new Date('2021-05-06')
                 },
 
 
@@ -712,18 +672,10 @@ export default {
                       start: "2021-03-18T15:00:00+0000",
                       end:   "2021-03-18T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : '',
-                  previewImg: 'browser.jpeg'
+                  videoId: this.videoIds[24],
+                  previewImg: 'browser.jpeg',
+                  releaseTime: new Date('2021-05-10')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T15:30:00+0000",
-                    end: "2021-03-18T16:00:00+0000"
-                  }
-                },
-
 
                 { authors: ["Nils Balkow-Tychsen", "Michał Wcisło"],
                   title: "How Kubernetes brings QA and DevOps closer together - A practical approach to DevTestOps",
@@ -737,8 +689,9 @@ export default {
                       start: "2021-03-18T16:00:00+0000",
                       end:   "2021-03-18T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : '',
-                  previewImg: 'kube.jpeg'
+                  videoId: this.videoIds[25],
+                  previewImg: 'kube.jpeg',
+                  releaseTime: new Date('2021-05-13')
                 },
 
 
@@ -752,8 +705,9 @@ export default {
                       start: "2021-03-18T16:30:00+0000",
                       end:   "2021-03-18T16:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[26] : '',
-                  previewImg: 'datadriver.jpeg'
+                  videoId: this.videoIds[26],
+                  previewImg: 'datadriver.jpeg',
+                  releaseTime: new Date('2021-05-20')
                 },
 
 
@@ -767,18 +721,10 @@ export default {
                       start: "2021-03-18T16:45:00+0000",
                       end:   "2021-03-18T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[27] : '',
-                  previewImg: 'soap.jpeg'
+                  videoId: this.videoIds[27],
+                  previewImg: 'soap.jpeg',
+                  releaseTime: new Date('2021-06-17')
                 },
-
-                { authors: ["Robocon Venue"],
-                  title: "Community time",
-                  time: {
-                    start: "2021-03-18T17:00:00+0000",
-                    end: "2021-03-18T17:30:00+0000"
-                  }
-                },
-
 
                 { authors: ["Markus Stahl"],
                   title: "robotframework-camunda library: Orchestrating robotic tasks with Camunda",
@@ -790,8 +736,9 @@ export default {
                       start: "2021-03-18T17:30:00+0000",
                       end:   "2021-03-18T17:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[28] : '',
-                  previewImg: 'camunda.jpeg'
+                  videoId: this.videoIds[28],
+                  previewImg: 'camunda.jpeg',
+                  releaseTime: new Date('2021-04-12')
                 },
 
 
@@ -805,11 +752,12 @@ export default {
                       start: "2021-03-18T17:45:00+0000",
                       end:   "2021-03-18T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[29] : '',
-                  previewImg: 'takinglong.jpeg'
-                },
+                  videoId: this.videoIds[29],
+                  previewImg: 'takinglong.jpeg',
+                  releaseTime: new Date('2021-06-17')
+                }
 
-                { authors: ["Joe", "Ismo", "Pekka", "Hanna"],
+                /* { authors: ["Joe", "Ismo", "Pekka", "Hanna"],
                   title: "That was RoboCon 2021",
                   description: "How was it and what to expect next.",
                   descriptionExpanded: "",
@@ -817,9 +765,9 @@ export default {
                       start: "2021-03-18T18:00:00+0000",
                       end:   "2021-03-18T18:30:00+0000",
                   }
-                },
+                } */
 
-                { authors: ["imbus"],
+                /* { authors: ["imbus"],
                   title: "AFTERPARTY AT ROBOCON",
                   description: `This years afterparty is sponsored by <a href="https://www.imbus.de/en/" target="blank">imbus</a> who create the RoboCon online venue world.`,
                   descriptionExpanded: `
@@ -843,13 +791,12 @@ export default {
                       end:   "2021-03-18T24:00:00+0000",
                   },
                   imgUrl: 'imbus.png',
-                },
-
+                } */
               ]
             }
           }
         },
-        {
+        /* {
           title: "Sprints",
           text_block: false,
           text_block_centered: true,
@@ -893,8 +840,8 @@ export default {
               </div>`
             }
           }
-        },
-        {
+        }, */
+        /* {
           title: "Workshops",
           text_block: false,
           text_block_centered: true,
@@ -995,7 +942,6 @@ export default {
                       <li>Configure your laptops before the workshop</li></ul>
                       <p>This workshop is for all with some test automation experience, no coding skills needed. The workshop language is English.</p>
                       `,
-                /* "<p>Ever wanted to find out how easy it is to create end to end tests for web applications? Qentinel is now sharing how to create tests on the local environment and showing what kind of advantages can be gained from running those tests in the Qentinel Pace cloud environment.</p><p>In this workshop you will learn how to use Qentinel's libraries, how to deploy those tests to the cloud and how to setup continuous test runs on the qentinel pace platform. You will also learn how to use the libraries as standalone in your application and how it compares to Playwright, Selenium and other leading libraries.</p>", */
                   bio: "Tuomas Koukkari is a Product Specialist working at Qentinel. Tuomas is the go to guy for knowledge on how robot framework works at Qentinel and has a long background in software testing from Nokia.",
                   secondBio: "Antti Heimola is an ‘automation of things’ guy with a “whatever can be done, can also be automated” mindset. Along with automation projects and his first continuous delivery system design back in 2003, he has also been working as an SW Developer, QA Manager, and Program Manager, before joining the Robot Framework community in 2011. The very first project with Robot Framework started with a library development on the top of the SeleniumLibrary. The roots of the library which is now called QWeb.",
                   imgUrl: 'tuomas_koukkari.jpg',
@@ -1012,8 +958,8 @@ export default {
                   },
                   ticketId: "427336",
                   description: `Get down & dirty with the RF RequestsLibrary!
-This workshop shows how to operate this lib at the lowest, technical level.
-We will take a deep dive into the lib's inner workings and learn, for instance, how to access the session & response objects directly, to benefit optimally from this library.`,
+                  This workshop shows how to operate this lib at the lowest, technical level.
+                  We will take a deep dive into the lib's inner workings and learn, for instance, how to access the session & response objects directly, to benefit optimally from this library.`,
                   descriptionExpanded: `<p>In this workshop, we will cover everything from creating and maintaining an HTTP session, to validating every aspect of the response and everything in between.</p><h3>Contents:</h3>
                   <ul>
                   <li>Overview HTTP support within the RF ecosystem (all libraries compared).</li>
@@ -1079,10 +1025,10 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
                   imgUrl: 'Tatu_Aalto.jpg',
                   secondImgUrl: 'Ed_Manlove.jpg'
                 }
-	      ]
+	            ]
             }
           }
-        },
+        }, */
         /* {
           title: "Sprints",
           text_block: false,
@@ -1262,11 +1208,12 @@ We will take a deep dive into the lib's inner workings and learn, for instance, 
     const token = params.get('token')
     if (!participant || !token) return
     jwt.verify(token, getKey(), (err, decoded) => {
+      console.log(decoded)
       if (err) return // wrong key
       const { name, exp } = decoded
       if (exp * 1000 < new Date().getTime()) return // expired
       if (name !== participant) return // wrong name
-      this.videoIds = getEncryptedVideoIds().map((id) => {
+      this.videoIds = this.videoIds.map((id) => {
         const bytes = CryptoJS.AES.decrypt(id, decoded['hash-key'])
         return bytes.toString(CryptoJS.enc.Utf8)
       })

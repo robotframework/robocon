@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[`mb-5 ${isMobile ? '' : 'p-1'} ${isCurrentTalk ? 'bg-blue' : ''}`]">
+    :class="[`mb-5 ${isMobile ? '' : 'p-1'}`]">
     <div v-if="header !== ''">
       <h2 class="white mt-4" v-html="header" />
     </div>
@@ -32,9 +32,9 @@
         </a>
       </button>
       <div
-        v-if="time.start !== '' && time.end !== ''"
-        class="white type-body">
-        <span class="blue">{{ type === 'workshop' ? `${dateString(time.start)} ` : '' }}{{ local_time(time.start) }}</span> - <span class="blue">{{ local_time(time.end) }}</span> ({{ local_tz }})
+        v-if="releaseTime"
+        class="type-bold white">
+        Release: {{ `${months[releaseTime.getMonth()]} ${releaseTime.getDate()} 2021` }}
       </div>
     </div>
     <div
@@ -49,12 +49,7 @@
           allowfullscreen />
       </div>
       <!-- talk description expanded -->
-      <div v-else class="row talk-description">
-        <div
-          v-if="time.start !== '' && time.end !== ''"
-          class="mb-3 pl-1 type-small" style="margin-left: 0.65rem;">
-          {{ type === 'workshop' ? `${utc_dateString(time.start)} ` : '' }}{{ utc_time(time.start) }} - {{ utc_time(time.end) }} (UTC)
-        </div>
+      <div v-else class="row talk-description mt-4">
         <p
           class="col-12 mt-0 mb-0"
           v-html="description" />
@@ -156,7 +151,8 @@
       @click="hasExpandableContent ? expanded = !expanded : null">
       <p v-html="`${description.slice(0, 150).trim()}${description.length > 150 ? '...' : ''}`" />
     </div>
-    <div v-if="videoId && videoId !== '' && isReleased" class="mb-5">
+    <!-- watch stream -->
+    <div v-if="(videoPublic || showAllVideos) && videoId !== ''" class="mb-5">
       <button
         v-if="!showVideo"
         class="button-primary white ml-2"
@@ -182,7 +178,7 @@
       <div v-if="showVideo" class="col-12" style="position: relative;">
         <b-embed
           type="iframe"
-          :src="`https://player.vimeo.com/video/${videoId}`"
+          :src="`https://player.vimeo.com/video/${showAllVideos ? videoId : videoIdDecrypted}`"
           allowfullscreen />
         <button
           style="position: absolute; top: 1rem; right: 2rem; stroke: white; fill: white; stroke-width: 1px;"
@@ -200,7 +196,9 @@
 </template>
 
 <script>
-import moment from "moment-timezone";
+import moment from "moment-timezone"
+import CryptoJS from 'crypto-js'
+import { hashKey } from '../../static/key'
 
 export default {
   name: 'TalkerItem',
@@ -291,12 +289,34 @@ export default {
     previewImg: {
       type: String,
       default: ''
+    },
+    releaseTime: {
+      type: Date,
+      required: false
+    },
+    showAllVideos: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
     expanded: false,
     showVideo: false,
-    timeNow: Date.now()
+    timeNow: Date.now(),
+    months: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dev'
+    ]
   }),
   computed: {
     hasExpandableContent () {
@@ -308,13 +328,13 @@ export default {
     local_tz() {
       return moment.tz.guess()
     },
-    isCurrentTalk() {
-      if (this.time.start === '') return false
-      return (this.timeNow > Date.parse(this.time.start) && this.timeNow < Date.parse(this.time.end))
+    videoPublic() {
+      return this.releaseTime < new Date() || !this.releaseTime
     },
-    isReleased() {
-      if (this.time.start === '') return false
-      return (this.timeNow > (Date.parse(this.time.start) - (1000 * 60 * 60 * 36))) // set this here to 36h
+    videoIdDecrypted() {
+      if (!this.videoPublic) return ''
+      const bytes = CryptoJS.AES.decrypt(this.videoId, hashKey())
+      return bytes.toString(CryptoJS.enc.Utf8)
     }
   },
   watch: {
@@ -338,7 +358,7 @@ export default {
       return moment.tz(dataTime, moment.tz.guess()).format("DD MMM")
     },
     utc_dateString(dataTime) {
-      const locale = window.navigator.userLanguage || window.navigator.language;
+      const locale = window.navigator.userLanguage || window.navigator.language
       moment.locale(locale);
       return moment.tz(dataTime, "Africa/Freetown").format("DD MMM")
     },

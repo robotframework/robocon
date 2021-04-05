@@ -98,7 +98,10 @@
         v-else-if="data.talks">
         <div class="mt-4">
           <talker-item
-            v-for="(talk, key) in data.talks"
+            v-for="(talk, key) in data.talks
+              .concat()
+              .sort((a, b) => (a.releaseTime || new Date()).getTime() < (b.releaseTime || new Date).getTime() ? 1 : -1)
+              .sort((a, b) => a.releaseTime ? -1 : 1)"
             :key="key"
             :header="talk.header"
             :margin="talk.margin"
@@ -120,7 +123,10 @@
             :third-img-url="talk.thirdImgUrl"
             :fourth-img-url="talk.fourthImgUrl"
             :url="talk.url"
-            :video-id="showVideos ? talk.videoId || '' : ''"
+            :release-time="talk.releaseTime"
+            :show-all-videos="showVideos"
+            :video-id="talk.videoId"
+            :video-public="talk.videoPublic"
             :preview-img="talk.previewImg" />
         </div>
       </div>
