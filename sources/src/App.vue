@@ -83,12 +83,37 @@ export default {
               text:
                 `
                   <p class="mb-3">
-                    Thank you for everyone who attended Robocon this year!<br><br>
+                    Thank you for everyone who attended RoboCgiton this year!<br><br>
                     Conference talks and Q&As will be made publicly available in a staggered manner, please check schedule below. If you attended the conference, you will find a link that unlocks all talks right away from your ticket link page.<br><br>
                     We had a total of 675 participants, which was the most attendees in RoboCon history.<br><br>
                     See you next year!
                   </p>
                 `
+            }
+          }
+        },
+        {
+          title: "Recording Tickets",
+          text_block: false,
+          text_block_centered: true,
+          tab_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Recording Ticket",
+              text: `
+              <div>
+                <p>
+                All given talks of RoboCon 2021 including Q&A are available as recordings.<br>
+                <br>
+                If you do not want to wait until all talks are released, you can purchaise a recording ticket and watch them directly.<br>
+                <br>
+                <a href='https://tickets.robotframework.org/2021/1152916/'>
+                    RoboCon Recording Tickets
+                  </a><br>
+                </p>
+              </div>`
             }
           }
         },
