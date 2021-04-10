@@ -158,7 +158,7 @@
         class="button-primary white ml-2"
         type="button"
         style="position: relative; width: 240px; height: 135px;"
-        @click="showVideo = true">
+        @click="showVideo = true; ga('send', 'event', 'showVideo', title)">
         <img
           :src="require(`../assets/img/previews/${previewImg}`)"
           style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;" />
