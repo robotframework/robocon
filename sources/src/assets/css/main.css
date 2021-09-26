@@ -26,7 +26,7 @@
   font-style: normal;
 }
 
-/* Pink as main color */
+/* Pink as main color 
 :root {
   --highlight-color: #fff;
   --highlight-color-text: #000;
@@ -34,17 +34,17 @@
   --main-color-text: #fff;
   --contrast-color: #232d56;
   --contrast-color-text: #f5bda5;
-}
+} */
 
-/* White as main color 
+/* White as main color */ 
 :root {
-  --highlight-color: pink;
+  --highlight-color: #ff4bd2;
   --highlight-color-text: #fff;
   --main-color: #fff;
   --main-color-text: #000;
   --contrast-color: #232d56;
   --contrast-color-text: #f5bda5;
-} */
+}
 
 body {
   background-color: var(--main-color);
