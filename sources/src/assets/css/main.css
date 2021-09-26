@@ -26,6 +26,17 @@
   font-style: normal;
 }
 
+/* Pink as main color */
+:root {
+  --highlight-color: #fff;
+  --highlight-color-text: #000;
+  --main-color: #ff4bd2;
+  --main-color-text: #fff;
+  --contrast-color: #232d56;
+  --contrast-color-text: #f5bda5;
+}
+
+/* White as main color 
 :root {
   --highlight-color: pink;
   --highlight-color-text: #fff;
@@ -33,7 +44,7 @@
   --main-color-text: #000;
   --contrast-color: #232d56;
   --contrast-color-text: #f5bda5;
-}
+} */
 
 body {
   background-color: var(--main-color);
@@ -186,7 +197,7 @@ h1.main-header {
   font-size: 20px;
   font-size: 6rem;
   line-height: 0.9;
-  color: #fff;
+  color: var(--highlight-color-text);
 }
 
 .img-header {
@@ -204,7 +215,7 @@ h1.main-header {
 }
 
 .header {
-  background-color: #ff4bd2;
+  background-color: var(--highlight-color);
   margin: 0;
   padding-top: 80px;
 }
@@ -346,7 +357,7 @@ hr {
   text-align: center;
   height: 42px;
   text-transform: uppercase;
-  background-color: #FFF;
+  background-color: var(--main-color);
   padding-top: 6px;
 }
 

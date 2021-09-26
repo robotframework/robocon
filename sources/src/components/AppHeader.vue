@@ -4,10 +4,10 @@
           <div class="row">
             <h1 class="main-header col-sm-6">
               <div class="a-1">RBCN<br></div>
-              <div style="color: #000;" class="a-2">2022<br></div>
+              <div style="color: #ff4bd2;" class="a-2">2022<br></div>
             </h1>
             <h2 class="col-sm-6 no-arrow a-3" style="text-align: end; flex-direction: column; justify-content: space-between; display: flex;">
-              <div style="color: white; position: relative; bottom: 2rem">
+              <div style="color: black; position: relative; bottom: 2rem">
                 A HYBRID  IN-PERSON / ONLINE<br>
                 SOFTWARE AUTOMATION<br>
                 EVENT<br>
@@ -17,7 +17,7 @@
                 WORKSHOPS:  18th January<br>
                 SPRINT: 21st January<br>
               </div>
-              <div style="color: white; position: relative; top: 2rem">
+              <div style="color: black; position: relative; top: 2rem">
                 THE 5th ANNUAL<br>
                 ROBOT FRAMEWORK<br>
                 CONFERENCE<br>
