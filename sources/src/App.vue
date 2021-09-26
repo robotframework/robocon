@@ -106,7 +106,7 @@ export default {
                 `
                   <p class="mb-3">
                     RoboCon 2022 planning is underway!<br><br>
-                    This year we will be returning to an in-person conference while also streaming live worldwide. Simutaniously held live in Helsinki and broadcast worldwide everyone will have a chance to participate.<br><br>
+                    This year we will be returning to an in-person conference while also streaming live worldwide. Simultaneously held live in Helsinki and broadcast worldwide everyone will have a chance to participate.<br><br>
                     Come and join us!
                   </p>
                 `
@@ -126,7 +126,7 @@ export default {
               text:
                 `
                   <p class="mb-3">
-                    RoboCon2022 Call For Proposals is Open!<br><br>
+                    RoboCon 2022 Call For Proposals is Open!<br><br>
                     We are looking for talk presenters and workshop facilitators. We are accepting submissions for both in-person and remote (pre-recorded) talks.<br><br>
                     If you are interested you may submit a proposal @ <a href='https://cfp.robocon.io/robocon-2022/'>cfp.robocon.io/robocon-2022</a>.
                   </p>
