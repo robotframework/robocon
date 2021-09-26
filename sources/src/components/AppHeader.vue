@@ -2,26 +2,23 @@
       <section class="header">
         <div class="container pb-5 pt-3">
           <div class="row">
-            <h1 class="main-header col-sm-6 rbtfnt">
-              <div class="a-1">
-                RBCN<br>
-                2021<br>
-              </div>
-              <div style="color: #01ffd9;" class="a-2">REMOTE<br>EVENT</div>
+            <h1 class="main-header col-sm-6">
+              <div class="a-1">RBCN<br></div>
+              <div style="color: black;" class="a-2">2022<br></div>
             </h1>
             <h2 class="col-sm-6 no-arrow a-3" style="text-align: end; flex-direction: column; justify-content: space-between; display: flex;">
-              <div style="color: white;">
-                A GLOBAL ONLINE<br>
+              <div style="color: white; position: relative; bottom: 2rem">
+                A HYBRID  IN-PERSON / ONLINE<br>
                 SOFTWARE AUTOMATION<br>
                 EVENT<br>
               </div>
               <div>
-                START: {{ dateString("2021-03-16T11:00:00+0000") }} / <span class="blue">{{ local_time("2021-03-16T11:00:00+0000") }}</span><br>
-                END:  {{ dateString("2021-03-18T19:00:00+0000") }} / <span class="blue">{{ local_time("2021-03-18T19:00:00+0000") }}</span><br>
-                Timezone: {{ local_tz }}<br>
+                CONFERENCE: 19th - 20th January<br>
+                WORKSHOPS:  18th January<br>
+                SPRINT: 21st January<br>
               </div>
-              <div style="color: white;">
-                THE 4th ANNUAL<br>
+              <div style="color: white; position: relative; top: 2rem">
+                THE 5th ANNUAL<br>
                 ROBOT FRAMEWORK<br>
                 CONFERENCE<br>
               </div>

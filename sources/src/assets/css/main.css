@@ -26,11 +26,31 @@
   font-style: normal;
 }
 
+/* Pink as main color 
+:root {
+  --highlight-color: #fff;
+  --highlight-color-text: #000;
+  --main-color: #ff4bd2;
+  --main-color-text: #fff;
+  --contrast-color: #232d56;
+  --contrast-color-text: #f5bda5;
+} */
+
+/* White as main color */ 
+:root {
+  --highlight-color: #ff4bd2;
+  --highlight-color-text: #fff;
+  --main-color: #fff;
+  --main-color-text: #000;
+  --contrast-color: #232d56;
+  --contrast-color-text: #f5bda5;
+}
+
 body {
-  background-color: #000;
+  background-color: var(--main-color);
   font-family: OCRA;
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--main-color-text);
   text-align: left;
   overflow-x: hidden;
 }
@@ -58,21 +78,26 @@ button {
 }
 
 .b-card-body p a {
-  color: #fff;
+  color: var(--main-color-text);
 }
 
 .footer-content {
-  color: #000;
+  color: var(--contrast-color-text);
   text-align: center;
   margin: 50px;
 }
 
 footer {
-  background-color: #262330;
+  color: var(--contrast-color-text);
+  background-color: var(--contrast-color);
 }
 
 footer h2 {
-  color: #fff;
+  color: var(--contrast-color-text);
+}
+
+footer a {
+  color: var(--contrast-color-text);
 }
 
 a {
@@ -81,11 +106,11 @@ a {
 }
 
 a:hover {
-  color: #fff;
+  color: #000;
 }
 
 header a.nav-link:hover {
-  color: #fff;
+  color: #000;
 }
 
 p, li {
@@ -121,7 +146,7 @@ h1,
 h2,
 .link-title,
 h3 {
-  color: #01ffd9;
+  color: var(--main-color-text);
 }
 
 .link-title {
@@ -137,7 +162,7 @@ h3,
 div.card-header {
   font-family: "OCRA";
   text-align: left;
-  color: #01ffd9;
+  color: var(--main-color-text);
 }
 
 .rbtfnt {
@@ -161,7 +186,7 @@ h2, .link-title {
 }
 
 .color {
-  color: #01ffd9;
+  color: var(--main-color-text);
 }
 
 .white {
@@ -172,7 +197,7 @@ h1.main-header {
   font-size: 20px;
   font-size: 6rem;
   line-height: 0.9;
-  color: #fff;
+  color: var(--highlight-color-text);
 }
 
 .img-header {
@@ -190,7 +215,7 @@ h1.main-header {
 }
 
 .header {
-  background-color: #262330;
+  background-color: var(--highlight-color);
   margin: 0;
   padding-top: 80px;
 }
@@ -264,7 +289,7 @@ small.info::after {
 
 #nav_collapse .nav-item a {
   font-family: "OCRA";
-  color: #fff;
+  color: #000;
   font-weight: normal;
 }
 
@@ -274,7 +299,7 @@ a {
 
 #nav_collapse .nav-item a.active,
 a {
-  color: #01ffd9;
+  color: #000;
 }
 
 hr {
@@ -291,7 +316,7 @@ hr {
   padding-bottom: 20px;
   white-space: pre-line;
   line-height: 0.9;
-  color: #01ffd9;
+  color: var(--main-color-text);
 }
 
 .navbar-brand .img-fluid {
@@ -332,16 +357,16 @@ hr {
   text-align: center;
   height: 42px;
   text-transform: uppercase;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--main-color);
   padding-top: 6px;
 }
 
 #navigation .nav-item.active a.nav-link {
-  color: #01ffd9;
+  color: #000;
 }
 
 #navigation .nav-item a.nav-link:hover {
-  color: #01ffd9;
+  color: #000;
 }
 
 .nav-item {
@@ -354,7 +379,7 @@ hr {
 
 #navigation .nav-item a.nav-link {
   font-family: 'OCRA';
-  color: #fff;
+  color: #000;
   text-align: left;
   font-size: 0.8rem;
 }
@@ -396,12 +421,12 @@ a:not(.nav-link) {
 }
 
 .dashed-header > h1{
-  color: #01ffd9;
+  color: var(--main-color-text);
 }
 
 .dashed-header > h1::before{
   content: '// ';
-  color: #01ffd9;
+  color: var(--main-color-text);
 }
 
 .nav-pills li a {
