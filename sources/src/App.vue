@@ -101,12 +101,12 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "save_the_date",
+              header: "Save The Date",
               text:
                 `
                   <p class="mb-3">
                     RoboCon 2022 planning is underway!<br><br>
-                    This year we will be returning to an in-person conference while also streaming live worldwide. This hybrid conference will be simutaniously held live in Helsinki while also sent out worldwide.<br><br>
+                    This year we will be returning to an in-person conference while also streaming live worldwide. Simutaniously held live in Helsinki and broadcast worldwide everyone will have a chance to participate.<br><br>
                     Come and join us!
                   </p>
                 `
