@@ -31,7 +31,7 @@
     </div>
     <transition appear name="opacity-slow">
       <div class="col-sm-12 type-center mt-large mb-medium" style="transition-delay: 0.5s;">
-        <img :src="'./img/RBCN22.svg'" alt="ROBOCON 2022" class="rbcn-logo" />
+        <img :src="`${publicPath}img/RBCN22.svg`" alt="ROBOCON 2022" class="rbcn-logo" />
       </div>
     </transition>
     <transition appear name="fade-right">
@@ -46,7 +46,8 @@
 export default {
   name: 'Banner',
   data: () => ({
-    doTheBling: false
+    doTheBling: false,
+    publicPath: process.env.BASE_URL
   }),
   mounted() {
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
