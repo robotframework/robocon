@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  publicPath: './dist/',
+  outputDir: 'dist',
+  indexPath: '../index.html',
   productionSourceMap: false,
   configureWebpack: {
     resolve: {
