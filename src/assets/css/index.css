@@ -20,7 +20,7 @@ html, body {
     flex: 1 1 auto;
     flex-direction: column;
     min-height: 100vh;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 #main {
@@ -50,14 +50,4 @@ select {
 
 body:not(.accessible) * {
     outline: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    html, body {
-        background-color: var(--color-background-darkmode);
-    }
-    
-    #app {
-        color: var(--color-grey-light);
-    }
 }

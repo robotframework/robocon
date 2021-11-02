@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "10c446c0f3a38c040588",
-    "url": "dist/css/app.8ef33456.css"
+    "revision": "5c2709726704fc9843fe",
+    "url": "dist/css/app.14f772b7.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -240,11 +240,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/veikkaus.png"
   },
   {
-    "revision": "a7df47c662ada3da3e7867ba7afe737a",
+    "revision": "990e3e5141735af1c1686d2ea00f243e",
     "url": "dist/index.html"
   },
   {
-    "revision": "10c446c0f3a38c040588",
+    "revision": "5c2709726704fc9843fe",
     "url": "dist/js/app.fd954b5f.js"
   },
   {
