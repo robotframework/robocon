@@ -65,7 +65,7 @@ h2 {
 
 h3 {
     font-size: var(--type-large);
-    color: var(--color-primary);
+    color: var(--color-theme);
     font-weight: var(--weight-semi-bold);
     margin-bottom: var(--size-3xsmall);
     line-height: var(--line-height-h3);

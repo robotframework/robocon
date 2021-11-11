@@ -4,7 +4,7 @@
       class="font-title slogans"
       :class="[
         doTheBling ? 'bling' : '',
-        $store.state.isMobile ? 'flex between ml-small mt-small' : 'col-sm-12 row center mt-large']">
+        $store.state.isMobile ? 'flex between ml-small mt-large mb-medium' : 'col-sm-12 row center mt-large']">
       <transition appear name="fade-right">
         <div class="mr-large" style="transition-delay: 1.25s;">
           THE 5th ANNUAL<br>
@@ -23,7 +23,7 @@
       </transition>
       <transition appear name="fade-right">
         <div style="transition-delay: 2.25s;" v-if="!$store.state.isMobile">
-          18-21st<br>
+          19-20th<br>
           JAN 2022<br>
           UTC+2
         </div>
@@ -35,7 +35,7 @@
       </div>
     </transition>
     <transition appear name="fade-right">
-      <div class="col-sm-12 type-center font-title mb-small" style="transition-delay: 2.25s;" v-if="$store.state.isMobile">
+      <div class="col-sm-12 type-center font-title mb-large mt-medium" style="transition-delay: 2.25s;" v-if="$store.state.isMobile">
         18-21st JAN 2022 UTC+2
       </div>
     </transition>
@@ -68,7 +68,7 @@ export default {
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: bling 5s infinite;
+    animation: bling 7s infinite;
   }
   @keyframes bling {
     0% {

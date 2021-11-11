@@ -4,7 +4,7 @@ export default () => ({
   navbar: {
     items: [
       {
-        name: 'Intro',
+        name: 'Hello',
         id: 'intro'
       },
       {
@@ -18,12 +18,24 @@ export default () => ({
     ]
   },
   intro: {
-    title: 'Save the Date',
+    title: 'Hello World',
     body:
       `<p>RoboCon 2022 planning is underway!</p>
       <p>This year we'll be returning to an in-person conference while also
       streaming live worldwide. That way everyone has a chance to participate.</p>
-      <p>Come and join us!</p>`,
+      <h3 class="mt-large">Tickets</h3>
+      <p><a href="https://tickets.robotframework.org/rc2022/">Early bird tickets</a> are now available! First 100 participants per ticket type
+      will get a discount before tickets return to normal price.</p>`,
+    tickets: [
+      {
+        title: 'LIVE',
+        price: '<del class="disabled type-small">900€</del> 600€'
+      },
+      {
+        title: 'ONLINE',
+        price: '<del class="disabled type-small">200€</del> 100€'
+      }
+    ],
     tabs: [
       {
         name: 'Live',

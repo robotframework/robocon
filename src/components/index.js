@@ -6,6 +6,7 @@ import NavMobile from './NavMobile.vue'
 import PageSection from './PageSection.vue'
 import TabBox from './TabBox.vue'
 import Sponsors from './Sponsors.vue'
+import Ticket from './Ticket.vue'
 
 import GlobeIcon from './icons/GlobeIcon.vue'
 import ChevronIcon from './icons/ChevronIcon.vue'
@@ -20,6 +21,7 @@ export {
   PageSection,
   TabBox,
   Sponsors,
+  Ticket,
 
   GlobeIcon,
   ChevronIcon,

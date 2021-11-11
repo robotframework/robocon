@@ -11,6 +11,13 @@
       title-id="intro"
       :title="$t('intro.title')"
       :body="$t('intro.body')">
+      <div class="col-sm-12 col-lg-9 col-lg-offset-3 row center">
+        <ticket
+          v-for="ticket in $tm('intro.tickets')"
+          :key="ticket.title"
+          class="mr-medium mb-large"
+          :ticket="ticket" />
+      </div>
       <tab-box
         class="col-sm-12 col-lg-9 col-lg-offset-3"
         section-id="intro"
@@ -38,7 +45,8 @@ import {
   NavMobile,
   PageSection,
   TabBox,
-  NewsBanner
+  NewsBanner,
+  Ticket
 } from 'Components'
 
 export default {
@@ -50,7 +58,8 @@ export default {
     NavMobile,
     PageSection,
     TabBox,
-    NewsBanner
+    NewsBanner,
+    Ticket
   }
 }
 </script>
