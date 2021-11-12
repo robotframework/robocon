@@ -23,6 +23,7 @@ export default () => ({
       `<p>RoboCon 2022 planning is underway!</p>
       <p>This year we'll be returning to an in-person conference while also
       streaming live worldwide. That way everyone has a chance to participate.</p>
+      <p>The main conference is held <span class="color-theme">19-20 January</span>, while workshops are on 18th and sprints 21st.</p>
       <h3 class="mt-large">Tickets</h3>
       <p><a href="https://tickets.robotframework.org/rc2022/">Early bird tickets</a> are now available! First 100 participants per ticket type
       will get a discount before tickets return to normal price.</p>`,

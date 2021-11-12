@@ -26,14 +26,14 @@
       </mask>
       <use xlink:href='#b' fill='#fe4bd2' mask='url(#m)' />
     </svg>
-    <div class="text-container m-medium row center">
+    <div class="text-container m-medium ml-small mr-small row center">
       <div class="type-small flex middle" style="transform: rotate(-90deg);">
         <div>
           RBCN22
         </div>
       </div>
       <div class="border-left-theme border-right-theme border-thin">
-        <div v-html="ticket.title" class="type-large type-bold border-bottom-theme border-thin p-small" />
+        <div v-html="ticket.title" class="type-large type-bold border-bottom-theme border-thin p-small" style="min-width: 9.5rem;" />
         <div v-html="ticket.price" class="p-2xsmall" />
       </div>
       <div class="type-small middle flex middle" style="transform: rotate(90deg);">

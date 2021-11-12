@@ -19,8 +19,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        args[0].title = 'Robocon 2022'
-        args[0].meta = 'RoboCon: Conference for Robot Framework community'
+        args[0].title = 'RoboCon 2022'
         return args
       })
     config

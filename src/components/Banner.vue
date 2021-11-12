@@ -23,7 +23,7 @@
       </transition>
       <transition appear name="fade-right">
         <div style="transition-delay: 2.25s;" v-if="!$store.state.isMobile">
-          19-20th<br>
+          18-21th<br>
           JAN 2022<br>
           UTC+2
         </div>
