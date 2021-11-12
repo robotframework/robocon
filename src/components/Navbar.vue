@@ -12,7 +12,7 @@
           class="pl-small pr-small color-white font-title type-uppercase type-no-underline"
           :class="i !== $tm('navbar.items').length - 1 ? 'dot-right-white' : ''"
           @click="itemClick(item.id)">
-          {&thinsp;&thinsp;{{ item.name }}&thinsp;&thinsp;}
+          ${&thinsp;&thinsp;{{ item.name }}&thinsp;&thinsp;}
         </button>
       </div>
     </transition>

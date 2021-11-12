@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "aa26b1a1ebfdd6d4dde3",
-    "url": "dist/css/app.dcabfde0.css"
+    "revision": "2b144e99f9562af6f8a4",
+    "url": "dist/css/app.6a7b3e29.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -240,16 +240,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/veikkaus.png"
   },
   {
-    "revision": "97250eb13ce15d9ac4a157f1eb60310b",
+    "revision": "02a26c1524f6e0e8721761f96d2a109e",
     "url": "dist/index.html"
   },
   {
-    "revision": "aa26b1a1ebfdd6d4dde3",
-    "url": "dist/js/app.dcce1470.js"
+    "revision": "2b144e99f9562af6f8a4",
+    "url": "dist/js/app.ab12e8d8.js"
   },
   {
-    "revision": "b69124979c13185b54f9",
-    "url": "dist/js/chunk-vendors.8a9e9329.js"
+    "revision": "bbc81b1e80f683f68975",
+    "url": "dist/js/chunk-vendors.2d5738f3.js"
   },
   {
     "revision": "ae69c76f0db87375aa82706bd2ce675f",
