@@ -28,7 +28,7 @@ export default () => ({
       will get a discount before tickets return to normal price.</p>`,
     tickets: [
       {
-        title: 'LIVE',
+        title: 'IN-PERSON',
         price: '<del class="disabled type-small">900€</del> 600€'
       },
       {
@@ -38,7 +38,7 @@ export default () => ({
     ],
     tabs: [
       {
-        name: 'Live',
+        name: 'In-Person',
         description: `
         <p>Robocon's in-person part is held in <span class="color-theme">Helsinki, Finland,</span>
         the home country of Robot Framework.</p>
