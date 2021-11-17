@@ -1,21 +1,21 @@
 <template>
-  <div class="row bg-white card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
+  <div class="row bg-grey-dark card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
     <div class="col-sm-12 mb-xsmall type-center color-theme">
       <h3>
-        {{ $t('development.sponsorBoxTitle') }}
+        {{ $t('sponsors.boxTitle') }}
       </h3>
     </div>
     <a
-      v-for="sponsor in $tm('resourcesList.sponsors')"
-      :key="sponsor.name"
+      v-for="(sponsor, i) in $tm('sponsors.list')"
+      :key="i"
       :href="sponsor.href"
       target="_blank"
-      class="sponsor cursor-pointer">
+      class="sponsor cursor-pointer col-sm-6 col-md-3">
       <div
         class="img-container mb-small"
         :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
     </a>
-    <div class="col-sm-12 type-small type-right pr-small" v-html="$t('development.howToJoin')" />
+    <div class="col-sm-12 type-small type-right pr-small" v-html="$t('sponsors.howToJoin')" />
   </div>
 </template>
 
@@ -30,8 +30,6 @@ export default {
 
 <style scoped>
 .sponsor {
-  flex-basis: 12.5%;
-  max-width: 12.5%;
   transition: transform 0.2s;
 }
 .sponsor:hover {
@@ -45,11 +43,5 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
-@media screen and (max-width: 700px) {
-  .sponsor {
-    flex-basis: 25%;
-    max-width: 25%;
-  }
 }
 </style>

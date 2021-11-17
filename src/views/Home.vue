@@ -22,6 +22,7 @@
         class="col-sm-12 col-lg-9 col-lg-offset-3"
         section-id="intro"
         :tabs="$tm('intro.tabs')" />
+      <sponsors class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
     </page-section>
     <page-section
       title-id="cfp"
@@ -46,7 +47,8 @@ import {
   PageSection,
   TabBox,
   NewsBanner,
-  Ticket
+  Ticket,
+  Sponsors
 } from 'Components'
 
 export default {
@@ -59,7 +61,8 @@ export default {
     PageSection,
     TabBox,
     NewsBanner,
-    Ticket
+    Ticket,
+    Sponsors
   }
 }
 </script>

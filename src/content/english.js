@@ -76,5 +76,34 @@ export default () => ({
     <p>To minimize the risk of infection, there will be precautions regarding the in-person part of the event.
     We are constantly following the regulatory guidelines and always act by the current restrictions and recommendations.</p>
     <p>In general, Finland has had a pretty low number of infections relative to population.</p>`
+  },
+  sponsors: {
+    title: 'Sponsors',
+    boxTitle: 'RoboCon 2022 is sponsored by these companies',
+    howToJoin: `
+      If you'd like to sponsor RoboCon, please contant <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a></p>
+    `,
+    list: [
+      {
+        img: 'copado.png',
+        href: 'https://www.copado.com/'
+      },
+      {
+        img: 'northcode.png',
+        href: 'https://northcode.fi/'
+      },
+      {
+        img: 'robocorp.png',
+        href: 'https://robocorp.com/'
+      },
+      {
+        img: 'testimate.png',
+        href: 'https://www.testimate.fi/'
+      },
+      {
+        img: 'vala.png',
+        href: 'https://www.valagroup.com/fi/'
+      }
+    ]
   }
 })
