@@ -45,6 +45,8 @@ export default () => ({
         the home country of Robot Framework.</p>
         <p>The venue will be once again <span class="color-theme">Bio Rex</span>, which can safely accomodate 250 people.
         It is located just a few minutes' walk from the main railway station of Helsinki.</p>
+        <p>A valid certificate of COVID vaccination is required and will be requested at entrance. For more information,
+        please see the section about COVID below.</p>
         <p>In addition to catering and bar there'll be fun activities between the talks,
         which are revealed at a later date.</p>
         <p>And yes, there will be an after party!</p>`
@@ -75,7 +77,15 @@ export default () => ({
     body: `
     <p>To minimize the risk of infection, there will be precautions regarding the in-person part of the event.
     We are constantly following the regulatory guidelines and always act by the current restrictions and recommendations.</p>
-    <p>In general, Finland has had a pretty low number of infections relative to population.</p>`
+    <p>A valid certificate of COVID vaccination is required and will be requested at entrance. List of accepted certificates:
+      <ul>
+        <li>Digital COVID Certificate of the EU</li>
+        <li>World Health Organization Certificate of Vaccination</li>
+        <li>CDC-Vaccination Record Card</li>
+      </ul>
+    </p>
+    <p>In general, Finland has had a pretty low number of infections relative to population. For up-to-date information
+    about restrictions in Finland, please refer to <a href="https://valtioneuvosto.fi/en/information-on-coronavirus/current-restrictions" target="_blank">valtioneuvosto.fi</a></p>`
   },
   sponsors: {
     title: 'Sponsors',

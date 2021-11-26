@@ -4,7 +4,7 @@
     target="_blank"
     class="ticket-container font-title cursor-pointer"
     ref="ticketContainer"
-    :style="`transform: rotateX(${mousePosition.y * 15}deg) rotateY(${mousePosition.x * 15}deg);`">
+    :style="`transform: rotateX(${-mousePosition.y * 15}deg) rotateY(${mousePosition.x * 15}deg);`">
     <svg>
       <mask id='m' stroke="#fe4bd2" stroke-width="3" stroke-opacity="1">
         <rect id='b' width='100%' height='100%' fill="rgba(255, 255, 255, 0.2)"/>
@@ -73,12 +73,13 @@ export default {
     onMouseMove(ev) {
       const bounds = this.$refs.ticketContainer.getBoundingClientRect()
       const ticketPosition = {
-        x: bounds.left + document.documentElement.scrollTop,
-        y: bounds.top + document.documentElement.scrollTop
+        x: bounds.left,
+        y: bounds.top
       }
+      const clamp = (value) => Math.max(-1, Math.min(1, value))
       this.mousePosition = {
-        x: (ticketPosition.x - ev.screenX) / (window.innerWidth / 2),
-        y: (ticketPosition.y - ev.screenY) / (window.innerHeight / 2)
+        x: clamp((ticketPosition.x - ev.screenX) / (window.innerWidth / 2)),
+        y: clamp((ticketPosition.y - ev.screenY) / (window.innerHeight / 2))
       }
     }
   }
