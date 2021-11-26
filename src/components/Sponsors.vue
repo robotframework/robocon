@@ -1,6 +1,6 @@
 <template>
   <div class="row bg-grey-dark card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
-    <div class="col-sm-12 mb-xsmall type-center color-theme">
+    <div class="col-sm-12 mb-xsmall type-center color-theme pl-small pr-small">
       <h3>
         {{ $t('sponsors.boxTitle') }}
       </h3>
@@ -31,7 +31,17 @@
         class="img-container mb-small"
         :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
     </a>
-    <div class="col-sm-12 type-small type-right pr-small mt-small" v-html="$t('sponsors.howToJoin')" />
+    <div class="col-sm-12 flex end mt-small p-medium">
+      <transition mode="out-in" name="opacity">
+        <button
+          v-if="!sponsorInfoShown"
+          class="stroke mr-small"
+          @click="sponsorInfoShown = true">
+          {{ $t('sponsors.button') }}
+        </button>
+        <div v-else v-html="$t('sponsors.moreInfo')" />
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -39,7 +49,8 @@
 export default {
   name: 'Sponsors',
   data: () => ({
-    publicPath: process.env.BASE_URL
+    publicPath: process.env.BASE_URL,
+    sponsorInfoShown: false
   })
 }
 </script>

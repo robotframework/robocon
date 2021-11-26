@@ -80,8 +80,13 @@ export default () => ({
   sponsors: {
     title: 'Sponsors',
     boxTitle: 'RoboCon 2022 is sponsored by these companies',
-    howToJoin: `
-      If you'd like to sponsor RoboCon, please contant <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a></p>
+    button: 'More info',
+    moreInfo: `
+      <p>Hosting RoboCon is made possible by the companies that sponsor the event. Thank you!</p>
+      <p>This year, there are three levels of sponsorships that come with various benefits such as exposure
+      in the event. If your company is interested in sponsoring RoboCon, please contact <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a>.</p>
+      <p>If there is leftover money, it will be used for the development of Robot Framework. For more information
+      about supporting the development, please visit <a href="https://robotframework.org/foundation" target="_blank">Robot Framework Foundation</a>.</p>
     `,
     list: [
       {
