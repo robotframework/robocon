@@ -5,8 +5,24 @@
         {{ $t('sponsors.boxTitle') }}
       </h3>
     </div>
+    <div class="col-sm-12">
+      <h4 class="ml-large">Platinum</h4>
+    </div>
     <a
-      v-for="(sponsor, i) in $tm('sponsors.list')"
+      v-for="(sponsor, i) in $tm('sponsors.list').filter(({ platinum }) => platinum)"
+      :key="i"
+      :href="sponsor.href"
+      target="_blank"
+      class="sponsor cursor-pointer col-sm-12 col-md-6">
+      <div
+        class="img-container platinum"
+        :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
+    </a>
+    <div class="col-sm-12 mb-small">
+      <h4 class="ml-large">Gold & Silver</h4>
+    </div>
+    <a
+      v-for="(sponsor, i) in $tm('sponsors.list').filter(({ platinum }) => !platinum)"
       :key="i"
       :href="sponsor.href"
       target="_blank"
@@ -15,7 +31,7 @@
         class="img-container mb-small"
         :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
     </a>
-    <div class="col-sm-12 type-small type-right pr-small" v-html="$t('sponsors.howToJoin')" />
+    <div class="col-sm-12 type-small type-right pr-small mt-small" v-html="$t('sponsors.howToJoin')" />
   </div>
 </template>
 
@@ -43,5 +59,9 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+.platinum {
+  width: 90%;
+  height: 10rem;
 }
 </style>

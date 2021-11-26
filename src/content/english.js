@@ -85,16 +85,17 @@ export default () => ({
     `,
     list: [
       {
+        img: 'robocorp.png',
+        href: 'https://robocorp.com/',
+        platinum: true
+      },
+      {
         img: 'copado.png',
         href: 'https://www.copado.com/'
       },
       {
         img: 'northcode.png',
         href: 'https://northcode.fi/'
-      },
-      {
-        img: 'robocorp.png',
-        href: 'https://robocorp.com/'
       },
       {
         img: 'testimate.png',
