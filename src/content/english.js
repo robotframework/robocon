@@ -77,13 +77,15 @@ export default () => ({
     body: `
     <p>To minimize the risk of infection, there will be precautions regarding the in-person part of the event.
     We are constantly following the regulatory guidelines and always act by the current restrictions and recommendations.</p>
-    <p>A valid certificate of COVID vaccination is required and will be requested at entrance. List of accepted certificates:
-      <ul>
-        <li>Digital COVID Certificate of the EU</li>
-        <li>World Health Organization Certificate of Vaccination</li>
-        <li>CDC-Vaccination Record Card</li>
-      </ul>
-    </p>
+    <p>A valid certificate of COVID vaccination is required and will be requested at entrance.</p>
+    <h3>
+      List of accepted certificates
+    </h3>
+    <ul class="mt-small">
+      <li>Digital COVID Certificate of the EU</li>
+      <li>World Health Organization Certificate of Vaccination</li>
+      <li>CDC-Vaccination Record Card</li>
+    </ul>
     <p>In general, Finland has had a pretty low number of infections relative to population. For up-to-date information
     about restrictions in Finland, please refer to <a href="https://valtioneuvosto.fi/en/information-on-coronavirus/current-restrictions" target="_blank">valtioneuvosto.fi</a></p>`
   },
@@ -111,6 +113,14 @@ export default () => ({
       {
         img: 'northcode.png',
         href: 'https://northcode.fi/'
+      },
+      {
+        img: 'qfactory.png',
+        href: 'https://q-factory.fi/'
+      },
+      {
+        img: 'siili.png',
+        href: 'https://www.siili.com/'
       },
       {
         img: 'testimate.png',

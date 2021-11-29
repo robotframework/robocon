@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "0b5f731c28b293473b65",
+    "revision": "5517cc19a8a608d44dea",
     "url": "dist/css/app.8474eb2f.css"
   },
   {
@@ -60,8 +60,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/northcode.png"
   },
   {
+    "revision": "89d788184d19ee4d5bbcfcfd36864053",
+    "url": "dist/img/sponsors/qfactory.png"
+  },
+  {
     "revision": "7a2ac6f7a41ef27b8bb632982f3b008d",
     "url": "dist/img/sponsors/robocorp.png"
+  },
+  {
+    "revision": "3b87011c64f21b0acdbc3f2b63f716dd",
+    "url": "dist/img/sponsors/siili.png"
   },
   {
     "revision": "ce06e24ab99fa046117346b7018f2c03",
@@ -72,12 +80,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/vala.png"
   },
   {
-    "revision": "eb3a7629b18a48d5c533265c6112e7f0",
+    "revision": "a52479225fee60ce9ae6c3474cbce38e",
     "url": "dist/index.html"
   },
   {
-    "revision": "0b5f731c28b293473b65",
-    "url": "dist/js/app.9a4cd3cc.js"
+    "revision": "5517cc19a8a608d44dea",
+    "url": "dist/js/app.0c7455ee.js"
   },
   {
     "revision": "b69124979c13185b54f9",
