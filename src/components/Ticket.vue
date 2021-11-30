@@ -2,7 +2,7 @@
   <a
     href="https://tickets.robotframework.org/rc2022/"
     target="_blank"
-    class="ticket-container font-title cursor-pointer"
+    class="ticket-container font-title cursor-pointer disabled"
     ref="ticketContainer"
     :style="`transform: rotateX(${-mousePosition.y * 15}deg) rotateY(${mousePosition.x * 15}deg);`">
     <svg>

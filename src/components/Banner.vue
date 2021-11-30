@@ -6,7 +6,7 @@
         doTheBling ? 'bling' : '',
         $store.state.isMobile ? 'flex between ml-small mt-large mb-medium' : 'col-sm-12 row center mt-large']">
       <transition appear name="fade-right">
-        <div class="mr-large" style="transition-delay: 1.25s;">
+        <div class="mr-xlarge" style="transition-delay: 1.25s;">
           THE 5th ANNUAL<br>
           ROBOT FRAMEWORK<br>
           CONFERENCE
@@ -22,10 +22,9 @@
         </div>
       </transition>
       <transition appear name="fade-right">
-        <div style="transition-delay: 2.25s;" v-if="!$store.state.isMobile">
-          18-21th<br>
-          JAN 2022<br>
-          UTC+2
+        <div class="type-right" style="transition-delay: 2.25s;" v-if="!$store.state.isMobile">
+          SPRING<br>
+          2022
         </div>
       </transition>
     </div>
@@ -91,6 +90,7 @@ export default {
   .rbcn-logo {
     max-width: 34.3rem;
     min-height: 8.1rem;
+    filter: drop-shadow(0 0 0.45rem var(--color-theme));
   }
   @media screen and (max-width: 34.3rem) {
     .rbcn-logo {
