@@ -28,7 +28,7 @@ export default () => ({
       <div class="mt-2xsmall">
         <a href="https://tickets.robotframework.org/rc2022/waitinglist?item=158988">Waiting list - online</a>
       </div>
-      <h4 class="mt-large">🦠 Original text</h4>
+      <h4 class="mt-large">Original text</h4>
       <p>RoboCon 2022 planning is underway!</p>
       <p>This year we'll be returning to an in-person conference while also
       streaming live worldwide. That way everyone has a chance to participate.</p>
