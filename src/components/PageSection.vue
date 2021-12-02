@@ -80,7 +80,7 @@ export default {
   }),
   created() {
     const voted = localStorage.getItem('voted')
-    if (voted === 'yes') this.voted = false
+    if (voted === 'yes') this.voted = true
   },
   methods: {
     submit() {
