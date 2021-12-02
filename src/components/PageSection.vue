@@ -27,15 +27,15 @@
           </h4>
           <div>
             <input type="radio" id="23-24" name="date" value="23.3 - 24.3.2022" v-model="selected" />
-            <label class="ml-small" for="23-24">Wed 23.3 - Thu 24.3.2022</label>
+            <label class="ml-small" for="23-24">Wed 23rd March - Thu 24th March 2022</label>
           </div>
           <div>
             <input type="radio" id="24-25" name="date" value="24.3 - 25.3.2022" v-model="selected" />
-            <label class="ml-small" for="24-25">Thu 24.3 - Fri 25.3.2022</label>
+            <label class="ml-small" for="24-25">Thu 24th March - Fri 25th March 2022</label>
           </div>
           <div>
             <input type="radio" id="19-20" name="date" value="19.5 - 20.5.2022" v-model="selected" />
-            <label class="ml-small" for="19-20">Thu 19.5 - Fri 20.5.2022</label>
+            <label class="ml-small" for="19-20">Thu 19th May - Fri 20th May 2022</label>
           </div>
           <button type="button" class="theme mt-small" @click="submit">Submit</button>
         </div>
@@ -80,7 +80,7 @@ export default {
   }),
   created() {
     const voted = localStorage.getItem('voted')
-    if (voted === 'yes') this.voted = true
+    if (voted === 'yes') this.voted = false
   },
   methods: {
     submit() {
