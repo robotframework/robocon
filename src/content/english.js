@@ -22,20 +22,11 @@ export default () => ({
     body:
       `<h4 class="mt-small">🦠 30.11.2022: RoboCon 2022 will be rescheduled</h4>
       <p>Unfortunately, due to the current COVID situation we have made the decision to <span class="weight-bold">reschedule RoboCon 2022 to spring.</span> As such we are putting ticket sales on hold. Your safety is of upmost importance to us but we still wish to see you in person.</p>
-      <p>We are actively meeting and coordinating with our event organization partners over the next few days. We will update you on Friday. If you have any questions feel free to contact us at <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a></p>
       <p>If you'd like to know when the tickets become available again, be sure to join the waiting list:</p>
       <a href="https://tickets.robotframework.org/rc2022/waitinglist?item=157988">Waiting list - live</a>
       <div class="mt-2xsmall">
         <a href="https://tickets.robotframework.org/rc2022/waitinglist?item=158988">Waiting list - online</a>
-      </div>
-      <h4 class="mt-large">Original text</h4>
-      <p>RoboCon 2022 planning is underway!</p>
-      <p>This year we'll be returning to an in-person conference while also
-      streaming live worldwide. That way everyone has a chance to participate.</p>
-      <p><del>The main conference is held <span class="color-theme">19-20 January</span>, while workshops are on 18th and sprints 21st.</del></p>
-      <h3 class="mt-large"><del>Tickets</del></h3>
-      <p><del><a href="https://tickets.robotframework.org/rc2022/">Early bird tickets</a> are now available! First 100 participants per ticket type
-      will get a discount before tickets return to normal price.</del></p>`,
+      </div>`,
     tickets: [
       {
         title: 'IN-PERSON',

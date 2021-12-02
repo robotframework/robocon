@@ -10,6 +10,7 @@
     <page-section
       title-id="intro"
       :title="$t('intro.title')"
+      :poll="true"
       :body="$t('intro.body')">
       <div class="col-sm-12 col-lg-9 col-lg-offset-3 row center">
         <ticket
