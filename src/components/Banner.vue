@@ -6,7 +6,7 @@
         doTheBling ? 'bling' : '',
         $store.state.isMobile ? 'flex between ml-small mt-large mb-medium' : 'col-sm-12 row center mt-large']">
       <transition appear name="fade-right">
-        <div class="mr-xlarge" style="transition-delay: 1.25s;">
+        <div class="mr-large" style="transition-delay: 1.25s;">
           THE 5th ANNUAL<br>
           ROBOT FRAMEWORK<br>
           CONFERENCE
@@ -14,7 +14,7 @@
       </transition>
       <transition appear name="fade-right">
         <div
-          :class="$store.state.isMobile ? 'type-right' : 'mr-large'"
+          :class="$store.state.isMobile ? 'type-right' : 'type-center mr-large'"
           style="transition-delay: 1.75s;">
           A GLOBAL HYBRID<br>
           SOFTWARE AUTOMATION<br>
@@ -23,8 +23,9 @@
       </transition>
       <transition appear name="fade-right">
         <div class="type-right" style="transition-delay: 2.25s;" v-if="!$store.state.isMobile">
-          SPRING<br>
-          2022
+          19-20th<br>
+          MAY 2022<br>
+          UTC+2
         </div>
       </transition>
     </div>
@@ -35,7 +36,7 @@
     </transition>
     <transition appear name="fade-right">
       <div class="col-sm-12 type-center font-title mb-large mt-medium" style="transition-delay: 2.25s;" v-if="$store.state.isMobile">
-        18-21st JAN 2022 UTC+2
+        19-20th MAY 2022
       </div>
     </transition>
   </div>
@@ -97,6 +98,8 @@ export default {
       width: calc(100% - 2rem);
       min-height: 6rem;
     }
+  }
+  @media screen and (max-width: 703px) {
     .slogans {
       font-size: var(--type-xsmall);
       width: calc(100% - 2rem) !important;

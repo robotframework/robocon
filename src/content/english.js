@@ -4,7 +4,7 @@ export default () => ({
   navbar: {
     items: [
       {
-        name: 'Announcements',
+        name: 'Hello',
         id: 'intro'
       },
       {
@@ -18,15 +18,15 @@ export default () => ({
     ]
   },
   intro: {
-    title: 'Announcements',
+    title: 'Hello',
     body:
-      `<h4 class="mt-small">🦠 30.11.2022: RoboCon 2022 will be rescheduled</h4>
-      <p>Unfortunately, due to the current COVID situation we have made the decision to <span class="weight-bold">reschedule RoboCon 2022 to spring.</span> As such we are putting ticket sales on hold. Your safety is of upmost importance to us but we still wish to see you in person.</p>
-      <p>If you'd like to know when the tickets become available again, be sure to join the waiting list:</p>
-      <a href="https://tickets.robotframework.org/rc2022/waitinglist?item=157988">Waiting list - live</a>
-      <div class="mt-2xsmall">
-        <a href="https://tickets.robotframework.org/rc2022/waitinglist?item=158988">Waiting list - online</a>
-      </div>`,
+      `<p>RoboCon 2022 planning is underway!</p>
+      <p>This year we'll be returning to an in-person conference while also
+      streaming live worldwide. That way everyone has a chance to participate.</p>
+      <p>The main conference is held <span class="color-theme">19-20 May 2022</span>, while workshops are on 17th and sprints 18th.</p>
+      <h3 class="mt-large">Tickets</h3>
+      <p><a href="https://tickets.robotframework.org/rc2022/">Early bird tickets</a> are now available! First 100 participants per ticket type
+      will get a discount before tickets return to normal price.</p>`,
     tickets: [
       {
         title: 'IN-PERSON',
