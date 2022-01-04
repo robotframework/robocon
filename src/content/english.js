@@ -111,6 +111,14 @@ export default () => ({
         href: 'https://www.copado.com/'
       },
       {
+        img: 'eficode.png',
+        href: 'https://www.copado.com/'
+      },
+      {
+        img: 'knowit.png',
+        href: 'https://www.knowit.fi/'
+      },
+      {
         img: 'northcode.png',
         href: 'https://northcode.fi/'
       },
