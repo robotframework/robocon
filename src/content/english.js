@@ -107,6 +107,10 @@ export default () => ({
         platinum: true
       },
       {
+        img: 'cinia.png',
+        href: 'https://www.cinia.fi/en/'
+      },
+      {
         img: 'copado.png',
         href: 'https://www.copado.com/'
       },

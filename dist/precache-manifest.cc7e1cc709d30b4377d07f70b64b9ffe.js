@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "75e47a3bfaebc7cebd80",
+    "revision": "7d203a10d13fde6d0dce",
     "url": "dist/css/app.0ee03097.css"
   },
   {
@@ -52,6 +52,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/Slack.svg"
   },
   {
+    "revision": "f249f06c58c67fa07b3c13e751d3e9d4",
+    "url": "dist/img/sponsors/cinia.png"
+  },
+  {
     "revision": "d33d2dcf6f2308dfe1ac833c44f006dd",
     "url": "dist/img/sponsors/copado.png"
   },
@@ -88,12 +92,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/vala.png"
   },
   {
-    "revision": "67ccc1fbbfc6bccb31f5ce1432746216",
+    "revision": "1e4a861e4a11eeb8e66ed5c2f5f8cdef",
     "url": "dist/index.html"
   },
   {
-    "revision": "75e47a3bfaebc7cebd80",
-    "url": "dist/js/app.a4b39992.js"
+    "revision": "7d203a10d13fde6d0dce",
+    "url": "dist/js/app.b6666744.js"
   },
   {
     "revision": "bbc81b1e80f683f68975",
