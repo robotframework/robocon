@@ -116,7 +116,7 @@ export default () => ({
       },
       {
         img: 'eficode.png',
-        href: 'https://www.copado.com/'
+        href: 'https://www.eficode.com/'
       },
       {
         img: 'knowit.png',
