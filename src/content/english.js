@@ -1,6 +1,6 @@
 export default () => ({
   langName: 'English',
-  newsBanner: '📣 <a href="/#cfp">Call for Proposals</a> has been extended!',
+  newsBanner: '📣 Schedule coming soon!',
   navbar: {
     items: [
       {
