@@ -7,6 +7,10 @@ export default () => ({
         name: 'Hello',
         id: 'intro'
       },
+      // {
+      //   name: 'Talks',
+      //   id: 'talks'
+      // },
       {
         name: 'Cfp',
         id: 'cfp'
@@ -61,6 +65,10 @@ export default () => ({
         <p>Stay tuned for more information!</p>`
       }
     ]
+  },
+  talks: {
+    title: 'Talks',
+    body: 'Some text here'
   },
   cfp: {
     title: 'CFP',
@@ -117,6 +125,14 @@ export default () => ({
       {
         img: 'eficode.png',
         href: 'https://www.eficode.com/'
+      },
+      {
+        img: 'gofore.png',
+        href: 'https://gofore.com/en/'
+      },
+      {
+        img: 'imbus.png',
+        href: 'https://www.imbus.de/en/'
       },
       {
         img: 'knowit.png',

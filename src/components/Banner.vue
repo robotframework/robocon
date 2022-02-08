@@ -68,7 +68,7 @@ export default {
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: bling 7s infinite;
+    animation: bling 5s infinite;
   }
   @keyframes bling {
     0% {

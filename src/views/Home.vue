@@ -26,6 +26,13 @@
       <sponsors class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
     </page-section>
     <page-section
+      v-if="show"
+      title-id="talks"
+      :title="$t('talks.title')"
+      :body="$t('talks.body')">
+      <talks class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
+    </page-section>
+    <page-section
       title-id="cfp"
       :title="$t('cfp.title')"
       :body="$t('cfp.body')">
@@ -49,11 +56,15 @@ import {
   TabBox,
   NewsBanner,
   Ticket,
-  Sponsors
+  Sponsors,
+  Talks
 } from 'Components'
 
 export default {
   name: 'App',
+  data: () => ({
+    input: ''
+  }),
   components: {
     Banner,
     PageFooter,
@@ -63,7 +74,18 @@ export default {
     TabBox,
     NewsBanner,
     Ticket,
-    Sponsors
+    Sponsors,
+    Talks
+  },
+  computed: {
+    show() {
+      return this.input.includes('nick')
+    }
+  },
+  created() {
+    document.addEventListener('keypress', ({ key }) => {
+      this.input += key
+    })
   }
 }
 </script>
