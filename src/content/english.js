@@ -11,10 +11,10 @@ export default () => ({
       //   name: 'Talks',
       //   id: 'talks'
       // },
-      {
-        name: 'Cfp',
-        id: 'cfp'
-      },
+      // {
+      //   name: 'Cfp',
+      //   id: 'cfp'
+      // },
       {
         name: 'Covid',
         id: 'covid'
@@ -70,16 +70,16 @@ export default () => ({
     title: 'Talks',
     body: 'Some text here'
   },
-  cfp: {
-    title: 'CFP',
-    body: `
-    <p>RoboCon 2022 Call for Proposals is open!</p>
-    <p>We are looking for talk presenters and workshop facilitators. Submissions can be for both
-    in-person and remote (pre-recorded) talks.</p>
-    <p>If you are interested, <a href="https://cfp.robocon.io/robocon-2022" target="_blank">
-    please submit a proposal!</a></p>
-    `
-  },
+  // cfp: {
+  //   title: 'CFP',
+  //   body: `
+  //   <p>RoboCon 2022 Call for Proposals is open!</p>
+  //   <p>We are looking for talk presenters and workshop facilitators. Submissions can be for both
+  //   in-person and remote (pre-recorded) talks.</p>
+  //   <p>If you are interested, <a href="https://cfp.robocon.io/robocon-2022" target="_blank">
+  //   please submit a proposal!</a></p>
+  //   `
+  // },
   covid: {
     title: 'COVID',
     body: `

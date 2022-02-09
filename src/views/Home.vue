@@ -32,11 +32,11 @@
       :body="$t('talks.body')">
       <talks class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
     </page-section>
-    <page-section
+    <!-- <page-section
       title-id="cfp"
       :title="$t('cfp.title')"
       :body="$t('cfp.body')">
-    </page-section>
+    </page-section> -->
     <page-section
       title-id="covid"
       :title="$t('covid.title')"
