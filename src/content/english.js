@@ -166,7 +166,7 @@ export default () => ({
   },
   previousTalks: {
     title: 'Previous Talks',
-    body: '<p>All RoboCon talks over the years have been recorded. Feel free to watch them here!</p>',
+    body: '<p>All RoboCon talks over the years have been recorded. Feel free to watch them here or directly in <a href="https://www.youtube.com/c/RobotFrameworkChannel/playlists">YouTube</a>.</p>',
     talks: [
       {
         year: 2021,
