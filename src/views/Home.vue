@@ -42,6 +42,12 @@
       :title="$t('covid.title')"
       :body="$t('covid.body')">
     </page-section>
+    <page-section
+      title-id="previousTalks"
+      :title="$t('previousTalks.title')"
+      :body="$t('previousTalks.body')">
+      <previous-talks />
+    </page-section>
   </div>
   <page-footer />
 </template>
@@ -57,7 +63,8 @@ import {
   NewsBanner,
   Ticket,
   Sponsors,
-  Talks
+  Talks,
+  PreviousTalks
 } from 'Components'
 
 export default {
@@ -75,7 +82,8 @@ export default {
     NewsBanner,
     Ticket,
     Sponsors,
-    Talks
+    Talks,
+    PreviousTalks
   },
   computed: {
     show() {

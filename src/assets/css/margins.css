@@ -13,9 +13,21 @@
 .m-xsmall {
     margin: var(--size-xsmall);
 }
+.mx-xsmall {
+    margin: 0 var(--size-xsmall);
+}
+.my-xsmall {
+    margin: var(--size-xsmall) 0;
+}
 
 .m-small {
     margin: var(--size-small);
+}
+.mx-small {
+    margin: 0 var(--size-small);
+}
+.my-small {
+    margin: var(--size-small) 0;
 }
 
 .m-medium {

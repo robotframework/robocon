@@ -17,6 +17,12 @@
 .p-small {
     padding: var(--size-small);
 }
+.px-small {
+    padding: 0 var(--size-small);
+}
+.py-small {
+    padding: var(--size-small) 0;
+}
 
 .p-medium {
     padding: var(--size-medium);
