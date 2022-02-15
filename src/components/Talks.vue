@@ -24,13 +24,13 @@
         </div>
         <div class="col-sm-12 col-md-3 col-lg-4">
           <div
-            v-for="speaker in talk.speakers"
-            :key="speaker.code"
+            v-for="{ name, avatar } in talk.speakers"
+            :key="name"
             class="rounded bg-background row mb-small">
             <button class="flex middle speakerButton">
-              <img class="speakerImg" :src="`https://www.placecage.com/${300 + i * 10}/${300 + i * 10}`" />
+              <img class="speakerImg" :src="avatar || `https://www.placecage.com/${300 + i * 10}/${300 + i * 10}`" />
               <h4 class="ml-small color-white">
-                {{ talk.speakers[0].name }}
+                {{ name }}
               </h4>
             </button>
           </div>
@@ -71,7 +71,7 @@ export default {
     }
   },
   created() {
-    fetch('https://pretalx.com/democon/schedule/widget/v2.json')
+    fetch('https://cfp.robocon.io/robocon-2022/schedule/widget/v2.json')
       .then((res) => res.json())
       .then(({ speakers, talks }) => {
         this.speakers = speakers
@@ -101,6 +101,7 @@ export default {
     display: block;
     transition: filter 0.2s;
     border-radius: 0.5rem 0 0 0.5rem;
+    object-fit: cover;
   }
   .speakerButton {
     width: 100%;
