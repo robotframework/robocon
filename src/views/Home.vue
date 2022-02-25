@@ -67,9 +67,6 @@ import {
 
 export default {
   name: 'App',
-  data: () => ({
-    input: ''
-  }),
   components: {
     Banner,
     PageFooter,
@@ -82,16 +79,6 @@ export default {
     Sponsors,
     Talks,
     PreviousTalks
-  },
-  computed: {
-    show() {
-      return this.input.includes('nick')
-    }
-  },
-  created() {
-    document.addEventListener('keypress', ({ key }) => {
-      this.input += key
-    })
   }
 }
 </script>
