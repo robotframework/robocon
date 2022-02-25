@@ -1,6 +1,6 @@
 export default () => ({
   langName: 'English',
-  newsBanner: '📣 Schedule coming soon!',
+  newsBanner: '<a href="/#talks">📣 Talks released!</a>',
   navbar: {
     items: [
       {
@@ -15,6 +15,10 @@ export default () => ({
       //   name: 'Cfp',
       //   id: 'cfp'
       // },
+      {
+        name: 'Talks',
+        id: 'talks'
+      },
       {
         name: 'Covid',
         id: 'covid'
@@ -31,18 +35,15 @@ export default () => ({
       `<p>RoboCon 2022 planning is underway!</p>
       <p>This year we'll be returning to an in-person conference while also
       streaming live worldwide. That way everyone has a chance to participate.</p>
-      <p>The main conference is held <span class="color-theme">19-20 May 2022</span>, while workshops are on 17th and sprints 18th.</p>
-      <h3 class="mt-large">Tickets</h3>
-      <p><a href="https://tickets.robotframework.org/rc2022/">Early bird tickets</a> are now available! First 100 participants per ticket type
-      will get a discount before tickets return to normal price.</p>`,
+      <p>The main conference is held <span class="color-theme">19-20 May 2022</span>, while workshops are on 17th and sprints 18th.</p>`,
     tickets: [
       {
         title: 'IN-PERSON',
-        price: '<del class="disabled type-small">900€</del> 600€'
+        price: '900€'
       },
       {
         title: 'ONLINE',
-        price: '<del class="disabled type-small">200€</del> 100€'
+        price: '200€'
       }
     ],
     tabs: [
@@ -71,19 +72,8 @@ export default () => ({
     ]
   },
   talks: {
-    title: 'Talks',
-    body: 'Some text here'
+    title: 'Talks'
   },
-  // cfp: {
-  //   title: 'CFP',
-  //   body: `
-  //   <p>RoboCon 2022 Call for Proposals is open!</p>
-  //   <p>We are looking for talk presenters and workshop facilitators. Submissions can be for both
-  //   in-person and remote (pre-recorded) talks.</p>
-  //   <p>If you are interested, <a href="https://cfp.robocon.io/robocon-2022" target="_blank">
-  //   please submit a proposal!</a></p>
-  //   `
-  // },
   covid: {
     title: 'COVID',
     body: `

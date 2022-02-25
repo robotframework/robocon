@@ -26,11 +26,9 @@
       <sponsors class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
     </page-section>
     <page-section
-      v-if="show"
       title-id="talks"
-      :title="$t('talks.title')"
-      :body="$t('talks.body')">
-      <talks class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
+      :title="$t('talks.title')">
+      <talks class="col-sm-12 col-lg-9" />
     </page-section>
     <!-- <page-section
       title-id="cfp"

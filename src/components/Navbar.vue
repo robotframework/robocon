@@ -104,8 +104,8 @@ export default {
   }
   .tiny-logo-container > img {
     margin-top: 0.05rem;
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
   }
   .dropdown-container {
     position: absolute;

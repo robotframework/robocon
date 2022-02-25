@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "dist/precache-manifest.da3c98774a49b9e8f000bf143630efb1.js"
+  "dist/precache-manifest.1d0326a475eec26487220fa973299df1.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "robot-framework"});
