@@ -22,7 +22,7 @@
             v-if="talk.abstract"
             class="mt-medium"
             v-html="parseMarkdown(talk.abstract)" />
-          <button v-if="talk.abstract && !talk.expanded" class="color-theme" @click="talks.find(({ code }) => code === talk.code).expanded = true">
+          <button v-if="talk.abstract && !talk.expanded" class="color-theme" @click="talks.find(({ code }) => code === talk.code).expanded = true; sendEvent('Open Talk', talk.title)">
             Read more
           </button>
           <transition name="fade">
@@ -37,7 +37,7 @@
             v-for="{ code, expanded, avatar } in talk.speakers"
             :key="code"
             class="rounded bg-background row mb-small">
-            <button class="flex middle speakerButton" @click="talks.find((talkData) => talkData.code === talk.code).speakers.find((speaker) => speaker.code === code).expanded = !expanded">
+            <button class="flex middle speakerButton" @click="talks.find((talkData) => talkData.code === talk.code).speakers.find((speaker) => speaker.code === code).expanded = !expanded; sendEvent('Open Bio', getSpeaker(code)['public_name'])">
               <img v-if="avatar" class="speakerImg rounded" :src="avatar || ''" :class="expanded ? 'm-small mr-none' : ''" />
               <div v-else class="speakerImg rounded" />
               <h4 class="ml-small" :class="expanded ? 'color-theme' : 'color-white'">
@@ -121,6 +121,9 @@ export default {
     },
     getSpeaker(code) {
       return this.speakers.find((speaker) => speaker.code === code)
+    },
+    sendEvent(event, value) {
+      window.plausible(event, { props: { value } })
     }
   }
 }
