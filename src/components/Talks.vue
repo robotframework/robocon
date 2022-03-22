@@ -101,9 +101,9 @@ export default {
           .then((res) => res.json())
           .then(({ schedule }) => {
             const talks = schedule.conference.days
-              .flatMap(({ rooms }) => rooms['Main Hall'])
+              .flatMap(({ rooms }) => (('Main Hall' in rooms) ? rooms['Main Hall'] : []))
             this.speakers = schedule.conference.days
-              .flatMap(({ rooms }) => rooms['Main Hall']
+              .flatMap(({ rooms }) => (('Main Hall' in rooms) ? rooms['Main Hall'] : [])
                 .flatMap(({ persons }) => persons))
               .filter(({ code }, index, self) => self.map(({ code }) => code).indexOf(code) === index)
             this.talks.forEach((talk) => {
