@@ -30,6 +30,16 @@
       :title="$t('talks.title')">
       <talks class="col-sm-12 col-lg-9" />
     </page-section>
+    <page-section
+      title-id="workshops"
+      :title="$t('workshops.title')"
+      :body="$t('workshops.description')">
+    </page-section>
+    <page-section
+      title-id="sprints"
+      :title="$t('sprints.title')"
+      :body="$t('sprints.description')">
+    </page-section>
     <!-- <page-section
       title-id="cfp"
       :title="$t('cfp.title')"

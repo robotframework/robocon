@@ -4,20 +4,16 @@ export default () => ({
   navbar: {
     items: [
       {
-        name: 'Hello',
-        id: 'intro'
-      },
-      // {
-      //   name: 'Talks',
-      //   id: 'talks'
-      // },
-      // {
-      //   name: 'Cfp',
-      //   id: 'cfp'
-      // },
-      {
         name: 'Talks',
         id: 'talks'
+      },
+      {
+        name: 'Workshops',
+        id: 'workshops'
+      },
+      {
+        name: 'Sprints',
+        id: 'sprints'
       },
       {
         name: 'Covid',
@@ -31,11 +27,15 @@ export default () => ({
   },
   intro: {
     title: 'Hello',
-    body:
-      `<p>RoboCon 2022 planning is underway!</p>
+    body: `
+      <p>RoboCon 2022 is coming!</p>
       <p>This year we'll be returning to an in-person conference while also
       streaming live worldwide. That way everyone has a chance to participate.</p>
-      <p>The main conference is held <span class="color-theme">19-20 May 2022</span>, while workshops are on 17th and sprints 18th.</p>`,
+      <p>The main conference is held <span class="color-theme">19-20 May 2022</span>.</p>
+      <p>Before the conference we have <a href="/#sprints">development sprints</a> on Wednesday 18th. There you'll have an excellent
+      chance to participate in Robot Framework development!</p>
+      <p><a href="/#workshops">Workshops</a> will be held on Tuesday 17th. Program and and tickets are available soon!</p>
+    `,
     tickets: [
       {
         title: 'IN-PERSON',
@@ -58,7 +58,16 @@ export default () => ({
         please see the section about COVID below.</p>
         <p>In addition to catering and bar there'll be fun activities between the talks,
         which are revealed at a later date.</p>
-        <p>And yes, there will be an after party!</p>`
+        <p>And yes, there will be an after party!</p>
+        <h3>Hotel deals</h3>
+        <p>If you are wondering where to stay during RoboCon 2022 (16.-21.5.2022),
+        you can use a reservation code <span class="color-theme">BROBOCON2022</span> for
+        <a href="https://www.sokoshotels.fi/en/helsinki/sokos-hotel-vaakuna" target="_blank">Sokos Hotel Vaakuna</a>:
+        <ul>
+        <li>Standard Room for 1 person 159€ per night</li>
+        <li>Standard Room for 2 persons 179€ per night</li>
+        </ul>
+        The code should be entered in the <i>reservation code</i> input that is in the <i>reservation codes</i> section.</p>`
       },
       {
         name: 'Online',
@@ -153,6 +162,33 @@ export default () => ({
         href: 'https://www.valagroup.com/fi/'
       }
     ]
+  },
+  workshops: {
+    title: 'Workshops',
+    description: 'Workshops program and tickets available soon!'
+  },
+  sprints: {
+    title: 'Sprints',
+    description: `
+      <p>Before the conference we have development sprints on Wednesday
+      starting at 10am - 5pm.</p>
+
+      <p>Sprints are for you if you want to contribute to
+      some existing project in the Robot Framework ecosystem, have a project
+      or project idea you'd like to work on with others, or just want to
+      meet with other Robot Framework users and developers.</p>
+
+      <p>Lunch and beverages are available and sauna will be warm afterwards!</p>
+
+      <p>Sprints are organized by Eficode at their office located in the
+      Helsinki city centre.</p>
+
+      <p>For conference participants no registration is
+      needed and your conference badge works as an ID.</p>
+
+      <p>If you cannot join the conference but would still like to participate sprints, please
+      send an email to <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a>.</p>
+    `
   },
   previousTalks: {
     title: 'Previous Talks',
