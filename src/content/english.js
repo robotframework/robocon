@@ -187,7 +187,7 @@ export default () => ({
       needed and your conference badge works as an ID.</p>
 
       <p>If you cannot join the conference but would still like to participate sprints, please
-      send an email to <a href="mailto:info@robocon.io">info@robocon.io</a>.</p>
+      send an email to <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a>.</p>
     `
   },
   previousTalks: {
