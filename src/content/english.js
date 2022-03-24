@@ -170,24 +170,22 @@ export default () => ({
   sprints: {
     title: 'Sprints',
     description: `
-      <p>Before the conference we have development sprints on Wednesday
-      starting at 10am - 5pm.</p>
+      <p>Before the conference we have development sprints on Wednesday 18th
+      at 10am - 5pm.</p>
 
       <p>Sprints are for you if you want to contribute to
       some existing project in the Robot Framework ecosystem, have a project
       or project idea you'd like to work on with others, or just want to
       meet with other Robot Framework users and developers.</p>
 
-      <p>Lunch and beverages are available and sauna will be warm afterwards!</p>
+      <p>To discuss development ideas beforehand, please join <a href="https://rf-invite.herokuapp.com/">Robot Framework's Slack</a> and come say hi at the channel #sprints!</p>
 
-      <p>Sprints are organized by Eficode at their office located in the
-      Helsinki city centre.</p>
+      <p>Sprints are organized by <a href="https://www.eficode.com/">Eficode</a> at their office located in the
+      Helsinki city centre. Lunch and beverages are available and sauna will be warm afterwards!</p>
 
-      <p>For conference participants no registration is
-      needed and your conference badge works as an ID.</p>
-
-      <p>If you cannot join the conference but would still like to participate sprints, please
-      send an email to <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a>.</p>
+      <p>If you are willing to join the sprints, please
+      send an email to <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a> so we can reserve
+      the right amount of food. Make sure to mention your dietary restrictions, should you have any!</p>
     `
   },
   previousTalks: {
