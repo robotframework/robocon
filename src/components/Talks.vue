@@ -37,11 +37,11 @@
             v-for="{ code, expanded, avatar } in talk.speakers"
             :key="code"
             class="rounded bg-background row mb-small">
-            <button class="flex middle speakerButton" @click="talks.find((talkData) => talkData.code === talk.code).speakers.find((speaker) => speaker.code === code).expanded = !expanded; sendEvent('Open Bio', getSpeaker(code)['public_name'])">
+            <button class="flex middle speakerButton" @click="talks.find((talkData) => talkData.code === talk.code).speakers.find((speaker) => speaker.code === code).expanded = !expanded; sendEvent('Open Bio', getSpeaker(code) ? getSpeaker(code)['public_name'] : '-')">
               <img v-if="avatar" class="speakerImg rounded" :src="avatar || ''" :class="expanded ? 'm-small mr-none' : ''" />
               <div v-else class="speakerImg rounded" />
               <h4 class="ml-small" :class="expanded ? 'color-theme' : 'color-white'">
-                {{ getSpeaker(code)['public_name'] }}
+                {{ getSpeaker(code) ? getSpeaker(code)['public_name'] : '-' }}
               </h4>
             </button>
             <transition :name="expanded ? 'fade' : ''">
@@ -86,6 +86,7 @@ export default {
       .then((res) => res.json())
       .then(({ talks, speakers }) => {
         this.talks = talks
+          .filter(({ room }) => room === 1193)
           .map((talk) => ({
             ...talk,
             expanded: false,
