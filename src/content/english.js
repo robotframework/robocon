@@ -164,8 +164,7 @@ export default () => ({
     ]
   },
   workshops: {
-    title: 'Workshops',
-    description: 'Workshops program and tickets available soon!'
+    title: 'Workshops'
   },
   sprints: {
     title: 'Sprints',
