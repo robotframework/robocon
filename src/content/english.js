@@ -182,9 +182,7 @@ export default () => ({
       <p>Sprints are organized by <a href="https://www.eficode.com/">Eficode</a> at their office located in the
       Helsinki city centre. Lunch and beverages are available and sauna will be warm afterwards!</p>
 
-      <p>If you are willing to join the sprints, please
-      send an email to <a href="mailto:info{at}{'@'}{at}robocon.io">info{at}{'@'}{at}robocon.io</a> so we can reserve
-      the right amount of food. Make sure to mention your dietary restrictions, should you have any!</p>
+      <p>If you are willing to join the sprints, please <a href="https://tickets.robotframework.org/rc2022-Sprints/">enroll here</a> so we can reserve the right amount of food. Make sure to mention your dietary restrictions, should you have any!</p>
     `
   },
   previousTalks: {

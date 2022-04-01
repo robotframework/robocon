@@ -1,7 +1,8 @@
 const path = require('path')
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'test' ? './test' : './dist',
+  publicPath: process.env.NODE_ENV === 'test' ?
+  './test' : process.env.NODE_ENV === 'production' ? './dist/' : './',
 	outputDir: process.env.NODE_ENV === 'test' ? 'test' : 'dist',
 	indexPath: process.env.NODE_ENV === 'test' ? '../test.html' : '../index.html',
   productionSourceMap: false,
