@@ -1,12 +1,8 @@
 export default () => ({
   langName: 'English',
-  newsBanner: '<a href="/#talks">📣 Talks released!</a>',
+  newsBanner: '<a href="/#workshops">📣 Workshops released!</a>',
   navbar: {
     items: [
-      {
-        name: 'Talks',
-        id: 'talks'
-      },
       {
         name: 'Workshops',
         id: 'workshops'
@@ -14,6 +10,10 @@ export default () => ({
       {
         name: 'Sprints',
         id: 'sprints'
+      },
+      {
+        name: 'Talks',
+        id: 'talks'
       },
       {
         name: 'Covid',
@@ -31,21 +31,43 @@ export default () => ({
       <p>RoboCon 2022 is coming!</p>
       <p>This year we'll be returning to an in-person conference while also
       streaming live worldwide. That way everyone has a chance to participate.</p>
-      <p>The main conference is held <span class="color-theme">19-20 May 2022</span>.</p>
-      <p>Before the conference we have <a href="/#sprints">development sprints</a> on Wednesday 18th. There you'll have an excellent
-      chance to participate in Robot Framework development!</p>
-      <p><a href="/#workshops">Workshops</a> will be held on Tuesday 17th. Program and and tickets are available soon!</p>
     `,
-    tickets: [
+    timeline: [
       {
-        title: 'IN-PERSON',
-        price: '900€'
+        date: '17th May',
+        title: 'Workshops',
+        description: 'Join a hands-on workshop in Helsinki to boost your testing skills. There are topics for both beginners and advanced users!',
+        buttonText: 'Browse workshops',
+        href: '/#workshops'
       },
       {
-        title: 'ONLINE',
-        price: '200€'
+        date: '18th May',
+        title: 'Sprints',
+        description: 'Help Robot Framework development for a day in great company. Includes lunch and after sprint sauna. Participation is free for everyone!',
+        buttonText: 'Join sprints',
+        href: '/#sprints'
+      },
+      {
+        date: '19-20th May',
+        title: 'Main conference',
+        description: '28 talks in two days. Topics ranging from latest insights by testing experts to a keynote about our brains and learning, held by a cognitive neuroscientist!',
+        buttonText: 'Explore talks',
+        href: '/#talks'
       }
     ],
+    tickets: {
+      title: 'Main conference tickets',
+      list: [
+        {
+          title: 'IN-PERSON',
+          price: '900€'
+        },
+        {
+          title: 'ONLINE',
+          price: '200€'
+        }
+      ]
+    },
     tabs: [
       {
         name: 'In-Person',
@@ -53,7 +75,7 @@ export default () => ({
         <p>Robocon's in-person part is held in <span class="color-theme">Helsinki, Finland,</span>
         the home country of Robot Framework.</p>
         <p>The venue will be once again <span class="color-theme">Bio Rex</span>, which can safely accomodate 250 people.
-        It is located just a few minutes' walk from the main railway station of Helsinki.</p>
+        It is located just <a href="https://goo.gl/maps/ycbXm2GcBvb89S5w7">a few minutes' walk from the main railway station of Helsinki</a>.</p>
         <p>A valid certificate of COVID vaccination is required and will be requested at entrance. For more information,
         please see the section about COVID below.</p>
         <p>In addition to catering and bar there'll be fun activities between the talks,
@@ -164,7 +186,8 @@ export default () => ({
     ]
   },
   workshops: {
-    title: 'Workshops'
+    title: 'Workshops',
+    description: '<p>Workshops will be held in Helsinki. Due to their intensive nature they can only be attended in-person.</p>'
   },
   sprints: {
     title: 'Sprints',

@@ -5,13 +5,31 @@
 .p-3xsmall {
     padding: var(--size-3xsmall);
 }
+.px-3xsmall {
+    padding: 0 var(--size-3xsmall);
+}
+.py-3xsmall {
+    padding: var(--size-3xsmall) 0;
+}
 
 .p-2xsmall {
     padding: var(--size-2xsmall);
 }
+.px-2xsmall {
+    padding: 0 var(--size-2xsmall);
+}
+.py-2xsmall {
+    padding: var(--size-2xsmall) 0;
+}
 
 .p-xsmall {
     padding: var(--size-xsmall);
+}
+.px-xsmall {
+    padding: 0 var(--size-xsmall);
+}
+.py-xsmall {
+    padding: var(--size-xsmall) 0;
 }
 
 .p-small {

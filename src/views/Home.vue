@@ -3,27 +3,46 @@
   <banner />
   <navbar class="nav-desktop" />
   <news-banner
-    v-if="$te('newsBanner') && $t('newsBanner') !== ''"
+    v-if="$te('newsBanner') && $t('newsBanner') !== '' && loaded"
     class="mb-small mt-small" />
   <div v-else class="mb-xlarge" />
   <div class="container mb-xlarge">
     <page-section
       title-id="intro"
       :title="$t('intro.title')"
-      :poll="true"
       :body="$t('intro.body')">
       <div class="col-sm-12 col-lg-9 col-lg-offset-3 row center">
+        <timeline />
+        <div class="col-sm-12 type-center mb-xsmall mt-large">
+          <h3>{{ $t('intro.tickets.title') }}</h3>
+        </div>
         <ticket
-          v-for="ticket in $tm('intro.tickets')"
+          v-for="ticket in $tm('intro.tickets.list')"
           :key="ticket.title"
           class="mr-medium mb-large"
           :ticket="ticket" />
       </div>
       <tab-box
-        class="col-sm-12 col-lg-9 col-lg-offset-3"
+        class="col-sm-12 col-lg-9 col-lg-offset-3 mt-small"
         section-id="intro"
         :tabs="$tm('intro.tabs')" />
       <sponsors class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
+    </page-section>
+    <page-section
+      title-id="workshops"
+      :title="$t('workshops.title')"
+      :body="$t('workshops.description')">
+      <talks
+        v-if="loaded"
+        :talks="workshops"
+        :speakers="workshopSpeakers"
+        :talks-with-pictures="talks"
+        class="col-sm-12 col-lg-9 col-lg-offset-3" />
+    </page-section>
+    <page-section
+      title-id="sprints"
+      :title="$t('sprints.title')"
+      :body="$t('sprints.description')">
     </page-section>
     <page-section
       title-id="talks"
@@ -32,22 +51,8 @@
         v-if="loaded"
         :talks="talks"
         :speakers="speakers"
+        header-link="https://tickets.robotframework.org/rc2022/"
         class="col-sm-12 col-lg-9" />
-    </page-section>
-    <page-section
-      title-id="workshops"
-      :title="$t('workshops.title')">
-      <talks
-        v-if="loaded"
-        :talks="workshops"
-        :speakers="workshopSpeakers"
-        :talks-with-pictures="talks"
-        class="col-sm-12 col-lg-9" />
-    </page-section>
-    <page-section
-      title-id="sprints"
-      :title="$t('sprints.title')"
-      :body="$t('sprints.description')">
     </page-section>
     <!-- <page-section
       title-id="cfp"
@@ -81,7 +86,8 @@ import {
   Ticket,
   Sponsors,
   Talks,
-  PreviousTalks
+  PreviousTalks,
+  Timeline
 } from 'Components'
 
 export default {
@@ -97,7 +103,8 @@ export default {
     Ticket,
     Sponsors,
     Talks,
-    PreviousTalks
+    PreviousTalks,
+    Timeline
   },
   data: () => ({
     talks: [],

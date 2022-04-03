@@ -9,6 +9,7 @@ import Sponsors from './Sponsors.vue'
 import Ticket from './Ticket.vue'
 import Talks from './Talks.vue'
 import PreviousTalks from './PreviousTalks.vue'
+import Timeline from './Timeline.vue'
 
 import GlobeIcon from './icons/GlobeIcon.vue'
 import ChevronIcon from './icons/ChevronIcon.vue'
@@ -26,6 +27,7 @@ export {
   Ticket,
   Talks,
   PreviousTalks,
+  Timeline,
 
   GlobeIcon,
   ChevronIcon,

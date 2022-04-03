@@ -19,7 +19,8 @@
     <transition name="opacity">
       <div
         v-if="navSticky"
-        class="tiny-logo-container">
+        class="tiny-logo-container cursor-pointer"
+        @click="scrollTop">
         <img :src="`${publicPath}img/RF-white.svg`" />
       </div>
     </transition>
@@ -62,6 +63,12 @@ export default {
     onClick(ev) {
       // close link dropdown if clicked outside
       if (this.linkDropdownOpen && this.$refs.dropdown && !this.$refs.dropdown.contains(ev.target)) this.linkDropdownOpen = false
+    },
+    scrollTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
     }
   },
   mounted() {
