@@ -3,10 +3,10 @@
     <div
       class="font-title slogans"
       :class="[
-        doTheBling ? 'bling' : '',
+        animationsDone ? 'bling' : '',
         $store.state.isMobile ? 'flex between ml-small mt-large mb-medium' : 'col-sm-12 row center mt-large']">
       <transition appear name="fade-right">
-        <div class="mr-xlarge" style="transition-delay: 1.25s;">
+        <div class="mr-xlarge" :style="animationsDone ? 'transition-delay: 0;' : 'transition-delay: 1.25s;'">
           THE 5th ANNUAL<br>
           ROBOT FRAMEWORK<br>
           CONFERENCE
@@ -15,14 +15,14 @@
       <transition appear name="fade-right">
         <div
           :class="$store.state.isMobile ? 'type-right' : 'type-center mr-xlarge'"
-          style="transition-delay: 1.75s;">
+          :style="animationsDone ? 'transition-delay: 0;' : 'transition-delay: 1.75s;'">
           A GLOBAL HYBRID<br>
           SOFTWARE AUTOMATION<br>
           EVENT
         </div>
       </transition>
       <transition appear name="fade-right">
-        <div class="type-right" style="transition-delay: 2.25s;" v-if="!$store.state.isMobile">
+        <div class="type-right" :style="animationsDone ? 'transition-delay: 0;' : 'transition-delay: 2.25s;'" v-if="!$store.state.isMobile">
           19-20th<br>
           MAY 2022<br>
           UTC+2
@@ -30,12 +30,12 @@
       </transition>
     </div>
     <transition appear name="opacity-slow">
-      <div class="col-sm-12 type-center mt-large" style="transition-delay: 0.5s;">
-        <h1>RBCN22</h1>
+      <div class="col-sm-12 type-center mt-large" :style="animationsDone ? 'transition-delay: 0;' : 'transition-delay: 0.5s;'">
+        <h1><span class="glow-white">RBCN</span>22</h1>
       </div>
     </transition>
     <transition appear name="fade-right">
-      <div class="col-sm-12 type-center font-title mb-large mt-medium" style="transition-delay: 2.25s;" v-if="$store.state.isMobile">
+      <div class="col-sm-12 type-center font-title mb-large mt-medium" :style="animationsDone ? 'transition-delay: 0;' : 'transition-delay: 2.25s;'" v-if="$store.state.isMobile">
         19-20th MAY 2022
       </div>
     </transition>
@@ -46,14 +46,14 @@
 export default {
   name: 'Banner',
   data: () => ({
-    doTheBling: false,
+    animationsDone: false,
     publicPath: process.env.BASE_URL
   }),
   mounted() {
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
     // text gradients are just too painful to get working on Safari :(
     if (isSafari) return
-    setTimeout(() => { this.doTheBling = true }, 3100)
+    setTimeout(() => { this.animationsDone = true }, 3100)
   }
 }
 </script>
@@ -107,5 +107,12 @@ export default {
     h1 {
       font-size: 27vw !important;
     }
+  }
+  .glow-white {
+    text-shadow:
+      0 0 0.5rem #fff,
+      0 0 1rem #fff,
+      0 0 2rem #fff,
+      0 0 4rem #fff;
   }
 </style>

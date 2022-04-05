@@ -8,16 +8,14 @@
     right: 0;
     bottom: 0;
     left: 0;
-    border: solid 1.5px #fff;
+    border: solid 1.5px #ffccf2;
     border-radius: var(--border-radius-rounded);
     filter: drop-shadow(
         0 0 3px #fe4bd2);
+    pointer-events: none;
 }
-.card.sharp {
-    border-radius: 0;
-}
-.card > div, .card > button, .card > a {
-    z-index: 2;
+.card.sharper::before {
+    border-radius: var(--border-radius-rounded-small);
 }
 
 .rounded {
@@ -73,7 +71,7 @@ button.theme, button.stroke {
     font-family: var(--font-title);
     padding: var(--size-2xsmall) var(--size-small);
     text-transform: uppercase;
-    transition: 0.1s color, background-color 0.1s, box-shadow 0.1s, border-color 0.1s;
+    transition: 0.2s color, background-color 0.2s, border-color 0.2s;
 }
 button.theme:hover {
     color: var(--color-theme);

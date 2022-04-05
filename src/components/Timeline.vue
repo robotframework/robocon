@@ -3,8 +3,8 @@
     <div
       v-for="(item, i) in $tm('intro.timeline')"
       :key="i"
-      class="col-sm-12 col-md-4 row"
-      :class="$store.state.isMobile ? 'py-small' : (i === 0 ? 'pl-none' : i === 2 ? 'pr-none' : 'pl-small pr-small')">
+      class="col-sm-12 col-md-4 row px-xsmall"
+      :class="$store.state.isMobile ? 'py-small' : (i === 0 ? 'pl-none' : i === 2 ? 'pr-none' : 'pl-2xsmall pr-2xsmall')">
       <div class="card flex flex-col between middle p-medium" style="height: 100%;">
         <div>
           <div class="col-sm-12 type-small">
@@ -13,7 +13,7 @@
           <div class="col-sm-12">
             <h3>{{ item.title }}</h3>
           </div>
-          <div class="col-sm-12 mt-small">
+          <div class="col-sm-12 mt-small type-small">
             {{ item.description }}
           </div>
         </div>

@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "5e2b725ec81ed93e17d5",
-    "url": "dist/css/app.de6707c5.css"
+    "revision": "e98a0e76d395d06440e5",
+    "url": "dist/css/app.f0ff565f.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -100,16 +100,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/vala.png"
   },
   {
-    "revision": "ee0471f56b08985266572a6734706ffd",
+    "revision": "385b95235f73926f8acd76535d2e3b38",
     "url": "dist/index.html"
   },
   {
-    "revision": "5e2b725ec81ed93e17d5",
-    "url": "dist/js/app.49ee5e79.js"
+    "revision": "e98a0e76d395d06440e5",
+    "url": "dist/js/app.cd940e0f.js"
   },
   {
-    "revision": "ebf237a7afb92cdb624c",
-    "url": "dist/js/chunk-vendors.0214f1eb.js"
+    "revision": "9854925d9f215e20f252",
+    "url": "dist/js/chunk-vendors.dac9bd54.js"
   },
   {
     "revision": "ae69c76f0db87375aa82706bd2ce675f",

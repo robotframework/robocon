@@ -45,18 +45,17 @@ h1, h2 {
     line-height: var(--line-height-headers);
     color: #fff;
     text-shadow:
-      0 0 7px #fff,
-      0 0 21px #fff,
-      0 0 42px #fe4bd2,
-      0 0 82px #fe4bd2,
-      0 0 92px #fe4bd2;
+      0 0 0.5rem #fff,
+      0 0 1rem #fff,
+      0 0 2rem #fe4bd2,
+      0 0 4rem #fe4bd2;
 }
 h2 {
     color: #ffe8f9;
     text-shadow:
-      0 0 7px #fff,
-      0 0 30px #fe4bd2,
-      0 0 60px #fe4bd2;
+      0 0 0.5rem #fff,
+      0 0 1rem #fe4bd2,
+      0 0 2rem #fe4bd2;
 }
 h3, h4 {
     font-family: var(--font-title);
@@ -84,7 +83,7 @@ h2 {
 }
 
 h3 {
-    font-size: var(--type-large);
+    font-size: var(--type-body);
     color: var(--color-theme);
     font-weight: var(--weight-semi-bold);
     margin-bottom: var(--size-3xsmall);

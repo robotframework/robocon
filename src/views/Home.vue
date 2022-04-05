@@ -36,7 +36,7 @@
         v-if="loaded"
         :talks="workshops"
         :speakers="workshopSpeakers"
-        :talks-with-pictures="talks" />
+        :talks-with-pictures="workshopImages" />
     </page-section>
     <page-section
       title-id="sprints"
@@ -109,6 +109,7 @@ export default {
     workshops: [],
     speakers: [],
     workshopSpeakers: [],
+    workshopImages: [],
     workshopLinks: [
       { id: 16882, link: 'https://tickets.robotframework.org/workshops-rc2022/3191186/' },
       { id: 13758, link: 'https://tickets.robotframework.org/workshops-rc2022/3191184/' },
@@ -134,6 +135,7 @@ export default {
               expanded: false
             })) : []
           }))
+        this.workshopImages = speakers
       })
       .then(() => {
         fetch('https://pretalx.com/robocon-2022/schedule/export/schedule.json')

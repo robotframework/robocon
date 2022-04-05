@@ -4,7 +4,7 @@
       v-for="({ date, talks }) in talksByDate"
       :key="date"
       class="mb-xlarge">
-      <h3 class="dateTitle mt-large mb-2xsmall type-small py-2xsmall">
+      <h3 class="dateTitle mt-large mb-2xsmall type-small py-2xsmall color-white">
         <div class="pl-medium">
           {{ format(new Date(date), 'MMM dd') }}
           <span v-if="headerLink !== ''">
@@ -26,11 +26,11 @@
             <div v-else>
               start: {{ format(new Date(talk.start), 'HH:mm') }} - {{ Number(talk.duration.split(':')[0]) }} hrs
             </div>
-            <h3>
+            <h3 :id="slugify(talk.title.en || talk.title)" class="talkTitle">
               {{ talk.title.en || talk.title }}
             </h3>
-            <button v-if="talk.ticketLink" class="theme small mt-small p-xsmall pt-2xsmall pb-2xsmall" style="width: fit-content;">
-              <a class="type-no-underline type-small" :href="talk.ticketLink" target="_blank">
+            <button v-if="talk.ticketLink" class="theme small ticket" style="width: fit-content;">
+              <a class="type-no-underline type-small color-white" :href="talk.ticketLink" target="_blank">
                 Tickets
               </a>
             </button>
@@ -38,7 +38,10 @@
               v-if="talk.abstract"
               class="mt-medium"
               v-html="parseMarkdown(talk.abstract)" />
-            <button v-if="talk.abstract && !expandedTalks.includes(talk.code || talk.id)" class="color-theme" @click="expandedTalks.push(talk.code || talk.id); sendEvent('Open Talk', talk.title)">
+            <button
+              v-if="talk.abstract && !expandedTalks.includes(talk.code || talk.id)"
+              class="color-theme"
+              @click="openTalk(talk)">
               Read more
             </button>
             <transition name="fade">
@@ -52,10 +55,10 @@
             <div
               v-for="{ code, avatar, public_name } in talk.speakers"
               :key="code"
-              class="rounded-small border-white border-thin row mb-small">
+              class="card sharper bg-black rounded-small row mb-small" style="overflow: hidden;">
               <button class="flex middle speakerButton" @click="expandedSpeakers.includes(`${code}${talk.code}`) ? expandedSpeakers = expandedSpeakers.filter((codeInner) => codeInner !== `${code}${talk.code}`) : expandedSpeakers.push(`${code}${talk.code}`); sendEvent('Open Bio', getSpeaker(code) ? getSpeaker(code)['public_name'] : '-')">
-                <img v-if="avatar" class="speakerImg rounded-small" :src="avatar || ''" :class="expandedSpeakers.includes(`${code}${talk.code}`) ? 'm-small mr-none' : ''" />
-                <img v-else-if="talksWithPictures && getWorkshopImg(public_name)" class="speakerImg rounded-small" :src="getWorkshopImg(public_name) || ''" :class="expandedSpeakers.includes(`${code}${talk.code}`) ? 'm-small mr-none' : ''" />
+                <img v-if="avatar" class="speakerImg rounded-small" :src="avatar || ''" :class="expandedSpeakers.includes(`${code}${talk.code}`) ? 'opened' : ''" />
+                <img v-else-if="talksWithPictures && getWorkshopImg(public_name)" class="speakerImg rounded-small" :src="getWorkshopImg(public_name) || ''" :class="expandedSpeakers.includes(`${code}${talk.code}`) ? 'opened' : ''" />
                 <div v-else class="speakerImg rounded-small" />
                 <h4 class="ml-small" :class="expandedSpeakers.includes(`${code}${talk.code}`) ? 'color-theme' : 'color-white'">
                   {{ getSpeaker(code) ? getSpeaker(code)['public_name'] : '-' }}
@@ -116,8 +119,24 @@ export default {
         }))
     }
   },
+  mounted() {
+    const param = new URLSearchParams(window.location.search)
+    const talkName = param.get('talk')
+    if (!talkName) return
+    console.log(talkName)
+    const talk = this.talks.find(({ title }) => talkName === this.slugify(title.en || title))
+    if (!talk) return
+    this.openTalk(talk)
+    const element = document.getElementById(talkName)
+    const elementPosition = element.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.pageYOffset - 150
+    window.scrollTo({ top: offsetPosition })
+  },
   methods: {
     format,
+    slugify(str) {
+      return str.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+    },
     parseMarkdown(text) {
       return marked.parse(text)
     },
@@ -130,10 +149,15 @@ export default {
     getWorkshopImg(name) {
       // hacking three different models of speakers together is 5/5
       const speaker = this.talksWithPictures
-        .flatMap(({ speakers }) => speakers)
         .find((speaker) => speaker.name === name)
       if (speaker) return speaker.avatar
       return null
+    },
+    openTalk(talk) {
+      this.expandedTalks.push(talk.code || talk.id)
+      this.sendEvent('Open Talk', talk.title)
+      const newUrl = `${window.location.href.split('?')[0].split('#')[0]}?talk=${this.slugify(talk.title)}`
+      history.replaceState(null, null, newUrl)
     }
   }
 }
@@ -144,7 +168,7 @@ export default {
     position: sticky;
     top: 3.35rem;
     margin-right: -1rem;
-    background-color: rgb(26, 26, 26);
+    background-color: #111;
     width: 99%;
     transform: scaleX(1.05);
     z-index: 7;
@@ -158,9 +182,14 @@ export default {
   .speakerImg {
     width: 4rem;
     height: 4rem;
+    margin: 1px;
     display: block;
     transition: filter 0.2s, margin 0.2s;
     object-fit: cover;
+  }
+  .speakerImg.opened {
+    margin: 1rem;
+    margin-right: 0;
   }
   .speakerButton {
     width: 100%;
@@ -188,11 +217,10 @@ export default {
   .description >>> h1, .description >>> h2 {
     font-size: 1rem;
   }
-  .ticket {
-    transition: transform 0.15s;
-    background-color: rgba(255, 255, 255, 0.05);
+  .ticket > a {
+    transition: color 0.2s;
   }
-  .ticket:hover {
-    transform: scale(1.05);
+  .ticket:hover > a {
+    color: var(--color-theme) !important;
   }
 </style>
