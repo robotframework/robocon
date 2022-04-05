@@ -1,5 +1,5 @@
 <template>
-  <div class='col-sm-12 row card bg-grey-dark p-xsmall'>
+  <div class='col-sm-12 row card p-xsmall'>
     <div class="col-sm-12 col-md-3 pr-3xsmall">
       <div class="list">
         <div
@@ -8,7 +8,7 @@
           class="mb-medium">
           <!-- mobile list -->
           <template v-if="$store.state.isMobile">
-            <h3 class="yearTitle bg-grey-dark pb-small border-bottom-theme mb-small type-center">
+            <h3 class="yearTitle pb-small border-bottom-theme mb-small type-center">
               {{ year }}
             </h3>
             <div
@@ -31,7 +31,7 @@
           <!-- desktop list -->
           <template v-else>
             <a :href="playlistLink" target="_blank">
-              <h3 class="yearTitle bg-grey-dark pb-small border-bottom-theme mb-small type-center">
+              <h3 class="yearTitle bg-background pb-small border-bottom-theme mb-small type-center">
                 {{ year }}
               </h3>
             </a>

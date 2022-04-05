@@ -38,21 +38,21 @@ export default () => ({
         title: 'Workshops',
         description: 'Join a hands-on workshop in Helsinki to boost your testing skills. There are topics for both beginners and advanced users!',
         buttonText: 'Browse workshops',
-        href: '/#workshops'
+        href: 'workshops'
       },
       {
         date: '18th May',
         title: 'Sprints',
         description: 'Help Robot Framework development for a day in great company. Includes lunch and after sprint sauna. Participation is free for everyone!',
         buttonText: 'Join sprints',
-        href: '/#sprints'
+        href: 'sprints'
       },
       {
         date: '19-20th May',
         title: 'Main conference',
         description: '28 talks in two days. Topics ranging from latest insights by testing experts to a keynote about our brains and learning, held by a cognitive neuroscientist!',
         buttonText: 'Explore talks',
-        href: '/#talks'
+        href: 'talks'
       }
     ],
     tickets: {

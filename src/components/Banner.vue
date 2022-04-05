@@ -6,7 +6,7 @@
         doTheBling ? 'bling' : '',
         $store.state.isMobile ? 'flex between ml-small mt-large mb-medium' : 'col-sm-12 row center mt-large']">
       <transition appear name="fade-right">
-        <div class="mr-large" style="transition-delay: 1.25s;">
+        <div class="mr-xlarge" style="transition-delay: 1.25s;">
           THE 5th ANNUAL<br>
           ROBOT FRAMEWORK<br>
           CONFERENCE
@@ -14,7 +14,7 @@
       </transition>
       <transition appear name="fade-right">
         <div
-          :class="$store.state.isMobile ? 'type-right' : 'type-center mr-large'"
+          :class="$store.state.isMobile ? 'type-right' : 'type-center mr-xlarge'"
           style="transition-delay: 1.75s;">
           A GLOBAL HYBRID<br>
           SOFTWARE AUTOMATION<br>
@@ -30,8 +30,8 @@
       </transition>
     </div>
     <transition appear name="opacity-slow">
-      <div class="col-sm-12 type-center mt-large mb-medium" style="transition-delay: 0.5s;">
-        <img :src="`${publicPath}img/RBCN22.svg`" alt="ROBOCON 2022" class="rbcn-logo" />
+      <div class="col-sm-12 type-center mt-large" style="transition-delay: 0.5s;">
+        <h1>RBCN22</h1>
       </div>
     </transition>
     <transition appear name="fade-right">
@@ -88,13 +88,13 @@ export default {
     }
   }
 
-  .rbcn-logo {
+  .rbcn-container {
     max-width: 34.3rem;
     min-height: 8.1rem;
     filter: drop-shadow(0 0 0.45rem var(--color-theme));
   }
   @media screen and (max-width: 34.3rem) {
-    .rbcn-logo {
+    .rbcn-container {
       width: calc(100% - 2rem);
       min-height: 6rem;
     }
@@ -103,6 +103,9 @@ export default {
     .slogans {
       font-size: var(--type-xsmall);
       width: calc(100% - 2rem) !important;
+    }
+    h1 {
+      font-size: 27vw !important;
     }
   }
 </style>

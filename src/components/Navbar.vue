@@ -1,7 +1,7 @@
 <template>
   <div
     ref="nav"
-    class="navbar row center bg-black color-white p-2xsmall pt-xsmall pb-xsmall">
+    class="navbar row center bg-black color-white pt-xsmall pb-none">
     <!-- section navigation -->
     <transition appear name="opacity-slow">
       <div class="flex" style="transition-delay: 0.5s;">
@@ -9,10 +9,10 @@
           v-for="(item, i) in $tm('navbar.items')"
           :key="item.name"
           :name="`go-to-${item.name}`"
-          class="pl-small pr-small color-white font-title type-uppercase type-no-underline"
-          :class="i !== $tm('navbar.items').length - 1 ? 'dot-right-white' : ''"
+          class="pl-small color-white font-title type-uppercase type-no-underline"
           @click="itemClick(item.id)">
-          ${&thinsp;&thinsp;{{ item.name }}&thinsp;&thinsp;}
+          {{ item.name }}
+          <span v-if="i !== $tm('navbar.items').length - 1" style="color: white !important" class="ml-3xsmall">-</span>
         </button>
       </div>
     </transition>
@@ -24,6 +24,7 @@
         <img :src="`${publicPath}img/RF-white.svg`" />
       </div>
     </transition>
+    <div class="bar mt-small" />
   </div>
 </template>
 
@@ -100,7 +101,6 @@ export default {
     color: var(--color-theme) !important;
   }
   .navbar {
-    position: sticky;
     top: -1px;
     z-index: 2;
   }
@@ -123,5 +123,14 @@ export default {
   .dropdown-container a {
     display: block;
     line-height: 1;
+  }
+  .bar {
+    width: 100%;
+    height: 2px;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow:
+      0 0 7px #ffe8f9,
+      0 0 40px #fe4bd2;
   }
 </style>

@@ -1,7 +1,8 @@
 @font-face {
-    font-family: 'RBTFNT';
-    src: url('~Fonts/RBTFNT.woff') format('woff');
+    font-family: 'RBCN22';
+    src: url('~Fonts/RBCN.woff') format('woff');
     font-display: swap;
+    font-weight: 500;
 }
 @font-face {
     font-family: 'OCRA';
@@ -33,11 +34,31 @@ html {
     font-size: var(--size-base-lg);
 }
 
-h1 {
-    font-family: 'RBTFNT';
-    line-height: var(--line-height-headers);
+@media screen and (max-width: 701px) {
+    html {
+        font-size: var(--size-base-sm);
+    }
 }
-h2, h3, h4 {
+
+h1, h2 {
+    font-family: 'RBCN22';
+    line-height: var(--line-height-headers);
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 21px #fff,
+      0 0 42px #fe4bd2,
+      0 0 82px #fe4bd2,
+      0 0 92px #fe4bd2;
+}
+h2 {
+    color: #ffe8f9;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 30px #fe4bd2,
+      0 0 60px #fe4bd2;
+}
+h3, h4 {
     font-family: var(--font-title);
     line-height: var(--line-height-headers);
 }
@@ -49,14 +70,13 @@ body, textarea, button {
 h1 {
     font-size: var(--type-2xlarge);
     color: var(--color-primary);
-    font-weight: var(--weight-black);
+    font-weight: var(--weight-body);
     margin: var(--margin-bottom-h1) 0;
     line-height: var(--line-height-h1);
 }
 
 h2 {
     font-size: var(--type-xlarge);
-    color: var(--color-theme);
     font-weight: var(--weight-bold);
     margin-bottom: var(--size-medium);
     line-height: var(--line-height-h2);

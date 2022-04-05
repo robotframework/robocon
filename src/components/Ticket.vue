@@ -6,8 +6,8 @@
     ref="ticketContainer"
     :style="`transform: rotateX(${-mousePosition.y * 15}deg) rotateY(${mousePosition.x * 15}deg);`">
     <svg>
-      <mask id='m' stroke="#fe4bd2" stroke-width="3" stroke-opacity="1">
-        <rect id='b' width='100%' height='100%' fill="rgba(255, 255, 255, 0.2)"/>
+      <mask id='m' stroke="#fff" stroke-width="3" stroke-opacity="1">
+        <rect id='b' width='100%' height='100%' fill="rgba(255, 255, 255, 0.15)"/>
         <circle id='d' r='5' fill='#000' />
         <circle id='c' r='20' fill='#000' />
         <use xlink:href='#c' x='100%'/>

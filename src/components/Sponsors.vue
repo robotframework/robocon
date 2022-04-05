@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-grey-dark card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
+  <div class="row card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
     <div class="col-sm-12 mb-xsmall type-center color-theme pl-small pr-small">
       <h3>
         {{ $t('sponsors.boxTitle') }}
@@ -35,7 +35,7 @@
       <transition mode="out-in" name="opacity">
         <button
           v-if="!sponsorInfoShown"
-          class="stroke mr-small"
+          class="theme mr-small"
           @click="sponsorInfoShown = true">
           {{ $t('sponsors.button') }}
         </button>

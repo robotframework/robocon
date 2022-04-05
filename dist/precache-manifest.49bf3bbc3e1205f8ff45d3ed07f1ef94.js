@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "d51540e37322066a3666",
-    "url": "dist/css/app.83905316.css"
+    "revision": "5e2b725ec81ed93e17d5",
+    "url": "dist/css/app.de6707c5.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/fonts/OCRA.2b7be849.woff"
   },
   {
-    "revision": "63ef3191b86632e0c74a093ecad7af10",
-    "url": "dist/fonts/RBTFNT.63ef3191.woff"
+    "revision": "50656c31a5882c87e8425b4a3bd219b7",
+    "url": "dist/fonts/RBCN.50656c31.woff"
   },
   {
     "revision": "8297cf2cf2a9fc56bd612112f636de30",
@@ -100,12 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/vala.png"
   },
   {
-    "revision": "8d39d7c2807d6bacf8f81523ae72ea20",
+    "revision": "ee0471f56b08985266572a6734706ffd",
     "url": "dist/index.html"
   },
   {
-    "revision": "d51540e37322066a3666",
-    "url": "dist/js/app.928794d9.js"
+    "revision": "5e2b725ec81ed93e17d5",
+    "url": "dist/js/app.49ee5e79.js"
   },
   {
     "revision": "ebf237a7afb92cdb624c",

@@ -18,11 +18,11 @@
   <div
     class="navbar row between bg-black color-white"
     :class="isOpen ? 'open' : ''">
-    <div class="flex middle pl-xsmall">
+    <div class="flex middle pl-3xsmall">
       <div class="logo-container">
         <img :src="`${publicPath}img/RF-white.svg`" />
       </div>
-      <div class="font-title mr-2xsmall">
+      <div class="font-title mr-3xsmall">
         ROBOCON 2022
       </div>
     </div>

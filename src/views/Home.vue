@@ -2,17 +2,17 @@
   <nav-mobile />
   <banner />
   <navbar class="nav-desktop" />
-  <news-banner
+  <!-- <news-banner
     v-if="$te('newsBanner') && $t('newsBanner') !== '' && loaded"
     class="mb-small mt-small" />
-  <div v-else class="mb-xlarge" />
+  <div v-else class="mb-xlarge" /> -->
   <div class="container mb-xlarge">
     <page-section
       title-id="intro"
       :title="$t('intro.title')"
       :body="$t('intro.body')">
-      <div class="col-sm-12 col-lg-9 col-lg-offset-3 row center">
-        <timeline />
+      <div class="row center">
+        <timeline class="mt-large"/>
         <div class="col-sm-12 type-center mb-xsmall mt-large">
           <h3>{{ $t('intro.tickets.title') }}</h3>
         </div>
@@ -23,10 +23,10 @@
           :ticket="ticket" />
       </div>
       <tab-box
-        class="col-sm-12 col-lg-9 col-lg-offset-3 mt-small"
+        class="mt-small"
         section-id="intro"
         :tabs="$tm('intro.tabs')" />
-      <sponsors class="mt-xlarge col-sm-12 col-lg-9 col-lg-offset-3" />
+      <sponsors class="mt-xlarge" />
     </page-section>
     <page-section
       title-id="workshops"
@@ -36,8 +36,7 @@
         v-if="loaded"
         :talks="workshops"
         :speakers="workshopSpeakers"
-        :talks-with-pictures="talks"
-        class="col-sm-12 col-lg-9 col-lg-offset-3" />
+        :talks-with-pictures="talks" />
     </page-section>
     <page-section
       title-id="sprints"
@@ -51,8 +50,7 @@
         v-if="loaded"
         :talks="talks"
         :speakers="speakers"
-        header-link="https://tickets.robotframework.org/rc2022/"
-        class="col-sm-12 col-lg-9" />
+        header-link="https://tickets.robotframework.org/rc2022/" />
     </page-section>
     <!-- <page-section
       title-id="cfp"
@@ -169,6 +167,11 @@ export default {
               if (foundTalk) talk.description = foundTalk.description
             })
             this.loaded = true
+            this.$nextTick(() => {
+              const hash = window.location.hash
+              if (hash === '#workshops') document.getElementById('workshops').scrollIntoView()
+              if (hash === '#talks') document.getElementById('talks').scrollIntoView()
+            })
           })
       })
   }

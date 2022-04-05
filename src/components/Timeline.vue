@@ -3,9 +3,9 @@
     <div
       v-for="(item, i) in $tm('intro.timeline')"
       :key="i"
-      class="col-sm-12 col-md-4 row p-small"
-      :class="$store.state.isMobile ? 'p-small' : (i === 0 ? 'pl-none' : i === 2 ? 'pr-none' : 'pl-small pr-small')">
-      <div class="card bg-grey-dark flex flex-col between middle p-medium" style="height: 100%;">
+      class="col-sm-12 col-md-4 row"
+      :class="$store.state.isMobile ? 'py-small' : (i === 0 ? 'pl-none' : i === 2 ? 'pr-none' : 'pl-small pr-small')">
+      <div class="card flex flex-col between middle p-medium" style="height: 100%;">
         <div>
           <div class="col-sm-12 type-small">
             {{ item.date }}
@@ -17,11 +17,12 @@
             {{ item.description }}
           </div>
         </div>
-        <a
+        <button
           :href="item.href"
-          class="ticket p-small mt-small border-theme border-thin rounded weight-bold type-no-underline">
+          class="theme ticket p-small mt-small weight-bold"
+          @click="itemClick(item.href)">
           {{ item.buttonText }}
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -29,17 +30,26 @@
 
 <script>
 export default {
-  name: 'Timeline'
+  name: 'Timeline',
+  methods: {
+    itemClick(itemId) {
+      const el = document.getElementById(itemId)
+      if (!el) return
+      // setting window.location.hash causes instant page scroll to that position and we dont want that
+      // lets strip urlParams and hash from url and append new hash
+      history.replaceState(null, null, `${location.href.split('?')[0].split('#')[0]}#${itemId}`)
+      window.scrollTo({
+        top: el.offsetTop,
+        behavior: 'smooth'
+      })
+      window.plausible('Timeline click', { props: { section: itemId } })
+    }
+  }
 }
 </script>
 
 <style scoped>
   .ticket {
     width: fit-content;
-    transition: transform 0.15s;
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  .ticket:hover {
-    transform: scale(1.05);
   }
 </style>
