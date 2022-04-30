@@ -5,13 +5,14 @@
     <div class="bar" v-if="titleId !== 'intro' || $store.state.isMobile"/>
     <div class="row" :class="$store.state.isMobile ? 'p-xsmall' : 'p-small'">
       <div
+        v-if="!fullWidth"
         class="col-sm-12 col-lg-3 pr-large"
         :class="$store.state.isMobile ? '' : 'pt-3xsmall'">
         <h2 :id="titleId">
           {{ title }}
         </h2>
       </div>
-      <div class="col-sm-12 col-lg-9">
+      <div class="col-sm-12 col-lg-9" :class="fullWidth ? 'col-lg-12' : 'col-lg-9'">
         <div
           v-if="body !== ''"
           v-html="body" />
@@ -36,6 +37,10 @@ export default {
     titleId: {
       type: String,
       required: true
+    },
+    fullWidth: {
+      type: Boolean,
+      default: false
     }
   }
 }

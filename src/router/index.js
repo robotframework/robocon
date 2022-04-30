@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Landing from '../views/Landing.vue'
 import NotFound from '../views/NotFound.vue'
 
 const routes = [
@@ -7,6 +8,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/landing',
+    name: 'Welcome',
+    component: Landing
   },
   {
     path: '/:pathMatch(.*)*',

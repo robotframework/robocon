@@ -1,5 +1,6 @@
 import NewsBanner from './NewsBanner.vue'
 import Banner from './Banner.vue'
+import BannerEmbed from './BannerEmbed.vue'
 import PageFooter from './PageFooter.vue'
 import Navbar from './Navbar.vue'
 import NavMobile from './NavMobile.vue'
@@ -28,6 +29,7 @@ export {
   Talks,
   PreviousTalks,
   Timeline,
+  BannerEmbed,
 
   GlobeIcon,
   ChevronIcon,
