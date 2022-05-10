@@ -2,10 +2,9 @@
   <nav-mobile />
   <banner />
   <navbar class="nav-desktop" />
-  <!-- <news-banner
-    v-if="$te('newsBanner') && $t('newsBanner') !== '' && loaded"
+  <news-banner
+    v-if="$te('newsBanner') && $t('newsBanner') !== ''"
     class="mb-small mt-small" />
-  <div v-else class="mb-xlarge" /> -->
   <div class="container mb-xlarge">
     <page-section
       title-id="intro"
