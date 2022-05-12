@@ -10,16 +10,21 @@
       <p>Congratulation, you made it! This is your space online!</p>
       <p>Please enjoy the talks, Q&A sessions, company of your fellow conference people and check out the awesome partners!</p>
       <h2 class='mt-xlarge mb-xsmall'>Instructions</h2>
-      <p>You can set your avatar and displayed name from the settings that can be found from the navigation menu. We recommend you use your real name. You may also mention your company name in brackets after your name.<p>
-      <p>You may also change the notification and autostream options from the settings.</p>
-      <p><b>On the navigation menu you'll find:</b></p>
+      <p>You may change your avatar when you first login and the name displayed. We recommend you use your real name. You may also mention your company name in brackets after your name.</p>
+      <p>You may also change the notification and autostream options. If you need to later change the settings, just click the wheel on the bottom left corner.</p>
+      <p>We encourage all people to discuss and comment on the ongoing talks on the stage chat. You may also discuss via video / audio / chat on the channels during breaks and after the program hours. For chat, you may also check our Slack and #robocon -channel!</p>
+      <p>On the left side of the site you may find:</p>
       <div class='pl-small mb-medium border-left-theme'>
         <h3>Schedule</h3>
         Check the content from schedule to be on time!
       </div>
       <div class='pl-small mb-medium border-left-theme'>
         <h3>Parter Room</h3>
-        Our partners for the conference. RoboCon wouldn't be possible without them! You may find more information about them from their own pages, which you can access through the partner room. There is also a possibility for one-on-one (video) calls with the partners!
+        Our partners for the conference! We could not have made it without them! Check out more information from the partner room.<br>You may find more information on the partner from their own pages, which you may access through the partner room. There is also a possibility for one-on-one (video) calls with the partners!
+      </div>
+      <div class='pl-small mb-medium border-left-theme'>
+        <h3>Playground</h3>
+        Check our Robot Framework 5! Play around with live code examples!
       </div>
       <div class='pl-small mb-medium border-left-theme'>
         <h3>Random video calls</h3>
@@ -30,9 +35,14 @@
         This is where you'll find all the ongoing talks and Q&A sessions. There is also a chat option to ask questions, comment and react to the content.
       </div>
       <div class='pl-small mb-medium border-left-theme'>
+        <h3>Channels</h3>
+        Here you can discuss specific topics, meet new people and spend time with the fellow conference attendees!
+      </div>
+      <div class='pl-small mb-medium border-left-theme'>
         <h3>Direct messages</h3>
         For contacting another user or users directly with a private message.
       </div>
+      Any inappropriate behavior can be informed to the organizing team via email to info@robocon.io or direct message to an Organizing team member.
       <h2 class='type-xlarge type-center mt-xlarge wave glow-cheap'>
         <span style='font-size: 3rem; --i: 0;'>®</span>
         <span style='--i: 1'>E</span><span style='--i: 2'>n</span><span style='--i: 3'>j</span><span style='--i: 4'>o</span><span style='--i: 5'>y</span>
