@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "2dfa272cad23c4defb95",
+    "revision": "3c8964f3376a7a751d85",
     "url": "dist/css/app.4a6c4a85.css"
   },
   {
@@ -100,12 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/vala.png"
   },
   {
-    "revision": "f4504ca556dd1b057bff9f708a838be9",
+    "revision": "fb42acd0500563b1ddc4ed80b16a664f",
     "url": "dist/index.html"
   },
   {
-    "revision": "2dfa272cad23c4defb95",
-    "url": "dist/js/app.a59361d2.js"
+    "revision": "3c8964f3376a7a751d85",
+    "url": "dist/js/app.4e97dd5f.js"
   },
   {
     "revision": "e8c80a0f3d3b1ab3af3e",
