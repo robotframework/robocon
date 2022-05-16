@@ -13,9 +13,7 @@
           <div class="col-sm-12">
             <h3>{{ item.title }}</h3>
           </div>
-          <div class="col-sm-12 mt-small type-small">
-            {{ item.description }}
-          </div>
+          <div class="col-sm-12 mt-small type-small" v-html="item.description" />
         </div>
         <button
           :href="item.href"

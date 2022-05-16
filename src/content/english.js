@@ -36,7 +36,7 @@ export default () => ({
       {
         date: '17th May',
         title: 'Workshops',
-        description: 'Join a hands-on workshop in Helsinki to boost your testing skills. There are topics for both beginners and advanced users!',
+        description: 'Join a hands-on workshop in Helsinki to boost your testing skills. Workshops will be at the office of <span class="color-theme">Siili Solutions, Ruoholahdenkatu 21.</span>',
         buttonText: 'Browse workshops',
         href: 'workshops'
       },
