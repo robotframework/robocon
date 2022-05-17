@@ -51,6 +51,7 @@
         <span style='font-size: 3rem; --i: 20'>®</span>
       </h2>
       `">
+      <sponsors :mini="true" class="mt-xlarge" />
     </page-section>
   </div>
 </template>
@@ -58,14 +59,16 @@
 <script>
 import {
   PageSection,
-  BannerEmbed
+  BannerEmbed,
+  Sponsors
 } from 'Components'
 
 export default {
   name: 'Landing',
   components: {
     PageSection,
-    BannerEmbed
+    BannerEmbed,
+    Sponsors
   },
   created() {
     const query = new Proxy(new URLSearchParams(window.location.search), {

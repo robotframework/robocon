@@ -31,7 +31,7 @@
         class="img-container mb-small"
         :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
     </a>
-    <div class="col-sm-12 flex end mt-small p-medium">
+    <div v-if="!mini" class="col-sm-12 flex end mt-small p-medium">
       <transition mode="out-in" name="opacity">
         <button
           v-if="!sponsorInfoShown"
@@ -48,6 +48,7 @@
 <script>
 export default {
   name: 'Sponsors',
+  props: ['mini'],
   data: () => ({
     publicPath: process.env.BASE_URL,
     sponsorInfoShown: false
