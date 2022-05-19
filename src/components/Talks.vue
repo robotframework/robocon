@@ -21,6 +21,9 @@
         <div class="card row p-small mb-medium">
           <div class="col-sm-12 col-md-9 col-lg-7 pr-small">
             <div v-if="talk.end">
+              <template v-if="ongoing(talk)">
+                🔴
+              </template>
               {{ format(new Date(talk.start), 'HH:mm') }} - {{ format(new Date(talk.end), 'HH:mm') }} {{ format(new Date(talk.start), 'OOO') }}
             </div>
             <div v-else>
@@ -79,7 +82,7 @@
 </template>
 
 <script>
-import { isSameDay, format } from 'date-fns'
+import { isSameDay, format, isWithinInterval } from 'date-fns'
 import { marked } from 'marked'
 
 export default {
@@ -123,7 +126,6 @@ export default {
     const param = new URLSearchParams(window.location.search)
     const talkName = param.get('talk')
     if (!talkName) return
-    console.log(talkName)
     const talk = this.talks.find(({ title }) => talkName === this.slugify(title.en || title))
     if (!talk) return
     this.openTalk(talk)
@@ -158,6 +160,13 @@ export default {
       this.sendEvent('Open Talk', talk.title)
       const newUrl = `${window.location.href.split('?')[0].split('#')[0]}?talk=${this.slugify(talk.title)}`
       history.replaceState(null, null, newUrl)
+    },
+    ongoing(talk) {
+      if (talk.room !== 1193) return false
+      const start = new Date(talk.start)
+      const end = new Date(talk.end)
+      if (isNaN(start) || isNaN(end)) return false
+      return isWithinInterval(new Date(), { start, end })
     }
   }
 }

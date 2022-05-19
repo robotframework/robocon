@@ -19,7 +19,7 @@
         Check the content from schedule to be on time!
       </div>
       <div class='pl-small mb-medium border-left-theme'>
-        <h3>Parter Room</h3>
+        <h3>Partner Room</h3>
         Our partners for the conference! We could not have made it without them! Check out more information from the partner room.<br>You may find more information on the partner from their own pages, which you may access through the partner room. There is also a possibility for one-on-one (video) calls with the partners!
       </div>
       <div class='pl-small mb-medium border-left-theme'>
