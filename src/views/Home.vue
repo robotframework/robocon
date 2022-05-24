@@ -12,14 +12,6 @@
       :body="$t('intro.body')">
       <div class="row center">
         <timeline class="mt-large"/>
-        <div class="col-sm-12 type-center mb-xsmall mt-large">
-          <h3>{{ $t('intro.tickets.title') }}</h3>
-        </div>
-        <ticket
-          v-for="ticket in $tm('intro.tickets.list')"
-          :key="ticket.title"
-          class="mr-medium mb-large"
-          :ticket="ticket" />
       </div>
       <tab-box
         class="mt-small"

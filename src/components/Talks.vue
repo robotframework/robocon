@@ -7,12 +7,6 @@
       <h3 class="dateTitle mt-large mb-2xsmall type-small py-2xsmall color-white">
         <div class="pl-medium">
           {{ format(new Date(date), 'MMM dd') }}
-          <span v-if="headerLink !== ''">
-            -
-          <a :href="headerLink" target="blank">
-            tickets
-          </a>
-          </span>
         </div>
       </h3>
       <div
@@ -32,11 +26,6 @@
             <h3 :id="slugify(talk.title.en || talk.title)" class="talkTitle">
               {{ talk.title.en || talk.title }}
             </h3>
-            <button v-if="talk.ticketLink" class="theme small ticket" style="width: fit-content;">
-              <a class="type-no-underline type-small color-white" :href="talk.ticketLink" target="_blank">
-                Tickets
-              </a>
-            </button>
             <div
               v-if="talk.abstract"
               class="mt-medium"

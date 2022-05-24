@@ -28,9 +28,7 @@ export default () => ({
   intro: {
     title: 'Hello',
     body: `
-      <p>RoboCon 2022 is coming!</p>
-      <p>This year we'll be returning to an in-person conference while also
-      streaming live worldwide. That way everyone has a chance to participate.</p>
+    <p>A big thank you to all participants who attended RoboCon this year! Full day recordings are available through your ticket link for all participants. The recorded talks will also be published individually soon, stay tuned for more info!</p>
     `,
     timeline: [
       {
@@ -80,16 +78,7 @@ export default () => ({
         please see the section about COVID below.</p>
         <p>In addition to catering and bar there'll be fun activities between the talks,
         which are revealed at a later date.</p>
-        <p>And yes, there will be an after party!</p>
-        <h3>Hotel deals</h3>
-        <p>If you are wondering where to stay during RoboCon 2022 (16.-21.5.2022),
-        you can use a reservation code <span class="color-theme">BROBOCON2022</span> for
-        <a href="https://www.sokoshotels.fi/en/helsinki/sokos-hotel-vaakuna" target="_blank">Sokos Hotel Vaakuna</a>:
-        <ul>
-        <li>Standard Room for 1 person 159€ per night</li>
-        <li>Standard Room for 2 persons 179€ per night</li>
-        </ul>
-        The code should be entered in the <i>reservation code</i> input that is in the <i>reservation codes</i> section.</p>`
+        <p>And yes, there will be an after party!</p>`
       },
       {
         name: 'Online',
