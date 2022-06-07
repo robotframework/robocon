@@ -11,13 +11,14 @@
       :title="$t('intro.title')"
       :body="$t('intro.body')">
       <div class="row center">
+        <ticket :ticket="{ title: 'Recordings', price: '24,80 €' }" />
+        <sponsors class="mt-xlarge" />
         <timeline class="mt-large"/>
       </div>
       <tab-box
         class="mt-small"
         section-id="intro"
         :tabs="$tm('intro.tabs')" />
-      <sponsors class="mt-xlarge" />
     </page-section>
     <page-section
       title-id="workshops"

@@ -28,7 +28,9 @@ export default () => ({
   intro: {
     title: 'Hello',
     body: `
-    <p>A big thank you to all participants who attended RoboCon this year! Full day recordings are available through your ticket link for all participants. The recorded talks will also be published individually soon, stay tuned for more info!</p>
+    <p>A big thank you to all participants who attended RoboCon this year! Full day recordings are available through your ticket link for all live and online participants.</p>
+    <p>For those who couldn't participate this year, there's now a chance to purchase a ticket for the recordings of the full conference. Purchases will help fund Robot Framework development.</p>
+    <p>All talks will also be publicly released later, free for everyone. Also, be sure to check <a href="#previousTalks">talks from previous years!</a></p>
     `,
     timeline: [
       {
