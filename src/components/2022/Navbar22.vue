@@ -1,57 +1,43 @@
 <template>
   <div
     ref="nav"
-    class="row between p-small sticky bg-background"
-    style="top: 0; z-index: 2;">
-    <div class="flex middle">
-      <base-icon name="robot" color="white" size="1.25rem" />
-      <router-link :to="{ name: 'Home' }" class="router-link type-large mx-xsmall">
-        ROBOCON
-      </router-link>
-      <div class="type-xsmall flex">
-        |
-        <a href="https://robotframework.org/" class="type-xsmall ml-xsmall mr-2xsmall color-white hover-color-theme">
-          Robot Framework
-        </a>
-        Conference
+    class="navbar row center bg-black color-white pb-none">
+    <div class="bar22" />
+    <!-- section navigation -->
+    <transition appear name="opacity-slow">
+      <div class="flex mt-xsmall" style="transition-delay: 0.5s;">
+        <button
+          v-for="(item, i) in $tm('2022.navbar.items')"
+          :key="item.name"
+          :name="`go-to-${item.name}`"
+          class="pl-small color-white font-title type-uppercase type-no-underline"
+          @click="itemClick(item.id)">
+          {{ item.name }}
+          <span v-if="i !== $tm('2022.navbar.items').length - 1" style="color: white !important" class="ml-3xsmall">-</span>
+        </button>
       </div>
-    </div>
-    <div class="flex">
+    </transition>
+    <!-- <transition name="opacity">
       <div
-        v-for="({ text, name, theme }, i) in links"
-        :key="name"
-        class="flex">
-        <router-link
-          :to="{ name }"
-          class="router-link type-no-underline"
-          :class="theme">
-          {{ text }}
-        </router-link>
-        <div
-          v-if="i < links.length - 1"
-          class="mx-small">
-          |
-        </div>
+        v-if="navSticky"
+        class="tiny-logo-container cursor-pointer"
+        @click="scrollTop">
+        <img :src="`${publicPath}img/RF-white.svg`" />
       </div>
-    </div>
+    </transition> -->
+    <div class="bar22 mt-small" />
   </div>
 </template>
 
 <script>
-import BaseIcon from './BaseIcon.vue'
 
 export default {
   name: 'Navbar',
-  components: {
-    BaseIcon
-  },
   data: () => ({
-    links: [
-      { text: 'RBCN23', name: 'Home' },
-      { text: 'Germany', name: 'Germany', theme: 'theme-germany' },
-      { text: '2022', name: '2022', theme: 'theme-2022' },
-      { text: 'Archive', name: 'Archive' }
-    ]
+    navSticky: false,
+    publicPath: process.env.BASE_URL,
+    linkDropdownOpen: false,
+    langDropdownOpen: false
   }),
   computed: {
     langNames() {
@@ -114,6 +100,10 @@ export default {
   }
   button:hover {
     color: var(--color-theme) !important;
+  }
+  .navbar {
+    top: -1px;
+    z-index: 2;
   }
   .tiny-logo-container {
     position: absolute;

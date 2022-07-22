@@ -27,6 +27,10 @@
   width: 100%;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .row {
   box-sizing: border-box;
   display: -webkit-box;

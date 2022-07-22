@@ -1,60 +1,48 @@
 <template>
-    <banner class="mt-large">
-      <div>
-        <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
-      </div>
-    </banner>
-  <div class="container">
-    <news-banner
-      v-if="$te('newsBanner') && $t('newsBanner') !== ''"
-      class="mb-small mt-small" />
-    <nav-mobile />
+  <div class="container mb-xlarge theme-2022">
+    <banner22 />
     <page-section
       title-id="intro"
-      :title="$t('home.intro.title')"
-      :full-width="true">
-      <div class="row center col-lg-8 col-lg-offset-2">
-        <div v-html="$t('home.intro.body')" />
+      :title="$t('rbcn2022.intro.title')"
+      :body="$t('rbcn2022.intro.body')">
+      <div class="row center">
+        <ticket :ticket="{ title: 'Recordings', price: '24,80 €' }" class="mt-medium" />
+        <sponsors class="mt-xlarge" />
       </div>
     </page-section>
     <page-section
-      title-id="germany"
-      class="theme-germany"
-      :title="$t('home.germany.title')">
-      <div class="">
-        <div v-html="$t('home.germany.body')" />
-      </div>
-    </page-section>
-    <page-section
-      title-id="rbcn22"
-      class="theme-2022"
-      :title="$t('home.rbcn22.title')">
-      <div v-html="$t('home.rbcn22.body')" />
+      title-id="talks"
+      :title="$t('rbcn2022.talks.title')">
+      <talks
+        v-if="loaded"
+        :talks="talks"
+        :speakers="speakers"
+        header-link="https://tickets.robotframework.org/rc2022/" />
     </page-section>
   </div>
+  <page-footer />
 </template>
 
 <script>
 import {
-  Banner,
+  Banner22,
   PageFooter,
-  Navbar,
-  NavMobile,
+  Navbar22,
   PageSection,
-  NewsBanner,
-  PreviousTalks
+  Ticket,
+  Sponsors,
+  Talks
 } from 'Components'
 
 export default {
   name: 'App',
   components: {
-    Banner,
+    Banner22,
     PageFooter,
-    Navbar,
-    NavMobile,
     PageSection,
-    NewsBanner,
-    PreviousTalks
+    Ticket,
+    Sponsors,
+    Talks
   },
   data: () => ({
     talks: [],

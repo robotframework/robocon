@@ -1,10 +1,10 @@
 const path = require('path')
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'test' ?
-  './test' : process.env.NODE_ENV === 'production' ? './dist/' : './',
-	outputDir: process.env.NODE_ENV === 'test' ? 'test' : 'dist',
-	indexPath: process.env.NODE_ENV === 'test' ? '../test.html' : '../index.html',
+  publicPath: process.env.NODE_ENV === 'test'
+    ? './test' : process.env.NODE_ENV === 'production' ? './dist/' : './',
+  outputDir: process.env.NODE_ENV === 'test' ? 'test' : 'dist',
+  indexPath: process.env.NODE_ENV === 'test' ? '../test.html' : '../index.html',
   productionSourceMap: false,
   configureWebpack: {
     resolve: {
@@ -20,7 +20,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        args[0].title = 'RoboCon 2022'
+        args[0].title = 'RoboCon'
         return args
       })
     config
