@@ -1,14 +1,13 @@
 export default {
   intro: {
     title: 'Hallo',
-    body: `<p>This fall, RoboCon will be a guest at the <span class="color-theme">Software QS-Tag in Frankfurt</span>.</p>
-      <p>For the first time, we will have the opportunity to host a one-day RoboCon at the centre of the EU.
-      RoboCon will share a conference building with the Software QS-Tag and the exchange with the visitors of
-      the QS-Tag will hopefully lead to interesting discussions.</p>
-      <p>As a visitor with a RoboCon ticket, only the RoboCon track is available.
-      If you would like to attend RoboCon and the QS-Tag on both days (5 & 6 October),
-      including an overnight stay in the conference hotel, please book a ticket for the Software QS-Tag at
+    body: `<p>Diesen Herbst ist die RoboCon zu Gast auf dem <span class="color-theme">Software QS-Tag in Frankfurt</span>.</p>
+      <p>Erstmalig werden wir die Möglichkeit haben im Zentrums der EU eine eintägige RoboCon zu veranstalten.
+      Die RoboCon wird sich mit dem Software QS-Tag ein Konferenzgebäude teilen und der Austausch mit den Besuchern des
+      QS-Tages wird zu interessanten Gesprächen führen.</p>
+      <p>Als Besucher mit einem RoboCon Ticket, steht ausschließlich der RoboCon Track zur Verfügung.
+      Wünscht Ihr die RoboCon und den QS-Tag auf beiden Tagen (5. & 6. Oktober) besuchen zu können, inkl. Übernachtung im Konferenzhotel, so bucht ein Ticket zum Software QS-Tag auf
       <a href="https://qs-tag.de">qs-tag.de</a></p>
-      <p>We look forward to seeing you!</p>`
+      <p>Wir freuen uns dich auf der RoboCon zu sehen!</p>`
   }
 }

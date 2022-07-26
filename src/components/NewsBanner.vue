@@ -9,12 +9,12 @@
 <style scoped>
   .banner {
     position: sticky;
-    top: 3.5rem;
+    top: 3.74rem;
+    border-top: 0.2rem solid var(--color-theme);
+    border-bottom: 0.2rem solid var(--color-theme);
   }
   .banner-slide {
-    position: absolute;
     top: 0;
     width: 100%;
-    height: 20rem;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <banner class="mt-xlarge">
+    <banner>
       <div>
         <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
       </div>
@@ -19,7 +19,7 @@
       <div
         v-for="ticket in $tm('home.tickets')"
         :key="ticket.title"
-        class="row middle mt-large"
+        class="row center mt-large"
         :class="ticket.theme">
         <ticket class="col-sm-12 col-lg-3 pr-medium" :link="ticket.link">
           <template v-slot:title>

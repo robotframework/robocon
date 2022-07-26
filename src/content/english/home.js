@@ -15,8 +15,19 @@ export default {
   },
   tickets: [
     {
+      title: '2022 DE<div class="type-small">Early Ticket</div>',
+      price: '<strike>350</strike> 300 €<span class="vat"> +VAT</span>',
+      link: 'https://tickets.robotframework.org/robocon-2022-DE/',
+      side: '05-10-2022',
+      description: `<p>For the first time ever, a physical RoboCon is getting held outside Helsinki!
+      <span class="color-theme">October 2022</span> there'll be a Robot Framework sub-conference at
+      <a class="color-theme" target="_blank" href="https://www.qs-tag.de/en/">Software-QS-Tage</a> in <span class="color-theme">Frankfurt</span>.</p>`,
+      page: { to: 'Germany', text: 'More details of RoboCon 2022 Germany' },
+      theme: 'theme-germany'
+    },
+    {
       title: '2023 Online<div class="type-small">Early Blind</div>',
-      price: '<strike>300</strike> 124 €',
+      price: '<strike>300</strike> 100 €<span class="vat"> +VAT</span>',
       link: 'https://tickets.robotframework.org/robocon-2023/',
       side: '2023 MAR',
       description: `<p>Discounted blind tickets for 2023 online conference are available now!
@@ -25,19 +36,8 @@ export default {
       <p>Please note that the upcoming <span class="color-theme">in-person conference ticket will include this online ticket.</span></p>`
     },
     {
-      title: '2022 DE<div class="type-small">Early Ticket</div>',
-      price: 'from 300 €',
-      link: 'https://tickets.robotframework.org/robocon-2022-DE/',
-      side: '05-10-2022',
-      description: `<p>For the first time ever, a physical RoboCon is getting held outside Helsinki!
-      <span class="color-theme">October 2022</span> there'll be a Robot Framework sub-conference at
-      <span class="color-theme">Software-QS-Tag</span> in <span class="color-theme">Frankfurt</span>.</p>`,
-      page: { to: 'Germany', text: 'More details of RoboCon 2022 Germany' },
-      theme: 'theme-germany'
-    },
-    {
       title: '2022 Recordings',
-      price: '24,80 €',
+      price: '20 €<span class="vat"> +VAT</span>',
       link: 'https://tickets.robotframework.org/rc2022/',
       side: '2022 MAY',
       description: `<p>With this ticket, you'll get immediate access to <span class="color-theme">all recorded talks plus Q&A of RoboCon 2022</span>.

@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-large m-small mb-large border-bottom-theme">
+  <div class="pb-large m-small mb-large border-bottom-theme" >
     <div class="container row middle">
       <transition appear name="opacity-slow">
         <div

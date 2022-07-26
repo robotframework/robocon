@@ -6,14 +6,26 @@
       :title="$t('rbcn2022.intro.title')"
       :body="$t('rbcn2022.intro.body')">
       <div class="row center">
-        <ticket :ticket="{ title: 'Recordings', price: '24,80 €' }" class="mt-medium" />
+        <ticket v-if="ticket" :link="ticket.link" class="mt-medium center" :class="$store.state.isDesktop && 'ml-none'">
+          <template v-slot:title>
+            <div v-html="ticket.title" />
+          </template>
+          <template v-slot:price>
+            <div v-html="ticket.price" />
+          </template>
+          <template v-slot:left>
+            ROBOCON
+          </template>
+          <template v-slot:right>
+            <div v-html="ticket.side" />
+          </template>
+        </ticket>
         <sponsors class="mt-xlarge" />
       </div>
     </page-section>
     <page-section
       title-id="talks"
       :title="$t('rbcn2022.talks.title')">
-      <ticket :ticket="{ title: 'Recordings', price: '24,80 €' }" class="mt-medium" />
       <talks
         v-if="loaded"
         :talks="talks"
@@ -21,14 +33,11 @@
         header-link="https://tickets.robotframework.org/rc2022/" />
     </page-section>
   </div>
-  <page-footer />
 </template>
 
 <script>
 import {
   Banner22,
-  PageFooter,
-  Navbar22,
   PageSection,
   Ticket,
   Sponsors,
@@ -39,13 +48,13 @@ export default {
   name: 'App',
   components: {
     Banner22,
-    PageFooter,
     PageSection,
     Ticket,
     Sponsors,
     Talks
   },
   data: () => ({
+    ticket: null,
     talks: [],
     workshops: [],
     speakers: [],
@@ -60,6 +69,9 @@ export default {
     ],
     loaded: false
   }),
+  mounted() {
+    this.ticket = this.$tm('home.tickets').find(({ side }) => side === '2022 MAY')
+  },
   created() {
     fetch('https://cfp.robocon.io/robocon-2022/schedule/widget/v2.json')
       .then((res) => res.json())
