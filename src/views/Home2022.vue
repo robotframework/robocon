@@ -13,6 +13,7 @@
     <page-section
       title-id="talks"
       :title="$t('rbcn2022.talks.title')">
+      <ticket :ticket="{ title: 'Recordings', price: '24,80 €' }" class="mt-medium" />
       <talks
         v-if="loaded"
         :talks="talks"

@@ -90,6 +90,10 @@
   flex-direction: column;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
 .start {
   -webkit-box-pack: start;
   -ms-flex-pack: start;

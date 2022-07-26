@@ -48,8 +48,8 @@ export default {
   data: () => ({
     links: [
       { text: 'RBCN23', name: 'Home' },
-      { text: 'Germany', name: 'Germany', theme: 'theme-germany' },
-      { text: '2022', name: '2022', theme: 'theme-2022' },
+      { text: 'RBCN22DE', name: 'Germany', theme: 'theme-germany' },
+      { text: 'RBCN22', name: '2022', theme: 'theme-2022' },
       { text: 'Archive', name: 'Archive' }
     ]
   }),

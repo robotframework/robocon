@@ -1,5 +1,5 @@
 <template>
-    <banner class="mt-large">
+    <banner class="mt-xlarge">
       <div>
         <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
       </div>
@@ -8,7 +8,6 @@
     <news-banner
       v-if="$te('newsBanner') && $t('newsBanner') !== ''"
       class="mb-small mt-small" />
-    <nav-mobile />
     <page-section
       title-id="intro"
       :title="$t('home.intro.title')"
@@ -16,20 +15,33 @@
       <div class="row center col-lg-8 col-lg-offset-2">
         <div v-html="$t('home.intro.body')" />
       </div>
-    </page-section>
-    <page-section
-      title-id="germany"
-      class="theme-germany"
-      :title="$t('home.germany.title')">
-      <div class="">
-        <div v-html="$t('home.germany.body')" />
+      <h2 class="col-lg-offset-3 mt-xlarge">Available Tickets</h2>
+      <div
+        v-for="ticket in $tm('home.tickets')"
+        :key="ticket.title"
+        class="row middle mt-large"
+        :class="ticket.theme">
+        <ticket class="col-sm-12 col-lg-3 pr-medium" :link="ticket.link">
+          <template v-slot:title>
+            <div v-html="ticket.title" />
+          </template>
+          <template v-slot:price>
+            <div v-html="ticket.price" />
+          </template>
+          <template v-slot:left>
+            ROBOCON
+          </template>
+          <template v-slot:right>
+            <div v-html="ticket.side" />
+          </template>
+        </ticket>
+        <div class="col-sm-12 col-lg-9">
+          <div v-html="ticket.description" />
+          <router-link v-if="ticket.page" :to="{ name: ticket.page.to }">
+           {{ ticket.page.text }}
+          </router-link>
+        </div>
       </div>
-    </page-section>
-    <page-section
-      title-id="rbcn22"
-      class="theme-2022"
-      :title="$t('home.rbcn22.title')">
-      <div v-html="$t('home.rbcn22.body')" />
     </page-section>
   </div>
 </template>
@@ -37,97 +49,16 @@
 <script>
 import {
   Banner,
-  PageFooter,
-  Navbar,
-  NavMobile,
   PageSection,
-  NewsBanner,
-  PreviousTalks
+  Ticket
 } from 'Components'
 
 export default {
   name: 'App',
   components: {
     Banner,
-    PageFooter,
-    Navbar,
-    NavMobile,
     PageSection,
-    NewsBanner,
-    PreviousTalks
-  },
-  data: () => ({
-    talks: [],
-    workshops: [],
-    speakers: [],
-    workshopSpeakers: [],
-    workshopImages: [],
-    workshopLinks: [
-      { id: 16882, link: 'https://tickets.robotframework.org/workshops-rc2022/3191186/' },
-      { id: 13758, link: 'https://tickets.robotframework.org/workshops-rc2022/3191184/' },
-      { id: 13963, link: 'https://tickets.robotframework.org/workshops-rc2022/3191185/' },
-      { id: 13231, link: 'https://tickets.robotframework.org/workshops-rc2022/3191183/' },
-      { id: 12907, link: 'https://tickets.robotframework.org/workshops-rc2022/2659941/' }
-    ],
-    loaded: false
-  }),
-  created() {
-    fetch('https://cfp.robocon.io/robocon-2022/schedule/widget/v2.json')
-      .then((res) => res.json())
-      .then(({ talks, speakers }) => {
-        this.talks = talks
-          .filter(({ room }) => room === 1193)
-          .map((talk) => ({
-            ...talk,
-            expanded: false,
-            speakers: talk.speakers ? talk.speakers.map((code) => ({
-              code,
-              avatar: speakers.find((speaker) => speaker.code === code).avatar,
-              name: speakers.find((speaker) => speaker.code === code).name,
-              expanded: false
-            })) : []
-          }))
-        this.workshopImages = speakers
-      })
-      .then(() => {
-        fetch('https://pretalx.com/robocon-2022/schedule/export/schedule.json')
-          .then((res) => res.json())
-          .then(({ schedule }) => {
-            const talks = schedule.conference.days
-              .filter(({ date }) => ['2022-05-19', '2022-05-20'].includes(date))
-              .flatMap(({ rooms }) => rooms['Main Hall'])
-            const workshopsDay = schedule.conference.days
-              .find(({ date }) => date === '2022-05-17')
-            const workshops = Object.keys(workshopsDay.rooms)
-              .reduce((arr, room) => [...arr, workshopsDay.rooms[room][0]], [])
-              .map((workshop) => ({
-                ...workshop,
-                ticketLink: this.workshopLinks.find(({ id }) => id === workshop.id).link
-              }))
-            this.workshops = workshops
-              .map((workshop) => ({
-                ...workshop,
-                start: workshop.date,
-                speakers: workshop.persons
-              }))
-            this.workshopSpeakers = workshops
-              .flatMap(({ persons }) => persons)
-            this.speakers = schedule.conference.days
-              .flatMap(({ rooms }) => (('Main Hall' in rooms) ? rooms['Main Hall'] : [])
-                .flatMap(({ persons }) => persons))
-              .filter(({ code }, index, self) => self.map(({ code }) => code).indexOf(code) === index)
-            this.talks.forEach((talk) => {
-              const foundTalk = talks.find(({ url }) => url.includes(talk.code))
-              if (foundTalk) talk.description = foundTalk.description
-            })
-            this.loaded = true
-            this.$nextTick(() => {
-              const hash = window.location.hash
-              if (hash === '#workshops') document.getElementById('workshops').scrollIntoView()
-              if (hash === '#talks') document.getElementById('talks').scrollIntoView()
-            })
-          })
-      })
+    Ticket
   }
 }
 </script>

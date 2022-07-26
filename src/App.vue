@@ -1,16 +1,20 @@
 <template>
   <navbar />
+  <news-banner v-if="$route.name === 'Home'" class="theme-germany">
+    📣 <span class="color-theme">This October</span>: First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link> 📣
+  </news-banner>
   <router-view />
   <page-footer />
 </template>
 
 <script>
-import { Navbar, PageFooter } from 'Components'
+import { Navbar, PageFooter, NewsBanner } from 'Components'
 
 export default {
   components: {
     Navbar,
-    PageFooter
+    PageFooter,
+    NewsBanner
   },
   created() {
     document.documentElement.lang = this.$i18n.locale

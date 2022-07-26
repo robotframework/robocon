@@ -3,7 +3,7 @@
     class="mb-xlarge section-container"
     tabindex="-1">
     <div class="bar" v-if="titleId !== 'intro' || $store.state.isMobile"/>
-    <div class="row" :class="$store.state.isMobile ? 'p-xsmall' : 'p-small'">
+    <div class="row">
       <div
         v-if="!fullWidth"
         class="col-sm-12 col-lg-2 pr-large"

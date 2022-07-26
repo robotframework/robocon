@@ -5,10 +5,12 @@
         <div class="color-theme mr-medium">RBCN</div> 2022 <div class="color-theme ml-medium">DE</div>
       </div>
       <div v-if="$store.state.isDesktop" class="flex center bottom">
-        <div v-html="logoSvg" class="" />
+        <a href="https://www.qs-tag.de/" target="_blank">
+          <div v-html="logoSvg" class="" />
+        </a>
         <div v-html="mapSvg" class="ml-large mr-large" />
-        <div class="flex bottom">
-          <base-icon name="robot" color="white" size="15vh" />
+        <div class="flex middle">
+          <base-icon name="robot" color="white" size="12vh" />
           <div class="ml-small type-left type-xlarge font-title">
             Robot<br>
             Framework<br>
@@ -19,7 +21,9 @@
       <div v-else>
         <div v-html="mapSvg" class="ml-large mr-large" />
         <div class="flex middle center p-small">
-          <div v-html="logoSvgMobile" class="mr-xsmall" />
+          <a href="https://www.qs-tag.de/" target="_blank">
+            <div v-html="logoSvgMobile" class="mr-xsmall" />
+          </a>
           <div class="flex bottom ml-xsmall">
             <base-icon name="robot" color="white" size="10vh" />
             <div class="ml-small type-left type-large font-title">
@@ -31,18 +35,45 @@
         </div>
       </div>
     </banner>
-    <page-section
-      title-id="intro"
-      :title="$t('germany.intro.title')">
-      <div class="">
+    <div class="container">
+      <page-section
+        title-id="intro"
+        :title="$t('germany.intro.title')">
+        🌐
+        <button
+          class="font-title mr-small"
+          :class="$i18n.locale === 'en-US' ? 'color-theme type-underline' : 'color-white'"
+          @click="$i18n.locale = 'en-US'">
+          English
+        </button>
+        <button
+          class="font-title"
+          :class="$i18n.locale === 'de-DE' ? 'color-theme type-underline' : 'color-white'"
+          @click="$i18n.locale = 'de-DE'">
+          Deutsch
+        </button>
         <div v-html="$t('germany.intro.body')" />
-      </div>
-    </page-section>
+        <ticket v-if="ticket" :link="ticket.link" class="mt-medium" :class="$store.state.isDesktop && 'ml-none'">
+          <template v-slot:title>
+            <div v-html="ticket.title" />
+          </template>
+          <template v-slot:price>
+            <div v-html="ticket.price" />
+          </template>
+          <template v-slot:left>
+            ROBOCON
+          </template>
+          <template v-slot:right>
+            <div v-html="ticket.side" />
+          </template>
+        </ticket>
+      </page-section>
+    </div>
   </div>
 </template>
 
 <script>
-import { Banner, BaseIcon, PageSection } from 'Components'
+import { Banner, BaseIcon, PageSection, Ticket } from 'Components'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import MapGermany from 'Img/qs-day-map'
 import LogoGermany from 'Img/qs-day-logo'
@@ -52,17 +83,20 @@ export default {
   components: {
     Banner,
     BaseIcon,
-    PageSection
+    PageSection,
+    Ticket
   },
   data: () => ({
     mapSvg: '',
     logoSvg: '',
-    logoSvgMobile: ''
+    logoSvgMobile: '',
+    ticket: null
   }),
   mounted() {
     this.mapSvg = MapGermany()
     this.logoSvg = LogoGermany()
     this.logoSvgMobile = LogoGermany().replace('15vh', '10vh')
+    this.ticket = this.$tm('home.tickets').find(({ side }) => side === '05-10-2022')
   }
 }
 </script>

@@ -1,6 +1,6 @@
 export default {
   intro: {
-    title: 'Hello',
+    title: 'Hallo',
     body: `<p>This fall, RoboCon will be a guest at the <span class="color-theme">Software QS-Tag in Frankfurt</span>.</p>
       <p>For the first time, we will have the opportunity to host a one-day RoboCon at the centre of the EU.
       RoboCon will share a conference building with the Software QS-Tag and the exchange with the visitors of
