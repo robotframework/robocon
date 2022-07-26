@@ -8,4 +8,4 @@ ports:
   - name: Development Page of RoboCon
     description: The RoboCon Page as Preview-Dev-Page
     port: 8080
-    onOpen: open-browser
+    onOpen: notify
