@@ -1,27 +1,21 @@
 import home from './home'
 import rbcn2022 from './2022'
 import germany from './germany'
+import archive from './archive'
 
 export default {
   langName: 'English',
   newsBanner: '',
   navbar: {
-    items: [
-      {
-        name: 'Germany',
-        id: 'germany'
-      },
-      {
-        name: '2022',
-        id: '2022'
-      },
-      {
-        name: 'Previous Talks',
-        id: 'previousTalks'
-      }
+    links: [
+      { text: 'RBCN23', name: 'Home' },
+      { text: 'RBCN22DE', name: 'Germany', theme: 'theme-germany' },
+      { text: 'RBCN22', name: '2022', theme: 'theme-2022' },
+      { text: 'Archive', name: 'Archive' }
     ]
   },
   home,
   rbcn2022,
-  germany
+  germany,
+  archive
 }

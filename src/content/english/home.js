@@ -16,7 +16,7 @@ export default {
   tickets: [
     {
       title: '2022 DE<div class="type-small">Early Ticket</div>',
-      price: '<strike>350</strike> 300 €<span class="vat"> +VAT</span>',
+      price: '<strike>350</strike> 300 €<span class="type-xsmall"> +VAT</span>',
       link: 'https://tickets.robotframework.org/robocon-2022-DE/',
       side: '05-10-2022',
       description: `<p>For the first time ever, a physical RoboCon is getting held outside Helsinki!
@@ -27,9 +27,9 @@ export default {
     },
     {
       title: '2023 Online<div class="type-small">Early Blind</div>',
-      price: '<strike>300</strike> 100 €<span class="vat"> +VAT</span>',
+      price: '<strike>300</strike> 100 €<span class="type-xsmall"> +VAT</span>',
       link: 'https://tickets.robotframework.org/robocon-2023/',
-      side: '2023 MAR',
+      side: '2023-MAR',
       description: `<p>Discounted blind tickets for 2023 online conference are available now!
       The discount is valid until talks and conference program is published. This ticket also includes
       <span class="color-theme">instant access to 2022 talks!</span></p>
@@ -37,9 +37,9 @@ export default {
     },
     {
       title: '2022 Recordings',
-      price: '20 €<span class="vat"> +VAT</span>',
+      price: '20 €<span class="type-xsmall"> +VAT</span>',
       link: 'https://tickets.robotframework.org/rc2022/',
-      side: '2022 MAY',
+      side: '2022-MAY',
       description: `<p>With this ticket, you'll get immediate access to <span class="color-theme">all recorded talks plus Q&A of RoboCon 2022</span>.
       All profits from ticket sales go to the Robot Framework Foundation and are used to further develop the Robot Framework.</p>`,
       page: { to: '2022', text: 'Archived RoboCon 2022 page with talk descriptions' },

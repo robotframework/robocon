@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .bling {
     background: linear-gradient(-75deg, #FFF 40%,  #ff73dc 50%, #FFF 70%);
     background-size: 200% auto;

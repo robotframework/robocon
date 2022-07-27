@@ -1,8 +1,8 @@
 <template>
   <div
-    class="mb-xlarge section-container"
+    class="mb-xlarge p-small"
     tabindex="-1">
-    <div class="bar" v-if="titleId !== 'intro' || $store.state.isMobile"/>
+    <div class="bar" v-if="titleId !== 'intro'" />
     <div class="row">
       <div
         v-if="!fullWidth"

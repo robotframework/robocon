@@ -19,6 +19,10 @@
   display: inline-flex;
 }
 
+.block {
+  display: block;
+}
+
 .flex-grow {
   flex-grow: 1;
 }

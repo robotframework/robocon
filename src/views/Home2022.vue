@@ -70,7 +70,7 @@ export default {
     loaded: false
   }),
   mounted() {
-    this.ticket = this.$tm('home.tickets').find(({ side }) => side === '2022 MAY')
+    this.ticket = this.$tm('home.tickets').find(({ side }) => side === '2022-MAY')
   },
   created() {
     fetch('https://cfp.robocon.io/robocon-2022/schedule/widget/v2.json')

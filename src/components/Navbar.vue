@@ -18,17 +18,17 @@
     </div>
     <div class="flex">
       <div
-        v-for="({ text, name, theme }, i) in links"
+        v-for="({ text, name, theme }, i) in $tm('navbar.links')"
         :key="name"
         class="flex">
         <router-link
           :to="{ name }"
-          class="router-link type-no-underline"
+          class="router-link mx-xsmall type-no-underline"
           :class="theme">
           {{ text }}
         </router-link>
         <div
-          v-if="i < links.length - 1"
+          v-if="i < $tm('navbar.links') - 1"
           class="mx-small">
           |
         </div>
@@ -44,20 +44,6 @@ export default {
   name: 'Navbar',
   components: {
     BaseIcon
-  },
-  data: () => ({
-    links: [
-      { text: 'RBCN23', name: 'Home' },
-      { text: 'RBCN22DE', name: 'Germany', theme: 'theme-germany' },
-      { text: 'RBCN22', name: '2022', theme: 'theme-2022' },
-      { text: 'Archive', name: 'Archive' }
-    ]
-  }),
-  computed: {
-    langNames() {
-      return Object.keys(this.$i18n.messages)
-        .map((lang) => ({ lang, name: this.$i18n.messages[lang].langName }))
-    }
   },
   methods: {
     itemClick(itemId) {

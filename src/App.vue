@@ -1,5 +1,6 @@
 <template>
-  <navbar />
+  <navbar v-if="!$store.state.isMobile" />
+  <nav-mobile v-else />
   <news-banner v-if="$route.name === 'Home'" class="theme-germany">
     <h2>ROBOCON <span class="color-white">2022</span> GERMANY</h2>
     <h3>📣 <span class="color-theme">This October 5th</span> 📣</h3> First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link>
@@ -9,11 +10,12 @@
 </template>
 
 <script>
-import { Navbar, PageFooter, NewsBanner } from 'Components'
+import { Navbar, NavMobile, PageFooter, NewsBanner } from 'Components'
 
 export default {
   components: {
     Navbar,
+    NavMobile,
     PageFooter,
     NewsBanner
   },

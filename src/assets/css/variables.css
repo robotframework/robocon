@@ -65,6 +65,12 @@
     --border-radius-rounded-small: 0.5rem;
 }
 
+@media screen and (max-width: 780px) {
+    :root {
+        --type-2xlarge: 5rem;
+    }
+}
+
 .theme-2022 {
     --color-theme: #fe4bd2;
     --color-link: #fe4bd2;

@@ -123,10 +123,6 @@ button.small {
     pointer-events: none;
 }
 
-.vat {
-    font-size: x-small;
-}
-
 div.section-container {
     padding: var(--size-small);
 }
