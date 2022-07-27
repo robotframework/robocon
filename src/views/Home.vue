@@ -1,13 +1,10 @@
 <template>
-    <banner>
-      <div>
-        <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
-      </div>
-    </banner>
+  <banner>
+    <div>
+      <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
+    </div>
+  </banner>
   <div class="container">
-    <news-banner
-      v-if="$te('newsBanner') && $t('newsBanner') !== ''"
-      class="mb-small mt-small" />
     <page-section
       title-id="intro"
       :title="$t('home.intro.title')"

@@ -1,10 +1,10 @@
 <template>
-  <navbar v-if="!$store.state.isMobile" />
-  <nav-mobile v-else />
+  <nav-mobile v-if="$store.state.isMobile" />
   <news-banner v-if="$route.name === 'Home'" class="theme-germany">
     <h2>ROBOCON <span class="color-white">2022</span> GERMANY</h2>
     <h3>📣 <span class="color-theme">This October 5th</span> 📣</h3> First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link>
   </news-banner>
+  <navbar v-if="!$store.state.isMobile" />
   <router-view />
   <page-footer />
 </template>
