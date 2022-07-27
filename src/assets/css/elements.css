@@ -8,10 +8,10 @@
     right: 0;
     bottom: 0;
     left: 0;
-    border: solid 1.5px #ffccf2;
+    border: solid 1.5px var(--color-theme);
     border-radius: var(--border-radius-rounded);
     filter: drop-shadow(
-        0 0 3px #fe4bd2);
+        0 0 3px var(--color-theme));
     pointer-events: none;
 }
 .card.sharper::before {
@@ -61,7 +61,26 @@
 }
 
 .border-thin {
-    border-width: 0.05rem;
+    border-width: 0.1rem;
+}
+
+/* Glowing one from 22 */
+.bar22 {
+    width: 100%;
+    height: 0.15rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow:
+      0 0 7px #ffe8f9,
+      0 0 20px var(--color-theme-22),
+      0 0 40px var(--color-theme-22),
+      0 0 80px var(--color-theme-22);
+}
+.bar {
+    width: 100%;
+    height: 0.15rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-theme);
 }
 
 button.theme, button.stroke {
@@ -102,4 +121,8 @@ button.small {
 .disabled {
     opacity: 0.4;
     pointer-events: none;
+}
+
+div.section-container {
+    padding: var(--size-small);
 }

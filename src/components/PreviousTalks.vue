@@ -3,7 +3,7 @@
     <div class="col-sm-12 col-md-3 pr-3xsmall">
       <div class="list">
         <div
-          v-for="{ year, list, playlistLink } in $tm('previousTalks.talks')"
+          v-for="{ year, list, playlistLink } in $tm('archive.previousTalks.talks')"
           :key="year"
           class="mb-medium">
           <!-- mobile list -->
@@ -88,7 +88,7 @@ export default {
     }
   }),
   mounted() {
-    this.activeTalk = this.$tm('previousTalks.talks')[0].list[0].url
+    this.activeTalk = this.$tm('archive.previousTalks.talks')[0].list[0].url
   }
 }
 </script>

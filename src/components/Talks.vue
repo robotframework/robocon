@@ -163,7 +163,6 @@ export default {
 
 <style scoped>
   .dateTitle {
-    position: sticky;
     top: 3.35rem;
     margin-right: -1rem;
     background-color: #111;

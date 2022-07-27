@@ -1,50 +1,32 @@
 <template>
   <a
-    href="https://tickets.robotframework.org/rc2022/"
+    :href="link"
     target="_blank"
-    class="ticket-container font-title cursor-pointer"
-    ref="ticketContainer"
-    :style="`transform: rotateX(${-mousePosition.y * 15}deg) rotateY(${mousePosition.x * 15}deg);`">
-    <svg>
-      <mask id='m' stroke="#fff" stroke-width="3" stroke-opacity="1">
-        <rect id='b' width='100%' height='100%' fill="rgba(255, 255, 255, 0.15)"/>
-        <circle id='d' r='5' fill='#000' />
-        <circle id='c' r='20' fill='#000' />
-        <use xlink:href='#c' x='100%'/>
-        <use xlink:href='#c' y='100%'/>
-        <use xlink:href='#c' x='100%' y='100%'/>
-        <use xlink:href='#d' x='100%' y='76%'/>
-        <use xlink:href='#d' x='100%' y='63%'/>
-        <use xlink:href='#d' x='100%' y='50%'/>
-        <use xlink:href='#d' x='100%' y='37%'/>
-        <use xlink:href='#d' x='100%' y='24%'/>
-        <use xlink:href='#d' x='0%' y='76%'/>
-        <use xlink:href='#d' x='0%' y='63%'/>
-        <use xlink:href='#d' x='0%' y='50%'/>
-        <use xlink:href='#d' x='0%' y='37%'/>
-        <use xlink:href='#d' x='0%' y='24%'/>
-      </mask>
-      <use xlink:href='#b' fill='#fe4bd2' mask='url(#m)' />
+    class="ticket-container mx-auto cursor-pointer type-no-underline flex center middle"
+    ref="ticketContainer">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 370 200">
+      <path d="M360,142.9c0-2.8,2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-9.5c-17.4-2.2-31.1-16-33.4-33.4H38.4c-2.2,17.4-16,31.1-33.4,33.4v11.6c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v11.6c17.4,2.2,31.1,16,33.4,33.4H331.6c2.2-17.4,16-31.1,33.4-33.4v-13.7c-2.8,0-5-2.2-5-5Z"/>
+      <rect stroke-width="1px" stroke="white" x="54.7" y="25.6" width="260.5" height="148.9" rx="25" ry="25"/>
     </svg>
-    <div class="text-container m-medium ml-small mr-small row center">
-      <div class="type-small flex middle" style="transform: rotate(-90deg);">
-        <div>
-          RBCN22
-        </div>
+    <div class="relative type-center" style="width: 60%;">
+      <div class="ticket-title type-large border-bottom-white border-thin mb-3xsmall pb-3xsmall">
+        <slot name="title" />
       </div>
-      <div class="border-left-theme border-right-theme border-thin">
-        <div v-html="ticket.title" class="type-large type-bold border-bottom-theme border-thin p-small" style="min-width: 9.5rem;" />
-        <div v-html="ticket.price" class="p-2xsmall" />
+      <div class="">
+        <slot name="price" />
       </div>
-      <div class="type-small middle flex middle" style="transform: rotate(90deg);">
-        <div>
-          <div>
-            19-20
-          </div>
-          <div>
-            MAY
-          </div>
-        </div>
+    </div>
+    <div class="absolute font-title type-small side left">
+      <slot name="left" />
+    </div>
+    <div class="absolute type-small side right">
+      <slot name="right" />
+    </div>
+    <div class="shader specular">
+      <div class="shader mask2">
+        <div class="shader mask" />
       </div>
     </div>
   </a>
@@ -54,33 +36,9 @@
 export default {
   name: 'Ticket',
   props: {
-    ticket: {
-      type: Object,
-      default: () => {}
-    }
-  },
-  data: () => ({
-    // normalized position
-    mousePosition: {
-      x: 0,
-      y: 0
-    }
-  }),
-  mounted() {
-    if (!navigator.maxTouchPoints || navigator.maxTouchPoints === 0) document.addEventListener('mousemove', this.onMouseMove)
-  },
-  methods: {
-    onMouseMove(ev) {
-      const bounds = this.$refs.ticketContainer.getBoundingClientRect()
-      const ticketPosition = {
-        x: bounds.left,
-        y: bounds.top
-      }
-      const clamp = (value) => Math.max(-1, Math.min(1, value))
-      this.mousePosition = {
-        x: clamp((ticketPosition.x - ev.screenX) / (window.innerWidth / 2)),
-        y: clamp((ticketPosition.y - ev.screenY) / (window.innerHeight / 2))
-      }
+    link: {
+      type: String,
+      required: true
     }
   }
 }
@@ -88,18 +46,39 @@ export default {
 
 <style scoped>
 .ticket-container {
-  color: var(--color-white);
-  text-decoration: none;
+  min-width: 14rem;
+  max-width: 20rem;
+  width: 100%;
+  aspect-ratio: 2;
   position: relative;
-  transition: transform 0.2s;
+  backface-visibility: hidden;
+  color: var(--color-white);
 }
-.ticket-container:hover {
+.ticket-container:hover .ticket-title {
   color: var(--color-theme);
 }
-.text-container {
-  text-align: center;
-  border: solid 0.1rem var(--color-theme);
-  border-radius: 0.5rem;
+.ticket-container:hover .specular {
+  filter: brightness(0.5) saturate(0.5);
+}
+.ticket-container:hover rect {
+  stroke: var(--color-theme);
+}
+.ticket-title {
+  transition: color 0.2s;
+}
+.side.left {
+  font-size: 100%;
+  transform: rotate(-90deg) translate(-50%, 100%);
+  left: 0;
+  top: 50%;
+  transform-origin: 0% 0%;
+}
+.side.right {
+  font-size: 100%;
+  transform: rotate(90deg) translate(50%, 100%);
+  right: 0;
+  top: 50%;
+  transform-origin: 100% 0%;
 }
 svg {
   position: absolute;
@@ -107,6 +86,53 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 0 30px var(--color-theme));
+  stroke: var(--color-theme);
+  stroke-width: 2px;
+  fill: none;
+  filter: drop-shadow(0 0  3px var(--color-theme));
+}
+#rf-logo {
+  fill: var(--color-theme);
+  stroke: none;
+}
+.shader {
+  position: absolute;
+  border-radius: 1rem;
+}
+.specular {
+  opacity: 0.6;
+  left: 17.5%;
+  top: 13.5%;
+  width: 65%;
+  height: 73%;
+  mix-blend-mode: screen;
+  background-image: linear-gradient(130deg, rgba(61,61,61,1) 9%, var(--color-theme) 10%, rgb(0, 126, 128) 30%, var(--color-theme) 37%, rgba(0,0,0,1) 57%, rgba(0,0,0,1) 68%, var(--color-theme) 72%, rgba(52,52,52,1) 92%);
+  background-attachment: fixed;
+  background-size: 100%;
+  transition: filter 0.1s;
+}
+.mask, .mask2 {
+  width: 100%;
+  height: 100%;
+}
+.mask {
+  background-size: 28%;
+  mix-blend-mode: screen;
+  background-position: -6% -32%;
+  background-repeat: repeat;
+  background-image: url(/dist/img/rf-pattern.jpg), url(/img/rf-pattern.jpg);
+}
+.mask2 {
+  mix-blend-mode: color-burn;
+  background-size: cover;
+  background-image: url(/dist/img/ticket-depth.jpg), url(/img/ticket-depth.jpg);
+  opacity: 0.7;
+  filter: brightness(0.8);
+
+}
+.text-container {
+  text-align: center;
+  border: solid 0.1rem var(--color-theme);
+  border-radius: 0.5rem;
 }
 </style>

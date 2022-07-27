@@ -1,15 +1,15 @@
 :root {
-    --color-theme: #fe4bd2; /* for theme color */
-    --color-theme-dark: #09504d; /* for theme color dark */
-    --color-background: #111;
+    --color-theme: #ff9f00;
+    --color-theme-secondary: #1f4373;
+    --color-background: #0d0f14;
 
     --color-white: #f5f5f5;
     --color-grey-light: #e7e7e7;
     --color-grey: #e2e2e2;
     --color-grey-dark: #24282c;
     --color-black: #000000; /* body text */
-    --color-link: #fe4bd2;
-    --color-link-visited: #fe4bd2;
+    --color-link: #ff9f00;
+    --color-link-visited: #ff9f00;
 
     --bp-md: 700px; /* tablet breakpoint */
     --bp-lg: 1400px; /* desktop breakpoint */
@@ -33,8 +33,8 @@
     --type-small: 0.875rem; /* label */
     --type-body: 1rem; /* p and h3 */
     --type-large: 1.15rem; /* h2 */
-    --type-xlarge: 2.25rem; /* h2 */
-    --type-2xlarge: 11.3rem; /* h1 */
+    --type-xlarge: 2rem; /* h2 */
+    --type-2xlarge: 9rem; /* h1 */
 
     /* font weights */
     --weight-light: 300;
@@ -63,4 +63,22 @@
 
     --border-radius-rounded: 1rem;
     --border-radius-rounded-small: 0.5rem;
+}
+
+@media screen and (max-width: 780px) {
+    :root {
+        --type-2xlarge: 5rem;
+    }
+}
+
+.theme-2022 {
+    --color-theme: #fe4bd2;
+    --color-link: #fe4bd2;
+    --color-link-visited: #fe4bd2;
+}
+
+.theme-germany {
+    --color-theme: #3F7BCF;
+    --color-link: #3F7BCF;
+    --color-link-visited: #3F7BCF;
 }

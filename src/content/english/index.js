@@ -1,0 +1,21 @@
+import home from './home'
+import rbcn2022 from './2022'
+import germany from './germany'
+import archive from './archive'
+
+export default {
+  langName: 'English',
+  newsBanner: '',
+  navbar: {
+    links: [
+      { text: 'RBCN23', name: 'Home' },
+      { text: 'RBCN22DE', name: 'Germany', theme: 'theme-germany' },
+      { text: 'RBCN22', name: '2022', theme: 'theme-2022' },
+      { text: 'Archive', name: 'Archive' }
+    ]
+  },
+  home,
+  rbcn2022,
+  germany,
+  archive
+}

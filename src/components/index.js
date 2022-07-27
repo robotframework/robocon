@@ -1,6 +1,5 @@
 import NewsBanner from './NewsBanner.vue'
 import Banner from './Banner.vue'
-import BannerEmbed from './BannerEmbed.vue'
 import PageFooter from './PageFooter.vue'
 import Navbar from './Navbar.vue'
 import NavMobile from './NavMobile.vue'
@@ -12,9 +11,13 @@ import Talks from './Talks.vue'
 import PreviousTalks from './PreviousTalks.vue'
 import Timeline from './Timeline.vue'
 
+import BaseIcon from './BaseIcon.vue'
 import GlobeIcon from './icons/GlobeIcon.vue'
 import ChevronIcon from './icons/ChevronIcon.vue'
 import NewTabIcon from './icons/NewTabIcon.vue'
+
+import Banner22 from './2022/Banner22.vue'
+import Navbar22 from './2022/Navbar22.vue'
 
 export {
   NewsBanner,
@@ -29,8 +32,11 @@ export {
   Talks,
   PreviousTalks,
   Timeline,
-  BannerEmbed,
 
+  Banner22,
+  Navbar22,
+
+  BaseIcon,
   GlobeIcon,
   ChevronIcon,
   NewTabIcon

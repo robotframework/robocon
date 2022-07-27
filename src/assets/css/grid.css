@@ -19,12 +19,20 @@
   display: inline-flex;
 }
 
+.block {
+  display: block;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
 
 .w-100 {
   width: 100%;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .row {
@@ -84,6 +92,10 @@
 .flex-col {
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
 }
 
 .start {

@@ -2,6 +2,11 @@
     margin: 0;
 }
 
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .m-3xsmall {
     margin: var(--size-3xsmall);
 }

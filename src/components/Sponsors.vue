@@ -2,14 +2,14 @@
   <div class="row card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
     <div class="col-sm-12 mb-xsmall type-center color-theme pl-small pr-small">
       <h3>
-        {{ $t('sponsors.boxTitle') }}
+        {{ $t('rbcn2022.sponsors.boxTitle') }}
       </h3>
     </div>
     <div class="col-sm-12">
       <h4 class="ml-large">Platinum</h4>
     </div>
     <a
-      v-for="(sponsor, i) in $tm('sponsors.list').filter(({ platinum }) => platinum)"
+      v-for="(sponsor, i) in $tm('rbcn2022.sponsors.list').filter(({ platinum }) => platinum)"
       :key="i"
       :href="sponsor.href"
       target="_blank"
@@ -22,7 +22,7 @@
       <h4 class="ml-large">Gold & Silver</h4>
     </div>
     <a
-      v-for="(sponsor, i) in $tm('sponsors.list').filter(({ platinum }) => !platinum)"
+      v-for="(sponsor, i) in $tm('rbcn2022.sponsors.list').filter(({ platinum }) => !platinum)"
       :key="i"
       :href="sponsor.href"
       target="_blank"
@@ -37,9 +37,9 @@
           v-if="!sponsorInfoShown"
           class="theme mr-small"
           @click="sponsorInfoShown = true">
-          {{ $t('sponsors.button') }}
+          {{ $t('rbcn2022.sponsors.button') }}
         </button>
-        <div v-else v-html="$t('sponsors.moreInfo')" />
+        <div v-else v-html="$t('rbcn2022.sponsors.moreInfo')" />
       </transition>
     </div>
   </div>

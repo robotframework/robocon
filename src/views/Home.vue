@@ -1,173 +1,63 @@
 <template>
-  <nav-mobile />
-  <banner />
-  <navbar class="nav-desktop" />
-  <news-banner
-    v-if="$te('newsBanner') && $t('newsBanner') !== ''"
-    class="mb-small mt-small" />
-  <div class="container mb-xlarge">
+  <banner>
+    <div>
+      <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
+    </div>
+  </banner>
+  <div class="container">
     <page-section
       title-id="intro"
-      :title="$t('intro.title')"
-      :body="$t('intro.body')">
-      <div class="row center">
-        <ticket :ticket="{ title: 'Recordings', price: '24,80 €' }" />
-        <sponsors class="mt-xlarge" />
-        <timeline class="mt-large"/>
+      :title="$t('home.intro.title')"
+      :full-width="true">
+      <div class="row center col-lg-7 col-lg-offset-3">
+        <div v-html="$t('home.intro.body')" />
       </div>
-      <tab-box
-        class="mt-small"
-        section-id="intro"
-        :tabs="$tm('intro.tabs')" />
-    </page-section>
-    <page-section
-      title-id="workshops"
-      :title="$t('workshops.title')"
-      :body="$t('workshops.description')">
-      <talks
-        v-if="loaded"
-        :talks="workshops"
-        :speakers="workshopSpeakers"
-        :talks-with-pictures="workshopImages" />
-    </page-section>
-    <page-section
-      title-id="sprints"
-      :title="$t('sprints.title')"
-      :body="$t('sprints.description')">
-    </page-section>
-    <page-section
-      title-id="talks"
-      :title="$t('talks.title')">
-      <talks
-        v-if="loaded"
-        :talks="talks"
-        :speakers="speakers"
-        header-link="https://tickets.robotframework.org/rc2022/" />
-    </page-section>
-    <!-- <page-section
-      title-id="cfp"
-      :title="$t('cfp.title')"
-      :body="$t('cfp.body')">
-    </page-section> -->
-    <page-section
-      title-id="covid"
-      :title="$t('covid.title')"
-      :body="$t('covid.body')">
-    </page-section>
-    <page-section
-      title-id="previousTalks"
-      :title="$t('previousTalks.title')"
-      :body="$t('previousTalks.body')">
-      <previous-talks />
+      <h2 class="col-lg-offset-3 mt-xlarge">Available Tickets</h2>
+      <div
+        v-for="ticket in $tm('home.tickets')"
+        :key="ticket.title"
+        class="row mt-large"
+        :class="ticket.theme">
+        <div class="col-sm-12 col-lg-3">
+          <ticket :link="ticket.link">
+            <template v-slot:title>
+              <div v-html="ticket.title" />
+            </template>
+            <template v-slot:price>
+              <div v-html="ticket.price" />
+            </template>
+            <template v-slot:left>
+              ROBOCON
+            </template>
+            <template v-slot:right>
+              <div v-html="ticket.side" />
+            </template>
+          </ticket>
+        </div>
+        <div class="col-sm-12 col-lg-7">
+          <div v-html="ticket.description" />
+          <router-link v-if="ticket.page" :to="{ name: ticket.page.to }">
+           {{ ticket.page.text }}
+          </router-link>
+        </div>
+      </div>
     </page-section>
   </div>
-  <page-footer />
 </template>
 
 <script>
 import {
   Banner,
-  PageFooter,
-  Navbar,
-  NavMobile,
   PageSection,
-  TabBox,
-  NewsBanner,
-  Ticket,
-  Sponsors,
-  Talks,
-  PreviousTalks,
-  Timeline
+  Ticket
 } from 'Components'
 
 export default {
   name: 'App',
   components: {
     Banner,
-    PageFooter,
-    Navbar,
-    NavMobile,
     PageSection,
-    TabBox,
-    NewsBanner,
-    Ticket,
-    Sponsors,
-    Talks,
-    PreviousTalks,
-    Timeline
-  },
-  data: () => ({
-    talks: [],
-    workshops: [],
-    speakers: [],
-    workshopSpeakers: [],
-    workshopImages: [],
-    workshopLinks: [
-      { id: 16882, link: 'https://tickets.robotframework.org/workshops-rc2022/3191186/' },
-      { id: 13758, link: 'https://tickets.robotframework.org/workshops-rc2022/3191184/' },
-      { id: 13963, link: 'https://tickets.robotframework.org/workshops-rc2022/3191185/' },
-      { id: 13231, link: 'https://tickets.robotframework.org/workshops-rc2022/3191183/' },
-      { id: 12907, link: 'https://tickets.robotframework.org/workshops-rc2022/2659941/' }
-    ],
-    loaded: false
-  }),
-  created() {
-    fetch('https://cfp.robocon.io/robocon-2022/schedule/widget/v2.json')
-      .then((res) => res.json())
-      .then(({ talks, speakers }) => {
-        this.talks = talks
-          .filter(({ room }) => room === 1193)
-          .map((talk) => ({
-            ...talk,
-            expanded: false,
-            speakers: talk.speakers ? talk.speakers.map((code) => ({
-              code,
-              avatar: speakers.find((speaker) => speaker.code === code).avatar,
-              name: speakers.find((speaker) => speaker.code === code).name,
-              expanded: false
-            })) : []
-          }))
-        this.workshopImages = speakers
-      })
-      .then(() => {
-        fetch('https://pretalx.com/robocon-2022/schedule/export/schedule.json')
-          .then((res) => res.json())
-          .then(({ schedule }) => {
-            const talks = schedule.conference.days
-              .filter(({ date }) => ['2022-05-19', '2022-05-20'].includes(date))
-              .flatMap(({ rooms }) => rooms['Main Hall'])
-            const workshopsDay = schedule.conference.days
-              .find(({ date }) => date === '2022-05-17')
-            const workshops = Object.keys(workshopsDay.rooms)
-              .reduce((arr, room) => [...arr, workshopsDay.rooms[room][0]], [])
-              .map((workshop) => ({
-                ...workshop,
-                ticketLink: this.workshopLinks.find(({ id }) => id === workshop.id).link
-              }))
-            this.workshops = workshops
-              .map((workshop) => ({
-                ...workshop,
-                start: workshop.date,
-                speakers: workshop.persons
-              }))
-            this.workshopSpeakers = workshops
-              .flatMap(({ persons }) => persons)
-            this.speakers = schedule.conference.days
-              .flatMap(({ rooms }) => (('Main Hall' in rooms) ? rooms['Main Hall'] : [])
-                .flatMap(({ persons }) => persons))
-              .filter(({ code }, index, self) => self.map(({ code }) => code).indexOf(code) === index)
-            this.talks.forEach((talk) => {
-              const foundTalk = talks.find(({ url }) => url.includes(talk.code))
-              if (foundTalk) talk.description = foundTalk.description
-            })
-            this.loaded = true
-            this.$nextTick(() => {
-              const hash = window.location.hash
-              if (hash === '#workshops') document.getElementById('workshops').scrollIntoView()
-              if (hash === '#talks') document.getElementById('talks').scrollIntoView()
-            })
-          })
-      })
+    Ticket
   }
 }
 </script>

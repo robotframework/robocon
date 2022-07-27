@@ -1,4 +1,16 @@
 @font-face {
+    font-family: 'RBCN';
+    src: url('~Fonts/RBCN22.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'RBCN-Legacy';
+    src: url('~Fonts/RBTFNT.woff') format('woff');
+    font-display: swap;
+    font-weight: 500;
+}
+@font-face {
     font-family: 'RBCN22';
     src: url('~Fonts/RBCN-thin.woff2') format('woff');
     font-display: swap;
@@ -41,26 +53,14 @@ html {
 }
 
 h1, h2 {
-    font-family: 'RBCN22';
+    font-family: var(--font-title);
     line-height: var(--line-height-headers);
-    color: #fff;
-    text-shadow:
-      0 0 0.5rem #fff,
-      0 0 1rem #fff,
-      0 0 2rem #fe4bd2,
-      0 0 4rem #fe4bd2;
-}
-h2 {
-    color: #ffe8f9;
-    text-shadow:
-      0 0 0.5rem #fff,
-      0 0 1rem #fe4bd2,
-      0 0 2rem #fe4bd2;
+    color: var(--color-theme);
 }
 .glow-cheap {
     text-shadow:
       0 0 0.5rem #fff,
-      0 0 1rem #fe4bd2;
+      0 0 1rem var(--color-theme-secondary);
 }
 h3, h4 {
     font-family: var(--font-title);
@@ -73,10 +73,22 @@ body, textarea, button {
 
 h1 {
     font-size: var(--type-2xlarge);
-    color: var(--color-primary);
     font-weight: var(--weight-body);
     margin: var(--margin-bottom-h1) 0;
     line-height: var(--line-height-h1);
+}
+
+.theme-2022 h1, .theme-2022 h2 {
+    font-family: 'RBCN22';
+    color: var(--color-white);
+    text-shadow:
+      0 0 0.5rem #fff,
+      0 0 1rem #fff,
+      0 0 2rem #fe4bd2,
+      0 0 4rem #fe4bd2;
+}
+.theme-2022 h1 {
+    font-size: 11rem;
 }
 
 h2 {
@@ -266,4 +278,20 @@ strong,
 
 .type-italic {
     font-style: italic;
+}
+
+.router-link {
+    color: var(--color-white);
+    font-family: var(--font-title);
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.router-link:hover {
+    text-decoration: underline;
+    color: var(--color-theme);
+}
+.router-link-active {
+    color: var(--color-theme);
 }

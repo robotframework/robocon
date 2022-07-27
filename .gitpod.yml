@@ -1,0 +1,12 @@
+tasks:
+  - init: npm install && npm run dev
+ports:
+  - name: Development Page of RoboCon
+    description: The RoboCon Page as Preview-Dev-Page
+    port: 8080
+    onOpen: notify
+vscode:
+  extensions:
+    - octref.vetur
+    - ecmel.vscode-html-css
+    - dbaeumer.vscode-eslint

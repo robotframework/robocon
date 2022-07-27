@@ -1,7 +1,7 @@
 <template>
   <div class="row m-none">
     <div
-      v-for="(item, i) in $tm('intro.timeline')"
+      v-for="(item, i) in $tm('intro22.timeline')"
       :key="i"
       class="col-sm-12 col-md-4 row px-xsmall"
       :class="$store.state.isMobile ? 'py-small' : (i === 0 ? 'pl-none' : i === 2 ? 'pr-none' : 'pl-2xsmall pr-2xsmall')">

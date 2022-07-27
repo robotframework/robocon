@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "4a9e414a2e0a3e19dc3d",
-    "url": "dist/css/app.49696ee6.css"
+    "revision": "84617129de5d9623837b",
+    "url": "dist/css/app.7cc7c96b.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -26,6 +26,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9ed7d40451046fddd70c1697a0dccc08",
     "url": "dist/fonts/RBCN-thin.9ed7d404.woff2"
+  },
+  {
+    "revision": "f1198aadf6009ce13452f0d244e056e7",
+    "url": "dist/fonts/RBCN22.f1198aad.ttf"
+  },
+  {
+    "revision": "63ef3191b86632e0c74a093ecad7af10",
+    "url": "dist/fonts/RBTFNT.63ef3191.woff"
   },
   {
     "revision": "8297cf2cf2a9fc56bd612112f636de30",
@@ -50,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f5fe2f626289d9e83ecc84a66537c631",
     "url": "dist/img/Slack.svg"
+  },
+  {
+    "revision": "3b08b66e439f376aa031338388b3ff2d",
+    "url": "dist/img/rf-pattern.jpg"
   },
   {
     "revision": "f249f06c58c67fa07b3c13e751d3e9d4",
@@ -100,16 +112,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/vala.png"
   },
   {
-    "revision": "00c84c2f9f2b4a6da59c49650a5a987d",
+    "revision": "77f87e86d6f721c6b5f81a87fd16c267",
+    "url": "dist/img/ticket-depth.jpg"
+  },
+  {
+    "revision": "d5d6fa33e703a72a28f6f13c676d4e4b",
     "url": "dist/index.html"
   },
   {
-    "revision": "4a9e414a2e0a3e19dc3d",
-    "url": "dist/js/app.39e7700f.js"
+    "revision": "84617129de5d9623837b",
+    "url": "dist/js/app.c840a84e.js"
   },
   {
-    "revision": "042a28046de4e90462d4",
-    "url": "dist/js/chunk-vendors.720d0c7b.js"
+    "revision": "caa90e6b35cacfb5adde",
+    "url": "dist/js/chunk-vendors.c2147ffa.js"
   },
   {
     "revision": "ae69c76f0db87375aa82706bd2ce675f",

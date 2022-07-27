@@ -3,15 +3,18 @@
 .color-theme {
     color: var(--color-theme);
 }
+.color-theme-22 {
+    color: var(--color-theme-22);
+}
 .bg-theme {
     background-color: var(--color-theme);
 }
 
 .color-secondary {
-    color: var(--color-secondary);
+    color: var(--color-theme-secondary);
 }
 .bg-secondary {
-    background-color: var(--color-secondary);
+    background-color: var(--color-theme-secondary);
 }
 
 .color-alert {
@@ -74,4 +77,7 @@
 
 .hover-bright:hover {
     filter: brightness(1.1);
+}
+.hover-color-theme:hover {
+    color: var(--color-theme) !important;
 }
