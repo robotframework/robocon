@@ -54,7 +54,7 @@ export default {
       price: '<strike>1200</strike> 700 €<span class="type-xsmall"> +VAT</span>',
       link: 'https://tickets.robotframework.org/robocon-2023/3410049/',
       side: '2023-JAN',
-      description: `<p>Discounted blind tickets for 2023 Helsini conference are available now!
+      description: `<p>Discounted blind tickets for 2023 Helsinki conference are available now!
       The discount is valid until talks and conference program is published. This ticket also includes
       <span class="color-theme">instant access to 2022 talks.</span></p>
       <p><span class="color-theme">This ticket does include the ticket to RoboCon Online 2023!</span></p>`
