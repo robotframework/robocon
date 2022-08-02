@@ -1,5 +1,6 @@
 tasks:
-  - init: npm install && npm run dev
+  - init: npm install
+    command: npm run dev
 ports:
   - name: Development Page of RoboCon
     description: The RoboCon Page as Preview-Dev-Page
