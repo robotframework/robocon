@@ -27,6 +27,19 @@
               {{ talk.title.en || talk.title }}
             </h3>
             <div
+              v-if="talk.yt_link"
+              class="video col-sm-9 pl-3xsmall">
+              <iframe
+                class="rounded"
+                width="100%"
+                height="100%"
+                :src="`https://www.youtube.com/embed/${talk.yt_link}?rel=0`"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen />
+            </div>
+            <div
               v-if="talk.abstract"
               class="mt-medium"
               v-html="parseMarkdown(talk.abstract)" />
@@ -165,7 +178,6 @@ export default {
   .dateTitle {
     top: 3.35rem;
     margin-right: -1rem;
-    background-color: #111;
     width: 99%;
     transform: scaleX(1.05);
     z-index: 7;
@@ -220,4 +232,18 @@ export default {
   .ticket:hover > a {
     color: var(--color-theme) !important;
   }
+
+  .video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 43%; /* ratio 16/9 */
+  }
+
+  .video iframe {
+    border: 1px solid var(--color-black);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
 </style>

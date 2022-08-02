@@ -4,15 +4,6 @@ export default {
     body: '<p>All RoboCon talks over the years have been recorded. Feel free to watch them here or directly in <a href="https://www.youtube.com/c/RobotFrameworkChannel/playlists">YouTube</a>.</p>',
     talks: [
       {
-        year: 2022,
-        list: [
-          {
-            authors: ['René Rohner', 'Ed Manlove', 'Pekka Klärck'],
-            title: 'KEYNOTE: Robot Framework',
-            url: 'https://www.youtube.com/embed/jlhgitypC5Q'
-          }
-        ]
-      }, {
         year: 2021,
         playlistLink: 'https://www.youtube.com/playlist?list=PLSK6YK5OGX1ALlSRlwr9dWJu3mFHMlVq8',
         list: [
