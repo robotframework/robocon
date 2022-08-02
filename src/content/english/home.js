@@ -41,9 +41,9 @@ export default {
       theme: 'theme-germany'
     },
     {
-      title: '2023 Online<div class="type-small">Early Blind</div>',
+      title: '2023 Online<div class="type-small">Early Blind Robot</div>',
       price: '<strike>350</strike> 100 €<span class="type-xsmall"> +VAT</span>',
-      link: 'https://tickets.robotframework.org/robocon-2023/',
+      link: 'https://tickets.robotframework.org/robocon-2023/3410050/',
       side: '2023-MAR',
       description: `<p>Discounted blind tickets for 2023 online conference are available now!
       The discount is valid until August 21st. This ticket also includes
@@ -52,7 +52,7 @@ export default {
     {
       title: '2023 Helsinki<div class="type-small">Blind Robot</div>',
       price: '<strike>1200</strike> 700 €<span class="type-xsmall"> +VAT</span>',
-      link: 'https://tickets.robotframework.org/robocon-2023/',
+      link: 'https://tickets.robotframework.org/robocon-2023/3410049/',
       side: '2023-JAN',
       description: `<p>Discounted blind tickets for 2023 Helsini conference are available now!
       The discount is valid until talks and conference program is published. This ticket also includes
