@@ -11,7 +11,8 @@
       </h3>
       <div
         v-for="talk in talks"
-        :key="talk.code">
+        :key="talk.code"
+        :id="slugify(talk.title.en || talk.title)">
         <div class="card row p-small mb-medium">
           <div class="col-sm-12 col-md-9 col-lg-7 pr-small">
             <div v-if="talk.end">
@@ -23,7 +24,7 @@
             <div v-else>
               start: {{ format(new Date(talk.start), 'HH:mm') }} - {{ Number(talk.duration.split(':')[0]) }} hrs
             </div>
-            <h3 :id="slugify(talk.title.en || talk.title)" class="talkTitle">
+            <h3 :id="`${slugify(talk.title.en || talk.title)}_title`" class="talkTitle">
               {{ talk.title.en || talk.title }}
             </h3>
             <div

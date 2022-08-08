@@ -95,23 +95,28 @@ export default {
       },
       {
         id: 15745,
-        title: 'How Robocop evolved to 2.0?'
+        title: 'How Robocop evolved to 2.0?',
+        link: 't_R36N_4UBk'
       },
       {
         id: 15776,
-        title: 'Tidy your code with Robotidy'
+        title: 'Tidy your code with Robotidy',
+        link: '8ELCaSKR6Ns'
       },
       {
         id: 13717,
-        title: 'Project and package management: Poetry for robots'
+        title: 'Project and package management: Poetry for robots',
+        link: 'UjzXCDcnTs0'
       },
       {
         id: 14114,
-        title: 'CamundaLibrary - Updates and Roadmap'
+        title: 'CamundaLibrary - Updates and Roadmap',
+        link: '5mjjZ4KmPJ0'
       },
       {
         id: 13550,
-        title: 'Accessability checking with Browser Extensions'
+        title: 'Accessability checking with Browser Extensions',
+        link: 'sQ6lekIq1mE'
       },
       {
         id: 14173,

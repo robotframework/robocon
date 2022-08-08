@@ -96,7 +96,7 @@ export default {
     this.mapSvg = MapGermany()
     this.logoSvg = LogoGermany()
     this.logoSvgMobile = LogoGermany().replace('15vh', '10vh')
-    this.ticket = this.$tm('home.tickets').find(({ side }) => side === '05-10-2022')
+    this.ticket = this.$tm('home.tickets').find(({ side }) => side === '05-10-22')
   }
 }
 </script>
