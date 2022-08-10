@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-black color-white p-small pt-large pb-large">
+  <div class="row bg-black color-white p-small pt-large pb-large" style="margin-top: auto">
     <div class="container" style="line-height: 2;">
       <div class="row">
         <div class="col-sm-6 col-md-3">

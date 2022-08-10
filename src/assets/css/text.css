@@ -295,3 +295,14 @@ strong,
 .router-link-active {
     color: var(--color-theme);
 }
+
+ul {
+    list-style: none;
+}
+  
+ul li::before {
+    content: "⦿";
+    color: var(--color-theme);
+    display: inline-block;
+    width: 1.5rem;
+}
