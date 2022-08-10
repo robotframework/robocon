@@ -68,12 +68,21 @@
           </template>
         </ticket>
       </page-section>
+      <page-section
+      title-id="talks"
+      :title="$t('germany.talks.title')">
+      <talks
+        v-if="talks"
+        :talks="talks"
+        :speakers="speakers"
+        header-link="https://tickets.robotframework.org/robocon-2022-DE/" />
+    </page-section>
     </div>
   </div>
 </template>
 
 <script>
-import { Banner, BaseIcon, PageSection, Ticket } from 'Components'
+import { Banner, BaseIcon, PageSection, Ticket, Talks } from 'Components'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import MapGermany from 'Img/qs-day-map'
 import LogoGermany from 'Img/qs-day-logo'
@@ -84,19 +93,28 @@ export default {
     Banner,
     BaseIcon,
     PageSection,
-    Ticket
+    Ticket,
+    Talks
   },
   data: () => ({
+    talks: [],
+    speakers: [],
     mapSvg: '',
     logoSvg: '',
     logoSvgMobile: '',
     ticket: null
   }),
   mounted() {
+    this.talks = this.$tm('germany.talks.talks')
+    this.speakers = this.$tm('germany.talks.speakers')
     this.mapSvg = MapGermany()
     this.logoSvg = LogoGermany()
     this.logoSvgMobile = LogoGermany().replace('15vh', '10vh')
     this.ticket = this.$tm('home.tickets').find(({ side }) => side === '05-10-22')
+  },
+  created() {
+    const hash = window.location.hash
+    if (hash === '#talks') document.getElementById('talks').scrollIntoView()
   }
 }
 </script>
