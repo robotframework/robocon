@@ -7,6 +7,10 @@
     margin-right: auto;
 }
 
+.mt-auto {
+    margin-top: auto;
+}
+
 .m-3xsmall {
     margin: var(--size-3xsmall);
 }
