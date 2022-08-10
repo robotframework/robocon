@@ -104,7 +104,7 @@ Wir wollten Berichte mit Screenshots haben, die die verschiedenen Bereiche hervo
         expanded: false,
         yt_link: null,
         description: `🇬🇧 When testing complex and global systems, more and more demands are placed on a CI pipeline.
-        
+
 Conventional solutions like Jenkins or Gitlab reach their limits where it became exciting for us.
 
 The challenge was tests that ran over several days, as the reactions of the system under test could sometimes only be checked the next day or days later. During the execution, different process steps had to be executed repeatedly. Nevertheless, a continuous process flow should be visible and tester should be able to see the state of the pipeline at any time without deeper knowledge of CI systems.
@@ -268,7 +268,7 @@ More details coming soon...`
         public_name: 'René Rohner',
         biography: `René Rohner is a Senior Consultant for Testing Systems, Product Owner of the Value Stream Test Automation at imbus in Germany and Chairman of the board of Robot Framework Foundation.
 
-        He is member of the Core Team of Robot Framework Browser and developer of Robot Framework DataDriver. He is trainer and coach for Keyword-Driven Testing in multiple small and huge projects in Germany.`,
+He is member of the Core Team of Robot Framework Browser and developer of Robot Framework DataDriver. He is trainer and coach for Keyword-Driven Testing in multiple small and huge projects in Germany.`,
         answers: []
       },
       {
