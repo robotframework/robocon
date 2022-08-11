@@ -125,7 +125,7 @@ Your talk shall be pre-recorded and will be streamed before people are sent to t
 
 Robot Framework Foundation members do have a preferred access.
 Members who book Online + Helsinki Sponsorship are also prefered and have higher priority.
-Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after Novembeer first, if the spots are not all required by Foundation members.           `
+Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
           }
         ],
         url: 'https://tickets.robotframework.org/robocon-2023/'
@@ -217,7 +217,7 @@ This video may have sound and will be shown in Helsinki and online.`
             description: `Due to the size of Bio Rex at RoboCon Helsinki we do have limited availability of 10 booths.
 
 Robot Framework Foundation members do have a preferred access.
-Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after Novembeer first, if the spots are not all required by Foundation members.           `
+Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
           }
         ],
         url: 'https://tickets.robotframework.org/robocon-2023/'
@@ -303,7 +303,7 @@ Your talk will be recorded and streamed later online on part 2 of RoboCon.`
 
 Robot Framework Foundation members do have a preferred access.
 Members who book Online + Helsinki Sponsorship are also prefered and have higher priority compared to Online Only.
-Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after Novembeer first, if the spots are not all required by Foundation members.           `
+Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
           }
         ],
         url: 'https://tickets.robotframework.org/robocon-2023/'
