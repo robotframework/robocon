@@ -1,13 +1,11 @@
 export default {
-  title: 'Sponsor RoboCon',
-  subTitle: `### Become a Sponsor of RoboCon!
+  title: 'Sponsorship',
+  subTitle: `### Become a sponsor of RoboCon!
 
-You want to give something back to Robot Framework?
+Do you want to give something back to Robot Framework? Want to present your company as a supporter of RoboCon and Robot Framework?
 
-You want to present your company as a supporter of RoboCon and Robot Framework?
-
-Then join our sponsors and help to create an awesome event again.
-If you have any questions about sponsorship please contact the RoboCon Team.`,
+Join our sponsors and help us create an awesome event yet again.
+If you have any questions about sponsorship please contact the [RoboCon team](mailto:info{at}{'@'}{at}robocon.io).`,
   joinButton: 'Join',
   tiers: {
     online: [
@@ -16,18 +14,18 @@ If you have any questions about sponsorship please contact the RoboCon Team.`,
         price: '2000 €',
         perks: [
           {
-            name: 'Company Logo',
-            description: 'Your company logo will be visible on robocon.io after January and at our Online Venue. **Small** company logo on screen between presentations online.'
+            name: 'Company logo (online)',
+            description: 'Your company logo will be visible on robocon.io after January and at our online venue. **Small** company logo on screen between presentations online.'
           },
           {
-            name: 'Social Media',
+            name: 'Social media',
             description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
           },
           {
-            name: 'Free Tickets',
+            name: 'Free tickets',
             description: `You will get:
 
-- 3 free Online Tickets for the online part of RoboCon`
+- 3 free online tickets for the online part of RoboCon`
           }
         ],
         url: 'https://tickets.robotframework.org/robocon-2023/'
@@ -37,36 +35,36 @@ If you have any questions about sponsorship please contact the RoboCon Team.`,
         price: '4000 €',
         perks: [
           {
-            name: 'Company Logo',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our Online Venue. **Medium size** company logo on screen between presentations.'
+            name: 'Company logo (online + Helsinki)',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Medium size** company logo on screen between presentations.'
           },
           {
-            name: 'Social Media',
+            name: 'Social media',
             description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
           },
           {
-            name: 'Free Tickets',
+            name: 'Free tickets',
             description: `You will get:
 
-- 4 free Online Tickets for the online part of RoboCon.`
+- 4 free online tickets for the online part of RoboCon.`
           },
           {
-            name: 'Booth Online',
+            name: 'Booth online',
             description: `You will get an online booth at Gather.town, where you can have up to four items like:
 - PDF documents
 - hyperlinks
 - iframes
-- youtube videos`
+- Youtube videos`
           },
           {
-            name: 'Publish Job Offers',
+            name: 'Publish job offers',
             description: 'We give you the opportunity to post job offers on our noticeboard online.'
           },
           {
-            name: '30 sec. Video',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold Sponsors multiple orders.
+            name: 'Video between breaks (30 sec)',
+            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
 
-This Video may have sound and will be streamed online.`
+This video may have sound and will be streamed online.`
           }
         ],
         url: 'https://tickets.robotframework.org/robocon-2023/'
@@ -76,48 +74,48 @@ This Video may have sound and will be streamed online.`
         price: '8000 €',
         perks: [
           {
-            name: 'Company Logo',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our Online Venue. **Premium size** company logo on screen between presentations.'
+            name: 'Company logo',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Premium size** company logo on screen between presentations.'
           },
           {
-            name: 'Social Media',
+            name: 'Social media',
             description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
           },
           {
-            name: 'Free Tickets',
+            name: 'Free tickets',
             description: `You will get:
 
-- 8 free Online Tickets for the online part of RoboCon`
+- 8 free online tickets for the online part of RoboCon`
           },
           {
-            name: 'Platinum Booth Online',
+            name: 'Platinum booth online',
             description: `You will get a platinum online booth at Gather.town, where you can have up to ten items like:
 - PDF documents
 - hyperlinks
 - iframes
-- youtube videos
+- Youtube videos
 
-On the one day where you are the Platinum Sponsor your booth will be at the center of the conferece.`
+On the one day where you are the Platinum sponsor your booth will be at the center of the conferece.`
           },
           {
-            name: 'Publish Job Offers',
+            name: 'Publish job offers',
             description: 'We give you the opportunity to post job offers on our noticeboard online.'
           },
           {
-            name: '30 sec. Video',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold Sponsors multiple orders.
+            name: 'Video between breaks (30 sec)',
+            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
 
-This Video may have sound and will be shown in Helsinki and online.`
+This video may have sound and will be shown in Helsinki and online.`
           },
           {
-            name: 'Platinum Sponsor for 1-Day',
-            description: `Your company will be the platinum Sponsor for one day of RoboCon.
+            name: 'Platinum sponsor for 1 day',
+            description: `Your company will be the Platinum sponsor for one day of RoboCon.
 
-You will be mentioned as the sponsor of this day and your Logo will be shown.`
+You will be mentioned as the sponsor of this day and your logo will be shown.`
           },
           {
-            name: '5 min Sponsor Video',
-            description: `You will get a spot for a video directly at the end of Keynote (5 minutes) online.
+            name: 'Sponsor video (5 min)',
+            description: `You will get a spot for a video (5 minutes) directly at the end of a keynote online.
 
 Your talk shall be pre-recorded and will be streamed before people are sent to the first break.`
           }
@@ -131,22 +129,22 @@ Your talk shall be pre-recorded and will be streamed before people are sent to t
         price: '3000 €',
         perks: [
           {
-            name: 'Company Logo',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our Online Venue. **Small** company logo on screen between presentations.'
+            name: 'Company logo (small)',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Small** company logo on screen between presentations.'
           },
           {
-            name: 'Social Media',
+            name: 'Social media',
             description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
           },
           {
-            name: 'Free Tickets',
+            name: 'Free tickets',
             description: `You will get:
 
-- 3 free Online Tickets for the online part of RoboCon
+- 3 free online tickets for the online part of RoboCon
 
 OR
 
-- 1 free Helsinki Ticket, which includes access to online part as well.`
+- 1 free Helsinki ticket, which includes access to online part as well.`
           }
         ],
         url: 'https://tickets.robotframework.org/robocon-2023/'
@@ -156,28 +154,28 @@ OR
         price: '6000 €',
         perks: [
           {
-            name: 'Company Logo',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our Online Venue. **Medium size** company logo on screen between presentations.'
+            name: 'Company logo (medium)',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Medium size** company logo on screen between presentations.'
           },
           {
-            name: 'Social Media',
+            name: 'Social media',
             description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
           },
           {
-            name: 'Lead Scanning',
-            description: `You will have the oportunity to use our Lead Scanning, to get in contact with our on-site visitors in Helsinki.
-
-See here for more information: https://pretix.eu/about/en/lead`
-          },
-          {
-            name: 'Free Tickets',
+            name: 'Free tickets',
             description: `You will get:
 
-- 2 free Online Tickets for the online part of RoboCon
+- 2 free online tickets for the online part of RoboCon
 
 AND
 
-- 2 free Helsinki Ticket, which includes access to online part as well.`
+- 2 free Helsinki tickets, which includes access to online part as well.`
+          },
+          {
+            name: 'Lead scanning',
+            description: `You will have the oportunity to use our lead scanning to get in contact with our on-site visitors in Helsinki.
+
+See here for more information: https://pretix.eu/about/en/lead`
           },
           {
             name: 'Booth @ Bio Rex',
@@ -185,26 +183,26 @@ AND
 
 Your booth includes:
 - a TV-screen for demonstration
-- Company Logo on Booth
-- Bar table with chair`
+- company logo on booth
+- bar table with chair`
           },
           {
-            name: 'Booth Online',
+            name: 'Booth online',
             description: `You will get an online booth at Gather.town, where you can have up to four items like:
 - PDF documents
 - hyperlinks
 - iframes
-- youtube videos`
+- Youtube videos`
           },
           {
-            name: 'Publish Job Offers',
+            name: 'Publish job offers',
             description: 'We give you the opportunity to post job offers on our noticeboard in Helsinki and online.'
           },
           {
-            name: '30 sec. Video',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold Sponsors multiple orders.
+            name: 'Video between breaks (30 sec)',
+            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
 
-This Video may have sound and will be shown in Helsinki and online.`
+This video may have sound and will be shown in Helsinki and online.`
           }
         ],
         url: 'https://tickets.robotframework.org/robocon-2023/'
@@ -214,73 +212,73 @@ This Video may have sound and will be shown in Helsinki and online.`
         price: '16000 €',
         perks: [
           {
-            name: 'Company Logo',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our Online Venue. **Premium size** company logo on screen between presentations.'
+            name: 'Company logo (large)',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Premium size** company logo on screen between presentations.'
           },
           {
-            name: 'Social Media',
+            name: 'Social media',
             description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
           },
           {
-            name: 'Lead Scanning',
-            description: `You will have the oportunity to use our Lead Scanning, to get in contact with our on-site visitors in Helsinki.
+            name: 'Free tickets',
+            description: `You will get:
+
+- 4 free online tickets for the online part of RoboCon
+
+AND
+
+- 4 free Helsinki tickets, which include access to online part as well.`
+          },
+          {
+            name: 'Lead scanning',
+            description: `You will have the oportunity to use our lead scanning to get in contact with our on-site visitors in Helsinki.
 
 See here for more information: https://pretix.eu/about/en/lead`
           },
           {
-            name: 'Free Tickets',
-            description: `You will get:
-
-- 4 free Online Tickets for the online part of RoboCon
-
-AND
-
-- 4 free Helsinki Ticket, which includes access to online part as well.`
-          },
-          {
-            name: 'Platinum Booth @ Bio Rex',
+            name: 'Booth @ Bio Rex (platinum)',
             description: `You will get a platinum booth for one day at Bio Rex Helsinki.
 
 Your booth includes:
 - a horizontal TV-screen for demonstration
 - a vertical human size screen for loop presentation
-- Company Logo on Booth
-- Bar table with chair
+- company logo on booth
+- bar table with chair
 - lounge table with lounge chairs
 
-**On the other day you will get a normal Gold Sponsor booth.**`
+**On the other day you will get a normal Gold sponsor booth.**`
           },
           {
-            name: 'Platinum Booth Online',
+            name: 'Booth online (platinum)',
             description: `You will get a platinum online booth at Gather.town, where you can have up to ten items like:
 - PDF documents
 - hyperlinks
 - iframes
-- youtube videos
+- Youtube videos
 
-On the one day where you are the Platinum Sponsor your booth will be at the center of the conferece.`
+On the one day where you are the Platinum sponsor your booth will be at the center of the conferece.`
           },
           {
-            name: 'Publish Job Offers',
+            name: 'Publish job offers',
             description: 'We give you the opportunity to post job offers on our noticeboard in Helsinki and online.'
           },
           {
-            name: '30 sec. Video',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold Sponsors multiple orders.
+            name: 'Video between breaks (30 sec)',
+            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
 
-This Video may have sound and will be shown in Helsinki and online.`
+This video may have sound and will be shown in Helsinki and online.`
           },
           {
-            name: 'Platinum Sponsor for 1-Day',
-            description: `Your company will be the platinum Sponsor for one day of RoboCon.
+            name: 'Platinum sponsor for 1 day',
+            description: `Your company will be the platinum sponsor for one day of RoboCon.
 
-You will be mentioned as the sponsor of this day and your Logo will be shown.
+You will be mentioned as the sponsor of this day and your logo will be shown.
 
-You may want to book a second day of Platinum Sponsoring in Helsinki for 10.000€, which gives you on both days the platinum booth.`
+You may want to book a second day of Platinum sponsoring in Helsinki for 10.000€, which gives you on both days the platinum booth.`
           },
           {
-            name: '25 min Sponsor Talk',
-            description: `You will get a talk spot for a full talk (25 minutes) directly after Keynote in Helsinki on-stage.
+            name: 'Sponsor talk (25 min)',
+            description: `You will get a talk spot for a full talk (25 minutes) directly after keynote in Helsinki on-stage.
 
 Your talk will be recorded and streamed later online on part 2 of RoboCon.`
           }

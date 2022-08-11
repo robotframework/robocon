@@ -15,11 +15,11 @@
   <div
     class="navbar row between bg-black color-white"
     :class="isOpen ? 'open' : ''">
-    <div class="flex middle pl-xsmall">
-      <base-icon name="robot" color="white" size="1.75rem" />
-      <div class="font-title ml-xsmall">
+    <div class="flex middle pl-small">
+      <base-icon name="robot" color="white" size="1.25rem" />
+      <router-link :to="{ name: 'Home' }" class="router-link type-large mx-xsmall">
         ROBOCON
-      </div>
+      </router-link>
     </div>
     <button
       class="hamburger"
@@ -126,12 +126,6 @@ export default {
   top: 10px;
   width: 0%;
   left: 50%;
-}
-
-@media screen and (min-width: 769px) {
-  .navbar, .menu {
-    display: none;
-  }
 }
 
 </style>

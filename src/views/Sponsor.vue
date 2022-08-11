@@ -1,10 +1,9 @@
 <template>
   <banner>
-    <h1 class="type-xlarge" v-html="$t('sponsor.title')" />
-    <p v-html="parseMarkdown($t('sponsor.subTitle'))" />
-    <a href="mailto:info@robocon.io" >info@robocon.io</a>
+    <h1 class="type-xlarge mb-large" v-html="$t('sponsor.title')" />
+    <p class="col-md-8 col-md-offset-2" v-html="parseMarkdown($t('sponsor.subTitle'))" />
   </banner>
-  <div class="container">
+  <div class="container mb-large">
     <div class="row center mb-large mt-large">
       <button
         v-for="(tab, i) in ['Helsinki + Online', 'Only Online']"
@@ -18,10 +17,10 @@
     <transition class="sponsor-container" name="opacity" mode="out-in">
       <div :key="activeTabIndex" class="row center">
         <div
-          v-for="tier in activeTabIndex === 0 ? $tm('sponsor.tiers.irl') : $tm('sponsor.tiers.online')"
+          v-for="(tier, i) in activeTabIndex === 0 ? $tm('sponsor.tiers.irl') : $tm('sponsor.tiers.online')"
           :key="tier.name"
-          class="col-sm-10 col-md-8 col-lg-4 p-small">
-          <div class="card p-medium flex flex-col h-100">
+          class="col-sm-10 col-md-6 col-lg-4 p-xsmall">
+          <div class="card p-small pt-medium pb-large flex flex-col h-100">
             <h2 class="type-center mb-2xsmall">{{ tier.name }}</h2>
             <div class="type-large type-center">{{ tier.price}}</div>
             <ul class="my-small">
@@ -35,6 +34,7 @@
                   </button>
                   <div
                     class="perk-tooltip rounded-small bg-black p-small border-theme border-thin type-left"
+                    :class="[tooltipAlignClass(i)]"
                     v-html="parseMarkdown(perk.description)"/>
                 </div>
               </li>
@@ -61,6 +61,15 @@ export default {
   methods: {
     parseMarkdown(text) {
       return marked.parse(text)
+    },
+    tooltipAlignClass(i) {
+      if (i === 0) return 'tooltip-right'
+      if (this.$store.state.isDesktop) {
+        if (i === 2) return 'tooltip-left'
+      } else {
+        if (i === 1) return 'tooltip-left'
+      }
+      return ''
     }
   },
   data: () => ({
@@ -71,7 +80,7 @@ export default {
 
 <style scoped>
   .sponsor-container {
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   .perk-tooltip-button {
@@ -84,7 +93,7 @@ export default {
     line-height: 1.5;
     border-color: #aaa;
     transform: scale(0.8);
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
   .perk-tooltip {
     position: absolute;
@@ -94,9 +103,16 @@ export default {
     bottom: 100%;
     z-index: 2;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s;
     pointer-events: none;
     margin-bottom: 0.5rem;
+  }
+  .tooltip-right {
+    left: 0;
+  }
+  .tooltip-left {
+    left: unset;
+    right: 0;
   }
   @media screen and (max-width: 768px) {
     .tooltip-container {
@@ -108,12 +124,19 @@ export default {
       width: calc(100% - 2rem);
     }
   }
-  .perk-tooltip-button:hover, .perk-tooltip-button:focus {
+  .perk-tooltip-button:focus {
     border-color: var(--color-theme);
+  }
+  .perk-tooltip-button:hover {
     transform: scale(1);
   }
   .perk-tooltip-button:hover + .perk-tooltip, .perk-tooltip-button:focus + .perk-tooltip, .perk-tooltip:hover {
     opacity: 1;
     pointer-events: all;
+  }
+
+  li {
+    line-height: 1;
+    margin-bottom: 0.5rem;
   }
 </style>
