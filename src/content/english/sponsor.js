@@ -28,7 +28,7 @@ If you have any questions about sponsorship please contact the [RoboCon team](ma
 - 3 free online tickets for the online part of RoboCon`
           }
         ],
-        url: 'https://tickets.robotframework.org/robocon-2023/'
+        url: 'https://tickets.robotframework.org/robocon-2023/redeem?voucher=RBCN-2023-SPONSOR&subevent=3410049'
       },
       {
         name: 'Gold',
@@ -67,7 +67,7 @@ If you have any questions about sponsorship please contact the [RoboCon team](ma
 This video may have sound and will be streamed online.`
           }
         ],
-        url: 'https://tickets.robotframework.org/robocon-2023/'
+        url: 'https://tickets.robotframework.org/robocon-2023/redeem?voucher=RBCN-2023-SPONSOR&subevent=3410049'
       },
       {
         name: 'Platinum',
@@ -128,7 +128,7 @@ Members who book Online + Helsinki Sponsorship are also prefered and have higher
 Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
           }
         ],
-        url: 'https://tickets.robotframework.org/robocon-2023/'
+        url: 'https://tickets.robotframework.org/robocon-2023/redeem?voucher=RBCN-2023-SPONSOR&subevent=3410049'
       }
     ],
     irl: [
@@ -155,7 +155,7 @@ OR
 - 1 free Helsinki ticket, which includes access to online part as well.`
           }
         ],
-        url: 'https://tickets.robotframework.org/robocon-2023/'
+        url: 'https://tickets.robotframework.org/robocon-2023/redeem?voucher=RBCN-2023-SPONSOR&subevent=3410049'
       },
       {
         name: 'Gold',
@@ -220,7 +220,7 @@ Robot Framework Foundation members do have a preferred access.
 Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
           }
         ],
-        url: 'https://tickets.robotframework.org/robocon-2023/'
+        url: 'https://tickets.robotframework.org/robocon-2023/redeem?voucher=RBCN-2023-SPONSOR&subevent=3410049'
       },
       {
         name: 'Platinum',
@@ -306,7 +306,7 @@ Members who book Online + Helsinki Sponsorship are also prefered and have higher
 Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
           }
         ],
-        url: 'https://tickets.robotframework.org/robocon-2023/'
+        url: 'https://tickets.robotframework.org/robocon-2023/redeem?voucher=RBCN-2023-SPONSOR&subevent=3410049'
       }
     ]
   }
