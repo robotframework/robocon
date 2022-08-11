@@ -19,8 +19,8 @@
         <div
           v-for="(tier, i) in activeTabIndex === 0 ? $tm('sponsor.tiers.irl') : $tm('sponsor.tiers.online')"
           :key="tier.name"
-          class="col-sm-10 col-md-6 col-lg-4 p-xsmall">
-          <div class="card p-small pt-medium pb-large flex flex-col h-100">
+          class="col-sm-12 col-md-6 col-lg-4 p-xsmall">
+          <div class="card pt-medium pb-large flex flex-col h-100" :class="$store.state.isMobile ? 'p-xsmall' : 'p-small'">
             <h2 class="type-center mb-2xsmall">{{ tier.name }}</h2>
             <div class="type-large type-center">{{ tier.price}}</div>
             <ul class="my-small">
@@ -89,10 +89,11 @@ export default {
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
+    margin-left: -0.5rem;
     text-align: center;
     line-height: 1.5;
     border-color: #aaa;
-    transform: scale(0.8);
+    transform: scale(0.8) translateY(0.1rem);
     transition: all 0.3s;
   }
   .perk-tooltip {
@@ -128,7 +129,7 @@ export default {
     border-color: var(--color-theme);
   }
   .perk-tooltip-button:hover {
-    transform: scale(1);
+    transform: scale(1) translateY(0.1rem);
   }
   .perk-tooltip-button:hover + .perk-tooltip, .perk-tooltip-button:focus + .perk-tooltip, .perk-tooltip:hover {
     opacity: 1;
