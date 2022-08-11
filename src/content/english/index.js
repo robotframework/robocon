@@ -12,7 +12,7 @@ export default {
       { text: 'RBCN23', name: 'Home' },
       { text: 'RBCN22DE', name: 'Germany', theme: 'theme-germany' },
       { text: 'RBCN22', name: '2022', theme: 'theme-2022' },
-      { text: 'Sponsor', name: 'Sponsor' },
+      // { text: 'Sponsor', name: 'Sponsor' },
       { text: 'Archive', name: 'Archive' }
     ]
   },
