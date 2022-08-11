@@ -178,6 +178,10 @@ li {
     line-height: 1;
 }
 
+.line-height-small {
+    line-height: 1.25;
+}
+
 .line-height-body {
     line-height: var(--line-height-body);
 }

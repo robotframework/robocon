@@ -18,6 +18,9 @@
 .m-2xsmall {
     margin: var(--size-2xsmall);
 }
+.mx-2xsmall {
+    margin: 0 var(--size-2xsmall);
+}
 
 .m-xsmall {
     margin: var(--size-xsmall);

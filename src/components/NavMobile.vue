@@ -7,7 +7,8 @@
         v-for="{ name, text } in $tm('navbar.links')"
         :to="{ name }"
         :key="name"
-        class="router-link block mb-large">
+        class="router-link block mb-large"
+        @click="isOpen = false">
         {{ text }}
       </router-link>
     </div>
@@ -16,7 +17,7 @@
     class="navbar row between bg-black color-white"
     :class="isOpen ? 'open' : ''">
     <div class="flex middle pl-small">
-      <base-icon name="robot" color="white" size="1.25rem" />
+      <base-icon name="robot" color="white" size="1.75rem" />
       <router-link :to="{ name: 'Home' }" class="router-link type-large mx-xsmall">
         ROBOCON
       </router-link>
@@ -81,10 +82,10 @@ export default {
 }
 
 .hamburger {
-  margin: 16px;
-  margin-left: 20px;
-  width: 32px;
-  height: 24px;
+  margin: 1rem;
+  margin-left: 1.25rem;
+  width: 1.75rem;
+  height: 1.5rem;
   position: relative;
   transform: rotate(0deg);
   transition: .2s ease-in-out;
@@ -93,7 +94,7 @@ export default {
 .hamburger span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 0.25rem;
   width: 100%;
   background: var(--color-white);
   border-radius: 1px;
@@ -106,13 +107,13 @@ export default {
   top: 0;
 }
 .hamburger span:nth-child(2),.hamburger span:nth-child(3) {
-  top: 10px;
+  top: 0.625rem;
 }
 .hamburger span:nth-child(4) {
-  top: 20px;
+  top: 1.25rem;
 }
 .hamburger.open span:nth-child(1) {
-  top: 10px;
+  top: 0.75rem;
   width: 0%;
   left: 50%;
 }
@@ -123,7 +124,7 @@ export default {
   transform: rotate(-45deg);
 }
 .hamburger.open span:nth-child(4) {
-  top: 10px;
+  top: 0.75rem;
   width: 0%;
   left: 50%;
 }

@@ -8,7 +8,7 @@
       <button
         v-for="(tab, i) in ['Helsinki + Online', 'Only Online']"
         :key="tab"
-        class="type-uppercase theme type-small mx-xsmall"
+        class="type-uppercase theme type-small mx-2xsmall"
         :class="activeTabIndex === i && 'active'"
         @click="activeTabIndex = i">
         {{ tab }}
@@ -33,7 +33,7 @@
                     ?
                   </button>
                   <div
-                    class="perk-tooltip rounded-small bg-black p-small border-theme border-thin type-left"
+                    class="perk-tooltip rounded-small bg-black p-small border-theme border-thin type-left line-height-small"
                     :class="[tooltipAlignClass(i)]"
                     v-html="parseMarkdown(perk.description)"/>
                 </div>
@@ -79,10 +79,6 @@ export default {
 </script>
 
 <style scoped>
-  .sponsor-container {
-    transition: all 0.3s;
-  }
-
   .perk-tooltip-button {
     position: relative;
     display: inline-block;
@@ -94,7 +90,7 @@ export default {
     line-height: 1.5;
     border-color: #aaa;
     transform: scale(0.8) translateY(0.1rem);
-    transition: all 0.3s;
+    transition: border-color 0.3s, opacity 0.3s, transform 0.3s;
   }
   .perk-tooltip {
     position: absolute;
