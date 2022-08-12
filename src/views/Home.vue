@@ -12,6 +12,7 @@
       <div class="row center col-lg-7 col-lg-offset-3">
         <div v-html="$t('home.intro.body')" />
       </div>
+      <sponsors :sponsors="$tm('home.sponsors')" class="mt-xlarge" />
       <h2 class="col-lg-offset-3 mt-xlarge">Available Tickets</h2>
       <div
         v-for="ticket in $tm('home.tickets')"
@@ -49,6 +50,7 @@
 import {
   Banner,
   PageSection,
+  Sponsors,
   Ticket
 } from 'Components'
 
@@ -57,6 +59,7 @@ export default {
   components: {
     Banner,
     PageSection,
+    Sponsors,
     Ticket
   }
 }

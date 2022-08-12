@@ -6,23 +6,23 @@ export default {
     <p>This time we are going to have a hybrid conference in <span class="color-theme">two parts</span>.
     First conference part is <span class="color-theme">fully in-person in Helsinki</span>,
     where all the talks and other content will be live at Bio Rex on <span class="color-theme">January 19th &amp; 20th 2023!</span></p>
-    <p>The <span class="color-theme">online conference</span> will take place from <span class="color-theme">February 28th to March 2nd</span> 
+    <p>The <span class="color-theme">online conference</span> will take place from <span class="color-theme">February 28th to March 2nd</span>
     with three amazing days and fully online content. We will stream the recorded talks from Helsinki but will also have at least 50% fresh content.</p>
-    <p><span class="color-theme">The Helsinki ticket does include the online ticket as well.</span> 
+    <p><span class="color-theme">The Helsinki ticket does include the online ticket as well.</span>
     This arrangement enables us to fully engage with people first onsite and then online.
     This way we can have the best of both worlds and truly bring people together.</p>
     <p>For the online conference we will have the amazing video-game like <a href="https://youtu.be/6mtIO49k074">Gather.Town</a>
     platform and Joe Colantonio as our host!</p>
 
-   
+
     <h2>CFP</h2>
     <p>"<b>C</b>all <b>F</b>or <b>P</b>roposal" is open now. Please submit your talk proposal in a timely manner.</p>
-   
+
     <h3><a href="https://cfp.robocon.io/robocon-2023" target="_blank">CFP RoboCon Helsinki</a></h3>
     <p>CFP for talks in Helsinki is open until <span class="color-theme">September 18th</span> - <a href="https://cfp.robocon.io/robocon-2023" target="_blank">here</a></p>
     <p>For onsite speakers, we will compensate travel costs up-to 500€ on top of the free conference ticket with a backstage pass.</p>
     <p>Within the CFP for onsite talks, you can agreen on the duplication of your proposal to the online part of RoboCon end of February.</p>
-   
+
     <h3><a href="https://cfp.robocon.io/robocon-2023-online" target="_blank">CFP RoboCon Online</a></h3>
     <p>CFP for online talks is open until <span class="color-theme">Oktober 16th</span> - <a href="https://cfp.robocon.io/robocon-2023-online" target="_blank">here</a></p>
     <p>Also online speakers will get the free online conference tickets and if needed we will compensate for proper audio equipment for the speakers.</p>
@@ -70,6 +70,32 @@ export default {
       theme: 'theme-2022'
     }
   ],
+  sponsors: {
+    title: 'Sponsors',
+    boxTitle: 'RBCN23 Sponsors',
+    link: 'sponsor',
+    tiers: {
+      small: '',
+      medium: '',
+      large: ''
+    },
+    large: [],
+    medium: [
+      {
+        img: 'eficode.png',
+        href: 'https://www.eficode.com/'
+      },
+      {
+        img: 'gofore.png',
+        href: 'https://gofore.com/en/'
+      },
+      {
+        img: 'imbus.png',
+        href: 'https://www.imbus.de/en/'
+      }
+    ],
+    small: []
+  },
   rbcn22: {
     title: '2022',
     body: `

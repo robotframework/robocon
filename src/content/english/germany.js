@@ -16,13 +16,43 @@ export default {
     talks: [
       {
         code: 'T1',
-        title: '[DE] Paradigmenwechsel! Neue Denkweisen, neue Ansätze für Management und Qualität in der VUCA-Welt',
-        abstract: 'Corona, Lieferengpässe und Co – von der Reaktion zur strategischen Ausrichtung auf die Herausforderungen und Chancen der Zukunft',
+        title: '[EN] Welcome RoboCon',
+        abstract: 'Welcome talk and expert discussion with audience.',
         speakers: [
           {
-            code: 'AAAA',
-            avatar: 'https://www.qs-tag.de/fileadmin/_processed_/c/0/csm_Prof._dr_Ayelt_Komus_bdc6c28d34.jpg',
-            name: 'Prof. Dr. Ayelt Komus',
+            code: 'T7BUER',
+            name: 'Many Kasiriha',
+            avatar: 'https://pretalx.com/media/avatars/portrait_small_m9VY1nS.jpg',
+            expanded: false
+          },
+          {
+            code: 'BBBB',
+            avatar: 'https://www.qs-tag.de/fileadmin/_processed_/a/0/csm_Nele_Uhlemann_fb892cdfd3.png',
+            name: 'Nele Lea Uhlemann',
+            expanded: false
+          },
+          {
+            code: 'HTDUSJ',
+            avatar: 'https://pretalx.com/media/avatars/Rene_kgG6bhD.png',
+            name: 'René Rohner',
+            expanded: false
+          },
+          {
+            code: 'CCCC',
+            avatar: 'https://www.qs-tag.de/fileadmin/_processed_/e/c/csm_Mikko_Korpela_4fdb5513bf.png',
+            name: 'Mikko Korpela',
+            expanded: false
+          },
+          {
+            code: 'FUKYZV',
+            avatar: 'https://pretalx.com/media/avatars/profielfoto_5Rk8Soh.jpg',
+            name: 'Elout van Leeuwen',
+            expanded: false
+          },
+          {
+            code: 'AWCN8B',
+            avatar: 'https://pretalx.com/media/avatars/Screenshot_2022-03-15_at_16.42.36_VoSJgBl.png',
+            name: 'Timo Stordell',
             expanded: false
           }
         ],
@@ -32,15 +62,7 @@ export default {
         room: 1193,
         expanded: false,
         yt_link: null,
-        description: `
-- Komplex versus kompliziert: warum tradierte Ansätze nicht nur wirkungslos, sondern kontraproduktiv sein können
-- Logische Konsequenz: Agil und hybrid – Blick in den Maschinenraum von "Scrum", "Kanban", "Effectuation"
-- Von der Team- zur „Scaled“- Perspektive: Scrum und co von der Team-Ebene auf Portfolio und Organisation heben
-- Teamplay: Neue Rollen und Selbstverständnis von QM und QS- Prozess und -Rollen
-- Königsdisziplin Change und Führung: Vom Cargo-Cult zum strategischen und resilienten Wettbewerbsvorteil
-- Leadership: Neue Dimensionen von 360-Grad-Führung – Konkrete Schritte
-- Ausblick: Qualität und Qualitätsmanagement in der digitalen VUCA-Welt
-`
+        description: ''
       },
       {
         title: {
@@ -55,13 +77,13 @@ export default {
       },
       {
         code: 'T2',
-        title: '[DE] Papierlos, aber nicht ohne Dokumente! Simple Automated Visual Document Testing.',
-        abstract: 'Denn papierlos heißt nicht dokumentenlos. Lassen Sie mich Ihnen zeigen, wie wir unsere Dokumente und Druckdateien visuell und inhaltlich prüfe - mit Robot Framework und unserer eigenen Visual Document Testing Library.',
+        title: '[EN] Using Robot Framework to ensure quality in New Space industry',
+        abstract: 'How Robot Framework has been used at ICEYE to ensure quality in New Space industry.',
         speakers: [
           {
-            code: 'T7BUER',
-            name: 'Many Kasiriha',
-            avatar: 'https://pretalx.com/media/avatars/portrait_small_m9VY1nS.jpg',
+            code: 'CCCC',
+            avatar: 'https://www.qs-tag.de/fileadmin/_processed_/e/c/csm_Mikko_Korpela_4fdb5513bf.png',
+            name: 'Mikko Korpela',
             expanded: false
           }
         ],
@@ -71,13 +93,7 @@ export default {
         room: 1193,
         expanded: false,
         yt_link: null,
-        description: `Unternehmen sind auf korrekte Dokumente angewiesen. Für uns als globaler Spediteur sind korrekte Dokumente unerlässlich. Ein dummer Fehler in einem Dokument kann peinlich sein - aber auch rechtliche Konsequenzen haben. Dokumente in der Spedition können das Eigentum an Waren von Partei A auf Partei B übertragen. Sie bestätigen, dass die Fracht zu Sicherheitszwecken ordnungsgemäß geröntgt wurde. Sie können Barcode-Etiketten sein, um ein Paket zu identifizieren.
-
-Als ein größeres Upgrade unseres Output- und Dokumentenmanagementsystems geplant war, mussten wir sicherstellen, dass unsere Dokumente genauso aussehen wie vor dem Upgrade. Angesichts der großen Anzahl von Dokumententypen, -formaten, -varianten und -regeln pro Dokument wurde uns schnell klar, dass wir das nicht manuell machen können.
-
-Die Frage war also: Kaufen oder selbst erstellen? Aufgrund der hohen Kosten und des Funktions-Overkills kommerzieller Lösungen und unserer guten Erfahrungen mit Robot Framework entschieden wir uns, eine Bibliothek für visuelle Dokumententests zu erstellen. Visuelle Tests bedeuten: Das Testdokument wird gerendert und pixelweise mit einem Referenzdokument verglichen. Wir haben jedoch festgestellt, dass dies nicht ausreicht.
-
-Wir wollten Berichte mit Screenshots haben, die die verschiedenen Bereiche hervorheben. Wir wollten Bereiche aus dem Vergleich ausschließen, die auf Koordinaten oder Textmustern basieren. Wir wollten Strichcodes lesen können. Wir wollten akzeptable Bereiche für verschobene Textblöcke definieren. Wir wollten Textinhalte aus einer PDF-Datei oder über OCR vergleichen. Wir wollten zusätzliche Daten wie digitale Signaturen prüfen. Wir wollten Druckerdateien wie Postscript und Pcl interpretieren und vergleichen. Wir wollten eine einfache GUI zur Auswertung der Prüfergebnisse haben. Das Ergebnis war eine Robot Framework Library, die rein auf Open-Source-Komponenten basiert und Funktionen bietet, die nur in teuren kommerziellen Lösungen zu finden sind.`
+        description: ''
       },
       {
         code: 'T3',
@@ -113,13 +129,13 @@ In this talk, Nele Uhlemann and René Rohner will present how complex workflows 
       },
       {
         code: 'T4',
-        title: '[EN] Using Robot Framework to ensure quality in New Space industry',
-        abstract: 'How Robot Framework has been used at ICEYE to ensure quality in New Space industry.',
+        title: '[DE] Papierlos, aber nicht ohne Dokumente! Simple Automated Visual Document Testing.',
+        abstract: 'Denn papierlos heißt nicht dokumentenlos. Lassen Sie mich Ihnen zeigen, wie wir unsere Dokumente und Druckdateien visuell und inhaltlich prüfe - mit Robot Framework und unserer eigenen Visual Document Testing Library.',
         speakers: [
           {
-            code: 'CCCC',
-            avatar: 'https://www.qs-tag.de/fileadmin/_processed_/e/c/csm_Mikko_Korpela_4fdb5513bf.png',
-            name: 'Mikko Korpela',
+            code: 'T7BUER',
+            name: 'Many Kasiriha',
+            avatar: 'https://pretalx.com/media/avatars/portrait_small_m9VY1nS.jpg',
             expanded: false
           }
         ],
@@ -129,7 +145,13 @@ In this talk, Nele Uhlemann and René Rohner will present how complex workflows 
         room: 1193,
         expanded: false,
         yt_link: null,
-        description: ''
+        description: `Unternehmen sind auf korrekte Dokumente angewiesen. Für uns als globaler Spediteur sind korrekte Dokumente unerlässlich. Ein dummer Fehler in einem Dokument kann peinlich sein - aber auch rechtliche Konsequenzen haben. Dokumente in der Spedition können das Eigentum an Waren von Partei A auf Partei B übertragen. Sie bestätigen, dass die Fracht zu Sicherheitszwecken ordnungsgemäß geröntgt wurde. Sie können Barcode-Etiketten sein, um ein Paket zu identifizieren.
+
+Als ein größeres Upgrade unseres Output- und Dokumentenmanagementsystems geplant war, mussten wir sicherstellen, dass unsere Dokumente genauso aussehen wie vor dem Upgrade. Angesichts der großen Anzahl von Dokumententypen, -formaten, -varianten und -regeln pro Dokument wurde uns schnell klar, dass wir das nicht manuell machen können.
+
+Die Frage war also: Kaufen oder selbst erstellen? Aufgrund der hohen Kosten und des Funktions-Overkills kommerzieller Lösungen und unserer guten Erfahrungen mit Robot Framework entschieden wir uns, eine Bibliothek für visuelle Dokumententests zu erstellen. Visuelle Tests bedeuten: Das Testdokument wird gerendert und pixelweise mit einem Referenzdokument verglichen. Wir haben jedoch festgestellt, dass dies nicht ausreicht.
+
+Wir wollten Berichte mit Screenshots haben, die die verschiedenen Bereiche hervorheben. Wir wollten Bereiche aus dem Vergleich ausschließen, die auf Koordinaten oder Textmustern basieren. Wir wollten Strichcodes lesen können. Wir wollten akzeptable Bereiche für verschobene Textblöcke definieren. Wir wollten Textinhalte aus einer PDF-Datei oder über OCR vergleichen. Wir wollten zusätzliche Daten wie digitale Signaturen prüfen. Wir wollten Druckerdateien wie Postscript und Pcl interpretieren und vergleichen. Wir wollten eine einfache GUI zur Auswertung der Prüfergebnisse haben. Das Ergebnis war eine Robot Framework Library, die rein auf Open-Source-Komponenten basiert und Funktionen bietet, die nur in teuren kommerziellen Lösungen zu finden sind.`
       },
       {
         title: {
@@ -234,9 +256,9 @@ More details coming soon...`
         abstract: 'Coming Soon...',
         speakers: [
           {
-            code: '',
-            avatar: '',
-            name: 'TBA',
+            code: 'AWCN8B',
+            avatar: 'https://pretalx.com/media/avatars/Screenshot_2022-03-15_at_16.42.36_VoSJgBl.png',
+            name: 'Timo Stordell',
             expanded: false
           }
         ],
@@ -312,6 +334,54 @@ www.process-and-project.net`,
 
 He is also active in Robot Framework community and has participated in development of tools such as Robot Framework, Robot Framework Browser and Pabot.`,
         answers: []
+      },
+      {
+        id: 15420,
+        code: 'AWCN8B',
+        public_name: 'Timo Stordell',
+        biography: 'Building the future of software development. Passionate about making pipelines fluent.',
+        answers: []
+      }
+    ]
+  },
+  sponsors: {
+    title: 'Sponsors',
+    boxTitle: 'RoboCon 2022 Germany talks are sponsored by these companies',
+    tiers: {
+      small: '',
+      medium: '',
+      large: ''
+    },
+    large: [],
+    medium: [],
+    small: [
+      {
+        img: 'camunda.png',
+        href: 'https://camunda.com/'
+      },
+      {
+        img: 'capgemini.png',
+        href: 'https://www.capgemini.com/nl-nl/'
+      },
+      {
+        img: 'dbschenker.png',
+        href: 'https://www.dbschenker.com/'
+      },
+      {
+        img: 'eficode.png',
+        href: 'https://www.eficode.com/'
+      },
+      {
+        img: 'gofore.png',
+        href: 'https://gofore.com/'
+      },
+      {
+        img: 'imbus.png',
+        href: 'https://www.imbus.de/'
+      },
+      {
+        img: 'reaktor.png',
+        href: 'https://reaktor.com/'
       }
     ]
   }

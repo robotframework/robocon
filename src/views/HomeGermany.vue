@@ -67,6 +67,7 @@
             <div v-html="ticket.side" />
           </template>
         </ticket>
+        <sponsors :sponsors="$tm('germany.sponsors')" class="mt-xlarge" />
       </page-section>
       <page-section
       title-id="talks"
@@ -82,7 +83,7 @@
 </template>
 
 <script>
-import { Banner, BaseIcon, PageSection, Ticket, Talks } from 'Components'
+import { Banner, BaseIcon, PageSection, Sponsors, Ticket, Talks } from 'Components'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import MapGermany from 'Img/qs-day-map'
 import LogoGermany from 'Img/qs-day-logo'
@@ -93,6 +94,7 @@ export default {
     Banner,
     BaseIcon,
     PageSection,
+    Sponsors,
     Ticket,
     Talks
   },

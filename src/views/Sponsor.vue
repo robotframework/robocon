@@ -1,4 +1,6 @@
 <template>
+   <!--<link rel="stylesheet" type="text/css" href="https://pretix.eu/robocon/robocon-2023/widget/v1.css">
+  <component :is="'script'" src="https://pretix.eu/widget/v1.en.js" async></component>-->
   <banner>
     <h1 class="type-xlarge mb-large" v-html="$t('sponsor.title')" />
     <p class="col-md-8 col-md-offset-2" v-html="parseMarkdown($t('sponsor.subTitle'))" />
@@ -6,7 +8,7 @@
   <div class="container mb-large">
     <div class="row center mb-large mt-large">
       <button
-        v-for="(tab, i) in ['Helsinki + Online', 'Only Online']"
+        v-for="(tab, i) in ['Full Sponsorship', 'Online Sponsorship']"
         :key="tab"
         class="type-uppercase theme type-small mx-2xsmall"
         :class="activeTabIndex === i && 'active'"
@@ -39,9 +41,17 @@
                 </div>
               </li>
             </ul>
-            <button class="theme block mx-auto mt-auto">
-              <a :href="tier.url" target="_blank" class="type-no-underline">{{ $t('sponsor.joinButton') }}</a>
+            <button class="theme block mx-auto mt-auto" @click="openPretix($t('sponsor.event_url'), tier.voucher, $t('sponsor.subevent'))">
+              {{ $t('sponsor.joinButton') }}
             </button>
+            <!--<button class="theme block mx-auto mt-auto">
+              <pretix-button
+                :event="$t('sponsor.event_url')"
+                :subevent="$t('sponsor.subevent')"
+                :voucher="$t('sponsor.voucher')"
+                :items="tier.item">
+              {{ $t('sponsor.joinButton') }}
+            </pretix-button>-->
           </div>
         </div>
       </div>
@@ -70,6 +80,9 @@ export default {
         if (i === 1) return 'tooltip-left'
       }
       return ''
+    },
+    openPretix(url, voucher, subevent) {
+      window.open(`${url}redeem?voucher=${voucher}&subevent=${subevent}`)
     }
   },
   data: () => ({
@@ -135,5 +148,14 @@ export default {
   li {
     line-height: 1;
     margin-bottom: 0.5rem;
+  }
+</style>
+<style>
+  .pretix-button {
+    color: var(--color-link);
+    font-weight: var(--weight-body);
+    transition: filter 0.2s;
+    font-family: var(--font-title);
+    text-transform: uppercase;
   }
 </style>

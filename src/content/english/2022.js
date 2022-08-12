@@ -38,12 +38,18 @@ export default {
       <p>If there is leftover money, it will be used for the development of Robot Framework. For more information
       about supporting the development, please visit <a href="https://robotframework.org/foundation" target="_blank">Robot Framework Foundation</a>.</p>
     `,
-    list: [
+    tiers: {
+      small: '',
+      medium: 'GOLD & SILVER',
+      large: 'PLATINUM'
+    },
+    large: [
       {
         img: 'robocorp.png',
-        href: 'https://robocorp.com/',
-        platinum: true
-      },
+        href: 'https://robocorp.com/'
+      }
+    ],
+    medium: [
       {
         img: 'cinia.png',
         href: 'https://www.cinia.fi/en/'
@@ -88,7 +94,8 @@ export default {
         img: 'vala.png',
         href: 'https://www.valagroup.com/fi/'
       }
-    ]
+    ],
+    small: []
   },
   workshops: {
     title: 'Workshops',

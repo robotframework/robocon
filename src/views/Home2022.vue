@@ -20,7 +20,6 @@
             <div v-html="ticket.side" />
           </template>
         </ticket>
-        <sponsors class="mt-xlarge" />
       </div>
     </page-section>
     <page-section
@@ -31,6 +30,7 @@
         :talks="talks"
         :speakers="speakers"
         header-link="https://tickets.robotframework.org/rc2022/" />
+      <sponsors :sponsors="$tm('rbcn2022.sponsors')" class="mt-xlarge" />
     </page-section>
   </div>
 </template>

@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "c5578482e28483bfafd0",
-    "url": "dist/css/app.3205a887.css"
+    "revision": "e1d7b23c64e1013fe8a4",
+    "url": "dist/css/app.598e5bec.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -64,12 +64,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/rf-pattern.jpg"
   },
   {
+    "revision": "332f97ec41198d87a751290b84294079",
+    "url": "dist/img/sponsors/camunda.png"
+  },
+  {
+    "revision": "4db95bb37bd89dc9a645095b406c0320",
+    "url": "dist/img/sponsors/capgemini.png"
+  },
+  {
     "revision": "f249f06c58c67fa07b3c13e751d3e9d4",
     "url": "dist/img/sponsors/cinia.png"
   },
   {
     "revision": "d33d2dcf6f2308dfe1ac833c44f006dd",
     "url": "dist/img/sponsors/copado.png"
+  },
+  {
+    "revision": "cb918b98a01b5c04d972371dd38a0a38",
+    "url": "dist/img/sponsors/dbschenker.png"
   },
   {
     "revision": "1e004b65a52757ec27cab7f1a869da98",
@@ -96,6 +108,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/qfactory.png"
   },
   {
+    "revision": "77171768148f1e7b59db35aeddb3b6f4",
+    "url": "dist/img/sponsors/reaktor.png"
+  },
+  {
     "revision": "1e5760de77cf6281f9c5ab61e27ad262",
     "url": "dist/img/sponsors/robocorp.png"
   },
@@ -116,16 +132,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "c947aa10224f60a14d28865d259d5fb5",
+    "revision": "11e207a0fcbb3be4fef3c5c1eb595892",
     "url": "dist/index.html"
   },
   {
-    "revision": "c5578482e28483bfafd0",
-    "url": "dist/js/app.11b2311d.js"
+    "revision": "e1d7b23c64e1013fe8a4",
+    "url": "dist/js/app.f0ed3c82.js"
   },
   {
-    "revision": "05d6b7f8918d8f5ca55f",
-    "url": "dist/js/chunk-vendors.9b438cf1.js"
+    "revision": "f2c3927ac7384db71dd2",
+    "url": "dist/js/chunk-vendors.17b9343d.js"
   },
   {
     "revision": "ae69c76f0db87375aa82706bd2ce675f",
