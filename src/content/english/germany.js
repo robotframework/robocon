@@ -381,10 +381,6 @@ Building the future of software development. Passionate about making pipelines f
         href: 'https://www.eficode.com/'
       },
       {
-        img: 'gofore.png',
-        href: 'https://gofore.com/'
-      },
-      {
         img: 'imbus.png',
         href: 'https://www.imbus.de/'
       },
