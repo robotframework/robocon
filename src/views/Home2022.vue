@@ -120,7 +120,8 @@ export default {
       },
       {
         id: 14173,
-        title: 'Web-scale Robot Framework with JupyterLite'
+        title: 'Web-scale Robot Framework with JupyterLite',
+        link: 'VII2OL8O4hA'
       },
       {
         id: 14366,
