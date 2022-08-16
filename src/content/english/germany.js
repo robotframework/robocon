@@ -17,7 +17,12 @@ export default {
       {
         code: 'T1',
         title: '[EN] Welcome RoboCon',
-        abstract: 'Welcome talk and expert discussion with audience.',
+        abstract: `Welcome talk and expert discussion with audience.
+
+In this talk René Rohner will give us an insight view of Robot Framework Foundation and tell us about upcoming features of Robot Framework.
+
+Afterwards we have time for other topics that will be defined by the audience and discussed on stage, where all Speakers are present.
+We are also highly interested in new feature requests/ideas and will discuss them on stage.`,
         speakers: [
           {
             code: 'T7BUER',
@@ -57,8 +62,8 @@ export default {
           }
         ],
         track: null,
-        start: '2022-10-05T09:00:00+03:00',
-        end: '2022-10-05T10:15:00+03:00',
+        start: '2022-10-05T09:00:00+02:00',
+        end: '2022-10-05T10:15:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -68,8 +73,8 @@ export default {
         title: {
           en: 'Coffee Break / Community Time'
         },
-        start: '2022-10-05T10:15:00+03:00',
-        end: '2022-10-05T10:45:00+03:00',
+        start: '2022-10-05T10:15:00+02:00',
+        end: '2022-10-05T10:45:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -114,8 +119,8 @@ export default {
           }
         ],
         track: null,
-        start: '2022-10-05T11:40:00+03:00',
-        end: '2022-10-05T12:25:00+03:00',
+        start: '2022-10-05T11:40:00+02:00',
+        end: '2022-10-05T12:25:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -140,8 +145,8 @@ In this talk, Nele Uhlemann and René Rohner will present how complex workflows 
           }
         ],
         track: null,
-        start: '2022-10-05T12:35:00+03:00',
-        end: '2022-10-05T13:20:00+03:00',
+        start: '2022-10-05T12:35:00+02:00',
+        end: '2022-10-05T13:20:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -157,8 +162,8 @@ Wir wollten Berichte mit Screenshots haben, die die verschiedenen Bereiche hervo
         title: {
           en: 'Lunch Break / Community Time'
         },
-        start: '2022-10-05T13:20:00+03:00',
-        end: '2022-10-05T14:40:00+03:00',
+        start: '2022-10-05T13:20:00+02:00',
+        end: '2022-10-05T14:40:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -177,8 +182,8 @@ Wir wollten Berichte mit Screenshots haben, die die verschiedenen Bereiche hervo
           }
         ],
         track: null,
-        start: '2022-10-05T14:40:00+03:00',
-        end: '2022-10-05T16:00:00+03:00',
+        start: '2022-10-05T14:40:00+02:00',
+        end: '2022-10-05T16:00:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -221,8 +226,8 @@ Browser library powered by Playwright provides.
         title: {
           en: 'Coffee Break / Community Time'
         },
-        start: '2022-10-05T16:00:00+03:00',
-        end: '2022-10-05T16:30:00+03:00',
+        start: '2022-10-05T16:00:00+02:00',
+        end: '2022-10-05T16:30:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -241,8 +246,8 @@ Browser library powered by Playwright provides.
           }
         ],
         track: null,
-        start: '2022-10-05T16:30:00+03:00',
-        end: '2022-10-05T17:15:00+03:00',
+        start: '2022-10-05T16:30:00+02:00',
+        end: '2022-10-05T17:15:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -252,8 +257,10 @@ More details coming soon...`
       },
       {
         code: 'T7',
-        title: '[EN] TBA',
-        abstract: 'Coming Soon...',
+        title: '[EN] What makes Robot Framework to stand out?',
+        abstract: `I have used Robot Framework a lot in the past, but recently the framework chosen to my project has been different.
+
+On the way, I've started to realise what makes Robot Framework excellent, more than before.`,
         speakers: [
           {
             code: 'AWCN8B',
@@ -263,20 +270,20 @@ More details coming soon...`
           }
         ],
         track: null,
-        start: '2022-10-05T17:25:00+03:00',
-        end: '2022-10-05T18:10:00+03:00',
+        start: '2022-10-05T17:25:00+02:00',
+        end: '2022-10-05T18:10:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
-        description: `
-More details coming soon...`
+        description: `In this presentation, I will highlight the things that makes it stand out from the competition.
+The purpose is not to do any boastful ranting (even though I'm tempted) but to go through some facts behind the success.`
       },
       {
         title: {
           en: 'Evening Event / Community Time'
         },
-        start: '2022-10-05T19:00:00+03:00',
-        end: '2022-10-06T00:00:00+03:00',
+        start: '2022-10-05T19:00:00+02:00',
+        end: '2022-10-06T00:00:00+02:00',
         room: 1193,
         expanded: false,
         yt_link: null,
@@ -339,7 +346,9 @@ He is also active in Robot Framework community and has participated in developme
         id: 15420,
         code: 'AWCN8B',
         public_name: 'Timo Stordell',
-        biography: 'Building the future of software development. Passionate about making pipelines fluent.',
+        biography: `Timo is Lead Consultant, DevOps at Eficode.
+
+Building the future of software development. Passionate about making pipelines fluent.`,
         answers: []
       }
     ]
