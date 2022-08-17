@@ -45,7 +45,7 @@
               class="mt-medium"
               v-html="parseMarkdown(talk.abstract)" />
             <button
-              v-if="talk.abstract && !expandedTalks.includes(talk.code || talk.id)"
+              v-if="talk.abstract && !expandedTalks.includes(talk.code || talk.id) && talk.description && talk.description !== ''"
               class="color-theme"
               @click="openTalk(talk)">
               Read more
