@@ -41,17 +41,11 @@
                 </div>
               </li>
             </ul>
-            <button class="theme block mx-auto mt-auto" @click="openPretix($t('sponsor.event_url'), tier.voucher, $t('sponsor.subevent'))">
-              {{ $t('sponsor.joinButton') }}
-            </button>
-            <!--<button class="theme block mx-auto mt-auto">
-              <pretix-button
-                :event="$t('sponsor.event_url')"
-                :subevent="$t('sponsor.subevent')"
-                :voucher="$t('sponsor.voucher')"
-                :items="tier.item">
-              {{ $t('sponsor.joinButton') }}
-            </pretix-button>-->
+            <a :href="getPretixLink($t('sponsor.event_url'), tier.voucher, $t('sponsor.subevent'))" class="type-no-underline">
+              <button class="theme block mx-auto mt-auto">
+                {{ $t('sponsor.joinButton') }}
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -81,8 +75,8 @@ export default {
       }
       return ''
     },
-    openPretix(url, voucher, subevent) {
-      window.open(`${url}redeem?voucher=${voucher}&subevent=${subevent}`)
+    getPretixLink(url, voucher, subevent) {
+      return `${url}redeem?voucher=${voucher}&subevent=${subevent}`
     }
   },
   data: () => ({

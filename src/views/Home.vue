@@ -19,7 +19,7 @@
         :key="ticket.title"
         class="row mt-large"
         :class="ticket.theme">
-        <div class="col-sm-12 col-lg-3">
+        <div class="col-sm-12 col-lg-3 pr-small">
           <ticket :link="ticket.link">
             <template v-slot:title>
               <div v-html="ticket.title" />

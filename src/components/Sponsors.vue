@@ -1,50 +1,54 @@
 <template>
-  <div class="row card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
-    <div class="col-sm-12 mb-xsmall type-center color-theme pl-small pr-small">
-      <h3>
-        {{ sponsors.boxTitle }}
-      </h3>
+  <div class="card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
+    <h2 class="type-large type-center">
+      {{ sponsors.boxTitle }}
+    </h2>
+    <h4 v-if="sponsors.tiers.large" class="m-large">
+      {{ sponsors.tiers.large }}
+    </h4>
+    <div class="row">
+      <a
+        v-for="(sponsor, i) in sponsors.large"
+        :key="i"
+        :href="sponsor.href"
+        target="_blank"
+        class="sponsor cursor-pointer col-sm-12 col-md-6">
+        <div
+          class="img-container platinum"
+          :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
+      </a>
     </div>
-    <div v-if="sponsors.tiers.large" class="col-sm-12">
-      <h4 class="ml-large">{{ sponsors.tiers.large }}</h4>
+    <h4 v-if="sponsors.tiers.medium" class="m-large">
+      {{ sponsors.tiers.medium }}
+    </h4>
+    <div class="row">
+      <a
+        v-for="(sponsor, i) in sponsors.medium"
+        :key="i"
+        :href="sponsor.href"
+        target="_blank"
+        class="sponsor cursor-pointer col-sm-6 col-md-4">
+        <div
+          class="img-container mb-small"
+          :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
+      </a>
     </div>
-    <a
-      v-for="(sponsor, i) in sponsors.large"
-      :key="i"
-      :href="sponsor.href"
-      target="_blank"
-      class="sponsor cursor-pointer col-sm-12 col-md-6">
-      <div
-        class="img-container platinum"
-        :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
-    </a>
-    <div v-if="sponsors.tiers.medium" class="col-sm-12 mb-small">
-      <h4 class="ml-large">{{ sponsors.tiers.medium }}</h4>
+      <h4 v-if="sponsors.tiers.small" class="m-large">
+      {{ sponsors.tiers.small }}
+    </h4>
+    <div class="row">
+      <a
+        v-for="(sponsor, i) in sponsors.small"
+        :key="i"
+        :href="sponsor.href"
+        target="_blank"
+        class="sponsor cursor-pointer col-sm-4 col-md-3">
+        <div
+          class="img-container mb-small"
+          :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
+      </a>
     </div>
-    <a
-      v-for="(sponsor, i) in sponsors.medium"
-      :key="i"
-      :href="sponsor.href"
-      target="_blank"
-      class="sponsor cursor-pointer col-sm-6 col-md-4">
-      <div
-        class="img-container mb-small"
-        :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
-    </a>
-    <div v-if="sponsors.tiers.small" class="col-sm-12 mb-small">
-      <h4 class="ml-large">{{ sponsors.tiers.small }}</h4>
-    </div>
-    <a
-      v-for="(sponsor, i) in sponsors.small"
-      :key="i"
-      :href="sponsor.href"
-      target="_blank"
-      class="sponsor cursor-pointer col-sm-4 col-md-3">
-      <div
-        class="img-container mb-small"
-        :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />
-    </a>
-    <div v-if="sponsors.button" class="col-sm-12 flex end mt-small p-medium">
+    <div v-if="sponsors.button" class="row end mt-small p-medium">
       <transition mode="out-in" name="opacity">
         <button
           v-if="!sponsorInfoShown"
@@ -55,11 +59,11 @@
         <div v-else v-html="sponsors.moreInfo" />
       </transition>
     </div>
-    <div v-if="sponsors.link" class="col-sm-12 flex end mt-small p-medium">
-      <button class="theme mr-small">
-        <router-link to="/sponsor" tag="button">Join</router-link>
+    <router-link v-if="sponsors.link" to="/sponsor" class="block type-center mt-xlarge">
+      <button class="theme">
+        Join
       </button>
-    </div>
+    </router-link>
   </div>
 </template>
 

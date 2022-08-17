@@ -21,10 +21,10 @@ export default {
     <h3><a href="https://cfp.robocon.io/robocon-2023" target="_blank">CFP RoboCon Helsinki</a></h3>
     <p>CFP for talks in Helsinki is open until <span class="color-theme">September 18th</span> - <a href="https://cfp.robocon.io/robocon-2023" target="_blank">here</a></p>
     <p>For onsite speakers, we will compensate travel costs up-to 500€ on top of the free conference ticket with a backstage pass.</p>
-    <p>Within the CFP for onsite talks, you can agreen on the duplication of your proposal to the online part of RoboCon end of February.</p>
+    <p>Within the CFP for onsite talks, you can agree on the duplication of your proposal to the online part of RoboCon 23 at the end of February.</p>
 
     <h3><a href="https://cfp.robocon.io/robocon-2023-online" target="_blank">CFP RoboCon Online</a></h3>
-    <p>CFP for online talks is open until <span class="color-theme">Oktober 16th</span> - <a href="https://cfp.robocon.io/robocon-2023-online" target="_blank">here</a></p>
+    <p>CFP for online talks is open until <span class="color-theme">October 16th</span> - <a href="https://cfp.robocon.io/robocon-2023-online" target="_blank">here</a></p>
     <p>Also online speakers will get the free online conference tickets and if needed we will compensate for proper audio equipment for the speakers.</p>
     `
   },

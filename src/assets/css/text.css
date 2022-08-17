@@ -99,6 +99,10 @@ h2 {
     text-transform: uppercase;
 }
 
+h2:not(:first-child) {
+    margin-top: var(--size-xlarge);
+}
+
 h3 {
     font-size: var(--type-body);
     color: var(--color-theme);
