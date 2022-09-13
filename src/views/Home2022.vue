@@ -140,59 +140,73 @@ export default {
       },
       {
         id: 14361,
-        title: 'Combining all test reports to one'
+        title: 'Combining all test reports to one',
+        link: 'm5zkIRQs8ZM'
       },
       {
         id: 15775,
-        title: 'Analyze your code like true detective'
+        title: 'Analyze your code like true detective',
+        link: 'PNHl_mz66ZI'
       },
       {
         id: 15772,
-        title: 'Yet another API talk, but this one is different...'
+        title: 'Yet another API talk, but this one is different...',
+        link: 'owkk5B1kEhM'
       },
       {
         id: 14574,
-        title: 'Output Robot Framework report using Github Actions'
+        title: 'Output Robot Framework report using Github Actions',
+        link: 'HQObgYC3D3s'
       },
       {
         id: 14705,
-        title: 'Reactive Robot - Fastest way to turn Robot Framework projects into event-driven services'
+        title: 'Reactive Robot - Fastest way to turn Robot Framework projects into event-driven services',
+        link: 'UTwDfGYj3lw'
       },
       {
         id: 14314,
-        title: '\\u201cFor the very first time\\u201d - Start to Code, Test, Package & Publish your first Library'
+        title: '\\u201cFor the very first time\\u201d - Start to Code, Test, Package & Publish your first Library',
+        link: ''
       },
       {
         id: 14337,
-        title: 'robotframework for silicon validation'
+        title: 'robotframework for silicon validation',
+        link: ''
       },
       {
         id: 14327,
-        title: 'HybridApp - hybrid testing'
+        title: 'HybridApp - hybrid testing',
+        link: ''
       },
       {
         id: 13716,
-        title: 'Introducing OpenApiDriver...and OpenApiLibCore!'
+        title: 'Introducing OpenApiDriver...and OpenApiLibCore!',
+        link: ''
       },
       {
         id: 14335,
-        title: 'Robot Framework and commercial testing tools integration - based on regression project for SWT app'
+        title: 'Robot Framework and commercial testing tools integration - based on regression project for SWT app',
+        link: ''
       },
       {
         id: 15637,
-        title: 'Eggplant Library - connecting Robot Framework to advanced image based automation'
+        title: 'Eggplant Library - connecting Robot Framework to advanced image based automation',
+        link: ''
       },
       {
         id: 14297,
-        title: 'Year with Browser library'
+        title: 'Year with Browser library',
+        link: ''
       },
       {
         id: 14681,
-        title: 'Robots in the Clouds: Experiences with Using Robotframework with Cloud Providers'
+        title: 'Robots in the Clouds: Experiences with Using Robotframework with Cloud Providers',
+        link: ''
       },
       {
         id: 16203,
-        title: 'The neuroscience of learning, creativity and collaboration'
+        title: 'The neuroscience of learning, creativity and collaboration',
+        link: ''
       }
     ],
     loaded: false

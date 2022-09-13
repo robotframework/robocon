@@ -5,6 +5,8 @@ export default {
       <p>For the first time, we will have the opportunity to host a one-day RoboCon at the heart of Europe.
       RoboCon will share a conference building with the Software QS-Tag and the exchange with the visitors of
       the QS-Tag will hopefully lead to interesting discussions.</p>
+      <p>If you need a hotel room for the nights around RoboCon at the conference hotel,
+      please contact <a href="mailto:qs-tag@imbus.de">qs-tag@imbus.de</a>. We still have a few rooms available.<p>
       <p>As a visitor with a RoboCon ticket, only the RoboCon track is available.
       If you would like to attend RoboCon and the QS-Tag on both days (5 & 6 October),
       including an overnight stay in the conference hotel, please book a ticket for the Software QS-Tag at
