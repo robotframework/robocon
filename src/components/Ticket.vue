@@ -174,7 +174,7 @@ div.suspended:hover .price {
 }
 
 div.suspended:hover .content:after {
-  content: "Sale paused...";
+  content: "Opening soon...";
 }
 
 </style>
