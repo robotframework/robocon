@@ -1,8 +1,9 @@
 <template>
-  <a
+  <component :is="tag"
     :href="link"
     target="_blank"
-    class="ticket-container mx-auto cursor-pointer type-no-underline flex center middle"
+    :class="(link) ? 'cursor-pointer' : 'suspended'"
+    class="ticket-container mx-auto type-no-underline flex center middle"
     ref="ticketContainer">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,11 +11,11 @@
       <path d="M360,142.9c0-2.8,2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-9.5c-17.4-2.2-31.1-16-33.4-33.4H38.4c-2.2,17.4-16,31.1-33.4,33.4v11.6c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v11.6c17.4,2.2,31.1,16,33.4,33.4H331.6c2.2-17.4,16-31.1,33.4-33.4v-13.7c-2.8,0-5-2.2-5-5Z"/>
       <rect stroke-width="1px" stroke="white" x="54.7" y="25.6" width="260.5" height="148.9" rx="25" ry="25"/>
     </svg>
-    <div class="relative type-center" style="width: 60%;">
+    <div class="relative type-center content" style="width: 60%;">
       <div class="ticket-title type-large border-bottom-white border-thin mb-3xsmall pb-3xsmall">
         <slot name="title" />
       </div>
-      <div class="">
+      <div class="price">
         <slot name="price" />
       </div>
     </div>
@@ -29,7 +30,7 @@
         <div class="shader mask" />
       </div>
     </div>
-  </a>
+  </component>
 </template>
 
 <script>
@@ -39,6 +40,11 @@ export default {
     link: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    tag() {
+      return (this.link) ? 'a' : 'div'
     }
   }
 }
@@ -135,4 +141,40 @@ svg {
   border: solid 0.1rem var(--color-theme);
   border-radius: 0.5rem;
 }
+
+div.suspended.ticket-container {
+  color: grey;
+}
+div.suspended.ticket-container:hover .ticket-title {
+  color: grey;
+}
+div.suspended.ticket-container:hover .specular {
+  filter: brightness(0.5) saturate(0.5);
+}
+div.suspended.ticket-container:hover rect {
+  stroke: grey;
+}
+div.suspended.ticket-container svg {
+  stroke: grey;
+  filter: drop-shadow(0 0  3px grey);
+}
+
+div.suspended.ticket-container .specular {
+  background-image: linear-gradient(130deg, rgba(61,61,61,1) 9%, grey 10%, rgb(0, 126, 128) 30%, grey 37%, rgba(0,0,0,1) 57%, rgba(0,0,0,1) 68%, grey 72%, rgba(52,52,52,1) 92%);
+}
+
+div.suspended.ticket-container .text-container {
+  text-align: center;
+  border: solid 0.1rem grey;
+  border-radius: 0.5rem;
+}
+
+div.suspended:hover .price {
+  display: none;
+}
+
+div.suspended:hover .content:after {
+  content: "Sale paused...";
+}
+
 </style>
