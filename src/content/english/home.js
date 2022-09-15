@@ -82,6 +82,10 @@ export default {
       {
         img: 'imbus.png',
         href: 'https://www.imbus.de/en/'
+      },
+      {
+        img: 'northcode.png',
+        href: 'https://www.northcode.fi/'
       }
     ],
     small: []
