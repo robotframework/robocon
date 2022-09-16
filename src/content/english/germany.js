@@ -101,7 +101,14 @@ We are also highly interested in new feature requests/ideas and will discuss the
         room: 1193,
         expanded: false,
         yt_link: null,
-        description: ''
+        description: `🇬🇧 ICEYE is building a product and running a service at the same time.
+Part of the system is also flying 400 to 500 km over us.
+
+Welcome to see a sneak peak in to how testing of this kind of systems is really done and
+how Robot Framework fits into the picture.
+
+This talk will cover also some aspects of other tools than Robot Framework.
+`
       },
       {
         code: 'T3',
