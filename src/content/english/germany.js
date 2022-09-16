@@ -47,7 +47,7 @@ We are also highly interested in new feature requests/ideas and will discuss the
           },
           {
             code: 'CCCC',
-            avatar: 'img/mkorpela.jpg',
+            avatar: 'dist/img/mkorpela.jpg',
             name: 'Mikko Korpela',
             expanded: false
           },
@@ -90,7 +90,7 @@ We are also highly interested in new feature requests/ideas and will discuss the
         speakers: [
           {
             code: 'CCCC',
-            avatar: 'img/mkorpela.jpg',
+            avatar: 'dist/img/mkorpela.jpg',
             name: 'Mikko Korpela',
             expanded: false
           }
