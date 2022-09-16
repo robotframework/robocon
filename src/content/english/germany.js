@@ -47,7 +47,7 @@ We are also highly interested in new feature requests/ideas and will discuss the
           },
           {
             code: 'CCCC',
-            avatar: 'https://www.qs-tag.de/fileadmin/_processed_/e/c/csm_Mikko_Korpela_4fdb5513bf.png',
+            avatar: 'img/mkorpela.jpg',
             name: 'Mikko Korpela',
             expanded: false
           },
@@ -90,7 +90,7 @@ We are also highly interested in new feature requests/ideas and will discuss the
         speakers: [
           {
             code: 'CCCC',
-            avatar: 'https://www.qs-tag.de/fileadmin/_processed_/e/c/csm_Mikko_Korpela_4fdb5513bf.png',
+            avatar: 'img/mkorpela.jpg',
             name: 'Mikko Korpela',
             expanded: false
           }

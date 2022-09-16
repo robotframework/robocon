@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "291741c65331ec3f3485",
+    "revision": "cf1534e461c63de3a877",
     "url": "dist/css/app.c7788560.css"
   },
   {
@@ -58,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f5fe2f626289d9e83ecc84a66537c631",
     "url": "dist/img/Slack.svg"
+  },
+  {
+    "revision": "042d34e221ae14f250597bdb8eb83e11",
+    "url": "dist/img/mkorpela.jpg"
   },
   {
     "revision": "3b08b66e439f376aa031338388b3ff2d",
@@ -132,12 +136,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "08d8f867d2deba3c1ab9c9ca96b688ac",
+    "revision": "164a55c8ca34c0a1eeb2a186f5fa7286",
     "url": "dist/index.html"
   },
   {
-    "revision": "291741c65331ec3f3485",
-    "url": "dist/js/app.ef9d61f6.js"
+    "revision": "cf1534e461c63de3a877",
+    "url": "dist/js/app.ef5811ff.js"
   },
   {
     "revision": "d6212af0161dc3392510",
