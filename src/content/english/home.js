@@ -19,7 +19,7 @@ export default {
     <p>"<b>C</b>all <b>F</b>or <b>P</b>roposal" is open now. Please submit your talk proposal in a timely manner.</p>
 
     <h3><a href="https://cfp.robocon.io/robocon-2023" target="_blank">CFP RoboCon Helsinki</a></h3>
-    <p>CFP for talks in Helsinki is open until <span class="color-theme">September 18th</span> - <a href="https://cfp.robocon.io/robocon-2023" target="_blank">here</a></p>
+    <p>CFP for talks in Helsinki is open until <span class="color-theme">September 25th</span> - <a href="https://cfp.robocon.io/robocon-2023" target="_blank">here</a></p>
     <p>For onsite speakers, we will compensate travel costs up-to 500€ on top of the free conference ticket with a backstage pass.</p>
     <p>Within the CFP for onsite talks, you can agree on the duplication of your proposal to the online part of RoboCon 23 at the end of February.</p>
 
