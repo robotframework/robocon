@@ -32,7 +32,7 @@ export default {
     {
       title: '2022 Germany<div class="type-small">Ticket</div>',
       price: '400 €<span class="type-xsmall"> +VAT</span>',
-      link: '', // 'https://tickets.robotframework.org/robocon-2022-DE/',
+      link: 'https://pretix.eu/imbus/rbcn2022de/',
       side: '05-10-22',
       description: `<p>For the first time ever, a physical RoboCon is getting held outside Helsinki!
       <span class="color-theme">October 2022</span> there'll be a Robot Framework sub-conference at
