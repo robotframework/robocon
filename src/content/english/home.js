@@ -86,6 +86,10 @@ export default {
       {
         img: 'northcode.png',
         href: 'https://www.northcode.fi/'
+      },
+      {
+        img: 'vala.png',
+        href: 'https://www.valagroup.com/'
       }
     ],
     small: []
