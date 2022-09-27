@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/rf-pattern.jpg"
   },
   {
-    "revision": "4a20f7df8ec97da0993d594a80110f8d",
-    "url": "dist/img/social_image.jpg"
+    "revision": "27375a1648f75404801a08517a403d82",
+    "url": "dist/img/social_image.png"
   },
   {
     "revision": "332f97ec41198d87a751290b84294079",
@@ -140,7 +140,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "880217f9d270e19d0d5d16f50204d917",
+    "revision": "3b794edfd9ec8d73401a4ca5b49ca400",
     "url": "dist/index.html"
   },
   {
