@@ -20,12 +20,6 @@ module.exports = {
   },
   chainWebpack: config => {
     config
-      .plugin('html')
-      .tap(args => {
-        args[0].title = 'RoboCon'
-        return args
-      })
-    config
       .plugin('define')
       .tap(args => {
         args[0] = {

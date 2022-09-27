@@ -68,6 +68,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/rf-pattern.jpg"
   },
   {
+    "revision": "4a20f7df8ec97da0993d594a80110f8d",
+    "url": "dist/img/social_image.jpg"
+  },
+  {
     "revision": "332f97ec41198d87a751290b84294079",
     "url": "dist/img/sponsors/camunda.png"
   },
@@ -136,7 +140,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "d9dc5353c519afd007feb960c3cc7cb6",
+    "revision": "880217f9d270e19d0d5d16f50204d917",
     "url": "dist/index.html"
   },
   {
