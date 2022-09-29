@@ -85,8 +85,8 @@ We are also highly interested in new feature requests/ideas and will discuss the
       },
       {
         code: 'T2',
-        title: '[EN] Using Robot Framework to ensure quality in New Space industry',
-        abstract: 'How Robot Framework has been used at ICEYE to ensure quality in New Space industry.',
+        title: '[EN] Using Robot Framework to ensure quality in the New Space industry',
+        abstract: 'How Robot Framework has been used at ICEYE to ensure quality in the New Space industry.',
         speakers: [
           {
             code: 'CCCC',
@@ -104,7 +104,7 @@ We are also highly interested in new feature requests/ideas and will discuss the
         description: `🇬🇧 ICEYE is building a product and running a service at the same time.
 Part of the system is also flying 400 to 500 km over us.
 
-Welcome to see a sneak peak into how testing of this kind of systems is really done and
+Welcome to see a sneak peek into how testing of this kind of systems is really done and
 how Robot Framework fits into the picture.
 
 This talk will cover also some aspects of other tools than Robot Framework.
