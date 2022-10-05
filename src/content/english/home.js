@@ -30,17 +30,6 @@ export default {
   },
   tickets: [
     {
-      title: '2022 Germany<div class="type-small">Ticket</div>',
-      price: '400 €<span class="type-xsmall"> +VAT</span>',
-      link: 'https://pretix.eu/imbus/rbcn2022de/',
-      side: '05-10-22',
-      description: `<p>For the first time ever, a physical RoboCon is getting held outside Helsinki!
-      <span class="color-theme">October 2022</span> there'll be a Robot Framework sub-conference at
-      <a class="color-theme" target="_blank" href="https://www.qs-tag.de/en/">Software-QS-Tage</a> in <span class="color-theme">Frankfurt</span>.</p>`,
-      page: { to: 'Germany', text: 'More details of RoboCon 2022 Germany' },
-      theme: 'theme-germany'
-    },
-    {
       title: '2023 Online<div class="type-small">Blind Robot</div>',
       price: '<strike>350</strike> 150 €<span class="type-xsmall"> +VAT</span>',
       link: 'https://tickets.robotframework.org/robocon-2023/3410050/',
