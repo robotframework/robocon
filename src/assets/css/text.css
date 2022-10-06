@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'RBCN';
-    src: url('~Fonts/RBCN22.ttf') format('truetype');
+    src: url('~Fonts/RBCN23.woff2') format('woff2');
     font-display: swap;
     font-weight: 500;
 }
@@ -52,7 +52,11 @@ html {
     }
 }
 
-h1, h2 {
+h1 {
+    font-family: 'RBCN';
+}
+
+h2 {
     font-family: var(--font-title);
     line-height: var(--line-height-headers);
     color: var(--color-theme);

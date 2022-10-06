@@ -11,15 +11,14 @@
       :full-width="true">
       <div class="row center col-lg-7 col-lg-offset-3">
         <div v-html="$t('home.intro.body')" />
-      </div>
-      <sponsors :sponsors="$tm('home.sponsors')" class="mt-xlarge" />
-      <h2 class="col-lg-offset-3 mt-xlarge">Available Tickets</h2>
-      <div
-        v-for="ticket in $tm('home.tickets')"
-        :key="ticket.title"
-        class="row mt-large"
-        :class="ticket.theme">
-        <div class="col-sm-12 col-lg-3 pr-small">
+        <h2>Tickets</h2>
+        <p class="mt-medium mb-large type-center">
+          The discounted blind tickets are available until talks and conference program are published.
+        </p>
+        <div
+          v-for="ticket in $tm('home.tickets')"
+          :key="ticket.title"
+          style="display: inline-block">
           <ticket :link="ticket.link">
             <template v-slot:title>
               <div v-html="ticket.title" />
@@ -35,13 +34,18 @@
             </template>
           </ticket>
         </div>
-        <div class="col-sm-12 col-lg-7">
-          <div v-html="ticket.description" />
-          <router-link v-if="ticket.page" :to="{ name: ticket.page.to }">
-           {{ ticket.page.text }}
-          </router-link>
-        </div>
+        <p class="mt-large type-center">
+          Tickets also include instant access to <span class="color-theme">2022 talks!</span>
+        </p>
       </div>
+    </page-section>
+    <page-section title="Sponsors">
+      <sponsors :sponsors="$tm('home.sponsors')" />
+    </page-section>
+    <page-section
+      title-id="cfp"
+      :title="$t('home.cfp.title')">
+      <div v-html="$t('home.cfp.body')" />
     </page-section>
   </div>
 </template>

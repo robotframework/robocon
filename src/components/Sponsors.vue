@@ -1,5 +1,5 @@
 <template>
-  <div class="card pt-medium pb-medium" :class="$store.state.isMobile ? '' : 'p-small'">
+  <div>
     <h2 class="type-large type-center">
       {{ sponsors.boxTitle }}
     </h2>
@@ -59,11 +59,13 @@
         <div v-else v-html="sponsors.moreInfo" />
       </transition>
     </div>
-    <router-link v-if="sponsors.link" to="/sponsor" class="block type-center mt-xlarge">
-      <button class="theme">
-        Join
-      </button>
-    </router-link>
+    <div class="row">
+      <router-link v-if="sponsors.link" to="/sponsor" class="block type-center col-sm-4 col-sm-offset-8 mt-large">
+        <button class="theme">
+          Join
+        </button>
+      </router-link>
+    </div>
   </div>
 </template>
 

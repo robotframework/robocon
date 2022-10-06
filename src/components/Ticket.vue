@@ -1,9 +1,9 @@
 <template>
-  <component :is="tag"
+  <a
     :href="link"
     target="_blank"
     :class="(link) ? 'cursor-pointer' : 'suspended'"
-    class="ticket-container mx-auto type-no-underline flex center middle"
+    class="ticket-container type-no-underline flex center middle"
     ref="ticketContainer">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@
         <div class="shader mask" />
       </div>
     </div>
-  </component>
+  </a>
 </template>
 
 <script>
@@ -52,9 +52,8 @@ export default {
 
 <style scoped>
 .ticket-container {
-  min-width: 14rem;
-  max-width: 20rem;
-  width: 100%;
+  width: 18rem;
+  height: 9rem;
   aspect-ratio: 2;
   position: relative;
   backface-visibility: hidden;

@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "e89097d7c1b3e992bac4",
-    "url": "dist/css/app.c7788560.css"
+    "revision": "0a6996b9ada7b9e7f689",
+    "url": "dist/css/app.59233ff1.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -26,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9ed7d40451046fddd70c1697a0dccc08",
     "url": "dist/fonts/RBCN-thin.9ed7d404.woff2"
-  },
-  {
-    "revision": "f1198aadf6009ce13452f0d244e056e7",
-    "url": "dist/fonts/RBCN22.f1198aad.ttf"
   },
   {
     "revision": "63ef3191b86632e0c74a093ecad7af10",
@@ -140,16 +136,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "398615a3e148c0b92d51ed859a20a748",
+    "revision": "847c31d25e92d9543e175b1367ef0d67",
     "url": "dist/index.html"
   },
   {
-    "revision": "e89097d7c1b3e992bac4",
-    "url": "dist/js/app.60b7a94d.js"
+    "revision": "0a6996b9ada7b9e7f689",
+    "url": "dist/js/app.ff429cc6.js"
   },
   {
-    "revision": "d6212af0161dc3392510",
-    "url": "dist/js/chunk-vendors.dd032dcd.js"
+    "revision": "f2c3927ac7384db71dd2",
+    "url": "dist/js/chunk-vendors.17b9343d.js"
   },
   {
     "revision": "ae69c76f0db87375aa82706bd2ce675f",
