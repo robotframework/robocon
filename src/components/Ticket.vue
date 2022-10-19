@@ -111,7 +111,7 @@ svg {
   width: 65%;
   height: 73%;
   mix-blend-mode: screen;
-  background-image: linear-gradient(130deg, rgba(61,61,61,1) 9%, var(--color-theme) 10%, rgb(0, 126, 128) 30%, var(--color-theme) 37%, rgba(0,0,0,1) 57%, rgba(0,0,0,1) 68%, var(--color-theme) 72%, rgba(52,52,52,1) 92%);
+  background-image: linear-gradient(130deg, rgba(61,61,61,1) 9%, var(--color-theme) 10%, rgba(52,52,52,1) 30%, var(--color-theme) 36%, rgb(0, 126, 128) 57%, var(--color-theme) 65%, rgba(52,52,52,1) 92%);
   background-attachment: fixed;
   background-size: 100%;
   transition: filter 0.1s;

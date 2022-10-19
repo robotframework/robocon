@@ -2,13 +2,13 @@ export default {
   intro: {
     title: 'Hello',
     body: `
-    <h3>We are happy to announce that RoboCon 2023 is coming.</h3>
-    <p>This time we are going to have a hybrid conference in <span class="color-theme">two parts</span>.
+    <h3>Hello!</h3>
+    <p>RoboCon 2023 will be a hybrid conference in <span class="color-theme">two parts</span>.
     First conference part is <span class="color-theme">fully in-person in Helsinki</span>,
     where all the talks and other content will be live at Bio Rex on <span class="color-theme">January 19th &amp; 20th 2023!</span></p>
     <p>The <span class="color-theme">online conference</span> will take place from <span class="color-theme">February 28th to March 2nd</span>
     with three amazing days and fully online content. We will stream the recorded talks from Helsinki but will also have at least 50% fresh content.</p>
-    <p><span class="color-theme">The Helsinki ticket does include the online ticket as well.</span>
+    <p><span class="color-theme">Helsinki ticket also includes the online ticket.</span>
     This arrangement enables us to fully engage with people first onsite and then online.
     This way we can have the best of both worlds and truly bring people together.</p>
     <p>For the online conference we will have the amazing video-game like <a href="https://youtu.be/6mtIO49k074">Gather.Town</a>
@@ -69,8 +69,16 @@ export default {
         href: 'https://www.imbus.de/en/'
       },
       {
+        img: 'knowit.png',
+        href: 'https://www.knowit.eu/'
+      },
+      {
         img: 'northcode.png',
         href: 'https://www.northcode.fi/'
+      },
+      {
+        img: 'qfactory.png',
+        href: 'https://q-factory.fi/en/'
       },
       {
         img: 'vala.png',

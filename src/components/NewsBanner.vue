@@ -1,6 +1,6 @@
 <template>
   <div class="banner-slide">
-    <div class="type-center p-small color-white bg-black banner">
+    <div class="type-center p-xsmall color-white bg-black banner">
       <slot />
     </div>
   </div>
@@ -8,10 +8,8 @@
 
 <style scoped>
   .banner {
-    position: sticky;
-    top: 3.74rem;
-    border-top: 0.2rem solid var(--color-theme);
-    border-bottom: 0.2rem solid var(--color-theme);
+    border-top: 1px solid var(--color-theme);
+    border-bottom: 1px solid var(--color-theme);
   }
   .banner-slide {
     top: 0;

@@ -6,7 +6,7 @@ import archive from './archive'
 
 export default {
   langName: 'English',
-  newsBanner: '',
+  newsBanner: '🎉 Helsinki talks released! 🎉',
   navbar: {
     links: [
       { text: 'RBCN23', name: 'Home' },

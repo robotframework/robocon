@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "0a6996b9ada7b9e7f689",
-    "url": "dist/css/app.59233ff1.css"
+    "revision": "36c47bd23462848664d7",
+    "url": "dist/css/app.271ff7bb.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -68,6 +68,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/social_image.png"
   },
   {
+    "revision": "f4af51677bb5fda0e9df64bb3da9dd37",
+    "url": "dist/img/speaker_img_placeholder.jpg"
+  },
+  {
     "revision": "332f97ec41198d87a751290b84294079",
     "url": "dist/img/sponsors/camunda.png"
   },
@@ -104,7 +108,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/knowit.png"
   },
   {
-    "revision": "340e4283880816ad709ede80a8b4c932",
+    "revision": "f3d2fd38d23fc81b632b212b6f4e52ec",
     "url": "dist/img/sponsors/northcode.png"
   },
   {
@@ -128,7 +132,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/testimate.png"
   },
   {
-    "revision": "9477df1799a9129d9aa3a613f9a9a6be",
+    "revision": "5dd8542fb530ae36005aff87287acba3",
     "url": "dist/img/sponsors/vala.png"
   },
   {
@@ -136,16 +140,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "847c31d25e92d9543e175b1367ef0d67",
+    "revision": "7c66c359f33ca0c8b57edbb6670da948",
     "url": "dist/index.html"
   },
   {
-    "revision": "0a6996b9ada7b9e7f689",
-    "url": "dist/js/app.ff429cc6.js"
+    "revision": "36c47bd23462848664d7",
+    "url": "dist/js/app.1c6d2a7e.js"
   },
   {
-    "revision": "f2c3927ac7384db71dd2",
-    "url": "dist/js/chunk-vendors.17b9343d.js"
+    "revision": "21df44417a8af8b7a718",
+    "url": "dist/js/chunk-vendors.4ecab7ad.js"
   },
   {
     "revision": "ae69c76f0db87375aa82706bd2ce675f",

@@ -4,17 +4,16 @@
       <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
     </div>
   </banner>
+  <news-banner>
+    {{ $t('newsBanner') }}
+  </news-banner>
   <div class="container">
     <page-section
       title-id="intro"
       :title="$t('home.intro.title')"
       :full-width="true">
       <div class="row center col-lg-7 col-lg-offset-3">
-        <div v-html="$t('home.intro.body')" />
-        <h2>Tickets</h2>
-        <p class="mt-medium mb-large type-center">
-          The discounted blind tickets are available until talks and conference program are published.
-        </p>
+        <div v-html="$t('home.intro.body')" class="mb-large" />
         <div
           v-for="ticket in $tm('home.tickets')"
           :key="ticket.title"
@@ -42,10 +41,8 @@
     <page-section title="Sponsors">
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
-    <page-section
-      title-id="cfp"
-      :title="$t('home.cfp.title')">
-      <div v-html="$t('home.cfp.body')" />
+    <page-section title="Talks">
+      <talks-2023 v-if="talks.length" :talks="talks" />
     </page-section>
   </div>
 </template>
@@ -55,7 +52,9 @@ import {
   Banner,
   PageSection,
   Sponsors,
-  Ticket
+  Ticket,
+  Talks2023,
+  NewsBanner
 } from 'Components'
 
 export default {
@@ -64,7 +63,22 @@ export default {
     Banner,
     PageSection,
     Sponsors,
-    Ticket
+    Ticket,
+    Talks2023,
+    NewsBanner
+  },
+  data: () => ({
+    talks: []
+  }),
+  created() {
+    // fa63d553-692a-4c25-9a0d-865af22271f3
+    fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/')
+      .then((res) => res.json())
+      .then(({ results }) => {
+        this.talks = results
+          .filter(({ submission_type }) => submission_type.en === 'Talk') // eslint-disable-line
+          .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+      })
   }
 }
 </script>

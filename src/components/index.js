@@ -10,6 +10,7 @@ import Ticket from './Ticket.vue'
 import Talks from './Talks.vue'
 import PreviousTalks from './PreviousTalks.vue'
 import Timeline from './Timeline.vue'
+import Talks2023 from './Talks2023.vue'
 
 import BaseIcon from './BaseIcon.vue'
 import GlobeIcon from './icons/GlobeIcon.vue'
@@ -32,6 +33,7 @@ export {
   Talks,
   PreviousTalks,
   Timeline,
+  Talks2023,
 
   Banner22,
   Navbar22,

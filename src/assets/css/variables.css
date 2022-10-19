@@ -7,6 +7,7 @@
     --color-grey-light: #e7e7e7;
     --color-grey: #e2e2e2;
     --color-grey-dark: #24282c;
+    --color-grey-darkest: #101316;
     --color-black: #000000; /* body text */
     --color-link: #ff9f00;
     --color-link-visited: #ff9f00;
@@ -34,7 +35,7 @@
     --type-body: 1rem; /* p and h3 */
     --type-large: 1.25rem; /* h2 */
     --type-xlarge: 2rem; /* h2 */
-    --type-2xlarge: 9rem; /* h1 */
+    --type-2xlarge: 12rem; /* h1 */
 
     /* font weights */
     --weight-light: 300;
@@ -67,7 +68,7 @@
 
 @media screen and (max-width: 780px) {
     :root {
-        --type-2xlarge: 5rem;
+        --type-2xlarge: 31vw;
     }
 }
 
