@@ -2,25 +2,32 @@
   <h3 class="mt-large">Helsinki</h3>
   <div v-for="talk in talks" :key="talk.code" class="row card p-small mt-large">
     <div class="col-sm-12">
-      <h3 class="mb-3xsmall">
-        {{ talk.title }}
-      </h3>
-      <p class="type-small m-none">
-        {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
-      </p>
+      <div class="row between">
+        <div>
+          <div v-if="talk.submission_type.en === 'Keynote' && $store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-small pt-3xsmall pb-3xsmall mb-2xsmall" style="width: fit-content">
+            Keynote
+          </div>
+          <h3 class="mb-3xsmall">
+            {{ talk.title }}
+          </h3>
+          <p class="type-small m-none">
+            {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
+          </p>
+        </div>
+        <div v-if="talk.submission_type.en === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme p-2xsmall" style="height: fit-content">
+          Keynote
+        </div>
+      </div>
     </div>
     <div class="col-sm-12">
-      <p class="relative" :class="!talk.expanded && talk.abstract.length > 100 && 'intro-gradient'">
-        {{ talk.abstract }}
-      </p>
+      <p
+        class="relative"
+        :class="!talk.expanded && talk.abstract.length > 100 && 'intro-gradient'"
+        v-html="parseText(talk.abstract)" />
       <button v-if="!talk.expanded" class="theme small block mx-auto" @click="talk.expanded = true">
         Show more
       </button>
-      <div v-if="talk.expanded">
-        <p v-for="(paragraph, i) in talk.description.split('\n')" :key="i">
-          {{ paragraph }}
-        </p>
-      </div>
+      <div v-if="talk.expanded" v-html="parseText(talk.description)" />
     </div>
     <div class="col-sm-12">
       <div
@@ -38,9 +45,11 @@
             <img :src="speaker.avatar || `${publicPath}/img/speaker_img_placeholder.jpg`" class="rounded" />
           </div>
           <div v-if="speaker.biography" class="col-sm-8">
-            <p class="type-small m-none pl-2xsmall relative" :class="!speaker.expanded ? 'bio-trunc pb-none bio-gradient' : ''" style="line-height: 1.4;">
-              {{ speaker.biography }}
-            </p>
+            <p
+              class="type-small m-none pl-2xsmall relative"
+              :class="!speaker.expanded ? 'bio-trunc pb-none bio-gradient' : ''"
+              style="line-height: 1.4;"
+              v-html="parseText(speaker.biography)" />
             <button v-if="!speaker.expanded" @click="speaker.expanded = true" class="pl-2xsmall color-theme type-underline type-small">
               Show more
             </button>
@@ -54,9 +63,7 @@
             <h4>
               {{ speaker.name }}
             </h4>
-            <p class="type-small mb-none">
-              {{ speaker.biography }}
-            </p>
+            <p class="type-small mb-none" v-html="parseText(speaker.biography)" />
           </div>
         </template>
       </div>
@@ -68,6 +75,8 @@
 </template>
 
 <script>
+import * as DOMPurify from 'dompurify'
+import { marked } from 'marked'
 import { format } from 'date-fns'
 
 export default {
@@ -88,6 +97,9 @@ export default {
       const hours = date.getHours()
       const minutes = date.getMinutes()
       return `${hours}:${minutes === 0 ? '00' : minutes}`
+    },
+    parseText(description) {
+      return DOMPurify.sanitize(marked.parse(description || ''))
     }
   }
 }

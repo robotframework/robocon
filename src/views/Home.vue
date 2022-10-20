@@ -76,7 +76,7 @@ export default {
       .then((res) => res.json())
       .then(({ results }) => {
         this.talks = results
-          .filter(({ submission_type }) => submission_type.en === 'Talk') // eslint-disable-line
+          .filter(({ submission_type }) => ['Talk', 'Keynote'].includes(submission_type.en)) // eslint-disable-line
           .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
       })
   }

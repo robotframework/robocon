@@ -176,6 +176,7 @@ ul {
 
 li {
     margin-bottom: var(--size-2xsmall);
+    margin-top: var(--size-2xsmall);
 }
 
 .li-none {
