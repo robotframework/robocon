@@ -7,15 +7,20 @@
           <div v-if="talk.submission_type.en === 'Keynote' && $store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-small pt-3xsmall pb-3xsmall mb-2xsmall" style="width: fit-content">
             Keynote
           </div>
-          <h3 class="mb-3xsmall">
+          <h3 class="mb-3xsmall title" :id="getSlug(talk.title)">
             {{ talk.title }}
           </h3>
           <p class="type-small m-none">
             {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
           </p>
         </div>
-        <div v-if="talk.submission_type.en === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme p-2xsmall" style="height: fit-content">
-          Keynote
+        <div class="flex top">
+          <a v-if="!$store.state.isMobile" title="get link to talk" :class="talk.submission_type.en === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title)}`">
+            <link-icon style="transform: translateY(2px)" />
+          </a>
+          <div v-if="talk.submission_type.en === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme p-xsmall" style="height: fit-content">
+            Keynote
+          </div>
         </div>
       </div>
     </div>
@@ -78,9 +83,13 @@
 import * as DOMPurify from 'dompurify'
 import { marked } from 'marked'
 import { format } from 'date-fns'
+import LinkIcon from './icons/LinkIcon.vue'
 
 export default {
   name: 'Talks2023',
+  components: {
+    LinkIcon
+  },
   props: {
     talks: {
       type: Array,
@@ -100,12 +109,19 @@ export default {
     },
     parseText(description) {
       return DOMPurify.sanitize(marked.parse(description || ''))
+    },
+    getSlug(title) {
+      return title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
     }
   }
 }
 </script>
 
 <style scoped>
+  .title {
+    padding-top: 5.5rem;
+    margin-top: -5.5rem;
+  }
   img {
     display: block;
     width: 100%;

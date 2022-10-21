@@ -38,11 +38,14 @@
         </p>
       </div>
     </page-section>
-    <page-section title="Sponsors">
+    <page-section title-id="sponsors" title="Sponsors">
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
-    <page-section title="Talks">
+    <page-section title-id="talks" title="Talks">
       <talks-2023 v-if="talks.length" :talks="talks" />
+      <div v-else>
+        Ti
+      </div>
     </page-section>
   </div>
 </template>
@@ -78,6 +81,15 @@ export default {
         this.talks = results
           .filter(({ submission_type }) => ['Talk', 'Keynote'].includes(submission_type.en)) // eslint-disable-line
           .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+        this.$nextTick(() => {
+          const hash = window.location.hash
+          if (!hash || hash === '') return
+          console.log(hash.slice(1))
+          const el = document.getElementById(hash.slice(1))
+          if (!el) return
+          el.scrollIntoView()
+          window.scrollTo(el)
+        })
       })
   }
 }
