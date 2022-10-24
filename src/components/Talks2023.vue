@@ -4,37 +4,43 @@
     <div class="col-sm-12">
       <div class="row between">
         <div>
-          <div v-if="talk.submission_type.en === 'Keynote' && $store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-small pt-3xsmall pb-3xsmall mb-2xsmall" style="width: fit-content">
+          <div v-if="talk.submission_type === 'Keynote' && $store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-small pt-3xsmall pb-3xsmall mb-2xsmall" style="width: fit-content">
             Keynote
           </div>
           <h3 class="mb-3xsmall title" :id="getSlug(talk.title)">
-            {{ talk.title }}
+            <template v-if="talk.submission_type === 'Break'">
+              Break: {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
+            </template>
+            <template v-else>
+              {{ talk.title }}
+            </template>
           </h3>
-          <p class="type-small m-none">
+          <p v-if="talk.submission_type !== 'Break'" class="type-small m-none">
             {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
           </p>
         </div>
         <div class="flex top">
-          <a v-if="!$store.state.isMobile" title="get link to talk" :class="talk.submission_type.en === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title)}`">
+          <a v-if="!$store.state.isMobile && talk.submission_type !== 'Break'" title="get link to talk" :class="talk.submission_type === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title)}`">
             <link-icon style="transform: translateY(2px)" />
           </a>
-          <div v-if="talk.submission_type.en === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme p-xsmall" style="height: fit-content">
+          <div v-if="talk.submission_type === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme p-xsmall" style="height: fit-content">
             Keynote
           </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-12">
+    <div v-if="talk.submission_type !== 'Break'" class="col-sm-12">
       <p
         class="relative"
-        :class="!talk.expanded && talk.abstract.length > 100 && 'intro-gradient'"
+        :class="!talk.expanded && talk.abstract && talk.abstract.length > 100 && 'intro-gradient'"
         v-html="parseText(talk.abstract)" />
       <button v-if="!talk.expanded" class="theme small block mx-auto" @click="talk.expanded = true">
         Show more
       </button>
       <div v-if="talk.expanded" v-html="parseText(talk.description)" />
     </div>
-    <div class="col-sm-12">
+    <div v-else v-html="parseText(talk.description.en)" />
+    <div v-if="talk.submission_type !== 'Break'" class="col-sm-12">
       <div
         v-for="speaker in talk.speakers"
         :key="speaker.code"
@@ -111,6 +117,7 @@ export default {
       return DOMPurify.sanitize(marked.parse(description || ''))
     },
     getSlug(title) {
+      if (!title) return ''
       return title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
     }
   }

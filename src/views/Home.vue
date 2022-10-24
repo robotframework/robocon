@@ -44,7 +44,7 @@
     <page-section title-id="talks" title="Talks">
       <talks-2023 v-if="talks.length" :talks="talks" />
       <div v-else>
-        Ti
+        Loading talks...
       </div>
     </page-section>
   </div>
@@ -74,23 +74,35 @@ export default {
     talks: []
   }),
   created() {
-    // fa63d553-692a-4c25-9a0d-865af22271f3
-    fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/')
-      .then((res) => res.json())
-      .then(({ results }) => {
-        this.talks = results
-          .filter(({ submission_type }) => ['Talk', 'Keynote'].includes(submission_type.en)) // eslint-disable-line
+    Promise.all([
+      fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/'),
+      fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
+    ])
+      .then(async([submissions, schedule]) => {
+        const talks = await submissions.json()
+        const { breaks } = await schedule.json()
+        return [...talks.results, ...breaks]
+      })
+      .then((list) => {
+        this.talks = list
+          .filter(({ submission_type }) => !submission_type || ['Talk', 'Keynote'].includes(submission_type.en)) // eslint-disable-line
+          .map((item) => ({
+            ...item,
+            submission_type: item.submission_type?.en || 'Break',
+            slot: item.slot || { start: item.start, end: item.end }
+          }))
           .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
         this.$nextTick(() => {
           const hash = window.location.hash
           if (!hash || hash === '') return
-          console.log(hash.slice(1))
           const el = document.getElementById(hash.slice(1))
-          if (!el) return
-          el.scrollIntoView()
-          window.scrollTo(el)
+          if (el) el.scrollIntoView()
         })
       })
+    // fa63d553-692a-4c25-9a0d-865af22271f3
+    // fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/')
+    //   .then((res) => res.json())
+    //   fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
   }
 }
 </script>
