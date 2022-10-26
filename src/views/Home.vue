@@ -64,7 +64,7 @@
           <h3>
             Main conference
           </h3>
-          January 18th & 19th
+          January 19th & 20th
           <p class="type-small">
             Held at <a href="https://goo.gl/maps/jEW5zoLuZgmca6D1A">Bio Rex</a> in city center.
           </p>
