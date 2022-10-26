@@ -10,9 +10,8 @@
   <div class="container">
     <page-section
       title-id="intro"
-      :title="$t('home.intro.title')"
-      :full-width="true">
-      <div class="row center col-lg-7 col-lg-offset-3">
+      :title="$t('home.intro.title')">
+      <div class="row center col-lg-8">
         <div v-html="$t('home.intro.body')" class="mb-large" />
         <div
           v-for="ticket in $tm('home.tickets')"
@@ -36,6 +35,43 @@
         <p class="mt-large type-center">
           Tickets also include instant access to <span class="color-theme">2022 talks!</span>
         </p>
+      </div>
+      <div class="col-lg-4" :class="$store.state.isDesktop && 'pl-medium'">
+        <h2 class="type-body type-center mt-small mb-xsmall">
+          Timeline - Helsinki
+        </h2>
+        <div class="card p-small mb-small">
+          <h3>
+            Workshops
+          </h3>
+          January 17th
+          <p class="type-small">
+            Workshops and tickets TBA!
+          </p>
+        </div>
+        <div class="card p-small mb-small">
+          <h3>
+            Sprints
+          </h3>
+          January 18th
+          <p class="type-small">
+            Contribute to an existing project in the Robot Framework ecosystem
+            or pitch a project idea you'd like to work on with others. Or just
+            join to meet other Robot Framework users and developers!
+          </p>
+        </div>
+        <div class="card p-small">
+          <h3>
+            Main conference
+          </h3>
+          January 18th & 19th
+          <p class="type-small">
+            Held at <a href="https://goo.gl/maps/jEW5zoLuZgmca6D1A">Bio Rex</a> in city center.
+          </p>
+          <p class="type-small">
+            <a href="/#talks">List of talks</a>
+          </p>
+        </div>
       </div>
     </page-section>
     <page-section title-id="sponsors" title="Sponsors">

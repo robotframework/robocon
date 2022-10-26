@@ -1,6 +1,10 @@
 <template>
   <h3 class="mt-large">Helsinki</h3>
-  <div v-for="talk in talks" :key="talk.code" class="row card p-small mt-large">
+  <div
+    v-for="talk in talks"
+    :key="talk.code"
+    class="row p-small mt-large col-sm-12"
+    :class="talk.submission_type === 'Break' ? 'rounded bg-grey-dark' : 'card'">
     <div class="col-sm-12">
       <div class="row between">
         <div>

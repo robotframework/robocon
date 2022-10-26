@@ -2,7 +2,6 @@ export default {
   intro: {
     title: 'Hello',
     body: `
-    <h3>Hello!</h3>
     <p>RoboCon 2023 will be a hybrid conference in <span class="color-theme">two parts</span>.
     First conference part is <span class="color-theme">fully in-person in Helsinki</span>,
     where all the talks and other content will be live at Bio Rex on <span class="color-theme">January 19th &amp; 20th 2023!</span></p>

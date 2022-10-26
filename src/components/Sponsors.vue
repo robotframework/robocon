@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-sm-12">
     <h2 class="type-large type-center">
       {{ sponsors.boxTitle }}
     </h2>

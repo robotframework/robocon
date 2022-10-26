@@ -12,7 +12,7 @@
           {{ title }}
         </h2>
       </div>
-      <div class="col-sm-12 col-lg-9" :class="fullWidth ? 'col-lg-12' : 'col-lg-9'">
+      <div class="col-sm-12 col-lg-9 row" :class="fullWidth ? 'col-lg-12' : 'col-lg-9'">
         <div
           v-if="body !== ''"
           v-html="body" />
