@@ -166,47 +166,47 @@ export default {
       {
         id: 14314,
         title: '\\u201cFor the very first time\\u201d - Start to Code, Test, Package & Publish your first Library',
-        link: ''
+        link: 'BblpFESySiI'
       },
       {
         id: 14337,
         title: 'robotframework for silicon validation',
-        link: ''
+        link: 'GcQgx6NZQa0'
       },
       {
         id: 14327,
         title: 'HybridApp - hybrid testing',
-        link: ''
+        link: 'yD5e1r-8aw0'
       },
       {
         id: 13716,
         title: 'Introducing OpenApiDriver...and OpenApiLibCore!',
-        link: ''
+        link: '7YWZEHxk9Ps'
       },
       {
         id: 14335,
         title: 'Robot Framework and commercial testing tools integration - based on regression project for SWT app',
-        link: ''
+        link: 'Q68PeIs0Ig0'
       },
       {
         id: 15637,
         title: 'Eggplant Library - connecting Robot Framework to advanced image based automation',
-        link: ''
+        link: 'wOGVdWEzs_A'
       },
       {
         id: 14297,
         title: 'Year with Browser library',
-        link: ''
+        link: 'rSkNT7jFr_c'
       },
       {
         id: 14681,
         title: 'Robots in the Clouds: Experiences with Using Robotframework with Cloud Providers',
-        link: ''
+        link: 'MNL59uHnwN8'
       },
       {
         id: 16203,
         title: 'The neuroscience of learning, creativity and collaboration',
-        link: ''
+        link: 'FiJw77tzLHU'
       }
     ],
     loaded: false
