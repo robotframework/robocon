@@ -1,7 +1,6 @@
 <template>
-  <h3 class="mt-large">Helsinki</h3>
   <div
-    v-for="talk in talks"
+    v-for="talk in items"
     :key="talk.code"
     class="row p-small mt-large col-sm-12"
     :class="talk.submission_type === 'Break' ? 'rounded bg-grey-dark' : 'card'">
@@ -13,17 +12,20 @@
           </div>
           <h3 class="mb-3xsmall title" :id="getSlug(talk.title)">
             <template v-if="talk.submission_type === 'Break'">
-              Break: {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
+              Break ({{ getBreakLength(talk.slot.start, talk.slot.end) }} min)
+            </template>
+            <template v-else-if="talk.submission_type === 'Misc'">
+              {{ talk.description.en }}
             </template>
             <template v-else>
               {{ talk.title }}
             </template>
           </h3>
-          <p v-if="talk.submission_type !== 'Break'" class="type-small m-none">
-            {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
+          <p class="type-small m-none">
+            {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }} UTC+2
           </p>
         </div>
-        <div class="flex top">
+        <div v-if="talk.submission_type !== 'Misc'" class="flex top">
           <a v-if="!$store.state.isMobile && talk.submission_type !== 'Break'" title="get link to talk" :class="talk.submission_type === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title)}`">
             <link-icon style="transform: translateY(2px)" />
           </a>
@@ -33,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div v-if="talk.submission_type !== 'Break'" class="col-sm-12">
+    <div v-if="!['Break', 'Misc'].includes(talk.submission_type)" class="col-sm-12">
       <p
         class="relative"
         :class="!talk.expanded && talk.abstract && talk.abstract.length > 100 && 'intro-gradient'"
@@ -43,7 +45,7 @@
       </button>
       <div v-if="talk.expanded" v-html="parseText(talk.description)" />
     </div>
-    <div v-else v-html="parseText(talk.description.en)" />
+    <div v-else-if="talk.submission_type === 'Break'" v-html="parseText(talk.description.en)" />
     <div v-if="talk.submission_type !== 'Break'" class="col-sm-12">
       <div
         v-for="speaker in talk.speakers"
@@ -78,21 +80,25 @@
             <h4>
               {{ speaker.name }}
             </h4>
-            <p class="type-small mb-none" v-html="parseText(speaker.biography)" />
+            <div
+              class="type-small mb-none relative"
+              :class="!speaker.expanded ? 'bio-trunc bio-gradient' : ''">
+              <div v-html="parseText(speaker.biography)" :id="`${talk.code}${speaker.code}`" />
+            </div>
+            <button v-if="!speaker.expanded" @click="speaker.expanded = true" class="pl-2xsmall color-theme type-underline type-small" style="transform: translateY(0.25rem);">
+              Show more
+            </button>
           </div>
         </template>
       </div>
     </div>
-  </div>
-  <div class="mt-large">
-    Online talks will be released soon, stay tuned!
   </div>
 </template>
 
 <script>
 import * as DOMPurify from 'dompurify'
 import { marked } from 'marked'
-import { format } from 'date-fns'
+import { format, differenceInMinutes } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
 
 export default {
@@ -101,7 +107,7 @@ export default {
     LinkIcon
   },
   props: {
-    talks: {
+    items: {
       type: Array,
       required: true
     }
@@ -109,6 +115,16 @@ export default {
   data: () => ({
     publicPath: process.env.BASE_URL
   }),
+  mounted() {
+    this.items.forEach((talk) => {
+      if (!talk.speakers) return
+      talk.speakers.forEach((speaker) => {
+        const bioElement = document.getElementById(`${talk.code}${speaker.code}`)
+        if (bioElement === undefined) return
+        if (bioElement.offsetHeight < 100) speaker.expanded = true
+      })
+    })
+  },
   methods: {
     format,
     getShownTime(time) {
@@ -123,6 +139,9 @@ export default {
     getSlug(title) {
       if (!title) return ''
       return title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+    },
+    getBreakLength(start, end) {
+      return differenceInMinutes(new Date(end), new Date(start))
     }
   }
 }

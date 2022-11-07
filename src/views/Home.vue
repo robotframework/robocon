@@ -46,7 +46,14 @@
           </h3>
           January 17th
           <p class="type-small">
-            Workshops and tickets TBA!
+            Join a workshop for an ultimate hands-on learning experience in Helsinki.
+          </p>
+          <p class="type-small">
+            There are several different workshops so you'll surely find one that
+            caters your needs and experience level!
+          </p>
+          <p class="type-small color-theme">
+            Tickets available soon!
           </p>
         </div>
         <div class="card p-small mb-small">
@@ -68,17 +75,27 @@
           <p class="type-small">
             Held at <a href="https://goo.gl/maps/jEW5zoLuZgmca6D1A">Bio Rex</a> in city center.
           </p>
-          <p class="type-small">
-            <a href="/#talks">List of talks</a>
-          </p>
         </div>
       </div>
     </page-section>
     <page-section title-id="sponsors" title="Sponsors">
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
+    <page-section title-id="workshops" title="Workshops">
+      <h3 class="mt-large">Helsinki, in-person</h3>
+      <talks-2023 v-if="workshops.length" :items="workshops" />
+      <div v-else>
+        Loading workshops...
+      </div>
+    </page-section>
     <page-section title-id="talks" title="Talks">
-      <talks-2023 v-if="talks.length" :talks="talks" />
+      <template v-if="talks.length">
+        <h3 class="mt-large">Helsinki</h3>
+        <talks-2023 :items="talks" />
+        <div class="mt-large">
+          Online talks will be released soon, stay tuned!
+        </div>
+      </template>
       <div v-else>
         Loading talks...
       </div>
@@ -107,7 +124,8 @@ export default {
     NewsBanner
   },
   data: () => ({
-    talks: []
+    talks: [],
+    workshops: []
   }),
   created() {
     Promise.all([
@@ -117,17 +135,29 @@ export default {
       .then(async([submissions, schedule]) => {
         const talks = await submissions.json()
         const { breaks } = await schedule.json()
-        return [...talks.results, ...breaks]
+        return [talks.results, breaks]
       })
-      .then((list) => {
-        this.talks = list
-          .filter(({ submission_type }) => !submission_type || ['Talk', 'Keynote'].includes(submission_type.en)) // eslint-disable-line
+      .then(([list, breaks]) => {
+        const talks = list
+          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote'].includes(submission_type.en)) // eslint-disable-line
+        const workshops = list
+          .filter(({ submission_type }) => submission_type.en && submission_type.en.includes('Workshop')) // eslint-disable-line
+        const breaksParsed = breaks
           .map((item) => ({
             ...item,
-            submission_type: item.submission_type?.en || 'Break',
-            slot: item.slot || { start: item.start, end: item.end }
+            submission_type: item.description.en.toLowerCase().includes('talk') ? 'Misc' : 'Break'
+          }))
+
+        this.talks = [...talks, ...breaksParsed]
+          .map((item) => ({
+            ...item,
+            slot: item.slot || { start: item.start, end: item.end },
+            type: item.submission_type.en || item.submission_type
           }))
           .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+        this.workshops = workshops
+          .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+
         this.$nextTick(() => {
           const hash = window.location.hash
           if (!hash || hash === '') return
@@ -135,7 +165,6 @@ export default {
           if (el) el.scrollIntoView()
         })
       })
-    // fa63d553-692a-4c25-9a0d-865af22271f3
     // fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/')
     //   .then((res) => res.json())
     //   fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
