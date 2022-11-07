@@ -31,19 +31,26 @@ export default {
   },
   tickets: [
     {
-      title: '2023 Online<div class="type-small">Early Robot</div>',
+      title: '2023 RoboCon<div class="type-small">Helsinki</div>',
+      price: '<strike>1200</strike> 800 €<span class="type-xsmall"> +VAT</span>',
+      link: 'https://tickets.robotframework.org/robocon-2023/3410049/',
+      side: '2023-JAN',
+      description: '<p><span class="color-theme">Includes ticket to RoboCon Online 2023!</span></p>'
+    },
+    {
+      title: '2023 Workshops<div class="type-small">Helsinki</div>',
+      price: '550 €<span class="type-xsmall"> +VAT</span>',
+      link: 'https://tickets.robotframework.org/robocon-2023/3670331/',
+      side: '2023-JAN',
+      description: '<p><span class="color-theme"></span></p>'
+    },
+    {
+      title: '2023 RoboCon<div class="type-small">Online</div>',
       price: '<strike>350</strike> 200 €<span class="type-xsmall"> +VAT</span>',
       link: 'https://tickets.robotframework.org/robocon-2023/3410050/',
       side: '2023-MAR',
       description: `<p>Discounted early tickets for 2023 online conference are available now!</p>
       <p>This ticket also includes <span class="color-theme">instant access to 2022 talks!</span></p>`
-    },
-    {
-      title: '2023 Helsinki<div class="type-small">Early Robot</div>',
-      price: '<strike>1200</strike> 800 €<span class="type-xsmall"> +VAT</span>',
-      link: 'https://tickets.robotframework.org/robocon-2023/3410049/',
-      side: '2023-JAN',
-      description: '<p><span class="color-theme">Includes ticket to RoboCon Online 2023!</span></p>'
     }
   ],
   sponsors: {

@@ -156,7 +156,7 @@ export default {
           }))
           .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
         this.workshops = workshops
-          .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+          .sort((a, b) => a.slot.room.en < b.slot.room.en ? -1 : 1)
 
         this.$nextTick(() => {
           const hash = window.location.hash

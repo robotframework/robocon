@@ -12,7 +12,7 @@
           </div>
           <h3 class="mb-3xsmall title" :id="getSlug(talk.title)">
             <template v-if="talk.submission_type === 'Break'">
-              Break ({{ getBreakLength(talk.slot.start, talk.slot.end) }} min)
+              {{ talk.description.en }} ({{ getBreakLength(talk.slot.start, talk.slot.end) }} min)
             </template>
             <template v-else-if="talk.submission_type === 'Misc'">
               {{ talk.description.en }}
@@ -45,7 +45,7 @@
       </button>
       <div v-if="talk.expanded" v-html="parseText(talk.description)" />
     </div>
-    <div v-else-if="talk.submission_type === 'Break'" v-html="parseText(talk.description.en)" />
+    <div v-else-if="talk.submission_type === 'Break'" />
     <div v-if="talk.submission_type !== 'Break'" class="col-sm-12">
       <div
         v-for="speaker in talk.speakers"
