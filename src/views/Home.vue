@@ -52,9 +52,6 @@
             There are several different workshops so you'll surely find one that
             caters your needs and experience level!
           </p>
-          <p class="type-small color-theme">
-            Tickets available soon!
-          </p>
         </div>
         <div class="card p-small mb-small">
           <h3>
