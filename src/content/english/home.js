@@ -7,6 +7,7 @@ export default {
     where all the talks and other content will be live at Bio Rex on <span class="color-theme">January 19th &amp; 20th 2023!</span></p>
     <p>The <span class="color-theme">online conference</span> will take place from <span class="color-theme">February 28th to March 2nd</span>
     with three amazing days and fully online content. We will stream the recorded talks from Helsinki but will also have at least 50% fresh content.</p>
+    <p class="bg-grey-dark p-small rounded">There are a few open online speaker slots! If you'd like to give a talk, please <a href="https://cfp.robocon.io/robocon-2023-online/cfp">submit your proposal soon!</a></p>
     <p><span class="color-theme">Helsinki ticket also includes the online ticket.</span>
     This arrangement enables us to fully engage with people first onsite and then online.
     This way we can have the best of both worlds and truly bring people together.</p>

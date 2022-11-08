@@ -5,7 +5,7 @@
     </div>
   </banner>
   <news-banner>
-    {{ $t('newsBanner') }}
+    <div v-html="$t('newsBanner')" />
   </news-banner>
   <div class="container">
     <page-section
