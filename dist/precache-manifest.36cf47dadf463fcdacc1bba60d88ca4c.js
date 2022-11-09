@@ -4,32 +4,56 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "1d10750fde1e07122cbc",
-    "url": "dist/css/app.efa1ba4a.css"
+    "revision": "6dbe2b13c06651ae1306",
+    "url": "dist/css/app.b7b05f2a.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
-    "url": "dist/fonts/CourierCode-Bold.27679e61.woff"
+    "url": "dist/fonts/CourierCode-Bold.woff"
   },
   {
     "revision": "bb0ae79836b57c757266e71c14e202b3",
-    "url": "dist/fonts/CourierCode-Italic.bb0ae798.woff"
+    "url": "dist/fonts/CourierCode-Italic.woff"
   },
   {
     "revision": "b0e06d282a210d90e551bcd4d5caa8f8",
-    "url": "dist/fonts/CourierCode-Roman.b0e06d28.woff"
+    "url": "dist/fonts/CourierCode-Roman.woff"
+  },
+  {
+    "revision": "944290f83b2b9c22fd6ff121a8d5e012",
+    "url": "dist/fonts/CourierCode-Roman.woff2"
   },
   {
     "revision": "2b7be84934e40d5204ebcd3cd1e0f4dc",
-    "url": "dist/fonts/OCRA.2b7be849.woff"
+    "url": "dist/fonts/OCRA.woff"
+  },
+  {
+    "revision": "3e146000bd230fbe73e1a3f7e9b65db5",
+    "url": "dist/fonts/OCRA.woff2"
   },
   {
     "revision": "9ed7d40451046fddd70c1697a0dccc08",
-    "url": "dist/fonts/RBCN-thin.9ed7d404.woff2"
+    "url": "dist/fonts/RBCN-thin.woff2"
+  },
+  {
+    "revision": "f1198aadf6009ce13452f0d244e056e7",
+    "url": "dist/fonts/RBCN22.ttf"
+  },
+  {
+    "revision": "79b0e047dd7682d0b75867ce98210e2a",
+    "url": "dist/fonts/RBCN23.otf"
+  },
+  {
+    "revision": "eb6deda9a36f356003cce94b615e2ac0",
+    "url": "dist/fonts/RBCN23.woff2"
+  },
+  {
+    "revision": "549f277743ad4c60e5503c663422c352",
+    "url": "dist/fonts/RBTFNT.ttf"
   },
   {
     "revision": "63ef3191b86632e0c74a093ecad7af10",
-    "url": "dist/fonts/RBTFNT.63ef3191.woff"
+    "url": "dist/fonts/RBTFNT.woff"
   },
   {
     "revision": "8297cf2cf2a9fc56bd612112f636de30",
@@ -132,7 +156,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/testimate.png"
   },
   {
-    "revision": "5dd8542fb530ae36005aff87287acba3",
+    "revision": "aaebdc5a67663c43f9f0bd648cd8f7c3",
     "url": "dist/img/sponsors/vala.png"
   },
   {
@@ -140,11 +164,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "11830023dba1de9ba70736111c6219cd",
+    "revision": "b7612a83215b5a58708666551a024028",
     "url": "dist/index.html"
   },
   {
-    "revision": "1d10750fde1e07122cbc",
+    "revision": "6dbe2b13c06651ae1306",
     "url": "dist/js/app.e0b69263.js"
   },
   {
