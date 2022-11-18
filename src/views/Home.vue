@@ -37,13 +37,12 @@
         </p>
       </div>
       <div class="col-lg-4" :class="$store.state.isDesktop && 'pl-medium'">
-        <h2 class="type-body type-center mt-small mb-xsmall">
-          Timeline - Helsinki
-        </h2>
-        <div class="card p-small mb-small">
-          <h3>
-            Workshops
-          </h3>
+        <div class="card p-small mb-small mt-small">
+          <button class="block" @click="goTo('workshops')">
+            <h3 class="type-underline">
+              Workshops
+            </h3>
+          </button>
           January 17th
           <p class="type-small">
             Join a workshop for an ultimate hands-on learning experience in Helsinki.
@@ -65,9 +64,11 @@
           </p>
         </div>
         <div class="card p-small">
-          <h3>
-            Main conference
-          </h3>
+          <button class="block" @click="goTo('talks')">
+            <h3 class="type-underline">
+              Main conference
+            </h3>
+          </button>
           January 19th & 20th
           <p class="type-small">
             Held at <a href="https://goo.gl/maps/jEW5zoLuZgmca6D1A">Bio Rex</a> in city center.
@@ -78,23 +79,25 @@
     <page-section title-id="sponsors" title="Sponsors">
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
+    <div v-if="talks.length">
+      <page-section title-id="talks" title="Talks" subtitle="Day 1 - Helsinki">
+        <talks-2023 :items="talks.filter((talk) => talk.slot.start.includes('2023-01-19'))" />
+      </page-section>
+      <page-section title-id="talks2" title="Talks" subtitle="Day 2 - Helsinki">
+        <talks-2023 :items="talks.filter((talk) => talk.slot.start.includes('2023-01-20'))" />
+        <div class="mt-large">
+          Online talks will be released soon, stay tuned!
+        </div>
+      </page-section>
+    </div>
+    <div v-else>
+      Loading talks...
+    </div>
     <page-section title-id="workshops" title="Workshops">
       <h3 class="mt-large">Helsinki, in-person</h3>
       <talks-2023 v-if="workshops.length" :items="workshops" />
       <div v-else>
         Loading workshops...
-      </div>
-    </page-section>
-    <page-section title-id="talks" title="Talks">
-      <template v-if="talks.length">
-        <h3 class="mt-large">Helsinki</h3>
-        <talks-2023 :items="talks" />
-        <div class="mt-large">
-          Online talks will be released soon, stay tuned!
-        </div>
-      </template>
-      <div v-else>
-        Loading talks...
       </div>
     </page-section>
   </div>
@@ -165,6 +168,16 @@ export default {
     // fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/')
     //   .then((res) => res.json())
     //   fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
+  },
+  methods: {
+    goTo(id) {
+      const el = document.getElementById(id)
+      if (el) {
+        el.scrollIntoView({
+          behavior: 'smooth'
+        })
+      }
+    }
   }
 }
 </script>

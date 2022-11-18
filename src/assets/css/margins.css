@@ -19,14 +19,16 @@
     margin: var(--size-2xsmall);
 }
 .mx-2xsmall {
-    margin: 0 var(--size-2xsmall);
+    margin-left: var(--size-2xsmall);
+    margin-right: var(--size-2xsmall);
 }
 
 .m-xsmall {
     margin: var(--size-xsmall);
 }
 .mx-xsmall {
-    margin: 0 var(--size-xsmall);
+    margin-left: var(--size-xsmall);
+    margin-right: var(--size-xsmall);
 }
 .my-xsmall {
     margin: var(--size-xsmall) 0;

@@ -7,7 +7,7 @@
     <div class="col-sm-12">
       <div class="row between">
         <div>
-          <div v-if="talk.submission_type === 'Keynote' && $store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-small pt-3xsmall pb-3xsmall mb-2xsmall" style="width: fit-content">
+          <div v-if="(talk.submission_type.en || talk.submission_type) === 'Keynote' && $store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-small pt-3xsmall pb-3xsmall mb-2xsmall" style="width: fit-content">
             Keynote
           </div>
           <h3 class="mb-3xsmall title" :id="getSlug(talk.title)">
@@ -26,12 +26,12 @@
           </p>
         </div>
         <div v-if="talk.submission_type !== 'Misc'" class="flex top">
+          <div v-if="(talk.submission_type.en || talk.submission_type) === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-xsmall py-3xsmall mr-xsmall" style="height: fit-content; margin-top: -0.25rem;">
+            Keynote
+          </div>
           <a v-if="!$store.state.isMobile && talk.submission_type !== 'Break'" title="get link to talk" :class="talk.submission_type === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title)}`">
             <link-icon style="transform: translateY(2px)" />
           </a>
-          <div v-if="talk.submission_type === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme p-xsmall" style="height: fit-content">
-            Keynote
-          </div>
         </div>
       </div>
     </div>

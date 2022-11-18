@@ -2,7 +2,7 @@
   <div
     class="mb-xlarge p-small"
     tabindex="-1">
-    <div class="bar" v-if="titleId !== 'intro'" />
+    <div class="bar" v-if="titleId !== 'intro' && title" />
     <div class="row">
       <div
         v-if="!fullWidth"
@@ -11,6 +11,9 @@
         <h2 :id="titleId">
           {{ title }}
         </h2>
+        <h3 v-if="subtitle" class="pl-3xsmall">
+          {{ subtitle }}
+        </h3>
       </div>
       <div class="col-sm-12 col-lg-9 row" :class="fullWidth ? 'col-lg-12' : 'col-lg-9'">
         <div
@@ -29,6 +32,9 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    subtitle: {
+      type: String
     },
     body: {
       type: String,
@@ -55,16 +61,20 @@ export default {
     visibility: hidden;
     pointer-events: none;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1280px) {
     h2::before {
       margin-top: -80px;
       height: 80px;
     }
   }
-  @media screen and (min-width: 701px) {
+  @media screen and (min-width: 1281px) {
     h2 {
       position: sticky;
       top: 2rem;
+    }
+    h3 {
+      position: sticky;
+      top: 7.5rem;
     }
   }
 </style>

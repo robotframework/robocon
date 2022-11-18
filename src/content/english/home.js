@@ -64,6 +64,10 @@ export default {
     large: [],
     medium: [
       {
+        img: 'continero.png',
+        href: 'https://www.continero.com/en/'
+      },
+      {
         img: 'eficode.png',
         href: 'https://www.eficode.com/'
       },

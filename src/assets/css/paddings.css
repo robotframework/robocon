@@ -9,37 +9,44 @@
     padding: 0 var(--size-3xsmall);
 }
 .py-3xsmall {
-    padding: var(--size-3xsmall) 0;
+    padding-top: var(--size-3xsmall);
+    padding-bottom: var(--size-3xsmall);
 }
 
 .p-2xsmall {
     padding: var(--size-2xsmall);
 }
 .px-2xsmall {
-    padding: 0 var(--size-2xsmall);
+    padding-left: var(--size-2xsmall);
+    padding-right: var(--size-2xsmall);
 }
 .py-2xsmall {
-    padding: var(--size-2xsmall) 0;
+    padding-top: var(--size-2xsmall);
+    padding-bottom: var(--size-2xsmall);
 }
 
 .p-xsmall {
     padding: var(--size-xsmall);
 }
 .px-xsmall {
-    padding: 0 var(--size-xsmall);
+    padding-left: var(--size-xsmall);
+    padding-right: var(--size-xsmall);
 }
 .py-xsmall {
-    padding: var(--size-xsmall) 0;
+    padding-top: var(--size-xsmall);
+    padding-bottom: var(--size-xsmall);
 }
 
 .p-small {
     padding: var(--size-small);
 }
 .px-small {
-    padding: 0 var(--size-small);
+    padding-left: var(--size-small);
+    padding-right: var(--size-small);
 }
 .py-small {
-    padding: var(--size-small) 0;
+    padding-top: var(--size-small);
+    padding-bottom: var(--size-small);
 }
 
 .p-medium {

@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "8e3ca64387be79d2fc7e",
-    "url": "dist/css/app.ecdacb9a.css"
+    "revision": "63afc1e59fe6c09470d6",
+    "url": "dist/css/app.cfc69e0a.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -108,6 +108,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/cinia.png"
   },
   {
+    "revision": "033dd7a81cb4b42d26886d5d068ab4f3",
+    "url": "dist/img/sponsors/continero.png"
+  },
+  {
     "revision": "d33d2dcf6f2308dfe1ac833c44f006dd",
     "url": "dist/img/sponsors/copado.png"
   },
@@ -164,12 +168,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "8340d6cb6c8a8e2b6f97647298f2f474",
+    "revision": "3aaae7feadb3fb403cb73849ce97ec9c",
     "url": "dist/index.html"
   },
   {
-    "revision": "8e3ca64387be79d2fc7e",
-    "url": "dist/js/app.e0b69263.js"
+    "revision": "63afc1e59fe6c09470d6",
+    "url": "dist/js/app.49f63dd4.js"
   },
   {
     "revision": "40f670ff1370476acdd5",

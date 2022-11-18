@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'RBCN';
-    src: url('/dist/fonts/RBCN23.woff2') format('woff2');
+    src: url('/dist/fonts/RBCN23.woff2') format('woff2'), url('/fonts/RBCN23.woff2') format('woff2');
     font-display: swap;
     font-weight: 500;
 }
@@ -18,7 +18,7 @@
 }
 @font-face {
     font-family: 'OCRA';
-    src: url('/dist/fonts/OCRA.woff') format('woff');
+    src: url('/dist/fonts/OCRA.woff') format('woff'), url('/fonts/OCRA.woff') format('woff');
     font-display: swap;
 }
 
