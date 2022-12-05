@@ -81,7 +81,7 @@ export default {
       },
       {
         img: 'knowit.png',
-        href: 'https://www.knowit.eu/'
+        href: 'https://www.knowit.fi/'
       },
       {
         img: 'northcode.png',
