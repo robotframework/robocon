@@ -45,7 +45,7 @@
           </button>
           January 17th
           <p class="type-small">
-            Join a workshop for an ultimate hands-on learning experience in Helsinki.
+            Book and join a workshop for an ultimate hands-on learning experience in Helsinki.
           </p>
           <p class="type-small">
             There are several different workshops so you'll surely find one that
@@ -54,12 +54,19 @@
         </div>
         <div class="card p-small mb-small">
           <h3>
-            Sprints
+            Open-Space (aka Sprints)
           </h3>
           January 18th
           <p class="type-small">
-            Contribute to an existing project in the Robot Framework ecosystem
-            or pitch a project idea you'd like to work on with others. Or just
+            Join the free Open-Space day before the conference.
+            This day is an <a href="https://en.wikipedia.org/wiki/Unconference" target="_blank">Unconference</a>
+            day where we will organize sessions based on the proposals of all participants with
+            <a href="https://en.wikipedia.org/wiki/Open_Space_Technology" target="_blank">Open Space Technology</a>.
+            The participation is free of charge and sponsored by eficode. ❤️
+
+            You may contribute to an existing project in the Robot Framework ecosystem
+            or pitch a project idea you'd like to work on with others.
+            You could also work on stuff you have learned the day before or just
             join to meet other Robot Framework users and developers!
           </p>
         </div>
