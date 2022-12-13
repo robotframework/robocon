@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "1b709ee51a3a46b0de5f",
-    "url": "dist/css/app.dfc3644e.css"
+    "revision": "177ef28e0fe3d74819f5",
+    "url": "dist/css/app.5c7eb3c2.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -124,6 +124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/eficode.png"
   },
   {
+    "revision": "a0795e49c42d0d50e31e2049169b779e",
+    "url": "dist/img/sponsors/fsecure.png"
+  },
+  {
     "revision": "4b23aeb2e6128f6aea7a3c9c3ff09e64",
     "url": "dist/img/sponsors/gofore.png"
   },
@@ -168,12 +172,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "a5a50556f5da26ed29555e648b6402e9",
+    "revision": "ecaae8b1b4252b214e655554998298a9",
     "url": "dist/index.html"
   },
   {
-    "revision": "1b709ee51a3a46b0de5f",
-    "url": "dist/js/app.1ef1a594.js"
+    "revision": "177ef28e0fe3d74819f5",
+    "url": "dist/js/app.410bdb77.js"
   },
   {
     "revision": "40f670ff1370476acdd5",

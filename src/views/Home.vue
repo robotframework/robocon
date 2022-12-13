@@ -4,9 +4,10 @@
       <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
     </div>
   </banner>
-  <news-banner>
+  <news-banner v-if="$t('newsBanner') !== ''">
     <div v-html="$t('newsBanner')" />
   </news-banner>
+  <div v-else class="border-top-theme border-thin" />
   <div class="container">
     <page-section
       title-id="intro"
@@ -63,7 +64,8 @@
             day where we will organize sessions based on the proposals of all participants with
             <a href="https://en.wikipedia.org/wiki/Open_Space_Technology" target="_blank">Open Space Technology</a>.
             The participation is free of charge and sponsored by eficode. ❤️
-
+          </p>
+          <p>
             You may contribute to an existing project in the Robot Framework ecosystem
             or pitch a project idea you'd like to work on with others.
             You could also work on stuff you have learned the day before or just

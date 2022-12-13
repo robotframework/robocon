@@ -6,7 +6,7 @@ import archive from './archive'
 
 export default {
   langName: 'English',
-  newsBanner: 'Workshops released! <a href="https://cfp.robocon.io/robocon-2023-online/cfp">Online CFP</a> extended!',
+  newsBanner: '',
   navbar: {
     links: [
       { text: 'RBCN23', name: 'Home' },
