@@ -62,7 +62,7 @@
             Join the free Open-Space day before the conference.
             This day is an <a href="https://en.wikipedia.org/wiki/Unconference" target="_blank">Unconference</a>
             day where we will organize sessions based on the proposals of all participants with
-            <a href="https://en.wikipedia.org/wiki/Open_Space_Technology" target="_blank">Open Space Technology</a>.
+            <a href="https://en.wikipedia.org/wiki/Open_Space_Technology" target="_blank">Open-Space</a> spirit.
             The participation is free of charge and sponsored by eficode. ❤️
           </p>
           <p>
