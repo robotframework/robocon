@@ -65,7 +65,8 @@
             <a href="https://en.wikipedia.org/wiki/Open_Space_Technology" target="_blank">Open-Space</a> spirit.
             The participation is free of charge and sponsored by eficode. ❤️
           </p>
-          <p>
+          <a href="https://tickets.robotframework.org/robocon-2023/3761036/" target="_blank" class="type-small weight-bold">Enroll here!</a>
+          <p class="type-small">
             You may contribute to an existing project in the Robot Framework ecosystem
             or pitch a project idea you'd like to work on with others.
             You could also work on stuff you have learned the day before or just
