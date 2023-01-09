@@ -11,7 +11,7 @@
         <h2 :id="titleId">
           {{ title }}
         </h2>
-        <h3 v-if="subtitle" class="pl-3xsmall">
+        <h3 v-if="!$store.state.isMobile && subtitle" class="pl-3xsmall">
           {{ subtitle }}
         </h3>
       </div>

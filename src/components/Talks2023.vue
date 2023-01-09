@@ -10,7 +10,7 @@
           <div v-if="(talk.submission_type.en || talk.submission_type) === 'Keynote' && $store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-small pt-3xsmall pb-3xsmall mb-2xsmall" style="width: fit-content">
             Keynote
           </div>
-          <h3 class="mb-3xsmall title" :id="getSlug(talk.title)">
+          <h3 class="mb-3xsmall title" :id="getSlug(talk.title, talk)">
             <template v-if="talk.submission_type === 'Break'">
               {{ talk.description.en }} ({{ getBreakLength(talk.slot.start, talk.slot.end) }} min)
             </template>
@@ -29,7 +29,7 @@
           <div v-if="(talk.submission_type.en || talk.submission_type) === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-xsmall py-3xsmall mr-xsmall" style="height: fit-content; margin-top: -0.25rem;">
             Keynote
           </div>
-          <a v-if="!$store.state.isMobile && talk.submission_type !== 'Break'" title="get link to talk" :class="talk.submission_type === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title)}`">
+          <a v-if="!$store.state.isMobile && talk.submission_type !== 'Break'" title="get link to talk" :class="talk.submission_type === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title, talk)}`">
             <link-icon style="transform: translateY(2px)" />
           </a>
         </div>
@@ -116,11 +116,12 @@ export default {
     publicPath: process.env.BASE_URL
   }),
   mounted() {
+    // check height of rendered bios - truncate if long
     this.items.forEach((talk) => {
       if (!talk.speakers) return
       talk.speakers.forEach((speaker) => {
         const bioElement = document.getElementById(`${talk.code}${speaker.code}`)
-        if (bioElement === undefined) return
+        if (!bioElement) return
         if (bioElement.offsetHeight < 100) speaker.expanded = true
       })
     })
@@ -136,8 +137,10 @@ export default {
     parseText(description) {
       return DOMPurify.sanitize(marked.parse(description || ''))
     },
-    getSlug(title) {
+    getSlug(title, talk) {
       if (!title) return ''
+      const isOnline = talk?.slot?.room?.en === 'Gather Town'
+      if (isOnline) return `online-${title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
       return title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
     },
     getBreakLength(start, end) {

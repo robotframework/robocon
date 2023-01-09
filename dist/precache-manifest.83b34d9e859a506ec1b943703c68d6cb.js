@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "ab79f253e531dcb69c93",
-    "url": "dist/css/app.ec4916bd.css"
+    "revision": "6be7100d07b1d1ef3947",
+    "url": "dist/css/app.3ddd8729.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -152,6 +152,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/reaktor.png"
   },
   {
+    "revision": "0113381e6e4265600e6c38ed8fec25ac",
+    "url": "dist/img/sponsors/relex.png"
+  },
+  {
     "revision": "1e5760de77cf6281f9c5ab61e27ad262",
     "url": "dist/img/sponsors/robocorp.png"
   },
@@ -172,12 +176,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "c56142dd6b52c79b901088b9c1111e3b",
+    "revision": "f46a7b9db790d8a24062ffc5ff0f8c78",
     "url": "dist/index.html"
   },
   {
-    "revision": "ab79f253e531dcb69c93",
-    "url": "dist/js/app.34a4d480.js"
+    "revision": "6be7100d07b1d1ef3947",
+    "url": "dist/js/app.17bc43cd.js"
   },
   {
     "revision": "40f670ff1370476acdd5",

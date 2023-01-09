@@ -90,10 +90,23 @@
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
     <div v-if="talks.length">
-      <page-section title-id="talks" title="Talks" subtitle="Day 1 - Helsinki">
-        <talks-2023 :items="talks.filter((talk) => talk.slot.start.includes('2023-01-19'))" />
+      <page-section title-id="talks" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Online'">
+        <button class="theme mb-large mt-small mr-small" :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
+          Live
+        </button>
+        <button class="theme mb-large mt-small" :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
+          Online
+        </button>
+        <transition name="opacity">
+          <div v-if="shownTalks === 'live'">
+            <talks-2023 :items="talks.filter((talk) => talk.slot.start.includes('2023-01-19'))" />
+          </div>
+          <div v-else>
+            <talks-2023 :items="talks.filter((talk) => talk.slot.room?.en === 'Gather Town')" />
+          </div>
+        </transition>
       </page-section>
-      <page-section title-id="talks2" title="Talks" subtitle="Day 2 - Helsinki">
+      <page-section v-if="shownTalks === 'live'" title-id="talks2" title="Talks" subtitle="Day 2 - Helsinki">
         <talks-2023 :items="talks.filter((talk) => talk.slot.start.includes('2023-01-20'))" />
         <div class="mt-large">
           Online talks will be released soon, stay tuned!
@@ -103,8 +116,7 @@
     <div v-else>
       Loading talks...
     </div>
-    <page-section title-id="workshops" title="Workshops">
-      <h3 class="mt-large">Helsinki, in-person</h3>
+    <page-section title-id="workshops" title="Workshops" subtitle="Helsinki, in-person">
       <talks-2023 v-if="workshops.length" :items="workshops" />
       <div v-else>
         Loading workshops...
@@ -135,17 +147,22 @@ export default {
   },
   data: () => ({
     talks: [],
-    workshops: []
+    workshops: [],
+    shownTalks: 'live'
   }),
   created() {
     Promise.all([
       fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/'),
-      fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
+      fetch('https://cfp.robocon.io/api/events/robocon-2023-online/submissions/'),
+      fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/'),
+      fetch('https://pretalx.com/api/events/robocon-2023-online/schedules/latest/')
     ])
-      .then(async([submissions, schedule]) => {
+      .then(async([submissions, submissionsOnline, schedule, scheduleOnline]) => {
         const talks = await submissions.json()
+        const talksOnline = await submissionsOnline.json()
         const { breaks } = await schedule.json()
-        return [talks.results, breaks]
+        const { breaks: breaksOnline } = await scheduleOnline.json()
+        return [[...talks.results, ...talksOnline.results], [...breaks, ...breaksOnline]]
       })
       .then(([list, breaks]) => {
         const talks = list
@@ -157,7 +174,6 @@ export default {
             ...item,
             submission_type: item.description.en.toLowerCase().includes('talk') ? 'Misc' : 'Break'
           }))
-
         this.talks = [...talks, ...breaksParsed]
           .map((item) => ({
             ...item,
@@ -166,11 +182,12 @@ export default {
           }))
           .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
         this.workshops = workshops
-          .sort((a, b) => a.slot.room.en < b.slot.room.en ? -1 : 1)
+
+        const hash = window.location.hash
+        if (!hash || hash === '') return
+        if (hash.substring(1, 8) === 'online-') this.shownTalks = 'online'
 
         this.$nextTick(() => {
-          const hash = window.location.hash
-          if (!hash || hash === '') return
           const el = document.getElementById(hash.slice(1))
           if (el) el.scrollIntoView()
         })
