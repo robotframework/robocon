@@ -90,27 +90,19 @@
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
     <div v-if="talks.length">
-      <page-section title-id="talks" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Online'">
+      <page-section title-id="talks" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Day 1 - Online'">
         <button class="theme mb-large mt-small mr-small" :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
           Live
         </button>
         <button class="theme mb-large mt-small" :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
           Online
         </button>
-        <transition name="opacity">
-          <div v-if="shownTalks === 'live'">
-            <talks-2023 :items="talks.filter((talk) => talk.slot.start.includes('2023-01-19'))" />
-          </div>
-          <div v-else>
-            <talks-2023 :items="talks.filter((talk) => talk.slot.room?.en === 'Gather Town')" />
-          </div>
-        </transition>
+        <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-19'))" />
+        <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))" />
       </page-section>
-      <page-section v-if="shownTalks === 'live'" title-id="talks2" title="Talks" subtitle="Day 2 - Helsinki">
-        <talks-2023 :items="talks.filter((talk) => talk.slot.start.includes('2023-01-20'))" />
-        <div class="mt-large">
-          Online talks will be released soon, stay tuned!
-        </div>
+      <page-section title-id="talks2" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 2 - Helsinki' : 'Day 2 - Online'">
+        <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-20'))" />
+        <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))" />
       </page-section>
     </div>
     <div v-else>
@@ -166,7 +158,7 @@ export default {
       })
       .then(([list, breaks]) => {
         const talks = list
-          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote'].includes(submission_type.en)) // eslint-disable-line
+          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote', 'Pre-Recorded Full Talk'].includes(submission_type.en)) // eslint-disable-line
         const workshops = list
           .filter(({ submission_type }) => submission_type.en && submission_type.en.includes('Workshop')) // eslint-disable-line
         const breaksParsed = breaks
