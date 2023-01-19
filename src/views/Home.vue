@@ -4,10 +4,27 @@
       <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
     </div>
   </banner>
-  <news-banner v-if="$t('newsBanner') !== ''">
-    <div v-html="$t('newsBanner')" />
+  <news-banner>
+    <div v-if="currentTalk">
+      <h3>
+        Now ({{ format(new Date(currentTalk.slot.start), 'hh.mm') }} - {{ format(new Date(currentTalk.slot.end), 'hh.mm') }})
+      </h3>
+      <div v-if="currentTalk">
+        {{ currentTalk.title || currentTalk.description?.en || '-' }}
+        {{ format(new Date(currentTalk.slot.start), 'hh.mm') }}
+      </div>
+      <h3>
+        Next ({{ format(new Date(nextTalk.slot.start), 'hh.mm') }} - {{ format(new Date(nextTalk.slot.end), 'hh.mm') }})
+      </h3>
+      <div v-if="nextTalk">
+        {{ nextTalk.title || nextTalk.description?.en || '-' }}
+      </div>
+    </div>
+    <div v-else>
+      Loading today's schedule...
+    </div>
   </news-banner>
-  <div v-else class="border-top-theme border-thin" />
+  <!-- <div v-else class="border-top-theme border-thin" /> -->
   <div class="container">
     <page-section
       title-id="intro"
@@ -126,6 +143,7 @@ import {
   Talks2023,
   NewsBanner
 } from 'Components'
+import { isThisHour, isToday, subHours, format } from 'date-fns'
 
 export default {
   name: 'App',
@@ -188,7 +206,28 @@ export default {
     //   .then((res) => res.json())
     //   fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
   },
+  computed: {
+    currentTalk() {
+      const talk = this.talks.find(({ slot = {} }) => slot.start && isThisHour(subHours(new Date(slot.start), 0)))
+      if (talk) return talk
+      return null
+    },
+    nextTalk() {
+      const talksSorted = this.talks
+        .filter(({ slot = {} }) => slot.start && slot.end)
+        .filter(({ slot = {} }) => isToday(new Date(slot.start)))
+        .sort((a, b) => {
+          const dateA = a.slot?.start ? new Date(a.slot.start) : null
+          const dateB = b.slot?.start ? new Date(b.slot.start) : null
+          if (dateA && dateB) return dateA < dateB ? -1 : 1
+          return 0
+        })
+      const current = talksSorted.findIndex(({ slot }) => isThisHour(subHours(new Date(slot.start), 0)))
+      return talksSorted[current + 1]
+    }
+  },
   methods: {
+    format,
     goTo(id) {
       const el = document.getElementById(id)
       if (el) {
