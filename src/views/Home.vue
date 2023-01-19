@@ -5,16 +5,18 @@
     </div>
   </banner>
   <news-banner>
-    <div v-if="currentTalk">
-      <h3 class="color-white">
-        Now ({{ format(new Date(currentTalk.slot.start), 'hh.mm') }} - {{ format(new Date(currentTalk.slot.end), 'hh.mm') }})
-      </h3>
-      <a :href="`/#${getSlug(currentTalk.title)}`">
-        {{ currentTalk.title || currentTalk.description?.en || '-' }}
-      </a>
-      <div v-if="nextTalk" class="mt-small">
+    <div v-if="currentTalk || nextTalk">
+      <div v-if="currentTalk" class="mb-small">
         <h3 class="color-white">
-          Next ({{ format(new Date(nextTalk.slot.start), 'hh.mm') }} - {{ format(new Date(nextTalk.slot.end), 'hh.mm') }})
+          Now ({{ format(new Date(currentTalk.slot.start), 'k.mm') }} - {{ format(new Date(currentTalk.slot.end), 'k.mm') }})
+        </h3>
+        <a :href="`/#${getSlug(currentTalk.title)}`">
+          {{ currentTalk.title || currentTalk.description?.en || '-' }}
+        </a>
+      </div>
+      <div v-if="nextTalk">
+        <h3 class="color-white">
+          Next ({{ format(new Date(nextTalk.slot.start), 'k.mm') }} - {{ format(new Date(nextTalk.slot.end), 'k.mm') }})
         </h3>
         <a :href="`/#${getSlug(nextTalk.title)}`">
           {{ nextTalk.title || nextTalk.description?.en || '-' }}
@@ -214,6 +216,7 @@ export default {
       return null
     },
     nextTalk() {
+      console.log('asd')
       const talksSorted = this.talks
         .filter(({ slot = {} }) => slot.start && slot.end)
         .filter(({ slot = {} }) => isToday(new Date(slot.start)))
@@ -223,8 +226,8 @@ export default {
           if (dateA && dateB) return dateA < dateB ? -1 : 1
           return 0
         })
-      const current = talksSorted.findIndex(({ slot }) => isWithinInterval(new Date(), { start: new Date(slot.start), end: new Date(slot.end) }))
-      return talksSorted[current + 1]
+      const next = talksSorted.find(({ slot }) => new Date(slot.start) > new Date())
+      return next
     }
   },
   methods: {
