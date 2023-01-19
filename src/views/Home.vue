@@ -6,19 +6,19 @@
   </banner>
   <news-banner>
     <div v-if="currentTalk">
-      <h3>
+      <h3 class="color-white">
         Now ({{ format(new Date(currentTalk.slot.start), 'hh.mm') }} - {{ format(new Date(currentTalk.slot.end), 'hh.mm') }})
       </h3>
-      <div>
+      <a :href="`/#${getSlug(currentTalk.title)}`">
         {{ currentTalk.title || currentTalk.description?.en || '-' }}
-      </div>
+      </a>
       <div v-if="nextTalk" class="mt-small">
-        <h3>
+        <h3 class="color-white">
           Next ({{ format(new Date(nextTalk.slot.start), 'hh.mm') }} - {{ format(new Date(nextTalk.slot.end), 'hh.mm') }})
         </h3>
-        <div>
+        <a :href="`/#${getSlug(nextTalk.title)}`">
           {{ nextTalk.title || nextTalk.description?.en || '-' }}
-        </div>
+        </a>
       </div>
     </div>
     <div v-else>
@@ -144,7 +144,7 @@ import {
   Talks2023,
   NewsBanner
 } from 'Components'
-import { isThisHour, isToday, subHours, format } from 'date-fns'
+import { isToday, format, isWithinInterval } from 'date-fns'
 
 export default {
   name: 'App',
@@ -209,7 +209,7 @@ export default {
   },
   computed: {
     currentTalk() {
-      const talk = this.talks.find(({ slot = {} }) => slot.start && isThisHour(subHours(new Date(slot.start), 0)))
+      const talk = this.talks.find(({ slot = {} }) => slot.start && isWithinInterval(new Date(), { start: new Date(slot.start), end: new Date(slot.end) }))
       if (talk) return talk
       return null
     },
@@ -223,7 +223,7 @@ export default {
           if (dateA && dateB) return dateA < dateB ? -1 : 1
           return 0
         })
-      const current = talksSorted.findIndex(({ slot }) => isThisHour(subHours(new Date(slot.start), 0)))
+      const current = talksSorted.findIndex(({ slot }) => isWithinInterval(new Date(), { start: new Date(slot.start), end: new Date(slot.end) }))
       return talksSorted[current + 1]
     }
   },
@@ -236,6 +236,10 @@ export default {
           behavior: 'smooth'
         })
       }
+    },
+    getSlug(title) {
+      if (!title) return ''
+      return title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
     }
   }
 }
