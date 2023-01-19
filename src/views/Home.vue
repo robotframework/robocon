@@ -4,7 +4,7 @@
       <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
     </div>
   </banner>
-  <news-banner>
+  <news-banner v-if="new Date().getHours() < 18">
     <div v-if="currentTalk || nextTalk">
       <div v-if="currentTalk" class="mb-small">
         <h3 class="color-white">
@@ -216,7 +216,6 @@ export default {
       return null
     },
     nextTalk() {
-      console.log('asd')
       const talksSorted = this.talks
         .filter(({ slot = {} }) => slot.start && slot.end)
         .filter(({ slot = {} }) => isToday(new Date(slot.start)))
