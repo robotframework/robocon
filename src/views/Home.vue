@@ -9,15 +9,16 @@
       <h3>
         Now ({{ format(new Date(currentTalk.slot.start), 'hh.mm') }} - {{ format(new Date(currentTalk.slot.end), 'hh.mm') }})
       </h3>
-      <div v-if="currentTalk">
+      <div>
         {{ currentTalk.title || currentTalk.description?.en || '-' }}
-        {{ format(new Date(currentTalk.slot.start), 'hh.mm') }}
       </div>
-      <h3>
-        Next ({{ format(new Date(nextTalk.slot.start), 'hh.mm') }} - {{ format(new Date(nextTalk.slot.end), 'hh.mm') }})
-      </h3>
-      <div v-if="nextTalk">
-        {{ nextTalk.title || nextTalk.description?.en || '-' }}
+      <div v-if="nextTalk" class="mt-small">
+        <h3>
+          Next ({{ format(new Date(nextTalk.slot.start), 'hh.mm') }} - {{ format(new Date(nextTalk.slot.end), 'hh.mm') }})
+        </h3>
+        <div>
+          {{ nextTalk.title || nextTalk.description?.en || '-' }}
+        </div>
       </div>
     </div>
     <div v-else>
