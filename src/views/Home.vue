@@ -4,30 +4,10 @@
       <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
     </div>
   </banner>
-  <news-banner v-if="new Date().getHours() < 18">
-    <div v-if="currentTalk || nextTalk">
-      <div v-if="currentTalk" class="mb-small">
-        <h3 class="color-white">
-          Now ({{ format(new Date(currentTalk.slot.start), 'k.mm') }} - {{ format(new Date(currentTalk.slot.end), 'k.mm') }})
-        </h3>
-        <a :href="`/#${getSlug(currentTalk.title)}`">
-          {{ currentTalk.title || currentTalk.description?.en || '-' }}
-        </a>
-      </div>
-      <div v-if="nextTalk">
-        <h3 class="color-white">
-          Next ({{ format(new Date(nextTalk.slot.start), 'k.mm') }} - {{ format(new Date(nextTalk.slot.end), 'k.mm') }})
-        </h3>
-        <a :href="`/#${getSlug(nextTalk.title)}`">
-          {{ nextTalk.title || nextTalk.description?.en || '-' }}
-        </a>
-      </div>
-    </div>
-    <div v-else>
-      Loading today's schedule...
-    </div>
+  <news-banner v-if="$t('newsBanner') !== ''">
+    <div v-html="$t('newsBanner')" />
   </news-banner>
-  <!-- <div v-else class="border-top-theme border-thin" /> -->
+  <div v-else class="border-top-theme border-thin" />
   <div class="container">
     <page-section
       title-id="intro"
@@ -57,7 +37,7 @@
           Tickets also include instant access to <span class="color-theme">2022 talks!</span>
         </p>
       </div>
-      <div class="col-lg-4" :class="$store.state.isDesktop && 'pl-medium'">
+      <!-- <div class="col-lg-4" :class="$store.state.isDesktop && 'pl-medium'">
         <div class="card p-small mb-small mt-small">
           <button class="block" @click="goTo('workshops')">
             <h3 class="type-underline">
@@ -104,7 +84,7 @@
             Held at <a href="https://goo.gl/maps/jEW5zoLuZgmca6D1A">Bio Rex</a> in city center.
           </p>
         </div>
-      </div>
+      </div> -->
     </page-section>
     <page-section title-id="sponsors" title="Sponsors">
       <sponsors :sponsors="$tm('home.sponsors')" />
@@ -128,12 +108,6 @@
     <div v-else>
       Loading talks...
     </div>
-    <page-section title-id="workshops" title="Workshops" subtitle="Helsinki, in-person">
-      <talks-2023 v-if="workshops.length" :items="workshops" />
-      <div v-else>
-        Loading workshops...
-      </div>
-    </page-section>
   </div>
 </template>
 
@@ -146,7 +120,6 @@ import {
   Talks2023,
   NewsBanner
 } from 'Components'
-import { isToday, format, isWithinInterval } from 'date-fns'
 
 export default {
   name: 'App',
@@ -161,7 +134,7 @@ export default {
   data: () => ({
     talks: [],
     workshops: [],
-    shownTalks: 'live'
+    shownTalks: 'online'
   }),
   created() {
     Promise.all([
@@ -209,28 +182,7 @@ export default {
     //   .then((res) => res.json())
     //   fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
   },
-  computed: {
-    currentTalk() {
-      const talk = this.talks.find(({ slot = {} }) => slot.start && isWithinInterval(new Date(), { start: new Date(slot.start), end: new Date(slot.end) }))
-      if (talk) return talk
-      return null
-    },
-    nextTalk() {
-      const talksSorted = this.talks
-        .filter(({ slot = {} }) => slot.start && slot.end)
-        .filter(({ slot = {} }) => isToday(new Date(slot.start)))
-        .sort((a, b) => {
-          const dateA = a.slot?.start ? new Date(a.slot.start) : null
-          const dateB = b.slot?.start ? new Date(b.slot.start) : null
-          if (dateA && dateB) return dateA < dateB ? -1 : 1
-          return 0
-        })
-      const next = talksSorted.find(({ slot }) => new Date(slot.start) > new Date())
-      return next
-    }
-  },
   methods: {
-    format,
     goTo(id) {
       const el = document.getElementById(id)
       if (el) {
@@ -238,10 +190,6 @@ export default {
           behavior: 'smooth'
         })
       }
-    },
-    getSlug(title) {
-      if (!title) return ''
-      return title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
     }
   }
 }

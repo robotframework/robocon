@@ -3,8 +3,8 @@ export default {
     title: 'Hello',
     body: `
     <p>RoboCon 2023 will be a hybrid conference in <span class="color-theme">two parts</span>.
-    First conference part is <span class="color-theme">fully in-person in Helsinki</span>,
-    where all the talks and other content will be live at Bio Rex on <span class="color-theme">January 19th &amp; 20th 2023!</span></p>
+    First conference part was <span class="color-theme">fully in-person in Helsinki</span>,
+    where all the talks and other content were live at Bio Rex on <span class="color-theme">January 19th &amp; 20th 2023!</span></p>
     <p>The <span class="color-theme">online conference</span> will take place from <span class="color-theme">March 1st to March 3rd</span>
     with three amazing days and fully online content. We will stream the recorded talks from Helsinki but will also have at least 50% fresh content.</p>
     <p><span class="color-theme">Helsinki ticket also includes the online ticket.</span>
@@ -30,20 +30,6 @@ export default {
     `
   },
   tickets: [
-    {
-      title: '2023 RoboCon<div class="type-small">Helsinki</div>',
-      price: '1200 €<span class="type-xsmall"> +VAT</span>',
-      link: 'https://tickets.robotframework.org/robocon-2023/3410049/',
-      side: '2023-JAN',
-      description: '<p><span class="color-theme">Includes ticket to RoboCon Online 2023!</span></p>'
-    },
-    {
-      title: '2023 Workshops<div class="type-small">Helsinki</div>',
-      price: '550 €<span class="type-xsmall"> +VAT</span>',
-      link: 'https://tickets.robotframework.org/robocon-2023/3670331/',
-      side: '2023-JAN',
-      description: '<p><span class="color-theme"></span></p>'
-    },
     {
       title: '2023 RoboCon<div class="type-small">Online</div>',
       price: '350 €<span class="type-xsmall"> +VAT</span>',
