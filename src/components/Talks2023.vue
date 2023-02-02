@@ -22,7 +22,7 @@
             </template>
           </h3>
           <p class="type-small m-none">
-            {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }} UTC+2
+            {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
           </p>
         </div>
         <div v-if="talk.submission_type !== 'Misc'" class="flex top">
