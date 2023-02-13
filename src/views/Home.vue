@@ -104,6 +104,10 @@
         <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-20'))" />
         <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))" />
       </page-section>
+      <page-section title-id="talks3" title="Open-Space" :subtitle="shownTalks === 'live' ? 'Day 3 - Helsinki' : 'Day 3 - Online'">
+        <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-20'))" />
+        <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-03'))" />
+      </page-section>
     </div>
     <div v-else>
       Loading talks...
@@ -152,7 +156,7 @@ export default {
       })
       .then(([list, breaks]) => {
         const talks = list
-          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote', 'Pre-Recorded Full Talk'].includes(submission_type.en)) // eslint-disable-line
+          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote', 'Pre-Recorded Full Talk', 'OpenSpace'].includes(submission_type.en)) // eslint-disable-line
         const workshops = list
           .filter(({ submission_type }) => submission_type.en && submission_type.en.includes('Workshop')) // eslint-disable-line
         const breaksParsed = breaks

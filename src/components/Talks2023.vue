@@ -22,7 +22,7 @@
             </template>
           </h3>
           <p class="type-small m-none">
-            {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }}
+            {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
           </p>
         </div>
         <div v-if="talk.submission_type !== 'Misc'" class="flex top">
