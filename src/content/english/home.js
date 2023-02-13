@@ -32,7 +32,7 @@ export default {
   tickets: [
     {
       title: '2023 RoboCon<div class="type-small">Online</div>',
-      price: '350 €<span class="type-xsmall"> +VAT</span>',
+      price: '<strike>350 €</strike> 245 €<span class="type-xsmall"> +VAT</span>',
       link: 'https://tickets.robotframework.org/robocon-2023/3410050/',
       side: '2023-MAR',
       description: `<p>Discounted early tickets for 2023 online conference are available now!</p>
