@@ -4,6 +4,7 @@ import Home2022 from '../views/Home2022.vue'
 import HomeGermany from '../views/HomeGermany.vue'
 import Sponsor from '../views/Sponsor.vue'
 import Archive from '../views/Archive.vue'
+import Stream from '../views/Stream.vue'
 import NotFound from '../views/NotFound.vue'
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: '/sponsor',
     name: 'Sponsor',
     component: Sponsor
+  },
+  {
+    path: '/stream',
+    name: 'Stream',
+    component: Stream
   },
   {
     path: '/:pathMatch(.*)*',
