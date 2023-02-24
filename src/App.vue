@@ -1,12 +1,12 @@
 <template>
-  <nav-mobile v-if="!$store.state.isDesktop" />
+  <nav-mobile v-if="!$store.state.isDesktop && !fullScreen" />
   <!-- <news-banner v-if="$route.name === 'Home'" class="theme-germany">
     <h2>ROBOCON <span class="color-white">2022</span> GERMANY</h2>
     <h3>📣 <span class="color-theme">This October 5th</span> 📣</h3> First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link>
   </news-banner> -->
-  <navbar v-if="$store.state.isDesktop" />
+  <navbar v-if="$store.state.isDesktop && !fullScreen" />
   <router-view />
-  <page-footer />
+  <page-footer v-if="!fullScreen" />
 </template>
 
 <script>
@@ -19,6 +19,9 @@ export default {
     PageFooter,
     NewsBanner
   },
+  data: () => ({
+    fullScreen: false
+  }),
   created() {
     document.documentElement.lang = this.$i18n.locale
     this.$store.commit('SET_IS_MOBILE', window.innerWidth < 768)
@@ -31,6 +34,9 @@ export default {
     window.addEventListener('keydown', ({ key }) => {
       if (key === 'Tab') { document.body.classList.add('accessible') }
     })
+    const params = new URLSearchParams(window.location.search)
+    const attendee = Object.fromEntries(params.entries()).attendee
+    if (attendee === 'gather') this.fullScreen = true
   },
   watch: {
     '$i18n.locale'() {
