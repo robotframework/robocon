@@ -10,14 +10,13 @@
 </template>
 
 <script>
-import { Navbar, NavMobile, PageFooter, NewsBanner } from 'Components'
+import { Navbar, NavMobile, PageFooter } from 'Components'
 
 export default {
   components: {
     Navbar,
     NavMobile,
-    PageFooter,
-    NewsBanner
+    PageFooter
   },
   data: () => ({
     fullScreen: false
