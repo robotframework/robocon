@@ -29,11 +29,14 @@
           <div v-if="(talk.submission_type.en || talk.submission_type) === 'Keynote' && !$store.state.isMobile" class="rounded-small bg-grey-dark color-theme px-xsmall py-3xsmall mr-xsmall" style="height: fit-content; margin-top: -0.25rem;">
             Keynote
           </div>
-          <a v-if="!$store.state.isMobile && talk.submission_type !== 'Break'" title="get link to talk" :class="talk.submission_type === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title, talk)}`">
+          <a v-if="!$store.state.isMobile && talk.submission_type !== 'Break' && !small" title="get link to talk" :class="talk.submission_type === 'Keynote' && 'm-xsmall'" :href="`#${getSlug(talk.title, talk)}`">
             <link-icon style="transform: translateY(2px)" />
           </a>
         </div>
       </div>
+    </div>
+    <div v-if="hash && getVideoUrl(talk.code)" class="col-sm-12 col-md-4">
+      <iframe width="100%" :height="$store.state.isMobile ? '200' : '250'" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div v-if="!['Break', 'Misc'].includes(talk.submission_type)" class="col-sm-12">
       <p
@@ -73,7 +76,7 @@
           </div>
         </template>
         <template v-else>
-          <div class="col-sm-2">
+          <div :class="small ? 'col-sm-1' : 'col-sm-2'">
             <img :src="speaker.avatar || `${publicPath}/img/speaker_img_placeholder.jpg`" class="rounded" />
           </div>
           <div class="col-sm-10 pl-small">
@@ -98,6 +101,8 @@
 <script>
 import * as DOMPurify from 'dompurify'
 import { marked } from 'marked'
+import CryptoJS from 'crypto-js'
+import * as jose from 'jose'
 import { format, differenceInMinutes } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
 
@@ -110,10 +115,23 @@ export default {
     items: {
       type: Array,
       required: true
+    },
+    small: {
+      type: Boolean,
+      default: false
+    },
+    hash: {
+      type: String
     }
   },
   data: () => ({
-    publicPath: process.env.BASE_URL
+    publicPath: process.env.BASE_URL,
+    token: {},
+    error: false,
+    dataReady: true,
+    recordings: {
+      X9CQEZ: 'U2FsdGVkX19AKbj+W1GiNfO4hrQCmN66veZvafBaV6o='
+    }
   }),
   mounted() {
     // check height of rendered bios - truncate if long
@@ -145,6 +163,13 @@ export default {
     },
     getBreakLength(start, end) {
       return differenceInMinutes(new Date(end), new Date(start))
+    },
+    getVideoUrl(code) {
+      const recording = this.recordings[code]
+      if (!recording) return undefined
+      console.log(code)
+      const url = CryptoJS.AES.decrypt(recording, this.hash).toString(CryptoJS.enc.Utf8)
+      return `https://www.youtube.com/embed/${url}`
     }
   }
 }

@@ -1,25 +1,46 @@
 <template>
-  <div  v-if="dataReady && !error">
+  <div v-if="dataReady && !error">
     <div class="px-small pt-small bg-black">
       <button class="theme small type-small mr-small" :class="selectedDay === 1 && 'active'" @click="selectedDay = 1">Day 1</button>
       <button class="theme small type-small" :class="selectedDay === 2 && 'active'" @click="selectedDay = 2">Day 2</button>
     </div>
-    <div class="stream-container">
+    <div class="stream-container" :class="isFullScreen && 'fullscreen'">
       <iframe class="stream col-sm-12 col-md-9" :src=streamUrl title="Robocon stream" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
-  <h1 class="color-white m-large container row middle col-sm-12 type-center" align="center" justify="center" v-if="dataReady && error">
+  <h1 v-if="dataReady && error" class="color-white mt-2xlarge type-center type-xlarge">
     <span class="color-theme">IN</span>
     <span>VALID</span>
     <span class="color-theme">AUTH</span>
   </h1>
+  <div v-if="talks.length" class="container mt-large mb-xlarge px-small">
+    <h2>
+      Wednesday
+    </h2>
+    <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))" :small="true" :hash="token.liveHash" />
+    <h2 class="mt-xlarge">
+      Thursday
+    </h2>
+    <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))" :small="true" :hash="token.liveHash" />
+    <h2 class="mt-xlarge">
+      Friday
+    </h2>
+    <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-03'))" :small="true" :hash="token.liveHash" />
+  </div>
+  <div v-else>
+    Loading talks...
+  </div>
 </template>
 
 <script>
+import { Talks2023 } from 'Components'
 import CryptoJS from 'crypto-js'
 import * as jose from 'jose'
 export default {
+  components: {
+    Talks2023
+  },
   data: () => ({
     selectedDay: 1,
     day1: 'U2FsdGVkX1/0aHHp+Cys2bR/e8tq3sVnQiterKrTxTM=',
@@ -41,7 +62,8 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
 6IrJDlqg3BaMV5Hr8LdQtY8CAwEAAQ==
 -----END PUBLIC KEY-----`,
     dataReady: false,
-    error: false
+    error: false,
+    talks: []
   }),
   computed: {
     streamUrl() {
@@ -51,6 +73,9 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
     },
     chatUrl() {
       return CryptoJS.AES.decrypt(this.chat, this.token.liveHash).toString(CryptoJS.enc.Utf8)
+    },
+    isFullScreen() {
+      return this.token.name === 'gather'
     }
   },
   async created() {
@@ -75,6 +100,31 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
       console.error(error)
     }
     this.dataReady = true
+    Promise.all([
+      fetch('https://cfp.robocon.io/api/events/robocon-2023-online/submissions/'),
+      fetch('https://pretalx.com/api/events/robocon-2023-online/schedules/latest/')
+    ])
+      .then(async([submissionsOnline, scheduleOnline]) => {
+        const talksOnline = await submissionsOnline.json()
+        const { breaks: breaksOnline } = await scheduleOnline.json()
+        return [talksOnline.results, breaksOnline]
+      })
+      .then(([list, breaks]) => {
+        const talks = list
+          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote', 'Pre-Recorded Full Talk', 'OpenSpace'].includes(submission_type.en)) // eslint-disable-line
+        const breaksParsed = breaks
+          .map((item) => ({
+            ...item,
+            submission_type: item.description.en.toLowerCase().includes('talk') ? 'Misc' : 'Break'
+          }))
+        this.talks = [...talks, ...breaksParsed]
+          .map((item) => ({
+            ...item,
+            slot: item.slot || { start: item.start, end: item.end },
+            type: item.submission_type.en || item.submission_type
+          }))
+          .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+      })
   }
 }
 </script>
@@ -84,6 +134,9 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
   display: flex;
   flex-wrap: wrap;
   min-height: calc(100vh - 7rem);
+}
+.stream-container.fullscreen {
+  min-height: calc(100vh - 3rem);
 }
 @media screen and (max-width: 768px) {
   .chat {
