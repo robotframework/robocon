@@ -14,22 +14,24 @@
     <span>VALID</span>
     <span class="color-theme">AUTH</span>
   </h1>
-  <div v-if="talks.length" class="container mt-large mb-xlarge px-small">
-    <h2>
-      Wednesday
-    </h2>
-    <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))" :small="true" :hash="token.liveHash" />
-    <h2 class="mt-xlarge">
-      Thursday
-    </h2>
-    <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))" :small="true" :hash="token.liveHash" />
-    <h2 class="mt-xlarge">
-      Friday
-    </h2>
-    <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-03'))" :small="true" :hash="token.liveHash" />
-  </div>
-  <div v-else>
-    Loading talks...
+  <div v-if="!isFullScreen">
+    <div v-if="talks.length" class="container mt-large mb-xlarge px-small">
+      <h2>
+        Wednesday
+      </h2>
+      <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))" :small="true" :hash="token.liveHash" />
+      <h2 class="mt-xlarge">
+        Thursday
+      </h2>
+      <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))" :small="true" :hash="token.liveHash" />
+      <h2 class="mt-xlarge">
+        Friday
+      </h2>
+      <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-03'))" :small="true" :hash="token.liveHash" />
+    </div>
+    <div v-else>
+      Loading talks...
+    </div>
   </div>
 </template>
 
