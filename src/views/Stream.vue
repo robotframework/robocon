@@ -1,12 +1,17 @@
 <template>
   <div v-if="!error">
-    <div class="px-small pt-small bg-black">
-      <button class="theme small type-small mr-small" :class="selectedDay === 1 && 'active'" @click="selectedDay = 1">Day 1</button>
-      <button class="theme small type-small" :class="selectedDay === 2 && 'active'" @click="selectedDay = 2">Day 2</button>
+    <div class="px-small py-xsmall bg-black row between">
+      <div>
+        <button class="theme small type-small mr-small" :class="selectedDay === 1 && 'active'" @click="selectedDay = 1">Day 1</button>
+        <button class="theme small type-small" :class="selectedDay === 2 && 'active'" @click="selectedDay = 2">Day 2</button>
+      </div>
+      <button @click="chatShown = !chatShown" class="theme small type-small">
+        {{ chatShown ? 'Hide chat' : 'Show chat' }}
+      </button>
     </div>
     <div class="stream-container" :class="isFullScreen && 'fullscreen'">
-      <iframe class="stream col-sm-12 col-md-9" :src=streamUrl title="Robocon stream" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
+      <iframe class="stream col-sm-12" :class="chatShown && 'col-md-9'" :src=streamUrl title="Robocon stream" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe v-if="chatShown" class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
   <h1 v-if="error" class="color-white mt-2xlarge type-center type-xlarge">
@@ -48,7 +53,8 @@ export default {
     day2: 'U2FsdGVkX18sJTZAmMWOmWZHyyIKqPmEv7M0LLPZths=',
     chat: 'U2FsdGVkX19Id2P5u0Hc1xSiLbqraODnTHvKjpo4p5yVgp4jY5Oj8/odAjctICBGwX8ptykisw2uFsCKXlGgYA==',
     error: false,
-    talks: []
+    talks: [],
+    chatShown: true
   }),
   computed: {
     streamUrl() {
