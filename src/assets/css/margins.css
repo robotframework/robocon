@@ -47,7 +47,9 @@
 .m-medium {
     margin: var(--size-medium);
 }
-
+.mx-medium {
+    margin: 0 var(--size-medium);
+}
 .m-large {
     margin: var(--size-large);
 }

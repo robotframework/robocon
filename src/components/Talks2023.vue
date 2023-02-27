@@ -35,8 +35,10 @@
         </div>
       </div>
     </div>
-    <div v-if="hash && getVideoUrl(talk.code)" class="col-sm-12 col-md-4">
-      <iframe width="100%" :height="$store.state.isMobile ? '200' : '250'" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="col-sm-12 p-large">
+      <div v-if="hash && getVideoUrl(talk.code)" width="100%" class="video col-sm-12 p-xsmall mx-medium">
+        <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
     <div v-if="!['Break', 'Misc'].includes(talk.submission_type)" class="col-sm-12">
       <p
@@ -152,7 +154,11 @@ export default {
       AXBYUP: 'U2FsdGVkX197y9tVXFPhS0SL+XM4o365DfYdnJeVHk0=',
       XWZVHN: 'U2FsdGVkX1/187Wksg7wNwE7SUSoszg3m63Oy/YooSM=',
       ASXKLW: 'U2FsdGVkX195OYR9jfdAjdVoX/daiW6Slw+tVouNKJI=',
-      MGCBMF: 'U2FsdGVkX1+C35mtZtNFaN3omblmryCPSjXhMV2tlLg='
+      MGCBMF: 'U2FsdGVkX1+C35mtZtNFaN3omblmryCPSjXhMV2tlLg=',
+      CKHB9J: 'U2FsdGVkX18h15zwTAeNoZvgrHfwZGeW6/FEqahbn7s=',
+      MTRCMK: 'U2FsdGVkX185SyiprfNdsRjw98AyaF4Tp56eGGXs5YI=',
+      AULYMA: 'U2FsdGVkX1+UQEIBg+tndNgES6UM/2aaCyZzzoeH9+w=',
+      ZSLPJF: 'U2FsdGVkX1+OebszkRP3OcIGjCXhiZfzN9xYj31260c='
     }
   }),
   mounted() {
@@ -187,8 +193,12 @@ export default {
       return differenceInMinutes(new Date(end), new Date(start))
     },
     getVideoUrl(code) {
+      if (typeof code === 'undefined') return undefined
       const recording = this.recordings[code]
-      if (!recording) return undefined
+      if (!recording) {
+        console.error(`Code ${code} did not have a recording.`)
+        return undefined
+      }
       console.log(code)
       const url = CryptoJS.AES.decrypt(recording, this.hash).toString(CryptoJS.enc.Utf8)
       return `https://www.youtube.com/embed/${url}`
