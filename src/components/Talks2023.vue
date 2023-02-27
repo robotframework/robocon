@@ -35,8 +35,8 @@
         </div>
       </div>
     </div>
-    <div v-if="hash && getVideoUrl(talk.code)" class="col-sm-12 p-large">
-      <div width="100%" class="video col-sm-12 p-xsmall mx-medium">
+    <div v-if="hash && getVideoUrl(talk.code)" class="col-sm-12 col-md-8 col-md-offset-2">
+      <div width="100%" class="video mt-medium mb-medium">
         <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
@@ -120,9 +120,6 @@ export default {
     small: {
       type: Boolean,
       default: false
-    },
-    hash: {
-      type: String
     }
   },
   data: () => ({
@@ -162,6 +159,11 @@ export default {
       PDKBJK: ''
     }
   }),
+  computed: {
+    hash() {
+      return window.localStorage.getItem('hashKey')
+    }
+  },
   mounted() {
     // check height of rendered bios - truncate if long
     this.items.forEach((talk) => {
@@ -200,7 +202,10 @@ export default {
         console.error(`Code ${code} did not have a recording.`)
         return undefined
       }
-      console.log(code)
+      if (!this.hash) {
+        console.error('no token')
+        return undefined
+      }
       const url = CryptoJS.AES.decrypt(recording, this.hash).toString(CryptoJS.enc.Utf8)
       return `https://www.youtube.com/embed/${url}`
     }
