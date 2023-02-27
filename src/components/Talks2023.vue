@@ -35,8 +35,8 @@
         </div>
       </div>
     </div>
-    <div v-if="hash && getVideoUrl(talk.code)" class="col-sm-12 p-large">
-      <div width="100%" class="video col-sm-12 p-xsmall mx-medium">
+    <div v-if="hash && getVideoUrl(talk.code)" class="col-sm-12 col-md-10 col-md-offset-1">
+      <div width="100%" class="video mt-medium mb-medium">
         <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
@@ -200,9 +200,13 @@ export default {
         console.error(`Code ${code} did not have a recording.`)
         return undefined
       }
-      console.log(code)
-      const url = CryptoJS.AES.decrypt(recording, this.hash).toString(CryptoJS.enc.Utf8)
-      return `https://www.youtube.com/embed/${url}`
+      try {
+        const url = CryptoJS.AES.decrypt(recording, this.hash).toString(CryptoJS.enc.Utf8)
+        return `https://www.youtube-nocookie.com/embed/${url}?rel=0&autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
+      } catch (e) {
+        console.error(`Code ${code} did not have a valid recording.`)
+        return undefined
+      }
     }
   }
 }
