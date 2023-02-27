@@ -9,7 +9,7 @@
       <iframe class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
-  <h1 v-if="dataReady && error" class="color-white mt-2xlarge type-center type-xlarge">
+  <h1 v-if="error" class="color-white mt-2xlarge type-center type-xlarge">
     <span class="color-theme">IN</span>
     <span>VALID</span>
     <span class="color-theme">AUTH</span>
