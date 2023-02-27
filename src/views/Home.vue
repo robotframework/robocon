@@ -160,20 +160,26 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
   }),
   async created() {
     const params = new URLSearchParams(window.location.search)
-    const auth = Object.fromEntries(params.entries()).auth
-    const attendee = Object.fromEntries(params.entries()).attendee
-    try {
-      const { payload } = await jose.jwtVerify(auth, await jose.importSPKI(this.public, 'RS256'), {
-        issuer: 'pretix'
-      })
-      this.token = payload
-      if (payload.name !== attendee) {
-        console.log('invalid Attendee')
+    const auth = Object.fromEntries(params.entries()).auth || window.localStorage.getItem('auth')
+    const attendee = Object.fromEntries(params.entries()).attendee || window.localStorage.getItem('attendee')
+    console.log(auth)
+    if (typeof auth !== 'undefined' && typeof attendee !== 'undefined') {
+      window.history.replaceState({}, document.title, '/' + window.location.hash)
+      window.localStorage.setItem('auth', auth)
+      window.localStorage.setItem('attendee', attendee)
+      try {
+        const { payload } = await jose.jwtVerify(auth, await jose.importSPKI(this.public, 'RS256'), {
+          issuer: 'pretix'
+        })
+        this.token = payload
+        if (payload.name !== attendee) {
+          console.log('invalid Attendee')
+          this.error = true
+        }
+      } catch (error) {
         this.error = true
+        console.error(error)
       }
-    } catch (error) {
-      this.error = true
-      console.error(error)
     }
     this.dataReady = true
     Promise.all([

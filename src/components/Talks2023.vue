@@ -35,8 +35,8 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 p-large">
-      <div v-if="hash && getVideoUrl(talk.code)" width="100%" class="video col-sm-12 p-xsmall mx-medium">
+    <div v-if="hash && getVideoUrl(talk.code)" class="col-sm-12 p-large">
+      <div width="100%" class="video col-sm-12 p-xsmall mx-medium">
         <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
@@ -158,7 +158,8 @@ export default {
       CKHB9J: 'U2FsdGVkX18h15zwTAeNoZvgrHfwZGeW6/FEqahbn7s=',
       MTRCMK: 'U2FsdGVkX185SyiprfNdsRjw98AyaF4Tp56eGGXs5YI=',
       AULYMA: 'U2FsdGVkX1+UQEIBg+tndNgES6UM/2aaCyZzzoeH9+w=',
-      ZSLPJF: 'U2FsdGVkX1+OebszkRP3OcIGjCXhiZfzN9xYj31260c='
+      ZSLPJF: 'U2FsdGVkX1+OebszkRP3OcIGjCXhiZfzN9xYj31260c=',
+      PDKBJK: ''
     }
   }),
   mounted() {
