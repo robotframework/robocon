@@ -33,11 +33,18 @@
               <div v-html="ticket.side" />
             </template>
           </ticket>
-          <router-link v-else :to="{ name: 'Stream' }">
-            <button class="theme active type-uppercase">
-              Go to live stream
-            </button>
-          </router-link>
+          <div v-else class="type-center">
+            <router-link :to="{ name: 'Stream' }">
+              <button class="theme active type-uppercase">
+                Go to live stream
+              </button>
+            </router-link>
+            <div class="mt-small">
+              <a href="https://tickets.robotframework.org/robocon-2023/3410050/" class="type-small">
+                Purchase tickets
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- <div class="col-lg-4" :class="$store.state.isDesktop && 'pl-medium'">
