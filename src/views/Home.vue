@@ -19,7 +19,7 @@
           v-for="ticket in $tm('home.tickets')"
           :key="ticket.title"
           style="display: inline-block">
-          <ticket :link="ticket.link">
+          <ticket v-if="!showStreamLink" :link="ticket.link">
             <template v-slot:title>
               <div v-html="ticket.title" />
             </template>
@@ -33,6 +33,11 @@
               <div v-html="ticket.side" />
             </template>
           </ticket>
+          <router-link v-else :to="{ name: 'Stream' }">
+            <button class="theme active type-uppercase">
+              Go to live stream
+            </button>
+          </router-link>
         </div>
       </div>
       <!-- <div class="col-lg-4" :class="$store.state.isDesktop && 'pl-medium'">
@@ -154,7 +159,8 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
 6IrJDlqg3BaMV5Hr8LdQtY8CAwEAAQ==
 -----END PUBLIC KEY-----`,
     dataReady: false,
-    error: false
+    error: false,
+    showStreamLink: false
   }),
   async created() {
     const params = new URLSearchParams(window.location.search)
@@ -175,6 +181,8 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
         if (payload.name !== attendee) {
           console.log('invalid Attendee')
           this.error = true
+        } else {
+          this.showStreamLink = true
         }
       } catch (error) {
         this.error = true
