@@ -7,11 +7,12 @@
   <news-banner v-if="$t('newsBanner') !== ''">
     <div v-html="$t('newsBanner')" />
   </news-banner>
-  <div v-else class="border-top-theme border-thin" />
+  <div v-show="token.name !== 'gather'" v-else class="border-top-theme border-thin" />
   <div class="container">
     <page-section
       title-id="intro"
-      :title="$t('home.intro.title')">
+      :title="$t('home.intro.title')"
+      v-show="token.name !== 'gather'">
       <div class="row center col-lg-8">
         <div v-html="$t('home.intro.body')" class="mb-large" />
         <div
@@ -33,9 +34,6 @@
             </template>
           </ticket>
         </div>
-        <p class="mt-large type-center">
-          Tickets also include instant access to <span class="color-theme">2022 talks!</span>
-        </p>
       </div>
       <!-- <div class="col-lg-4" :class="$store.state.isDesktop && 'pl-medium'">
         <div class="card p-small mb-small mt-small">
@@ -86,15 +84,15 @@
         </div>
       </div> -->
     </page-section>
-    <page-section title-id="sponsors" title="Sponsors">
+    <page-section v-show="token.name !== 'gather'" title-id="sponsors" title="Sponsors">
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
     <div v-if="talks.length">
       <page-section title-id="talks" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Day 1 - Online'">
-        <button class="theme mb-large mt-small mr-small" :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
+        <button v-show="token.name !== 'gather'" class="theme mb-large mt-small mr-small" :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
           Live
         </button>
-        <button class="theme mb-large mt-small" :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
+        <button v-show="token.name !== 'gather'" class="theme mb-large mt-small" :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
           Online
         </button>
         <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-19'))" :hash="token.hashKey" />
