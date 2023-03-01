@@ -77,7 +77,7 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
     streamUrl() {
       const url = this.selectedDay === 1 ? this.day1 : this.day2
       const code = CryptoJS.AES.decrypt(url, this.token.liveHash).toString(CryptoJS.enc.Utf8)
-      return `https://www.youtube.com/embed/${code}?rel=0&autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
+      return `https://www.youtube.com/embed/${code}?rel=0&autoplay=1&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
     },
     chatUrl() {
       return CryptoJS.AES.decrypt(this.chat, this.token.liveHash).toString(CryptoJS.enc.Utf8)
