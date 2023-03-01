@@ -18,6 +18,9 @@
               {{ talk.description.en }}
             </template>
             <template v-else>
+              <template v-if="getIsNow(talk.slot.start, talk.slot.end)">
+                🔴
+              </template>
               {{ talk.title }}
             </template>
           </h3>
@@ -104,7 +107,7 @@
 import * as DOMPurify from 'dompurify'
 import { marked } from 'marked'
 import CryptoJS from 'crypto-js'
-import { format, differenceInMinutes } from 'date-fns'
+import { format, differenceInMinutes, isWithinInterval } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
 
 export default {
@@ -160,7 +163,8 @@ export default {
       AULYMA: 'U2FsdGVkX1+UQEIBg+tndNgES6UM/2aaCyZzzoeH9+w=',
       ZSLPJF: 'U2FsdGVkX1+OebszkRP3OcIGjCXhiZfzN9xYj31260c=',
       PDKBJK: ''
-    }
+    },
+    dateNow: new Date()
   }),
   mounted() {
     // check height of rendered bios - truncate if long
@@ -172,6 +176,9 @@ export default {
         if (bioElement.offsetHeight < 100) speaker.expanded = true
       })
     })
+    setInterval(() => {
+      this.dateNow = new Date()
+    }, 10000)
   },
   methods: {
     format,
@@ -207,6 +214,10 @@ export default {
         console.error(`Code ${code} did not have a valid recording.`)
         return undefined
       }
+    },
+    getIsNow(start, end) {
+      if (!start || !end) return false
+      return isWithinInterval(this.dateNow, { start: new Date(start), end: new Date(end) })
     }
   }
 }
