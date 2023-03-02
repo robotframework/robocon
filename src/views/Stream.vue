@@ -51,7 +51,7 @@ export default {
   data: () => ({
     selectedDay: 1,
     day1: 'U2FsdGVkX1/0aHHp+Cys2bR/e8tq3sVnQiterKrTxTM=',
-    day2: 'U2FsdGVkX18sJTZAmMWOmWZHyyIKqPmEv7M0LLPZths=',
+    day2: 'U2FsdGVkX19omJf3PXfUUePA8Lo2nWXgHg8e3/Ax/d4=',
     chat: 'U2FsdGVkX19Id2P5u0Hc1xSiLbqraODnTHvKjpo4p5yVgp4jY5Oj8/odAjctICBGwX8ptykisw2uFsCKXlGgYA==',
     token: {},
     public: `-----BEGIN PUBLIC KEY-----
