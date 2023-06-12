@@ -1,9 +1,9 @@
 <template>
   <div class="pb-large m-small" >
-    <div class="container row middle">
+    <div class="container narrow row middle">
       <transition appear name="opacity-slow">
         <div
-          class="col-sm-12 type-center"
+          class="col-sm-12"
           style="transition-delay: 0.25s;">
           <slot />
         </div>

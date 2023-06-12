@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Home2022 from '../views/Home2022.vue'
+import Robocon2023 from '../views/Robocon2023.vue'
 import HomeGermany from '../views/HomeGermany.vue'
 import Sponsor from '../views/Sponsor.vue'
 import Archive from '../views/Archive.vue'
@@ -12,11 +12,10 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/2022',
-    name: '2022',
-    component: Home2022
+  }, {
+    path: '/2023',
+    name: 'Robocon2023',
+    component: Robocon2023
   },
   {
     path: '/germany',

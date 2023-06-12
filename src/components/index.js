@@ -14,12 +14,10 @@ import Talks2023 from './Talks2023.vue'
 
 import BaseIcon from './BaseIcon.vue'
 import GlobeIcon from './icons/GlobeIcon.vue'
+import GlobeRBCN from './icons/GlobeRBCN.vue'
 import LinkIcon from './icons/LinkIcon.vue'
 import ChevronIcon from './icons/ChevronIcon.vue'
 import NewTabIcon from './icons/NewTabIcon.vue'
-
-import Banner22 from './2022/Banner22.vue'
-import Navbar22 from './2022/Navbar22.vue'
 
 export {
   NewsBanner,
@@ -36,11 +34,9 @@ export {
   Timeline,
   Talks2023,
 
-  Banner22,
-  Navbar22,
-
   BaseIcon,
   GlobeIcon,
+  GlobeRBCN,
   ChevronIcon,
   NewTabIcon,
   LinkIcon

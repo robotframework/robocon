@@ -4,6 +4,151 @@ export default {
     body: '<p>All RoboCon talks over the years have been recorded. Feel free to watch them here or directly in <a href="https://www.youtube.com/c/RobotFrameworkChannel/playlists">YouTube</a>.</p>',
     talks: [
       {
+        year: 2022,
+        playlistLink: 'https://www.youtube.com/watch?v=jlhgitypC5Q&list=PLSK6YK5OGX1AN9PSVHz1vsoSqbz3tFS_C',
+        list: [
+          {
+            title: 'Keynote: Robot Framework',
+            url: 'https://www.youtube.com/embed/jlhgitypC5Q',
+            authors: ['René Rohner', 'Ed Manlove', 'Pekka Klärck']
+          },
+          {
+            title: 'Robocorp == RPA for Developers',
+            url: 'https://www.youtube.com/embed/MuD7yhIIdCU',
+            authors: ['Antti Karjalainen']
+          },
+          {
+            title: 'Test Intelligence for and with the Robot Framework',
+            url: 'https://www.youtube.com/embed/i8cSTAoe_hw',
+            authors: ['Elmar Juergens']
+          },
+          {
+            title: 'Our Robot Framework Automation Journey : Medidata Solutions',
+            url: 'https://www.youtube.com/embed/PFqmZ5GwXgg',
+            authors: ['Karthik Selvarajan', 'Allen Lee']
+          },
+          {
+            title: 'Tests are talking, are you ready to listen?',
+            url: 'https://www.youtube.com/embed/sm2XQ-kM2GA',
+            authors: ['Tatu Aalto']
+          },
+          {
+            title: 'How Robocop evolved to 2.0?',
+            url: 'https://www.youtube.com/embed/t_R36N_4UBk',
+            authors: ['Mateusz Nojek']
+          },
+          {
+            title: 'Tidy your code with Robotidy',
+            url: 'https://www.youtube.com/embed/8ELCaSKR6Ns',
+            authors: ['Bartłomiej Hirsz']
+          },
+          {
+            title: 'Project and package management: Poetry for robots',
+            url: 'https://www.youtube.com/embed/UjzXCDcnTs0',
+            authors: ['Robin Mackaij']
+          },
+          {
+            title: 'CamundaLibrary - Updates and Roadmap',
+            url: 'https://www.youtube.com/embed/5mjjZ4KmPJ0',
+            authors: ['Markus Stahl']
+          },
+          {
+            title: 'Accessibility checking with Browser Extensions',
+            url: 'https://www.youtube.com/embed/sQ6lekIq1mE',
+            authors: ['Elout van Leeuwen']
+          },
+          {
+            title: 'Web-scale Robot Framework with JupyterLite',
+            url: 'https://www.youtube.com/embed/VII2OL8O4hA',
+            authors: ['Asko Soukka', 'Nicholas Bollweg']
+          },
+          {
+            title: 'Robots In Space',
+            url: 'https://www.youtube.com/embed/8Nz5LXsXmAU',
+            authors: ['Jeff King']
+          },
+          {
+            title: 'Using implicit context to create rich behavior driven keywords',
+            url: 'https://www.youtube.com/embed/8AKBwK_UJwo',
+            authors: ['Samuel Montgomery-Blinn']
+          },
+          {
+            title: 'Robot Framework Is Not ...',
+            url: 'https://www.youtube.com/embed/Mpt_4MItha0',
+            authors: ['Kelby Stine']
+          },
+          {
+            title: 'Combining all test reports to one',
+            url: 'https://www.youtube.com/embed/m5zkIRQs8ZM',
+            authors: ['Timo Stordell']
+          },
+          {
+            title: 'Analyze your code like true detective',
+            url: 'https://www.youtube.com/embed/PNHl_mz66ZI',
+            authors: ['Bartłomiej Hirsz']
+          },
+          {
+            title: 'Yet another API talk, but this one is different...',
+            url: 'https://www.youtube.com/embed/owkk5B1kEhM',
+            authors: ['Mateusz Nojek']
+          },
+          {
+            title: 'Output Robot Framework report using Github Actions',
+            url: 'https://www.youtube.com/embed/HQObgYC3D3s',
+            authors: ['Joonas Venäläinen']
+          },
+          {
+            title: 'Reactive Robot - Fastest way to turn Robot Framework projects into event-driven services',
+            url: 'https://www.youtube.com/embed/UTwDfGYj3lw',
+            authors: ['Yusuf Can Bayrak']
+          },
+          {
+            title: '\\u201cFor the very first time\\u201d - Start to Code, Test, Package & Publish your first Library',
+            url: 'https://www.youtube.com/embed/BblpFESySiI',
+            authors: ['Many Kasiriha']
+          },
+          {
+            title: 'Robot Framework for silicon validation',
+            url: 'https://www.youtube.com/embed/GcQgx6NZQa0',
+            authors: ['Franz Haas', 'Sebastian Herz']
+          },
+          {
+            title: 'HybridApp - hybrid testing',
+            url: 'https://www.youtube.com/embed/yD5e1r-8aw0',
+            authors: ['Jacek Kohut']
+          },
+          {
+            title: 'Introducing OpenApiDriver...and OpenApiLibCore!',
+            url: 'https://www.youtube.com/embed/7YWZEHxk9Ps',
+            authors: ['Robin Mackaij']
+          },
+          {
+            title: 'Robot Framework and commercial testing tools integration - based on regression project for SWT app',
+            url: 'https://www.youtube.com/embed/Q68PeIs0Ig0',
+            authors: ['Krzysztof Trybus', 'Gregor Schmid']
+          },
+          {
+            title: 'Eggplant Library - connecting Robot Framework to advanced image based automation',
+            url: 'https://www.youtube.com/embed/wOGVdWEzs_A',
+            authors: ['Andre Mochinin', 'Rico Feist']
+          },
+          {
+            title: 'Year with Browser library',
+            url: 'https://www.youtube.com/embed/rSkNT7jFr_c',
+            authors: ['Tatu Aalto', 'René Rohner', 'Kerkko Pelttari']
+          },
+          {
+            title: 'Robots in the Clouds: Experiences with Using Robotframework with Cloud Providers',
+            url: 'https://www.youtube.com/embed/MNL59uHnwN8',
+            authors: ['Josh Grant']
+          },
+          {
+            title: 'The neuroscience of learning, creativity and collaboration',
+            url: 'https://www.youtube.com/embed/FiJw77tzLHU',
+            authors: ['Katri Saarikivi']
+          }
+        ]
+      }, {
         year: 2021,
         playlistLink: 'https://www.youtube.com/playlist?list=PLSK6YK5OGX1ALlSRlwr9dWJu3mFHMlVq8',
         list: [

@@ -3,6 +3,9 @@
 .color-theme {
     color: var(--color-theme);
 }
+.color-theme-23 {
+    color: var(--color-theme-23);
+}
 .color-theme-22 {
     color: var(--color-theme-22);
 }
