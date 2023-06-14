@@ -54,6 +54,7 @@ h2 {
     font-family: var(--font-title);
     line-height: var(--line-height-headers);
     color: var(--color-theme);
+    color: var(--color-theme-p3);
 }
 h3, h4 {
     font-family: var(--font-title);
@@ -99,6 +100,7 @@ h2:not(:first-child) {
 h3 {
     font-size: var(--type-body);
     color: var(--color-theme);
+    color: var(--color-theme-p3);
     font-weight: var(--weight-semi-bold);
     margin-bottom: var(--size-3xsmall);
     line-height: var(--line-height-h3);
@@ -293,9 +295,11 @@ strong,
 .router-link:hover {
     text-decoration: underline;
     color: var(--color-theme);
+    color: var(--color-theme-p3);
 }
 .router-link-active {
     color: var(--color-theme);
+    color: var(--color-theme-p3);
 }
 
 ul {

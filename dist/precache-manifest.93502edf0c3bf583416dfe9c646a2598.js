@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "69964b75f0d729f51a9b",
-    "url": "dist/css/app.2de7d4ef.css"
+    "revision": "553cce8920d4b44241c4",
+    "url": "dist/css/app.8d5e6adc.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -176,11 +176,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "5c9e2c8a44b9608d5a44bd265a6b2bf8",
+    "revision": "5e7498922b9c379faf97729c6e9ce8a0",
     "url": "dist/index.html"
   },
   {
-    "revision": "69964b75f0d729f51a9b",
+    "revision": "553cce8920d4b44241c4",
     "url": "dist/js/app.b2d19e98.js"
   },
   {

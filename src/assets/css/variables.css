@@ -1,5 +1,6 @@
 :root {
-    --color-theme: #2CDB0F;
+    --color-theme: #AC47FF;
+    --color-theme-p3: color(display-p3 0.583 0.18 1);
     --color-theme-secondary: #191a29;
     --color-background: #0d1217;
 
@@ -9,8 +10,8 @@
     --color-grey-dark: #24282c;
     --color-grey-darkest: #101316;
     --color-black: #000000; /* body text */
-    --color-link: #2CDB0F;
-    --color-link-visited: #2CDB0F;
+    --color-link: #AC47FF;
+    --color-link-visited: #AC47FF;
 
     --bp-md: 700px; /* tablet breakpoint */
     --bp-lg: 1400px; /* desktop breakpoint */
