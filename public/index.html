@@ -10,7 +10,7 @@
     <meta name="image" property="og:image" content="https://robocon.io/dist/img/social_image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@robotframework">
-    <meta name="twitter:title" content="RoboCon 2023">
+    <meta name="twitter:title" content="RoboCon">
     <meta name="twitter:description" content="Automation testing community event - Online and IRL!">
     <meta name="twitter:image" content="https://robocon.io/dist/img/social_image.png">
     <link href="dist/fonts/RBCN23.woff2" rel="preload" as="font" crossorigin="">
@@ -38,7 +38,7 @@
       // the single page app to route accordingly.
       (function(l) {
         if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
+          var decoded = l.search.slice(1).split('&').map(function(s) {
             return s.replace(/~and~/g, '&')
           }).join('?');
           window.history.replaceState(null, null,
