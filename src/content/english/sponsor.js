@@ -1,146 +1,18 @@
 export default {
   title: 'Sponsorship',
-  subTitle: `### Become a sponsor of RoboCon!
+  subTitle: `### Become a sponsor of RoboCon 2024!
 
 Do you want to give something back to Robot Framework? Want to present your company as a supporter of RoboCon and Robot Framework?
 
 Join our sponsors and help us create an awesome event yet again.
 If you have any questions about sponsorship please contact the [RoboCon team](mailto:info{at}{'@'}{at}robocon.io).`,
   joinButton: 'Join',
-  event_url: 'https://tickets.robotframework.org/robocon-2023/',
-  subevent: '3410049',
-  voucher: 'RBCN-2023-SPONSOR',
+  event_url: 'https://tickets.robotframework.org/robocon-2024/',
   tiers: {
-    online: [
-      {
-        name: 'Online Silver',
-        price: '2000 €',
-        perks: [
-          {
-            name: 'Company logo (small, online)',
-            description: 'Your company logo will be visible on robocon.io after January and at our online venue. **Small** company logo on screen between presentations online.'
-          },
-          {
-            name: 'Social media',
-            description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
-          },
-          {
-            name: 'Free tickets (3 Online)',
-            description: `You will get:
-
-- 3 free online tickets for the online part of RoboCon`
-          }
-        ],
-        item: 'variation_234449_55061=1',
-        voucher: 'SPONSORSILVERONLINE'
-      },
-      {
-        name: 'Online Gold',
-        price: '4000 €',
-        perks: [
-          {
-            name: 'Company logo (medium)',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Medium size** company logo on screen between presentations.'
-          },
-          {
-            name: 'Social media',
-            description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
-          },
-          {
-            name: 'Free tickets (4 online)',
-            description: `You will get:
-
-- 4 free online tickets for the online part of RoboCon.`
-          },
-          {
-            name: 'Booth online',
-            description: `You will get an online booth at Gather.town, where you can have up to four items like:
-- PDF documents
-- hyperlinks
-- iframes
-- Youtube videos`
-          },
-          {
-            name: 'Publish job offers',
-            description: 'We give you the opportunity to post job offers on our noticeboard online.'
-          },
-          {
-            name: 'Video during breaks (30 sec)',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
-
-This video may have sound and will be streamed online.`
-          }
-        ],
-        item: 'variation_234449_55062=1',
-        voucher: 'SPONSORGOLDONLINE'
-      },
-      {
-        name: 'Online Platinum',
-        price: '8000 €',
-        perks: [
-          {
-            name: 'Company logo (large)',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Premium size** company logo on screen between presentations.'
-          },
-          {
-            name: 'Social media',
-            description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
-          },
-          {
-            name: 'Free tickets (8 online)',
-            description: `You will get:
-
-- 8 free online tickets for the online part of RoboCon`
-          },
-          {
-            name: 'Platinum booth online',
-            description: `You will get a platinum online booth at Gather.town, where you can have up to ten items like:
-- PDF documents
-- hyperlinks
-- iframes
-- Youtube videos
-
-On the one day where you are the Platinum sponsor your booth will be at the center of the conferece.`
-          },
-          {
-            name: 'Publish job offers',
-            description: 'We give you the opportunity to post job offers on our noticeboard online.'
-          },
-          {
-            name: 'Video during breaks (30 sec)',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
-
-This video may have sound and will be shown online.`
-          },
-          {
-            name: 'Platinum sponsor for 1 day',
-            description: `Your company will be the Platinum sponsor for one day of RoboCon.
-
-You will be mentioned as the sponsor of this day and your logo will be shown.`
-          },
-          {
-            name: 'Sponsor video (5 min)',
-            description: `You will get a spot for a video (5 minutes) directly at the end of a keynote online.
-
-Your talk shall be pre-recorded and will be streamed before people are sent to the first break.`
-          },
-          {
-            name: 'Max. 3 sponsors',
-            description: `Due to the 3 days duration of RoboCon Online and one Platinum Sponsor per day, there are only 3 sponsoring spots available.
-
-Robot Framework Foundation members do have a preferred access.
-Members who book Online + Helsinki Sponsorship are also prefered and have higher priority.
-Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
-          }
-        ],
-        item: 'variation_234449_55063=1',
-        voucher: 'SPONSORPLATINUMONLINE'
-      }
-    ],
     irl: [
       {
         name: 'Silver',
-        price: '3000 €',
+        price: '1000 €',
         perks: [
           {
             name: 'Company logo (small)',
@@ -148,52 +20,46 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
           },
           {
             name: 'Social media',
-            description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
+            description: 'We will mention your company on social media channels like Twitter, LinkedIn and Facebook.'
           },
           {
-            name: 'Free tickets (3|1)',
-            description: `You will get:
-
-- 3 free online tickets for the online part of RoboCon
-
-OR
-
-- 1 free Helsinki ticket, which includes access to online part as well.`
+            name: 'Free online ticket (1)',
+            description: 'One free ticket for the online part of RoboCon'
           }
-        ],
-        item: 'variation_234449_55064=1',
-        voucher: 'SPONSORSILVER'
+        ]
       },
       {
         name: 'Gold',
         price: '6000 €',
         perks: [
           {
-            name: 'Company logo (medium)',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Medium size** company logo on screen between presentations.'
+            name: 'Company logo',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. Company logo on screen between presentations.'
           },
           {
             name: 'Social media',
-            description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
+            description: 'We will mention your company on social media channels like Twitter, LinkedIn and Facebook.'
           },
           {
             name: 'Free tickets (2+2)',
             description: `You will get:
 
-- 2 free online tickets for the online part of RoboCon
+- 2 free tickets for the online part of RoboCon
 
 AND
 
 - 2 free Helsinki tickets, which includes access to online part as well.`
           },
           {
-            name: 'Lead scanning',
-            description: `You will have the oportunity to use our lead scanning to get in contact with our on-site visitors in Helsinki.
-
-See here for more information: https://pretix.eu/about/en/lead`
+            name: 'Dedicated spotlight',
+            description: 'Dedicated time to showcase your company or product between talks. This is a chance for the people to engage with you. There will be one dedicated spot to meet the sponsor. This way people know when to meet the sponsor and you can have a presentation etc. there during your break.'
           },
           {
-            name: 'Booth @ Bio Rex',
+            name: 'Video during breaks (30 sec)',
+            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+          },
+          {
+            name: 'Booth on-site',
             description: `You will get a booth at Bio Rex Helsinki.
 
 Your booth includes:
@@ -203,63 +69,65 @@ Your booth includes:
           },
           {
             name: 'Booth online',
-            description: `You will get an online booth at Gather.town, where you can have up to four items like:
+            description: `You will get an online booth at Gather.town, where you can have up to four items such as:
 - PDF documents
 - hyperlinks
-- iframes
-- Youtube videos`
+- iFrames
+- YouTube videos`
+          },
+          {
+            name: 'Be part in a game',
+            description: 'Participants will be engaged in a game and your sponsor booth will be one of the ways for them to collect a prize. It\'s up to you what activity you prepare for them!'
+          },
+          {
+            name: 'Lead scanning',
+            description: 'You\'ll have the opportunity to use our lead scanning to get in contact with our on-site visitors in Helsinki. More information: https://pretix.eu/about/en/lead'
           },
           {
             name: 'Publish job offers',
             description: 'We give you the opportunity to post job offers on our noticeboard in Helsinki and online.'
           },
           {
-            name: 'Video during breaks (30 sec)',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
-
-This video may have sound and will be shown in Helsinki and online.`
-          },
-          {
             name: 'Max. 10 sponsors',
             description: `Due to the size of Bio Rex at RoboCon Helsinki we do have limited availability of 10 booths.
 
 Robot Framework Foundation members do have a preferred access.
-Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
+Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
           }
-        ],
-        item: 'variation_234449_55065=1',
-        voucher: 'SPONSORGOLD'
+        ]
       },
       {
         name: 'Platinum',
-        price: '16000 €',
+        price: '12000 €',
         perks: [
           {
             name: 'Company logo (large)',
-            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Premium size** company logo on screen between presentations.'
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Large** company logo on screen between presentations.'
           },
           {
             name: 'Social media',
-            description: 'We will mention your company on social media channels like Twitter, LinkedIn, etc.'
+            description: 'We will mention your company on social media channels like Twitter, LinkedIn and Facebook.'
           },
           {
             name: 'Free tickets (4+4)',
             description: `You will get:
 
-- 4 free online tickets for the online part of RoboCon
+- 4 free tickets for the online part of RoboCon
 
 AND
 
 - 4 free Helsinki tickets, which include access to online part as well.`
           },
           {
-            name: 'Lead scanning',
-            description: `You will have the oportunity to use our lead scanning to get in contact with our on-site visitors in Helsinki.
-
-See here for more information: https://pretix.eu/about/en/lead`
+            name: 'Dedicated spotlight',
+            description: 'Dedicated time to showcase your company or product between talks. This is a chance for the people to engage with you. There will be one dedicated spot to meet the sponsor. This way people know when to meet the sponsor and you can have a presentation etc. there during your break.'
           },
           {
-            name: 'Booth @ Bio Rex (platinum)',
+            name: 'Video during breaks (30 sec)',
+            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+          },
+          {
+            name: 'Booth on-site (premium)',
             description: `You will get a platinum booth for one day at Bio Rex Helsinki.
 
 Your booth includes:
@@ -272,50 +140,173 @@ Your booth includes:
 **On the other day you will get a normal Gold sponsor booth.**`
           },
           {
-            name: 'Booth online (platinum)',
+            name: 'Booth online (premium)',
             description: `You will get a platinum online booth at Gather.town, where you can have up to ten items like:
 - PDF documents
 - hyperlinks
-- iframes
+- iFrames
 - Youtube videos
 
 On the one day where you are the Platinum sponsor your booth will be at the center of the conferece.`
+          },
+          {
+            name: 'Be part in a game',
+            description: 'Participants will be engaged in a game and your sponsor booth will be one of the ways for them to collect a prize. It\'s up to you what activity you prepare for them!'
+          },
+          {
+            name: 'Lead scanning',
+            description: `You will have the oportunity to use our lead scanning to get in contact with our on-site visitors in Helsinki.
+
+See here for more information: https://pretix.eu/about/en/lead`
           },
           {
             name: 'Publish job offers',
             description: 'We give you the opportunity to post job offers on our noticeboard in Helsinki and online.'
           },
           {
-            name: 'Video during breaks (30 sec)',
-            description: `We will show on each start and each end of a break the 30 second videos of our Gold sponsors in varying orders.
-
-This video may have sound and will be shown in Helsinki and online.`
-          },
-          {
-            name: 'Platinum sponsor for 1 day',
+            name: 'Featured sponsor for 1 day',
             description: `Your company will be the platinum sponsor for one day of RoboCon.
 
-You will be mentioned as the sponsor of this day and your logo will be shown.
+You will be mentioned as the sponsor of this day once on-site and twice online.
 
-You may want to book a second day of Platinum sponsoring in Helsinki for 10.000€, which gives you on both days the platinum booth.`
+You may want to book a second day of Platinum sponsoring in Helsinki for 8.000€, which gives you the platinum booth on both days.`
           },
           {
-            name: 'Sponsor talk (25 min)',
-            description: `You will get a talk spot for a full talk (25 minutes) directly after keynote in Helsinki on-stage.
+            name: 'Sponsor talk (~20 min)',
+            description: `You will get a talk spot for a full talk (20 minutes) directly after keynote in Helsinki on-stage.
 
-Your talk will be recorded and streamed later online on part 2 of RoboCon.`
+Your talk will be recorded and streamed later in the online part of RoboCon.`
           },
           {
             name: 'Max. 2 sponsors',
             description: `Due to the 2 days duration of RoboCon Helsinki and one Platinum Sponsor per day, there are only 2 sponsoring spots available.
 
 Robot Framework Foundation members do have a preferred access.
-Members who book Online + Helsinki Sponsorship are also prefered and have higher priority compared to Online Only.
-Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after November first, if the spots are not all required by Foundation members.           `
+Members who book Online + Helsinki Sponsorship are also preferred and have higher priority compared to Online Only.
+Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
           }
-        ],
-        item: 'variation_234449_55066=1',
-        voucher: 'SPONSORPLATINUM'
+        ]
+      }
+    ],
+    online: [
+      {
+        name: 'Silver',
+        price: '1000 €',
+        perks: [
+          {
+            name: 'Company logo (small)',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Small** company logo on screen between presentations.'
+          },
+          {
+            name: 'Social media',
+            description: 'We will mention your company on social media channels like Twitter, LinkedIn and Facebook.'
+          },
+          {
+            name: 'Free online ticket (1)',
+            description: 'One free ticket for the online part of RoboCon'
+          }
+        ]
+      },
+      {
+        name: 'Online Gold',
+        price: '3000 €',
+        perks: [
+          {
+            name: 'Company logo',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. Company logo on screen between presentations.'
+          },
+          {
+            name: 'Social media',
+            description: 'We will mention your company on social media channels like Twitter, LinkedIn and Facebook.'
+          },
+          {
+            name: 'Free tickets (4 online)',
+            description: `You will get:
+
+- 4 free online tickets for the online part of RoboCon.`
+          },
+          {
+            name: 'Video during breaks (30 sec)',
+            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+          },
+          {
+            name: 'Booth online',
+            description: `You will get an online booth at Gather.town, where you can have up to four items like:
+- PDF documents
+- hyperlinks
+- iFrames
+- Youtube videos`
+          },
+          {
+            name: 'Publish job offers',
+            description: 'We give you the opportunity to post job offers on our noticeboard online.'
+          },
+          {
+            name: 'Max. 10 sponsors',
+            description: `There is a limited availability of 10 booths.
+
+Robot Framework Foundation members do have a preferred access.
+Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
+          }
+        ]
+      },
+      {
+        name: 'Online Platinum',
+        price: '6000 €',
+        perks: [
+          {
+            name: 'Company logo (large)',
+            description: 'Your company logo will be visible on robocon.io, our photo wall on site at Helsinki and at our online venue. **Premium size** company logo on screen between presentations.'
+          },
+          {
+            name: 'Social media',
+            description: 'We will mention your company on social media channels like Twitter, LinkedIn and Facebook.'
+          },
+          {
+            name: 'Free tickets (6 online)',
+            description: `You will get:
+
+- 8 free online tickets for the online part of RoboCon 2024`
+          },
+          {
+            name: 'Video during breaks (30 sec)',
+            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+          },
+          {
+            name: 'Booth online (premium)',
+            description: `You will get a premium online booth at Gather.town, where you can have up to ten items like:
+- PDF documents
+- hyperlinks
+- iFrames
+- Youtube videos
+
+On the one day where you are the Platinum sponsor your booth will be at the center of the conferece.`
+          },
+          {
+            name: 'Publish job offers',
+            description: 'We give you the opportunity to post job offers on our noticeboard online.'
+          },
+          {
+            name: 'Featured sponsor for 1 day',
+            description: `Your company will be the Platinum sponsor for one day of RoboCon.
+
+You will be mentioned twice as the sponsor of this day and your logo will be shown.`
+          },
+          {
+            name: 'Video after Keynote (~5 min)',
+            description: `You will get a spot for a video (5 minutes) directly after the online keynote.
+
+Your talk shall be pre-recorded and will be streamed before people are sent to the first break.`
+          },
+          {
+            name: 'Max. 2 sponsors',
+            description: `Due to the duration of RoboCon and one Platinum Sponsor per day, there are only 2 sponsoring spots available.
+
+Robot Framework Foundation members do have a preferred access.
+Members who book Online + Helsinki Sponsorship are also preferred and have higher priority.
+Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
+          }
+        ]
       }
     ]
   }

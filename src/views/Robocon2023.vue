@@ -1,7 +1,7 @@
 <template>
   <banner class="theme-2023">
     <div>
-      <h1 class="color-white"><span class="">RBCN</span><span class="color-theme">23</span></h1>
+      <h1 class="color-white type-center"><span class="">RBCN</span><span class="color-theme">23</span></h1>
     </div>
   </banner>
   <div class="border-top-theme border-thin theme-2023" />

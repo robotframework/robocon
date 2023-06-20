@@ -62,6 +62,11 @@ export default {
     PageSection,
     NewsBanner
   },
+  created() {
+    const params = new URLSearchParams(window.location.search)
+    const entries = Object.fromEntries(params.entries())
+    if (entries.auth) this.$router.replace({ name: 'Robocon2023', query: entries })
+  },
   methods: {
     goTo(id) {
       const el = document.getElementById(id)

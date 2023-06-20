@@ -1,10 +1,10 @@
 <template>
    <!--<link rel="stylesheet" type="text/css" href="https://pretix.eu/robocon/robocon-2023/widget/v1.css">
   <component :is="'script'" src="https://pretix.eu/widget/v1.en.js" async></component>-->
-  <banner>
-    <h1 class="type-xlarge mb-large" v-html="$t('sponsor.title')" />
+  <div class="container narrow">
+    <h1 class="type-xlarge type-center mb-large" v-html="$t('sponsor.title')" />
     <p class="col-md-8 col-md-offset-2" v-html="parseMarkdown($t('sponsor.subTitle'))" />
-  </banner>
+  </div>
   <div class="container mb-large">
     <div class="row center mb-large mt-large">
       <button
@@ -41,7 +41,7 @@
                 </div>
               </li>
             </ul>
-            <a :href="getPretixLink($t('sponsor.event_url'), tier.voucher, $t('sponsor.subevent'))" class="type-no-underline">
+            <a :href="`${$t('sponsor.event_url')}${activeTabIndex === 0 ? '3913179' : '3913180'}`" class="type-no-underline">
               <button class="theme block mx-auto mt-auto">
                 {{ $t('sponsor.joinButton') }}
               </button>

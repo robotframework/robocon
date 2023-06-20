@@ -47,7 +47,7 @@ html {
 }
 
 h1 {
-    font-family: 'RBCN';
+    font-family: var(--font-title);
 }
 
 h2 {
