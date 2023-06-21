@@ -41,7 +41,7 @@
                 </div>
               </li>
             </ul>
-            <a :href="`${$t('sponsor.event_url')}${activeTabIndex === 0 ? '3913179' : '3913180'}`" class="type-no-underline">
+            <a :href="`${$t('sponsor.event_url')}?voucher=${tier.voucher}&subevent=${activeTabIndex === 0 ? '3913179' : '3913180'}`" class="type-no-underline">
               <button class="theme block mx-auto mt-auto">
                 {{ $t('sponsor.joinButton') }}
               </button>

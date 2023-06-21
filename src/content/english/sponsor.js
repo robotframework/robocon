@@ -7,7 +7,7 @@ Do you want to give something back to Robot Framework? Want to present your comp
 Join our sponsors and help us create an awesome event yet again.
 If you have any questions about sponsorship please contact the [RoboCon team](mailto:info{at}{'@'}{at}robocon.io).`,
   joinButton: 'Join',
-  event_url: 'https://tickets.robotframework.org/robocon-2024/',
+  event_url: 'https://tickets.robotframework.org/robocon-2024/redeem',
   tiers: {
     irl: [
       {
@@ -26,7 +26,8 @@ If you have any questions about sponsorship please contact the [RoboCon team](ma
             name: 'Free online ticket (1)',
             description: 'One free ticket for the online part of RoboCon'
           }
-        ]
+        ],
+        voucher: 'SPONSORSILVER'
       },
       {
         name: 'Gold',
@@ -56,7 +57,7 @@ AND
           },
           {
             name: 'Video during breaks (30 sec)',
-            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+            description: 'Sponsor videos (with audio) will be played in randomized order between talks and during some of the breaks.'
           },
           {
             name: 'Booth on-site',
@@ -94,7 +95,8 @@ Your booth includes:
 Robot Framework Foundation members do have a preferred access.
 Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
           }
-        ]
+        ],
+        voucher: 'SPONSORGOLD'
       },
       {
         name: 'Platinum',
@@ -124,7 +126,7 @@ AND
           },
           {
             name: 'Video during breaks (30 sec)',
-            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+            description: 'Sponsor videos (with audio) will be played in randomized order for full audience and during some of the breaks.'
           },
           {
             name: 'Booth on-site (premium)',
@@ -132,7 +134,6 @@ AND
 
 Your booth includes:
 - a horizontal TV-screen for demonstration
-- a vertical human size screen for loop presentation
 - company logo on booth
 - bar table with chair
 - lounge table with lounge chairs
@@ -185,7 +186,8 @@ Robot Framework Foundation members do have a preferred access.
 Members who book Online + Helsinki Sponsorship are also preferred and have higher priority compared to Online Only.
 Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
           }
-        ]
+        ],
+        voucher: 'SPONSORPLATINUM'
       }
     ],
     online: [
@@ -205,7 +207,8 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
             name: 'Free online ticket (1)',
             description: 'One free ticket for the online part of RoboCon'
           }
-        ]
+        ],
+        voucher: 'SPONSORSILVER'
       },
       {
         name: 'Online Gold',
@@ -227,7 +230,7 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
           },
           {
             name: 'Video during breaks (30 sec)',
-            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+            description: 'Sponsor videos (with audio) will be played in randomized order for full audience and during some of the breaks.'
           },
           {
             name: 'Booth online',
@@ -248,7 +251,8 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
 Robot Framework Foundation members do have a preferred access.
 Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
           }
-        ]
+        ],
+        voucher: 'SPONSORGOLDONLINE'
       },
       {
         name: 'Online Platinum',
@@ -270,7 +274,7 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
           },
           {
             name: 'Video during breaks (30 sec)',
-            description: 'Sponsor videos (with audio) will be played in randomized orders between talks and during some of the breaks.'
+            description: 'Sponsor videos (with audio) will be played in randomized order for full audience and during some of the breaks.'
           },
           {
             name: 'Booth online (premium)',
@@ -306,7 +310,8 @@ Robot Framework Foundation members do have a preferred access.
 Members who book Online + Helsinki Sponsorship are also preferred and have higher priority.
 Therefore, if you are not member of Foundation, we will reserve a spot when you book, but invoice it after September, if the spots are not all required by Foundation members.           `
           }
-        ]
+        ],
+        voucher: 'SPONSORPLATINUMONLINE'
       }
     ]
   }
