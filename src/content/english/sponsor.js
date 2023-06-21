@@ -208,7 +208,7 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
             description: 'One free ticket for the online part of RoboCon'
           }
         ],
-        voucher: 'SPONSORSILVER'
+        voucher: 'SPONSORSILVERONLINE'
       },
       {
         name: 'Online Gold',
