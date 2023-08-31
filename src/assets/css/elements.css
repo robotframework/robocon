@@ -1,154 +1,153 @@
-
-
 .video {
-    aspect-ratio: 16/9;
-    position: relative;
+  aspect-ratio: 16/9;
+  position: relative;
 }
 .video::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: solid 1px var(--color-white);
-    border-radius: var(--border-radius-rounded);
-    filter: drop-shadow(
-        0 0 3px var(--color-theme));
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: solid 1px var(--color-white);
+  border-radius: var(--border-radius-rounded);
+  filter: drop-shadow(0 0 3px var(--color-theme));
+  pointer-events: none;
 }
 
 .card {
-    position: relative;
+  position: relative;
 }
 
 .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: solid 1px var(--color-theme);
-    border-radius: var(--border-radius-rounded);
-    filter: drop-shadow(
-        0 0 3px var(--color-theme));
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: solid 1px var(--color-theme);
+  border-radius: var(--border-radius-rounded);
+  filter: drop-shadow(0 0 3px var(--color-theme));
+  pointer-events: none;
 }
 .card.sharper::before {
-    border-radius: var(--border-radius-rounded-small);
+  border-radius: var(--border-radius-rounded-small);
 }
 
 .rounded {
-    border-radius: var(--border-radius-rounded);
+  border-radius: var(--border-radius-rounded);
 }
 .rounded-small {
-    border-radius: var(--border-radius-rounded-small);
+  border-radius: var(--border-radius-rounded-small);
 }
 
 .border-black {
-    border: solid 0.15rem var(--color-black);
+  border: solid 0.15rem var(--color-black);
 }
 .border-white {
-    border: solid 0.15rem var(--color-white);
+  border: solid 0.15rem var(--color-white);
 }
 .border-theme {
-    border: solid 0.2rem var(--color-theme);
-    border: solid 0.2rem var(--color-theme-p3);
+  border: solid 0.2rem var(--color-theme);
+  border: solid 0.2rem var(--color-theme-p3);
 }
 
 .border-right-theme {
-    border-right: solid 0.2rem var(--color-theme);
-    border-right: solid 0.2rem var(--color-theme-p3);
+  border-right: solid 0.2rem var(--color-theme);
+  border-right: solid 0.2rem var(--color-theme-p3);
 }
 .border-right-white {
-    border-right: solid 0.2rem var(--color-white);
+  border-right: solid 0.2rem var(--color-white);
 }
 .border-bottom-theme {
-    border-bottom: solid 0.2rem var(--color-theme);
-    border-bottom: solid 0.2rem var(--color-theme-p3);
+  border-bottom: solid 0.2rem var(--color-theme);
+  border-bottom: solid 0.2rem var(--color-theme-p3);
 }
 .border-bottom-white {
-    border-bottom: solid 0.2rem var(--color-white);
+  border-bottom: solid 0.2rem var(--color-white);
 }
 .border-left-theme {
-    border-left: solid 0.2rem var(--color-theme);
-    border-left: solid 0.2rem var(--color-theme-p3);
+  border-left: solid 0.2rem var(--color-theme);
+  border-left: solid 0.2rem var(--color-theme-p3);
 }
 .border-left-white {
-    border-left: solid 0.2rem var(--color-white);
+  border-left: solid 0.2rem var(--color-white);
 }
 .border-top-theme {
-    border-top: solid 0.2rem var(--color-theme);
-    border-top: solid 0.2rem var(--color-theme-p3);
+  border-top: solid 0.2rem var(--color-theme);
+  border-top: solid 0.2rem var(--color-theme-p3);
 }
 .border-top-white {
-    border-top: solid 0.2rem var(--color-white);
+  border-top: solid 0.2rem var(--color-white);
 }
 
 .border-thin {
-    border-width: 0.1rem;
+  border-width: 0.1rem;
 }
 
 /* Glowing one from 22 */
 .bar22 {
-    width: 100%;
-    height: 0.15rem;
-    border-radius: 0.25rem;
-    background-color: #fff;
-    box-shadow:
-      0 0 7px #ffe8f9,
-      0 0 20px var(--color-theme-22),
-      0 0 40px var(--color-theme-22),
-      0 0 80px var(--color-theme-22);
+  width: 100%;
+  height: 0.15rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  box-shadow: 0 0 7px #ffe8f9, 0 0 20px var(--color-theme-22),
+    0 0 40px var(--color-theme-22), 0 0 80px var(--color-theme-22);
 }
 .bar {
-    width: 100%;
-    height: 0.15rem;
-    border-radius: 0.25rem;
-    background-color: var(--color-theme);
+  width: 100%;
+  height: 0.15rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-theme);
 }
 
-button.theme, button.stroke {
-    border: 1px solid var(--color-white);
-    border-radius: var(--border-radius-rounded-small);
-    color: var(--color-white);
-    font-family: var(--font-title);
-    padding: var(--size-2xsmall) var(--size-small);
-    text-transform: uppercase;
-    transition: 0.2s color, background-color 0.2s, border-color 0.2s;
+button.theme,
+button.stroke {
+  border: 1px solid var(--color-white);
+  border-radius: var(--border-radius-rounded-small);
+  color: var(--color-white);
+  font-family: var(--font-title);
+  padding: var(--size-2xsmall) var(--size-small);
+  text-transform: uppercase;
+  transition: 0.2s color, background-color 0.2s, border-color 0.2s;
 }
 button.theme:hover {
-    color: var(--color-theme);
-    border-color: var(--color-theme);
+  color: var(--color-theme);
+  border-color: var(--color-theme);
 }
 button.theme {
-    background-color: var(--color-background);
+  background-color: var(--color-background);
 }
 button.stroke {
-    border: solid 0.05rem var(--color-white);
+  border: solid 0.05rem var(--color-white);
 }
 button.theme.active {
-    border: none;
-    background-color: var(--color-theme);
-    color: var(--color-black);
-    box-shadow: inset 2px 3px 2px -1px rgba(0,0,0,0.2);
+  border: none;
+  background-color: var(--color-theme);
+  color: var(--color-black);
+  box-shadow: inset 2px 3px 2px -1px rgba(0, 0, 0, 0.2);
 }
 button.small {
-    padding: var(--size-3xsmall) var(--size-xsmall);
+  padding: var(--size-3xsmall) var(--size-xsmall);
 }
 
 @media screen and (max-width: 768px) {
-    button.theme, button.stroke {
-        padding: var(--size-2xsmall) var(--size-xsmall);
-    }
+  button.theme,
+  button.stroke {
+    padding: var(--size-2xsmall) var(--size-xsmall);
+  }
 }
 
 .disabled {
-    opacity: 0.4;
-    pointer-events: none;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 div.section-container {
-    padding: var(--size-small);
+  padding: var(--size-small);
+}
+
+.ticket {
+  border: solid 2px var(--color-theme);
 }

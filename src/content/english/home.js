@@ -2,8 +2,8 @@ export default {
   intro: {
     title: '👋',
     body: `
-    <p>We are happy to announce that planning and preparations for <span class="color-theme">RoboCon 2024</span> have begun.
-    More details and tickets will be available soon!</p>
+    <p>Ticket sales for <span class="color-theme">RoboCon 2024</span> has begun! Discounted <span class="color-theme">early blind tickets</span> are available until September 14th. Additional hotel and workshop packages will be available at a later date - stay tuned!
+    </p>
     `
   },
   cfp: {

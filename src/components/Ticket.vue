@@ -12,17 +12,17 @@
       <rect stroke-width="1px" stroke="white" x="54.7" y="25.6" width="260.5" height="148.9" rx="25" ry="25"/>
     </svg>
     <div class="relative type-center content" style="width: 60%;">
-      <div class="ticket-title type-large border-bottom-white border-thin mb-3xsmall pb-3xsmall">
+      <div class="ticket-title type-medium border-bottom-white border-thin mb-3xsmall pb-3xsmall">
         <slot name="title" />
       </div>
       <div class="price">
         <slot name="price" />
       </div>
     </div>
-    <div class="absolute font-title type-small side left">
+    <div class="absolute font-title type-xsmall side left">
       <slot name="left" />
     </div>
-    <div class="absolute type-small side right">
+    <div class="absolute font-title type-small side right">
       <slot name="right" />
     </div>
     <div class="shader specular">
@@ -72,16 +72,14 @@ export default {
   transition: color 0.2s;
 }
 .side.left {
-  font-size: 100%;
   transform: rotate(-90deg) translate(-50%, 100%);
-  left: 0;
+  left: 0.75rem;
   top: 50%;
   transform-origin: 0% 0%;
 }
 .side.right {
-  font-size: 100%;
   transform: rotate(90deg) translate(50%, 100%);
-  right: 0;
+  right: 0.25rem;
   top: 50%;
   transform-origin: 100% 0%;
 }
