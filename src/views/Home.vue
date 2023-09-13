@@ -37,7 +37,7 @@
           </div>
           <div class="bg-secondary p-small rounded">
             <h3>Schedule</h3>
-            <div>In-person</div>
+            <div>In-person, <a href="https://amosrex.fi/en/bio-rex/">Bio Rex</a></div>
             <div>Helsinki, Finland</div>
             <span class="line-height-1">
               <div class="mt-small color-theme font-title type-body">February 6th</div>
