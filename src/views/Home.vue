@@ -25,7 +25,7 @@
                 Main Conference<br>In-person<br>
               </template>
               <template v-slot:price>
-                <span class="type-small"><s>1200</s></span> 500 € <div class="type-xsmall">+ VAT</div>
+                <span class="type-small"><s>1200</s></span> 700 € <div class="type-xsmall">+ VAT</div>
               </template>
               <template v-slot:left>
                 FEB 08-09
@@ -62,7 +62,7 @@
                 Main Conference<br>Online
               </template>
               <template v-slot:price>
-                <s>300</s> 100 € <div class="type-xsmall">+ VAT</div>
+                <s>300</s> 150 € <div class="type-xsmall">+ VAT</div>
               </template>
               <template v-slot:left>
                 FEB 28-29
@@ -101,6 +101,19 @@
       <p>
         <span class="color-theme">The in-person conference</span> will be held in Helsinki 8-9 February, 2024. Please also reserve the 6th and 7th of February for learning in the workshops and for the Community Day. The Community Day is an open space for the community to learn, discuss and advance topics related to Robot Framework. This might include workshop participants practicing what they learned with the help of the workshop facilitators. Moreover, on the 10th of February there will be some laid back touristic day activity.
       </p>
+      <p>
+        If you are looking for <span class="color-theme">accommodation</span>, you may reserve a hotel at a discounted rate via the following links:
+      </p>
+      <div class="row">
+        <div class="col-sm-6 pr-medium pl-small">
+          <img style="width: 100%" class="rounded" src="https://cache.marriott.com/content/dam/marriott-renditions/HELAK/helak-corner-suite-6602-hor-clsc.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=*:423px" />
+          <a class="block type-center" href="https://bit.ly/HotelU14">Hotel U14</a>
+        </div>
+        <div class="col-sm-6 pl-medium pr-small">
+          <img style="width: 100%" class="rounded" src="https://be.synxis.com/shs-ngbe-image-resizer/images/hotel/69715/images/room/170222_f6_huonexxx_001.jpg" />
+          <a class="block type-center" href="https://bit.ly/HotelF6">Hotel F6</a>
+        </div>
+      </div>
       <p>
         <span class="color-theme">The online conference</span> will take place
         28-29 February, 2024 followed by the community day on the 1st of March.

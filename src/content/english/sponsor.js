@@ -229,6 +229,10 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
 - 4 free online tickets for the online part of RoboCon.`
           },
           {
+            name: 'Dedicated spotlight',
+            description: 'Dedicated time to showcase your company or product between talks. This is a chance for the people to engage with you. There will be one dedicated spot to meet the sponsor. This way people know when to meet the sponsor and you can have a presentation etc. there during your break.'
+          },
+          {
             name: 'Video during breaks (30 sec)',
             description: 'Sponsor videos (with audio) will be played in randomized order for full audience and during some of the breaks.'
           },
@@ -271,6 +275,10 @@ Therefore, if you are not member of Foundation, we will reserve a spot when you 
             description: `You will get:
 
 - 8 free online tickets for the online part of RoboCon 2024`
+          },
+          {
+            name: 'Dedicated spotlight',
+            description: 'Dedicated time to showcase your company or product between talks. This is a chance for the people to engage with you. There will be one dedicated spot to meet the sponsor. This way people know when to meet the sponsor and you can have a presentation etc. there during your break.'
           },
           {
             name: 'Video during breaks (30 sec)',
