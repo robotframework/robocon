@@ -2,7 +2,13 @@ export default {
   intro: {
     title: '👋',
     body: `
-    <p>Ticket sales for <span class="color-theme">RoboCon 2024</span> has begun! Discounted <span class="color-theme">early blind tickets</span> are available until September 14th. Additional hotel and workshop packages will be available at a later date - stay tuned!
+    <p>Ticket sales for <span class="color-theme">RoboCon 2024</span> has begun, grab your
+    discounted <span class="color-theme">blind tickets</span> now!
+    </p>
+    <p>
+      For those who wish to experience the event to it's fullest,
+      there are also <a href="https://tickets.robotframework.org/robocon-2024/3913179/">package deals</a>
+      that include hotel accomodations.
     </p>
     `
   },
