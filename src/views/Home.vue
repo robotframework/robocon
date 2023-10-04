@@ -37,8 +37,9 @@
           </div>
           <div class="bg-secondary p-small rounded">
             <h3>Schedule</h3>
-            <div>In-person, <a href="https://amosrex.fi/en/bio-rex/">Bio Rex</a></div>
+            <div>In-person</div>
             <div>Helsinki, Finland</div>
+            <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
             <span class="line-height-1">
               <div class="mt-small color-theme font-title type-body">February 6th</div>
               Workshops
