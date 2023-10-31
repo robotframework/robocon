@@ -46,8 +46,10 @@ html {
     }
 }
 
-h1 {
-    font-family: var(--font-title);
+h1,
+h2 {
+  font-family: "RBCN";
+  letter-spacing: 0.5rem;
 }
 
 h2 {

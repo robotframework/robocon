@@ -120,9 +120,6 @@
         28-29 February, 2024 followed by the community day on the 1st of March.
       </p>
     </page-section>
-    <page-section title-id="cfp" :title="$t('home.cfp.title')">
-      <div v-html="$t('home.cfp.body')" class="mb-large" />
-    </page-section>
   </div>
 </template>
 
