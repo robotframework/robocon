@@ -18,6 +18,9 @@
         {{ talk['Speaker names'].join(', ') }}
       </div>
       <div v-html="parseText(talk.Abstract)" />
+      <a v-if="talk['Session type'].en.includes('Workshop')" href="https://tickets.robotframework.org/robocon-2024/3997180/">
+        Get tickets
+      </a>
     </div>
   </div>
 </template>
