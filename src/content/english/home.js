@@ -5,6 +5,7 @@ export default {
     <p>Ticket sales for <span class="color-theme">RoboCon 2024</span> has begun, grab your
     discounted <span class="color-theme">blind tickets</span> now!
     </p>
+    <a href="#talks">See talks and workshops</a>
     <p>
       For those who wish to experience the event to it's fullest,
       there are also <a href="https://tickets.robotframework.org/robocon-2024/3913179/">package deals</a>

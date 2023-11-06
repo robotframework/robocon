@@ -2,6 +2,7 @@
   <div
     class="mb-xlarge p-small"
     tabindex="-1">
+    <a class="anchor" :id="titleId"></a>
     <div class="bar" v-if="titleId !== 'intro' && title" />
     <div class="row">
       <div
@@ -53,6 +54,12 @@ export default {
 </script>
 
 <style scoped>
+a.anchor {
+  display: block;
+  position: relative;
+  top: -15vh;
+  visibility: hidden;
+}
   h2::before {
     display: block;
     content: " ";

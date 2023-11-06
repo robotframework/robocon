@@ -11,6 +11,7 @@ import Talks from './Talks.vue'
 import PreviousTalks from './PreviousTalks.vue'
 import Timeline from './Timeline.vue'
 import Talks2023 from './Talks2023.vue'
+import Talks24 from './Talks24.vue'
 
 import BaseIcon from './BaseIcon.vue'
 import GlobeIcon from './icons/GlobeIcon.vue'
@@ -33,6 +34,7 @@ export {
   PreviousTalks,
   Timeline,
   Talks2023,
+  Talks24,
 
   BaseIcon,
   GlobeIcon,

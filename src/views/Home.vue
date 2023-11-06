@@ -120,11 +120,14 @@
         28-29 February, 2024 followed by the community day on the 1st of March.
       </p>
     </page-section>
+    <page-section title-id="talks" :title="'Program'">
+      <talks24 />
+    </page-section>
   </div>
 </template>
 
 <script>
-import { PageSection, NewsBanner, BaseIcon, Ticket } from 'Components'
+import { PageSection, NewsBanner, BaseIcon, Ticket, Talks24 } from 'Components'
 
 export default {
   name: 'App',
@@ -132,7 +135,8 @@ export default {
     BaseIcon,
     PageSection,
     NewsBanner,
-    Ticket
+    Ticket,
+    Talks24
   },
   created() {
     const params = new URLSearchParams(window.location.search)

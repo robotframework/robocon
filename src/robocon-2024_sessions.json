@@ -1,0 +1,578 @@
+[
+  {
+    "ID": "37TMDA",
+    "Proposal title": "Probot: Test Parallelization & Distribution with Docker and Kubernetes",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Cut the time of your tests! Probot is an open source, proof of concept project that uses Docker and Kubernetes to parallelize and distribute Robot Framework tests.",
+    "Speaker names": [
+      "Merel Foekens"
+    ]
+  },
+  {
+    "ID": "8ZHA9G",
+    "Proposal title": "Workshop about creating libraries for Robot Framework",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "\u201eCreating your own libraries is a breeze\u201c - this statement on the Robot Framework website describes pretty well, how easy and yet powerful it is to extend the framework with your own library. In the workshop, you will learn it on real examples - starting from simple static keywords in python modules and up to implementing the dynamic library API.",
+    "Speaker names": [
+      "Andre Mochinin"
+    ]
+  },
+  {
+    "ID": "983ZBV",
+    "Proposal title": "The Happiness Advantage in QA",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Unlock the power of positive thinking in QA! Discover how our attention to detail can shape a happier, more productive life. Join us to shift from bug-chasers to solution-creators, fostering collaboration and celebrating success.",
+    "Speaker names": [
+      "Eftychia  Thomaidou"
+    ]
+  },
+  {
+    "ID": "9LD8TN",
+    "Proposal title": "Advanced SeleniumLibrary and Robot Framework",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Techniques and tooling to ease up web testing and automation by expert developers and maintainer of the SeleniumLibrary. If you need to beef up your Selenium tests, this is the course for you.",
+    "Speaker names": [
+      "Ed Manlove"
+    ]
+  },
+  {
+    "ID": "ATWZKG",
+    "Proposal title": "Test reporting@UnionInvestment",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "In our short presentation we want to show you our infrastructure, the tools we use and the library \"ReportModifier\".",
+    "Speaker names": [
+      "Matthias Gunther"
+    ]
+  },
+  {
+    "ID": "BYU9KU",
+    "Proposal title": "The story of spreading the glory. How we approached the community building in Poland",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Unearth the essence of Robot Framework's strength - a vibrant community. Take a peek at our journey to foster collaboration and tackle challenges. Gain practical insights for organizing impactful events, ensuring seamless user experiences. Elevate your Robot Framework experience and strengthen cooperation with your local community!",
+    "Speaker names": [
+      "Krzysztof \u017bminkowski"
+    ]
+  },
+  {
+    "ID": "C3JNDF",
+    "Proposal title": "Robot Framework is ...",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Robocon 2022 \"Robot Framework Is Not ...\" put forth that we needed a style guide. 2 years and several biweekly meetings later the style guide workgroup can finally unveil the official Robot Framework style guide.",
+    "Speaker names": [
+      "Kelby Stine",
+      "Guido Demmenie",
+      "Manana Koberidze"
+    ]
+  },
+  {
+    "ID": "DVQTFT",
+    "Proposal title": "MITM Unleashed: Hacking Your Network Communication with Robot Framework",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Uncover the potential of Man-in-the-Middle (MITM) techniques in software testing. Explore real-time network manipulation and backend data control, empowering testers with independence and flexibility for comprehensive, autonomous testing.",
+    "Speaker names": [
+      "Mark Moberts"
+    ]
+  },
+  {
+    "ID": "EC3P3M",
+    "Proposal title": "Bridging Innovation and Regulation in Embedded Software Testing with Robot Framework",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "We will show how Robot Framework can be used in embedded software testing as a link between established tools and innovative solutions that make automating testing for hardware-related code a real possibility while still complying with regulatory requirements. Based on a practical solution, we examine if Robot Framework can unite both worlds",
+    "Speaker names": [
+      "Daniel Penning",
+      "Max-Vincent Steck"
+    ]
+  },
+  {
+    "ID": "ECPABL",
+    "Proposal title": "Containerize your robots and run them on Kubernetes",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Harnessing Kubernetes to run Robot Framework tests in containers offers a practical solution for scaling your test executions in a cloud environment. This workshop will provide hands-on guidance for running Robot Framework within Docker containers and mastering the fundamentals of Kubernetes, the container orchestration platform.",
+    "Speaker names": [
+      "Markus Stahl",
+      "Nils Balkow-Tychsen"
+    ]
+  },
+  {
+    "ID": "ECYJEF",
+    "Proposal title": "3..2..1..BEEEEEP! Microwaving Robot Framework",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Our team introduced a testing approach promoting re-usability and abstraction for a multi-interface telecommunication product. It employs one keyword per action offering consistent outputs across interfaces, supports versatile single-functionality tests -reusable if possible- & simplifies user focus on keyword-based actions ensuring code simplicity",
+    "Speaker names": [
+      "Stavroula Ventoura"
+    ]
+  },
+  {
+    "ID": "EJTPFY",
+    "Proposal title": "Automated Generation of Acceptance Tests of Process-Aware Information Systems (PAIS)",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Test coverage in customizable PAIS can be challenging due to complexity and variability of process models. Automated generation and execution of test cases based on the BPMN that underlies the system is promising. A solution that executes acceptance tests through the automation of the user interface of a Camunda-based webapp using RF is presented.",
+    "Speaker names": [
+      "Tales Mello Paiva"
+    ]
+  },
+  {
+    "ID": "FDD8CK",
+    "Proposal title": "Opening the Online Conference",
+    "Session type": {
+      "de": "Keynote",
+      "en": "Keynote"
+    },
+    "Abstract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    "Speaker names": []
+  },
+  {
+    "ID": "H9BAHW",
+    "Proposal title": "Closing the conference -slot",
+    "Session type": {
+      "de": "Keynote",
+      "en": "Keynote"
+    },
+    "Abstract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    "Speaker names": [
+      ""
+    ]
+  },
+  {
+    "ID": "HSDAHH",
+    "Proposal title": "RFSwarm how it came about and where it's going",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "An overview if RFSwarm - a performance testing tool with robot framework\r\n- what it is and why it's important different to other performance testing tools\r\n- why I created it\r\n- where it's at now\r\n- future plans\r\n- Q&A",
+    "Speaker names": [
+      "Dave"
+    ]
+  },
+  {
+    "ID": "JHXEQQ",
+    "Proposal title": "Robot Framework as Compliance Enabler",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Unlock Compliance with Robot Framework! Join my talk to learn how this versatile automation tool empowers teams to streamline and automate manual documentation processes, ensuring seamless adherence to industry regulations. Get practical tips on how to harness Robot Framework's potential in your compliance journey with automated reports creation!",
+    "Speaker names": [
+      "Kate\u0159ina Ho\u0161ov\u00e1"
+    ]
+  },
+  {
+    "ID": "JSCEPN",
+    "Proposal title": "How Robot Framework has changed the RPA market, and what we did with it",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "The presentation explores challenges in SME RPA projects, emphasizing Robot Framework's advantages and sharing insights on overcoming obstacles for an RPA agency",
+    "Speaker names": [
+      "Sam van der Wagen",
+      "Jasper Verbunt"
+    ]
+  },
+  {
+    "ID": "JSZTRJ",
+    "Proposal title": "Open-source RPA stack in the bank",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "The talk will be about how we built RPA platform in the bank, where main tool is RF. How we use RF and which libraries help us to build our robots. Which other tools, mainly open-source we use and so on.",
+    "Speaker names": [
+      "Patrik Zakovi\u010d"
+    ]
+  },
+  {
+    "ID": "JXBLTV",
+    "Proposal title": "Integrating Robot Framework with Generative AI and Jira",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Explore the synergy of Generative AI and Robot Framework via Listener API in this hands-on workshop! Discover how to enrich Robot Framework outputs and logs, automate Jira bug/task creations for failed test cases, and tap into ChatGPT for enhanced test insights. Using existing Python libraries, dive into seamless integrations, unlocking a new dimen",
+    "Speaker names": [
+      "David Fogl"
+    ]
+  },
+  {
+    "ID": "K7ZSXM",
+    "Proposal title": "How to create a successful Robot Framework automation project",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Many people start automation projects with poor knowledge about the product they are automating or they start in a rush because of the desire to advance quickly. Without a propper organisation and strategy in mind this can lead to bad/inconsistent implementations that become more costly and time consuming to fix once the project is ongoing.",
+    "Speaker names": [
+      "Liviu Avram"
+    ]
+  },
+  {
+    "ID": "K8W3WJ",
+    "Proposal title": "Am I good enough for open source?",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Have you ever thought about contributing to Open Source? If you haven't done so because you doubt your abilities. This is the talk for you! Everybody can help and every little bit helps.\r\nJoin me and discover how to get started and overcome your doubts. Let's get you contributing to Open Source projects!",
+    "Speaker names": [
+      "Yuri Verweij"
+    ]
+  },
+  {
+    "ID": "KAKUQN",
+    "Proposal title": "Ecosystem Project Review -slot",
+    "Session type": {
+      "de": "Keynote",
+      "en": "Keynote"
+    },
+    "Abstract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    "Speaker names": [
+      ""
+    ]
+  },
+  {
+    "ID": "KHMASZ",
+    "Proposal title": "Next-Gen Pipeline Journey: Elevate your skills with Robot Framework",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Unlock the power of Robot Framework and CI/CD pipelines with us! Dive in with an exciting game, perfecting pipelines and sharing experiences. Let's build scalable, reliable, and adaptable pipelines in GitLab together. Our Journey, your decisions! Join the workshop and transform your skills.",
+    "Speaker names": [
+      "Lukasz"
+    ]
+  },
+  {
+    "ID": "KTU8MK",
+    "Proposal title": "Using RobotFramework for Embedded Driver Testing - A field report",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "In 2020 we decided to use RobotFramework as an interface to our generic Embedded Test Platform.\r\nSince then our users check their hardware related microcontroller code only through Robot test sequences.\r\n\r\nThis talk will highlight some of the technical challenges we faced and what we learned in resolving them.",
+    "Speaker names": [
+      "Daniel Penning"
+    ]
+  },
+  {
+    "ID": "LHTGWU",
+    "Proposal title": "Performance test in a day using Robot Framework and RFSwram",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "In this workshop you'll see how you can use Robot Framework and RFSwarm to begin performance testing on day 1 with a new to you application.\r\n\r\nStarting from scratch you will write test cases and tune them for performance testing and by end of the day run a performance test and then generate a report suitable for presenting your results.",
+    "Speaker names": [
+      "Dave"
+    ]
+  },
+  {
+    "ID": "LSJFXU",
+    "Proposal title": "Automation Of Data Quality Controls using Robot Framework",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Automation of Quality Controls for Regulatory Project for a top Nordic Banking Client",
+    "Speaker names": [
+      "Rohith Ram Prabakaran"
+    ]
+  },
+  {
+    "ID": "LVMWVU",
+    "Proposal title": "Why cybersecurity is part of your job",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "The average tester might feel that cybersecurity is something committed in a separate silo. In this talk I go through why cybersecurity is everybody's business and very much part of the QA. We cover the project security, testing security as part of the QA and how regression testing with Robot Framework can be part of security testing too.",
+    "Speaker names": [
+      "Katarina Partti"
+    ]
+  },
+  {
+    "ID": "LVWRA8",
+    "Proposal title": "Reinventing Test Automation at Amadeus: The Power of Robot Framework",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Amadeus develops solutions for the travel industry and must deal with different business and industry technology standards.\r\nThis presentation will highlight how Amadeus revolutionized its test automation framework by moving from various internal test tools to a single Robot Framework ecosystem with functional keywords libraries based on python.",
+    "Speaker names": [
+      "Sebastien Plaisant",
+      "Andrea"
+    ]
+  },
+  {
+    "ID": "MEDT8A",
+    "Proposal title": "Scalable test automation in an insurance company",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "In our talk, we would like to review our project with you and visualise how we established a scalable test automation kit with Robot Framework in an insurance company with a heterogeneous application landscape. We report on the framework conditions, milestones and challenges to be considered.",
+    "Speaker names": [
+      "Matthias Grabowsky",
+      "Ivaylo Br\u00fcssow"
+    ]
+  },
+  {
+    "ID": "P8PLF7",
+    "Proposal title": "RoboSAPiens: SAP GUI Automation for Humans",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "RoboSAPiens provides keywords for automating the SAP Windows GUI in a way that resembles commanding a person to use it. The key innovation is that only information visible in the user interface is needed. Moreover, it is designed to be translatable. Currently, keywords are available in English and German.",
+    "Speaker names": [
+      "Marduk Bola\u00f1os"
+    ]
+  },
+  {
+    "ID": "QKEUZP",
+    "Proposal title": "Robot Framework Browser Advanced Workshop",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Learn how to use Browser like a Pro.\r\n\r\nExtending Library, Using it from Python, Interacting with Playwright and many more.",
+    "Speaker names": [
+      "Tatu Aalto",
+      "Ren\u00e9 Rohner"
+    ]
+  },
+  {
+    "ID": "QQSGJU",
+    "Proposal title": "Roadtrip across the Robot Framework pitfalls and how our architecture saved us.",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Ever had to restructure your project because it grew into an untameable monster? Or had to reorganise because more teams wanted to use your project? Or had to explain your tests to others? Or struggled how to setup a new RF project.\r\nOver the years we came up and fine-tuned an architecture that works from the very beginning to large scale projects.",
+    "Speaker names": [
+      "Guido Demmenie",
+      "Frank van der Kuur"
+    ]
+  },
+  {
+    "ID": "QYL83X",
+    "Proposal title": "From Jenkins to GitHub Actions with Robot Framework: A Shared Action-Based Solution",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Let's explore the possibilities of migrating the Robot Framework execution environment from Jenkins to GitHub Actions.\r\nOur solution leverages actions, all sharable within our company, for setup, test execution, result analysis (with proper formatting within GitHub Job Summary), as well as result propagation into our test management tool Jira.",
+    "Speaker names": [
+      "Roman Haladej"
+    ]
+  },
+  {
+    "ID": "RF3RYU",
+    "Proposal title": "Robot Framework Unleashed: A Multi-Application Adventure",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Embark on an exciting expedition into the realm of automation with our workshop, \"Robot Framework Unleashed: A Multi-Application Adventure.\" This immersive experience will empower you with the skills and knowledge required to automate an array of different applications, making you a versatile automation explorer.",
+    "Speaker names": [
+      "Many Kasiriha"
+    ]
+  },
+  {
+    "ID": "RNDZQB",
+    "Proposal title": "Empowering Lives Through Automation: A Success Story of the Testing Academy",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Discover how a Testing Academy mixed with Robot Framework changes peoples lives, empowering individuals to dream bigger, and succeed beyond their wildest expectations. The Robot Framework, in this talk where we will present the real testimonies of people, is no longer an automation tool but the tool that enables career transition.",
+    "Speaker names": [
+      "Paulo Jos\u00e9 Estrela Vitoriano de Matos"
+    ]
+  },
+  {
+    "ID": "RYES8M",
+    "Proposal title": "FUN -Suprise slot!",
+    "Session type": {
+      "de": "Keynote",
+      "en": "Keynote"
+    },
+    "Abstract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    "Speaker names": [
+      "Ren\u00e9 Rohner"
+    ]
+  },
+  {
+    "ID": "SCRLQS",
+    "Proposal title": "Lighting talks",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    "Speaker names": [
+      ""
+    ]
+  },
+  {
+    "ID": "SRW9V8",
+    "Proposal title": "Beyond log files: Elevating test analysis with data visualization",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Discover the limitations of raw data and learn why visualizations are essential for making informed decisions. Harness the art of visualization to decode data intricacies.",
+    "Speaker names": [
+      "Aleksi Simell"
+    ]
+  },
+  {
+    "ID": "SSECGZ",
+    "Proposal title": "The Pros and Cons of Generative AI in Robot Framework",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Explore the fusion of Generative AI with Robot Framework, spotlighting enhancements and hurdles in test automation. Discover how can AI elevate our testing while addressing its limitations. Engage in a balanced discourse to navigate AI's realm in QA, fostering a smarter, informed approach to AI-integrated testing.",
+    "Speaker names": [
+      "David Fogl"
+    ]
+  },
+  {
+    "ID": "TQTQQN",
+    "Proposal title": "Opening the Conference",
+    "Session type": {
+      "de": "Keynote",
+      "en": "Keynote"
+    },
+    "Abstract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    "Speaker names": [
+      ""
+    ]
+  },
+  {
+    "ID": "TRRAEX",
+    "Proposal title": "SeleniumLibrary: 2024 and Beyond",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "An update on where SeleniumLibrary in 2024, Selenium 4 and the future developments like WebDriver Bidi",
+    "Speaker names": [
+      "Ed Manlove",
+      "Yuri Verweij"
+    ]
+  },
+  {
+    "ID": "TYXDEF",
+    "Proposal title": "Mobile application testing with Robot Framework",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Testing mobile applications is similar to web testing. Many apps are just mini-websites. However, on a technical level, there are differences, due to mobile devices, and their complex ecosystems. This workshop is a hands-on technical session to mobile testing with RF and Appium. Learn how to approach mobile testing, or improve your existing tests.",
+    "Speaker names": [
+      "Gaja Kochaniewicz",
+      "Juuso Tamminen"
+    ]
+  },
+  {
+    "ID": "UNNGNM",
+    "Proposal title": "Panel Discussion -Slot",
+    "Session type": {
+      "de": "Keynote",
+      "en": "Keynote"
+    },
+    "Abstract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    "Speaker names": [
+      ""
+    ]
+  },
+  {
+    "ID": "VHSLZ8",
+    "Proposal title": "The Vital Divide: Developers And Test Automation Specialists in Test Automation",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "Are developers able to write automated tests and should they do it? And if so, in what sense, in which areas, and to what extent? Let us take a closer look at the symbiosis of developers and test automation specialists and explore why keeping they roles separate is the key to unlocking the potential of a testing process.",
+    "Speaker names": [
+      "V\u00e1clav Fuksa"
+    ]
+  },
+  {
+    "ID": "WKP7CT",
+    "Proposal title": "Our QA Transformation Journey from Manual tests to using Robot Framework for E2E tests",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "A part of our QA Transformation Journey was Test Automation, where we learned about Robot Framework, and we realized that this is a perfect tool for our end-to-end (E2E) testing during the User Acceptance Testing (UAT) period. The manual tests for our E2E involved the initial tests on a handheld device, followed by a web portal and TA system",
+    "Speaker names": [
+      "Tanja Poposka"
+    ]
+  },
+  {
+    "ID": "XH9APF",
+    "Proposal title": "Do Robots Dream of Pickled Cucumbers? Gherkin with RobotFramework",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "Explore an innovative approach to executing Gherkin/Cucumber scenarios within the Robot Framework using a new custom parser. This talk delves into the technical intricacies of this integration, emphasizing the distinctions between Gherkin/Cucumber and Robot Framework.",
+    "Speaker names": [
+      "Daniel Biehl"
+    ]
+  },
+  {
+    "ID": "YF7RXZ",
+    "Proposal title": "Database Library update",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "The [Database Library](https://github.com/MarketSquare/Robotframework-Database-Library/) for Robot Framework has been finally updated - after a long break since 2019. Moreover, the library maintenance was transferred to the Robot Framework community. This talk gives an overview of last changes and library features in general.",
+    "Speaker names": [
+      "Andre Mochinin"
+    ]
+  },
+  {
+    "ID": "YLX3LV",
+    "Proposal title": "Fuzzing for vulnerabilities in REST APIs",
+    "Session type": {
+      "en": "Talk"
+    },
+    "Abstract": "The existence of REST APIs itself is a security threat, as easy programmable APIs are also an easy target for attackers. Often, they lack sufficient security design or testing. Learn about Vaisala's experience of integrating API fuzzing - a form of security testing - into existing RF automated testing and the results that came with it.",
+    "Speaker names": [
+      "Alina"
+    ]
+  },
+  {
+    "ID": "YSA8HK",
+    "Proposal title": "How to Be a Robot Framework Champion: Collaborative Workshop",
+    "Session type": {
+      "en": "Workshop - Full Day"
+    },
+    "Abstract": "Introducing Robot Framework in an organization can be challenging and complex. This workshop will help you overcome the challenges and leverage the benefits. You will collaborate with other testers and test automators who share similar goals and experiences. We will play games, role-play scenarios, and document the whole process for the community.",
+    "Speaker names": [
+      "Adam Hepner"
+    ]
+  },
+  {
+    "ID": "ZAGHBH",
+    "Proposal title": "I don't always test my code but when I do I do it in production",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "People usually think that testing is something that happens only test environment, but real world does not stand still. Therefore testing  also in production is vital in fast paced modern world.",
+    "Speaker names": [
+      "Tatu Aalto"
+    ]
+  },
+  {
+    "ID": "ZMRYQP",
+    "Proposal title": "Orchestrating Robot Framework: From the Louvre to Kubernetes with Terraform & Ansible",
+    "Session type": {
+      "en": "PreRecorded-Talk"
+    },
+    "Abstract": "This talk unveils 'Cloud-Agnostic Auto-Scaling' in Robot Framework, leveraging Kubernetes, Terraform, Ansible, Prometheus & Grafana. A live demo of real-time scaling across multiple clouds via K8s. Dive into observability with Prometheus metrics and Grafana dashboards. This session offers a holistic, high-impact, & cost-efficient testing framework.",
+    "Speaker names": [
+      "Babu Manickam"
+    ]
+  }
+]

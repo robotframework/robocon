@@ -1,316 +1,322 @@
 @font-face {
-    font-family: 'RBCN';
-    src: url('/dist/fonts/RBCN23.woff2') format('woff'), url('/fonts/RBCN23.woff2') format('woff');
-    font-display: swap;
-    font-weight: 500;
+  font-family: "RBCN";
+  src: url("/dist/fonts/RBCN23.woff2") format("woff"),
+    url("/fonts/RBCN23.woff2") format("woff");
+  font-display: swap;
+  font-weight: 500;
 }
 @font-face {
-    font-family: 'RBCN22';
-    src: url('/dist/fonts/RBCN-thin.woff2') format('woff');
-    font-display: swap;
-    font-weight: 500;
+  font-family: "RBCN22";
+  src: url("/dist/fonts/RBCN-thin.woff2") format("woff");
+  font-display: swap;
+  font-weight: 500;
 }
 @font-face {
-    font-family: 'OCRA';
-    src: url('/dist/fonts/OCRA.woff') format('woff'), url('/fonts/OCRA.woff') format('woff');
-    font-display: swap;
+  font-family: "OCRA";
+  src: url("/dist/fonts/OCRA.woff") format("woff"),
+    url("/fonts/OCRA.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Courier Code';
-    src: url('/dist/fonts/CourierCode-Roman.woff2') format('woff2'), url('/fonts/CourierCode-Roman.woff2') format('woff2');
-    font-display: swap;
-    font-weight: 400;
+  font-family: "Courier Code";
+  src: url("/dist/fonts/CourierCode-Roman.woff2") format("woff2"),
+    url("/fonts/CourierCode-Roman.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
 }
 @font-face {
-    font-family: 'Courier Code';
-    src: url('/dist/fonts/CourierCode-Italic.woff') format('woff'), url('/fonts/CourierCode-Italic.woff') format('woff');
-    font-display: swap;
-    font-weight: 400;
-    font-style: italic;
+  font-family: "Courier Code";
+  src: url("/dist/fonts/CourierCode-Italic.woff") format("woff"),
+    url("/fonts/CourierCode-Italic.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
 }
 @font-face {
-    font-family: 'Courier Code';
-    src: url('/dist/fonts/CourierCode-Bold.woff') format('woff'), url('/fonts/CourierCode-Bold.woff') format('woff');
-    font-display: swap;
-    font-weight: 600;
+  font-family: "Courier Code";
+  src: url("/dist/fonts/CourierCode-Bold.woff") format("woff"),
+    url("/fonts/CourierCode-Bold.woff") format("woff");
+  font-display: swap;
+  font-weight: 600;
 }
 
 html {
-    font-size: var(--size-base-lg);
+  font-size: var(--size-base-lg);
 }
 
 @media screen and (max-width: 701px) {
-    html {
-        font-size: var(--size-base-sm);
-    }
+  html {
+    font-size: var(--size-base-sm);
+  }
 }
 
 h1,
 h2 {
   font-family: "RBCN";
-  letter-spacing: 0.5rem;
 }
 
 h2 {
-    font-family: var(--font-title);
-    line-height: var(--line-height-headers);
-    color: var(--color-theme);
-    color: var(--color-theme-p3);
+  font-family: var(--font-title);
+  line-height: var(--line-height-headers);
+  color: var(--color-theme);
+  color: var(--color-theme-p3);
 }
-h3, h4 {
-    font-family: var(--font-title);
-    line-height: var(--line-height-headers);
+h3,
+h4 {
+  font-family: var(--font-title);
+  line-height: var(--line-height-headers);
 }
 
-body, textarea, button {
-    font-family: var(--font-body);
+body,
+textarea,
+button {
+  font-family: var(--font-body);
 }
 
 h1 {
-    font-size: var(--type-2xlarge);
-    font-weight: var(--weight-body);
-    margin: var(--margin-bottom-h1) 0;
-    line-height: var(--line-height-h1);
+  font-size: var(--type-2xlarge);
+  font-weight: var(--weight-body);
+  margin: var(--margin-bottom-h1) 0;
+  line-height: var(--line-height-h1);
+  letter-spacing: 0.5rem;
 }
 
-.theme-2022 h1, .theme-2022 h2 {
-    font-family: 'RBCN22';
-    color: var(--color-white);
-    text-shadow:
-      0 0 0.5rem #fff,
-      0 0 1rem #fff,
-      0 0 2rem #fe4bd2,
-      0 0 4rem #fe4bd2;
+.theme-2022 h1,
+.theme-2022 h2 {
+  font-family: "RBCN22";
+  color: var(--color-white);
+  text-shadow: 0 0 0.5rem #fff, 0 0 1rem #fff, 0 0 2rem #fe4bd2,
+    0 0 4rem #fe4bd2;
 }
 .theme-2022 h1 {
-    font-size: 11rem;
+  font-size: 11rem;
 }
 
 h2 {
-    font-size: var(--type-xlarge);
-    font-weight: var(--weight-body);
-    margin-bottom: var(--size-medium);
-    line-height: var(--line-height-h2);
-    text-transform: uppercase;
+  font-size: var(--type-xlarge);
+  font-weight: var(--weight-body);
+  margin-bottom: var(--size-medium);
+  line-height: var(--line-height-h2);
+  text-transform: uppercase;
 }
 
 h2:not(:first-child) {
-    margin-top: var(--size-xlarge);
+  margin-top: var(--size-xlarge);
 }
 
 h3 {
-    font-size: var(--type-body);
-    color: var(--color-theme);
-    color: var(--color-theme-p3);
-    font-weight: var(--weight-semi-bold);
-    margin-bottom: var(--size-3xsmall);
-    line-height: var(--line-height-h3);
+  font-size: var(--type-body);
+  color: var(--color-theme);
+  color: var(--color-theme-p3);
+  font-weight: var(--weight-semi-bold);
+  margin-bottom: var(--size-3xsmall);
+  line-height: var(--line-height-h3);
 }
 
 h4 {
-    font-size: var(--type-body);
-    color: var(--color-primary);
-    font-weight: var(--weight-bold);
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    font-family: var(--font-body);
+  font-size: var(--type-body);
+  color: var(--color-primary);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-family: var(--font-body);
 }
 
 a {
-    color: var(--color-link);
-    font-weight: var(--weight-body);
-    transition: filter 0.2s;
+  color: var(--color-link);
+  font-weight: var(--weight-body);
+  transition: filter 0.2s;
 }
 
 button {
-    text-decoration: none;
-    font-size: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 pre {
-    border: 0.1rem inset var(--color-theme);
-    padding: var(--size-3xsmall);
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.1);
+  border: 0.1rem inset var(--color-theme);
+  padding: var(--size-3xsmall);
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 pre.line {
-    background-color: rgba(150, 150, 150, 0.1);
+  background-color: rgba(150, 150, 150, 0.1);
 }
 
 input {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .dense {
-    letter-spacing: 0;
+  letter-spacing: 0;
 }
 
 label {
-    font-size: var(--type-small);
+  font-size: var(--type-small);
 }
 
 p {
-    font-size: var(--type-body);
-    margin: var(--size-xsmall) 0;
+  font-size: var(--type-body);
+  margin: var(--size-xsmall) 0;
 }
 
 ul {
-    padding-left: 1rem;
-    list-style-position: outside;
-    margin-block-end: 0;
+  padding-left: 1rem;
+  list-style-position: outside;
+  margin-block-end: 0;
 }
 
 .ul-none {
-    list-style-type: none !important;
-    padding: unset;
+  list-style-type: none !important;
+  padding: unset;
 }
 
 li {
-    margin-bottom: var(--size-2xsmall);
-    margin-top: var(--size-2xsmall);
+  margin-bottom: var(--size-2xsmall);
+  margin-top: var(--size-2xsmall);
 }
 
 .li-none {
-    margin: unset;
+  margin: unset;
 }
 
 .line-height-1 {
-    line-height: 1;
+  line-height: 1;
 }
 
 .line-height-small {
-    line-height: 1.25;
+  line-height: 1.25;
 }
 
 .line-height-body {
-    line-height: var(--line-height-body);
+  line-height: var(--line-height-body);
 }
 
 .type-center {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .type-left {
-    text-align: left !important;
+  text-align: left !important;
 }
 
 .type-right {
-    text-align: right !important;
+  text-align: right !important;
 }
 
 .type-lowercase {
-    text-transform: lowercase;
+  text-transform: lowercase;
 }
 
 .type-uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .font-title {
-    font-family: var(--font-title);
+  font-family: var(--font-title);
 }
 .font-body {
-    font-family: var(--font-body);
+  font-family: var(--font-body);
 }
 
 .type-nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .type-capitalize {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .type-underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .type-no-underline {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .type-black {
-    font-weight: var(--weight-black);
+  font-weight: var(--weight-black);
 }
 
 b,
 strong,
 .weight-bold {
-    font-weight: var(--weight-bold);
+  font-weight: var(--weight-bold);
 }
 
 .weight-semi-bold {
-    font-weight: var(--weight-semi-bold);
+  font-weight: var(--weight-semi-bold);
 }
 
 .weight-normal {
-    font-weight: var(--weight-normal);
+  font-weight: var(--weight-normal);
 }
 
 .weight-light {
-    font-weight: var(--weight-light);
+  font-weight: var(--weight-light);
 }
 
 .type-2xlarge {
-    font-size: var(--type-2xlarge);
+  font-size: var(--type-2xlarge);
 }
 
 .type-xlarge {
-    font-size: var(--type-xlarge);
+  font-size: var(--type-xlarge);
 }
 
 .type-large {
-    font-size: var(--type-large);
+  font-size: var(--type-large);
 }
 
 .type-body {
-    font-size: var(--type-body);
+  font-size: var(--type-body);
 }
 
 .type-small {
-    font-size: var(--type-small);
+  font-size: var(--type-small);
 }
 
 .type-xsmall {
-    font-size: var(--type-xsmall);
-    line-height: var(--line-height-small);
+  font-size: var(--type-xsmall);
+  line-height: var(--line-height-small);
 }
 
 .type-2xsmall {
-    font-size: var(--type-2xsmall);
+  font-size: var(--type-2xsmall);
 }
 
 .type-italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .router-link {
-    color: var(--color-white);
-    font-family: var(--font-title);
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: color 0.2s;
+  color: var(--color-white);
+  font-family: var(--font-title);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
 }
 .router-link:hover {
-    text-decoration: underline;
-    color: var(--color-theme);
-    color: var(--color-theme-p3);
+  text-decoration: underline;
+  color: var(--color-theme);
+  color: var(--color-theme-p3);
 }
 .router-link-active {
-    color: var(--color-theme);
-    color: var(--color-theme-p3);
+  color: var(--color-theme);
+  color: var(--color-theme-p3);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 ul li::before {
-    content: "⦿";
-    color: var(--color-theme);
-    display: inline-block;
-    width: 1.5rem;
+  content: "⦿";
+  color: var(--color-theme);
+  display: inline-block;
+  width: 1.5rem;
 }
