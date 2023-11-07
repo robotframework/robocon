@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "02766c7055368e214730",
-    "url": "dist/css/app.c4eb2a75.css"
+    "revision": "f056350714b1abbb62fd",
+    "url": "dist/css/app.c52c7892.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -124,6 +124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/eficode.png"
   },
   {
+    "revision": "bf9fd9b1082bfece3e6092af6352e373",
+    "url": "dist/img/sponsors/enqore.png"
+  },
+  {
     "revision": "a0795e49c42d0d50e31e2049169b779e",
     "url": "dist/img/sponsors/fsecure.png"
   },
@@ -146,6 +150,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "89d788184d19ee4d5bbcfcfd36864053",
     "url": "dist/img/sponsors/qfactory.png"
+  },
+  {
+    "revision": "b6ce4f802d306196b0d71df03d9041ee",
+    "url": "dist/img/sponsors/qubilea.png"
   },
   {
     "revision": "77171768148f1e7b59db35aeddb3b6f4",
@@ -176,12 +184,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "3a33db40f4b128224999d397e42543c4",
+    "revision": "7a14a19c46bb94ed177b16d39bd5819f",
     "url": "dist/index.html"
   },
   {
-    "revision": "02766c7055368e214730",
-    "url": "dist/js/app.7a7ec9f1.js"
+    "revision": "f056350714b1abbb62fd",
+    "url": "dist/js/app.2b1220ad.js"
   },
   {
     "revision": "105f8a53ed603c147aa7",

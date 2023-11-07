@@ -1,14 +1,7 @@
 <template>
   <div class="container narrow row bottom p-small pt-medium pb-medium">
-    <div class="col-sm-12 col-lg-9 flex middle col-lg-offset-3">
+    <div class="col-sm-12 col-lg-9 flex center col-lg-offset-3">
       <h1 class="color-white">RBCN<span class="color-theme">24</span></h1>
-      <base-icon
-        v-if="$store.state.isDesktop"
-        name="robot"
-        color="white"
-        size="5.5rem"
-        class="ml-xsmall mt-xsmall"
-      />
     </div>
   </div>
   <news-banner v-if="$t('newsBanner') !== ''">
@@ -36,8 +29,7 @@
             </Ticket>
           </div>
           <div class="bg-secondary p-small rounded">
-            <h3>Schedule</h3>
-            <div>In-person</div>
+            <h3>In-person</h3>
             <div>Helsinki, Finland</div>
             <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
             <span class="line-height-1">
@@ -74,8 +66,7 @@
             </Ticket>
           </div>
           <div class="bg-secondary p-small rounded">
-            <h3>Schedule</h3>
-            <div>Online</div>
+            <h3>Online</h3>
             <div>Gather.town</div>
             <span class="line-height-1">
               <div class="mt-small color-theme font-title type-body">February 28th</div>
@@ -119,6 +110,7 @@
         <span class="color-theme">The online conference</span> will take place
         28-29 February, 2024 followed by the community day on the 1st of March.
       </p>
+      <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
     <page-section title-id="talks" :title="'Program'">
       <talks24 />
@@ -127,7 +119,7 @@
 </template>
 
 <script>
-import { PageSection, NewsBanner, BaseIcon, Ticket, Talks24 } from 'Components'
+import { PageSection, NewsBanner, BaseIcon, Ticket, Talks24, Sponsors } from 'Components'
 
 export default {
   name: 'App',
@@ -136,7 +128,8 @@ export default {
     PageSection,
     NewsBanner,
     Ticket,
-    Talks24
+    Talks24,
+    Sponsors
   },
   created() {
     const params = new URLSearchParams(window.location.search)
