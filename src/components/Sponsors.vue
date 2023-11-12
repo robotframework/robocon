@@ -51,7 +51,7 @@
       </transition>
     </div>
     <div class="row">
-      <router-link v-if="sponsors.link" to="/sponsor" class="block type-center col-sm-4 col-sm-offset-8 mt-large">
+      <router-link v-if="sponsors.link" to="/sponsor" class="block type-center col-sm-4 col-sm-offset-8">
         <button class="theme">
           Join
         </button>

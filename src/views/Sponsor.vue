@@ -1,12 +1,11 @@
 <template>
    <!--<link rel="stylesheet" type="text/css" href="https://pretix.eu/robocon/robocon-2023/widget/v1.css">
   <component :is="'script'" src="https://pretix.eu/widget/v1.en.js" async></component>-->
-  <div class="container narrow">
-    <h1 class="type-xlarge type-center mb-large" v-html="$t('sponsor.title')" />
-    <p class="col-md-8 col-md-offset-2" v-html="parseMarkdown($t('sponsor.subTitle'))" />
+  <div class="container narrow row">
+    <p class="col-md-8 col-md-offset-3 mt-large" v-html="parseMarkdown($t('sponsor.subTitle'))" />
   </div>
   <div class="container mb-large">
-    <div class="row center mb-large mt-large">
+    <div class="row center mb-small mt-large">
       <button
         v-for="(tab, i) in ['Full Sponsorship', 'Online Sponsorship']"
         :key="tab"

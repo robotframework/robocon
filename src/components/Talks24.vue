@@ -1,6 +1,6 @@
 <template>
   <div class="mt-small w-100">
-    <button v-for="type in ['live', 'online', 'workshop']" :key="type" class="theme mr-xsmall" :class="selectedTrack === type && 'active'" @click="selectedTrack = type">
+    <button v-for="type in ['live', 'online']" :key="type" class="theme mr-xsmall" :class="selectedTrack === type && 'active'" @click="selectedTrack = type">
       {{ type }}
     </button>
     <p class="type-small">(Exact schedule will be announced later)</p>
@@ -18,9 +18,6 @@
         {{ talk['Speaker names'].join(', ') }}
       </div>
       <div v-html="parseText(talk.Abstract)" />
-      <a v-if="talk['Session type'].en.includes('Workshop')" href="https://tickets.robotframework.org/robocon-2024/3997180/">
-        Get tickets
-      </a>
     </div>
   </div>
 </template>
@@ -40,14 +37,12 @@ export default {
     talks() {
       return {
         live: talks24.filter((talk) => talk['Session type'].en === 'Talk'),
-        online: talks24.filter((talk) => talk['Session type'].en === 'PreRecorded-Talk'),
-        workshop: talks24.filter((talk) => talk['Session type'].en.includes('Workshop'))
+        online: talks24.filter((talk) => talk['Session type'].en === 'PreRecorded-Talk')
       }
     },
     shownTalks() {
       if (this.selectedTrack === 'live') return this.talks.live
       if (this.selectedTrack === 'online') return this.talks.online
-      if (this.selectedTrack === 'workshop') return this.talks.workshop
       return []
     }
   },
@@ -59,7 +54,6 @@ export default {
     const hash = window.location.hash
     console.log(hash)
     if (hash.includes('online')) this.selectedTrack = 'online'
-    if (hash.includes('workshop')) this.selectedTrack = 'workshop'
   },
   methods: {
     format,
@@ -76,7 +70,6 @@ export default {
       if (!title) return ''
       let tabPrefix = 'live'
       if (tab === 'online') tabPrefix = 'online'
-      if (tab === 'workshop') tabPrefix = 'workshop'
       return `${tabPrefix}-${title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
     },
     getIsNow(start, end) {

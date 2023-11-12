@@ -16,23 +16,43 @@
         Conference
       </div>
     </div>
-    <div class="flex">
-      <div
-        v-for="({ text, name, theme }, i) in $tm('navbar.links')"
-        :key="name"
-        class="flex">
-        <router-link
-          :to="{ name }"
-          class="router-link mx-xsmall type-no-underline"
-          :class="theme">
-          {{ text }}
-        </router-link>
-        <div
-          v-if="i < $tm('navbar.links') - 1"
-          class="mx-small">
-          |
-        </div>
+    <div class="flex middle">
+      <div v-if="$route.name === 'Home'" class="flex">
+        <a
+          href="#talks"
+          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
+          #TALKS
+        </a>
+        <a
+          href="#workshops"
+          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
+          #WORKSHOPS
+        </a>
+        <a
+          href="#hotels"
+          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
+          #HOTELS
+        </a>
       </div>
+      <div v-else>
+        <router-link
+          :to="{ name: 'Home' }"
+          class="router-link mx-xsmall type-no-underline type-small">
+          RBCN24
+        </router-link>
+      </div>
+      <div class="mx-small">|</div>
+    <router-link
+      :to="{ name: 'Sponsor' }"
+      class="router-link mx-xsmall type-no-underline type-small">
+      sponsor
+    </router-link>
+    <div class="mx-small">|</div>
+    <router-link
+      :to="{ name: 'Archive' }"
+      class="router-link mx-xsmall type-no-underline type-small">
+      archive
+    </router-link>
     </div>
   </div>
 </template>
@@ -74,6 +94,9 @@ export default {
     }
   },
   mounted() {
+    setTimeout(() => {
+      console.log(this.$route)
+    }, 1000)
     const observer = new IntersectionObserver((e) => {
       this.navSticky = !e[0].isIntersecting
     }, { threshold: 1 })
