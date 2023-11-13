@@ -1,23 +1,48 @@
 <template>
   <div class="mt-small w-100">
-    <button v-for="type in ['live', 'online']" :key="type" class="theme mr-xsmall" :class="selectedTrack === type && 'active'" @click="selectedTrack = type">
+    <button
+      v-for="type in ['live', 'online']"
+      :key="type"
+      class="theme mr-xsmall"
+      :class="selectedTrack === type && 'active'"
+      @click="selectedTrack = type"
+    >
       {{ type }}
     </button>
-    <p class="type-small">(Exact schedule will be announced later)</p>
-    <div v-for="talk in shownTalks" :key="talk.id" class=" mt-large card p-small">
-      <a class="anchor" :id="getSlug(talk['Proposal title'], selectedTrack)"></a>
+    <div
+      v-for="talk in shownTalks"
+      :key="talk.id"
+      class=" mt-large card p-small"
+    >
+      <a
+        class="anchor"
+        :id="getSlug(talk.title, selectedTrack)"
+      ></a>
       <div class="flex between">
         <h3>
-          {{ talk['Proposal title'] }}
+          {{ talk.title }}
         </h3>
-        <a v-if="!$store.state.isMobile" title="get link to talk" :href="`#${getSlug(talk['Proposal title'], selectedTrack)}`">
+        <a
+          v-if="!$store.state.isMobile"
+          title="get link to talk"
+          :href="`#${getSlug(talk.title, selectedTrack)}`"
+        >
           <link-icon style="transform: translateY(2px)" />
         </a>
       </div>
+      <p class="type-small m-none">
+        {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
+      </p>
       <div class="mb-small">
-        {{ talk['Speaker names'].join(', ') }}
+        {{ talk.speakers.map((speaker) => speaker.name).join(', ') }}
       </div>
-      <div v-html="parseText(talk.Abstract)" />
+      <div v-html="parseText(talk.abstract)" />
+      <details class="details">
+        <summary>
+          Full description
+        </summary>
+        <div v-html="parseText(talk.description)" />
+      </details>
     </div>
   </div>
 </template>
@@ -41,26 +66,50 @@ export default {
       }
     },
     shownTalks() {
-      if (this.selectedTrack === 'live') return this.talks.live
-      if (this.selectedTrack === 'online') return this.talks.online
+      if (this.selectedTrack === 'live') return this.talksLive
+      if (this.selectedTrack === 'online') return this.talksOnline
       return []
     }
   },
+  created() {
+    fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
+      .then((res) => res.json())
+      .then((res) => {
+        this.talksLive = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon')
+          .sort((a, b) => {
+            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            return 1
+          })
+        this.talksOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline')
+          .sort((a, b) => {
+            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            return 1
+          })
+      })
+      .then(() => {
+        const hash = window.location.hash
+        if (hash.includes('online')) this.selectedTrack = 'online'
+        this.$nextTick(() => {
+          console.log(hash)
+          const el = document.getElementById(hash.slice(1))
+          console.log(el)
+          if (el) el.scrollIntoView()
+        })
+      })
+  },
   data: () => ({
     publicPath: process.env.BASE_URL,
-    selectedTrack: 'live'
+    selectedTrack: 'live',
+    talksLive: [],
+    talksOnline: []
   }),
-  mounted() {
-    const hash = window.location.hash
-    console.log(hash)
-    if (hash.includes('online')) this.selectedTrack = 'online'
-  },
   methods: {
     format,
     getShownTime(time) {
       const date = new Date(time)
       const hours = date.getHours()
-      const minutes = date.getMinutes()
+      let minutes = date.getMinutes()
+      if (`${minutes}`.length === 1) minutes = `0${minutes}`
       return `${hours}:${minutes === 0 ? '00' : minutes}`
     },
     parseText(description) {
@@ -86,5 +135,17 @@ a.anchor {
   position: relative;
   top: -15vh;
   visibility: hidden;
+}
+details summary {
+  cursor: pointer;
+  list-style-type: ">";
+  color: var(--color-theme);
+  font-weight: 600;
+}
+details[open] > summary {
+    list-style-type: '↓';
+}
+details.details >>> p {
+  display: inline;
 }
 </style>

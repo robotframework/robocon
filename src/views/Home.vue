@@ -68,7 +68,7 @@
         28-29 February, 2024 followed by the community day on the 1st of March.
       </p>
       <div class="row col-sm-12">
-        <div class="col-sm-12 col-md-5 bg-secondary p-small rounded">
+        <div class="col-sm-12 col-md-5 bg-secondary p-small rounded mb-small">
           <h3>In-person</h3>
           <div>Helsinki, Finland</div>
           <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
@@ -87,7 +87,7 @@
             Fun activity
           </span>
         </div>
-        <div class="col-sm-12 col-md-5 col-md-offset-1 bg-secondary p-small rounded">
+        <div class="col-sm-12 col-md-5 col-md-offset-1 bg-secondary p-small rounded mb-small">
           <h3>Online</h3>
           <a href="https://www.gather.town/">Gather.town</a>
           <span class="line-height-1">

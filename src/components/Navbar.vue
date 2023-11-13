@@ -94,9 +94,6 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      console.log(this.$route)
-    }, 1000)
     const observer = new IntersectionObserver((e) => {
       this.navSticky = !e[0].isIntersecting
     }, { threshold: 1 })
