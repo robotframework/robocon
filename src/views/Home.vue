@@ -29,7 +29,7 @@
             Main Conference<br>In-person<br>
           </template>
           <template v-slot:price>
-            1200 €<span class="type-xsmall"> + VAT</span>
+            <s>1200</s> 800 €<div class="type-xsmall"> + VAT</div>
           </template>
           <template v-slot:left>
             FEB 08-09
@@ -43,7 +43,7 @@
             Main Conference<br>Online
           </template>
           <template v-slot:price>
-            300 €<span class="type-xsmall"> + VAT</span>
+            <s>300</s> 200 €<div class="type-xsmall"> + VAT</div>
           </template>
           <template v-slot:left>
             FEB 28-29
