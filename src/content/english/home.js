@@ -64,6 +64,10 @@ export default {
       {
         img: 'qubilea.png',
         href: 'https://qubilea.fi/en/'
+      },
+      {
+        img: 'viadee.png',
+        href: 'https://www.viadee.de/en/'
       }
     ]
   }

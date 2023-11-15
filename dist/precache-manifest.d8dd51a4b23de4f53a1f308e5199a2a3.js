@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "6421c27940a4cdbf4599",
+    "revision": "710a971949dbb2b56b9e",
     "url": "dist/css/app.e484b5fe.css"
   },
   {
@@ -180,16 +180,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/vala.png"
   },
   {
+    "revision": "899954275c55906d01460e71330c7221",
+    "url": "dist/img/sponsors/viadee.png"
+  },
+  {
     "revision": "77f87e86d6f721c6b5f81a87fd16c267",
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "fab1df47f2ca8e1235bbc009ca257eff",
+    "revision": "57e6e88924653f7a9061e6c7362891cf",
     "url": "dist/index.html"
   },
   {
-    "revision": "6421c27940a4cdbf4599",
-    "url": "dist/js/app.5dbd7c2c.js"
+    "revision": "710a971949dbb2b56b9e",
+    "url": "dist/js/app.666e3fce.js"
   },
   {
     "revision": "1aa08cce370c6cb71086",
