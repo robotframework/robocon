@@ -33,7 +33,7 @@
         :key="i"
         :href="sponsor.href"
         target="_blank"
-        class="sponsor cursor-pointer col-sm-6 col-md-4 p-medium">
+        class="sponsor cursor-pointer col-sm-6 col-md-3 p-medium">
         <div
           class="img-container mb-small"
           :style="`background-image: url(${publicPath}img/sponsors/${sponsor.img})`" />

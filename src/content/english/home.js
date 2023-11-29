@@ -48,6 +48,10 @@ export default {
         href: 'https://www.imbus.de/en/'
       },
       {
+        img: 'knowit.png',
+        href: 'https://www.knowit.eu/'
+      },
+      {
         img: 'qfactory.png',
         href: 'https://q-factory.fi/en/'
       },
