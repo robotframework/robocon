@@ -6,26 +6,26 @@
   </news-banner> -->
   <navbar v-if="$store.state.isDesktop && !fullScreen" />
   <div v-if="$route.name === 'Home' && !$store.state.isDesktop" class="row mb-large bg-black pb-small" style="position: sticky; top: 3.5rem; z-index: 3; padding-left: 3.5rem;">
-    <a
-      href="/#tutorials"
+    <button
+      @click="scrollTo('tutorials')"
       class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #TUTORIALS
-    </a>
-    <a
-      href="/#talks"
+    </button>
+    <button
+      @click="scrollTo('talks')"
       class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #TALKS
-    </a>
-    <a
-      href="/#workshops"
+    </button>
+    <button
+    @click="scrollTo('workshops')"
       class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #WORKSHOPS
-    </a>
-    <a
-      href="/#hotels"
+    </button>
+    <button
+    @click="scrollTo('hotels')"
       class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #HOTELS
-    </a>
+    </button>
   </div>
   <router-view />
   <page-footer v-if="!fullScreen" />
@@ -62,6 +62,12 @@ export default {
   watch: {
     '$i18n.locale'() {
       document.documentElement.lang = this.$i18n.locale
+    }
+  },
+  methods: {
+    scrollTo(id) {
+      const el = document.getElementById(id)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
     }
   }
 }
