@@ -5,6 +5,28 @@
     <h3>📣 <span class="color-theme">This October 5th</span> 📣</h3> First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link>
   </news-banner> -->
   <navbar v-if="$store.state.isDesktop && !fullScreen" />
+  <div v-if="$route.name === 'Home' && !$store.state.isDesktop" class="row mb-large bg-black pb-small" style="position: sticky; top: 3.5rem; z-index: 3; padding-left: 3.5rem;">
+    <a
+      href="/#tutorials"
+      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      #TUTORIALS
+    </a>
+    <a
+      href="/#talks"
+      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      #TALKS
+    </a>
+    <a
+      href="/#workshops"
+      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      #WORKSHOPS
+    </a>
+    <a
+      href="/#hotels"
+      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      #HOTELS
+    </a>
+  </div>
   <router-view />
   <page-footer v-if="!fullScreen" />
 </template>
