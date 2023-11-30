@@ -174,4 +174,7 @@ details.details >>> p {
 details.details >>> ol {
   padding-left: 2rem;
 }
+details summary.bio::-webkit-details-marker {
+  display:none;
+}
 </style>

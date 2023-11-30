@@ -113,4 +113,7 @@ details summary.bio {
 details.details >>> p {
   display: inline;
 }
+details summary.bio::-webkit-details-marker {
+  display:none;
+}
 </style>
