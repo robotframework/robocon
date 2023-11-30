@@ -19,14 +19,19 @@
     <div class="flex middle">
       <div v-if="$route.name === 'Home'" class="flex">
         <a
-          href="#talks"
+          href="#tutorials"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
-          #TALKS
+          #TUTORIALS
         </a>
         <a
           href="#workshops"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #WORKSHOPS
+        </a>
+        <a
+          href="#talks"
+          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
+          #TALKS
         </a>
         <a
           href="#hotels"

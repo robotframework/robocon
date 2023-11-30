@@ -232,6 +232,9 @@ li {
 .type-underline {
   text-decoration: underline;
 }
+.type-underline-theme {
+  border-bottom: 1px solid var(--color-theme);
+}
 
 .type-no-underline {
   text-decoration: none;

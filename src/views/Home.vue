@@ -68,44 +68,63 @@
         28-29 February, 2024 followed by the community day on the 1st of March.
       </p>
       <div class="row col-sm-12">
-        <div class="col-sm-12 col-md-5 bg-secondary p-small rounded mb-small">
-          <h3>In-person</h3>
-          <div>Helsinki, Finland</div>
-          <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
-          <span class="line-height-1">
-            <div class="mt-small color-theme font-title type-body">Feb 6th</div>
-            Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
-            <div class="mt-small color-theme font-title type-body">7th</div>
-            Community Day
-            <div class="mt-small color-theme font-title type-body">8th</div>
-            Main Conference
-            <div>+ Community Dinner</div>
-            <div class="mt-small color-theme font-title type-body">9th</div>
-            Main Conference
-            <div>+ After Party</div>
-            <div class="mt-small color-theme font-title type-body">10th</div>
-            Fun activity
-          </span>
+        <div class="col-sm-12 col-md-6 px-small">
+          <div class="bg-secondary p-medium pt-large pb-large rounded mb-small">
+            <h2>In-person</h2>
+            <div>Helsinki, Finland</div>
+            <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
+            <span class="line-height-1">
+              <div class="mt-small color-theme font-title type-body">Feb 6th</div>
+              Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
+              <div class="mt-small color-theme font-title type-body">7th</div>
+              Community Day
+              <div class="mt-small color-theme font-title type-body">8th</div>
+              Main Conference
+              <div>+ Community Dinner</div>
+              <div class="mt-small color-theme font-title type-body">9th</div>
+              Main Conference
+              <div>+ After Party</div>
+              <div class="mt-small color-theme font-title type-body">10th</div>
+              Fun activity
+            </span>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-5 col-md-offset-1 bg-secondary p-small rounded mb-small">
-          <h3>Online</h3>
-          <a href="https://www.gather.town/">Gather.town</a>
-          <span class="line-height-1">
-            <div class="mt-small color-theme font-title type-body">Feb 28th</div>
-            Main Conference
-            <div class="mt-small color-theme font-title type-body">29th</div>
-            Main Conference
-            <div class="mt-small color-theme font-title type-body">Mar 1st</div>
-            Community Day
-          </span>
+        <div class="col-sm-12 col-md-6 px-small">
+          <div class="bg-secondary p-medium pt-large pb-2xlarge rounded mb-small">
+            <h2>Online</h2>
+            <a href="https://www.gather.town/">Gather.town</a>
+            <span class="line-height-1">
+              <div class="mt-small color-theme font-title type-body">Feb 28th</div>
+              Main Conference
+              <div class="mt-small color-theme font-title type-body">29th</div>
+              Main Conference
+              <div class="mt-small color-theme font-title type-body">Mar 1st</div>
+              Community Day
+            </span>
+          </div>
         </div>
       </div>
     </page-section>
-    <page-section title-id="talks" :title="'Talks'">
-      <talks24 />
+    <page-section title-id="tutorials" :title="'Tutorials'">
+      <p>
+        Tutorials offer you a sneak peek into specific topics, each uniquely designed for different levels of expertise. This year, we're excited to provide <span class="type-underline-theme weight-bold">free beginner-level tutorials during the Community Day of our in-person conference.</span>
+        </p>
+        <p>
+Moreover, a wide array of exceptional online tutorials will be spread across the days before and after the online conference, <span class="type-underline-theme weight-bold">accessible exclusively to ticket holders.</span> Don't miss this opportunity to enhance your skills and knowledge in a tailored, engaging environment.
+      </p>
+      <tutorials24 :speakers="speakers" />
     </page-section>
     <page-section title-id="workshops" :title="'Workshops'">
-      <workshops24 />
+      <p>
+        The in-person conference week kicks off with our exceptional hands-on workshops. These serve as your gateway to a deep dive into specific topics, allowing you to learn practically in a small group setting.
+      </p>
+      <p>
+        We offer a diverse range of workshops covering various topics and skill levels. Be sure to choose one that's just right for you!
+      </p>
+      <workshops24 :speakers="speakers" />
+    </page-section>
+    <page-section title-id="talks" :title="'Talks'">
+      <talks24 :speakers="speakers" />
     </page-section>
     <page-section title-id="hotels" :title="'Hotels'">
       <p>
@@ -126,7 +145,7 @@
 </template>
 
 <script>
-import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Sponsors, GlobeRbcn } from 'Components'
+import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
 
 export default {
   name: 'App',
@@ -136,12 +155,14 @@ export default {
     Ticket,
     Talks24,
     Workshops24,
+    Tutorials24,
     Sponsors,
     GlobeRbcn
   },
   data: () => ({
     // FF renders different height for rbcn font for some reason
-    isFirefox: false
+    isFirefox: false,
+    speakers: []
   }),
   created() {
     if (navigator.userAgent && navigator.userAgent.match(/firefox|fxios/i)) {
@@ -152,6 +173,11 @@ export default {
     if (entries.auth) {
       this.$router.replace({ name: 'Robocon2023', query: entries })
     }
+    fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/')
+      .then((res) => res.json())
+      .then(({ results }) => {
+        this.speakers = results.flatMap(({ speakers }) => speakers)
+      })
   },
   methods: {
     goTo(id) {

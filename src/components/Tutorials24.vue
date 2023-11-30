@@ -1,48 +1,39 @@
 <template>
   <div class="mt-small w-100">
-    <button
-      v-for="type in ['live', 'online']"
-      :key="type"
-      class="theme mr-xsmall"
-      :class="selectedTrack === type && 'active'"
-      @click="selectedTrack = type"
-    >
-      {{ type }}
-    </button>
     <div
-      v-for="talk in shownTalks"
-      :key="talk.id"
+      v-for="tutorial in tutorials"
+      :key="tutorial.id"
       class=" mt-large card p-small"
     >
       <a
         class="anchor"
-        :id="getSlug(talk.title, selectedTrack)"
+        :id="getSlug(tutorial.title)"
       ></a>
       <div class="flex between">
         <h3>
-          {{ talk.title }}
+          {{ tutorial.title }}
         </h3>
         <a
           v-if="!$store.state.isMobile"
-          title="get link to talk"
-          :href="`#${getSlug(talk.title, selectedTrack)}`"
+          title="get link to tutorial"
+          :href="`#${getSlug(tutorial.title)}`"
         >
           <link-icon style="transform: translateY(2px)" />
         </a>
       </div>
       <p class="type-small m-none">
-        {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
+        {{ format(new Date(tutorial.slot.start), 'MMM dd') }} {{ getShownTime(tutorial.slot.start) }} - {{ getShownTime(tutorial.slot.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
       </p>
-      <div v-html="parseText(talk.abstract)" />
+      <div v-html="parseText(tutorial.abstract)" />
       <details class="details">
         <summary>
           Full description
         </summary>
-        <div v-html="parseText(talk.description)" class="p-small" />
+        <div v-html="parseText(tutorial.description)" />
       </details>
       <h3 class="mt-xlarge">Presenters</h3>
       <details
-        v-for="speaker in talk.speakers"
+        v-for="speaker in tutorial.speakers"
         :key="speaker.code"
         class="card sharper mb-medium mt-medium">
         <summary class="bio">
@@ -73,33 +64,21 @@ import { format, isWithinInterval } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
 
 export default {
-  name: 'Talks24',
+  name: 'Tutorials24',
+  components: {
+    LinkIcon
+  },
   props: {
     speakers: {
       type: Array,
       required: true
     }
   },
-  components: {
-    LinkIcon
-  },
-  computed: {
-    shownTalks() {
-      if (this.selectedTrack === 'live') return this.talksLive
-      if (this.selectedTrack === 'online') return this.talksOnline
-      return []
-    }
-  },
   created() {
     fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
       .then((res) => res.json())
       .then((res) => {
-        this.talksLive = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon')
-          .sort((a, b) => {
-            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
-            return 1
-          })
-        this.talksOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline')
+        this.tutorials = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'Eficode')
           .sort((a, b) => {
             if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
             return 1
@@ -107,7 +86,6 @@ export default {
       })
       .then(() => {
         const hash = window.location.hash
-        if (hash.includes('online')) this.selectedTrack = 'online'
         this.$nextTick(() => {
           const el = document.getElementById(hash.slice(1))
           if (el) el.scrollIntoView()
@@ -116,9 +94,7 @@ export default {
   },
   data: () => ({
     publicPath: process.env.BASE_URL,
-    selectedTrack: 'live',
-    talksLive: [],
-    talksOnline: []
+    tutorials: []
   }),
   methods: {
     format,
@@ -170,8 +146,5 @@ details summary.bio {
 }
 details.details >>> p {
   display: inline;
-}
-details.details >>> ol {
-  padding-left: 2rem;
 }
 </style>

@@ -9,8 +9,6 @@ export default {
   newsBanner: '',
   navbar: {
     links: [
-      { text: 'Home', name: 'Home' },
-      { text: 'RBCN23', name: 'Robocon2023', theme: 'theme-2023' },
       { text: 'Sponsor', name: 'Sponsor' },
       { text: 'Archive', name: 'Archive' }
     ]

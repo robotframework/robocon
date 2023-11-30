@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/404.html"
   },
   {
-    "revision": "03301c016abdc3ed86e1",
-    "url": "dist/css/app.310bb4c2.css"
+    "revision": "a05bccae454323628594",
+    "url": "dist/css/app.8bcc719d.css"
   },
   {
     "revision": "27679e61bfd27e1093f4bf200900b8e7",
@@ -92,7 +92,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/social_image.png"
   },
   {
-    "revision": "f4af51677bb5fda0e9df64bb3da9dd37",
+    "revision": "552487daf48a5e5febba9b9e778e4ec7",
     "url": "dist/img/speaker_img_placeholder.jpg"
   },
   {
@@ -124,7 +124,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/sponsors/eficode.png"
   },
   {
-    "revision": "bf9fd9b1082bfece3e6092af6352e373",
+    "revision": "b6e81d4718964f324037d8ff34492708",
     "url": "dist/img/sponsors/enqore.png"
   },
   {
@@ -188,16 +188,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "dist/img/ticket-depth.jpg"
   },
   {
-    "revision": "e3ebbabf2d738483e139795563eae91c",
+    "revision": "baacaf987434b9443e85770f6a861481",
     "url": "dist/index.html"
   },
   {
-    "revision": "03301c016abdc3ed86e1",
-    "url": "dist/js/app.f3cc0ff3.js"
+    "revision": "a05bccae454323628594",
+    "url": "dist/js/app.958cb403.js"
   },
   {
-    "revision": "1aa08cce370c6cb71086",
-    "url": "dist/js/chunk-vendors.f31d4987.js"
+    "revision": "71fe642c6ceae86d8cdc",
+    "url": "dist/js/chunk-vendors.6e0fb070.js"
   },
   {
     "revision": "ae69c76f0db87375aa82706bd2ce675f",

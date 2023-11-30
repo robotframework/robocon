@@ -12,10 +12,36 @@
           <link-icon style="transform: translateY(2px)" />
         </a>
       </div>
-      <div class="mb-small">
-        {{ workshop['Speaker names'].join(', ') }}
-      </div>
       <div v-html="parseText(workshop.Abstract)" />
+      <details class="details">
+        <summary>
+          Full description
+        </summary>
+        <div v-html="parseText(workshop.Description)" class="p-small" />
+      </details>
+      <h3 class="mt-xlarge">Presenters</h3>
+      <details
+        v-for="(speakerId, i) in workshop['Speaker IDs']"
+        :key="speakerId"
+        class="card sharper mb-medium mt-medium">
+        <summary class="bio">
+          <div class="middle" style="display: inline-flex">
+            <div class="mr-small">
+              <img :src="getSpeaker(speakerId)?.avatar || `${publicPath}/img/speaker_img_placeholder.jpg`" class="rounded-small block" style="width: 5rem; aspect-ratio: 1; object-fit: cover;" />
+            </div>
+            <div class="">
+              <h4 class="type-small type-underline">
+                  {{ getSpeaker(speakerId)?.name || workshop['Speaker names']?.[i] || "-" }}
+                </h4>
+            </div>
+          </div>
+        </summary>
+        <div class="col-sm-12 p-medium pl-large pr-small">
+            <p
+              class="type-small m-none pl-2xsmall"
+              v-html="parseText(getSpeaker(speakerId)?.biography) || '-'" />
+          </div>
+      </details>
     </div>
   </div>
 </template>
@@ -31,6 +57,15 @@ export default {
   components: {
     LinkIcon
   },
+  props: {
+    speakers: {
+      type: Array,
+      required: true
+    }
+  },
+  data: () => ({
+    publicPath: process.env.BASE_URL
+  }),
   computed: {
     workshops: () => talks24.filter((talk) => talk['Session type'].en.includes('Workshop'))
   },
@@ -48,6 +83,9 @@ export default {
     getSlug(title) {
       if (!title) return ''
       return `${title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
+    },
+    getSpeaker(speakerId) {
+      return this.speakers.find(({ code }) => code === speakerId)
     }
   }
 }
@@ -59,5 +97,20 @@ a.anchor {
   position: relative;
   top: -15vh;
   visibility: hidden;
+}
+details summary {
+  cursor: pointer;
+  list-style-type: ">";
+  color: var(--color-theme);
+  font-weight: 600;
+}
+details[open] > summary {
+  list-style-type: '↓';
+}
+details summary.bio {
+  list-style-type: '';
+}
+details.details >>> p {
+  display: inline;
 }
 </style>

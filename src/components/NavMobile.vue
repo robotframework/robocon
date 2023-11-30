@@ -3,6 +3,28 @@
     <div
       v-if="isOpen"
       class="menu bg-black p-small pb-large pt-2xlarge">
+      <div v-if="$route.name === 'Home'" class="row mb-large">
+        <a
+          href="#tutorials"
+          class="color-white col-sm-5 mt-2xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+          #TUTORIALS
+        </a>
+        <a
+          href="#talks"
+          class="color-white col-sm-5 mt-2xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+          #TALKS
+        </a>
+        <a
+          href="#workshops"
+          class="color-white col-sm-5 mt-2xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+          #WORKSHOPS
+        </a>
+        <a
+          href="#hotels"
+          class="color-white col-sm-5 mt-2xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+          #HOTELS
+        </a>
+      </div>
       <router-link
         v-for="{ name, text } in $tm('navbar.links')"
         :to="{ name }"
