@@ -173,10 +173,17 @@ export default {
     if (entries.auth) {
       this.$router.replace({ name: 'Robocon2023', query: entries })
     }
-    fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/')
-      .then((res) => res.json())
-      .then(({ results }) => {
-        this.speakers = results.flatMap(({ speakers }) => speakers)
+    Promise.all([
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/'),
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=25'),
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=50')
+    ])
+      .then(async([first, second, third]) => {
+        const f = await first.json()
+        const s = await second.json()
+        const t = await third.json()
+        const arr = [...f.results, ...s.results, ...t.results]
+        this.speakers = arr.flatMap(({ speakers }) => speakers)
       })
   },
   methods: {

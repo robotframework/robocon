@@ -12,12 +12,27 @@
           <link-icon style="transform: translateY(2px)" />
         </a>
       </div>
+      <p class="type-small m-none">
+        {{ format(new Date(workshop.Start), 'MMM dd') }} {{ getShownTime(workshop.Start) }} - {{ getShownTime(workshop.End) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
+      </p>
       <div v-html="parseText(workshop.Abstract)" />
       <details class="details">
         <summary>
           Full description
         </summary>
         <div v-html="parseText(workshop.Description)" class="p-small" />
+        <h3 class="pl-small">
+          Lessons learned
+        </h3>
+        <div v-html="parseText(workshop['Lessons Learned'])" class="p-small" />
+        <h3 class="pl-small">
+          Intended audience
+        </h3>
+        <div v-html="parseText(workshop['Describe your intended audience'])" class="p-small" />
+        <h3 class="pl-small">
+          Suitable for
+        </h3>
+        <div v-html="parseText(workshop['Is this suitable for ..?'])" class="p-small" />
       </details>
       <h3 class="mt-xlarge">Presenters</h3>
       <details
@@ -87,6 +102,11 @@ export default {
     getSpeaker(speakerId) {
       return this.speakers.find(({ code }) => code === speakerId)
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      console.log(this.speakers)
+    }, 1000)
   }
 }
 </script>
