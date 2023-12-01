@@ -1,13 +1,21 @@
 <template>
   <div class="mt-small w-100">
+    <button
+      v-for="type in ['live', 'online']"
+      :key="type"
+      class="theme mr-xsmall"
+      :class="shownTutorials === type && 'active'"
+      @click="shownTutorials = type">
+      {{ type }}
+    </button>
     <div
-      v-for="tutorial in tutorials"
+      v-for="tutorial in shownTutorials === 'live' ? tutorials : tutorialsOnline"
       :key="tutorial.id"
       class=" mt-large card p-small"
     >
       <a
         class="anchor"
-        :id="getSlug(tutorial.title)"
+        :id="getSlug(tutorial.title, shownTutorials)"
       ></a>
       <div class="flex between">
         <h3>
@@ -16,7 +24,7 @@
         <a
           v-if="!$store.state.isMobile"
           title="get link to tutorial"
-          :href="`#${getSlug(tutorial.title)}`"
+          :href="`#${getSlug(tutorial.title, shownTutorials)}`"
         >
           <link-icon style="transform: translateY(2px)" />
         </a>
@@ -83,9 +91,15 @@ export default {
             if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
             return 1
           })
+        this.tutorialsOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline' && talk?.submission_type?.en === 'Tutorial')
+          .sort((a, b) => {
+            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            return 1
+          })
       })
       .then(() => {
         const hash = window.location.hash
+        if (hash.includes('online')) this.shownTutorials = 'online'
         this.$nextTick(() => {
           const el = document.getElementById(hash.slice(1))
           if (el) el.scrollIntoView()
@@ -94,7 +108,9 @@ export default {
   },
   data: () => ({
     publicPath: process.env.BASE_URL,
-    tutorials: []
+    tutorials: [],
+    tutorialsOnline: [],
+    shownTutorials: 'live'
   }),
   methods: {
     format,
@@ -111,6 +127,7 @@ export default {
     getSlug(title, tab) {
       if (!title) return ''
       let tabPrefix = 'live'
+      console.log(tab)
       if (tab === 'online') tabPrefix = 'online'
       return `${tabPrefix}-${title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
     },

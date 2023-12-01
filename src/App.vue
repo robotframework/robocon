@@ -5,25 +5,25 @@
     <h3>📣 <span class="color-theme">This October 5th</span> 📣</h3> First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link>
   </news-banner> -->
   <navbar v-if="$store.state.isDesktop && !fullScreen" />
-  <div v-if="$route.name === 'Home' && !$store.state.isDesktop" class="row mb-large bg-black pb-small" style="position: sticky; top: 3.5rem; z-index: 3; padding-left: 3.5rem;">
+  <div v-if="$route.name === 'Home' && !$store.state.isDesktop" class="flex mb-large bg-black pb-small" style="position: sticky; top: 3.5rem; z-index: 3; padding-left: 3.5rem; overflow: auto;">
     <button
       @click="scrollTo('tutorials')"
-      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      class="color-white col-sm-5 col-md-3 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small" style="margin-left: -2rem;">
       #TUTORIALS
     </button>
     <button
       @click="scrollTo('talks')"
-      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      class="color-white col-sm-4 col-md-3 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #TALKS
     </button>
     <button
     @click="scrollTo('workshops')"
-      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      class="color-white col-sm-5 col-md-3 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #WORKSHOPS
     </button>
     <button
     @click="scrollTo('hotels')"
-      class="color-white col-sm-5 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
+      class="color-white col-sm-5 col-md-3 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #HOTELS
     </button>
   </div>
