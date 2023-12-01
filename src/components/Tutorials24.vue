@@ -15,43 +15,55 @@
     >
       <a
         class="anchor"
-        :id="getSlug(tutorial.title, shownTutorials)"
+        :id="getSlug(tutorial['Proposal title'], shownTutorials)"
       ></a>
       <div class="flex between">
         <h3>
-          {{ tutorial.title }}
+          {{ tutorial['Proposal title'] }}
         </h3>
         <a
           v-if="!$store.state.isMobile"
           title="get link to tutorial"
-          :href="`#${getSlug(tutorial.title, shownTutorials)}`"
+          :href="`#${getSlug(tutorial['Proposal title'], shownTutorials)}`"
         >
           <link-icon style="transform: translateY(2px)" />
         </a>
       </div>
       <p class="type-small m-none">
-        {{ format(new Date(tutorial.slot.start), 'MMM dd') }} {{ getShownTime(tutorial.slot.start) }} - {{ getShownTime(tutorial.slot.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
+        {{ format(new Date(tutorial.Start), 'MMM dd') }} {{ getShownTime(tutorial.Start) }} - {{ getShownTime(tutorial.End) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
       </p>
-      <div v-html="parseText(tutorial.abstract)" />
+      <div v-html="parseText(tutorial.Abstract)" />
       <details class="details">
         <summary>
           Full description
         </summary>
-        <div v-html="parseText(tutorial.description)" />
+        <div v-html="parseText(tutorial.Description)" />
+        <h3 class="pl-small">
+          Lessons learned
+        </h3>
+        <div v-html="parseText(tutorial['Lessons Learned'])" class="p-small" />
+        <h3 class="pl-small">
+          Intended audience
+        </h3>
+        <div v-html="parseText(tutorial['Describe your intended audience'])" class="p-small" />
+        <h3 class="pl-small">
+          Suitable for
+        </h3>
+        <div v-html="parseText(tutorial['Is this suitable for ..?'])" class="p-small" />
       </details>
       <h3 class="mt-xlarge">Presenters</h3>
       <details
-        v-for="speaker in tutorial.speakers"
-        :key="speaker.code"
+        v-for="(speakerId, i) in tutorial['Speaker IDs']"
+        :key="speakerId"
         class="card sharper mb-medium mt-medium">
         <summary class="bio">
           <div class="middle" style="display: inline-flex">
             <div class="mr-small">
-              <img :src="speaker.avatar || `${publicPath}/img/speaker_img_placeholder.jpg`" class="rounded-small block" style="width: 5rem; aspect-ratio: 1; object-fit: cover;" />
+              <img :src="getSpeaker(speakerId)?.avatar || `${publicPath}/img/speaker_img_placeholder.jpg`" class="rounded-small block" style="width: 5rem; aspect-ratio: 1; object-fit: cover;" />
             </div>
             <div class="">
               <h4 class="type-small type-underline">
-                  {{ getSpeaker(speaker.code)?.name || speaker.name }}
+                  {{ getSpeaker(speakerId)?.name || workshop['Speaker names']?.[i] || "-" }}
                 </h4>
             </div>
           </div>
@@ -59,7 +71,7 @@
         <div class="col-sm-12 p-medium pl-large pr-small">
             <p
               class="type-small m-none pl-2xsmall"
-              v-html="parseText(getSpeaker(speaker.code)?.biography) || '-'" />
+              v-html="parseText(getSpeaker(speakerId)?.biography) || '-'" />
           </div>
       </details>
     </div>
@@ -70,6 +82,7 @@
 import { marked } from 'marked'
 import { format, isWithinInterval } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
+import talksStatic from '../robocon-2024_sessions.json'
 
 export default {
   name: 'Tutorials24',
@@ -82,18 +95,31 @@ export default {
       required: true
     }
   },
+  computed: {
+    workshops: () => talksStatic.filter((talk) => talk['Session type'].en.includes('Workshop'))
+  },
   created() {
     fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
       .then((res) => res.json())
       .then((res) => {
-        this.tutorials = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'Eficode')
+        // this.tutorials = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'Eficode')
+        //   .sort((a, b) => {
+        //     if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+        //     return 1
+        //   })
+        // this.tutorialsOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline' && talk?.submission_type?.en === 'Tutorial')
+        //   .sort((a, b) => {
+        //     if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+        //     return 1
+        //   })
+        this.tutorials = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'Eficode')
           .sort((a, b) => {
-            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            if (new Date(a.Start) < new Date(b.Start)) return -1
             return 1
           })
-        this.tutorialsOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline' && talk?.submission_type?.en === 'Tutorial')
+        this.tutorialsOnline = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'RoboConOnline')
           .sort((a, b) => {
-            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            if (new Date(a.Start) < new Date(b.Start)) return -1
             return 1
           })
       })
@@ -163,6 +189,12 @@ details summary.bio {
 }
 details.details >>> p {
   display: inline;
+}
+details.details >>> h1, details.details >>> h2 {
+  font-size: 1.25rem;
+}
+details.details >>> ol {
+  padding-left: 2rem;
 }
 details summary.bio::-webkit-details-marker {
   display:none;

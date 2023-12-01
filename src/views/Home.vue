@@ -107,7 +107,7 @@
     </page-section>
     <page-section title-id="tutorials" :title="'Tutorials'">
       <p>
-        Tutorials offer you a sneak peek into specific topics, each uniquely designed for different levels of expertise. This year, we're excited to provide <span class="type-underline-theme weight-bold">free beginner-level tutorials during the Community Day of our in-person conference.</span>
+        Tutorials offer you a sneak peek into specific topics, each uniquely designed for different levels of expertise. This year, we're excited to provide <span class="weight-bold">free beginner-level tutorials during the Community Day of our in-person conference.</span> <a href="https://tickets.robotframework.org/robocon-2024/3997179/">Enroll here, please!</a>
         </p>
         <p>
 Moreover, a wide array of exceptional online tutorials will be spread across the days before and after the online conference, <span class="type-underline-theme weight-bold">accessible exclusively to ticket holders.</span> Don't miss this opportunity to enhance your skills and knowledge in a tailored, engaging environment.
