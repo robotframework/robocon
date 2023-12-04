@@ -12,12 +12,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "AGGCAG"
-    ],
-    "Speaker names": [
-      "Merel Foekens"
-    ],
+    "Speaker IDs": ["AGGCAG"],
+    "Speaker names": ["Merel Foekens"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -40,12 +36,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "BJAPHL"
-    ],
-    "Speaker names": [
-      "Andre Mochinin"
-    ],
+    "Speaker IDs": ["BJAPHL"],
+    "Speaker names": ["Andre Mochinin"],
     "Room": {
       "en": "Workshop about creating libraries for Robot Framework"
     },
@@ -68,12 +60,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "ZVZHZJ"
-    ],
-    "Speaker names": [
-      "Eftychia  Thomaidou"
-    ],
+    "Speaker IDs": ["ZVZHZJ"],
+    "Speaker names": ["Eftychia  Thomaidou"],
     "Room": {
       "en": "RoboCon"
     },
@@ -96,12 +84,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "JDRR8S"
-    ],
-    "Speaker names": [
-      "Ed Manlove"
-    ],
+    "Speaker IDs": ["JDRR8S"],
+    "Speaker names": ["Ed Manlove"],
     "Room": {
       "en": "Advanced SeleniumLibrary and Robot Framework"
     },
@@ -124,12 +108,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "Y8HW33"
-    ],
-    "Speaker names": [
-      "Matthias Gunther"
-    ],
+    "Speaker IDs": ["Y8HW33"],
+    "Speaker names": ["Matthias Gunther"],
     "Room": {
       "en": "RoboCon"
     },
@@ -147,15 +127,12 @@
     },
     "Track": null,
     "Abstract": "In our medium-sized project, we've used best practices and Robot Framework's power to minimize maintenance efforts. Easy test data management, data-driven testing even with various data items, fast and reliable test run preparation, human-readable keywords, and no need for dual script maintenance\u2026 \u2013 let us share our insights and tips!",
-    "Description": "Real-world projects serve as practical touchstones for theoretical concepts. Our current project, consisting of over 2500 lines of code and nearly 1000 lines of data, is still being developed. To ensure its sustainable growth without undue effort, we chose to adopt a meticulously structured approach.\r\n\r\nThankfully, Robot Framework, with its implementation of the keyword-driven testing concept, offers a wide variety of possibilities for structuring projects, be it the strict separation between human-readable test cases and their technically oriented implementations, importing data files in various formats, and the built-in differentiation of prerequisites of a test case and its implementation, to name the most useful ones.\r\n\r\nWith its mentioned features in mind, we have successfully implemented several concepts and best practices in our project. Key among them are:\r\n\r\n* the strict separation of static test data from test scripts into YAML files (but still retaining randomness of values where needed), not only promoting data reusability across different tests;\r\n* data-driven testing of similar scenarios notwithstanding different data items needed by them;\r\n* utilizing queries to obtain dynamic test data from a database system, maximizing bug discovery possibilities;\r\n* meeting the prerequisites of web tests through web services calls, vastly enhancing test preparation reliability and speed;\r\n* carefully chosen keyword names and interfaces, each with a distinct purpose, leading to diminished demands on their documentation;\r\n* a clear distinction between business keywords focused on human readability and technical keywords containing mainly implementation details; this, among others, enables people with limited technical backgrounds to assemble not only test cases but also some keywords.\r\n\r\nThis last point is of significant importance as it allows for the export of only the human-readable portions of a script into an issue-tracking system. This, in turn, enables manual execution of the script whenever needed, eliminating the need for dual maintenance of manual scripts alongside Robot Framework's automated ones.\r\n\r\nWe look forward to sharing our experiences, best practices, and tips for harnessing the full potential of not merely the highly structured approach inspired and enabled by Robot Framework's principles in a real-world project. Our goal is to inspire fellow professionals to explore the benefits of these techniques for enhancing their projects.",
+    "Description": "Real-world projects serve as practical touchstones for theoretical concepts. Our current project, consisting of over 2500 lines of code and nearly 1000 lines of data, is still being developed. To ensure its sustainable growth without undue effort, we chose to adopt a meticulously structured approach.\r\n\r\n<br>\r\n\r\nThankfully, Robot Framework, with its implementation of the keyword-driven testing concept, offers a wide variety of possibilities for structuring projects, be it the strict separation between human-readable test cases and their technically oriented implementations, importing data files in various formats, and the built-in differentiation of prerequisites of a test case and its implementation, to name the most useful ones.\r\n\r\nWith its mentioned features in mind, we have successfully implemented several concepts and best practices in our project. Key among them are:\r\n\r\n* the strict separation of static test data from test scripts into YAML files (but still retaining randomness of values where needed), not only promoting data reusability across different tests;\r\n* data-driven testing of similar scenarios notwithstanding different data items needed by them;\r\n* utilizing queries to obtain dynamic test data from a database system, maximizing bug discovery possibilities;\r\n* meeting the prerequisites of web tests through web services calls, vastly enhancing test preparation reliability and speed;\r\n* carefully chosen keyword names and interfaces, each with a distinct purpose, leading to diminished demands on their documentation;\r\n* a clear distinction between business keywords focused on human readability and technical keywords containing mainly implementation details; this, among others, enables people with limited technical backgrounds to assemble not only test cases but also some keywords.\r\n\r\nThis last point is of significant importance as it allows for the export of only the human-readable portions of a script into an issue-tracking system. This, in turn, enables manual execution of the script whenever needed, eliminating the need for dual maintenance of manual scripts alongside Robot Framework's automated ones.\r\n\r\nWe look forward to sharing our experiences, best practices, and tips for harnessing the full potential of not merely the highly structured approach inspired and enabled by Robot Framework's principles in a real-world project. Our goal is to inspire fellow professionals to explore the benefits of these techniques for enhancing their projects.",
     "Duration": 120,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "UTWEES",
-      "8TSLHQ"
-    ],
+    "Speaker IDs": ["UTWEES", "8TSLHQ"],
     "Speaker names": [
       "V\u00e1clav Fuksa",
       "Nina B\u0159ich\u00e1\u010dkov\u00e1"
@@ -165,8 +142,8 @@
     },
     "Start": "2024-02-07T11:00:00+00:00",
     "End": "2024-02-07T15:00:00+02:00",
-    "Lessons Learned": "The audience or participants will gain practical and battle-tested techniques for handling test data and designing keywords (see the bullet points in the annotation of the contribution). The overall benefits of the methods to be shared include:\r\n\r\n- Easier maintenance of test data, scripts and documentation; \r\n- Increased likelihood of finding a bug;\r\n- Improved speed and reliability of the test preparation phase;\r\n- Enabling people with limited technical background to assemble both test cases and high-level keywords;\r\n- Eliminating the need for duplicate maintenance: this of both manual and automated scripts.\r\n\r\nThe relevant passages of authentic code are to be shown to the audience, especially if the presentation is accepted in tutorial format.",
-    "Describe your intended audience": "The ideal audience is people with some experience in test automation (but not necessarily in Robot Framework), such as TA architects and designers and intermediate TA engineers. However, even beginners could become aware of the ideas to be presented and will be able to use a few of them in their tests.\r\n\r\nPrerequisites: You do not need to bring your laptop as this is NOT a hands-on tutorial.",
+    "Lessons Learned": "The audience or participants will gain practical and battle-tested techniques for handling test data and designing keywords (see the bullet points in the annotation of the contribution). The overall benefits of the methods to be shared include:\r\n\r\n<br>\r\n\r\n- Easier maintenance of test data, scripts and documentation; \r\n- Increased likelihood of finding a bug;\r\n- Improved speed and reliability of the test preparation phase;\r\n- Enabling people with limited technical background to assemble both test cases and high-level keywords;\r\n- Eliminating the need for duplicate maintenance: this of both manual and automated scripts.\r\n\r\nThe relevant passages of authentic code are to be shown to the audience, especially if the presentation is accepted in tutorial format.",
+    "Describe your intended audience": "The ideal audience is people with some experience in test automation (but not necessarily in Robot Framework), such as TA architects and designers and intermediate TA engineers. However, even beginners could become aware of the ideas to be presented and will be able to use a few of them in their tests.\r\n\r\n<br>\r\n\r\nPrerequisites: You do not need to bring your laptop as this is NOT a hands-on tutorial.",
     "Is this suitable for ..?": "Intermediate RF user, Advanced RF user"
   },
   {
@@ -182,12 +159,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "XP3VZC"
-    ],
-    "Speaker names": [
-      "Krzysztof \u017bminkowski"
-    ],
+    "Speaker IDs": ["XP3VZC"],
+    "Speaker names": ["Krzysztof \u017bminkowski"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -210,16 +183,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "9BRJUX",
-      "HL7EQT",
-      "WG3A8G"
-    ],
-    "Speaker names": [
-      "Kelby Stine",
-      "Guido Demmenie",
-      "Manana Koberidze"
-    ],
+    "Speaker IDs": ["9BRJUX", "HL7EQT", "WG3A8G"],
+    "Speaker names": ["Kelby Stine", "Guido Demmenie", "Manana Koberidze"],
     "Room": {
       "en": "RoboCon"
     },
@@ -242,12 +207,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "T7EQ8T"
-    ],
-    "Speaker names": [
-      "Mark Moberts"
-    ],
+    "Speaker IDs": ["T7EQ8T"],
+    "Speaker names": ["Mark Moberts"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -270,14 +231,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "FYLY7K",
-      "JEJN7Y"
-    ],
-    "Speaker names": [
-      "Daniel Penning",
-      "Max-Vincent Steck"
-    ],
+    "Speaker IDs": ["FYLY7K", "JEJN7Y"],
+    "Speaker names": ["Daniel Penning", "Max-Vincent Steck"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -295,25 +250,19 @@
     },
     "Track": null,
     "Abstract": "Harnessing Kubernetes to run Robot Framework tests in containers offers a practical solution for scaling your test executions in a cloud environment. This workshop will provide hands-on guidance for running Robot Framework within Docker containers and mastering the fundamentals of Kubernetes, the container orchestration platform.",
-    "Description": "The advent of the container orchestration platform Kubernetes has revolutionized the development of modern software architectures and the seamless migration of containerized workloads to the cloud. The intricacies of relocating your test infrastructure and test execution to the cloud may seem daunting, but the rewards are profound when you harness the scalability and resource management capabilities of Kubernetes. Join us for an enriching workshop at Robocon 2024, where we'll explore the potential of Kubernetes in optimizing your testing.\r\n\r\nIn this hands-on workshop, you'll learn how to containerize your RobotFramework test executions effectively. We'll work together to create Kubernetes manifests for defining and managing these executions. Participants will collaborate within a shared Kubernetes cluster environment, promoting practical knowledge sharing and discussions around diverse approaches. Our focus will be on real-world best practices for running tests in cloud environments, with a specific emphasis on utilizing Kubernetes features.\r\n\r\nAll workshop details and materials will be shared in an open-source github repository.",
+    "Description": "The advent of the container orchestration platform Kubernetes has revolutionized the development of modern software architectures and the seamless migration of containerized workloads to the cloud. The intricacies of relocating your test infrastructure and test execution to the cloud may seem daunting, but the rewards are profound when you harness the scalability and resource management capabilities of Kubernetes. Join us for an enriching workshop at Robocon 2024, where we'll explore the potential of Kubernetes in optimizing your testing.\r\n\r\n<br>\r\n\r\nIn this hands-on workshop, you'll learn how to containerize your RobotFramework test executions effectively. We'll work together to create Kubernetes manifests for defining and managing these executions. Participants will collaborate within a shared Kubernetes cluster environment, promoting practical knowledge sharing and discussions around diverse approaches. Our focus will be on real-world best practices for running tests in cloud environments, with a specific emphasis on utilizing Kubernetes features.\r\n\r\nAll workshop details and materials will be shared in an open-source github repository.",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "FJSLFM",
-      "C9NDBA"
-    ],
-    "Speaker names": [
-      "Markus Stahl",
-      "Nils Balkow-Tychsen"
-    ],
+    "Speaker IDs": ["FJSLFM", "C9NDBA"],
+    "Speaker names": ["Markus Stahl", "Nils Balkow-Tychsen"],
     "Room": {
       "en": "Containerize your robots and run them on Kubernetes"
     },
     "Start": "2024-02-06T07:00:00+00:00",
     "End": "2024-02-06T16:00:00+02:00",
-    "Lessons Learned": "In the first quarter of the workshop, we\u2019ll look into containerizing Robot Framework tests. We\u2019ll look at a simple example as well as the ppodgorsek/robot-framework image and on how to customize images for specific test dependencies. Over all we\u2019ll dive deep into the capabilities of Dockerfiles https://docs.docker.com/engine/reference/builder/.\r\n\r\nIn the second quarter, we\u2019ll learn about Kubernetes and go through the creation of a web application via Kubernetes manifest files. We\u2019ll learn about different Kubernetes objects like deployments, pods, volumes, jobs and cronjobs and we\u2019ll use kubectl to analyze and edit them.\r\n\r\nIn the third quarter, we\u2019ll apply the learnings from the previous two quarters and build a Kubernetes manifest for a Robot Framework test run. As part of this we\u2019ll also explore different ways of exposing the test reports from the ephemeral test run in the cluster.\r\n\r\nIn the last quarter, we\u2019ll discuss scaling of test runs in Kubernetes. We\u2019ll run a few different scenarios with pabot and learn how to investigate the resource consumption in the cluster. As part of this we\u2019ll also discuss limits of pabot and how upcoming ecosystem projects are planning to address those.\r\n\r\nOptionally, when time allows we can look into the KubeLibrary and see how it can be utilized to harden your test runs on top of Kubernetes.",
+    "Lessons Learned": "In the first quarter of the workshop, we\u2019ll look into containerizing Robot Framework tests. We\u2019ll look at a simple example as well as the ppodgorsek/robot-framework image and on how to customize images for specific test dependencies. Over all we\u2019ll dive deep into the capabilities of Dockerfiles https://docs.docker.com/engine/reference/builder/.\r\n\r\n<br>\r\n\r\nIn the second quarter, we\u2019ll learn about Kubernetes and go through the creation of a web application via Kubernetes manifest files. We\u2019ll learn about different Kubernetes objects like deployments, pods, volumes, jobs and cronjobs and we\u2019ll use kubectl to analyze and edit them.\r\n\r\n<br>\r\n\r\nIn the third quarter, we\u2019ll apply the learnings from the previous two quarters and build a Kubernetes manifest for a Robot Framework test run. As part of this we\u2019ll also explore different ways of exposing the test reports from the ephemeral test run in the cluster.\r\n\r\n<br>\r\n\r\nIn the last quarter, we\u2019ll discuss scaling of test runs in Kubernetes. We\u2019ll run a few different scenarios with pabot and learn how to investigate the resource consumption in the cluster. As part of this we\u2019ll also discuss limits of pabot and how upcoming ecosystem projects are planning to address those.\r\n\r\n<br>\r\n\r\nOptionally, when time allows we can look into the KubeLibrary and see how it can be utilized to harden your test runs on top of Kubernetes.",
     "Describe your intended audience": "The intended audience for this workshop are test engineers working on test infrastructure. None the less also RPA users can use the knowledge provided to run RPA tasks in their cloud environments.",
     "Is this suitable for ..?": "Intermediate RF user, Advanced RF user"
   },
@@ -330,12 +279,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "VWUYL7"
-    ],
-    "Speaker names": [
-      "Stavroula Ventoura"
-    ],
+    "Speaker IDs": ["VWUYL7"],
+    "Speaker names": ["Stavroula Ventoura"],
     "Room": {
       "en": "RoboCon"
     },
@@ -358,12 +303,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "KQR9AE"
-    ],
-    "Speaker names": [
-      "Tales Mello Paiva"
-    ],
+    "Speaker IDs": ["KQR9AE"],
+    "Speaker names": ["Tales Mello Paiva"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -387,11 +328,7 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "JUQN3X",
-      "FQJRHW",
-      "D3ZLT3"
-    ],
+    "Speaker IDs": ["JUQN3X", "FQJRHW", "D3ZLT3"],
     "Speaker names": [
       "Ren\u00e9 Rohner",
       "Miikka Solmela",
@@ -420,14 +357,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "HTDUSJ",
-      "FQJRHW"
-    ],
-    "Speaker names": [
-      "Ren\u00e9 Rohner",
-      "Miikka Solmela"
-    ],
+    "Speaker IDs": ["HTDUSJ", "FQJRHW"],
+    "Speaker names": ["Ren\u00e9 Rohner", "Miikka Solmela"],
     "Room": {
       "en": "RoboCon"
     },
@@ -450,12 +381,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "UHHRL8"
-    ],
-    "Speaker names": [
-      "Dave Amies"
-    ],
+    "Speaker IDs": ["UHHRL8"],
+    "Speaker names": ["Dave Amies"],
     "Room": {
       "en": "RoboCon"
     },
@@ -478,12 +405,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "SZE8YE"
-    ],
-    "Speaker names": [
-      "Kate\u0159ina Ho\u0161ov\u00e1"
-    ],
+    "Speaker IDs": ["SZE8YE"],
+    "Speaker names": ["Kate\u0159ina Ho\u0161ov\u00e1"],
     "Room": {
       "en": "RoboCon"
     },
@@ -501,17 +424,13 @@
     },
     "Track": null,
     "Abstract": "Join our tutorial, \"Deep Dive into Robot Framework Reporting,\" where we'll empower you to transform test reports into decision-making tools. Uncover hidden insights, use Allure, ReportPortal, and Grafana, and gain the ability to drive quick, informed actions through crystal-clear data.",
-    "Description": "Welcome to our tutorial, \"Enhancing Test Insights: A Deep Dive into Robot Framework Reporting.\" In this immersive session, we'll embark on a journey to transform your test reports into invaluable assets for making informed decisions. Explore the depths of Robot Framework reporting, uncover hidden insights, and unlock the power of Allure, ReportPortal, and Grafana . Join us to elevate your reporting skills and gain the ability to drive swift and informed actions through crystal-clear insights. Don't miss this opportunity to become a master of test reporting!",
+    "Description": "Welcome to our tutorial, \"Enhancing Test Insights: A Deep Dive into Robot Framework Reporting.\" In this immersive session, we'll embark on a journey to transform your test reports into invaluable assets for making informed decisions. \r\n\r\n<br>\r\n\r\nExplore the depths of Robot Framework reporting, uncover hidden insights, and unlock the power of Allure, ReportPortal, and Grafana . Join us to elevate your reporting skills and gain the ability to drive swift and informed actions through crystal-clear insights. Don't miss this opportunity to become a master of test reporting!",
     "Duration": 120,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "T7BUER"
-    ],
-    "Speaker names": [
-      "Many Kasiriha"
-    ],
+    "Speaker IDs": ["T7BUER"],
+    "Speaker names": ["Many Kasiriha"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -534,14 +453,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "CPN7VC",
-      "ZGZ7WT"
-    ],
-    "Speaker names": [
-      "Sam van der Wagen",
-      "Jasper Verbunt"
-    ],
+    "Speaker IDs": ["CPN7VC", "ZGZ7WT"],
+    "Speaker names": ["Sam van der Wagen", "Jasper Verbunt"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -564,12 +477,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "LYEHWU"
-    ],
-    "Speaker names": [
-      "Patrik Zakovi\u010d"
-    ],
+    "Speaker IDs": ["LYEHWU"],
+    "Speaker names": ["Patrik Zakovi\u010d"],
     "Room": {
       "en": "RoboCon"
     },
@@ -587,17 +496,13 @@
     },
     "Track": null,
     "Abstract": "Explore the synergy of Generative AI and Robot Framework via Listener API in this hands-on workshop! Discover how to enrich Robot Framework outputs and logs, automate Jira bug/task creations for failed test cases, and tap into ChatGPT for enhanced test insights. Using existing Python libraries, dive into seamless integrations, unlocking a new dimen",
-    "Description": "Post lunch, the workshop will shift its focus towards integrating Jira with Robot Framework, building on top of the listeners and ChatGPT integration from the morning session. Leveraging existing Python libraries, attendees will learn how to automate the creation of bugs/tasks in Jira for failed test cases directly from Robot Framework, again utilizing the Listener API. \r\n\r\nBy the end of the workshop, attendees will have a well-rounded understanding and hands-on experience on how to leverage the Listener API for integrating ChatGPT and Jira with Robot Framework, broadening the horizon of what's achievable with Robot Framework Listeners API.",
+    "Description": "Post lunch, the workshop will shift its focus towards integrating Jira with Robot Framework, building on top of the listeners and ChatGPT integration from the morning session. Leveraging existing Python libraries, attendees will learn how to automate the creation of bugs/tasks in Jira for failed test cases directly from Robot Framework, again utilizing the Listener API. \r\n\r\n<br>\r\n\r\nBy the end of the workshop, attendees will have a well-rounded understanding and hands-on experience on how to leverage the Listener API for integrating ChatGPT and Jira with Robot Framework, broadening the horizon of what's achievable with Robot Framework Listeners API.",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "8U3B3T"
-    ],
-    "Speaker names": [
-      "David Fogl"
-    ],
+    "Speaker IDs": ["8U3B3T"],
+    "Speaker names": ["David Fogl"],
     "Room": {
       "en": "Integrating Robot Framework with Generative AI and Jira"
     },
@@ -620,12 +525,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "78DPXU"
-    ],
-    "Speaker names": [
-      "Liviu Avram"
-    ],
+    "Speaker IDs": ["78DPXU"],
+    "Speaker names": ["Liviu Avram"],
     "Room": {
       "en": "RoboCon"
     },
@@ -648,12 +549,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "GZRASZ"
-    ],
-    "Speaker names": [
-      "Yuri Verweij"
-    ],
+    "Speaker IDs": ["GZRASZ"],
+    "Speaker names": ["Yuri Verweij"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -696,17 +593,13 @@
     },
     "Track": null,
     "Abstract": "Unlock the power of Robot Framework and CI/CD pipelines with us! Dive in with an exciting game, perfecting pipelines and sharing experiences. Let's build scalable, reliable, and adaptable pipelines in GitLab together. Our Journey, your decisions! Join the workshop and transform your skills.",
-    "Description": "The workshop's primary objective is to disseminate knowledge about Robot Framework and CI/CD pipeline topics. We begin with an engaging card game focused on designing the perfect pipeline using a provided example to facilitate knowledge and experience sharing. Our discussions will delve into the creation of specialized pipelines for integration, deployment, and the delivery of high-quality test suites.\r\n\r\nSubsequently, we will immerse ourselves in a dedicated environment that includes routers and servers, allowing us to create real-life project scenarios within the confines of the workshop. Here, we will construct scalable, reliable and adaptable pipelines within the GitLab environment, where runners are dynamically managed and configured for specific purposes. During the workshop there will be many possible path to follow so we will discuss and decide together.",
+    "Description": "The workshop's primary objective is to disseminate knowledge about Robot Framework and CI/CD pipeline topics. We begin with an engaging card game focused on designing the perfect pipeline using a provided example to facilitate knowledge and experience sharing. Our discussions will delve into the creation of specialized pipelines for integration, deployment, and the delivery of high-quality test suites.\r\n\r\n<br>\r\n\r\nSubsequently, we will immerse ourselves in a dedicated environment that includes routers and servers, allowing us to create real-life project scenarios within the confines of the workshop. Here, we will construct scalable, reliable and adaptable pipelines within the GitLab environment, where runners are dynamically managed and configured for specific purposes. During the workshop there will be many possible path to follow so we will discuss and decide together.",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "R9UP8V"
-    ],
-    "Speaker names": [
-      "Lukasz"
-    ],
+    "Speaker IDs": ["R9UP8V"],
+    "Speaker names": ["Lukasz"],
     "Room": {
       "en": "Next-Gen Pipeline Journey: Elevate your skills with Robot Framework"
     },
@@ -729,19 +622,15 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "BXEQAQ"
-    ],
-    "Speaker names": [
-      "Igor Czyrski"
-    ],
+    "Speaker IDs": ["BXEQAQ"],
+    "Speaker names": ["Igor Czyrski"],
     "Room": {
       "en": "Eficode"
     },
     "Start": "2024-02-07T08:00:00+00:00",
     "End": "2024-02-07T12:00:00+02:00",
-    "Lessons Learned": "By the end of this tutorial, participants will be equipped to:\r\n\r\n- Install and set up RobotFramework.\r\n- Create and execute basic test cases.\r\n- Efficiently manage variables, test data, and test environments.\r\n- Harness the power of keyword libraries and custom keywords.\r\n- Follow best practices for sustainable test automation.\r\n\r\nThis tutorial is designed to bring practical value to attendees by providing them with the skills and knowledge to confidently use RobotFramework for their test automation projects. It emphasizes hands-on experience, ensuring that participants are well-prepared to tackle real-world automation challenges and deliver high-quality software.",
-    "Describe your intended audience": "This tutorial is designed for individuals with little to no experience with RobotFramework. Our goal is to equip you with the fundamental knowledge and practical skills required to start your test automation journey. Whether you're a tester, developer, or a quality assurance professional, you'll leave this tutorial with a solid understanding of how to create and maintain test suites, handle test data, and integrate RobotFramework into your projects.\r\n\r\nTutorial prerequisites:\r\n- computer with Python (>3.10) installed\r\n- IDE of choice",
+    "Lessons Learned": "By the end of this tutorial, participants will be equipped to:\r\n\r\n<br>\r\n\r\n- Install and set up RobotFramework.\r\n- Create and execute basic test cases.\r\n- Efficiently manage variables, test data, and test environments.\r\n- Harness the power of keyword libraries and custom keywords.\r\n- Follow best practices for sustainable test automation.\r\n\r\nThis tutorial is designed to bring practical value to attendees by providing them with the skills and knowledge to confidently use RobotFramework for their test automation projects. It emphasizes hands-on experience, ensuring that participants are well-prepared to tackle real-world automation challenges and deliver high-quality software.",
+    "Describe your intended audience": "This tutorial is designed for individuals with little to no experience with RobotFramework. Our goal is to equip you with the fundamental knowledge and practical skills required to start your test automation journey. Whether you're a tester, developer, or a quality assurance professional, you'll leave this tutorial with a solid understanding of how to create and maintain test suites, handle test data, and integrate RobotFramework into your projects.\r\n\r\n<br>\r\n\r\nTutorial prerequisites:\r\n- computer with Python (>3.10) installed\r\n- IDE of choice",
     "Is this suitable for ..?": "Beginner RF user"
   },
   {
@@ -757,12 +646,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "FYLY7K"
-    ],
-    "Speaker names": [
-      "Daniel Penning"
-    ],
+    "Speaker IDs": ["FYLY7K"],
+    "Speaker names": ["Daniel Penning"],
     "Room": {
       "en": "RoboCon"
     },
@@ -780,17 +665,13 @@
     },
     "Track": null,
     "Abstract": "The Robot Framework offers many ways in which you can work with Resources, Libraries and Variables. This flexibility is a very powerful feature but as the saying goes: With great power comes great responsibility. And as always: Anything that can go wrong, will go wrong.",
-    "Description": "In this tutorial I'll go over a number of patterns I've seen in Robot Framework projects, their pros and cons and related pitfalls.\r\n\r\nWe'll also look at how a language server can help us (and how we can help the language server), what it's trying to tell us and how this relates to the tidy and robocop tools.\r\n\r\nI hope to also show a proof-of-concept for a tool to visualize the import structure of a Robot Framework project that can help in improving the structure of a project.",
+    "Description": "In this tutorial I'll go over a number of patterns I've seen in Robot Framework projects, their pros and cons and related pitfalls.\r\n\r\n<br>\r\n\r\nWe'll also look at how a language server can help us (and how we can help the language server), what it's trying to tell us and how this relates to the tidy and robocop tools.\r\n\r\n<br>\r\n\r\nI hope to also show a proof-of-concept for a tool to visualize the import structure of a Robot Framework project that can help in improving the structure of a project.",
     "Duration": 120,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "EFQQP9"
-    ],
-    "Speaker names": [
-      "Robin Mackaij"
-    ],
+    "Speaker IDs": ["EFQQP9"],
+    "Speaker names": ["Robin Mackaij"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -813,12 +694,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "RMY3KA"
-    ],
-    "Speaker names": [
-      "Daniel Biehl"
-    ],
+    "Speaker IDs": ["RMY3KA"],
+    "Speaker names": ["Daniel Biehl"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -836,17 +713,13 @@
     },
     "Track": null,
     "Abstract": "In this workshop you'll see how you can use Robot Framework and RFSwarm to begin performance testing on day 1 with a new to you application.\r\n\r\nStarting from scratch you will write test cases and tune them for performance testing and by end of the day run a performance test and then generate a report suitable for presenting your results.",
-    "Description": "Attendees of this workshop will write some simple tests with robot framework, then make adjustments to those tests to prepare them for performance testing with RFSwarm, setup RFSwam components (Agent, Manager & Reporter), then run a performance test with RFSwam using the test cases created and prepare a test report from the performance test results and finally create a template of the report for future tests\r\n\r\nIf time allows we'll cover monitoring of the AUT server, integration with CI/CD builds, Agents running in the cloud, and any questions that come up.\r\n\r\nThe workshop will be based on a web store application to be representative of a typical application you might find in a retailer, The test steps to navigate the application as this would normally be provided to the test automation team.",
+    "Description": "Attendees of this workshop will write some simple tests with robot framework, then make adjustments to those tests to prepare them for performance testing with RFSwarm, setup RFSwam components (Agent, Manager & Reporter), then run a performance test with RFSwam using the test cases created and prepare a test report from the performance test results and finally create a template of the report for future tests\r\n\r\n<br>\r\n\r\nIf time allows we'll cover monitoring of the AUT server, integration with CI/CD builds, Agents running in the cloud, and any questions that come up.\r\n\r\n<br>\r\n\r\nThe workshop will be based on a web store application to be representative of a typical application you might find in a retailer, The test steps to navigate the application as this would normally be provided to the test automation team.",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "UHHRL8"
-    ],
-    "Speaker names": [
-      "Dave Amies"
-    ],
+    "Speaker IDs": ["UHHRL8"],
+    "Speaker names": ["Dave Amies"],
     "Room": {
       "en": "Performance test in a day using Robot Framework and RFSwram"
     },
@@ -869,12 +742,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "G3QVQY"
-    ],
-    "Speaker names": [
-      "Rohith Ram Prabakaran"
-    ],
+    "Speaker IDs": ["G3QVQY"],
+    "Speaker names": ["Rohith Ram Prabakaran"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -897,12 +766,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "EVXAKM"
-    ],
-    "Speaker names": [
-      "Katarina Partti"
-    ],
+    "Speaker IDs": ["EVXAKM"],
+    "Speaker names": ["Katarina Partti"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -925,14 +790,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "QPFXQJ",
-      "KVWYMA"
-    ],
-    "Speaker names": [
-      "Sebastien Plaisant",
-      "Andrea Tipa"
-    ],
+    "Speaker IDs": ["QPFXQJ", "KVWYMA"],
+    "Speaker names": ["Sebastien Plaisant", "Andrea Tipa"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -955,14 +814,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "99CJBK",
-      "FPBMBN"
-    ],
-    "Speaker names": [
-      "Matthias Grabowsky",
-      "Ivaylo Br\u00fcssow"
-    ],
+    "Speaker IDs": ["99CJBK", "FPBMBN"],
+    "Speaker names": ["Matthias Grabowsky", "Ivaylo Br\u00fcssow"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -985,12 +838,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "R978PJ"
-    ],
-    "Speaker names": [
-      "Marduk Bola\u00f1os"
-    ],
+    "Speaker IDs": ["R978PJ"],
+    "Speaker names": ["Marduk Bola\u00f1os"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1013,19 +862,15 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "QBMFY7"
-    ],
-    "Speaker names": [
-      "Jerzy G\u0142owacki"
-    ],
+    "Speaker IDs": ["QBMFY7"],
+    "Speaker names": ["Jerzy G\u0142owacki"],
     "Room": {
       "en": "RoboConOnline"
     },
     "Start": "2024-03-01T09:00:00+00:00",
     "End": "2024-03-01T13:00:00+02:00",
     "Lessons Learned": "This was pretty much covered in the talk description, but it's as follows:\r\n1. Initial Environment Setup for Web Testing with Browser Library\r\n2. Creating Basic Web Test Cases using Browser Library\r\n3. Using Page Object Pattern in Web Tests\r\n4. Using Variable Files for Locators\r\n5. Handling File Upload and Download\r\n6. Handling iFrames and Shadow Dom\r\n7. Remote Execution using LambdaTest",
-    "Describe your intended audience": "This tutorial is directed mostly at people who are interested in creating their first web testing framework or enhancing their existing one.\r\n\r\nBasic Robot Framework knowledge will be required, but everything else should be covered within the tutorial. Also a non-corporate PC is advised as many company firewalls block npm repositories",
+    "Describe your intended audience": "This tutorial is directed mostly at people who are interested in creating their first web testing framework or enhancing their existing one.\r\n\r\n<br>\r\n\r\nBasic Robot Framework knowledge will be required, but everything else should be covered within the tutorial. Also a non-corporate PC is advised as many company firewalls block npm repositories",
     "Is this suitable for ..?": "Beginner RF user"
   },
   {
@@ -1036,25 +881,19 @@
     },
     "Track": null,
     "Abstract": "Learn how to use Browser like a Pro.\r\n\r\nExtending Library, Using it from Python, Interacting with Playwright and many more.",
-    "Description": "**Description**:\r\nDive deep into the world of web automation with Tatu and Ren\u00e9 using the Browser library for Robot Framework. This state-of-the-art library, powered by Playwright, is designed for the modern web, ensuring speed, reliability, and visibility. In this workshop, participants will not only learn the basics of JavaScript but also how to extend the Browser library by creating custom keywords in both JavaScript and Python. We\u2019ll also cover the advanced features and keywords of the Browser library, ensuring a comprehensive understanding of web automation.\r\n\r\n**Key Takeaways**:\r\n- Understand the capabilities of the Browser library and its integration with Playwright.\r\n- Learn to write custom keywords in JavaScript and Python to extend the Browser library.\r\n- Deep dive into advanced keywords and features of the Browser library.\r\n- Gain hands-on experience with real-world web automation scenarios.\r\n\r\n**Knowledge Level**:\r\n- **Robot Framework**: Advanced knowledge and experience required.\r\n- **Browser or SeleniumLibrary**: Familiarity with Browser Library or extensive experience with SeleniumLibrary.\r\n- **Web Testing**: Experience in web automation and a basic understanding of HTML.\r\n- **Python**: Basic proficiency.\r\n\r\n**Agenda**:\r\n1. **Browser Fundamentals**\r\n   - 1.1 Installation and binary structure (Tatu)\r\n   - 1.2 Importing Settings (Ren\u00e9)\r\n   - 1.3 Logging (playwright Logs, Robot Loglevel, PW Trace) (Tatu)\r\n   - 1.4 Browser, Context, Page (Catalog, Switching) (Tatu)\r\n   - 1.5 Basic JS (Ren\u00e9)\r\n2. **Extending Browser**\r\n   - 2.1 JavaScript Plugin-API (Ren\u00e9)\r\n   - 2.2 Python Plugin-API (Tatu & Ren\u00e9)\r\n   - 2.3 AssertionEngine (Tatu)\r\n   - 2.4 Using Browser from Python (Ren\u00e9)\r\n3. **Browser Advanced Keywords**\r\n   - 3.1 Waiting (Tatu)\r\n   - 3.2 Promise To (Ren\u00e9)\r\n   - 3.3 Get Element States (Ren\u00e9)\r\n   - 3.4 Upload File (Selector or Dialog) (Ren\u00e9)\r\n   - 3.5 Selectors (CSS, nth, playwright possibilities) (Ren\u00e9)\r\n\r\n**Preparation and Tech Requirements**:\r\n- **Computer**: Capable of running Robot Framework and Browser library with internet access.\r\n- **Software**:\r\n  - Python >= 3.8\r\n  - NodeJS 18 or 20\r\n  - Robot Framework >= 6.1\r\n  - Robot Framework Browser >= 18\r\n  - Editor (IDE) for Python and JavaScript (e.g., VSCode)\r\n  - Optional: Robot Framework language support (Recommended: Robot Code plugin for VSCode)\r\n  - Note: For those unable to install software, GitPod, a cloud-based browser IDE, is an alternative.\r\n- **Accounts**: A GitHub account.\r\n- **Test Case**: We will provide a test case to verify your setup.",
+    "Description": "**Description**:\r\nDive deep into the world of web automation with Tatu and Ren\u00e9 using the Browser library for Robot Framework. This state-of-the-art library, powered by Playwright, is designed for the modern web, ensuring speed, reliability, and visibility. In this workshop, participants will not only learn the basics of JavaScript but also how to extend the Browser library by creating custom keywords in both JavaScript and Python. We\u2019ll also cover the advanced features and keywords of the Browser library, ensuring a comprehensive understanding of web automation.\r\n\r\n**Agenda**:\r\n- 1. **Browser Fundamentals**\r\n   - 1.1 Installation and binary structure (Tatu)\r\n   - 1.2 Importing Settings (Ren\u00e9)\r\n   - 1.3 Logging (playwright Logs, Robot Loglevel, PW Trace) (Tatu)\r\n   - 1.4 Browser, Context, Page (Catalog, Switching) (Tatu)\r\n   - 1.5 Basic JS (Ren\u00e9)\r\n- 2. **Extending Browser**\r\n   - 2.1 JavaScript Plugin-API (Ren\u00e9)\r\n   - 2.2 Python Plugin-API (Tatu & Ren\u00e9)\r\n   - 2.3 AssertionEngine (Tatu)\r\n   - 2.4 Using Browser from Python (Ren\u00e9)\r\n- 3. **Browser Advanced Keywords**\r\n   - 3.1 Waiting (Tatu)\r\n   - 3.2 Promise To (Ren\u00e9)\r\n   - 3.3 Get Element States (Ren\u00e9)\r\n   - 3.4 Upload File (Selector or Dialog) (Ren\u00e9)\r\n   - 3.5 Selectors (CSS, nth, playwright possibilities) (Ren\u00e9)",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "8HSX9A",
-      "HTDUSJ"
-    ],
-    "Speaker names": [
-      "Tatu Aalto",
-      "Ren\u00e9 Rohner"
-    ],
+    "Speaker IDs": ["8HSX9A", "HTDUSJ"],
+    "Speaker names": ["Tatu Aalto", "Ren\u00e9 Rohner"],
     "Room": {
       "en": "Robot Framework Browser Advanced Workshop"
     },
     "Start": "2024-02-06T07:00:00+00:00",
     "End": "2024-02-06T16:00:00+02:00",
-    "Lessons Learned": "**Key Takeaways**:\r\n- Understand the capabilities of the Browser library and its integration with Playwright.\r\n- Learn to write custom keywords in JavaScript and Python to extend the Browser library.\r\n- Deep dive into advanced keywords and features of the Browser library.\r\n- Gain hands-on experience with real-world web automation scenarios.\r\n\r\n**Agenda**:\r\n1. **Browser Fundamentals**\r\n   - 1.1 Installation and binary structure (Tatu)\r\n   - 1.2 Importing Settings (Ren\u00e9)\r\n   - 1.3 Logging (playwright Logs, Robot Loglevel, PW Trace) (Tatu)\r\n   - 1.4 Browser, Context, Page (Catalog, Switching) (Tatu)\r\n   - 1.5 Basic JS (Ren\u00e9)\r\n2. **Extending Browser**\r\n   - 2.1 JavaScript Plugin-API (Ren\u00e9)\r\n   - 2.2 Python Plugin-API (Tatu & Ren\u00e9)\r\n   - 2.3 AssertionEngine (Tatu)\r\n   - 2.4 Using Browser from Python (Ren\u00e9)\r\n3. **Browser Advanced Keywords**\r\n   - 3.1 Waiting (Tatu)\r\n   - 3.2 Promise To (Ren\u00e9)\r\n   - 3.3 Get Element States (Ren\u00e9)\r\n   - 3.4 Upload File (Selector or Dialog) (Ren\u00e9)\r\n   - 3.5 Selectors (CSS, nth, playwright possibilities) (Ren\u00e9)",
+    "Lessons Learned": "**Key Takeaways**:\r\n- Understand the capabilities of the Browser library and its integration with Playwright.\r\n- Learn to write custom keywords in JavaScript and Python to extend the Browser library.\r\n- Deep dive into advanced keywords and features of the Browser library.\r\n- Gain hands-on experience with real-world web automation scenarios.",
     "Describe your intended audience": "**Knowledge Level**:\r\n- **Robot Framework**: Advanced knowledge and experience required.\r\n- **Browser or SeleniumLibrary**: Familiarity with Browser Library or extensive experience with SeleniumLibrary.\r\n- **Web Testing**: Experience in web automation and a basic understanding of HTML.\r\n- **Python**: Basic proficiency.\r\n\r\n**Preparation and Tech Requirements**:\r\n- **Computer**: Capable of running Robot Framework and Browser library with internet access.\r\n- **Software**:\r\n  - Python >= 3.8\r\n  - NodeJS 18 or 20\r\n  - Robot Framework >= 6.1\r\n  - Robot Framework Browser >= 18\r\n  - Editor (IDE) for Python and JavaScript (e.g., VSCode)\r\n  - Optional: Robot Framework language support (Recommended: Robot Code plugin for VSCode)\r\n  - Note: For those unable to install software, GitPod, a cloud-based browser IDE, is an alternative.\r\n- **Accounts**: A GitHub account.\r\n- **Test Case**: We will provide a test case to verify your setup.",
     "Is this suitable for ..?": "Intermediate RF user, Advanced RF user"
   },
@@ -1071,14 +910,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "HL7EQT",
-      "NEBFDV"
-    ],
-    "Speaker names": [
-      "Guido Demmenie",
-      "Frank van der Kuur"
-    ],
+    "Speaker IDs": ["HL7EQT", "NEBFDV"],
+    "Speaker names": ["Guido Demmenie", "Frank van der Kuur"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1101,12 +934,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "LQRAAR"
-    ],
-    "Speaker names": [
-      "Roman Haladej"
-    ],
+    "Speaker IDs": ["LQRAAR"],
+    "Speaker names": ["Roman Haladej"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1129,18 +958,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "T7BUER"
-    ],
-    "Speaker names": [
-      "Many Kasiriha"
-    ],
+    "Speaker IDs": ["T7BUER"],
+    "Speaker names": ["Many Kasiriha"],
     "Room": {
       "en": "Robot Framework Unleashed: Let's automate EVERYTHING"
     },
     "Start": "2024-02-06T07:00:00+00:00",
     "End": "2024-02-06T16:00:00+02:00",
-    "Lessons Learned": "Learn about different Robot Framework Libraries which can be used to automate different Technologies.\r\nMaking decision about the right library for your project.\r\nHaving a good structure of automation project.\r\nHave fun automating stuff",
+    "Lessons Learned": "-Learn about different Robot Framework Libraries which can be used to automate different Technologies.\r\n-Making decision about the right library for your project.\r\n-Having a good structure of automation project.\r\n-Have fun automating stuff",
     "Describe your intended audience": "People who know the Robot Framework Basics and that are hungry to automate some applications.",
     "Is this suitable for ..?": "Beginner RF user, Intermediate RF user"
   },
@@ -1152,27 +977,19 @@
     },
     "Track": null,
     "Abstract": "How to organize your Robot Framework project? How to structure your test code in resource files? How to deal with very long lines? How to ...? Join this tutorial to learn where to find answers on these questions. We will also share a little secret how to become a contributor to the first Style Guide for Robot Framework.",
-    "Description": "Below is a preliminary outline of the Tutorial. Please note that it might be modified by the time Tutorial is held. This is in an effort to make the 2 hours as fruitful as possible.\r\n\r\nTutorial will start with a general introduction, followed by a warm-up discussion in groups about the code quality, specifically, in the context of Robot Framework (~5+15 minutes minutes).\r\n\r\nNext, tools and resources to assist code writing will be introduced: Style Guide, robocop, robotidy (~30 minutes)\r\n\r\nOptional break (10 minutes)\r\n\r\nAfter the break, guided hands-on sessions will be held. The first hands-on session will include an exercise to convert a messy Robot Framework code into a clean code with the help of the Style Guide, robocop and robotidy.\r\n(25 minutes)\r\n\r\nReflection - opinions regarding the recommendations in the Style Guide, and default rules in the robocop/robotidy.\r\n(10 minutes)\r\n\r\nThe last part of the tutorial will be dedicated to coming up with own conventions:\r\n- Configuring settings in robocop and robotidy (demo ~10 minutes)\r\n- Contributing to common Style Guide and using it as a common reference (~10 minutes).\r\n\r\nConclusion (~5 minutes)\r\n\r\nEveryone is welcome, from beginners to experts. We recommend participants to bring their own laptops for hands-on exercises but laptops are not mandatory for attending the tutorial.",
+    "Description": "Below is a preliminary outline of the Tutorial. Please note that it might be modified by the time Tutorial is held. This is in an effort to make the 2 hours as fruitful as possible.\r\n\r\n<br>\r\n\r\nTutorial will start with a general introduction, followed by a warm-up discussion in groups about the code quality, specifically, in the context of Robot Framework (~5+15 minutes minutes).\r\n\r\n<br>\r\n\r\nNext, tools and resources to assist code writing will be introduced: Style Guide, robocop, robotidy (~30 minutes)\r\n\r\n<br>\r\n\r\nOptional break (10 minutes)\r\n\r\n<br>\r\n\r\nAfter the break, guided hands-on sessions will be held. The first hands-on session will include an exercise to convert a messy Robot Framework code into a clean code with the help of the Style Guide, robocop and robotidy.\r\n(25 minutes)\r\n\r\n<br>\r\n\r\nReflection - opinions regarding the recommendations in the Style Guide, and default rules in the robocop/robotidy.\r\n(10 minutes)\r\n\r\n<br>\r\n\r\nThe last part of the tutorial will be dedicated to coming up with own conventions:\r\n- Configuring settings in robocop and robotidy (demo ~10 minutes)\r\n- Contributing to common Style Guide and using it as a common reference (~10 minutes).\r\n\r\n<br>\r\n\r\nConclusion (~5 minutes)\r\n\r\n<br>\r\n\r\nEveryone is welcome, from beginners to experts. We recommend participants to bring their own laptops for hands-on exercises but laptops are not mandatory for attending the tutorial.",
     "Duration": 120,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "9BRJUX",
-      "HL7EQT",
-      "WG3A8G"
-    ],
-    "Speaker names": [
-      "Kelby Stine",
-      "Guido Demmenie",
-      "Manana Koberidze"
-    ],
+    "Speaker IDs": ["9BRJUX", "HL7EQT", "WG3A8G"],
+    "Speaker names": ["Kelby Stine", "Guido Demmenie", "Manana Koberidze"],
     "Room": {
       "en": "RoboConOnline"
     },
     "Start": "2024-03-01T13:30:00+00:00",
     "End": "2024-03-01T17:30:00+02:00",
-    "Lessons Learned": "Participants will learn how not to write an ugly Robot Framework code. \r\n\r\nThey will learn how well-written test code looks like, and what resources and tools they can use to help them write a clean Robot Framework code. Participants will also learn how they can contribute to defining the coding standard for Robot Framework.\r\n\r\nFor more detailed outline of the proposed Tutorial, please refer to the \"Description\" filed in this application.",
+    "Lessons Learned": "Participants will learn how not to write an ugly Robot Framework code. \r\n\r\n<br>\r\n\r\nThey will learn how well-written test code looks like, and what resources and tools they can use to help them write a clean Robot Framework code. Participants will also learn how they can contribute to defining the coding standard for Robot Framework.\r\n\r\n<br>\r\n\r\nFor more detailed outline of the proposed Tutorial, please refer to the \"Description\" filed in this application.",
     "Describe your intended audience": "Anyone interested is welcome to the Tutorial.",
     "Is this suitable for ..?": "Beginner RF user, Intermediate RF user, Advanced RF user"
   },
@@ -1189,12 +1006,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "RHSU38"
-    ],
-    "Speaker names": [
-      "Paulo Jos\u00e9 Estrela Vitoriano de Matos"
-    ],
+    "Speaker IDs": ["RHSU38"],
+    "Speaker names": ["Paulo Jos\u00e9 Estrela Vitoriano de Matos"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1218,12 +1031,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "HTDUSJ"
-    ],
-    "Speaker names": [
-      "Ren\u00e9 Rohner"
-    ],
+    "Speaker IDs": ["HTDUSJ"],
+    "Speaker names": ["Ren\u00e9 Rohner"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1270,12 +1079,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "RSWYRV"
-    ],
-    "Speaker names": [
-      "Aleksi Simell"
-    ],
+    "Speaker IDs": ["RSWYRV"],
+    "Speaker names": ["Aleksi Simell"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1298,12 +1103,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "8U3B3T"
-    ],
-    "Speaker names": [
-      "David Fogl"
-    ],
+    "Speaker IDs": ["8U3B3T"],
+    "Speaker names": ["David Fogl"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1327,12 +1128,7 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "VWRTSC",
-      "HTDUSJ",
-      "FQJRHW",
-      "D3ZLT3"
-    ],
+    "Speaker IDs": ["VWRTSC", "HTDUSJ", "FQJRHW", "D3ZLT3"],
     "Speaker names": [
       "Mateusz Nojek",
       "Ren\u00e9 Rohner",
@@ -1361,14 +1157,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "JDRR8S",
-      "GZRASZ"
-    ],
-    "Speaker names": [
-      "Ed Manlove",
-      "Yuri Verweij"
-    ],
+    "Speaker IDs": ["JDRR8S", "GZRASZ"],
+    "Speaker names": ["Ed Manlove", "Yuri Verweij"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1386,21 +1176,13 @@
     },
     "Track": null,
     "Abstract": "Testing mobile applications is similar to web testing. Many apps are just mini-websites. However, on a technical level, there are differences, due to mobile devices, and their complex ecosystems. This workshop is a hands-on technical session to mobile testing with RF and Appium. Learn how to approach mobile testing, or improve your existing tests.",
-    "Description": "There is a boom for creating mobile applications, many of which are alternatives to websites. This means that good QA is needed for end-to-end testing of these apps. Robot Framework users may combine it with AppiumLibrary and Appium.\r\n\r\nWith Robot\u2019s layer of abstraction, tests for mobile can be written in a similar way to webtesting. While that should make it easier, it is not as easy. There are additional challenges like device management, and test coverage of different models and OS versions. Complexity increases when the same tests need to be executed on multiple mobile platforms, without too much duplicate code.",
+    "Description": "There is a boom for creating mobile applications, many of which are alternatives to websites. This means that good QA is needed for end-to-end testing of these apps. Robot Framework users may combine it with AppiumLibrary and Appium.\r\n\r\n<br>\r\n\r\nWith Robot\u2019s layer of abstraction, tests for mobile can be written in a similar way to webtesting. While that should make it easier, it is not as easy. There are additional challenges like device management, and test coverage of different models and OS versions. Complexity increases when the same tests need to be executed on multiple mobile platforms, without too much duplicate code.",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "7QVJRP",
-      "RVHTR8",
-      "ZZASJX"
-    ],
-    "Speaker names": [
-      "Gaja Kochaniewicz",
-      "Juuso Tamminen",
-      "Severi Casserly"
-    ],
+    "Speaker IDs": ["7QVJRP", "RVHTR8", "ZZASJX"],
+    "Speaker names": ["Gaja Kochaniewicz", "Juuso Tamminen", "Severi Casserly"],
     "Room": {
       "en": "Mobile application testing with Robot Framework"
     },
@@ -1448,12 +1230,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "UTWEES"
-    ],
-    "Speaker names": [
-      "V\u00e1clav Fuksa"
-    ],
+    "Speaker IDs": ["UTWEES"],
+    "Speaker names": ["V\u00e1clav Fuksa"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1476,12 +1254,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "XXC8JB"
-    ],
-    "Speaker names": [
-      "Tanja Poposka"
-    ],
+    "Speaker IDs": ["XXC8JB"],
+    "Speaker names": ["Tanja Poposka"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1505,12 +1279,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "GBZFGS"
-    ],
-    "Speaker names": [
-      "Merel, Guido, Manana, Kelby and Yuri"
-    ],
+    "Speaker IDs": ["GBZFGS"],
+    "Speaker names": ["Merel, Guido, Manana, Kelby and Yuri"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1533,12 +1303,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "RMY3KA"
-    ],
-    "Speaker names": [
-      "Daniel Biehl"
-    ],
+    "Speaker IDs": ["RMY3KA"],
+    "Speaker names": ["Daniel Biehl"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1561,12 +1327,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "BJAPHL"
-    ],
-    "Speaker names": [
-      "Andre Mochinin"
-    ],
+    "Speaker IDs": ["BJAPHL"],
+    "Speaker names": ["Andre Mochinin"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1589,12 +1351,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "T9BAF3"
-    ],
-    "Speaker names": [
-      "Alina Kostetska"
-    ],
+    "Speaker IDs": ["T9BAF3"],
+    "Speaker names": ["Alina Kostetska"],
     "Room": {
       "en": "RoboCon"
     },
@@ -1612,17 +1370,13 @@
     },
     "Track": null,
     "Abstract": "Introducing Robot Framework in an organization can be challenging and complex. This workshop will help you overcome the challenges and leverage the benefits. You will collaborate with other testers and test automators who share similar goals and experiences. We will play games, role-play scenarios, and document the whole process for the community.",
-    "Description": "Welcome to the workshop on \u201cHow to Be a Robot Framework Champion: Collaborative Workshop\u201d. My name is Adam Hepner, and I am a QA Lead at Nice Project. I am also championing the introduction of Robot Framework at Heidelberger Druckmachinen AG, a German company that provides products and services for the printing industry.\r\n\r\nIn this workshop, I will share with you my experience and insights on how to introduce Robot Framework in your organization. Robot Framework is a tool that you already know and use, so I will not spend time explaining what it is or how it works. Instead, I will focus on the challenges and benefits of introducing it as a main end-to-end testing tool in your workplace.\r\n\r\nThe workshop will be divided into 7 time blocks (give-or-take), each focusing on a different topic or theme related to introducing Robot Framework in an organization. The topics will include:\r\n\r\n- Why Robot Framework should be used? What are its pros and cons and how does it compare to other tools?\r\n- Where can Robot Framework be used? Where cannot it be used?\r\n- What do developers and testers prefer to Robot Framework and why?\r\n- How can introduction be approached? What are the best practices and pitfalls to avoid?\r\n- How can Robot Framework be integrated with other tools, such as Selenium, BrowserStack, or Jenkins?\r\n- How can Robot Framework be used for different types of testing, such as acceptance testing, functional testing, or performance testing?\r\n\r\nThe workshop will use a combination of theory and practice, with an emphasis on discussion and collaboration. I hope to pass on my experience, and at the same time - learn from You. \r\n\r\nWe will also be:\r\n\r\n- Playing games, such as risk storming with test sphere card game or the pipeline game, that will help you explore different aspects of introducing Robot Framework in an organization, such as identifying the quality aspects, the risks, the test strategies, and the pipeline design.\r\n- Role-playing scenarios, such as convincing a skeptical manager or developer to adopt Robot Framework, that will help you practice your communication and persuasion skills and understand the opinions and preferences of others.\r\n- Authoring a documentation as a guide for future technical experts, that will help you summarize and document the main points and outcomes of the workshop.\r\n\r\nThis workshop will be driven by its participants, so the topics can vary slightly, but you're more than welcome to bring your ideas and experience to the table!",
+    "Description": "Welcome to the workshop on \u201cHow to Be a Robot Framework Champion: Collaborative Workshop\u201d. My name is Adam Hepner, and I am a QA Lead at Nice Project. I am also championing the introduction of Robot Framework at Heidelberger Druckmachinen AG, a German company that provides products and services for the printing industry.\r\n\r\n<br>\r\n\r\nIn this workshop, I will share with you my experience and insights on how to introduce Robot Framework in your organization. Robot Framework is a tool that you already know and use, so I will not spend time explaining what it is or how it works. Instead, I will focus on the challenges and benefits of introducing it as a main end-to-end testing tool in your workplace.\r\n\r\n<br>\r\n\r\nThe workshop will be divided into 7 time blocks (give-or-take), each focusing on a different topic or theme related to introducing Robot Framework in an organization. The topics will include:\r\n\r\n<br>\r\n\r\n- Why Robot Framework should be used? What are its pros and cons and how does it compare to other tools?\r\n- Where can Robot Framework be used? Where cannot it be used?\r\n- What do developers and testers prefer to Robot Framework and why?\r\n- How can introduction be approached? What are the best practices and pitfalls to avoid?\r\n- How can Robot Framework be integrated with other tools, such as Selenium, BrowserStack, or Jenkins?\r\n- How can Robot Framework be used for different types of testing, such as acceptance testing, functional testing, or performance testing?\r\n\r\nThe workshop will use a combination of theory and practice, with an emphasis on discussion and collaboration. I hope to pass on my experience, and at the same time - learn from You. \r\n\r\nWe will also be:\r\n\r\n- Playing games, such as risk storming with test sphere card game or the pipeline game, that will help you explore different aspects of introducing Robot Framework in an organization, such as identifying the quality aspects, the risks, the test strategies, and the pipeline design.\r\n- Role-playing scenarios, such as convincing a skeptical manager or developer to adopt Robot Framework, that will help you practice your communication and persuasion skills and understand the opinions and preferences of others.\r\n- Authoring a documentation as a guide for future technical experts, that will help you summarize and document the main points and outcomes of the workshop.\r\n\r\nThis workshop will be driven by its participants, so the topics can vary slightly, but you're more than welcome to bring your ideas and experience to the table!",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "AQXFCJ"
-    ],
-    "Speaker names": [
-      "Adam Hepner"
-    ],
+    "Speaker IDs": ["AQXFCJ"],
+    "Speaker names": ["Adam Hepner"],
     "Room": {
       "en": "How to Be a Robot Framework Champion: Collaborative Workshop"
     },
@@ -1645,12 +1399,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "8HSX9A"
-    ],
-    "Speaker names": [
-      "Tatu Aalto"
-    ],
+    "Speaker IDs": ["8HSX9A"],
+    "Speaker names": ["Tatu Aalto"],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1673,12 +1423,8 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [
-      "9J9TZ3"
-    ],
-    "Speaker names": [
-      "Babu Manickam"
-    ],
+    "Speaker IDs": ["9J9TZ3"],
+    "Speaker names": ["Babu Manickam"],
     "Room": {
       "en": "RoboConOnline"
     },

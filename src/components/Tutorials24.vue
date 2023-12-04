@@ -37,7 +37,7 @@
         <summary>
           Full description
         </summary>
-        <div v-html="parseText(tutorial.Description)" />
+        <div v-html="parseText(tutorial.Description)" class="p-small" />
         <h3 class="pl-small">
           Lessons learned
         </h3>
