@@ -82,7 +82,17 @@ export default {
     publicPath: process.env.BASE_URL
   }),
   computed: {
-    workshops: () => talks24.filter((talk) => talk['Session type'].en.includes('Workshop'))
+    workshops: () => talks24
+      .filter((talk) => talk['Session type'].en.includes('Workshop'))
+      .sort((a, b) => {
+        if (a['Proposal title'] < b['Proposal title']) {
+          return -1
+        }
+        if (a['Proposal title'] > b['Proposal title']) {
+          return 1
+        }
+        return 0
+      })
   },
   methods: {
     format,

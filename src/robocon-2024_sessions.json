@@ -12,8 +12,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["AGGCAG"],
-    "Speaker names": ["Merel Foekens"],
+    "Speaker IDs": [
+      "AGGCAG"
+    ],
+    "Speaker names": [
+      "Merel Foekens"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -36,8 +40,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["BJAPHL"],
-    "Speaker names": ["Andre Mochinin"],
+    "Speaker IDs": [
+      "BJAPHL"
+    ],
+    "Speaker names": [
+      "Andre Mochinin"
+    ],
     "Room": {
       "en": "Workshop about creating libraries for Robot Framework"
     },
@@ -60,8 +68,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["ZVZHZJ"],
-    "Speaker names": ["Eftychia  Thomaidou"],
+    "Speaker IDs": [
+      "ZVZHZJ"
+    ],
+    "Speaker names": [
+      "Eftychia  Thomaidou"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -70,30 +82,6 @@
     "Lessons Learned": "Hopefully, I can enlighten them to see their daily work from a different angle. I can inspire them achieve more by changing their way of working.\r\nI will give concrete examples of how daily QA tasks, that are normally focused on the negative (bugs, flaws), can be turned into a positive training for the mind. \r\nAnd I will raise awareness of how constantly searching for bugs seriously influences the way we experience life; and what we can do to train our minds and gain the happiness advantage.",
     "Describe your intended audience": "People that work in the Tester/QA role in software development.",
     "Is this suitable for ..?": "Beginner RF user, Intermediate RF user, Advanced RF user"
-  },
-  {
-    "ID": "9LD8TN",
-    "Proposal title": "Advanced SeleniumLibrary and Robot Framework",
-    "Session type": {
-      "en": "Workshop - Full Day"
-    },
-    "Track": null,
-    "Abstract": "Techniques and tooling to ease up web testing and automation by expert developers and maintainer of the SeleniumLibrary. If you need to beef up your Selenium tests, this is the course for you.",
-    "Description": "<h3 class='mb-3 mt-2'>Outline/overview of the workshop</h2><h3 class='mb-0 mt-2'>Browser Configuration</h3>We will be taking a look at desired capabilites, Selenium options and Firefox profile. Differences between Open Browser and Create WebDriver keywords will be highlighted. Finally we will build small examples showing how to configure the browser in diffrent situations.<h3 class='mb-0 mt-2'>Advanced Debuging</h3>The course will cover when encountering flaky test(s), where to look and how to stabilise them.<h3 class='mb-0 mt-2'>Parallel Execution</h3>We'll discuss running SeleniumLibrary in parallel with pabot and Selenium grid.<h3 class='mb-0 mt-2'>API</h3>SeleniumLibrary has an public API which allows users to extend on top of the SeleniumLibrary. Here we take a look what is available in the public API.<h3 class='mb-0 mt-2'>Expanding the library</h3>Looking at different pros and cons we will talk about how to extend SeleniumLibrary as well as building a new library and the Plugin API. We will show a small exmample. And we will discuss overriding existing keywords with functionality not covered by Selenium.<h3 class='mb-0 mt-2'>EventFiringWebDriver</h3>Using and abusing EventFiringWebDriver for monitoring events and how they affect the interactions with SUT will be covered.<h3 class='mb-0 mt-2'>Page Objects</h3>What are page objects and where it might be useful.<h3 class='mb-0 mt-2'>Python Page objects verses SeleniumLibrary</h3>Looking inside of a page object library and how to build one.<h3 class='mb-0 mt-2'>Checking for time of tests</h3>We will talk about verifying and reacting to execution times of tests/keywords/suites either via tags or the separate Timer library.<h3 class='mb-0 mt-2'>Using Javascript to interact with SUT</h3>Extending SeleniumLibrary with new keywords where functionality is implemented in Javascript.<h3 class='mt-5'>Learning Outcomes</h2>At the end of the workshop, user should have broad overview of advanced features of SeleniumLibrary, web automation and ways to extend and debug test tooling.<h3 class='mt-5'>Target Audience</h3>This workshop is for people with previous hands on experience with testing in Robot Framework & SeleniumLibrary. Students should already have experience testing web applications, know how to identify locators for webelements and validate those loctors, and feel comfortable working with SeleniumLibrary. Although the course will take a measured pace through the material, students should be prepared for advanced topics that will be thoroughly explained.<br><br>This workshop will be presented in English with two presenters, both who are bi-lingual in Finnish and English.<h3 class='mt-5'>Prerequisites</h3>* All participates will need to bring a laptop preconfigured to the workshop.<br>* Particapte must have access to add and modify software on their laptops.<br>* Detailed setup instructions will be shared couple of weeks before workshop day.<br>* Configure your laptops well before the workshop day<b",
-    "Duration": 420,
-    "Slot Count": 1,
-    "Language": "en",
-    "Session image": "",
-    "Speaker IDs": ["JDRR8S"],
-    "Speaker names": ["Ed Manlove"],
-    "Room": {
-      "en": "Advanced SeleniumLibrary and Robot Framework"
-    },
-    "Start": "2024-02-06T07:00:00+00:00",
-    "End": "2024-02-06T16:00:00+02:00",
-    "Lessons Learned": "See Syllabus",
-    "Describe your intended audience": "This workshop is for people with previous hands on experience with testing in Robot Framework & SeleniumLibrary. Students should already have experience testing web applications, know how to identify locators for WebElements and validate those locators, and feel comfortable working with SeleniumLibrary. Although the course will take a measured pace through the material, students should be prepared for advanced topics that will be thoroughly explained.",
-    "Is this suitable for ..?": "Intermediate RF user, Advanced RF user"
   },
   {
     "ID": "ATWZKG",
@@ -108,8 +96,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["Y8HW33"],
-    "Speaker names": ["Matthias Gunther"],
+    "Speaker IDs": [
+      "Y8HW33"
+    ],
+    "Speaker names": [
+      "Matthias Gunther"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -132,7 +124,10 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["UTWEES", "8TSLHQ"],
+    "Speaker IDs": [
+      "UTWEES",
+      "8TSLHQ"
+    ],
     "Speaker names": [
       "V\u00e1clav Fuksa",
       "Nina B\u0159ich\u00e1\u010dkov\u00e1"
@@ -159,8 +154,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["XP3VZC"],
-    "Speaker names": ["Krzysztof \u017bminkowski"],
+    "Speaker IDs": [
+      "XP3VZC"
+    ],
+    "Speaker names": [
+      "Krzysztof \u017bminkowski"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -183,8 +182,16 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["9BRJUX", "HL7EQT", "WG3A8G"],
-    "Speaker names": ["Kelby Stine", "Guido Demmenie", "Manana Koberidze"],
+    "Speaker IDs": [
+      "9BRJUX",
+      "HL7EQT",
+      "WG3A8G"
+    ],
+    "Speaker names": [
+      "Kelby Stine",
+      "Guido Demmenie",
+      "Manana Koberidze"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -207,8 +214,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["T7EQ8T"],
-    "Speaker names": ["Mark Moberts"],
+    "Speaker IDs": [
+      "T7EQ8T"
+    ],
+    "Speaker names": [
+      "Mark Moberts"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -231,8 +242,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["FYLY7K", "JEJN7Y"],
-    "Speaker names": ["Daniel Penning", "Max-Vincent Steck"],
+    "Speaker IDs": [
+      "FYLY7K",
+      "JEJN7Y"
+    ],
+    "Speaker names": [
+      "Daniel Penning",
+      "Max-Vincent Steck"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -255,8 +272,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["FJSLFM", "C9NDBA"],
-    "Speaker names": ["Markus Stahl", "Nils Balkow-Tychsen"],
+    "Speaker IDs": [
+      "FJSLFM",
+      "C9NDBA"
+    ],
+    "Speaker names": [
+      "Markus Stahl",
+      "Nils Balkow-Tychsen"
+    ],
     "Room": {
       "en": "Containerize your robots and run them on Kubernetes"
     },
@@ -279,8 +302,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["VWUYL7"],
-    "Speaker names": ["Stavroula Ventoura"],
+    "Speaker IDs": [
+      "VWUYL7"
+    ],
+    "Speaker names": [
+      "Stavroula Ventoura"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -303,8 +330,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["KQR9AE"],
-    "Speaker names": ["Tales Mello Paiva"],
+    "Speaker IDs": [
+      "KQR9AE"
+    ],
+    "Speaker names": [
+      "Tales Mello Paiva"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -328,7 +359,11 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["JUQN3X", "FQJRHW", "D3ZLT3"],
+    "Speaker IDs": [
+      "JUQN3X",
+      "FQJRHW",
+      "D3ZLT3"
+    ],
     "Speaker names": [
       "Ren\u00e9 Rohner",
       "Miikka Solmela",
@@ -357,8 +392,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["HTDUSJ", "FQJRHW"],
-    "Speaker names": ["Ren\u00e9 Rohner", "Miikka Solmela"],
+    "Speaker IDs": [
+      "HTDUSJ",
+      "FQJRHW"
+    ],
+    "Speaker names": [
+      "Ren\u00e9 Rohner",
+      "Miikka Solmela"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -381,8 +422,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["UHHRL8"],
-    "Speaker names": ["Dave Amies"],
+    "Speaker IDs": [
+      "UHHRL8"
+    ],
+    "Speaker names": [
+      "Dave Amies"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -405,8 +450,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["SZE8YE"],
-    "Speaker names": ["Kate\u0159ina Ho\u0161ov\u00e1"],
+    "Speaker IDs": [
+      "SZE8YE"
+    ],
+    "Speaker names": [
+      "Kate\u0159ina Ho\u0161ov\u00e1"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -429,8 +478,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["T7BUER"],
-    "Speaker names": ["Many Kasiriha"],
+    "Speaker IDs": [
+      "T7BUER"
+    ],
+    "Speaker names": [
+      "Many Kasiriha"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -453,8 +506,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["CPN7VC", "ZGZ7WT"],
-    "Speaker names": ["Sam van der Wagen", "Jasper Verbunt"],
+    "Speaker IDs": [
+      "CPN7VC",
+      "ZGZ7WT"
+    ],
+    "Speaker names": [
+      "Sam van der Wagen",
+      "Jasper Verbunt"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -477,8 +536,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["LYEHWU"],
-    "Speaker names": ["Patrik Zakovi\u010d"],
+    "Speaker IDs": [
+      "LYEHWU"
+    ],
+    "Speaker names": [
+      "Patrik Zakovi\u010d"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -501,8 +564,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["8U3B3T"],
-    "Speaker names": ["David Fogl"],
+    "Speaker IDs": [
+      "8U3B3T"
+    ],
+    "Speaker names": [
+      "David Fogl"
+    ],
     "Room": {
       "en": "Integrating Robot Framework with Generative AI and Jira"
     },
@@ -525,8 +592,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["78DPXU"],
-    "Speaker names": ["Liviu Avram"],
+    "Speaker IDs": [
+      "78DPXU"
+    ],
+    "Speaker names": [
+      "Liviu Avram"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -549,8 +620,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["GZRASZ"],
-    "Speaker names": ["Yuri Verweij"],
+    "Speaker IDs": [
+      "GZRASZ"
+    ],
+    "Speaker names": [
+      "Yuri Verweij"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -598,8 +673,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["R9UP8V"],
-    "Speaker names": ["Lukasz"],
+    "Speaker IDs": [
+      "R9UP8V"
+    ],
+    "Speaker names": [
+      "Lukasz"
+    ],
     "Room": {
       "en": "Next-Gen Pipeline Journey: Elevate your skills with Robot Framework"
     },
@@ -622,8 +701,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["BXEQAQ"],
-    "Speaker names": ["Igor Czyrski"],
+    "Speaker IDs": [
+      "BXEQAQ"
+    ],
+    "Speaker names": [
+      "Igor Czyrski"
+    ],
     "Room": {
       "en": "Eficode"
     },
@@ -646,8 +729,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["FYLY7K"],
-    "Speaker names": ["Daniel Penning"],
+    "Speaker IDs": [
+      "FYLY7K"
+    ],
+    "Speaker names": [
+      "Daniel Penning"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -670,8 +757,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["EFQQP9"],
-    "Speaker names": ["Robin Mackaij"],
+    "Speaker IDs": [
+      "EFQQP9"
+    ],
+    "Speaker names": [
+      "Robin Mackaij"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -694,8 +785,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["RMY3KA"],
-    "Speaker names": ["Daniel Biehl"],
+    "Speaker IDs": [
+      "RMY3KA"
+    ],
+    "Speaker names": [
+      "Daniel Biehl"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -718,8 +813,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["UHHRL8"],
-    "Speaker names": ["Dave Amies"],
+    "Speaker IDs": [
+      "UHHRL8"
+    ],
+    "Speaker names": [
+      "Dave Amies"
+    ],
     "Room": {
       "en": "Performance test in a day using Robot Framework and RFSwram"
     },
@@ -742,8 +841,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["G3QVQY"],
-    "Speaker names": ["Rohith Ram Prabakaran"],
+    "Speaker IDs": [
+      "G3QVQY"
+    ],
+    "Speaker names": [
+      "Rohith Ram Prabakaran"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -766,8 +869,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["EVXAKM"],
-    "Speaker names": ["Katarina Partti"],
+    "Speaker IDs": [
+      "EVXAKM"
+    ],
+    "Speaker names": [
+      "Katarina Partti"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -790,8 +897,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["QPFXQJ", "KVWYMA"],
-    "Speaker names": ["Sebastien Plaisant", "Andrea Tipa"],
+    "Speaker IDs": [
+      "QPFXQJ",
+      "KVWYMA"
+    ],
+    "Speaker names": [
+      "Sebastien Plaisant",
+      "Andrea Tipa"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -814,8 +927,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["99CJBK", "FPBMBN"],
-    "Speaker names": ["Matthias Grabowsky", "Ivaylo Br\u00fcssow"],
+    "Speaker IDs": [
+      "99CJBK",
+      "FPBMBN"
+    ],
+    "Speaker names": [
+      "Matthias Grabowsky",
+      "Ivaylo Br\u00fcssow"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -838,8 +957,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["R978PJ"],
-    "Speaker names": ["Marduk Bola\u00f1os"],
+    "Speaker IDs": [
+      "R978PJ"
+    ],
+    "Speaker names": [
+      "Marduk Bola\u00f1os"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -862,8 +985,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["QBMFY7"],
-    "Speaker names": ["Jerzy G\u0142owacki"],
+    "Speaker IDs": [
+      "QBMFY7"
+    ],
+    "Speaker names": [
+      "Jerzy G\u0142owacki"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -875,25 +1002,31 @@
   },
   {
     "ID": "QKEUZP",
-    "Proposal title": "Robot Framework Browser Advanced Workshop",
+    "Proposal title": "Browser Library Advanced Workshop",
     "Session type": {
       "en": "Workshop - Full Day"
     },
     "Track": null,
-    "Abstract": "Learn how to use Browser like a Pro.\r\n\r\nExtending Library, Using it from Python, Interacting with Playwright and many more.",
-    "Description": "**Description**:\r\nDive deep into the world of web automation with Tatu and Ren\u00e9 using the Browser library for Robot Framework. This state-of-the-art library, powered by Playwright, is designed for the modern web, ensuring speed, reliability, and visibility. In this workshop, participants will not only learn the basics of JavaScript but also how to extend the Browser library by creating custom keywords in both JavaScript and Python. We\u2019ll also cover the advanced features and keywords of the Browser library, ensuring a comprehensive understanding of web automation.\r\n\r\n**Agenda**:\r\n- 1. **Browser Fundamentals**\r\n   - 1.1 Installation and binary structure (Tatu)\r\n   - 1.2 Importing Settings (Ren\u00e9)\r\n   - 1.3 Logging (playwright Logs, Robot Loglevel, PW Trace) (Tatu)\r\n   - 1.4 Browser, Context, Page (Catalog, Switching) (Tatu)\r\n   - 1.5 Basic JS (Ren\u00e9)\r\n- 2. **Extending Browser**\r\n   - 2.1 JavaScript Plugin-API (Ren\u00e9)\r\n   - 2.2 Python Plugin-API (Tatu & Ren\u00e9)\r\n   - 2.3 AssertionEngine (Tatu)\r\n   - 2.4 Using Browser from Python (Ren\u00e9)\r\n- 3. **Browser Advanced Keywords**\r\n   - 3.1 Waiting (Tatu)\r\n   - 3.2 Promise To (Ren\u00e9)\r\n   - 3.3 Get Element States (Ren\u00e9)\r\n   - 3.4 Upload File (Selector or Dialog) (Ren\u00e9)\r\n   - 3.5 Selectors (CSS, nth, playwright possibilities) (Ren\u00e9)",
+    "Abstract": "Learn how to use Robot Framework Browser like a pro.\r\n\r\nExtending Browser library, using it from Python, interacting with Playwright and many more.",
+    "Description": "Dive deep into the world of web automation with Tatu and Ren\u00e9 using the Browser library for Robot Framework. This state-of-the-art library, powered by Playwright, is designed for the modern web, ensuring speed, reliability, and visibility. In this workshop, participants will not only learn the basics of JavaScript but also how to extend the Browser library by creating custom keywords in both JavaScript and Python. We\u2019ll also cover the advanced features and keywords of the Browser library, ensuring a comprehensive understanding of web automation.\r\n\r\n**Agenda**:\r\n- **Browser Fundamentals**\r\n   - Installation and binary structure (Tatu)\r\n   - Importing Settings (Ren\u00e9)\r\n   - Logging (playwright Logs, Robot Loglevel, PW Trace) (Tatu)\r\n   - Browser, Context, Page (Catalog, Switching) (Tatu)\r\n   - Basic JS (Ren\u00e9)\r\n- **Extending Browser**\r\n   - JavaScript Plugin-API (Ren\u00e9)\r\n   - Python Plugin-API (Tatu & Ren\u00e9)\r\n   - AssertionEngine (Tatu)\r\n   - Using Browser from Python (Ren\u00e9)\r\n- **Browser Advanced Keywords**\r\n   - Waiting (Tatu)\r\n   - Promise To (Ren\u00e9)\r\n   - Get Element States (Ren\u00e9)\r\n   - Upload File (Selector or Dialog) (Ren\u00e9)\r\n   - Selectors (CSS, nth, playwright possibilities) (Ren\u00e9)",
     "Duration": 420,
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["8HSX9A", "HTDUSJ"],
-    "Speaker names": ["Tatu Aalto", "Ren\u00e9 Rohner"],
+    "Speaker IDs": [
+      "8HSX9A",
+      "HTDUSJ"
+    ],
+    "Speaker names": [
+      "Tatu Aalto",
+      "Ren\u00e9 Rohner"
+    ],
     "Room": {
-      "en": "Robot Framework Browser Advanced Workshop"
+      "en": "Browser Library Advanced Workshop"
     },
     "Start": "2024-02-06T07:00:00+00:00",
     "End": "2024-02-06T16:00:00+02:00",
-    "Lessons Learned": "**Key Takeaways**:\r\n- Understand the capabilities of the Browser library and its integration with Playwright.\r\n- Learn to write custom keywords in JavaScript and Python to extend the Browser library.\r\n- Deep dive into advanced keywords and features of the Browser library.\r\n- Gain hands-on experience with real-world web automation scenarios.",
+    "Lessons Learned": "- Understand the capabilities of the Browser library and its integration with Playwright.\r\n- Learn to write custom keywords in JavaScript and Python to extend the Browser library.\r\n- Deep dive into advanced keywords and features of the Browser library.\r\n- Gain hands-on experience with real-world web automation scenarios.",
     "Describe your intended audience": "**Knowledge Level**:\r\n- **Robot Framework**: Advanced knowledge and experience required.\r\n- **Browser or SeleniumLibrary**: Familiarity with Browser Library or extensive experience with SeleniumLibrary.\r\n- **Web Testing**: Experience in web automation and a basic understanding of HTML.\r\n- **Python**: Basic proficiency.\r\n\r\n**Preparation and Tech Requirements**:\r\n- **Computer**: Capable of running Robot Framework and Browser library with internet access.\r\n- **Software**:\r\n  - Python >= 3.8\r\n  - NodeJS 18 or 20\r\n  - Robot Framework >= 6.1\r\n  - Robot Framework Browser >= 18\r\n  - Editor (IDE) for Python and JavaScript (e.g., VSCode)\r\n  - Optional: Robot Framework language support (Recommended: Robot Code plugin for VSCode)\r\n  - Note: For those unable to install software, GitPod, a cloud-based browser IDE, is an alternative.\r\n- **Accounts**: A GitHub account.\r\n- **Test Case**: We will provide a test case to verify your setup.",
     "Is this suitable for ..?": "Intermediate RF user, Advanced RF user"
   },
@@ -910,8 +1043,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["HL7EQT", "NEBFDV"],
-    "Speaker names": ["Guido Demmenie", "Frank van der Kuur"],
+    "Speaker IDs": [
+      "HL7EQT",
+      "NEBFDV"
+    ],
+    "Speaker names": [
+      "Guido Demmenie",
+      "Frank van der Kuur"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -934,8 +1073,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["LQRAAR"],
-    "Speaker names": ["Roman Haladej"],
+    "Speaker IDs": [
+      "LQRAAR"
+    ],
+    "Speaker names": [
+      "Roman Haladej"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -943,30 +1086,6 @@
     "End": "2024-02-29T14:20:00+02:00",
     "Lessons Learned": "The talk highlights the challenge of transitioning from on-premises solutions like Jenkins and Bitbucket to a cloud-based solution like GitHub Actions.\r\nThe lesson learned here is that organizations need to adapt to changing technologies and consider cloud solutions for more flexibility and scalability. As well as creation of separate actions for various testing steps, such as environment preparation, test execution, and result import into Jira. This approach allows for better organization and reuse of actions.\r\nMain approach is to break down complex processes into manageable steps, making them more maintainable and shareable.\r\nPart of this solution is displaying an extract directly in the GitHub Job Summary and Integrating test results into Jira, specifically using Xray for reporting.",
     "Describe your intended audience": "Developers or DevOps teams interested in transitioning from Bitbucket and Jenkins to GitHub and GitHub Actions.\r\nThose who are keen on improving their automation skillsets, especially with regards to testing.\r\nTech teams grappling with similar technological constraints, who could benefit from discovering our problem-solving approaches.\r\nAnd anyone excited to learn about practical usage of Git Hub Actions and GitHub Job Summary with Robot Framework.",
-    "Is this suitable for ..?": "Beginner RF user, Intermediate RF user"
-  },
-  {
-    "ID": "RF3RYU",
-    "Proposal title": "Robot Framework Unleashed: Let's automate EVERYTHING",
-    "Session type": {
-      "en": "Workshop - Full Day"
-    },
-    "Track": null,
-    "Abstract": "Being an Automation Engineer often means that you need to steer different applications and technologies.  \r\n- Web Apps\r\n- APIs & Webservices\r\n- Desktop Apps\r\n- Databases\r\n- Mobile Apps, ..  \r\n\r\nLet me show you a list of selected libraries which will help you to achieve that and try them out with real examples.\r\nLet's automate some stuff together!",
-    "Description": "What to expect:  \r\n- Proper Environment setup, using VS Code & RobotCode, Virtual Environments\r\n- Web Application Testing using Browser Library and Selenium Library\r\n- API Testing using Requests Library, RESTinstance and SoapLibrary\r\n- Mobile Testing using AppiumLibrary\r\n- ImageBased Automation using ImageHorizonLibrary\r\n- Desktop Application Testing using rpaframework, FlaUI and RemoteSwingLibrary\r\n- ?",
-    "Duration": 420,
-    "Slot Count": 1,
-    "Language": "en",
-    "Session image": "",
-    "Speaker IDs": ["T7BUER"],
-    "Speaker names": ["Many Kasiriha"],
-    "Room": {
-      "en": "Robot Framework Unleashed: Let's automate EVERYTHING"
-    },
-    "Start": "2024-02-06T07:00:00+00:00",
-    "End": "2024-02-06T16:00:00+02:00",
-    "Lessons Learned": "-Learn about different Robot Framework Libraries which can be used to automate different Technologies.\r\n-Making decision about the right library for your project.\r\n-Having a good structure of automation project.\r\n-Have fun automating stuff",
-    "Describe your intended audience": "People who know the Robot Framework Basics and that are hungry to automate some applications.",
     "Is this suitable for ..?": "Beginner RF user, Intermediate RF user"
   },
   {
@@ -982,8 +1101,16 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["9BRJUX", "HL7EQT", "WG3A8G"],
-    "Speaker names": ["Kelby Stine", "Guido Demmenie", "Manana Koberidze"],
+    "Speaker IDs": [
+      "9BRJUX",
+      "HL7EQT",
+      "WG3A8G"
+    ],
+    "Speaker names": [
+      "Kelby Stine",
+      "Guido Demmenie",
+      "Manana Koberidze"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1006,8 +1133,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["RHSU38"],
-    "Speaker names": ["Paulo Jos\u00e9 Estrela Vitoriano de Matos"],
+    "Speaker IDs": [
+      "RHSU38"
+    ],
+    "Speaker names": [
+      "Paulo Jos\u00e9 Estrela Vitoriano de Matos"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1031,8 +1162,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["HTDUSJ"],
-    "Speaker names": ["Ren\u00e9 Rohner"],
+    "Speaker IDs": [
+      "HTDUSJ"
+    ],
+    "Speaker names": [
+      "Ren\u00e9 Rohner"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -1079,8 +1214,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["RSWYRV"],
-    "Speaker names": ["Aleksi Simell"],
+    "Speaker IDs": [
+      "RSWYRV"
+    ],
+    "Speaker names": [
+      "Aleksi Simell"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -1103,8 +1242,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["8U3B3T"],
-    "Speaker names": ["David Fogl"],
+    "Speaker IDs": [
+      "8U3B3T"
+    ],
+    "Speaker names": [
+      "David Fogl"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -1128,7 +1271,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["VWRTSC", "HTDUSJ", "FQJRHW", "D3ZLT3"],
+    "Speaker IDs": [
+      "VWRTSC",
+      "HTDUSJ",
+      "FQJRHW",
+      "D3ZLT3"
+    ],
     "Speaker names": [
       "Mateusz Nojek",
       "Ren\u00e9 Rohner",
@@ -1157,8 +1305,14 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["JDRR8S", "GZRASZ"],
-    "Speaker names": ["Ed Manlove", "Yuri Verweij"],
+    "Speaker IDs": [
+      "JDRR8S",
+      "GZRASZ"
+    ],
+    "Speaker names": [
+      "Ed Manlove",
+      "Yuri Verweij"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1181,8 +1335,16 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["7QVJRP", "RVHTR8", "ZZASJX"],
-    "Speaker names": ["Gaja Kochaniewicz", "Juuso Tamminen", "Severi Casserly"],
+    "Speaker IDs": [
+      "7QVJRP",
+      "RVHTR8",
+      "ZZASJX"
+    ],
+    "Speaker names": [
+      "Gaja Kochaniewicz",
+      "Juuso Tamminen",
+      "Severi Casserly"
+    ],
     "Room": {
       "en": "Mobile application testing with Robot Framework"
     },
@@ -1230,8 +1392,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["UTWEES"],
-    "Speaker names": ["V\u00e1clav Fuksa"],
+    "Speaker IDs": [
+      "UTWEES"
+    ],
+    "Speaker names": [
+      "V\u00e1clav Fuksa"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1254,8 +1420,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["XXC8JB"],
-    "Speaker names": ["Tanja Poposka"],
+    "Speaker IDs": [
+      "XXC8JB"
+    ],
+    "Speaker names": [
+      "Tanja Poposka"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1279,8 +1449,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["GBZFGS"],
-    "Speaker names": ["Merel, Guido, Manana, Kelby and Yuri"],
+    "Speaker IDs": [
+      "GBZFGS"
+    ],
+    "Speaker names": [
+      "Merel, Guido, Manana, Kelby and Yuri"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -1303,8 +1477,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["RMY3KA"],
-    "Speaker names": ["Daniel Biehl"],
+    "Speaker IDs": [
+      "RMY3KA"
+    ],
+    "Speaker names": [
+      "Daniel Biehl"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -1327,8 +1505,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["BJAPHL"],
-    "Speaker names": ["Andre Mochinin"],
+    "Speaker IDs": [
+      "BJAPHL"
+    ],
+    "Speaker names": [
+      "Andre Mochinin"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -1351,8 +1533,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["T9BAF3"],
-    "Speaker names": ["Alina Kostetska"],
+    "Speaker IDs": [
+      "T9BAF3"
+    ],
+    "Speaker names": [
+      "Alina Kostetska"
+    ],
     "Room": {
       "en": "RoboCon"
     },
@@ -1375,8 +1561,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["AQXFCJ"],
-    "Speaker names": ["Adam Hepner"],
+    "Speaker IDs": [
+      "AQXFCJ"
+    ],
+    "Speaker names": [
+      "Adam Hepner"
+    ],
     "Room": {
       "en": "How to Be a Robot Framework Champion: Collaborative Workshop"
     },
@@ -1399,8 +1589,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["8HSX9A"],
-    "Speaker names": ["Tatu Aalto"],
+    "Speaker IDs": [
+      "8HSX9A"
+    ],
+    "Speaker names": [
+      "Tatu Aalto"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1423,8 +1617,12 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": ["9J9TZ3"],
-    "Speaker names": ["Babu Manickam"],
+    "Speaker IDs": [
+      "9J9TZ3"
+    ],
+    "Speaker names": [
+      "Babu Manickam"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
