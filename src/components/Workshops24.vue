@@ -65,7 +65,7 @@
 import { marked } from 'marked'
 import { format } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
-import talks24 from '../robocon-2024_sessions.json'
+// import talks24 from '../robocon-2024_sessions.json'
 
 export default {
   name: 'Workshops24',
@@ -82,7 +82,51 @@ export default {
     publicPath: process.env.BASE_URL
   }),
   computed: {
-    workshops: () => talks24.filter((talk) => talk['Session type'].en.includes('Workshop'))
+    workshops: () => {
+      // const token = 'b74612486ee49e41dea2d8b78e88c745c7e02bd8'
+
+      const talks24 = fetch(
+        'https://pretalx.com/robocon-2024/schedule/export/schedule.json?export_format=json&target=confirmed&title=on&state=on&submission_type=on&track=on&abstract=on&description=on&duration=on&slot_count=on&content_locale=on&image=on&speaker_ids=on&speaker_names=on&room=on&start=on&end=on&question_2642=on&question_2647=on&question_2648=on',
+        {
+          headers: {
+            // Authorization: `Token ${token}`,
+            'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Access-Control-Allow-Methods, access-control-allow-origin, Authorization, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': 'true',
+            'Access-Control-Allow-Method': 'GET'
+          }
+        })
+        .then(r => r.json())
+        .then(s => s.schedule.conference.days.flatMap(d => Object.values(d.rooms).flat())
+          .map(t => {
+            return {
+              ID: t.id,
+              'Proposal title': t.title,
+              'Session type': {
+                en: t.type
+              },
+              Abstract: t.abstract,
+              Description: t.description,
+              'Speaker IDs': t.persons.map(p => p.code),
+              'Speaker names': t.persons.map(p => p.public_name),
+              Room: {
+                en: t.room
+              },
+              Start: new Date(t.date).toISOString(),
+              End: (() => {
+                const end = new Date(t.date)
+                const times = t.duration.split(':')
+                const duration = times[0] * 60 * 60 * 1000 + times[1] * 60 * 1000
+                end.setTime(end.getTime() + duration)
+                return end.toISOString()
+              })(),
+              'Lessons Learned': t.answers.find(a => a.question === 2642)?.answer,
+              'Describe your intended audience': t.answers.find(a => a.question === 2647)?.answer,
+              'Is this suitable for ..?': t.answers.find(a => a.question === 2648)?.answer
+            }
+          })).then(t => t.filter((talk) => talk['Session type'].en.includes('Workshop')))
+      return talks24
+    }
   },
   methods: {
     format,

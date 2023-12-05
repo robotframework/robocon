@@ -53,13 +53,13 @@
 </template>
 
 <script>
-import { Banner } from 'Components'
+// import { Banner } from 'Components'
 import { marked } from 'marked'
 
 export default {
   name: 'Germany',
   components: {
-    Banner
+    // Banner
   },
   methods: {
     parseMarkdown(text) {

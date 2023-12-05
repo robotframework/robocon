@@ -75,7 +75,7 @@
 import {
   Banner,
   PageSection,
-  Sponsors,
+  // Sponsors,
   Talks2023
 } from 'Components'
 import * as jose from 'jose'
@@ -85,7 +85,7 @@ export default {
   components: {
     Banner,
     PageSection,
-    Sponsors,
+    // Sponsors,
     Talks2023
   },
   data: () => ({
