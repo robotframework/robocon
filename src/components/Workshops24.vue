@@ -2,7 +2,7 @@
   <div class="w-100">
     <p>Workshops are held in Helsinki, February 6th 2024.</p>
     <p><a href="https://tickets.robotframework.org/robocon-2024/3997180/">Get your workshop tickets here!</a></p>
-    <div v-for="workshop in workshops" :key="workshop.id" class=" mt-large card p-small">
+    <div v-for="workshop in talks24" :key="workshop.id" class=" mt-large card p-small">
       <a class="anchor" :id="getSlug(workshop['Proposal title'])"></a>
       <div class="flex between">
         <h3>
@@ -65,6 +65,7 @@
 import { marked } from 'marked'
 import { format } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
+import { th } from 'date-fns/locale'
 // import talks24 from '../robocon-2024_sessions.json'
 
 export default {
@@ -79,54 +80,121 @@ export default {
     }
   },
   data: () => ({
-    publicPath: process.env.BASE_URL
+    publicPath: process.env.BASE_URL,
+    talks24: []
   }),
-  computed: {
-    workshops: () => {
-      // const token = 'b74612486ee49e41dea2d8b78e88c745c7e02bd8'
-
-      const talks24 = fetch(
-        'https://pretalx.com/robocon-2024/schedule/export/schedule.json?export_format=json&target=confirmed&title=on&state=on&submission_type=on&track=on&abstract=on&description=on&duration=on&slot_count=on&content_locale=on&image=on&speaker_ids=on&speaker_names=on&room=on&start=on&end=on&question_2642=on&question_2647=on&question_2648=on',
-        {
-          headers: {
-            // Authorization: `Token ${token}`,
-            'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Access-Control-Allow-Methods, access-control-allow-origin, Authorization, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Credentials': 'true',
-            'Access-Control-Allow-Method': 'GET'
+  created() {
+    fetch(
+      'https://pretalx.com/robocon-2024/schedule/export/schedule.json?export_format=json&target=confirmed&title=on&state=on&submission_type=on&track=on&abstract=on&description=on&duration=on&slot_count=on&content_locale=on&image=on&speaker_ids=on&speaker_names=on&room=on&start=on&end=on&question_2642=on&question_2647=on&question_2648=on',
+      {
+        headers: {
+        //   'Access-Control-Allow-Headers': 'access-control-allow-headers,authorization',
+          // Authorization: 'Token b74612486ee49e41dea2d8b78e88c745c7e02bd8'
+        }
+      })
+      .then(r => r.json())
+      .then(s => s.schedule.conference.days.flatMap(d => Object.values(d.rooms).flat())
+        .map(t => {
+          // const code = t.url.match(/robocon-2024\/talk\/(?<code>.*)\//).groups.code || 'FFFFFF'
+          // console.log(code)
+          const talk = {
+            ID: t.id,
+            'Proposal title': t.title,
+            'Session type': {
+              en: t.type
+            },
+            Abstract: t.abstract,
+            Description: t.description,
+            'Speaker IDs': t.persons.map(p => p.code),
+            'Speaker names': t.persons.map(p => p.public_name),
+            Room: {
+              en: t.room
+            },
+            Start: new Date(t.date).toISOString(),
+            End: (() => {
+              const end = new Date(t.date)
+              const times = t.duration.split(':')
+              const duration = times[0] * 60 * 60 * 1000 + times[1] * 60 * 1000
+              end.setTime(end.getTime() + duration)
+              return end.toISOString()
+            })(),
+            'Lessons Learned': t.answers.find(a => a.question === 2642)?.answer,
+            'Describe your intended audience': t.answers.find(a => a.question === 2647)?.answer,
+            'Is this suitable for ..?': t.answers.find(a => a.question === 2648)?.answer
           }
+          return talk
+          // return fetch(`https://pretalx.com/api/events/robocon-2024/answers/?format=json&submission=${code}`, {
+          //   headers: {
+          //     // Authorization: 'Token b74612486ee49e41dea2d8b78e88c745c7e02bd8'
+          //   }
+          // })
+          //   .then(r => r.json())
+          //   .then(a => {
+          //     console.log(a)
+          //     if (!a.results) return talk
+          //     const answers = a.results
+          //     talk['Lessons Learned'] = answers.find(a => a.question.id === 2642)?.answer
+          //     talk['Describe your intended audience'] = answers.find(a => a.question.id === 2647)?.answer
+          //     talk['Is this suitable for ..?'] = answers.find(a => a.question.id === 2648)?.answer
+          //     return talk
+          //   })
+        }))
+      .then(
+        t => t.filter(talk => talk['Session type'].en.includes('Workshop'))
+      )
+      .then(t => {
+        Promise.all(t).then(t => {
+          this.talks24 = t
         })
-        .then(r => r.json())
-        .then(s => s.schedule.conference.days.flatMap(d => Object.values(d.rooms).flat())
-          .map(t => {
-            return {
-              ID: t.id,
-              'Proposal title': t.title,
-              'Session type': {
-                en: t.type
-              },
-              Abstract: t.abstract,
-              Description: t.description,
-              'Speaker IDs': t.persons.map(p => p.code),
-              'Speaker names': t.persons.map(p => p.public_name),
-              Room: {
-                en: t.room
-              },
-              Start: new Date(t.date).toISOString(),
-              End: (() => {
-                const end = new Date(t.date)
-                const times = t.duration.split(':')
-                const duration = times[0] * 60 * 60 * 1000 + times[1] * 60 * 1000
-                end.setTime(end.getTime() + duration)
-                return end.toISOString()
-              })(),
-              'Lessons Learned': t.answers.find(a => a.question === 2642)?.answer,
-              'Describe your intended audience': t.answers.find(a => a.question === 2647)?.answer,
-              'Is this suitable for ..?': t.answers.find(a => a.question === 2648)?.answer
-            }
-          })).then(t => t.filter((talk) => talk['Session type'].en.includes('Workshop')))
-      return talks24
-    }
+      })
+  },
+  computed: {
+    workshops: () => this.talks24
+    // workshops: () => {
+    //   // const token = 'b74612486ee49e41dea2d8b78e88c745c7e02bd8'
+
+    //   const talks24 = fetch(
+    //     'https://pretalx.com/robocon-2024/schedule/export/schedule.json?export_format=json&target=confirmed&title=on&state=on&submission_type=on&track=on&abstract=on&description=on&duration=on&slot_count=on&content_locale=on&image=on&speaker_ids=on&speaker_names=on&room=on&start=on&end=on&question_2642=on&question_2647=on&question_2648=on',
+    //     {
+    //     //   headers: {
+    //     //     Authorization: `Token ${token}`,
+    //     //     'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Access-Control-Allow-Methods, access-control-allow-origin, Authorization, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
+    //     //     'Access-Control-Allow-Origin': '*',
+    //     //     'Access-Control-Allow-Credentials': 'true',
+    //     //     'Access-Control-Allow-Method': 'GET'
+    //     //   }
+    //     })
+    //     .then(r => r.json())
+    //     .then(s => s.schedule.conference.days.flatMap(d => Object.values(d.rooms).flat())
+    //       .map(t => {
+    //         return {
+    //           ID: t.id,
+    //           'Proposal title': t.title,
+    //           'Session type': {
+    //             en: t.type
+    //           },
+    //           Abstract: t.abstract,
+    //           Description: t.description,
+    //           'Speaker IDs': t.persons.map(p => p.code),
+    //           'Speaker names': t.persons.map(p => p.public_name),
+    //           Room: {
+    //             en: t.room
+    //           },
+    //           Start: new Date(t.date).toISOString(),
+    //           End: (() => {
+    //             const end = new Date(t.date)
+    //             const times = t.duration.split(':')
+    //             const duration = times[0] * 60 * 60 * 1000 + times[1] * 60 * 1000
+    //             end.setTime(end.getTime() + duration)
+    //             return end.toISOString()
+    //           })(),
+    //           'Lessons Learned': t.answers.find(a => a.question === 2642)?.answer,
+    //           'Describe your intended audience': t.answers.find(a => a.question === 2647)?.answer,
+    //           'Is this suitable for ..?': t.answers.find(a => a.question === 2648)?.answer
+    //         }
+    //       })).then(t => t.filter((talk) => talk['Session type'].en.includes('Workshop')))
+    //   return talks24
+    // }
   },
   methods: {
     format,
