@@ -1,6 +1,8 @@
 tasks:
   - init: npm install
-    command: npm run dev
+    command: |
+      export SET NODE_OPTIONS=--openssl-legacy-provider
+      npm run dev
 ports:
   - name: Development Page of RoboCon
     description: The RoboCon Page as Preview-Dev-Page
