@@ -63,6 +63,26 @@
       <p>
         Moreover, on the 10th of February there will be a walking tours and other optional activities in Helsinki.
       </p>
+      <details class="pl-small">
+        <summary>
+          Plans for tour day (10th Feb)
+        </summary>
+        <h3 class="mt-small">
+          Helsinki Walk with Pekka Klärck
+        </h3>
+        <p>
+          Take a walk through some neighborhoods with Pekka Klärck. Starting in central Helsinki, Pekka will lead you up through the neighborhoods of Kallio, Vallila, and over towards Pasila. Along the way you will be visiting a famous food market hall, seeing beautiful parts of the city outside of the city central, stop for some Coffee break at Sävy or Helsingin Kahvipaahtimo. Later there will be an option for a brewery tour at Vallilan Panimo and possible sauna at a local community sauna.
+        </p>
+        <h3>
+          Suomenlinna tour with Jenna, Eeva and Ed
+        </h3>
+        <p>
+          This group will visit Suomenlinna, an island within the city harbor just south of Market Square, and viewable from this year’s conference venue. Taking a short 15 minute, 3€ ferry/public transportation will travel from Market Square. Jenna and Eeva, both Robot Framework community members and Helsinki locals will travel with us and share from their experiences. On the island there are opportunities for exploring the islands, enjoying some food. There is also a 13€ per person Guided tour which we could take advantage of. This tour will end mid afternoon.
+        </p>
+        <p>
+          Both options will start late morning. If weather is really bad we will have backup plans probably to the local museums of which there are about half a dozen in the immediate area. More information will be published as we get closer to the conference dates.
+        </p>
+      </details>
       <p>
         In-person ticket includes a complimentary online conference ticket.
       </p>
