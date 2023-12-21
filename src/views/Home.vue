@@ -61,7 +61,10 @@
         Please also reserve the 6th and 7th of February for learning in the workshops and for the Community Day. The Community Day is an open space for the community to learn, discuss and advance topics related to Robot Framework. This might include workshop participants practicing what they learned with the help of the workshop facilitators.
       </p>
       <p>
-        Moreover, on the 10th of February there will be some laid back touristic day activity.
+        Moreover, on the 10th of February there will be a walking tours and other optional activities in Helsinki.
+      </p>
+      <p>
+        In-person ticket includes a complimentary online conference ticket.
       </p>
       <p>
         <span class="color-theme">The online conference</span> will take place
