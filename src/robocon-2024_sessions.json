@@ -20,8 +20,8 @@
     "Room": {
       "en": "RoboConOnline"
     },
-    "Start": "2024-02-28T13:30:00+00:00",
-    "End": "2024-02-28T15:50:00+02:00",
+    "Start": "2024-02-28T15:30:00+00:00",
+    "End": "2024-02-28T17:50:00+02:00",
     "Lessons Learned": "Participants would learn about Probot and how it was developed.",
     "Describe your intended audience": "This talk is for anyone who is interested in parallelizing and distributing their Robot Framework tests.",
     "Is this suitable for ..?": "Beginner RF user, Intermediate RF user, Advanced RF user"
@@ -244,8 +244,8 @@
     "Room": {
       "en": "RoboConOnline"
     },
-    "Start": "2024-02-28T15:30:00+00:00",
-    "End": "2024-02-28T17:50:00+02:00",
+    "Start": "2024-02-28T13:30:00+00:00",
+    "End": "2024-02-28T15:50:00+02:00",
     "Lessons Learned": "Participants will learn which possibilities the use of Robot Framework offers in the ebedded area and how an exemplary solution can be built up and used step by step.",
     "Describe your intended audience": null,
     "Is this suitable for ..?": "Beginner RF user, Intermediate RF user, Advanced RF user"
@@ -539,8 +539,8 @@
       "en": "Workshop - Full Day"
     },
     "Track": null,
-    "Abstract": "Explore the synergy of Generative AI and Robot Framework via Listener API in this hands-on workshop! Discover how to enrich Robot Framework outputs and logs, automate Jira bug/task creations for failed test cases, and tap into ChatGPT for enhanced test insights. Using existing Python libraries, dive into seamless integrations, unlocking a new dimen",
-    "Description": "Post lunch, the workshop will shift its focus towards integrating Jira with Robot Framework, building on top of the listeners and ChatGPT integration from the morning session. Leveraging existing Python libraries, attendees will learn how to automate the creation of bugs/tasks in Jira for failed test cases directly from Robot Framework, again utilizing the Listener API. \r\n\r\n<br>\r\n\r\nBy the end of the workshop, attendees will have a well-rounded understanding and hands-on experience on how to leverage the Listener API for integrating ChatGPT and Jira with Robot Framework, broadening the horizon of what's achievable with Robot Framework Listeners API.",
+    "Abstract": "Explore the synergy of Generative AI and Robot Framework via Listener API in this hands-on workshop! Discover how to enrich Robot Framework outputs and logs, automate Jira bug/task creations for failed test cases, and tap into ChatGPT for enhanced test insights.",
+    "Description": "In this extensive full-day workshop, attendees will dive deep into exploring two powerful integrations to Robot Framework, honing in on the capabilities of the Listener API.\r\n\r\nThe morning session will focus on integrating ChatGPT with Robot Framework. Attendees will learn how to utilize the Listener API to harness the capabilities of ChatGPT, enriching the framework's outputs and logs. This integration aims to provide clearer and more informative feedback from test executions, making the debugging process more straightforward. We will also present how to enrich Robot Framework outputs and logs to provide a more detailed overview of test executions.\r\n\r\nPost lunch, the workshop will shift its focus towards integrating Jira with Robot Framework, building on top of the listeners and ChatGPT integration from the morning session. Leveraging existing Python libraries, attendees will learn how to automate the creation of bugs/tasks in Jira for failed test cases directly from Robot Framework, again utilizing the Listener API. \r\n\r\nBy the end of the workshop, attendees will have a well-rounded understanding and hands-on experience on leveraging the Listener API for integrating ChatGPT and Jira with Robot Framework, broadening the horizon of what's achievable with Robot Framework Listeners API.",
     "Duration": 420,
     "Slot Count": 1,
     "Session image": "",
@@ -555,8 +555,8 @@
     },
     "Start": "2024-02-06T07:00:00+00:00",
     "End": "2024-02-06T16:00:00+02:00",
-    "Lessons Learned": "TBA",
-    "Describe your intended audience": null,
+    "Lessons Learned": "In the workshop on integrating ChatGPT and Jira with Robot Framework, participants learned the significance of seamlessly blending automated testing with generative AI and workflow automation tools. The ChatGPT-enriched test outputs and logs integration demonstrates how AI can provide enhanced insights for automated tests. In parallel, the session on automating Jira task creation illuminated the importance of effective error handling and precise mapping of test results to Jira tasks. This exercise highlighted the value of workflow automation in saving time and reducing manual effort while underscoring the need for adaptable and maintainable scripts as testing requirements evolve. The hands-on experience emphasized the practicality of using existing Python libraries and the Listener API for efficient and meaningful integrations. It will give the participants actionable skills to apply in their testing environments.\r\n\r\nMorning Session: ChatGPT Integration with Robot Framework\r\n09:00 - 09:30: Introduction and Overview of Workshop\r\n09:30 - 10:30: Deep Dive into Robot Framework's Listener API and Integrating ChatGPT\r\n10:30 - 10:45: Coffee Break\r\n10:45 - 11:45: Hands-On Exercise: Enriching Test Outputs with ChatGPT\r\n11:45 - 12:00: Q&A and Recap of Morning Session\r\n\r\nLunch Break: 12:00 - 13:00\r\n\r\nAfternoon Session: Automating Jira Task Creation with Robot Framework\r\n13:00 - 14:00: Setting Up Jira Integration with Robot Framework\r\n14:00 - 14:15: Coffee Break\r\n14:15 - 15:15: Hands-On Exercise: Automating Bug/Task Creation in Jira\r\n15:15 - 16:00: Final Discussion, Advanced Tips, and Workshop Wrap-Up",
+    "Describe your intended audience": "This workshop is suitable for professionals with an intermediate to advanced level of understanding in software testing and automation. It assumes a basic knowledge of Python, as Python libraries are a key component of the integrations. The content is targeted more towards practical implementation rather than theoretical concepts, making it ideal for attendees who prefer hands-on learning to directly apply the skills in their work environment.",
     "Is this suitable for ..?": "Intermediate RF user, Advanced RF user"
   },
   {
@@ -704,10 +704,10 @@
     "Slot Count": 1,
     "Session image": "",
     "Speaker IDs": [
-      "FYLY7K"
+      "EWMKBG"
     ],
     "Speaker names": [
-      "Daniel Penning"
+      "Pawel Wisniewski"
     ],
     "Room": {
       "en": "RoboCon"
