@@ -1405,7 +1405,7 @@
       "en": "Keynote"
     },
     "Track": null,
-    "Abstract": "Welcome to RoboCon! In this session, we will provide an overview to set the tone and outline what attendees can expect from the conference. \r\n\r\nThe session will",
+    "Abstract": "Welcome to RoboCon! In this session, we will provide an overview to set the tone and outline what attendees can expect from the conference.",
     "Description": "Welcome to RoboCon! In this session, we will provide an overview to set the tone and outline what attendees can expect from the conference. \r\n\r\nWe will have a quick run-through of our program, highlighting a range of topics from Libraries to QA.\r\n\r\nWe will also explain the practicalities, and Mateusz will talk about engagement and gamification.\r\n\r\nRen\u00e9 and Miikka will introduce the RoboCon Foundation and the latest news on that front. \r\n\r\nThe session will conclude with a handover to Pekka for Robot Framework 7.0 news.",
     "Duration": 60,
     "Slot Count": 1,
