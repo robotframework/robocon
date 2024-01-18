@@ -834,7 +834,7 @@
     },
     "Track": null,
     "Abstract": "In 2020 we decided to use RobotFramework as an interface to our generic Embedded Test Platform.\r\nSince then our users check their hardware related microcontroller code only through Robot test sequences.\r\n\r\nThis talk will highlight some of the technical challenges we faced and what we learned in resolving them.",
-    "Description": "The talk will briefly explain why we turned to RobotFramework and what we need it for. Then these technical challenges are covered:\r\n\r\n- Access a network-based test device\r\n- Flexible keywords based on a user-defined configuration\r\n- Usability through VS Code and plugins \r\n- Concurrent access und authentication\r\n\r\nI will also share what seems to be missing in RobotFramework / Libraries / Ecosystem from our point of view.\r\nThe conclusion will give a definitive answer to the question if our decision to use RobotFramework as an interface turned out to be a good one or not.\r\n\r\nDaniel Penning studied EE and worked in industry and safety-critical embedded projects before founding embeff. As a conference speaker he regularly shares his passion for high-quality embedded development. At embeff he works with customers to put innovative solutions for embedded test automation to practical use.",
+    "Description": "The talk will briefly explain why we turned to RobotFramework and what we need it for. Then these technical challenges are covered:\r\n\r\n- Access a network-based test device\r\n- Flexible keywords based on a user-defined configuration\r\n- Usability through VS Code and plugins \r\n- Concurrent access und authentication\r\n\r\nI will also share what seems to be missing in RobotFramework / Libraries / Ecosystem from our point of view.\r\nThe conclusion will give a definitive answer to the question if our decision to use RobotFramework as an interface turned out to be a good one or not.",
     "Duration": 30,
     "Slot Count": 1,
     "Language": "en",
@@ -843,7 +843,7 @@
       "EWMKBG"
     ],
     "Speaker names": [
-      "Pawel Wisniewski"
+      "Pawe\u0142 Wi\u015bniewski"
     ],
     "Room": {
       "en": "RoboCon"
