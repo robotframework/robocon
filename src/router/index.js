@@ -6,6 +6,7 @@ import Sponsor from '../views/Sponsor.vue'
 import Archive from '../views/Archive.vue'
 import Stream from '../views/Stream.vue'
 import NotFound from '../views/NotFound.vue'
+import Game from '../views/Game.vue'
 
 const routes = [
   {
@@ -36,6 +37,23 @@ const routes = [
     path: '/stream',
     name: 'Stream',
     component: Stream
+  },
+  {
+    path: '/quiz',
+    beforeEnter: () => {
+      window.location.replace('https://8pasfjg2p1x.typeform.com/to/wfO1kE0k')
+    }
+  },
+  {
+    path: '/game',
+    name: 'Game',
+    component: Game
+  },
+  {
+    path: '/cs',
+    beforeEnter: () => {
+      window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSc8PQLJdrNdrNVV-eBJ7DxqxLCbHZqSSV0zsshCrUK1BlMT6g/viewform')
+    }
   },
   {
     path: '/:pathMatch(.*)*',
