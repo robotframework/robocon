@@ -1,9 +1,9 @@
-Robocon 2020 Website
+RoboCon Website
 ====================================
 
 This repository hosts RoboCon webpage source code.
 
-Readme for editing this page `<sources/README.md>`__
+Readme (old) for editing this page `<old page/sources/README.md>`__
 
 Adding or updating resources
 ----------------------------
