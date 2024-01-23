@@ -52,7 +52,7 @@
       be a speaker, and more…?
     </p>
     <p>
-      <u>Stickers for tasks 9-18 can only be acquired at the Merch Desk:</u>
+      <u>Stickers for <b>completed</b> tasks 9-18 can only be acquired at the Merch Desk:</u>
     </p>
     <p>
       <b>9. RATE A TALK IN OUR GRIDALY MOBILE APP:</b><br />
@@ -110,9 +110,10 @@
     <p>
       <b>16. DISCUSS A TOPIC IN A DISCUSSION AREA:</b><br />
       You can find the tables with different topics in the Discussion Area (near
-      the Speakers Corner). You are welcome to start any discussion - just write
-      a topic on a blank card and place it on the table. After the discussion,
-      go to the Merch Desk to get a sticker.
+      the Speakers Corner). Engage in a discussion on a current topic or you are
+      welcome to start a new discussion - just write a topic on a blank card and
+      place it on the table. After the discussion, go to the Merch Desk to get
+      a sticker.
     </p>
     <p>
       <b>17. TAKE A SELFIE WITH 3 PEOPLE THAT YOU NEVER MET BEFORE:</b><br />
