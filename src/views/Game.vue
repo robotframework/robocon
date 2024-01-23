@@ -1,13 +1,72 @@
 <template>
-  <div class="container">
+  <div class="container" style="margin-bottom: 5em;">
     <h1>
-      Title
+      Game Rules
     </h1>
     <h2>
-      Smaller title
+      This year, we want you to engage with others and get from the conference as much as possible. We want you to have fun. And we will reward everyone who takes an active part in the gamification.
     </h2>
+    <h3 style="margin-top: 2em;">
+      The rules are simple:
+    </h3>
+    <ul>
+      <li>
+        There are <b>18 tasks</b> described at the back of <b>your badge</b>.
+      </li>
+      <li>
+        Complete the tasks to get <b>robo-stickers</b>. The order doesn't matter.
+      </li>
+      <li>
+        Collect <b>8 stickers</b> to get a prize from the Merch Desk. Finishing on the 1st day gets you into a Special Raffle, where you can win top stuff like shirt, hoodie, mug and other cool swag. The raffle will be at the end of the 1st day (Feb 8th).
+      </li>
+      <li>
+        Collect <b>13 stickers</b> to take part in a Free Ticket Lottery for the next RoboCon 2025! The lottery takes place at the end of the 2nd day (Feb 9th). There is one ticket to be drawn.
+      </li>
+      <li>
+        The rewards for 8 and 13 stickers are not mutually exclusive.
+      </li>
+    </ul>
+    <h3 style="margin-top: 2em;">
+      More details about each task:
+    </h3>
     <p>
-      text here
+      <b>1-7. SPONSOR TASKS:</b> Check out our Sponsors' booths, ask them for a game, and they will give you more details. They have their own exciting tasks and will give you the stickers for completing them.
+    </p>
+    <p>
+      <b>8. # JOKER TASK:</b>  task, which can be described as “be nice and proactive and you might get one”. There are plenty of ways you can receive this sticker, but they are solely given out by the organizers. Examples of tasks: propose a lightning talk, participate in the “Mystery Challenge” on Day 1, attend a workshop, be a speaker, and more…?
+    </p>
+    <p>
+      <u>Stickers for tasks 9-18 can only be acquired at the Merch Desk:</u>
+    </p>
+    <p>
+      <b>9. RATE A TALK IN OUR GRIDALY MOBILE APP:</b> Rate a talk in this app. Go to the agenda and give a 1-5 score for the talk that already happened. You might also add a comment there. Show the rated talk at the Merch Desk.
+    </p>
+    <p>
+      <b>10. TAKE A PIC AT THE PHOTO WALL:</b> Take a picture at our Photo Wall (near the Speaker's Corner and Discussion Area). Show the photo at the Merch Desk.
+    </p>
+    <p>
+      <b>11. DECODE A SECRET MESSAGE FROM THE VIDEO ADS:</b> Decode a secret message from the video adverts that are played between the talks or after the breaks in the main conference hall. Tell the secret message at the Merch Desk, but don't share it with others. Let them have some fun :)
+    </p>
+    <p>
+      <b>12. POST WITH #ROBOCON HASHTAG ON SOCIAL MEDIA:</b> Post something with a #robocon hashtag on social media (e.g. Facebook, X/Twitter, LinkedIn, Instagram). Show the post at the Merch Desk.
+    </p>
+    <p>
+      <b>13. FILL OUT THE SURVEY AT ROBOCON.io/cs OR IN THE APP:</b> Fill out the Community Survey that can be found at <a href="https://robocon.io/cs" target="_blank">robocon.io/cs</a> or in the mobile app under Community Survey from side-menu. At the end of the survey, there is a password you need to share with someone at the Merch Desk. The survey takes around 10-15 min.
+    </p>
+    <p>
+      <b>14. PASS A QUIZ AT ROBOCON.io/quiz OR IN THE APP WITH 70%:</b> Do the quiz available at <a href="https://robocon.io/quiz" target="_blank">robocon.io/quiz</a> or in the mobile app under Quiz from side-menu. Finish with at least 70% success rate. There are 10 questions and each has only 1 correct answer.
+    </p>
+    <p>
+      <b>15. GIVE A STAR TO ANY RF PROJECT ON GITHUB:</b> Give a star on GitHub to a Robot Framework project of your choice. The projects that take part in the game can be found under <a href="https://robotframework.org/#resources" target="_blank">Resources section</a> on the official <a href="https://robotframework.org/#resources" target="_blank">robotframework.org</a> page (be aware there are 3 different tabs there). Show the starred project at the Merch Desk.
+    </p>
+    <p>
+      <b>16. DISCUSS A TOPIC IN A DISCUSSION AREA:</b> You can find the tables with different topics in the Discussion Area (near the Speakers Corner). You are welcome to start any discussion – just write a topic on a blank card and place it on the table. After the discussion, go to the Merch Desk to get a sticker.
+    </p>
+    <p>
+      <b>17. TAKE A SELFIE WITH 3 PEOPLE THAT YOU NEVER MET BEFORE:</b> Take a selfie with 3 people (including you) that you never met before. Show the picture at the Merch Desk.
+    </p>
+    <p>
+      <b>18. FIND YOUR ROBO-FRIEND (matching face):</b> Find your robo-friend (a person that has the same robo-face on the badge) and come with him/her together to the Merch Desk. Each of you gets a sticker! Beware: some faces are similar.
     </p>
   </div>
 </template>

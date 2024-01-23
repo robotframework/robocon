@@ -1,9 +1,28 @@
-Robocon 2020 Website
+RoboCon Website
 ====================================
 
 This repository hosts RoboCon webpage source code.
 
-Readme for editing this page `<sources/README.md>`__
+How to run
+----------
+
+Readme (old) for editing this page `<old page/sources/README.md>`__
+
+Make sure to use Node v16.
+
+To install all dependencies, run:
+
+```
+npm i
+```
+
+in the project's root, and then run:
+
+```
+npm run dev
+```
+
+Go to `lolcalhost:8080` to see the rendered website.
 
 Adding or updating resources
 ----------------------------
