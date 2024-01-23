@@ -6,23 +6,25 @@ This repository hosts RoboCon webpage source code.
 How to run
 ----------
 
-Readme (old) for editing this page `<old page/sources/README.md>`__
+Readme (old) for editing this page is located at "``old page/sources/README.md``".
 
 Make sure to use Node v16.
 
 To install all dependencies, run:
 
-```
-npm i
-```
+.. code-block::
+
+    npm i
+
 
 in the project's root, and then run:
 
-```
-npm run dev
-```
+.. code-block::
 
-Go to `lolcalhost:8080` to see the rendered website.
+    npm run dev
+
+
+Go to ``localhost:8080`` to see the rendered website.
 
 Adding or updating resources
 ----------------------------
