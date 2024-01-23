@@ -17,7 +17,7 @@ import Tutorials24 from './Tutorials24.vue'
 
 import BaseIcon from './BaseIcon.vue'
 import GlobeIcon from './icons/GlobeIcon.vue'
-import GlobeRbcn from './icons/GlobeRbcn.vue'
+import GlobeRbcn from './icons/GlobeRBCN.vue'
 import LinkIcon from './icons/LinkIcon.vue'
 import ChevronIcon from './icons/ChevronIcon.vue'
 import NewTabIcon from './icons/NewTabIcon.vue'
