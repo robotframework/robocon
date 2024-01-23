@@ -83,8 +83,8 @@
       Fill out the Community Survey that can be found at
       <a href="https://robocon.io/cs" target="_blank">robocon.io/cs</a> or in
       the mobile app under Community Survey from side-menu. At the end of the
-      survey, there is a password you need to share with someone at the Merch
-      Desk. The survey takes around 10-15 min.
+      survey, there is a password you need to share at the Merch Desk. The
+      survey takes around 10-15 min.
     </p>
     <p>
       <b>14. PASS A QUIZ AT ROBOCON.io/quiz OR IN THE APP WITH 70%:</b><br />
