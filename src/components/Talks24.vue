@@ -12,18 +12,20 @@
     <div
       v-for="talk in shownTalks"
       :key="talk.id"
-      class=" mt-large card p-small"
+      class="mt-large card p-small"
+      :class="talk.isBreak && 'bg-secondary sharper'"
     >
       <a
+        v-if="!talk.isBreak"
         class="anchor"
         :id="getSlug(talk.title, selectedTrack)"
       ></a>
       <div class="flex between">
         <h3>
-          {{ talk.title }}
+          {{ talk.isBreak ? talk.description.en : talk.title }}
         </h3>
         <a
-          v-if="!$store.state.isMobile"
+          v-if="!$store.state.isMobile && !talk.isBreak"
           title="get link to talk"
           :href="`#${getSlug(talk.title, selectedTrack)}`"
         >
@@ -31,16 +33,16 @@
         </a>
       </div>
       <p class="type-small m-none">
-        {{ format(new Date(talk.slot.start), 'MMM dd') }} {{ getShownTime(talk.slot.start) }} - {{ getShownTime(talk.slot.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
+        {{ format(new Date(talk.slot?.start || talk.start), 'MMM dd') }} {{ getShownTime(talk.slot?.start || talk.start) }} - {{ getShownTime(talk.slot?.end || talk.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
       </p>
-      <div v-html="parseText(talk.abstract)" />
-      <details class="details">
+      <div v-if="talk.abstract" v-html="parseText(talk.abstract)" />
+      <details v-if="!talk.isBreak && talk.description" class="details">
         <summary>
           Full description
         </summary>
         <div v-html="parseText(talk.description)" class="p-small" />
       </details>
-      <h3 class="mt-xlarge">Presenters</h3>
+      <h3 v-if="!talk.isBreak" class="mt-xlarge">Presenters</h3>
       <details
         v-for="speaker in talk.speakers"
         :key="speaker.code"
@@ -94,14 +96,20 @@ export default {
     fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
       .then((res) => res.json())
       .then((res) => {
-        this.talksLive = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon')
+        this.talksLive = [
+          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon'),
+          ...res?.breaks?.filter((b) => b?.room?.en === 'RoboCon').map((b) => ({ ...b, isBreak: true }))
+        ]
           .sort((a, b) => {
-            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            if (new Date(a.slot?.start || a.start) < new Date(b.slot?.start || b.start)) return -1
             return 1
           })
-        this.talksOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline')
+        this.talksOnline = [
+          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline'),
+          ...res?.breaks?.filter((b) => b?.room?.en === 'RoboConOnline').map((b) => ({ ...b, isBreak: true }))
+        ]
           .sort((a, b) => {
-            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            if (new Date(a.slot?.start || a.start) < new Date(b.slot?.start || b.start)) return -1
             return 1
           })
       })
