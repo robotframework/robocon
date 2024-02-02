@@ -825,7 +825,7 @@
     "Start": "2024-02-07T08:00:00+00:00",
     "End": "2024-02-07T12:00:00+02:00",
     "Lessons Learned": "By the end of this tutorial, participants will be equipped to:\r\n\r\n<br>\r\n\r\n- Install and set up RobotFramework.\r\n- Create and execute basic test cases.\r\n- Efficiently manage variables, test data, and test environments.\r\n- Harness the power of keyword libraries and custom keywords.\r\n- Follow best practices for sustainable test automation.\r\n\r\nThis tutorial is designed to bring practical value to attendees by providing them with the skills and knowledge to confidently use RobotFramework for their test automation projects. It emphasizes hands-on experience, ensuring that participants are well-prepared to tackle real-world automation challenges and deliver high-quality software.",
-    "Describe your intended audience": "This tutorial is designed for individuals with little to no experience with RobotFramework. Our goal is to equip you with the fundamental knowledge and practical skills required to start your test automation journey. Whether you're a tester, developer, or a quality assurance professional, you'll leave this tutorial with a solid understanding of how to create and maintain test suites, handle test data, and integrate RobotFramework into your projects.\r\n\r\n<br>\r\n\r\nTutorial prerequisites:\r\n- computer with Python (>3.10) installed\r\n- IDE of choice",
+    "Describe your intended audience": "This tutorial is designed for individuals with little to no experience with RobotFramework. Our goal is to equip you with the fundamental knowledge and practical skills required to start your test automation journey. Whether you're a tester, developer, or a quality assurance professional, you'll leave this tutorial with a solid understanding of how to create and maintain test suites, handle test data, and integrate RobotFramework into your projects.\r\n\r\n<br>\r\n\r\nTutorial prerequisites:\r\n- computer with Python (>3.10) installed\r\n- node.js\r\n- IDE of choice",
     "Is this suitable for ..?": "Beginner RF user"
   },
   {
@@ -1106,10 +1106,10 @@
       "Marduk Bola\u00f1os"
     ],
     "Room": {
-      "en": "RoboCon"
+      "en": "RoboConOnline"
     },
-    "Start": "2024-02-08T12:40:00+00:00",
-    "End": "2024-02-08T15:10:00+02:00",
+    "Start": "2024-02-28T12:00:00+00:00",
+    "End": "2024-02-28T14:20:00+02:00",
     "Lessons Learned": "Since this is a new tool and it is aimed at domain experts, this talk will serve as an introduction and short tutorial. Participants can expect to learn the following:\r\n\r\n- Which keywords are available\r\n- How to use RoboSAPiens interactively\r\n- Pro tips for getting the most out of RoboSAPiens",
     "Describe your intended audience": "The intended audience of the talk are people who work with the SAP Windows GUI and would like to automate it to save time. This includes automatically filling out forms with data from Excel and automating manual tests.",
     "Is this suitable for ..?": "Beginner RF user"
@@ -1196,8 +1196,8 @@
     "Room": {
       "en": "RoboCon"
     },
-    "Start": "2024-02-08T15:00:00+00:00",
-    "End": "2024-02-08T17:30:00+02:00",
+    "Start": "2024-02-08T12:40:00+00:00",
+    "End": "2024-02-08T15:10:00+02:00",
     "Lessons Learned": "At the end of the talk, attendees will have seen a proven best practice architecture on how to structure resources in such a way that they can:\r\n- easily maintain their project\r\n- easily collaborate with stakeholders in creating and communicating tests\r\n- easily collaborate across teams and projects within a larger organisation\r\n\r\nWe will show our solutions to common challenges that you will face when setting up the robot framework in a new environment and when scaling up to multiple applications and/or teams.",
     "Describe your intended audience": "Since it is an architecture that is useful on small scale to large scale projects, everyone can benefit from the good practices we used.",
     "Is this suitable for ..?": "Beginner RF user, Intermediate RF user, Advanced RF user"
@@ -1305,15 +1305,17 @@
     "Language": "en",
     "Session image": "",
     "Speaker IDs": [
+      "VWRTSC",
       "HTDUSJ"
     ],
     "Speaker names": [
+      "Mateusz Nojek",
       "Ren\u00e9 Rohner"
     ],
     "Room": {
       "en": "RoboCon"
     },
-    "Start": "2024-02-08T15:30:00+00:00",
+    "Start": "2024-02-08T15:00:00+00:00",
     "End": "2024-02-08T18:30:00+02:00",
     "Lessons Learned": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "Describe your intended audience": null,
@@ -1510,8 +1512,16 @@
     "Slot Count": 1,
     "Language": "en",
     "Session image": "",
-    "Speaker IDs": [],
-    "Speaker names": [],
+    "Speaker IDs": [
+      "JUQN3X",
+      "8U3B3T",
+      "D3ZLT3"
+    ],
+    "Speaker names": [
+      "Ren\u00e9 Rohner",
+      "David Fogl",
+      "Pekka Kl\u00e4rck"
+    ],
     "Room": {
       "en": "RoboConOnline"
     },
@@ -1765,11 +1775,9 @@
     "Speaker names": [
       "Babu Manickam"
     ],
-    "Room": {
-      "en": "RoboConOnline"
-    },
-    "Start": "2024-02-28T12:00:00+00:00",
-    "End": "2024-02-28T14:20:00+02:00",
+    "Room": null,
+    "Start": null,
+    "End": null,
     "Lessons Learned": "Here are my views towards the lessons learned (I understand considering the time limit of 25 minutes - this can be challenging but guaranteed to do the best):\r\n\r\n1. Kubernetes: Participants will learn how to utilize Kubernetes for real-time auto-scaling and self-healing, essential for optimal resource usage in Robot Framework.\r\n2. Terraform: An in-depth look at how Terraform can programmatically set up the required infrastructure, making the scaling process efficient and reproducible.\r\n3. Ansible: A focus on automated configuration to enable quick scaling up or down, streamlining the automation process.\r\n4. Prometheus: Techniques to leverage Prometheus for real-time metrics, supporting not just auto-scaling but also custom alerting based on metrics.\r\n5. Grafana: Insights into creating intuitive dashboards for better analytics and visualization, including setting up scaling alerts.\r\n\r\nLive Demo: A hands-on demonstration on scaling Robot Framework tests both vertically (by reallocating resources) and horizontally (by increasing/decreasing the number of Robot pods).\r\n\r\nBest Practices & Lessons Learned\r\n\r\nCase Study: A real-world example will be discussed where the practices mentioned reduced the test execution time from 8 hours to less than 60 minutes. This highlights the immediate benefits in a DevOps cycle.\r\n\r\nTakeaways\r\n#1 A robust framework to implement auto-scaling in Robot Framework tests, irrespective of the cloud service provider.\r\n#2 Proven strategies and code snippets for immediate implementation.\r\n\r\nBy attending this session, participants will not just grasp the theoretical underpinnings but will gain practical, hands-on knowledge that can be immediately applied to their own DevOps and testing environments.",
     "Describe your intended audience": "1. QA Engineers: Those who are already working with Robot Framework or are looking to implement scalable test automation will find this session particularly useful.\r\n\r\n2. DevOps Practitioners: Professionals who are involved in CI/CD pipeline configurations and are looking to enhance scalability and resource optimization will gain invaluable insights.\r\n\r\n3. CTOs and Decision-Makers: Executives looking for strategic ways to improve resource utilization, speed up development cycles, and optimize costs should attend to understand how these technologies can impact ROI.\r\n\r\n4. Academicians and Students: Anyone in academia interested in cutting-edge DevOps practices and test automation scalability.\r\n\r\nThis session is designed to offer valuable insights to both technical and managerial roles. The content will range from hands-on code snippets to high-level strategies, making it a must-attend for a wide spectrum of professionals.",
     "Is this suitable for ..?": "Intermediate RF user, Advanced RF user"
