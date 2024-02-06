@@ -100,7 +100,7 @@
               <div class="mt-small color-theme font-title type-body">Feb 6th</div>
               Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
               <div class="mt-small color-theme font-title type-body">7th</div>
-              Community Day
+              Community Day (9am) @&nbsp;<a href="https://maps.app.goo.gl/6QFBjcWk8iCaHQCG6" target="_blank">Eficode</a>
               <div class="mt-small color-theme font-title type-body">8th</div>
               Main Conference
               <div>+ Community Dinner</div>
