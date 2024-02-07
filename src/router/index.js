@@ -41,7 +41,7 @@ const routes = [
   {
     path: '/quiz',
     beforeEnter: () => {
-      window.location.replace('https://8pasfjg2p1x.typeform.com/to/wfO1kE0k')
+      window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSfsxaOkNju6m7Tp3D3QcdVel8Ikp1U0GUdNZF1LQYtKltp0aw/viewform?usp=sf_link')
     }
   },
   {
