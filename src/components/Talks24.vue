@@ -1,7 +1,7 @@
 <template>
   <div class="mt-small w-100">
     <button
-      v-for="type in ['live', 'online']"
+      v-for="type in ['online', 'live']"
       :key="type"
       class="theme mr-xsmall"
       :class="selectedTrack === type && 'active'"
@@ -96,8 +96,9 @@ export default {
     fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
       .then((res) => res.json())
       .then((res) => {
+        console.log(res?.slots)
         this.talksLive = [
-          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon'),
+          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon').filter((talk) => talk?.submission_type?.en !== 'Tutorial'),
           ...res?.breaks?.filter((b) => b?.room?.en === 'RoboCon').map((b) => ({ ...b, isBreak: true }))
         ]
           .sort((a, b) => {
@@ -105,13 +106,14 @@ export default {
             return 1
           })
         this.talksOnline = [
-          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline'),
+          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline').filter((talk) => talk?.submission_type?.en !== 'Tutorial'),
           ...res?.breaks?.filter((b) => b?.room?.en === 'RoboConOnline').map((b) => ({ ...b, isBreak: true }))
         ]
           .sort((a, b) => {
             if (new Date(a.slot?.start || a.start) < new Date(b.slot?.start || b.start)) return -1
             return 1
           })
+        console.log(this.talksOnline)
       })
       .then(() => {
         const hash = window.location.hash
@@ -124,7 +126,7 @@ export default {
   },
   data: () => ({
     publicPath: process.env.BASE_URL,
-    selectedTrack: 'live',
+    selectedTrack: 'online',
     talksLive: [],
     talksOnline: []
   }),

@@ -1,7 +1,7 @@
 <template>
   <div class="mt-small w-100">
     <button
-      v-for="type in ['live', 'online']"
+      v-for="type in ['online']"
       :key="type"
       class="theme mr-xsmall"
       :class="shownTutorials === type && 'active'"
@@ -112,11 +112,11 @@ export default {
         //     if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
         //     return 1
         //   })
-        this.tutorials = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'Eficode')
-          .sort((a, b) => {
-            if (new Date(a.Start) < new Date(b.Start)) return -1
-            return 1
-          })
+        // this.tutorials = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'Eficode')
+        //   .sort((a, b) => {
+        //     if (new Date(a.Start) < new Date(b.Start)) return -1
+        //     return 1
+        //   })
         this.tutorialsOnline = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'RoboConOnline')
           .sort((a, b) => {
             if (new Date(a.Start) < new Date(b.Start)) return -1
@@ -136,7 +136,7 @@ export default {
     publicPath: process.env.BASE_URL,
     tutorials: [],
     tutorialsOnline: [],
-    shownTutorials: 'live'
+    shownTutorials: 'online'
   }),
   methods: {
     format,

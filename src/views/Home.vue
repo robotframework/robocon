@@ -19,12 +19,12 @@
         and have a great time with one another.
       </p>
       <p class="mb-medium">
-        For <span class="color-theme">RoboCon 2024</span> we will have a
-        familiar fully in-person conference and then a few weeks later a full
+        For <span class="color-theme">RoboCon 2024</span> we had a
+        familiar fully in-person conference on Feb 7th to 9th and then end of February (28th & 29th) we will have a full
         online conference like the year before.
       </p>
       <div class="col-sm-12 row center between-md">
-        <Ticket link="https://tickets.robotframework.org/robocon-2024/3913179/" class="mb-small">
+        <!-- <Ticket link="https://tickets.robotframework.org/robocon-2024/3913179/" class="mb-small">
           <template v-slot:title>
             Main Conference<br>In-person<br>
           </template>
@@ -37,7 +37,7 @@
           <template v-slot:right>
             2024
           </template>
-        </Ticket>
+        </Ticket> -->
         <Ticket link="https://tickets.robotframework.org/robocon-2024/3913180/">
           <template v-slot:title>
             Main Conference<br>Online
@@ -54,7 +54,7 @@
         </Ticket>
       </div>
       <sponsors :sponsors="$tm('home.sponsors')" />
-      <p class="mt-large">
+      <!-- <p class="mt-large">
         <span class="color-theme">The in-person conference</span> will be held in Helsinki 8-9 February, 2024.
       </p>
       <p>
@@ -82,51 +82,53 @@
         <p>
           Both options will start late morning. If weather is really bad we will have backup plans probably to the local museums of which there are about half a dozen in the immediate area. More information will be published as we get closer to the conference dates.
         </p>
-      </details>
-      <p>
-        In-person ticket includes a complimentary online conference ticket.
-      </p>
+      </details> -->
       <p>
         <span class="color-theme">The online conference</span> will take place
         28-29 February, 2024 followed by the community day on the 1st of March.
       </p>
+      <p>
+        In-person ticket includes a complimentary online conference ticket.
+      </p>
       <div class="row col-sm-12">
-        <div class="col-sm-12 col-md-6 px-small">
-          <div class="bg-secondary p-medium pt-large pb-large rounded mb-small">
-            <h2>In-person</h2>
-            <div>Helsinki, Finland</div>
-            <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
-            <span class="line-height-1">
-              <div class="mt-small color-theme font-title type-body">Feb 6th</div>
-              Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
-              <div class="mt-small color-theme font-title type-body">7th</div>
-              Community Day (9am) @&nbsp;<a href="https://maps.app.goo.gl/6QFBjcWk8iCaHQCG6" target="_blank">Eficode</a>
-              <div class="mt-small color-theme font-title type-body">8th</div>
-              Main Conference
-              <div>+ Community Dinner</div>
-              <div class="mt-small color-theme font-title type-body">9th</div>
-              Main Conference
-              <div>+ After Party</div>
-              <div class="mt-small color-theme font-title type-body">10th</div>
-              Fun activity
-            </span>
-          </div>
+          <div class="col-sm-12 col-md-6 px-small">
+              <div class="bg-secondary p-medium pt-large pb-2xlarge rounded mb-small">
+                  <h2>Online</h2>
+                  <a href="https://www.gather.town/">Gather.town</a>
+                  <span class="line-height-1">
+                      <div class="mt-small color-theme font-title type-body">Feb 27th</div>
+                      Tutorials
+                      <div class="mt-small color-theme font-title type-body">Feb 28th</div>
+                      Main Conference
+                      <div class="mt-small color-theme font-title type-body">29th</div>
+                      Main Conference
+                      <div class="mt-small color-theme font-title type-body">Mar 1st</div>
+                      Community Day
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 px-small">
+              <div class="bg-secondary p-medium pt-large pb-large rounded mb-small">
+                <h2>In-person (past)</h2>
+                <div>Helsinki, Finland</div>
+                <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
+                <span class="line-height-1">
+                  <div class="mt-small color-theme font-title type-body">Feb 6th</div>
+                  Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
+                  <div class="mt-small color-theme font-title type-body">7th</div>
+                  Community Day (9am) @&nbsp;<a href="https://maps.app.goo.gl/6QFBjcWk8iCaHQCG6" target="_blank">Eficode</a>
+                  <div class="mt-small color-theme font-title type-body">8th</div>
+                  Main Conference
+                  <div>+ Community Dinner</div>
+                  <div class="mt-small color-theme font-title type-body">9th</div>
+                  Main Conference
+                  <div>+ After Party</div>
+                  <div class="mt-small color-theme font-title type-body">10th</div>
+                  Fun activity
+                </span>
+              </div>
+            </div>
         </div>
-        <div class="col-sm-12 col-md-6 px-small">
-          <div class="bg-secondary p-medium pt-large pb-2xlarge rounded mb-small">
-            <h2>Online</h2>
-            <a href="https://www.gather.town/">Gather.town</a>
-            <span class="line-height-1">
-              <div class="mt-small color-theme font-title type-body">Feb 28th</div>
-              Main Conference
-              <div class="mt-small color-theme font-title type-body">29th</div>
-              Main Conference
-              <div class="mt-small color-theme font-title type-body">Mar 1st</div>
-              Community Day
-            </span>
-          </div>
-        </div>
-      </div>
     </page-section>
     <page-section title-id="tutorials" :title="'Tutorials'">
       <p>
@@ -137,7 +139,7 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
       </p>
       <tutorials24 :speakers="speakers" />
     </page-section>
-    <page-section title-id="workshops" :title="'Workshops'">
+    <!-- <page-section title-id="workshops" :title="'Workshops'">
       <p>
         The in-person conference week kicks off with our exceptional hands-on workshops. These serve as your gateway to a deep dive into specific topics, allowing you to learn practically in a small group setting.
       </p>
@@ -145,11 +147,11 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
         We offer a diverse range of workshops covering various topics and skill levels. Be sure to choose one that's just right for you!
       </p>
       <workshops24 :speakers="speakers" />
-    </page-section>
+    </page-section> -->
     <page-section title-id="talks" :title="'Talks'">
       <talks24 :speakers="speakers" />
     </page-section>
-    <page-section title-id="hotels" :title="'Hotels'">
+    <!-- <page-section title-id="hotels" :title="'Hotels'">
       <p>
         If you are looking for <span class="color-theme">accommodation</span>, you may reserve a hotel at a discounted rate via the following links:
       </p>
@@ -163,12 +165,13 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
           <a class="block type-center" href="https://bit.ly/HotelF6">Hotel F6</a>
         </div>
       </div>
-    </page-section>
+    </page-section> -->
   </div>
 </template>
 
 <script>
-import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
+// import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
+import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
 
 export default {
   name: 'App',
@@ -177,7 +180,7 @@ export default {
     NewsBanner,
     Ticket,
     Talks24,
-    Workshops24,
+    // Workshops24,
     Tutorials24,
     Sponsors,
     GlobeRbcn

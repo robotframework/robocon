@@ -23,21 +23,21 @@
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #TUTORIALS
         </a>
-        <a
+        <!-- <a
           href="#workshops"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #WORKSHOPS
-        </a>
+        </a> -->
         <a
           href="#talks"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #TALKS
         </a>
-        <a
+        <!-- <a
           href="#hotels"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #HOTELS
-        </a>
+        </a> -->
       </div>
       <div v-else>
         <router-link
