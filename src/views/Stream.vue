@@ -19,39 +19,23 @@
     <span>VALID</span>
     <span class="color-theme">AUTH</span>
   </h1>
-  <div v-if="!isFullScreen">
-    <div v-if="talks.length" class="container mt-large mb-xlarge px-small">
-      <h2>
-        Wednesday
-      </h2>
-      <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))" :small="true" :hash="token.hashKey" />
-      <h2 class="mt-xlarge">
-        Thursday
-      </h2>
-      <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))" :small="true" :hash="token.hashKey" />
-      <h2 class="mt-xlarge">
-        Friday
-      </h2>
-      <talks-2023 :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-03'))" :small="true" :hash="token.hashKey" />
-    </div>
-    <div v-else>
-      Loading talks...
-    </div>
+  <div v-if="!isFullScreen" class="container narrow">
+    <talks24 :hashKey="token.hashKey" :speakers="[speakers]" />
   </div>
 </template>
 
 <script>
-import { Talks2023 } from 'Components'
+import { Talks24 } from 'Components'
 import CryptoJS from 'crypto-js'
 import * as jose from 'jose'
 export default {
   components: {
-    Talks2023
+    Talks24
   },
   data: () => ({
     selectedDay: 1,
-    day1: 'U2FsdGVkX1/0aHHp+Cys2bR/e8tq3sVnQiterKrTxTM=',
-    day2: 'U2FsdGVkX19omJf3PXfUUePA8Lo2nWXgHg8e3/Ax/d4=',
+    day1: 'U2FsdGVkX18yk7gOoIBruK+/q6wYpUXDgxjmMBpDrB0=',
+    day2: 'U2FsdGVkX1+59ihX3+9fjeNo9jXUIQAP/C/jlHLUU5k=',
     chat: 'U2FsdGVkX19Id2P5u0Hc1xSiLbqraODnTHvKjpo4p5yVgp4jY5Oj8/odAjctICBGwX8ptykisw2uFsCKXlGgYA==',
     token: {},
     public: `-----BEGIN PUBLIC KEY-----
@@ -70,8 +54,8 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
 -----END PUBLIC KEY-----`,
     dataReady: false,
     error: false,
-    talks: [],
-    chatShown: true
+    chatShown: true,
+    speakers: []
   }),
   computed: {
     streamUrl() {
@@ -88,15 +72,14 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
   },
   async created() {
     const today = new Date()
-    if (today.getDate() === 2 && today.getMonth() === 2) {
+    if (today.getDate() === 29 && today.getMonth() === 2) {
       this.selectedDay = 2
     }
     const params = new URLSearchParams(window.location.search)
     const auth = Object.fromEntries(params.entries()).auth || window.localStorage.getItem('auth')
     const attendee = Object.fromEntries(params.entries()).attendee || window.localStorage.getItem('attendee')
-    console.log(auth)
     if (typeof auth !== 'undefined' && typeof attendee !== 'undefined') {
-      window.history.replaceState({}, document.title, '/stream' + window.location.hash)
+      // window.history.replaceState({}, document.title, '/stream' + window.location.hash)
       if (attendee !== 'gather') {
         window.localStorage.setItem('auth', auth)
         window.localStorage.setItem('attendee', attendee)
@@ -117,29 +100,16 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
     }
     this.dataReady = true
     Promise.all([
-      fetch('https://cfp.robocon.io/api/events/robocon-2023-online/submissions/'),
-      fetch('https://pretalx.com/api/events/robocon-2023-online/schedules/latest/')
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/'),
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=25'),
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=50')
     ])
-      .then(async([submissionsOnline, scheduleOnline]) => {
-        const talksOnline = await submissionsOnline.json()
-        const { breaks: breaksOnline } = await scheduleOnline.json()
-        return [talksOnline.results, breaksOnline]
-      })
-      .then(([list, breaks]) => {
-        const talks = list
-          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote', 'Pre-Recorded Full Talk', 'OpenSpace'].includes(submission_type.en)) // eslint-disable-line
-        const breaksParsed = breaks
-          .map((item) => ({
-            ...item,
-            submission_type: item.description.en.toLowerCase().includes('talk') ? 'Misc' : 'Break'
-          }))
-        this.talks = [...talks, ...breaksParsed]
-          .map((item) => ({
-            ...item,
-            slot: item.slot || { start: item.start, end: item.end },
-            type: item.submission_type.en || item.submission_type
-          }))
-          .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+      .then(async([first, second, third]) => {
+        const f = await first.json()
+        const s = await second.json()
+        const t = await third.json()
+        const arr = [...f.results, ...s.results, ...t.results]
+        this.speakers = arr.flatMap(({ speakers }) => speakers)
       })
   }
 }
