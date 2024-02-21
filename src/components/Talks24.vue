@@ -1,7 +1,7 @@
 <template>
   <div class="mt-small w-100">
     <button
-      v-for="type in ['online', 'live']"
+      v-for="type in ['online', 'helsinki']"
       :key="type"
       class="theme mr-xsmall"
       :class="selectedTrack === type && 'active'"
@@ -35,6 +35,11 @@
       <p class="type-small m-none">
         {{ format(new Date(talk.slot?.start || talk.start), 'MMM dd') }} {{ getShownTime(talk.slot?.start || talk.start) }} - {{ getShownTime(talk.slot?.end || talk.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
       </p>
+      <div v-if="hashKey && getVideoUrl(talk.code)" class="col-sm-12 col-md-10 col-md-offset-1">
+        <div width="100%" class="video mt-medium mb-medium">
+          <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
       <div v-if="talk.abstract" v-html="parseText(talk.abstract)" />
       <details v-if="!talk.isBreak && talk.description" class="details">
         <summary>
@@ -73,6 +78,7 @@
 import { marked } from 'marked'
 import { format, isWithinInterval } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
+import CryptoJS from 'crypto-js'
 
 export default {
   name: 'Talks24',
@@ -80,6 +86,10 @@ export default {
     speakers: {
       type: Array,
       required: true
+    },
+    hashKey: {
+      type: String,
+      required: false
     }
   },
   components: {
@@ -87,8 +97,8 @@ export default {
   },
   computed: {
     shownTalks() {
-      if (this.selectedTrack === 'live') return this.talksLive
-      if (this.selectedTrack === 'online') return this.talksOnline
+      if (this.selectedTrack === 'online' || this.onlineOnly) return this.talksOnline
+      if (this.selectedTrack === 'helsinki') return this.talksLive
       return []
     }
   },
@@ -96,7 +106,6 @@ export default {
     fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
       .then((res) => res.json())
       .then((res) => {
-        console.log(res?.slots)
         this.talksLive = [
           ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon').filter((talk) => talk?.submission_type?.en !== 'Tutorial'),
           ...res?.breaks?.filter((b) => b?.room?.en === 'RoboCon').map((b) => ({ ...b, isBreak: true }))
@@ -113,22 +122,28 @@ export default {
             if (new Date(a.slot?.start || a.start) < new Date(b.slot?.start || b.start)) return -1
             return 1
           })
-        console.log(this.talksOnline)
       })
       .then(() => {
         const hash = window.location.hash
-        if (hash.includes('online')) this.selectedTrack = 'online'
-        this.$nextTick(() => {
-          const el = document.getElementById(hash.slice(1))
-          if (el) el.scrollIntoView()
-        })
+        if (hash) {
+          if (hash.includes('online')) this.selectedTrack = 'online'
+          this.$nextTick(() => {
+            const el = document.getElementById(hash.slice(1))
+            if (el) el.scrollIntoView()
+          })
+        }
       })
   },
   data: () => ({
     publicPath: process.env.BASE_URL,
     selectedTrack: 'online',
     talksLive: [],
-    talksOnline: []
+    talksOnline: [],
+    recordings: {
+      TQTQQN: 'U2FsdGVkX1+uEgAGlFJ0EmTmaUjx4p7BB/etKhgVzu8=',
+      SSECGZ: 'U2FsdGVkX187HqoCuDt+LvlnThN3kh6vioUVzk/b9tk=',
+      XFZ7KM: 'U2FsdGVkX1/5jKr1TKkmGoG/5Xna8uEbeLXDMJY+Kpk='
+    }
   }),
   methods: {
     format,
@@ -154,6 +169,21 @@ export default {
     },
     getSpeaker(speakerId) {
       return this.speakers.find(({ code }) => code === speakerId)
+    },
+    getVideoUrl(code) {
+      if (typeof code === 'undefined') return undefined
+      const recording = this.recordings[code]
+      if (!recording) {
+        // console.error(`Code ${code} did not have a recording.`)
+        return undefined
+      }
+      try {
+        const url = CryptoJS.AES.decrypt(recording, this.hashKey).toString(CryptoJS.enc.Utf8)
+        return `https://www.youtube-nocookie.com/embed/${url}?rel=0&autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
+      } catch (e) {
+        // console.error(`Code ${code} did not have a valid recording.`)
+        return undefined
+      }
     }
   }
 }

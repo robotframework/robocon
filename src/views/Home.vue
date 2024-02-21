@@ -130,7 +130,7 @@
             </div>
         </div>
     </page-section>
-    <page-section title-id="tutorials" :title="'Tutorials'">
+    <!-- <page-section title-id="tutorials" :title="'Tutorials'">
       <p>
         Tutorials offer you a sneak peek into specific topics, each uniquely designed for different levels of expertise. This year, we're excited to provide <span class="weight-bold">free beginner-level tutorials during the Community Day of our in-person conference.</span> <a href="https://tickets.robotframework.org/robocon-2024/3997179/">Enroll here, please!</a>
         </p>
@@ -138,7 +138,7 @@
 Moreover, a wide array of exceptional online tutorials will be spread across the days before and after the online conference, <span class="type-underline-theme weight-bold">accessible exclusively to ticket holders.</span> Don't miss this opportunity to enhance your skills and knowledge in a tailored, engaging environment.
       </p>
       <tutorials24 :speakers="speakers" />
-    </page-section>
+    </page-section> -->
     <!-- <page-section title-id="workshops" :title="'Workshops'">
       <p>
         The in-person conference week kicks off with our exceptional hands-on workshops. These serve as your gateway to a deep dive into specific topics, allowing you to learn practically in a small group setting.
@@ -171,7 +171,7 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
 
 <script>
 // import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
-import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
+import { PageSection, NewsBanner, Ticket, Talks24, Sponsors, GlobeRbcn } from 'Components'
 
 export default {
   name: 'App',
@@ -181,7 +181,7 @@ export default {
     Ticket,
     Talks24,
     // Workshops24,
-    Tutorials24,
+    // Tutorials24,
     Sponsors,
     GlobeRbcn
   },
