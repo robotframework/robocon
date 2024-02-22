@@ -1,82 +1,89 @@
 <template>
   <div class="mt-small w-100">
-    <button
-      v-for="type in ['online', 'helsinki']"
-      :key="type"
-      class="theme mr-xsmall"
-      :class="selectedTrack === type && 'active'"
-      @click="selectedTrack = type"
-    >
-      {{ type }}
-    </button>
-    <div
-      v-for="talk in shownTalks"
-      :key="talk.id"
-      class="mt-large card p-small"
-      :class="talk.isBreak && 'bg-secondary sharper'"
-    >
-      <a
-        v-if="!talk.isBreak"
-        class="anchor"
-        :id="getSlug(talk.title, selectedTrack)"
-      ></a>
-      <div class="flex between">
-        <h3>
-          {{ talk.isBreak ? talk.description.en : talk.title }}
-        </h3>
+    <div class="bg-background p-xsmall sticky pl-2xlarge">
+      <button
+        v-for="type in ['online', 'helsinki']"
+        :key="type"
+        class="theme mr-xsmall"
+        :class="selectedTrack === type && 'active'"
+        @click="selectedTrack = type"
+      >
+        {{ type }}
+      </button>
+    </div>
+    <div v-for="(day, i) in shownTalks" :key="i">
+      <h3 class="sticky type-large" :style="i !== 0 ? 'margin-top: 4rem' : ''">
+        Day {{ i + 1 }}
+      </h3>
+      <div
+        v-for="talk in day"
+        :key="talk.id"
+        class="mt-large card p-small"
+        :class="talk.isBreak && 'bg-secondary sharper'"
+      >
         <a
-          v-if="!$store.state.isMobile && !talk.isBreak"
-          title="get link to talk"
-          :href="`#${getSlug(talk.title, selectedTrack)}`"
-        >
-          <link-icon style="transform: translateY(2px)" />
-        </a>
-      </div>
-      <p class="type-small m-none">
-        {{ format(new Date(talk.slot?.start || talk.start), 'MMM dd') }} {{ getShownTime(talk.slot?.start || talk.start) }} - {{ getShownTime(talk.slot?.end || talk.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
-      </p>
-      <div v-if="hashKey && getVideoUrl(talk.code)" class="col-sm-12 col-md-10 col-md-offset-1">
-        <div width="100%" class="video mt-medium mb-medium">
-          <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          v-if="!talk.isBreak"
+          class="anchor"
+          :id="getSlug(talk.title, selectedTrack)"
+        ></a>
+        <div class="flex between">
+          <h3>
+            {{ talk.isBreak ? talk.description.en : talk.title }}
+          </h3>
+          <a
+            v-if="!$store.state.isMobile && !talk.isBreak"
+            title="get link to talk"
+            :href="`#${getSlug(talk.title, selectedTrack)}`"
+          >
+            <link-icon style="transform: translateY(2px)" />
+          </a>
         </div>
+        <p class="type-small m-none">
+          {{ format(new Date(talk.slot?.start || talk.start), 'MMM dd') }} {{ getShownTime(talk.slot?.start || talk.start) }} - {{ getShownTime(talk.slot?.end || talk.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
+        </p>
+        <div v-if="hashKey && getVideoUrl(talk.code)" class="col-sm-12 col-md-10 col-md-offset-1">
+          <div width="100%" class="video mt-medium mb-medium">
+            <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div v-if="talk.abstract" v-html="parseText(talk.abstract)" />
+        <details v-if="!talk.isBreak && talk.description" class="details">
+          <summary>
+            Full description
+          </summary>
+          <div v-html="parseText(talk.description)" class="p-small" />
+        </details>
+        <h3 v-if="!talk.isBreak" class="mt-xlarge">Presenters</h3>
+        <details
+          v-for="speaker in talk.speakers"
+          :key="speaker.code"
+          class="card sharper mb-medium mt-medium">
+          <summary class="bio">
+            <div class="middle" style="display: inline-flex">
+              <div class="mr-small">
+                <img :src="speaker.avatar || `${publicPath}/img/speaker_img_placeholder.jpg`" class="rounded-small block" style="width: 5rem; aspect-ratio: 1; object-fit: cover;" />
+              </div>
+              <div class="">
+                <h4 class="type-small type-underline">
+                    {{ getSpeaker(speaker.code)?.name || speaker.name }}
+                  </h4>
+              </div>
+            </div>
+          </summary>
+          <div class="col-sm-12 p-medium pl-large pr-small">
+              <p
+                class="type-small m-none pl-2xsmall"
+                v-html="parseText(getSpeaker(speaker.code)?.biography) || '-'" />
+            </div>
+        </details>
       </div>
-      <div v-if="talk.abstract" v-html="parseText(talk.abstract)" />
-      <details v-if="!talk.isBreak && talk.description" class="details">
-        <summary>
-          Full description
-        </summary>
-        <div v-html="parseText(talk.description)" class="p-small" />
-      </details>
-      <h3 v-if="!talk.isBreak" class="mt-xlarge">Presenters</h3>
-      <details
-        v-for="speaker in talk.speakers"
-        :key="speaker.code"
-        class="card sharper mb-medium mt-medium">
-        <summary class="bio">
-          <div class="middle" style="display: inline-flex">
-            <div class="mr-small">
-              <img :src="speaker.avatar || `${publicPath}/img/speaker_img_placeholder.jpg`" class="rounded-small block" style="width: 5rem; aspect-ratio: 1; object-fit: cover;" />
-            </div>
-            <div class="">
-              <h4 class="type-small type-underline">
-                  {{ getSpeaker(speaker.code)?.name || speaker.name }}
-                </h4>
-            </div>
-          </div>
-        </summary>
-        <div class="col-sm-12 p-medium pl-large pr-small">
-            <p
-              class="type-small m-none pl-2xsmall"
-              v-html="parseText(getSpeaker(speaker.code)?.biography) || '-'" />
-          </div>
-      </details>
     </div>
   </div>
 </template>
 
 <script>
 import { marked } from 'marked'
-import { format, isWithinInterval } from 'date-fns'
+import { format, isWithinInterval, getDate } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
 import CryptoJS from 'crypto-js'
 
@@ -97,8 +104,19 @@ export default {
   },
   computed: {
     shownTalks() {
-      if (this.selectedTrack === 'online' || this.onlineOnly) return this.talksOnline
-      if (this.selectedTrack === 'helsinki') return this.talksLive
+      if (!this.talksLive.length || !this.talksOnline.length) return
+      if (this.selectedTrack === 'online' || this.onlineOnly) {
+        return [
+          this.talksOnline.filter(({ slot }) => getDate(new Date(slot?.start)) === 28),
+          this.talksOnline.filter(({ slot }) => getDate(new Date(slot?.start)) === 29)
+        ]
+      }
+      if (this.selectedTrack === 'helsinki') {
+        return [
+          this.talksLive.filter(({ slot, start }) => getDate(new Date(start || slot?.start)) === 8),
+          this.talksLive.filter(({ slot, start }) => getDate(new Date(start || slot?.start)) === 9)
+        ]
+      }
       return []
     }
   },
@@ -216,5 +234,24 @@ details.details >>> ol {
 }
 details summary.bio::-webkit-details-marker {
   display:none;
+}
+.sticky {
+  position: sticky;
+  top: 3.5rem;
+  z-index: 2;
+}
+h3.sticky {
+  top: 4.75rem;
+  margin-top: -2.5rem;
+  pointer-events: none;
+}
+@media screen and (max-width: 1280px) {
+  .sticky {
+    top: 6rem;
+  }
+  h3.sticky {
+    top: 7rem;
+    margin-top: -3rem;
+  }
 }
 </style>
