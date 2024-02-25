@@ -1,7 +1,7 @@
 <template>
   <div class="mt-small w-100">
     <button
-      v-for="type in ['online']"
+      v-for="type in ['online', 'Helsinki']"
       :key="type"
       class="theme mr-xsmall"
       :class="shownTutorials === type && 'active'"
@@ -9,7 +9,7 @@
       {{ type }}
     </button>
     <div
-      v-for="tutorial in shownTutorials === 'live' ? tutorials : tutorialsOnline"
+      v-for="tutorial in shownTutorials === 'Helsinki' ? tutorials : tutorialsOnline"
       :key="tutorial.id"
       class=" mt-large card p-small"
     >
@@ -102,21 +102,21 @@ export default {
     fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
       .then((res) => res.json())
       .then((res) => {
-        // this.tutorials = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'Eficode')
-        //   .sort((a, b) => {
-        //     if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
-        //     return 1
-        //   })
-        // this.tutorialsOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline' && talk?.submission_type?.en === 'Tutorial')
-        //   .sort((a, b) => {
-        //     if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
-        //     return 1
-        //   })
-        // this.tutorials = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'Eficode')
-        //   .sort((a, b) => {
-        //     if (new Date(a.Start) < new Date(b.Start)) return -1
-        //     return 1
-        //   })
+        this.tutorials = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'Eficode')
+          .sort((a, b) => {
+            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            return 1
+          })
+        this.tutorialsOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline' && talk?.submission_type?.en === 'Tutorial')
+          .sort((a, b) => {
+            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
+            return 1
+          })
+        this.tutorials = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'Eficode')
+          .sort((a, b) => {
+            if (new Date(a.Start) < new Date(b.Start)) return -1
+            return 1
+          })
         this.tutorialsOnline = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'RoboConOnline')
           .sort((a, b) => {
             if (new Date(a.Start) < new Date(b.Start)) return -1
@@ -125,7 +125,7 @@ export default {
       })
       .then(() => {
         const hash = window.location.hash
-        if (hash.includes('online')) this.shownTutorials = 'online'
+        if (hash.includes('live')) this.shownTutorials = 'Helsinki'
         this.$nextTick(() => {
           const el = document.getElementById(hash.slice(1))
           if (el) el.scrollIntoView()
@@ -152,9 +152,9 @@ export default {
     },
     getSlug(title, tab) {
       if (!title) return ''
-      let tabPrefix = 'live'
+      let tabPrefix = 'online'
       console.log(tab)
-      if (tab === 'online') tabPrefix = 'online'
+      if (tab === 'Helsinki') tabPrefix = 'live'
       return `${tabPrefix}-${title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
     },
     getIsNow(start, end) {
