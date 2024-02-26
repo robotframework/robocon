@@ -1,6 +1,6 @@
 <template>
   <div class="mt-small w-100">
-    <div class="bg-background p-xsmall sticky pl-2xlarge">
+    <div class="bg-background p-xsmall sticky pl-2xlarge" :class="isStreamRoute ? 'stream' : ''">
       <button
         v-for="type in ['online', 'helsinki']"
         :key="type"
@@ -12,7 +12,7 @@
       </button>
     </div>
     <div v-for="(day, i) in shownTalks" :key="i">
-      <h3 class="sticky type-large" :style="i !== 0 ? 'margin-top: 4rem' : ''">
+      <h3 class="sticky type-large" :class="isStreamRoute ? 'stream' : ''" :style="i !== 0 ? 'margin-top: 4rem' : ''">
         Day {{ i + 1 }}
       </h3>
       <div
@@ -151,12 +151,14 @@ export default {
           })
         }
       })
+    this.isStreamRoute = this.$route?.name === 'Stream'
   },
   data: () => ({
     publicPath: process.env.BASE_URL,
     selectedTrack: 'online',
     talksLive: [],
     talksOnline: [],
+    isStreamRoute: false,
     recordings: {
       TQTQQN: 'U2FsdGVkX1+CuAVK2bcpvFpHfbJL/3RWV1OaTvAL20I=',
       SSECGZ: 'U2FsdGVkX1/9Jn9MfQ0ws09fTcXUmdFnIqgTkIEUdto=',
@@ -253,19 +255,34 @@ details summary.bio::-webkit-details-marker {
   position: sticky;
   top: 3.5rem;
   z-index: 2;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+.sticky.stream {
+  top: 3.7rem;
 }
 h3.sticky {
   top: 4.75rem;
   margin-top: -2.5rem;
+  margin-left: 0.25rem;
   pointer-events: none;
+}
+h3.sticky.stream {
+  top: 4.6rem;
 }
 @media screen and (max-width: 1280px) {
   .sticky {
     top: 6rem;
   }
+  .sticky.stream {
+    top: 3.4rem;
+  }
   h3.sticky {
     top: 7rem;
     margin-top: -3rem;
+  }
+  h3.sticky.stream {
+    top: 4.8rem;
   }
 }
 </style>

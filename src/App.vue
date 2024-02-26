@@ -12,19 +12,9 @@
       #TUTORIALS
     </button>
     <button
-    @click="scrollTo('workshops')"
-      class="color-white col-sm-5 col-md-3 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
-      #WORKSHOPS
-    </button>
-    <button
       @click="scrollTo('talks')"
       class="color-white col-sm-4 col-md-3 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
       #TALKS
-    </button>
-    <button
-    @click="scrollTo('hotels')"
-      class="color-white col-sm-4 col-md-3 mt-3xsmall mb-3xsmall type-no-underline font-title router-link type-small">
-      #HOTELS
     </button>
   </div>
   <router-view />

@@ -141,7 +141,7 @@
         <p>
 Moreover, a wide array of exceptional online tutorials will be spread across the days before and after the online conference, <span class="type-underline-theme weight-bold">accessible exclusively to ticket holders.</span> Don't miss this opportunity to enhance your skills and knowledge in a tailored, engaging environment.
       </p>
-      <tutorials24 :speakers="speakers" />
+      <tutorials24 :speakers="speakers" :hashKey="token.hashKey" />
     </page-section>
     <!-- <page-section title-id="workshops" :title="'Workshops'">
       <p>
@@ -153,7 +153,7 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
       <workshops24 :speakers="speakers" />
     </page-section> -->
     <page-section title-id="talks" :title="'Talks'">
-      <talks24 :speakers="speakers" />
+      <talks24 :speakers="speakers" :hashKey="token.hashKey" />
     </page-section>
     <!-- <page-section title-id="hotels" :title="'Hotels'">
       <p>
@@ -176,6 +176,7 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
 <script>
 // import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
 import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
+import * as jose from 'jose'
 
 export default {
   name: 'App',
@@ -192,16 +193,49 @@ export default {
   data: () => ({
     // FF renders different height for rbcn font for some reason
     isFirefox: false,
-    speakers: []
+    speakers: [],
+    token: {},
+    public: `-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1RHu1qgXJ81+2tlBy4UF
+B8OdRsBjWhswMQaS/NhA2yWBaQiQ1YG4Tzen2aNmlTIkTBhSR3hqOnkzPQq77nMs
+KP9HD1WHz/UNici/a/2UwXFy9bOyX+GKnPCtdcvZrIougvW5K7EBeUWcgY68xNQk
+V9vFq4GSczOud7juk62eqqV26esV5tE2c4/J714SYwUl6NqLc7XeQNZMrsRHabIL
+Bzg+A+2kw1jiJpJsJliPCT9T/NiAMrbZk1KR/NQ7uHARclAk13LwLwm5JfOhyKSs
+Qkdfr8rVYuj3DDQCitea269Xy5RsFW/Cqyh3gHzt7bB9auU3UFaAXWPvnPURhTO4
+Yf3c7YrizmpTfDGPIG/7zkegx9nPiBPNIGPq/LpmCC9iawNH7ixOH8ZC5Ijrti0b
+8rMnuJBKysZxIowJAFvd7Zh+soekUei90qQnYwhFO49h7fwXXSq2sGeRfpg99Nu/
+RdqqxM2zCMPpVMWHjxAVIubgNW5ZA33PW1wS075npC3oK+YUh2xt/9A6Ll4AcAOt
+oaCmENEyeZEnHlaEWeXhNPQv1/nZN5Z3Fq3uKWCQRry1HMoOGKrdATfUUIXc6vvk
+nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
+6IrJDlqg3BaMV5Hr8LdQtY8CAwEAAQ==
+-----END PUBLIC KEY-----`
   }),
-  created() {
+  async created() {
     if (navigator.userAgent && navigator.userAgent.match(/firefox|fxios/i)) {
       this.isFirefox = true
     }
     const params = new URLSearchParams(window.location.search)
-    const entries = Object.fromEntries(params.entries())
-    if (entries.auth) {
-      this.$router.replace({ name: 'Robocon2023', query: entries })
+    const auth = Object.fromEntries(params.entries()).auth || window.localStorage.getItem('auth')
+    const attendee = Object.fromEntries(params.entries()).attendee || window.localStorage.getItem('attendee')
+    if (auth && attendee) {
+      window.history.replaceState({}, '', '/' + window.location.hash)
+      if (attendee !== 'gather') {
+        window.localStorage.setItem('auth', auth)
+        window.localStorage.setItem('attendee', attendee)
+      }
+      try {
+        const { payload } = await jose.jwtVerify(auth, await jose.importSPKI(this.public, 'RS256'), {
+          issuer: 'pretix'
+        })
+        this.token = payload
+        if (payload.name !== attendee) {
+          console.log('invalid Attendee')
+          this.error = true
+        }
+      } catch (error) {
+        this.error = true
+        console.error(error)
+      }
     }
     Promise.all([
       fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/'),

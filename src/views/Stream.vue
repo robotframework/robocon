@@ -79,7 +79,7 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
     const auth = Object.fromEntries(params.entries()).auth || window.localStorage.getItem('auth')
     const attendee = Object.fromEntries(params.entries()).attendee || window.localStorage.getItem('attendee')
     if (typeof auth !== 'undefined' && typeof attendee !== 'undefined') {
-      // window.history.replaceState({}, document.title, '/stream' + window.location.hash)
+      window.history.replaceState({}, document.title, '/stream' + window.location.hash)
       if (attendee !== 'gather') {
         window.localStorage.setItem('auth', auth)
         window.localStorage.setItem('attendee', attendee)

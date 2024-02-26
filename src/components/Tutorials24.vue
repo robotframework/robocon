@@ -32,6 +32,16 @@
       <p class="type-small m-none">
         {{ format(new Date(tutorial.Start), 'MMM dd') }} {{ getShownTime(tutorial.Start) }} - {{ getShownTime(tutorial.End) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
       </p>
+      <div v-if="shownTutorials === 'online' && hashKey && getVideoUrl(tutorial.ID)" class="col-sm-12 col-md-10 col-md-offset-1 type-center mt-large mb-large">
+        <a :href="getVideoUrl(tutorial.ID).zoom">
+          <button class="theme">
+            Join via Zoom (recommended)
+          </button>
+        </a>
+        <p>
+          If you can't use Zoom, you may also join via <a :href="getVideoUrl(tutorial.ID).yt">YouTube</a>
+        </p>
+      </div>
       <div v-html="parseText(tutorial.Abstract)" />
       <details class="details">
         <summary>
@@ -83,6 +93,7 @@ import { marked } from 'marked'
 import { format, isWithinInterval } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
 import talksStatic from '../robocon-2024_sessions.json'
+import CryptoJS from 'crypto-js'
 
 export default {
   name: 'Tutorials24',
@@ -93,6 +104,10 @@ export default {
     speakers: {
       type: Array,
       required: true
+    },
+    hashKey: {
+      type: String,
+      required: false
     }
   },
   computed: {
@@ -136,7 +151,29 @@ export default {
     publicPath: process.env.BASE_URL,
     tutorials: [],
     tutorialsOnline: [],
-    shownTutorials: 'online'
+    shownTutorials: 'online',
+    links: {
+      JRSGDD: {
+        zoom: 'U2FsdGVkX1/a7R+ILu3mD5Ex//6EvTCFhnksvljfR6YYH5/nuoVUoNRljC2dSQnLCZVKXSwOOandi/Ay7JGMLwuI048zxq9PO741Zqmbw6auTvS4dhRIpMJzFYmv1gOk',
+        yt: 'U2FsdGVkX1/K0JNyUobljtt/JREqJuNa3lLyb6BF0cM='
+      },
+      LF8DXX: {
+        zoom: '',
+        yt: 'U2FsdGVkX1/OnCitBHedMLY7GWBE/EFJI8Ml13RQgYY='
+      },
+      L977MQ: {
+        zoom: '',
+        yt: 'U2FsdGVkX197uJViTiWUY06kDG3+aPBVP8RhQDDlycE='
+      },
+      PQUXLU: {
+        zoom: '',
+        yt: 'U2FsdGVkX1/BynVPGIQyDSR4fEVGx22efczSssYWy0E='
+      },
+      RKDPWC: {
+        zoom: '',
+        yt: 'U2FsdGVkX19T/DMVtuPB+/e/LfvGzqGhpfR2K5tmXGM='
+      }
+    }
   }),
   methods: {
     format,
@@ -153,7 +190,6 @@ export default {
     getSlug(title, tab) {
       if (!title) return ''
       let tabPrefix = 'online'
-      console.log(tab)
       if (tab === 'Helsinki') tabPrefix = 'live'
       return `${tabPrefix}-${title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
     },
@@ -163,6 +199,25 @@ export default {
     },
     getSpeaker(speakerId) {
       return this.speakers.find(({ code }) => code === speakerId)
+    },
+    getVideoUrl(code) {
+      if (typeof code === 'undefined') return undefined
+      const recording = this.links[code]
+      if (!recording) {
+        // console.error(`Code ${code} did not have a recording.`)
+        return undefined
+      }
+      try {
+        const zoom = CryptoJS.AES.decrypt(recording.zoom, this.hashKey).toString(CryptoJS.enc.Utf8)
+        const yt = CryptoJS.AES.decrypt(recording.yt, this.hashKey).toString(CryptoJS.enc.Utf8)
+        return {
+          zoom,
+          yt: `https://www.youtube.com/watch?v=${yt}`
+        }
+      } catch (e) {
+        // console.error(`Code ${code} did not have a valid recording.`)
+        return undefined
+      }
     }
   }
 }
