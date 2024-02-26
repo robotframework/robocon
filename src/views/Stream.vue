@@ -34,9 +34,9 @@ export default {
   },
   data: () => ({
     selectedDay: 1,
-    day1: 'U2FsdGVkX18yk7gOoIBruK+/q6wYpUXDgxjmMBpDrB0=',
-    day2: 'U2FsdGVkX1+59ihX3+9fjeNo9jXUIQAP/C/jlHLUU5k=',
-    chat: 'U2FsdGVkX19Id2P5u0Hc1xSiLbqraODnTHvKjpo4p5yVgp4jY5Oj8/odAjctICBGwX8ptykisw2uFsCKXlGgYA==',
+    day1: 'U2FsdGVkX1+iO3u49D3q6rlcds7ZJOz4N8+vuQz+VYo=',
+    day2: 'U2FsdGVkX19TiGQLj7xCUJBO02Zg78fjU1zyOE64GsQ=',
+    chat: 'U2FsdGVkX1/BKQP6AzzQFrb28NyI/BbFuQvgO4Ipq6RMnvdrRMI/qd0Lwxi4grBNerT48tEJF/IKMcxZYMzdrA==',
     token: {},
     public: `-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1RHu1qgXJ81+2tlBy4UF

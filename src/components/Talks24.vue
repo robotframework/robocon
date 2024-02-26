@@ -158,9 +158,23 @@ export default {
     talksLive: [],
     talksOnline: [],
     recordings: {
-      TQTQQN: 'U2FsdGVkX1+uEgAGlFJ0EmTmaUjx4p7BB/etKhgVzu8=',
-      SSECGZ: 'U2FsdGVkX187HqoCuDt+LvlnThN3kh6vioUVzk/b9tk=',
-      XFZ7KM: 'U2FsdGVkX1/5jKr1TKkmGoG/5Xna8uEbeLXDMJY+Kpk='
+      TQTQQN: 'U2FsdGVkX1+CuAVK2bcpvFpHfbJL/3RWV1OaTvAL20I=',
+      SSECGZ: 'U2FsdGVkX1/9Jn9MfQ0ws09fTcXUmdFnIqgTkIEUdto=',
+      XFZ7KM: 'U2FsdGVkX1/b+d63VUyx580UkmwHP+9G0OLl0boSgMI=',
+      ECYJEF: 'U2FsdGVkX1+LuyQKFrozkPjMdIzChUQivAdB1lUyau4=',
+      XH9APF: 'U2FsdGVkX19Djl299vOrRwLyfz5sMp+rBrvl6s9fJ3I=',
+      JHXEQQ: 'U2FsdGVkX1+jsOwt1ZqnAYJHiEFvaeEcpJCcJ0qPGI0=',
+      QQSGJU: 'U2FsdGVkX1/Vsy1H1gihrEEa7PUrP/Hu0sa3tPMv8Wc=',
+      ZAGHBH: 'U2FsdGVkX1++eu97CvzexTIx59NjX0+Zt86xEdaPdJI=',
+      YLX3LV: 'U2FsdGVkX197kcmeS73sdQ40jmUtwoWsd5zYxgz2TYI=',
+      RYES8M: 'U2FsdGVkX18czVpZQJf2LziSJSQe2U18vCpc30HjdoY=',
+      C3JNDF: 'U2FsdGVkX19zPOJeF6Z0SMFUPTL4innPORLYzE45ExA=',
+      ATWZKG: 'U2FsdGVkX18wZ2SpxyQVwfp17O5ULwQmkfaNq0zAbBQ=',
+      JSZTRJ: 'U2FsdGVkX1/FSWBkO4RMc9sZliGZz5tBSXks2vNGtxs=',
+      K7ZSXM: 'U2FsdGVkX19RMJdfFNcY/EqbFS8TSTfxFymFmW0guZ4=',
+      KTU8MK: 'U2FsdGVkX1+EdSmDUwMth71XXjIlGv6v+T+KXz/QhNQ=',
+      HSDAHH: 'U2FsdGVkX1+H4DChYU2na70JMnmAY4uG3VoYU6Ieo5o=',
+      SCRLQS: 'U2FsdGVkX1/DkL5K/MSKvC3lsSgSimJkjO40Krb5Hlk='
     }
   }),
   methods: {
