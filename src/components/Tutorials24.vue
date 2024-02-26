@@ -1,13 +1,18 @@
 <template>
   <div class="mt-small w-100">
-    <button
-      v-for="type in ['online', 'Helsinki']"
-      :key="type"
-      class="theme mr-xsmall"
-      :class="shownTutorials === type && 'active'"
-      @click="shownTutorials = type">
-      {{ type }}
-    </button>
+    <div class="bg-background p-xsmall sticky buttons">
+      <button
+        v-for="type in ['online', 'Helsinki']"
+        :key="type"
+        class="theme ml-xsmall"
+        :class="shownTutorials === type && 'active'"
+        @click="shownTutorials = type">
+        {{ type }}
+      </button>
+    </div>
+    <h3 class="sticky type-large">
+      Tutorials
+    </h3>
     <div
       v-for="tutorial in shownTutorials === 'Helsinki' ? tutorials : tutorialsOnline"
       :key="tutorial.id"
@@ -253,5 +258,32 @@ details.details >>> ol {
 }
 details summary.bio::-webkit-details-marker {
   display:none;
+}
+
+.sticky {
+  position: sticky;
+  top: 3.5rem;
+  z-index: 2;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+h3.sticky {
+  display: none;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  pointer-events: none;
+}
+@media screen and (max-width: 1280px) {
+  .sticky {
+    top: 6rem;
+  }
+  .sticky.buttons {
+    padding-left: 34vw;
+  }
+  h3.sticky {
+    display: block;
+    top: 7rem;
+    margin-top: -3rem;
+  }
 }
 </style>
