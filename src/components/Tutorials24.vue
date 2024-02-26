@@ -154,15 +154,15 @@ export default {
     shownTutorials: 'online',
     links: {
       JRSGDD: {
-        zoom: 'U2FsdGVkX1/a7R+ILu3mD5Ex//6EvTCFhnksvljfR6YYH5/nuoVUoNRljC2dSQnLCZVKXSwOOandi/Ay7JGMLwuI048zxq9PO741Zqmbw6auTvS4dhRIpMJzFYmv1gOk',
+        zoom: 'U2FsdGVkX19JqwysZ1M855I2TR04blk1csE51a+fCjl1daUTkSyiiuXlzva4O8MHNP5cdU73+Y1OKsAK1RN///XP7Biw+uWFb6r14b21AOx7Nzbjqg1HPYTd3C3pSG1P',
         yt: 'U2FsdGVkX1/K0JNyUobljtt/JREqJuNa3lLyb6BF0cM='
       },
       LF8DXX: {
-        zoom: '',
+        zoom: 'U2FsdGVkX1/InYXMyAHuz3yu1ba5+N/rGbC/4ZGma2vHY3Wacx47pmLVqAeYpMywsB9zjNeXyK45CRpBx1qhU/9xyI9EeogZCHvXtTm9BkBrUo3jBJcKuLupUS00l/07',
         yt: 'U2FsdGVkX1/OnCitBHedMLY7GWBE/EFJI8Ml13RQgYY='
       },
       L977MQ: {
-        zoom: '',
+        zoom: 'U2FsdGVkX1/WN2utc1W02jOBU9PyGXP1v9Zq6G10LIXyfskH0We8ZrWf/WUhLP+uPNWvg/XlQ6+3qpWff19pF0uYTAfNhs3879w3KUXeDZLIh7IyS7vi6symSjJvj0ry',
         yt: 'U2FsdGVkX197uJViTiWUY06kDG3+aPBVP8RhQDDlycE='
       },
       PQUXLU: {

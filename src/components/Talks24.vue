@@ -144,7 +144,7 @@ export default {
       .then(() => {
         const hash = window.location.hash
         if (hash) {
-          if (hash.includes('online')) this.selectedTrack = 'online'
+          this.selectedTrack = (hash.includes('live')) ? 'helsinki' : 'online'
           this.$nextTick(() => {
             const el = document.getElementById(hash.slice(1))
             if (el) el.scrollIntoView()
