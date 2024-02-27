@@ -107,8 +107,8 @@ export default {
       if (!this.talksLive.length || !this.talksOnline.length) return
       if (this.selectedTrack === 'online' || this.onlineOnly) {
         return [
-          this.talksOnline.filter(({ slot }) => getDate(new Date(slot?.start)) === 28),
-          this.talksOnline.filter(({ slot }) => getDate(new Date(slot?.start)) === 29)
+          this.talksOnline.filter(({ slot, start }) => getDate(new Date(start || slot?.start)) === 28),
+          this.talksOnline.filter(({ slot, start }) => getDate(new Date(start || slot?.start)) === 29)
         ]
       }
       if (this.selectedTrack === 'helsinki') {
