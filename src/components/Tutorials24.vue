@@ -38,14 +38,19 @@
         {{ format(new Date(tutorial.Start), 'MMM dd') }} {{ getShownTime(tutorial.Start) }} - {{ getShownTime(tutorial.End) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
       </p>
       <div v-if="shownTutorials === 'online' && hashKey && getVideoUrl(tutorial.ID)" class="col-sm-12 col-md-10 col-md-offset-1 type-center mt-large mb-large">
-        <a :href="getVideoUrl(tutorial.ID).zoom">
-          <button class="theme">
-            Join via Zoom (recommended)
-          </button>
-        </a>
-        <p>
-          If you can't use Zoom, you may also join via <a :href="getVideoUrl(tutorial.ID).yt">YouTube</a>
-        </p>
+        <div v-if="isPast(new Date(tutorial.End))">
+          <iframe width="100%" height="350" class="rounded" :src=getVideoUrl(tutorial.ID).embed frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div v-else>
+          <a :href="getVideoUrl(tutorial.ID).zoom">
+            <button class="theme">
+              Join via Zoom (recommended)
+            </button>
+          </a>
+          <p>
+            If you can't use Zoom, you may also join via <a :href="getVideoUrl(tutorial.ID).yt">YouTube</a>
+          </p>
+        </div>
       </div>
       <div v-html="parseText(tutorial.Abstract)" />
       <details class="details">
@@ -95,7 +100,7 @@
 
 <script>
 import { marked } from 'marked'
-import { format, isWithinInterval } from 'date-fns'
+import { format, isWithinInterval, isPast } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
 import talksStatic from '../robocon-2024_sessions.json'
 import CryptoJS from 'crypto-js'
@@ -181,6 +186,7 @@ export default {
     }
   }),
   methods: {
+    isPast,
     format,
     getShownTime(time) {
       const date = new Date(time)
@@ -217,7 +223,8 @@ export default {
         const yt = CryptoJS.AES.decrypt(recording.yt, this.hashKey).toString(CryptoJS.enc.Utf8)
         return {
           zoom,
-          yt: `https://www.youtube.com/watch?v=${yt}`
+          yt: `https://www.youtube.com/watch?v=${yt}`,
+          embed: `https://www.youtube-nocookie.com/embed/${yt}?rel=0&autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
         }
       } catch (e) {
         // console.error(`Code ${code} did not have a valid recording.`)

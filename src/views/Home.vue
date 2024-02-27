@@ -38,20 +38,29 @@
             2024
           </template>
         </Ticket> -->
-        <Ticket link="https://tickets.robotframework.org/robocon-2024/3913180/">
-          <template v-slot:title>
-            Main Conference<br>Online
-          </template>
-          <template v-slot:price>
-            300 €<span class="type-xsmall"> + VAT</span>
-          </template>
-          <template v-slot:left>
-            FEB 28-29
-          </template>
-          <template v-slot:right>
-            2024
-          </template>
-        </Ticket>
+        <template v-if="!token.hashKey">
+          <Ticket link="https://tickets.robotframework.org/robocon-2024/3913180/">
+            <template v-slot:title>
+              Main Conference<br>Online
+            </template>
+            <template v-slot:price>
+              300 €<span class="type-xsmall"> + VAT</span>
+            </template>
+            <template v-slot:left>
+              FEB 28-29
+            </template>
+            <template v-slot:right>
+              2024
+            </template>
+          </Ticket>
+        </template>
+        <template v-else>
+          <a href="/stream" class="type-center" style="margin: 0 auto;">
+            <button class="theme type-large" style="padding: 1rem 2rem;">
+              Open stream
+            </button>
+          </a>
+        </template>
       </div>
       <sponsors :sponsors="$tm('home.sponsors')" />
       <!-- <p class="mt-large">
