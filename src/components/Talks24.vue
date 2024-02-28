@@ -176,7 +176,9 @@ export default {
       K7ZSXM: 'U2FsdGVkX19RMJdfFNcY/EqbFS8TSTfxFymFmW0guZ4=',
       KTU8MK: 'U2FsdGVkX1+EdSmDUwMth71XXjIlGv6v+T+KXz/QhNQ=',
       HSDAHH: 'U2FsdGVkX1+H4DChYU2na70JMnmAY4uG3VoYU6Ieo5o=',
-      SCRLQS: 'U2FsdGVkX1/DkL5K/MSKvC3lsSgSimJkjO40Krb5Hlk='
+      SCRLQS: 'U2FsdGVkX1/DkL5K/MSKvC3lsSgSimJkjO40Krb5Hlk=',
+      YF7RXZ: 'U2FsdGVkX1/4A0g2Ouk4jXH2DE9rbqg0wPDr0+JTCzs=',
+      '983ZBV': 'U2FsdGVkX18v/ovaT0gUtGtp7YTfxvThoSaf/viVb0o='
     }
   }),
   methods: {
