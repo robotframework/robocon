@@ -176,11 +176,11 @@ export default {
         yt: 'U2FsdGVkX197uJViTiWUY06kDG3+aPBVP8RhQDDlycE='
       },
       PQUXLU: {
-        zoom: '',
+        zoom: 'U2FsdGVkX18Sl7xQbsO53hqTAdtYrgRkGhSMZq7xv/8XZBdKXrlaju3/iAxu9XLzFO7Xx14+Uyycc9Eg12tRRWRGCnNw8Ygpg11D0hkCzmYTyuueIS/YYW7Nbhj/sF1z',
         yt: 'U2FsdGVkX1/BynVPGIQyDSR4fEVGx22efczSssYWy0E='
       },
       RKDPWC: {
-        zoom: '',
+        zoom: 'U2FsdGVkX1/p5YsrZM57x6XPy1ELeBXr34t1uoctR6JS9NNYk5CTHFoBLiyyDISxnxVtEbk/wZon049A6YDzbSY37trjUN5Hz7Zkxy9xG5IjUsONlXI86NEekGCI2HsU',
         yt: 'U2FsdGVkX19T/DMVtuPB+/e/LfvGzqGhpfR2K5tmXGM='
       }
     }
