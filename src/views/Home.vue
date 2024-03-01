@@ -14,8 +14,12 @@
     <page-section title-id="intro" :title="$t('home.intro.title')">
       <h2>Community Day March 1st 11 UTC</h2>
       <p>
-        Come and join us for the RoboCon 2024 Online Community Day<br>
-        <b>March 1st at 11 UTC</b>.<br>
+        Come and join us for the RoboCon 2024 Online Community Day.
+      </p>
+      <p>
+        <b>🗓️ March 1st at {{ getShownTime('2024-03-01T11:00:00+00:00') }}  ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})</b>.
+      </p>
+      <p>
         Anyone from the community can join!<br>
         The Community Day is run in the spirit of open space, where you, the participants, create the agenda.
       </p>
@@ -278,6 +282,13 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
       })
   },
   methods: {
+    getShownTime(time) {
+      const date = new Date(time)
+      const hours = date.getHours()
+      let minutes = date.getMinutes()
+      if (`${minutes}`.length === 1) minutes = `0${minutes}`
+      return `${hours}:${minutes === 0 ? '00' : minutes}`
+    },
     goTo(id) {
       const el = document.getElementById(id)
       if (el) {
