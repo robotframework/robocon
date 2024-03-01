@@ -12,6 +12,24 @@
   </news-banner>
   <div class="container narrow border-top-theme">
     <page-section title-id="intro" :title="$t('home.intro.title')">
+      <h2>Community Day March 1st 11 UTC</h2>
+      <p>
+        Come and join us for the RoboCon 2024 Online Community Day<br>
+        <b>March 1st at 11 UTC</b>.<br>
+        Anyone from the community can join!<br>
+        The Community Day is run in the spirit of open space, where you, the participants, create the agenda.
+      </p>
+      <a href="https://app.gather.town/app/1WCLImqbULz5iNOH/RoboCon2024" target="_blank" class="type-center" style="margin: 0 auto;">
+        <button class="theme type-large" style="padding: 1rem 2rem;">
+        🎉 Join Open-Space 🎉
+        </button>
+      </a>
+      <p>
+        We will be using two tools: one for meeting <a href="https://app.gather.town/app/1WCLImqbULz5iNOH/RoboCon2024">Gather.town</a> (accessible without a ticket) and
+        another for planning (Miro) throughout the day. Join us as a guest by registering on our Miro planning board.
+        This day is dedicated to participation by the community, so come join us! ⭐️
+      </p>
+      <h2>About RoboCon</h2>
       <p>
         RoboCon is the crown jewel of the
         <span class="color-theme">Robot Framework community</span>. Once again
