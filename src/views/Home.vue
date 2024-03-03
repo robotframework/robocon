@@ -12,26 +12,14 @@
   </news-banner>
   <div class="container narrow border-top-theme">
     <page-section title-id="intro" :title="$t('home.intro.title')">
-      <h2>Community Day March 1st 11 UTC</h2>
+      <h2>Thank you!</h2>
       <p>
-        Come and join us for the RoboCon 2024 Online Community Day.
+        RoboCon 2024 has concluded. Thank you to all speakers, participants and sponsors for yet another great event!
       </p>
       <p>
-        <b>🗓️ March 1st at {{ getShownTime('2024-03-01T11:00:00+00:00') }}  ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})</b>.
-      </p>
-      <p>
-        Anyone from the community can join!<br>
-        The Community Day is run in the spirit of open space, where you, the participants, create the agenda.
-      </p>
-      <a href="https://app.gather.town/app/1WCLImqbULz5iNOH/RoboCon2024" target="_blank" class="type-center" style="margin: 0 auto;">
-        <button class="theme type-large" style="padding: 1rem 2rem;">
-        🎉 Join Open-Space 🎉
-        </button>
-      </a>
-      <p>
-        We will be using two tools: one for meeting <a href="https://app.gather.town/app/1WCLImqbULz5iNOH/RoboCon2024">Gather.town</a> (accessible without a ticket) and
-        another for planning (Miro) throughout the day. Join us as a guest by registering on our Miro planning board.
-        This day is dedicated to participation by the community, so come join us! ⭐️
+        Recordings of Helsinki talks and online tutorials are watchable for those who attended the event, either online or in-person. Please see your ticket for instructions.
+        <br><br>
+        Be sure to stay tuned for RoboCon 2025!
       </p>
       <h2>About RoboCon</h2>
       <p>
@@ -60,7 +48,7 @@
             2024
           </template>
         </Ticket> -->
-        <template v-if="!token.hashKey">
+        <!-- <template v-if="!token.hashKey">
           <Ticket link="https://tickets.robotframework.org/robocon-2024/3913180/">
             <template v-slot:title>
               Main Conference<br>Online
@@ -82,7 +70,7 @@
               Open stream
             </button>
           </a>
-        </template>
+        </template> -->
       </div>
       <sponsors :sponsors="$tm('home.sponsors')" />
       <!-- <p class="mt-large">
@@ -114,7 +102,7 @@
           Both options will start late morning. If weather is really bad we will have backup plans probably to the local museums of which there are about half a dozen in the immediate area. More information will be published as we get closer to the conference dates.
         </p>
       </details> -->
-      <p>
+      <!-- <p>
         <span class="color-theme">The online conference</span> will take place
         28-29 February, 2024 followed by the community day on the 1st of March.
       </p>
@@ -124,11 +112,11 @@
       <iframe width="100%" height="400" class="rounded" src="https://www.youtube.com/embed/6mtIO49k074?si=M0MgEfL2xBMEh0qe" frameborder="0" allow="" allowfullscreen></iframe>
       <p>
         In-person ticket includes a complimentary online conference ticket.
-      </p>
+      </p> -->
       <div class="row col-sm-12">
           <div class="col-sm-12 col-md-6 px-small">
               <div class="bg-secondary p-medium pt-large pb-2xlarge rounded mb-small">
-                  <h2>Online</h2>
+                  <h2>Online (past)</h2>
                   <a href="https://www.gather.town/">Gather.town</a>
                   <span class="line-height-1">
                       <div class="mt-small color-theme font-title type-body">Feb 27th</div>

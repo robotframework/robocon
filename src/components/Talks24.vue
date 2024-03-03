@@ -155,7 +155,7 @@ export default {
   },
   data: () => ({
     publicPath: process.env.BASE_URL,
-    selectedTrack: 'online',
+    selectedTrack: 'helsinki',
     talksLive: [],
     talksOnline: [],
     isStreamRoute: false,
