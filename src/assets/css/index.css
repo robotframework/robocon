@@ -12,7 +12,6 @@
 html, body {
     min-height: 100vh;
     line-height: var(--line-height-body);
-    background-color: var(--color-background);
 }
 
 #app {
@@ -20,7 +19,6 @@ html, body {
     flex: 1 1 auto;
     flex-direction: column;
     min-height: 100vh;
-    color: var(--color-white);
 }
 
 #main {
@@ -50,4 +48,13 @@ select {
 
 body:not(.accessible) * {
     outline: none;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+body:has(.theme-2024) {
+    background-color: #000;
+    color: #fff;
 }

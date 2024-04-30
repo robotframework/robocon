@@ -1,6 +1,6 @@
 export default {
   title: 'Sponsorship',
-  subTitle: `### Become a sponsor of RoboCon 2024!
+  subTitle: `### Become a sponsor of RoboCon!
 
 Do you want to give something back to Robot Framework? Want to present your company as a supporter of RoboCon and Robot Framework?
 

@@ -117,7 +117,7 @@ button.theme:hover {
   border-color: var(--color-theme);
 }
 button.theme {
-  background-color: var(--color-background);
+  background-color: var(--color-theme);
 }
 button.stroke {
   border: solid 0.05rem var(--color-white);

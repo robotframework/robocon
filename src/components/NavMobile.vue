@@ -4,13 +4,28 @@
       v-if="isOpen"
       class="menu bg-black p-small pb-large pt-2xlarge">
       <router-link
+        :to="{ name: 'Home' }"
+        class="block m-medium router-link type-no-underline type-small">
+        RBCN25
+      </router-link>
+      <router-link
+        :to="{ name: 'Robocon2024' }"
+        class="block m-medium router-link type-no-underline type-small">
+        RBCN24
+      </router-link>
+      <router-link
+        :to="{ name: 'Archive' }"
+        class="block m-medium router-link type-no-underline type-small">
+        archive
+      </router-link>
+      <!-- <router-link
         v-for="{ name, text } in $tm('navbar.links')"
         :to="{ name }"
         :key="name"
         class="router-link block mb-large"
         @click="isOpen = false">
         {{ text }}
-      </router-link>
+      </router-link> -->
     </div>
   </transition>
   <div

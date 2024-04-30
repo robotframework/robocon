@@ -14,7 +14,7 @@
             <div
               v-for="{ authors, title, url } in showAll[year] ? list : list.slice(0, 3)"
               :key="url"
-              class="color-white pt-small pb-small"
+              class="pt-small pb-small"
               @click="activeTalk = url">
               <div>
                 <span v-for="(author, i) in authors" :key="author" class="type-small">
@@ -38,15 +38,15 @@
             <button
               v-for="{ authors, title, url } in list"
               :key="url"
-              class="color-white p-small pl-2xsmall pr-2xsmall rounded"
-              :class="activeTalk === url ? 'bg-background' : ''"
+              class="p-small pl-2xsmall pr-2xsmall rounded"
+              :class="activeTalk === url ? 'bg-theme color-white' : ''"
               @click="activeTalk = url">
               <span v-for="(author, i) in authors" :key="author" class="type-small">
                 {{ author }}{{ i !== authors.length - 1 ? ', ' : '' }}
               </span>
               <div
                 class="mt-3xsmall"
-                :class="activeTalk === url ? 'color-theme' : ''">
+                :class="activeTalk === url ? 'color-white' : 'color-theme'">
                 {{ title }}
               </div>
             </button>

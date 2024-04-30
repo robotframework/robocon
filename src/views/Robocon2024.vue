@@ -1,32 +1,34 @@
 <template>
-  <div class="container narrow row middle p-small pt-medium pb-medium">
+  <div class="container narrow row middle p-small pt-medium pb-medium theme-2024">
     <div class="col-sm-12 center start-lg col-lg-9 col-lg-offset-3 flex">
-      <h1 class="color-black">RBCN<span class="color-theme">25</span></h1>
+      <h1 class="color-white">RBCN<span class="color-theme">24</span></h1>
       <div class="hidden-sm" :class="!isFirefox ? 'pt-medium' : ''">
-        <robot-icon class="ml-xsmall" color="theme" size="5.75rem"/>
+        <globe-rbcn />
       </div>
     </div>
   </div>
-  <news-banner v-if="$t('newsBanner') !== ''">
-    <div v-html="$t('newsBanner')" />
-  </news-banner>
-  <div class="container narrow border-top-theme">
+  <div class="container narrow border-top-theme theme-2024">
     <page-section title-id="intro" :title="$t('home.intro.title')">
-      <h2>Save the date!</h2>
+      <h2>Thank you!</h2>
       <p>
-        <span class="color-theme">RoboCon 2025</span> is currently under planning, and we're excited to offer an enhanced experience at <span class="color-theme">Bio Rex</span>! Join us in <span class="color-theme">Helsinki</span> for the in-person conference on <span class="color-theme">February 13-14, 2025</span>. Please reserve the whole week, as usual, we have <span class="color-theme">workshops</span> and <span class="color-theme">a Community Day</span> leading up to the conference.
+        RoboCon 2024 has concluded. Thank you to all speakers, participants and sponsors for yet another great event!
       </p>
       <p>
-        Get ready for the best Robot Framework conference on the planet! It's the perfect place to connect, learn, and share insights with fellow enthusiasts.
+        Recordings of Helsinki talks and online tutorials are watchable for those who attended the event, either online or in-person. Please see your ticket for instructions.
+        <br><br>
+        Be sure to stay tuned for RoboCon 2025!
       </p>
+      <h2>About RoboCon</h2>
       <p>
-        The dates for the <span class="color-theme">online</span> conference are still being finalized but are expected in the <span class="color-theme">first week of March</span>. Join us again for an interactive experience hosted by the amazing <span class="color-theme">Joe Colantanio</span>! Stay tuned for more information!
+        RoboCon is the crown jewel of the
+        <span class="color-theme">Robot Framework community</span>. Once again
+        we are gathering together as a community to learn, exchange knowledge
+        and have a great time with one another.
       </p>
-      <p>
-        P.S. <span class="color-theme"></span>The call for participation will open around August, but feel free to start brainstorming engaging talks and workshops for RoboCon 2025 now!
-      </p>
-      <p>
-        See you soon!
+      <p class="mb-medium">
+        For <span class="color-theme">RoboCon 2024</span> we had a
+        familiar fully in-person conference on Feb 7th to 9th and then end of February (28th & 29th) we will have a full
+        online conference like the year before.
       </p>
       <div class="col-sm-12 row center between-md">
         <!-- <Ticket link="https://tickets.robotframework.org/robocon-2024/3913179/" class="mb-small">
@@ -67,7 +69,7 @@
           </a>
         </template> -->
       </div>
-      <!-- <sponsors :sponsors="$tm('home.sponsors')" /> -->
+      <sponsors :sponsors="$tm('home.sponsors')" />
       <!-- <p class="mt-large">
         <span class="color-theme">The in-person conference</span> will be held in Helsinki 8-9 February, 2024.
       </p>
@@ -108,47 +110,47 @@
       <p>
         In-person ticket includes a complimentary online conference ticket.
       </p> -->
-      <!-- <div class="row col-sm-12">
-        <div class="col-sm-12 col-md-6 px-small">
-            <div class="bg-secondary p-medium pt-large pb-2xlarge rounded mb-small">
-                <h2>Online (past)</h2>
-                <a href="https://www.gather.town/">Gather.town</a>
-                <span class="line-height-1">
-                    <div class="mt-small color-theme font-title type-body">Feb 27th</div>
-                    Tutorials
-                    <div class="mt-small color-theme font-title type-body">Feb 28th</div>
-                    Main Conference
-                    <div class="mt-small color-theme font-title type-body">29th</div>
-                    Main Conference
-                    <div class="mt-small color-theme font-title type-body">Mar 1st</div>
-                    Community Day
-                  </span>
-              </div>
-          </div>
+      <div class="row col-sm-12">
           <div class="col-sm-12 col-md-6 px-small">
-            <div class="bg-secondary p-medium pt-large pb-large rounded mb-small">
-              <h2>In-person (past)</h2>
-              <div>Helsinki, Finland</div>
-              <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
-              <span class="line-height-1">
-                <div class="mt-small color-theme font-title type-body">Feb 6th</div>
-                Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
-                <div class="mt-small color-theme font-title type-body">7th</div>
-                Community Day (9am) @&nbsp;<a href="https://maps.app.goo.gl/6QFBjcWk8iCaHQCG6" target="_blank">Eficode</a>
-                <div class="mt-small color-theme font-title type-body">8th</div>
-                Main Conference
-                <div>+ Community Dinner</div>
-                <div class="mt-small color-theme font-title type-body">9th</div>
-                Main Conference
-                <div>+ After Party</div>
-                <div class="mt-small color-theme font-title type-body">10th</div>
-                Fun activity
-              </span>
+              <div class="bg-secondary p-medium pt-large pb-2xlarge rounded mb-small">
+                  <h2>Online (past)</h2>
+                  <a href="https://www.gather.town/">Gather.town</a>
+                  <span class="line-height-1">
+                      <div class="mt-small color-theme font-title type-body">Feb 27th</div>
+                      Tutorials
+                      <div class="mt-small color-theme font-title type-body">Feb 28th</div>
+                      Main Conference
+                      <div class="mt-small color-theme font-title type-body">29th</div>
+                      Main Conference
+                      <div class="mt-small color-theme font-title type-body">Mar 1st</div>
+                      Community Day
+                    </span>
+                </div>
             </div>
-          </div>
-      </div> -->
+            <div class="col-sm-12 col-md-6 px-small">
+              <div class="bg-secondary p-medium pt-large pb-large rounded mb-small">
+                <h2>In-person (past)</h2>
+                <div>Helsinki, Finland</div>
+                <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
+                <span class="line-height-1">
+                  <div class="mt-small color-theme font-title type-body">Feb 6th</div>
+                  Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
+                  <div class="mt-small color-theme font-title type-body">7th</div>
+                  Community Day (9am) @&nbsp;<a href="https://maps.app.goo.gl/6QFBjcWk8iCaHQCG6" target="_blank">Eficode</a>
+                  <div class="mt-small color-theme font-title type-body">8th</div>
+                  Main Conference
+                  <div>+ Community Dinner</div>
+                  <div class="mt-small color-theme font-title type-body">9th</div>
+                  Main Conference
+                  <div>+ After Party</div>
+                  <div class="mt-small color-theme font-title type-body">10th</div>
+                  Fun activity
+                </span>
+              </div>
+            </div>
+        </div>
     </page-section>
-    <!-- <page-section title-id="tutorials" :title="'Tutorials'">
+    <page-section title-id="tutorials" :title="'Tutorials'">
       <p>
         Tutorials offer you a sneak peek into specific topics, each uniquely designed for different levels of expertise. This year, we're excited to provide <span class="weight-bold">free beginner-level tutorials during the Community Day of our in-person conference.</span> <a href="https://tickets.robotframework.org/robocon-2024/3997179/">Enroll here, please!</a>
         </p>
@@ -156,7 +158,7 @@
 Moreover, a wide array of exceptional online tutorials will be spread across the days before and after the online conference, <span class="type-underline-theme weight-bold">accessible exclusively to ticket holders.</span> Don't miss this opportunity to enhance your skills and knowledge in a tailored, engaging environment.
       </p>
       <tutorials24 :speakers="speakers" :hashKey="token.hashKey" />
-    </page-section> -->
+    </page-section>
     <!-- <page-section title-id="workshops" :title="'Workshops'">
       <p>
         The in-person conference week kicks off with our exceptional hands-on workshops. These serve as your gateway to a deep dive into specific topics, allowing you to learn practically in a small group setting.
@@ -166,9 +168,9 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
       </p>
       <workshops24 :speakers="speakers" />
     </page-section> -->
-    <!-- <page-section title-id="talks" :title="'Talks'">
+    <page-section title-id="talks" :title="'Talks'">
       <talks24 :speakers="speakers" :hashKey="token.hashKey" />
-    </page-section> -->
+    </page-section>
     <!-- <page-section title-id="hotels" :title="'Hotels'">
       <p>
         If you are looking for <span class="color-theme">accommodation</span>, you may reserve a hotel at a discounted rate via the following links:
@@ -189,7 +191,7 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
 
 <script>
 // import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
-import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, RobotIcon } from 'Components'
+import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
 import * as jose from 'jose'
 
 export default {
@@ -202,7 +204,7 @@ export default {
     // Workshops24,
     Tutorials24,
     Sponsors,
-    RobotIcon
+    GlobeRbcn
   },
   data: () => ({
     // FF renders different height for rbcn font for some reason
@@ -232,7 +234,7 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
     const auth = Object.fromEntries(params.entries()).auth || window.localStorage.getItem('auth')
     const attendee = Object.fromEntries(params.entries()).attendee || window.localStorage.getItem('attendee')
     if (auth && attendee) {
-      window.history.replaceState({}, '', '/2024' + window.location.hash)
+      window.history.replaceState({}, '', '/' + window.location.hash)
       if (attendee !== 'gather') {
         window.localStorage.setItem('auth', auth)
         window.localStorage.setItem('attendee', attendee)
@@ -251,6 +253,18 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
         console.error(error)
       }
     }
+    Promise.all([
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/'),
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=25'),
+      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=50')
+    ])
+      .then(async([first, second, third]) => {
+        const f = await first.json()
+        const s = await second.json()
+        const t = await third.json()
+        const arr = [...f.results, ...s.results, ...t.results]
+        this.speakers = arr.flatMap(({ speakers }) => speakers)
+      })
   },
   methods: {
     getShownTime(time) {

@@ -1,57 +1,63 @@
 <template>
   <div
     ref="nav"
-    class="row between p-small sticky bg-background"
+    class="row between p-small sticky bg-black color-white"
     style="top: 0; z-index: 2;">
     <div class="flex middle">
       <base-icon name="robot" color="white" size="1.25rem" />
-      <router-link :to="{ name: 'Home' }" class="router-link type-large mx-xsmall">
+      <router-link :to="{ name: 'Home' }" class="router-link type-large mx-xsmall color-white">
         ROBOCON
       </router-link>
       <div class="type-xsmall flex">
         |
-        <a href="https://robotframework.org/" class="type-xsmall ml-xsmall mr-2xsmall color-white hover-color-theme">
+        <a href="https://robotframework.org/" class="type-xsmall ml-xsmall mr-2xsmall color-secondary hover-color-secondary">
           Robot Framework
         </a>
         Conference
       </div>
     </div>
     <div class="flex middle">
-      <div v-if="$route.name === 'Home'" class="flex">
-        <a
+      <template v-if="$route.name === 'Home'" class="flex">
+        <!-- <a
           href="#tutorials"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #TUTORIALS
-        </a>
+        </a> -->
         <!-- <a
           href="#workshops"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #WORKSHOPS
         </a> -->
-        <a
+        <!-- <a
           href="#talks"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #TALKS
-        </a>
+        </a> -->
         <!-- <a
           href="#hotels"
           class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
           #HOTELS
         </a> -->
-      </div>
-      <div v-else>
-        <router-link
-          :to="{ name: 'Home' }"
-          class="router-link mx-xsmall type-no-underline type-small">
-          RBCN24
-        </router-link>
-      </div>
+    </template>
+    <template v-else>
+      <router-link
+        :to="{ name: 'Home' }"
+        class="router-link mx-xsmall type-no-underline type-small">
+        RBCN25
+      </router-link>
       <div class="mx-small">|</div>
+    </template>
+    <router-link
+      :to="{ name: 'Robocon2024' }"
+      class="router-link mx-xsmall type-no-underline type-small">
+      RBCN24
+    </router-link>
+    <!-- <div class="mx-small">|</div>
     <router-link
       :to="{ name: 'Sponsor' }"
       class="router-link mx-xsmall type-no-underline type-small">
       sponsor
-    </router-link>
+    </router-link> -->
     <div class="mx-small">|</div>
     <router-link
       :to="{ name: 'Archive' }"

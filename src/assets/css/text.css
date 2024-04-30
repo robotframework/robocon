@@ -305,8 +305,7 @@ strong,
 }
 .router-link:hover {
   text-decoration: underline;
-  color: var(--color-theme);
-  color: var(--color-theme-p3);
+  color: var(--color-theme-secondary);
 }
 .router-link-active {
   color: var(--color-theme);

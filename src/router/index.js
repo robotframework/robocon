@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Robocon2023 from '../views/Robocon2023.vue'
+import Robocon2024 from '../views/Robocon2024.vue'
 import HomeGermany from '../views/HomeGermany.vue'
 import Sponsor from '../views/Sponsor.vue'
 import Archive from '../views/Archive.vue'
@@ -13,6 +14,10 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  }, {
+    path: '/2024',
+    name: 'Robocon2024',
+    component: Robocon2024
   }, {
     path: '/2023',
     name: 'Robocon2023',

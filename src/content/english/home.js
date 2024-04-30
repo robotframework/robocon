@@ -2,14 +2,6 @@ export default {
   intro: {
     title: '👋',
     body: `
-    <p>Ticket sales for <span class="color-theme">RoboCon 2024</span> has begun. Discounted early tickets available until <span class="color-theme">November 12nd</span>!
-    </p>
-    <a href="#talks">Talks and workshops</a>
-    <p>
-      For those who wish to experience the event to it's fullest,
-      there are also <a href="https://tickets.robotframework.org/robocon-2024/3913179/">package deals</a>
-      that include hotel accomodations.
-    </p>
     `
   },
   cfp: {
