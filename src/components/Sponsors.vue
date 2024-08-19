@@ -73,7 +73,7 @@ export default {
     }
   },
   data: () => ({
-    publicPath: process.env.BASE_URL,
+    publicPath: import.meta.env.BASE_URL,
     sponsorInfoShown: false
   })
 }

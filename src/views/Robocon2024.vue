@@ -191,7 +191,7 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
 
 <script>
 // import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
-import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
+import { PageSection, NewsBanner, TicketItem, Talks24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
 import * as jose from 'jose'
 
 export default {
@@ -199,7 +199,7 @@ export default {
   components: {
     PageSection,
     NewsBanner,
-    Ticket,
+    TicketItem,
     Talks24,
     // Workshops24,
     Tutorials24,

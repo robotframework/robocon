@@ -6,7 +6,7 @@ import NavMobile from './NavMobile.vue'
 import PageSection from './PageSection.vue'
 import TabBox from './TabBox.vue'
 import Sponsors from './Sponsors.vue'
-import Ticket from './Ticket.vue'
+import TicketItem from './TicketItem.vue'
 import Talks from './Talks.vue'
 import PreviousTalks from './PreviousTalks.vue'
 import Timeline from './Timeline.vue'
@@ -14,6 +14,7 @@ import Talks2023 from './Talks2023.vue'
 import Talks24 from './Talks24.vue'
 import Workshops24 from './Workshops24.vue'
 import Tutorials24 from './Tutorials24.vue'
+import SponsorItem from './SponsorItem.vue'
 
 import BaseIcon from './BaseIcon.vue'
 import GlobeIcon from './icons/GlobeIcon.vue'
@@ -32,7 +33,7 @@ export {
   PageSection,
   TabBox,
   Sponsors,
-  Ticket,
+  TicketItem,
   Talks,
   PreviousTalks,
   Timeline,
@@ -40,6 +41,7 @@ export {
   Talks24,
   Workshops24,
   Tutorials24,
+  SponsorItem,
 
   BaseIcon,
   GlobeIcon,

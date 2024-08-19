@@ -24,7 +24,7 @@
         </div>
         <div
           class="col-sm-6 col-md-3"
-          :class="$store.state.isMobile ? 'type-right' : ''">
+          :class="isMobile ? 'type-right' : ''">
           <h3 class="mb-small color-secondary">
             Community
           </h3>
@@ -54,12 +54,12 @@
             </a>
           </div>
         </div>
-        <div v-if="$store.state.isMobile" class="col-sm-12 mb-large" />
+        <div v-if="isMobile" class="col-sm-12 mb-large" />
         <div class="col-sm-6 col-md-3">
         </div>
         <div class="col-sm-6 col-md-3 flex flex-col between">
           <div />
-          <div :class="$store.state.isMobile ? 'type-right' : ''">
+          <div :class="isMobile ? 'type-right' : ''">
             <div>
               <a class="color-secondary" href="https://robotframework.org">
                 Robot Framework
@@ -79,6 +79,8 @@
 
 <script>
 // import GlobeIcon from './icons/GlobeIcon.vue'
+import { useStore } from '../store';
+import { mapState } from 'pinia';
 
 export default {
   name: 'PageFooter',
@@ -93,7 +95,8 @@ export default {
       return Object.keys(this.$i18n.messages)
         .map((lang) => ({ lang, name: this.$i18n.messages[lang].langName }))
         .filter(({ name }) => name !== 'translation')
-    }
+    },
+    ...mapState(useStore, ['isMobile']),
   },
   methods: {
     setLang(lang) {
