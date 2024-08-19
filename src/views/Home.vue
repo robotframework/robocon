@@ -47,7 +47,8 @@ export default {
   computed: {
     ...mapState(useStore, ['pages']),
     sections() {
-      return this.pages[0].fields.pageBody.content
+      const page = this.pages.find((p) => p.fields.pageName === '2025') ?? this.pages[0]
+      return page.fields.pageBody.content
         .filter((c) => c.nodeType === 'embedded-entry-block')
         .map((c) => c)
     }
@@ -94,7 +95,7 @@ export default {
           }
           if (type === 'sponsor') {
             const {sponsorName, sponsorTier, href, sponsorLogo} = target.fields
-            return h(SponsorItem, {href, name: sponsorName, src: sponsorLogo?.fields?.file?.url, important: sponsorTier})
+            return h(SponsorItem, {href, name: sponsorName, src: sponsorLogo?.fields?.file?.url, important: !!sponsorTier})
           }
 
           return ''
