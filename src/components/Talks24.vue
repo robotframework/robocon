@@ -154,7 +154,7 @@ export default {
     this.isStreamRoute = this.$route?.name === 'Stream'
   },
   data: () => ({
-    publicPath: process.env.BASE_URL,
+    publicPath: import.meta.env.BASE_URL,
     selectedTrack: 'helsinki',
     talksLive: [],
     talksOnline: [],

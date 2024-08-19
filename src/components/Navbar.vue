@@ -16,65 +16,40 @@
         Conference
       </div>
     </div>
-    <div class="flex middle">
-      <template v-if="$route.name === 'Home'" class="flex">
-        <!-- <a
-          href="#tutorials"
-          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
-          #TUTORIALS
-        </a> -->
-        <!-- <a
-          href="#workshops"
-          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
-          #WORKSHOPS
-        </a> -->
-        <!-- <a
-          href="#talks"
-          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
-          #TALKS
-        </a> -->
-        <!-- <a
-          href="#hotels"
-          class="color-white mx-2xsmall type-no-underline font-title router-link type-small">
-          #HOTELS
-        </a> -->
-    </template>
-    <template v-else>
+    <div class="flex">
       <router-link
         :to="{ name: 'Home' }"
         class="router-link mx-xsmall type-no-underline type-small">
-        RBCN25
+        2025
       </router-link>
       <div class="mx-small">|</div>
-    </template>
-    <router-link
-      :to="{ name: 'Robocon2024' }"
-      class="router-link mx-xsmall type-no-underline type-small">
-      RBCN24
-    </router-link>
-    <!-- <div class="mx-small">|</div>
-    <router-link
-      :to="{ name: 'Sponsor' }"
-      class="router-link mx-xsmall type-no-underline type-small">
-      sponsor
-    </router-link> -->
-    <div class="mx-small">|</div>
-    <router-link
-      :to="{ name: 'Archive' }"
-      class="router-link mx-xsmall type-no-underline type-small">
-      archive
-    </router-link>
+      <router-link
+        :to="{ name: 'Sponsor' }"
+        class="router-link mx-xsmall type-no-underline type-small">
+        Sponsor
+      </router-link>
+      <div class="mx-small">|</div>
+      <router-link
+        :to="{ name: 'Archive' }"
+        class="router-link mx-xsmall type-no-underline type-small">
+        archive
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 import BaseIcon from './BaseIcon.vue'
+import { useStore } from '../store';
+import { mapState } from 'pinia';
 
 export default {
   name: 'Navbar',
   components: {
     BaseIcon
+  },
+  computed: {
+    ...mapState(useStore, ['pages'])
   },
   methods: {
     itemClick(itemId) {

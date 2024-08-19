@@ -11,244 +11,53 @@
     📣 <a href="https://pretalx.com/robocon-2025/cfp" class="color-white">Call for proposals is open!</a> Submission deadline: 20th October 2024 11:59 PM.
   </news-banner>
   <div class="container narrow border-top-theme">
-    <page-section title-id="intro" :title="$t('home.intro.title')" :fullWidth="true">
-      <h2>Save the date!</h2>
-      <p>
-        <span class="color-theme">RoboCon 2025</span> is currently under planning, and we're excited to offer an enhanced experience at <span class="color-theme">Bio Rex</span>! Join us in <span class="color-theme">Helsinki</span> for the in-person conference on <span class="color-theme">February 13-14, 2025</span>. Please reserve the whole week, as usual, we have <span class="color-theme">workshops</span> and <span class="color-theme">a Community Day</span> leading up to the conference.
-      </p>
-      <p>
-        Get ready for the best Robot Framework conference on the planet! It's the perfect place to connect, learn, and share insights with fellow enthusiasts.
-      </p>
-      <p>
-        The dates for the <span class="color-theme">online</span> conference are still being finalized but are expected in the <span class="color-theme">first week of March</span>. Join us again for an interactive experience hosted by the amazing <span class="color-theme">Joe Colantanio</span>! Stay tuned for more information!
-      </p>
-      <p>
-        See you soon!
-      </p>
-      <div class="col-sm-12 row center between-md">
-        <!-- <Ticket link="https://tickets.robotframework.org/robocon-2024/3913179/" class="mb-small">
-          <template v-slot:title>
-            Main Conference<br>In-person<br>
-          </template>
-          <template v-slot:price>
-            1200 €<span class="type-xsmall"> + VAT</span>
-          </template>
-          <template v-slot:left>
-            FEB 08-09
-          </template>
-          <template v-slot:right>
-            2024
-          </template>
-        </Ticket> -->
-        <!-- <template v-if="!token.hashKey">
-          <Ticket link="https://tickets.robotframework.org/robocon-2024/3913180/">
-            <template v-slot:title>
-              Main Conference<br>Online
-            </template>
-            <template v-slot:price>
-              300 €<span class="type-xsmall"> + VAT</span>
-            </template>
-            <template v-slot:left>
-              FEB 28-29
-            </template>
-            <template v-slot:right>
-              2024
-            </template>
-          </Ticket>
-        </template>
-        <template v-else>
-          <a href="/stream" class="type-center" style="margin: 0 auto;">
-            <button class="theme type-large" style="padding: 1rem 2rem;">
-              Open stream
-            </button>
-          </a>
-        </template> -->
-      </div>
-      <!-- <sponsors :sponsors="$tm('home.sponsors')" /> -->
-      <!-- <p class="mt-large">
-        <span class="color-theme">The in-person conference</span> will be held in Helsinki 8-9 February, 2024.
-      </p>
-      <p>
-        Please also reserve the 6th and 7th of February for learning in the workshops and for the Community Day. The Community Day is an open space for the community to learn, discuss and advance topics related to Robot Framework. This might include workshop participants practicing what they learned with the help of the workshop facilitators.
-      </p>
-      <p>
-        Moreover, on the 10th of February there will be a walking tours and other optional activities in Helsinki.
-      </p>
-      <details class="pl-small">
-        <summary>
-          Plans for tour day (10th Feb)
-        </summary>
-        <h3 class="mt-small">
-          Helsinki Walk with Pekka Klärck
-        </h3>
-        <p>
-          Take a walk through some neighborhoods with Pekka Klärck. Starting in central Helsinki, Pekka will lead you up through the neighborhoods of Kallio, Vallila, and over towards Pasila. Along the way you will be visiting a famous food market hall, seeing beautiful parts of the city outside of the city central, stop for some Coffee break at Sävy or Helsingin Kahvipaahtimo. Later there will be an option for a brewery tour at Vallilan Panimo and possible sauna at a local community sauna.
-        </p>
-        <h3>
-          Suomenlinna tour with Jenna, Eeva and Ed
-        </h3>
-        <p>
-          This group will visit Suomenlinna, an island within the city harbor just south of Market Square, and viewable from this year’s conference venue. Taking a short 15 minute, 3€ ferry/public transportation will travel from Market Square. Jenna and Eeva, both Robot Framework community members and Helsinki locals will travel with us and share from their experiences. On the island there are opportunities for exploring the islands, enjoying some food. There is also a 13€ per person Guided tour which we could take advantage of. This tour will end mid afternoon.
-        </p>
-        <p>
-          Both options will start late morning. If weather is really bad we will have backup plans probably to the local museums of which there are about half a dozen in the immediate area. More information will be published as we get closer to the conference dates.
-        </p>
-      </details> -->
-      <!-- <p>
-        <span class="color-theme">The online conference</span> will take place
-        28-29 February, 2024 followed by the community day on the 1st of March.
-      </p>
-      <p>
-        Also this you have the chance to meet your fellow Robot Framework enthusiasts in <span class="color-theme">Gather.town:</span>
-      </p>
-      <iframe width="100%" height="400" class="rounded" src="https://www.youtube.com/embed/6mtIO49k074?si=M0MgEfL2xBMEh0qe" frameborder="0" allow="" allowfullscreen></iframe>
-      <p>
-        In-person ticket includes a complimentary online conference ticket.
-      </p> -->
-      <!-- <div class="row col-sm-12">
-        <div class="col-sm-12 col-md-6 px-small">
-            <div class="bg-secondary p-medium pt-large pb-2xlarge rounded mb-small">
-                <h2>Online (past)</h2>
-                <a href="https://www.gather.town/">Gather.town</a>
-                <span class="line-height-1">
-                    <div class="mt-small color-theme font-title type-body">Feb 27th</div>
-                    Tutorials
-                    <div class="mt-small color-theme font-title type-body">Feb 28th</div>
-                    Main Conference
-                    <div class="mt-small color-theme font-title type-body">29th</div>
-                    Main Conference
-                    <div class="mt-small color-theme font-title type-body">Mar 1st</div>
-                    Community Day
-                  </span>
-              </div>
-          </div>
-          <div class="col-sm-12 col-md-6 px-small">
-            <div class="bg-secondary p-medium pt-large pb-large rounded mb-small">
-              <h2>In-person (past)</h2>
-              <div>Helsinki, Finland</div>
-              <a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-marina/meetings-conferences-events/scandic-marina-congress-center">Marina Congress Center</a>
-              <span class="line-height-1">
-                <div class="mt-small color-theme font-title type-body">Feb 6th</div>
-                Workshops - <a href="https://tickets.robotframework.org/robocon-2024/3997180/">tickets</a>
-                <div class="mt-small color-theme font-title type-body">7th</div>
-                Community Day (9am) @&nbsp;<a href="https://maps.app.goo.gl/6QFBjcWk8iCaHQCG6" target="_blank">Eficode</a>
-                <div class="mt-small color-theme font-title type-body">8th</div>
-                Main Conference
-                <div>+ Community Dinner</div>
-                <div class="mt-small color-theme font-title type-body">9th</div>
-                Main Conference
-                <div>+ After Party</div>
-                <div class="mt-small color-theme font-title type-body">10th</div>
-                Fun activity
-              </span>
-            </div>
-          </div>
-      </div> -->
+    <page-section
+      v-for="section in sections"
+      :key="section.data.target.fields.title"
+      :titleId="section.data.target.fields.title"
+      :title="section.data.target.fields.title">
+      <RichTextRenderer :document="section.data.target.fields.body" :nodeRenderers="renderNodes()" />
     </page-section>
-    <!-- <page-section title-id="tutorials" :title="'Tutorials'">
-      <p>
-        Tutorials offer you a sneak peek into specific topics, each uniquely designed for different levels of expertise. This year, we're excited to provide <span class="weight-bold">free beginner-level tutorials during the Community Day of our in-person conference.</span> <a href="https://tickets.robotframework.org/robocon-2024/3997179/">Enroll here, please!</a>
-        </p>
-        <p>
-Moreover, a wide array of exceptional online tutorials will be spread across the days before and after the online conference, <span class="type-underline-theme weight-bold">accessible exclusively to ticket holders.</span> Don't miss this opportunity to enhance your skills and knowledge in a tailored, engaging environment.
-      </p>
-      <tutorials24 :speakers="speakers" :hashKey="token.hashKey" />
-    </page-section> -->
-    <!-- <page-section title-id="workshops" :title="'Workshops'">
-      <p>
-        The in-person conference week kicks off with our exceptional hands-on workshops. These serve as your gateway to a deep dive into specific topics, allowing you to learn practically in a small group setting.
-      </p>
-      <p>
-        We offer a diverse range of workshops covering various topics and skill levels. Be sure to choose one that's just right for you!
-      </p>
-      <workshops24 :speakers="speakers" />
-    </page-section> -->
-    <!-- <page-section title-id="talks" :title="'Talks'">
-      <talks24 :speakers="speakers" :hashKey="token.hashKey" />
-    </page-section> -->
-    <!-- <page-section title-id="hotels" :title="'Hotels'">
-      <p>
-        If you are looking for <span class="color-theme">accommodation</span>, you may reserve a hotel at a discounted rate via the following links:
-      </p>
-      <div class="row">
-        <div class="col-sm-6 pr-medium pl-small">
-          <img style="width: 100%" class="rounded" src="https://cache.marriott.com/content/dam/marriott-renditions/HELAK/helak-corner-suite-6602-hor-clsc.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=*:423px" />
-          <a class="block type-center" href="https://bit.ly/HotelU14">Hotel U14</a>
-        </div>
-        <div class="col-sm-6 pl-medium pr-small">
-          <img style="width: 100%" class="rounded" src="https://be.synxis.com/shs-ngbe-image-resizer/images/hotel/69715/images/room/170222_f6_huonexxx_001.jpg" />
-          <a class="block type-center" href="https://bit.ly/HotelF6">Hotel F6</a>
-        </div>
-      </div>
-    </page-section> -->
   </div>
 </template>
 
 <script>
 // import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
-import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, RobotIcon } from 'Components'
-import * as jose from 'jose'
+import { PageSection, NewsBanner, RobotIcon, TicketItem, SponsorItem } from 'Components'
+import RichTextRenderer from 'contentful-rich-text-vue-renderer'
+import { h } from 'vue'
+import { useStore } from '../store';
+import { mapState } from 'pinia';
+import { format } from 'date-fns'
+
+const customEmbeddedEntry = (node, key) => {
+  return h(TicketItem, { key, to: 'link to embedded entry' }, 'content for the <Link> component');
+};
 
 export default {
   name: 'App',
   components: {
     PageSection,
     NewsBanner,
-    Ticket,
-    Talks24,
-    // Workshops24,
-    Tutorials24,
-    Sponsors,
-    RobotIcon
+    RobotIcon,
+    RichTextRenderer,
+    TicketItem,
+    SponsorItem
+  },
+  computed: {
+    ...mapState(useStore, ['pages']),
+    sections() {
+      return this.pages[0].fields.pageBody.content
+        .filter((c) => c.nodeType === 'embedded-entry-block')
+        .map((c) => c)
+    }
   },
   data: () => ({
     // FF renders different height for rbcn font for some reason
     isFirefox: false,
     speakers: [],
-    token: {},
-    public: `-----BEGIN PUBLIC KEY-----
-MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1RHu1qgXJ81+2tlBy4UF
-B8OdRsBjWhswMQaS/NhA2yWBaQiQ1YG4Tzen2aNmlTIkTBhSR3hqOnkzPQq77nMs
-KP9HD1WHz/UNici/a/2UwXFy9bOyX+GKnPCtdcvZrIougvW5K7EBeUWcgY68xNQk
-V9vFq4GSczOud7juk62eqqV26esV5tE2c4/J714SYwUl6NqLc7XeQNZMrsRHabIL
-Bzg+A+2kw1jiJpJsJliPCT9T/NiAMrbZk1KR/NQ7uHARclAk13LwLwm5JfOhyKSs
-Qkdfr8rVYuj3DDQCitea269Xy5RsFW/Cqyh3gHzt7bB9auU3UFaAXWPvnPURhTO4
-Yf3c7YrizmpTfDGPIG/7zkegx9nPiBPNIGPq/LpmCC9iawNH7ixOH8ZC5Ijrti0b
-8rMnuJBKysZxIowJAFvd7Zh+soekUei90qQnYwhFO49h7fwXXSq2sGeRfpg99Nu/
-RdqqxM2zCMPpVMWHjxAVIubgNW5ZA33PW1wS075npC3oK+YUh2xt/9A6Ll4AcAOt
-oaCmENEyeZEnHlaEWeXhNPQv1/nZN5Z3Fq3uKWCQRry1HMoOGKrdATfUUIXc6vvk
-nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
-6IrJDlqg3BaMV5Hr8LdQtY8CAwEAAQ==
------END PUBLIC KEY-----`
+    token: {}
   }),
-  async created() {
-    if (navigator.userAgent && navigator.userAgent.match(/firefox|fxios/i)) {
-      this.isFirefox = true
-    }
-    const params = new URLSearchParams(window.location.search)
-    const auth = Object.fromEntries(params.entries()).auth || window.localStorage.getItem('auth')
-    const attendee = Object.fromEntries(params.entries()).attendee || window.localStorage.getItem('attendee')
-    // if (auth && attendee) {
-    //   window.history.replaceState({}, '', '/2024' + window.location.hash)
-    //   if (attendee !== 'gather') {
-    //     window.localStorage.setItem('auth', auth)
-    //     window.localStorage.setItem('attendee', attendee)
-    //   }
-    //   try {
-    //     const { payload } = await jose.jwtVerify(auth, await jose.importSPKI(this.public, 'RS256'), {
-    //       issuer: 'pretix'
-    //     })
-    //     this.token = payload
-    //     if (payload.name !== attendee) {
-    //       console.log('invalid Attendee')
-    //       this.error = true
-    //     }
-    //   } catch (error) {
-    //     this.error = true
-    //     console.error(error)
-    //   }
-    // }
-  },
   methods: {
     getShownTime(time) {
       const date = new Date(time)
@@ -263,6 +72,42 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
         el.scrollIntoView({
           behavior: 'smooth'
         })
+      }
+    },
+    renderNodes() {
+      return {
+        'embedded-entry-inline': (node) => {
+          const target = node.data.target
+          const type = target.sys.contentType.sys.id
+          if (type === 'ticket') {
+            const { ticketName, href, price, discountedPrice, validFrom, validUntil, highlighted } = target.fields
+            const isValid =
+              (!validFrom || (new Date() > new Date(validFrom))) &&
+              (!validUntil || (new Date() < new Date(validUntil)))
+            if (isValid) return h(TicketItem, { link: href }, {
+              title: () => h('div', ticketName),
+              price: () => h('div', [h('div', `${price} €`), validUntil ? h('div', {class: 'type-xsmall'}, `Until ${format(new Date(validUntil), 'do MMM')}`) : undefined]),
+              left: () => h('div', 'RBCN'),
+              right: () => h('div', ''),
+            })
+            else return undefined
+          }
+          if (type === 'sponsor') {
+            const {sponsorName, sponsorTier, href, sponsorLogo} = target.fields
+            return h(SponsorItem, {href, name: sponsorName, src: sponsorLogo?.fields?.file?.url, important: sponsorTier})
+          }
+
+          return ''
+        },
+        'embedded-asset-block': (node) => {
+          const target = node.data.target
+          const file = target.fields.file
+          const isImg = file.contentType.includes('image')
+          if (isImg) {
+            return h('img', { src: file.url, class:"w-100" })
+          }
+          return undefined
+        }
       }
     }
   }

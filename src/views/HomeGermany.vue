@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import { Banner, BaseIcon, PageSection, Sponsors, Ticket, Talks } from 'Components'
+import { Banner, BaseIcon, PageSection, Sponsors, TicketItem, Talks } from 'Components'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import MapGermany from 'Img/qs-day-map'
 import LogoGermany from 'Img/qs-day-logo'
@@ -95,7 +95,7 @@ export default {
     BaseIcon,
     PageSection,
     Sponsors,
-    Ticket,
+    TicketItem,
     Talks
   },
   data: () => ({

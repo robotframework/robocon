@@ -1,20 +1,12 @@
-import { createStore } from 'vuex'
+import { createPinia, defineStore } from 'pinia';
 
-export default createStore({
-  state: {
-    isMobile: null,
-    isDesktop: null
-  },
-  mutations: {
-    SET_IS_MOBILE(state, truthiness) {
-      state.isMobile = truthiness
-    },
-    SET_IS_DESKTOP(state, truthiness) {
-      state.isDesktop = truthiness
-    }
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+const store = createPinia();
+
+export default store;
+
+export const useStore = defineStore('store', {
+  state: () => ({
+    isMobile: false,
+    pages: []
+  })
+});
