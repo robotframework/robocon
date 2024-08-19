@@ -9,11 +9,6 @@
         RBCN25
       </router-link>
       <router-link
-        :to="{ name: 'Robocon2024' }"
-        class="block m-medium router-link type-no-underline type-small">
-        RBCN24
-      </router-link>
-      <router-link
         :to="{ name: 'Archive' }"
         class="block m-medium router-link type-no-underline type-small">
         archive

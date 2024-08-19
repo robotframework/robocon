@@ -3,7 +3,7 @@
     :href="link"
     target="_blank"
     :class="(link) ? 'cursor-pointer' : 'suspended'"
-    class="ticket-container type-no-underline flex center middle"
+    class="ticket-container type-no-underline flex center"
     ref="ticketContainer">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,8 @@
       <path d="M360,142.9c0-2.8,2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-9.5c-17.4-2.2-31.1-16-33.4-33.4H38.4c-2.2,17.4-16,31.1-33.4,33.4v11.6c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v11.6c17.4,2.2,31.1,16,33.4,33.4H331.6c2.2-17.4,16-31.1,33.4-33.4v-13.7c-2.8,0-5-2.2-5-5Z"/>
       <rect stroke-width="1px" stroke="white" x="54.7" y="25.6" width="260.5" height="148.9" rx="25" ry="25"/>
     </svg>
-    <div class="relative type-center content" style="width: 60%;">
-      <div class="ticket-title type-medium border-bottom-white border-thin mb-3xsmall pb-3xsmall">
+    <div class="relative type-center content" style="width: 100%;">
+      <div class="ticket-title type-medium mb-3xsmall pb-3xsmall">
         <slot name="title" />
       </div>
       <div class="price">
@@ -52,12 +52,12 @@ export default {
 
 <style scoped>
 .ticket-container {
+  display: inline-flex;
   width: 18rem;
   height: 9rem;
   aspect-ratio: 2;
   position: relative;
   backface-visibility: hidden;
-  color: var(--color-white);
 }
 .ticket-container:hover .ticket-title {
   color: var(--color-theme);
@@ -70,6 +70,7 @@ export default {
 }
 .ticket-title {
   transition: color 0.2s;
+  padding-top: 2rem;
 }
 .side.left {
   transform: rotate(-90deg) translate(-50%, 100%);
@@ -135,8 +136,6 @@ svg {
 }
 .text-container {
   text-align: center;
-  border: solid 0.1rem var(--color-theme);
-  border-radius: 0.5rem;
 }
 
 div.suspended.ticket-container {
@@ -162,8 +161,6 @@ div.suspended.ticket-container .specular {
 
 div.suspended.ticket-container .text-container {
   text-align: center;
-  border: solid 0.1rem grey;
-  border-radius: 0.5rem;
 }
 
 div.suspended:hover .price {
