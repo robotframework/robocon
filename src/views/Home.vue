@@ -7,11 +7,11 @@
       </div>
     </div>
   </div>
-  <news-banner v-if="$t('newsBanner') !== ''">
-    <div v-html="$t('newsBanner')" />
+  <news-banner>
+    📣 <a href="https://pretalx.com/robocon-2025/cfp" class="color-white">Call for proposals is open!</a> Submission deadline: 20th October 2024 11:59 PM.
   </news-banner>
   <div class="container narrow border-top-theme">
-    <page-section title-id="intro" :title="$t('home.intro.title')">
+    <page-section title-id="intro" :title="$t('home.intro.title')" :fullWidth="true">
       <h2>Save the date!</h2>
       <p>
         <span class="color-theme">RoboCon 2025</span> is currently under planning, and we're excited to offer an enhanced experience at <span class="color-theme">Bio Rex</span>! Join us in <span class="color-theme">Helsinki</span> for the in-person conference on <span class="color-theme">February 13-14, 2025</span>. Please reserve the whole week, as usual, we have <span class="color-theme">workshops</span> and <span class="color-theme">a Community Day</span> leading up to the conference.
@@ -21,9 +21,6 @@
       </p>
       <p>
         The dates for the <span class="color-theme">online</span> conference are still being finalized but are expected in the <span class="color-theme">first week of March</span>. Join us again for an interactive experience hosted by the amazing <span class="color-theme">Joe Colantanio</span>! Stay tuned for more information!
-      </p>
-      <p>
-        P.S. <span class="color-theme"></span>The call for participation will open around August, but feel free to start brainstorming engaging talks and workshops for RoboCon 2025 now!
       </p>
       <p>
         See you soon!
@@ -231,26 +228,26 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
     const params = new URLSearchParams(window.location.search)
     const auth = Object.fromEntries(params.entries()).auth || window.localStorage.getItem('auth')
     const attendee = Object.fromEntries(params.entries()).attendee || window.localStorage.getItem('attendee')
-    if (auth && attendee) {
-      window.history.replaceState({}, '', '/2024' + window.location.hash)
-      if (attendee !== 'gather') {
-        window.localStorage.setItem('auth', auth)
-        window.localStorage.setItem('attendee', attendee)
-      }
-      try {
-        const { payload } = await jose.jwtVerify(auth, await jose.importSPKI(this.public, 'RS256'), {
-          issuer: 'pretix'
-        })
-        this.token = payload
-        if (payload.name !== attendee) {
-          console.log('invalid Attendee')
-          this.error = true
-        }
-      } catch (error) {
-        this.error = true
-        console.error(error)
-      }
-    }
+    // if (auth && attendee) {
+    //   window.history.replaceState({}, '', '/2024' + window.location.hash)
+    //   if (attendee !== 'gather') {
+    //     window.localStorage.setItem('auth', auth)
+    //     window.localStorage.setItem('attendee', attendee)
+    //   }
+    //   try {
+    //     const { payload } = await jose.jwtVerify(auth, await jose.importSPKI(this.public, 'RS256'), {
+    //       issuer: 'pretix'
+    //     })
+    //     this.token = payload
+    //     if (payload.name !== attendee) {
+    //       console.log('invalid Attendee')
+    //       this.error = true
+    //     }
+    //   } catch (error) {
+    //     this.error = true
+    //     console.error(error)
+    //   }
+    // }
   },
   methods: {
     getShownTime(time) {

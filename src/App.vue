@@ -33,9 +33,9 @@ export default {
     window.addEventListener('keydown', ({ key }) => {
       if (key === 'Tab') { document.body.classList.add('accessible') }
     })
-    const params = new URLSearchParams(window.location.search)
-    const attendee = Object.fromEntries(params.entries()).attendee
-    if (attendee === 'gather') this.fullScreen = true
+    // const params = new URLSearchParams(window.location.search)
+    // const attendee = Object.fromEntries(params.entries()).attendee
+    // if (attendee === 'gather') this.fullScreen = true
   },
   watch: {
     '$i18n.locale'() {
