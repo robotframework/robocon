@@ -5,10 +5,11 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    '@vue/standard'
+    'eslint:recommended',
+    '@vue/typescript/recommended'
   ],
   parserOptions: {
-    parser: 'babel-eslint'
+    ecmaVersion: 2020
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -17,6 +18,20 @@ module.exports = {
     'vue/no-multiple-template-root': 'off',
     'no-unused-vars': 'warn',
     'space-before-function-paren': ['warn', 'never'],
-    indent: [2, 2]
+    indent: [2, 2],
+    "sort-exports/sort-exports": [
+      "error",
+      { "sortDir": "asc", "ignoreCase": true, "sortExportKindFirst": "type" }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ],
   }
 }
