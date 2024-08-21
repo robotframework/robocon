@@ -24,7 +24,7 @@ const props = defineProps({
     max-width: 25rem;
   }
 
-  & > img {
+  &>img {
     width: 100%;
     display: block;
   }
