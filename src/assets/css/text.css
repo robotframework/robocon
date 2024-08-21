@@ -59,9 +59,8 @@ h2 {
 h2 {
   font-family: var(--font-title);
   line-height: var(--line-height-headers);
-  color: var(--color-theme);
-  color: var(--color-theme-p3);
 }
+
 h3,
 h4 {
   font-family: var(--font-title);
@@ -99,10 +98,6 @@ h2 {
   margin-bottom: var(--size-medium);
   line-height: var(--line-height-h2);
   text-transform: uppercase;
-}
-
-h2:not(:first-child) {
-  margin-top: var(--size-xlarge);
 }
 
 h3 {
@@ -293,23 +288,6 @@ strong,
 
 .type-italic {
   font-style: italic;
-}
-
-.router-link {
-  color: var(--color-white);
-  font-family: var(--font-title);
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-.router-link:hover {
-  text-decoration: underline;
-  color: var(--color-theme-secondary);
-}
-.router-link-active {
-  color: var(--color-theme);
-  color: var(--color-theme-p3);
 }
 
 ul {

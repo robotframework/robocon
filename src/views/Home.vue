@@ -1,32 +1,56 @@
 <template>
-  <div class="container narrow row middle p-small pt-medium pb-medium">
-    <div class="col-sm-12 center start-lg col-lg-9 col-lg-offset-3 flex">
-      <h1 class="color-black">RBCN<span class="color-theme">25</span></h1>
-      <div class="hidden-sm" :class="!isFirefox ? 'pt-medium' : ''">
-        <robot-icon class="ml-xsmall" color="theme" size="5.75rem"/>
-      </div>
-    </div>
-  </div>
-  <news-banner>
-    📣 <a href="https://pretalx.com/robocon-2025/cfp" class="color-white">Call for proposals is open!</a> Submission deadline: 20th October 2024 11:59 PM.
-  </news-banner>
-  <div class="container narrow border-top-theme">
-    <page-section
-      v-for="section in sections"
-      :key="section.data.target.fields.title"
-      :titleId="section.data.target.fields.title"
-      :title="section.data.target.fields.title">
-      <RichTextRenderer :document="section.data.target.fields.body" :nodeRenderers="renderNodes()" />
-    </page-section>
-  </div>
+
+  <v-row class="banner-wrapper bg-surface">
+    <div class="bg" />
+
+    <v-container fluid>
+      <v-responsive class="mx-auto" max-width="900">
+
+        <main-banner>
+          <template #title>
+            <div class="d-flex items-center">
+              <div class="font-rbcn">RBCN<span class="color-theme">25</span></div>
+            </div>
+          </template>
+        </main-banner>
+
+      </v-responsive>
+    </v-container>
+  </v-row>
+
+  <v-container fluid>
+    <v-responsive class="mx-auto" max-width="900">
+      <v-row>
+        <v-col cols="12">
+          <news-banner v-if="$t('newsBanner') !== ''">
+            <div v-html="$t('newsBanner')" />
+          </news-banner>
+
+          <page-section v-for="(section, index) in sections" :key="section.data.target.fields.title"
+            :titleId="section.data.target.fields.title" :title="section.data.target.fields.title">
+            <RichTextRenderer :document="section.data.target.fields.body" :nodeRenderers="renderNodes()" />
+          </page-section>
+        </v-col>
+      </v-row>
+
+
+      <EventCards />
+
+      <v-row class="mt-16" />
+      <SpeakerCards />
+
+
+    </v-responsive>
+  </v-container>
+
 </template>
 
 <script>
 // import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
-import { PageSection, NewsBanner, RobotIcon, TicketItem, SponsorItem } from 'Components'
+import { MainBanner, PageSection, NewsBanner, EventCards, SpeakerCards, RobotIcon, TicketItem, SponsorItem } from 'Components'
 import RichTextRenderer from 'contentful-rich-text-vue-renderer'
 import { h } from 'vue'
-import { useStore } from '../store';
+import { useGlobalStore } from '../store';
 import { mapState } from 'pinia';
 import { format } from 'date-fns'
 
@@ -42,10 +66,11 @@ export default {
     RobotIcon,
     RichTextRenderer,
     TicketItem,
-    SponsorItem
+    SponsorItem,
+    EventCards
   },
   computed: {
-    ...mapState(useStore, ['pages']),
+    ...mapState(useGlobalStore, ['pages']),
     sections() {
       const page = this.pages.find((p) => p.fields.pageName === '2025') ?? this.pages[0]
       return page.fields.pageBody.content
@@ -87,15 +112,15 @@ export default {
               (!validUntil || (new Date() < new Date(validUntil)))
             if (isValid) return h(TicketItem, { link: href }, {
               title: () => h('div', ticketName),
-              price: () => h('div', [h('div', `${price} €`), validUntil ? h('div', {class: 'type-xsmall'}, `Until ${format(new Date(validUntil), 'do MMM')}`) : undefined]),
+              price: () => h('div', [h('div', `${price} €`), validUntil ? h('div', { class: 'type-xsmall' }, `Until ${format(new Date(validUntil), 'do MMM')}`) : undefined]),
               left: () => h('div', 'RBCN'),
               right: () => h('div', ''),
             })
             else return undefined
           }
           if (type === 'sponsor') {
-            const {sponsorName, sponsorTier, href, sponsorLogo} = target.fields
-            return h(SponsorItem, {href, name: sponsorName, src: sponsorLogo?.fields?.file?.url, important: !!sponsorTier})
+            const { sponsorName, sponsorTier, href, sponsorLogo } = target.fields
+            return h(SponsorItem, { href, name: sponsorName, src: sponsorLogo?.fields?.file?.url, important: !!sponsorTier })
           }
 
           return ''
@@ -105,7 +130,7 @@ export default {
           const file = target.fields.file
           const isImg = file.contentType.includes('image')
           if (isImg) {
-            return h('img', { src: file.url, class:"w-100" })
+            return h('img', { src: file.url, class: "w-100" })
           }
           return undefined
         }
@@ -116,9 +141,27 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (max-width: 768px) {
-  .nav-desktop {
-    display: none;
-  }
+.banner-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  background-size: cover;
+  background-image: url("@/assets/img/finland-flag.png");
+
+}
+
+.font-rbcn {
+  font-family: RBCN !important;
+  letter-spacing: 0.3rem !important;
+  font-size: 100px;
+  z-index: 3;
+
 }
 </style>

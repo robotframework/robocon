@@ -1,106 +1,129 @@
 :root {
-    --color-theme: #002F6C;
-    --color-theme-p3: lab(29.06, 7.24, -36.98);
-    --color-theme-secondary: rgb(100, 108, 226);
-    --color-background: #fff;
+  --color-base: #fcf7f0;
+  --color-white-10: #fefefe;
+  --color-primary: #020d67;
+  --color-secondary: #0032a3;
+  --color-tertiary: #2656ed;
 
-    --color-white: #f5f5f5;
-    --color-grey-light: #e7e7e7;
-    --color-grey: #e2e2e2;
-    --color-grey-dark: #24282c;
-    --color-grey-darkest: #101316;
-    --color-black: #000000; /* body text */
-    --color-link: #002F6C;
-    --color-link-visited: #002F6C;
+  --color-alert: #f16666;
+  --color-background: #fcf7f0;
+  --color-background-secondary: #fff;
 
-    --bp-md: 700px; /* tablet breakpoint */
-    --bp-lg: 1400px; /* desktop breakpoint */
+  --color-text: #000000;
+  --color-background-darkmode: #222222;
 
-    --layout-container-max-width: 1400px;
-    --layout-container-narrow-max-width: 1024px;
-    --container-padding: 0;
+  --color-white: #fff;
+  --color-grey-10: #e7e7e7;
+  --color-grey-20: #c6c6c6;
+  --color-grey-50: #666;
+  --color-grey-80: #2c2c2c;
+  --color-black: #121212; /* body text */
+  --color-link: #0032a3;
+  --color-link-visited: #002b91;
 
-    /* fonts */
-    --font-title: 'OCRA';
-    --font-body: 'Courier Code';
+  /* ============================================================ */
+  --color-theme: #002f6c;
+  --color-theme-p3: lab(29.06, 7.24, -36.98);
+  --color-theme-secondary: rgb(100, 108, 226);
+  --color-background: #fff;
 
-    --margin-h1: 1rem;
+  /* --color-white: #f5f5f5; */
+  --color-grey-light: #e7e7e7;
+  --color-grey: #e2e2e2;
+  --color-grey-dark: #24282c;
+  --color-grey-darkest: #101316;
+  --color-black: #000000; /* body text */
+  --color-link: #002f6c;
+  --color-link-visited: #002f6c;
 
-    /* font sizes */
-    --size-base-lg: 18px;
-    --size-base-md: 2.5vw;
-    --size-base-sm: 4vw;
+  --bp-md: 700px; /* tablet breakpoint */
+  --bp-lg: 1400px; /* desktop breakpoint */
 
-    --type-xsmall: 0.75rem;
-    --type-small: 0.875rem; /* label */
-    --type-body: 1rem; /* p and h3 */
-    --type-large: 1.25rem; /* h2 */
-    --type-xlarge: 1.75rem; /* h2 */
-    --type-2xlarge: 8rem; /* h1 */
+  --layout-container-max-width: 1400px;
+  --layout-container-narrow-max-width: 1024px;
+  --container-padding: 0;
 
-    /* font weights */
-    --weight-light: 300;
-    --weight-normal: 400;
-    --weight-semi-bold: 600; /* h3 */
-    --weight-bold: 700; /* h2 */
-    --weight-black: 900; /* h1 */
+  /* fonts */
+  --font-title: "OCRA";
+  --font-body: "Courier Code";
 
-    --line-height-small: 1.25;
-    --line-height-body: 1.5;
-    --line-height-h1: 1;
-    --line-height-h2: 1.25;
-    --line-height-h3: 1.5;
+  --margin-h1: 1rem;
 
-    --letter-spacing-body: 0;
+  /* font sizes */
+  --size-base-lg: 18px;
+  --size-base-md: 2.5vw;
+  --size-base-sm: 4vw;
 
-    --size-3xsmall: 0.25rem;
-    --size-2xsmall: 0.5rem;
-    --size-xsmall: 0.75rem;
-    --size-small: 1rem;
-    --size-medium: 1.5rem;
-    --size-large: 2.25rem;
-    --size-xlarge: 4rem;
-    --size-2xlarge: 6rem;
-    --size-3xlarge: 8rem;
+  --type-xsmall: 0.75rem;
+  --type-small: 0.875rem; /* label */
+  --type-body: 1rem; /* p and h3 */
+  --type-large: 1.25rem; /* h2 */
+  --type-xlarge: 1.75rem; /* h2 */
+  --type-2xlarge: 8rem; /* h1 */
 
-    --border-radius-rounded: 1rem;
-    --border-radius-rounded-small: 0.5rem;
+  /* font weights */
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-semi-bold: 600; /* h3 */
+  --weight-bold: 700; /* h2 */
+  --weight-black: 900; /* h1 */
 
-    --color-theme-24: #bf72ff;
+  --line-height-small: 1.25;
+  --line-height-body: 1.5;
+  --line-height-h1: 1;
+  --line-height-h2: 1.25;
+  --line-height-h3: 1.5;
+
+  --letter-spacing-body: 0;
+
+  --size-3xsmall: 0.25rem;
+  --size-2xsmall: 0.5rem;
+  --size-xsmall: 0.75rem;
+  --size-small: 1rem;
+  --size-medium: 1.5rem;
+  --size-large: 2.25rem;
+  --size-xlarge: 4rem;
+  --size-2xlarge: 6rem;
+  --size-3xlarge: 8rem;
+
+  --border-radius-rounded: 1rem;
+  --border-radius-rounded-small: 0.5rem;
+
+  --color-theme-24: #bf72ff;
 }
 
 @media screen and (max-width: 780px) {
-    :root {
-        --type-2xlarge: 27.5vw;
-    }
+  :root {
+    --type-2xlarge: 27.5vw;
+  }
 }
 
 .theme-2024 {
-    --color-theme: #bf72ff;
-    --color-theme-p3: #bf72ff;
-    --color-link: #bf72ff;
-    --color-link-visited: #bf72ff;
-    --color-background: #000;
+  --color-theme: #bf72ff;
+  --color-theme-p3: #bf72ff;
+  --color-link: #bf72ff;
+  --color-link-visited: #bf72ff;
+  --color-background: #000;
 }
 
 .theme-2023 {
-    --color-theme: #ff9f00;
-    --color-theme-p3: #ff9f00;
-    --color-link: #ff9f00;
-    --color-link-visited: #ff9f00;
-    --color-background: #000;
+  --color-theme: #ff9f00;
+  --color-theme-p3: #ff9f00;
+  --color-link: #ff9f00;
+  --color-link-visited: #ff9f00;
+  --color-background: #000;
 }
 
 .theme-2022 {
-    --color-theme: #fe4bd2;
-    --color-link: #fe4bd2;
-    --color-link-visited: #fe4bd2;
-    --color-background: #000;
+  --color-theme: #fe4bd2;
+  --color-link: #fe4bd2;
+  --color-link-visited: #fe4bd2;
+  --color-background: #000;
 }
 
 .theme-germany {
-    --color-theme: #3F7BCF;
-    --color-link: #3F7BCF;
-    --color-link-visited: #3F7BCF;
-    --color-background: #000;
+  --color-theme: #3f7bcf;
+  --color-link: #3f7bcf;
+  --color-link-visited: #3f7bcf;
+  --color-background: #000;
 }

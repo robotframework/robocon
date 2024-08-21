@@ -1,34 +1,26 @@
 <template>
-  <!-- <nav-mobile /> -->
-  <!-- <news-banner v-if="$route.name === 'Home'" class="theme-germany">
-    <h2>ROBOCON <span class="color-white">2022</span> GERMANY</h2>
-    <h3>📣 <span class="color-theme">This October 5th</span> 📣</h3> First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link>
-  </news-banner> -->
-  <navbar />
-  <router-view />
-  <page-footer v-if="!fullScreen" />
+  <v-app full-height>
+    <v-main class="text-slate-800 dark:text-slate-200 pt-16">
+      <navbar />
+      <router-view />
+
+      <page-footer v-if="!fullScreen" />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import { Navbar, NavMobile, PageFooter } from 'Components'
+import { Navbar, PageFooter } from 'Components'
 
 export default {
   components: {
     Navbar,
-    NavMobile,
     PageFooter
   },
   data: () => ({
     fullScreen: false
   }),
   created() {
-    // document.documentElement.lang = this.$i18n.locale
-    // this.$store.commit('SET_IS_MOBILE', window.innerWidth < 768)
-    // this.$store.commit('SET_IS_DESKTOP', window.innerWidth > 1280)
-    // window.addEventListener('resize', () => {
-    //   this.$store.commit('SET_IS_MOBILE', window.innerWidth < 768)
-    //   this.$store.commit('SET_IS_DESKTOP', window.innerWidth > 1280)
-    // })
     window.addEventListener('click', () => document.body.classList.remove('accessible'))
     window.addEventListener('keydown', ({ key }) => {
       if (key === 'Tab') { document.body.classList.add('accessible') }
@@ -50,9 +42,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  #app {
-    min-height: 100vh;
-  }
-</style>
