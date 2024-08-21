@@ -1,10 +1,10 @@
 <template>
-  <div class="row bg-black color-secondary p-small pt-large pb-large" style="margin-top: auto">
-    <div class="container" style="line-height: 2;">
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
+  <v-footer class="">
+    <v-container fluid style="line-height: 2;">
+      <v-row>
+        <v-col class="col-sm-6 col-md-3">
           <h3 class="mb-small">
-            <a class="color-secondary" href="https://robotframework.org/foundation/">Foundation</a>
+            <a class="text-primary" href="https://robotframework.org/foundation/">Foundation</a>
           </h3>
           <div>
             Robot Framework ry
@@ -18,38 +18,36 @@
           <div>
             Finland
           </div>
-          <a class="color-secondary" href="mailto:robotframework-foundation@googlegroups.com">
+          <a class="text-primary" href="mailto:robotframework-foundation@googlegroups.com">
             Contact
           </a>
-        </div>
-        <div
-          class="col-sm-6 col-md-3"
-          :class="isMobile ? 'type-right' : ''">
-          <h3 class="mb-small color-secondary">
+        </v-col>
+        <div class="col-sm-6 col-md-3" :class="isMobile ? 'type-right' : ''">
+          <h3 class="mb-small text-primary">
             Community
           </h3>
           <div>
-            <a class="color-secondary" href="https://github.com/robotframework/robotframework">
+            <a class="text-primary" href="https://github.com/robotframework/robotframework">
               GitHub
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://forum.robotframework.org/">
+            <a class="text-primary" href="https://forum.robotframework.org/">
               Forum
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://www.facebook.com/robotframeworkofficial">
+            <a class="text-primary" href="https://www.facebook.com/robotframeworkofficial">
               Facebook
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://twitter.com/robotframework">
+            <a class="text-primary" href="https://twitter.com/robotframework">
               Twitter
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://www.linkedin.com/groups/3710899/">
+            <a class="text-primary" href="https://www.linkedin.com/groups/3710899/">
               LinkedIn
             </a>
           </div>
@@ -61,25 +59,25 @@
           <div />
           <div :class="isMobile ? 'type-right' : ''">
             <div>
-              <a class="color-secondary" href="https://robotframework.org">
+              <a class="text-primary" href="https://robotframework.org">
                 Robot Framework
               </a>
             </div>
             <div>
-              <a class="color-secondary" href="https://robotframework.org/privacy-policy">
+              <a class="text-primary" href="https://robotframework.org/privacy-policy">
                 Privacy Policy
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </v-row>
+    </v-container>
+  </v-footer>
 </template>
 
 <script>
 // import GlobeIcon from './icons/GlobeIcon.vue'
-import { useStore } from '../store';
+import { useGlobalStore } from '../store';
 import { mapState } from 'pinia';
 
 export default {
@@ -96,7 +94,7 @@ export default {
         .map((lang) => ({ lang, name: this.$i18n.messages[lang].langName }))
         .filter(({ name }) => name !== 'translation')
     },
-    ...mapState(useStore, ['isMobile']),
+    ...mapState(useGlobalStore, ['isMobile']),
   },
   methods: {
     setLang(lang) {
@@ -112,6 +110,7 @@ export default {
   div {
     font-size: var(--type-small);
   }
+
   h3 {
     font-size: var(--type-body);
   }
