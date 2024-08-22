@@ -1,58 +1,62 @@
 <template>
-
-  <v-row class="banner-wrapper bg-surface">
+  <div class="banner-wrapper bg-surface">
     <div class="bg" />
-
-    <v-container fluid>
-      <v-responsive class="mx-auto" max-width="900">
-
-        <main-banner>
-          <template #title>
-            <div class="d-flex items-center">
-              <div class="font-rbcn">RBCN<span class="color-theme">25</span></div>
-            </div>
-          </template>
-        </main-banner>
-
-      </v-responsive>
-    </v-container>
-  </v-row>
-
-  <v-container fluid>
-    <v-responsive class="mx-auto" max-width="900">
-      <v-row>
-        <v-col cols="12">
-          <news-banner v-if="$t('newsBanner') !== ''">
-            <div v-html="$t('newsBanner')" />
-          </news-banner>
-
-          <page-section v-for="(section, index) in sections" :key="section.data.target.fields.title"
-            :titleId="section.data.target.fields.title" :title="section.data.target.fields.title">
-            <RichTextRenderer :document="section.data.target.fields.body" :nodeRenderers="renderNodes()" />
-          </page-section>
-        </v-col>
-      </v-row>
-
-
-      <EventCards />
-
-      <v-row class="mt-16" />
-      <SpeakerCards />
-
-
+    <v-responsive class="ma-auto" max-width="960">
+      <main-banner>
+        <template #title>
+          <div class="font-rbcn text-h2 text-sm-h1">
+            <span>RBCN</span>
+            <span class="ml-3">{{ currentYear }}</span>
+          </div>
+        </template>
+      </main-banner>
     </v-responsive>
+
+  </div>
+
+  <v-container fluid class="pa-0">
+
+    <news-banner v-if="$t('newsBanner') !== ''">
+      <div v-html="$t('newsBanner')" />
+    </news-banner>
+
+    <page-section v-for="(section, index) in sections" :key="section.data.target.fields.title"
+      :titleId="section.data.target.fields.title" :title="section.data.target.fields.title"
+      :bg="index % 2 === 1 ? 'surface-bright' : undefined">
+      <RichTextRenderer :document="section.data.target.fields.body" :nodeRenderers="renderNodes()" />
+    </page-section>
+
+    <div class="bg-surface-bright">
+      <v-responsive class="mx-auto py-10" max-width="960">
+        <EventCards />
+      </v-responsive>
+    </div>
+
+    <v-responsive class="mx-auto py-10" max-width="960">
+      <SpeakerCards />
+    </v-responsive>
+
+
   </v-container>
 
 </template>
 
 <script>
-// import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
-import { MainBanner, PageSection, NewsBanner, EventCards, SpeakerCards, RobotIcon, TicketItem, SponsorItem } from 'Components'
+import {
+  MainBanner,
+  PageSection,
+  NewsBanner,
+  EventCards,
+  SpeakerCards,
+  TicketItem,
+  SponsorItem
+} from '@/components'
 import RichTextRenderer from 'contentful-rich-text-vue-renderer'
 import { h } from 'vue'
-import { useGlobalStore } from '../store';
+import { useGlobalStore } from '@/store';
 import { mapState } from 'pinia';
 import { format } from 'date-fns'
+
 
 const customEmbeddedEntry = (node, key) => {
   return h(TicketItem, { key, to: 'link to embedded entry' }, 'content for the <Link> component');
@@ -63,13 +67,15 @@ export default {
   components: {
     PageSection,
     NewsBanner,
-    RobotIcon,
     RichTextRenderer,
     TicketItem,
     SponsorItem,
     EventCards
   },
   computed: {
+    currentYear() {
+      return format(new Date(), "yy")
+    },
     ...mapState(useGlobalStore, ['pages']),
     sections() {
       const page = this.pages.find((p) => p.fields.pageName === '2025') ?? this.pages[0]
@@ -105,8 +111,12 @@ export default {
         'embedded-entry-inline': (node) => {
           const target = node.data.target
           const type = target.sys.contentType.sys.id
+
           if (type === 'ticket') {
             const { ticketName, href, price, discountedPrice, validFrom, validUntil, highlighted } = target.fields
+
+
+            console.log("type >>>>>", ticketName, price, validUntil)
             const isValid =
               (!validFrom || (new Date() > new Date(validFrom))) &&
               (!validUntil || (new Date() < new Date(validUntil)))
@@ -118,6 +128,7 @@ export default {
             })
             else return undefined
           }
+
           if (type === 'sponsor') {
             const { sponsorName, sponsorTier, href, sponsorLogo } = target.fields
             return h(SponsorItem, { href, name: sponsorName, src: sponsorLogo?.fields?.file?.url, important: !!sponsorTier })
@@ -144,6 +155,8 @@ export default {
 .banner-wrapper {
   position: relative;
   height: 400px;
+  justify-content: center;
+  display: flex;
 }
 
 .bg {
