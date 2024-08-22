@@ -77,7 +77,7 @@
 
 <script>
 // import GlobeIcon from './icons/GlobeIcon.vue'
-import { useGlobalStore } from '../store';
+import { useGlobalStore } from '@/store';
 import { mapState } from 'pinia';
 
 export default {
