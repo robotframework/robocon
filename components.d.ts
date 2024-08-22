@@ -15,6 +15,7 @@ declare module 'vue' {
     ChevronIcon: typeof import('./src/components/icons/ChevronIcon.vue')['default']
     ComingSoonBanner: typeof import('./src/components/banners/ComingSoonBanner.vue')['default']
     copy: typeof import('./src/components/cards/EventCards copy.vue')['default']
+    EventCard: typeof import('./src/components/cards/EventCard.vue')['default']
     EventCards: typeof import('./src/components/cards/EventCards.vue')['default']
     GlobeIcon: typeof import('./src/components/icons/GlobeIcon.vue')['default']
     GlobeRBCN: typeof import('./src/components/icons/GlobeRBCN.vue')['default']

@@ -45,13 +45,11 @@
 </template>
 
 <script>
-import { Banner } from 'Components'
 import { marked } from 'marked'
 
 export default {
   name: 'Sponsor',
   components: {
-    Banner
   },
   methods: {
     parseMarkdown(text) {
