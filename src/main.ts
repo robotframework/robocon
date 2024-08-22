@@ -17,11 +17,7 @@ const i18n = createI18n({
   warnHtmlInMessage: 'off'
 })
 
-const app = createApp(App)
-
-app.use(store)
-app.use(i18n)
-app.use(vuetify)
+const app = createApp(App).use(store).use(i18n).use(vuetify)
 
 getEntries()
   .then((res: unknown) => {
