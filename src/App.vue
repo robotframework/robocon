@@ -34,11 +34,5 @@ export default {
       document.documentElement.lang = this.$i18n.locale
     }
   },
-  methods: {
-    scrollTo(id) {
-      const el = document.getElementById(id)
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 }
 </script>
