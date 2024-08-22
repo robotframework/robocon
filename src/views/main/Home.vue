@@ -14,16 +14,18 @@
 
   </div>
 
-  <v-container fluid class="pa-0">
-
     <news-banner v-if="$t('newsBanner') !== ''">
       <div v-html="$t('newsBanner')" />
     </news-banner>
 
-    <page-section v-for="(section, index) in sections" :key="section.data.target.fields.title"
-      :titleId="section.data.target.fields.title" :title="section.data.target.fields.title"
-      :bg="index % 2 === 1 ? 'surface-bright' : undefined">
-      <RichTextRenderer :document="section.data.target.fields.body" :nodeRenderers="renderNodes()" />
+    <page-section
+      v-for="(section, index) in sections"
+      :key="section.data.target.fields.title"
+      :title="section.data.target.fields.shownTitle"
+      :class="index % 2 && 'bg-surface-bright'">
+      <RichTextRenderer
+        :document="section.data.target.fields.body"
+        :nodeRenderers="renderNodes()" />
     </page-section>
 
     <div class="bg-surface-bright">
@@ -36,9 +38,6 @@
       <SpeakerCards />
     </v-responsive>
 
-
-  </v-container>
-
 </template>
 
 <script>
@@ -47,11 +46,13 @@ import {
   PageSection,
   NewsBanner,
   EventCards,
+  EventCard,
   SpeakerCards,
   TicketItem,
   SponsorItem
 } from '@/components'
 import RichTextRenderer from 'contentful-rich-text-vue-renderer'
+import { BLOCKS } from '@contentful/rich-text-types';
 import { h } from 'vue'
 import { useGlobalStore } from '@/store';
 import { mapState } from 'pinia';
@@ -70,7 +71,8 @@ export default {
     RichTextRenderer,
     TicketItem,
     SponsorItem,
-    EventCards
+    EventCards,
+    EventCard,
   },
   computed: {
     currentYear() {
@@ -79,6 +81,7 @@ export default {
     ...mapState(useGlobalStore, ['pages']),
     sections() {
       const page = this.pages.find((p) => p.fields.pageName === '2025') ?? this.pages[0]
+      console.log(page)
       return page.fields.pageBody.content
         .filter((c) => c.nodeType === 'embedded-entry-block')
         .map((c) => c)
@@ -108,6 +111,10 @@ export default {
     },
     renderNodes() {
       return {
+        [BLOCKS.PARAGRAPH]: (node, key, next) => h('p', { class: 'w-100' }, next(node.content, key, next)),
+        [BLOCKS.HEADING_2]: (node, key, next) => h('h2', { class: 'w-100' }, next(node.content, key, next)),
+        [BLOCKS.HEADING_3]: (node, key, next) => h('h3', { class: 'w-100' }, next(node.content, key, next)),
+        [BLOCKS.HEADING_4]: (node, key, next) => h('h4', { class: 'w-100' }, next(node.content, key, next)),
         'embedded-entry-inline': (node) => {
           const target = node.data.target
           const type = target.sys.contentType.sys.id
@@ -115,8 +122,6 @@ export default {
           if (type === 'ticket') {
             const { ticketName, href, price, discountedPrice, validFrom, validUntil, highlighted } = target.fields
 
-
-            console.log("type >>>>>", ticketName, price, validUntil)
             const isValid =
               (!validFrom || (new Date() > new Date(validFrom))) &&
               (!validUntil || (new Date() < new Date(validUntil)))
@@ -132,6 +137,17 @@ export default {
           if (type === 'sponsor') {
             const { sponsorName, sponsorTier, href, sponsorLogo } = target.fields
             return h(SponsorItem, { href, name: sponsorName, src: sponsorLogo?.fields?.file?.url, important: !!sponsorTier })
+          }
+
+          return ''
+        },
+        'embedded-entry-block': (node) => {
+          const target = node.data.target
+          const type = target.sys.contentType.sys.id
+
+          if (type === 'card') {
+            const {cardTitle, description} = target.fields
+            return h(EventCard, {title: cardTitle, description})
           }
 
           return ''

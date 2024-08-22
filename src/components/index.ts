@@ -5,6 +5,7 @@ export { default as NotFoundBanner } from './banners/NotFoundBanner.vue'
 export { default as ComingSoonBanner } from './banners/ComingSoonBanner.vue'
 
 export { default as EventCards } from './cards/EventCards.vue'
+export { default as EventCard } from './cards/EventCard.vue'
 export { default as SpeakerCards } from './cards/SpeakerCards.vue'
 
 export { default as PageFooter } from './footer/PageFooter.vue'

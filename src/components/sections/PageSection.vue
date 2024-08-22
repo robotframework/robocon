@@ -1,10 +1,14 @@
 <template>
-  <v-row :class="bg ? `bg-${bg}` : ''">
-    <v-responsive class="mx-auto py-10" max-width="960">
-      <h2>{{ props.title }}</h2>
-      <slot></slot>
-    </v-responsive>
-  </v-row>
+  <div>
+    <v-container>
+      <v-row>
+        <h2>{{ props.title }}</h2>
+      </v-row>
+      <v-row>
+        <slot></slot>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 

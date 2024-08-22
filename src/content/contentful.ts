@@ -2,8 +2,8 @@ import { createClient } from 'contentful'
 
 const client = createClient({
   space: '0375ld2k0qal',
-  environment: 'master',
-  accessToken: '0JsLjZA5NNToRRuCN_8kQDlK1AiOI3ExSRNlaNM1sec'
+  environment: 'dev',
+  accessToken: 'QODt2cpA7LqQsSoqZd1oQ38yKLR7qQjh_UDHpOZYWOs'
 })
 
 const getPages = () => client
