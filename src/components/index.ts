@@ -1,17 +1,18 @@
 export { default as NewsBanner } from './NewsBanner.vue'
 
-
-export { default as Banner } from './banners/Banner.vue'
-export { default as Banner404 } from './banners/Banner404.vue'
-export { default as BannerComingSoon } from './banners/BannerComingSoon.vue'
-export { default as MainBanner } from './banners/MainBanner.vue'
+export { default as MainBanner } from './banners/custom/MainBanner.vue'
+export { default as NotFoundBanner } from './banners/NotFoundBanner.vue'
+export { default as ComingSoonBanner } from './banners/ComingSoonBanner.vue'
 
 export { default as EventCards } from './cards/EventCards.vue'
 export { default as SpeakerCards } from './cards/SpeakerCards.vue'
 
-export { default as PageFooter } from './PageFooter.vue'
-export { default as Navbar } from './Navbar.vue'
-export { default as PageSection } from './PageSection.vue'
+export { default as PageFooter } from './footer/PageFooter.vue'
+
+export { default as Navbar } from './navigation/Navbar.vue'
+
+export { default as PageSection } from './sections/PageSection.vue'
+
 export { default as TabBox } from './TabBox.vue'
 export { default as Sponsors } from './Sponsors.vue'
 export { default as TicketItem } from './TicketItem.vue'
