@@ -7,7 +7,7 @@
       </router-link>
     </template>
 
-    <v-spacer></v-spacer>
+    <v-spacer />
 
     <template v-if="!isXs">
       <router-link v-for="(menu) in menus" :key="menu.name" class="pl-4 router-link" :to="{ path: `/${menu.name}` }">
@@ -45,10 +45,55 @@
 </template>
 
 
+<script setup>
+import { BaseIcon } from '@/components'
+import { useGlobalStore } from '@/store';
+import { mapState } from 'pinia';
+import { watch, onMounted, reactive, ref } from 'vue';
 
-<script>
-import { BaseIcon } from '.'
-import { useGlobalStore } from '../store';
+const drawer = ref(null);
+const isXs = ref(false);
+
+const props = defineProps({
+  menus: {
+    type: Array,
+    default: [
+      {
+        name: 'sponsor'
+      },
+      {
+        name: 'events'
+      },
+    ]
+  }
+})
+
+const pages = reactive(mapState(useGlobalStore, ['pages']))
+
+watch(isXs, value => {
+  if (!value) {
+    if (this.drawer) {
+      this.drawer = false;
+    }
+  }
+})
+
+
+onMounted(() => {
+  onResize();
+  window.addEventListener("resize", onResize, { passive: true });
+})
+
+function onResize() {
+  isXs.value = window.innerWidth < 500;
+}
+
+</script>
+
+
+<!-- <script>
+import { BaseIcon } from '@/components'
+import { useGlobalStore } from '@/store';
 import { mapState } from 'pinia';
 
 export default {
@@ -99,7 +144,7 @@ export default {
   },
 
 }
-</script>
+</script> -->
 
 <style scoped>
 .router-link {
