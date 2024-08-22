@@ -9,9 +9,8 @@ import * as directives from 'vuetify/directives';
 const light: ThemeDefinition = {
   dark: false,
   colors: {
-    background: '#fefefe',
-    base: "#fcf7f0",
     surface: '#fcf7f0',
+    "surface-bright": '#f3f3f3',
     primary: '#020d67',
     'primary-darken-1': '#b2540b',
     secondary: '#0032a3',
@@ -32,9 +31,9 @@ const light: ThemeDefinition = {
 const dark: ThemeDefinition = {
   dark: true,
   colors: {
-    background: '#181833',
     base: "#222222",
-    surface: '#fefefe',
+    "surface-bright": '#181833',
+    surface: '#222222',
     primary: '#020d67',
     'primary-darken-1': '#b2540b',
     secondary: '#0032a3',
