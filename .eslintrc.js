@@ -1,27 +1,49 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true
+  "root": true,
+  "env": {
+    "node": true
   },
-  extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/typescript/recommended'
+  "plugins": [
+    "sonarjs",
+    "unused-imports",
+    "sort-exports"
   ],
-  parserOptions: {
-    ecmaVersion: 2020
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/typescript/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020
   },
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'vue/no-unused-components': 'warn',
-    'vue/no-multiple-template-root': 'off',
-    'no-unused-vars': 'warn',
-    'space-before-function-paren': ['warn', 'never'],
-    indent: [2, 2],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "vue/no-unused-components": "warn",
+    "vue/no-multiple-template-root": "off",
+    "no-unused-vars": "warn",
+    "vue/multi-word-component-names": [
+      "error",
+      {
+        "ignores": [
+          "default"
+        ]
+      }
+    ],
+    "space-before-function-paren": [
+      "warn",
+      "never"
+    ],
+    "indent": [
+      2,
+      2
+    ],
     "sort-exports/sort-exports": [
       "error",
-      { "sortDir": "asc", "ignoreCase": true, "sortExportKindFirst": "type" }
+      {
+        "sortDir": "asc",
+        "ignoreCase": true,
+        "sortExportKindFirst": "type"
+      }
     ],
     "sort-imports": [
       "error",
@@ -29,9 +51,30 @@ module.exports = {
         "ignoreCase": false,
         "ignoreDeclarationSort": true,
         "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ],
         "allowSeparatedGroups": true
       }
     ],
-  }
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".vue",
+        ".js"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        // use a glob pattern
+        "project": "packages/*/tsconfig.json"
+      }
+    }
+  },
 }

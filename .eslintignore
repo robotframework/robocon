@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "quotes": [ 2, "single" ]
+  },
+
+  "overrides": [
+    {
+      "files": [ "src/**/*.{js,ts,vue}" ],
+      "rules": {
+        "quotes": [ 2, "single" ]
+      }
+    }
+  ]
+}
