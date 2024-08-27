@@ -92,8 +92,11 @@
   height: 0.15rem;
   border-radius: 0.25rem;
   background-color: #fff;
-  box-shadow: 0 0 7px #ffe8f9, 0 0 20px var(--color-theme-22),
-    0 0 40px var(--color-theme-22), 0 0 80px var(--color-theme-22);
+  box-shadow:
+    0 0 7px #ffe8f9,
+    0 0 20px var(--color-theme-22),
+    0 0 40px var(--color-theme-22),
+    0 0 80px var(--color-theme-22);
 }
 .bar {
   width: 100%;
@@ -110,7 +113,10 @@ button.stroke {
   font-family: var(--font-title);
   padding: var(--size-2xsmall) var(--size-small);
   text-transform: uppercase;
-  transition: 0.2s color, background-color 0.2s, border-color 0.2s;
+  transition:
+    0.2s color,
+    background-color 0.2s,
+    border-color 0.2s;
 }
 button.theme:hover {
   color: var(--color-theme);
