@@ -30,6 +30,10 @@ a {
   }
 
   @media (max-width: 599.9px) {
-    padding: 0 2vw;
+    padding: 0;
   }
+}
+
+.w-max-content {
+  width: max-content;
 }
