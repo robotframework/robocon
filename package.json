@@ -2,7 +2,7 @@
   "name": "robocon",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite --port 3000 --open",
     "build": "vite build",
