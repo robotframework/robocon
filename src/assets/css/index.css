@@ -1,14 +1,5 @@
-@import "text.css";
-
-@import "variables.css";
-@import "grid.css";
-@import "margins.css";
-@import "elements.css";
-@import "paddings.css";
-@import "colors.css";
-
-@import "modifiers.css";
-@import "transitions.css";
+@import "./typography/font.css";
+@import "./typography/heading.css";
 
 html[dir="rtl"] * {
   direction: rtl;
@@ -24,11 +15,21 @@ body:not(.accessible) * {
   outline: none;
 }
 
-body:has(.theme-2024) {
-  background-color: #000;
-  color: #fff;
-}
-
 a {
   text-decoration: none;
+}
+
+.content-wrapper {
+  @media (max-width: 959.9px) {
+    margin: 0 auto;
+    padding: 0 8vw;
+  }
+
+  @media (max-width: 799.9px) and (min-width: 600px) {
+    padding: 0 4vw;
+  }
+
+  @media (max-width: 599.9px) {
+    padding: 0 2vw;
+  }
 }
