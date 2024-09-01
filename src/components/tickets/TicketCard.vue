@@ -17,8 +17,8 @@
             </div>
           </div>
           <template v-slot:append>
-            <div class="mt-n4">
-              <BaseIcon color="white" size="40" name="robot" />
+            <div class="mt-n4 text-white">
+              <BaseIcon color="current" size="40" name="robot" />
             </div>
           </template>
         </v-card-item>
