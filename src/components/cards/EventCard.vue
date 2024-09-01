@@ -3,7 +3,7 @@
 
   <div v-if="props.datasets" class="card-wrapper">
     <v-card v-for="(event) in props.datasets.data" color="surface-bright" class="py-1 card-border" elevation="0"
-      @click.stop="handleClick">
+      :to="props.href ?? ''">
       <v-card-item>
         <div class="d-flex justify-between align-baseline">
           <h4 class="w-100 text-capitalize"> {{ event.name }}</h4>
@@ -47,14 +47,6 @@ const props = defineProps({
   href: String
 });
 
-function handleClick() {
-
-  console.log("click>>>>", props.href)
-  if (props.href) {
-    router.push(props.href)
-
-  }
-}
 </script>
 
 <style scoped>

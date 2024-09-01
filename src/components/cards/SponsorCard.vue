@@ -1,5 +1,5 @@
 <template>
-  <v-card flat color="grey-10" variant="outlined" class="px-4 py-3" to="/sponsor">
+  <v-card flat color="grey" variant="outlined" class="px-4 py-3 bg-white" to="/sponsor">
     <h4 class="title text-h6 mb-4 text-grey-90 font-weight-bold">{{ props.title }}</h4>
     <template v-if="props.cardBody">
       <RichTextRenderer :document="props.cardBody" :nodeRenderers="renderNodes()" />
