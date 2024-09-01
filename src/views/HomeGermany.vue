@@ -36,19 +36,14 @@
       </div>
     </banner>
     <div class="container">
-      <page-section
-        title-id="intro"
-        :title="$t('germany.intro.title')">
+      <page-section title-id="intro" :title="$t('germany.intro.title')">
         🌐
-        <button
-          class="font-title mr-small"
+        <button class="font-title mr-small"
           :class="$i18n.locale === 'en-US' ? 'color-theme type-underline' : 'color-white'"
           @click="$i18n.locale = 'en-US'">
           English
         </button>
-        <button
-          class="font-title"
-          :class="$i18n.locale === 'de-DE' ? 'color-theme type-underline' : 'color-white'"
+        <button class="font-title" :class="$i18n.locale === 'de-DE' ? 'color-theme type-underline' : 'color-white'"
           @click="$i18n.locale = 'de-DE'">
           Deutsch
         </button>
@@ -69,24 +64,19 @@
         </ticket>
         <sponsors :sponsors="$tm('germany.sponsors')" class="mt-xlarge" />
       </page-section>
-      <page-section
-      title-id="talks"
-      :title="$t('germany.talks.title')">
-      <talks
-        v-if="talks"
-        :talks="talks"
-        :speakers="speakers"
-        header-link="https://tickets.robotframework.org/robocon-2022-DE/" />
-    </page-section>
+      <page-section title-id="talks" :title="$t('germany.talks.title')">
+        <talks v-if="talks" :talks="talks" :speakers="speakers"
+          header-link="https://tickets.robotframework.org/robocon-2022-DE/" />
+      </page-section>
     </div>
   </div>
 </template>
 
 <script>
-import { Banner, BaseIcon, PageSection, Sponsors, TicketItem, Talks } from 'Components'
+import { BaseBanner as Banner, BaseIcon, PageSection, Sponsors, Talks } from 'Components';
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import MapGermany from 'Img/qs-day-map'
-import LogoGermany from 'Img/qs-day-logo'
+import LogoGermany from 'Img/qs-day-logo';
+import MapGermany from 'Img/qs-day-map';
 
 export default {
   name: 'Germany',
@@ -95,7 +85,6 @@ export default {
     BaseIcon,
     PageSection,
     Sponsors,
-    TicketItem,
     Talks
   },
   data: () => ({
@@ -122,12 +111,13 @@ export default {
 </script>
 
 <style scoped>
+.de-title {
+  font-size: 10vw;
+}
+
+@media (min-width: 1300px) {
   .de-title {
-    font-size: 10vw;
+    font-size: 8rem;
   }
-  @media (min-width: 1300px) {
-    .de-title {
-      font-size: 8rem;
-    }
-  }
+}
 </style>
