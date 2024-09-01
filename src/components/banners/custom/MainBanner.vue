@@ -11,8 +11,8 @@
               </h3>
 
               <div class="btn-wrapper">
-                <v-btn color="secondary" flat> Get ticket now </v-btn>
-                <v-btn variant="outlined" color="secondary" flat class="bg-white">
+                <v-btn color="secondary" flat :href="links.ticket" target="_blank">Get ticket now</v-btn>
+                <v-btn variant="outlined" color="secondary" flat :to="links.sponsor" class="bg-white">
                   Sponsor the event
                 </v-btn>
               </div>
@@ -33,7 +33,10 @@ import { computed, onBeforeMount, ref } from 'vue';
 const fallbackWhiteBg = ref("/src/assets/img/fallback-white-bg.png")
 const store = useGlobalStore();
 const bannerData = computed(() => store.get2025Banner)
-
+const links = {
+  ticket: 'https://tickets.robotframework.org/robocon-2025',
+  sponsor: ''
+}
 
 onBeforeMount(async () => {
   getEntry("banner").then((result) => {
