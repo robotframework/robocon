@@ -6,10 +6,7 @@
   </banner>
   <div class="border-top-theme border-thin theme-2023" />
   <div class="container theme-2023">
-    <page-section
-      title-id="intro"
-      :title="$t('page2023.intro.title')"
-      v-show="token.name !== 'gather'">
+    <page-section title-id="intro" :title="$t('page2023.intro.title')" v-show="token.name !== 'gather'">
       <div class="row center col-lg-8">
         <div v-html="$t('page2023.intro.body')" class="mb-large" />
         <!-- <div
@@ -20,48 +17,58 @@
             <template v-slot:title>
               <div v-html="ticket.title" />
             </template>
-            <template v-slot:price>
+<template v-slot:price>
               <div v-html="ticket.price" />
             </template>
-            <template v-slot:left>
+<template v-slot:left>
               ROBOCON
             </template>
-            <template v-slot:right>
+<template v-slot:right>
               <div v-html="ticket.side" />
             </template>
-          </ticket>
-          <div v-else class="type-center">
-            <router-link :to="{ name: 'Stream' }">
-              <button class="theme active type-uppercase">
-                Go to live stream
-              </button>
-            </router-link>
-            <div class="mt-small">
-              <a href="https://tickets.robotframework.org/robocon-2023/3410050/" class="type-small">
-                Purchase tickets
-              </a>
-            </div>
-          </div>
-        </div>  -->
+</ticket>
+<div v-else class="type-center">
+  <router-link :to="{ name: 'Stream' }">
+    <button class="theme active type-uppercase">
+      Go to live stream
+    </button>
+  </router-link>
+  <div class="mt-small">
+    <a href="https://tickets.robotframework.org/robocon-2023/3410050/" class="type-small">
+      Purchase tickets
+    </a>
+  </div>
+</div>
+</div> -->
       </div>
     </page-section>
     <div v-if="talks.length">
-      <page-section title-id="talks" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Day 1 - Online'">
-        <button v-show="token.name !== 'gather'" class="theme mb-large mt-small mr-small" :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
+      <page-section title-id="talks" title="Talks"
+        :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Day 1 - Online'">
+        <button v-show="token.name !== 'gather'" class="theme mb-large mt-small mr-small"
+          :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
           Live
         </button>
-        <button v-show="token.name !== 'gather'" class="theme mb-large mt-small" :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
+        <button v-show="token.name !== 'gather'" class="theme mb-large mt-small"
+          :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
           Online
         </button>
-        <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-19'))" :hash="token.hashKey" />
-        <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))" :hash="token.hashKey" />
+        <talks-2023 v-if="shownTalks === 'live'"
+          :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-19'))" :hash="token.hashKey" />
+        <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))"
+          :hash="token.hashKey" />
       </page-section>
-      <page-section title-id="talks2" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 2 - Helsinki' : 'Day 2 - Online'">
-        <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-20'))" :hash="token.hashKey" />
-        <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))" :hash="token.hashKey" />
+      <page-section title-id="talks2" title="Talks"
+        :subtitle="shownTalks === 'live' ? 'Day 2 - Helsinki' : 'Day 2 - Online'">
+        <talks-2023 v-if="shownTalks === 'live'"
+          :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-20'))" :hash="token.hashKey" />
+        <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-02'))"
+          :hash="token.hashKey" />
       </page-section>
-      <page-section title-id="talks3" title="Open-Space" :subtitle="shownTalks === 'live' ? 'Day 3 - Helsinki' : 'Day 3 - Online'">
-        <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-20'))" />
+      <page-section title-id="talks3" title="Open-Space"
+        :subtitle="shownTalks === 'live' ? 'Day 3 - Helsinki' : 'Day 3 - Online'">
+        <talks-2023 v-if="shownTalks === 'live'"
+          :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-20'))" />
         <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-03'))" />
       </page-section>
     </div>
@@ -73,12 +80,12 @@
 
 <script>
 import {
-  Banner,
+  BaseBanner as Banner,
   PageSection,
   Sponsors,
   Talks2023
-} from 'Components'
-import * as jose from 'jose'
+} from 'Components';
+import * as jose from 'jose';
 
 export default {
   name: 'App',
@@ -144,7 +151,7 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
       fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/'),
       fetch('https://pretalx.com/api/events/robocon-2023-online/schedules/latest/')
     ])
-      .then(async([submissions, submissionsOnline, schedule, scheduleOnline]) => {
+      .then(async ([submissions, submissionsOnline, schedule, scheduleOnline]) => {
         const talks = await submissions.json()
         const talksOnline = await submissionsOnline.json()
         const { breaks } = await schedule.json()
