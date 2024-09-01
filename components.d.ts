@@ -37,7 +37,7 @@ declare module 'vue' {
     Talks2023: typeof import('./src/components/Talks2023.vue')['default']
     Talks24: typeof import('./src/components/Talks24.vue')['default']
     TicketCard: typeof import('./src/components/tickets/TicketCard.vue')['default']
-    TicketFeatures: typeof import('./src/components/tickets/TicketFeatures.vue')['default']
+    TicketItem: typeof import('./src/components/TicketItem.vue')['default']
     Timeline: typeof import('./src/components/Timeline.vue')['default']
     Tutorials24: typeof import('./src/components/Tutorials24.vue')['default']
     Workshops24: typeof import('./src/components/Workshops24.vue')['default']
