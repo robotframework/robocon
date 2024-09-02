@@ -7,7 +7,7 @@
       </template>
     </template>
   </template>
-  <v-btn color="secondary" class="w-100 h-2xl mt-5" href="sponsor">
+  <v-btn color="secondary" class="w-100 h-2xl mt-5" to="sponsor">
     Find out more
   </v-btn>
 </template>
