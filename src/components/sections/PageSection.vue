@@ -1,10 +1,12 @@
 <template>
-  <template v-if="computedData.data?.target?.fields">
-    <v-responsive :class="['content-wrapper', props.hasHeaderMargin ? '' : 'py-4']">
+  <template v-if="computedData.data.target.fields">
+    <v-responsive
+      :class="['content-wrapper', props.hasDescription ? 'compact-wrapper' : '', props.hasHeaderMargin ? '' : 'py-4']">
       <div v-if="props.isResponsiveContainer"
         :class="[props.hasHeaderMargin ? 'mb-3' : '', 'd-flex ga-3 align-baseline']">
-        <h1 v-if="computedData.data.target.fields?.showTitle"
-          :class="[props.offsetColor ? 'text-white' : 'text-secondary', 'section-title']">
+        <h1 v-if="computedData.data.target.fields?.showTitle" :class="[
+          props.offsetColor ? 'text-white' : 'text-secondary',
+          'section-title']">
           {{ computedData.data.target.fields.shownTitle }}
         </h1>
         <slot name="subTitle" />
@@ -224,6 +226,17 @@ function renderNodes() {
 </script>
 
 <style lang="scss">
+.compact-wrapper {
+  margin: 0 auto;
+  max-width: 780px;
+
+
+  @media (max-width: 599.9px) {
+    max-width: 400px;
+  }
+}
+
+
 .slider-group {
   display: flex;
   flex-wrap: nowrap;

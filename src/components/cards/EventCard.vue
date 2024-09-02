@@ -84,18 +84,18 @@ const props = defineProps({
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   font-family: var(--v-font-body);
   color: rgb(var(--v-theme-grey-70));
 
   @media screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 .card-subtitle {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.1;
   font-family: var(--v-font-body);

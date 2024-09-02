@@ -43,3 +43,11 @@ a {
   word-spacing: -12px;
   margin-bottom: 10px;
 }
+
+.jumbo-btn {
+  width: 100%;
+
+  @media (min-width: 960px){
+    width: 80%;
+  }
+}
