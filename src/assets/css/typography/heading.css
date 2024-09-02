@@ -1,0 +1,13 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.title-font {
+  font-family: var(--v-font-title);
+}
+
+.rbcn-font {
+  font-family: var(--v-font-rbcn);
+}

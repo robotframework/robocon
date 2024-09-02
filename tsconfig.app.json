@@ -32,12 +32,12 @@
       "@/*": [
         "./src/*"
       ]
-    },
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
     "src/vite-env.d.tss",
-    "src/vite-env.d.ts",
+    "src/vite-env.d.ts"
   ]
 }

@@ -1,8 +1,8 @@
 import home from './home'
-import germany from './germany'
 import sponsor from './sponsor'
-import archive from './archive'
-import page2023 from './2023'
+// import germany from './germany'
+// import archive from './archive'
+// import page2023 from './2023'
 
 export default {
   langName: 'English',
@@ -14,10 +14,10 @@ export default {
     ]
   },
   home,
-  germany,
   sponsor,
-  archive,
-  page2023
+  // germany,
+  // archive,
+  // page2023
 }
 
 // export {

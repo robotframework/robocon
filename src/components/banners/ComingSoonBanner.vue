@@ -1,11 +1,17 @@
 <template>
-  <div class="banner-wrapper" style="background-color:#3252a2">
+  <div class="banner-wrapper" style="background-color: #3252a2">
     <v-container>
       <!-- -----------------------------------------------
             Start Banner
         ----------------------------------------------- -->
       <v-row justify="center">
-        <v-col cols="12" sm="10" md="6" lg="6" class="d-flex align-center justify-center">
+        <v-col
+          cols="12"
+          sm="10"
+          md="6"
+          lg="6"
+          class="d-flex align-center justify-center"
+        >
           <div class="text-center">
             <h1 class="banner-title font-weight-bold white--text">
               Coming soon
@@ -29,6 +35,6 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>

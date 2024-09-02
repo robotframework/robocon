@@ -1,55 +1,50 @@
 <template>
-  <v-app-bar flat class="pl-3" color="white">
+  <v-app-bar flat class="px-3" color="white">
     <template v-slot:prepend>
       <router-link to="/" class="router-link flex items-center">
         <base-icon name="robot" size="1.25rem" color="current" />
-        <span class="ml-2">ROBOCON</span>
+        <span class="title-font ml-2">ROBOCON</span>
       </router-link>
     </template>
 
     <v-spacer />
 
     <template v-if="!isXs">
-      <router-link v-for="(menu) in menus" :key="menu.name" class="pl-4 router-link" :to="{ path: `/${menu.name}` }">
+      <router-link v-for="menu in menus" :key="menu.name" class="pl-4 router-link" :to="{ path: `/${menu.name}` }">
         {{ menu.name }}
       </router-link>
 
-      <a href="https://robotframework.org/" class="router-link align-center pl-5 pr-2">
+      <!-- <a href="https://robotframework.org/" class="router-link align-center pl-5 pr-2">
         Robot Framework
-      </a>
+      </a> -->
     </template>
 
     <template v-slot:append v-if="isXs" class="text-black">
       <v-app-bar-nav-icon color="#000" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </template>
-
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" location="top">
-    <v-list dense v-if="isXs">
+  <v-navigation-drawer v-model="drawer" location="top" color="white">
+    <v-list dense v-if="isXs" class="title-font">
       <v-list-item>
-        <a href="https://robotframework.org/">
-          Robot Framework
-        </a>
+        <a href="https://robotframework.org/" class="text-black"> Robot Framework </a>
       </v-list-item>
 
-      <v-list-item v-for="(menu) in menus" :key="menu.name">
+      <v-list-item v-for="menu in menus" :key="menu.name">
         <router-link class="router-link" :to="{ path: `/${menu.name}` }">
           {{ menu.name }}
         </router-link>
       </v-list-item>
-
     </v-list>
   </v-navigation-drawer>
-
 </template>
 
-
 <script setup>
-import { BaseIcon } from '@/components'
-import { useGlobalStore } from '@/store';
-import { mapState } from 'pinia';
-import { watch, onMounted, reactive, ref } from 'vue';
+import { mapState } from "pinia";
+import { onMounted, reactive, ref, watch } from "vue";
+
+import { BaseIcon } from "@/components";
+import { useGlobalStore } from '@/store/modules';
 
 const drawer = ref(null);
 const isXs = ref(false);
@@ -59,37 +54,38 @@ const props = defineProps({
     type: Array,
     default: [
       {
-        name: 'sponsor'
+        name: "event",
       },
       {
-        name: 'events'
+        name: "ticket",
       },
-    ]
-  }
-})
+      {
+        name: "sponsor",
+      },
 
-const pages = reactive(mapState(useGlobalStore, ['pages']))
+    ],
+  },
+});
 
-watch(isXs, value => {
+const pages = reactive(mapState(useGlobalStore, ["pages"]));
+
+watch(isXs, (value) => {
   if (!value) {
-    if (this.drawer) {
-      this.drawer = false;
+    if (drawer.value) {
+      drawer.value = false;
     }
   }
-})
-
+});
 
 onMounted(() => {
   onResize();
   window.addEventListener("resize", onResize, { passive: true });
-})
+});
 
 function onResize() {
   isXs.value = window.innerWidth < 500;
 }
-
 </script>
-
 
 <!-- <script>
 import { BaseIcon } from '@/components'
@@ -150,8 +146,8 @@ export default {
 .router-link {
   display: flex;
   align-items: center;
-  font-family: var(--font-title);
-  color: var(--color-black);
+  font-family: var(--v-font-title);
+  color: rgb(var(--v-theme-dark));
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -160,8 +156,6 @@ export default {
 
 .router-link:hover,
 .router-link-active {
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-secondary));
 }
-
-.dense-link {}
 </style>
