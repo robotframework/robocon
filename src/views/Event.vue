@@ -1,6 +1,6 @@
 <template>
   <v-sheet color="'surface" class="py-5">
-    <v-container class="pt-0 pb-3">
+    <v-container class="pt-0 pb-3 mt-n1 mb-n2">
       <page-section :data="store.getEventPageIntro2025" />
     </v-container>
   </v-sheet>
@@ -26,8 +26,9 @@
 </template>
 
 <script setup lang="ts">
-import { useGlobalStore } from '@/store/modules';
 import { ref } from 'vue';
+
+import { useGlobalStore } from '@/store/modules';
 
 const store = useGlobalStore();
 const activeView = ref(0);

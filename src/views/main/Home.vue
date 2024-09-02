@@ -6,7 +6,7 @@
   </v-container>
 
   <v-sheet color="surface-bg">
-    <v-container class="py-7">
+    <v-container class="pt-5 pb-3">
       <TicketSection />
     </v-container>
   </v-sheet>
@@ -17,7 +17,9 @@
 
   <v-sheet color="surface-bg">
     <v-container class="pt-7 pb-10">
-      <SponsorSection />
+      <v-responsive class="content-wrapper">
+        <SponsorSection />
+      </v-responsive>
     </v-container>
   </v-sheet>
 
@@ -31,11 +33,5 @@ import {
   SponsorSection,
   TicketSection
 } from ".";
+
 </script>
-
-
-<!-- <template v-else>
-    <v-container class="d-flex ma-auto justify-center items-center">
-      <InfiniteSpinner size="100" width="5" loadingText="Fetching data..." />
-    </v-container>
-  </template> -->
