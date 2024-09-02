@@ -24,6 +24,7 @@
 
 <script setup>
 import { useGlobalStore } from '@/store/modules';
+
 const store = useGlobalStore();
 </script>
 
@@ -40,5 +41,10 @@ a {
 .address {
   white-space: pre-line;
   opacity: 0.8;
+}
+
+.title-font {
+  word-spacing: -10px;
+  font-size: 14px;
 }
 </style>

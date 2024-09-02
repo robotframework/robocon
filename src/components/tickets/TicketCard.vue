@@ -6,13 +6,12 @@
     ]" :key="props.href ?? props.name">
 
       <v-card color="secondary" class="card-base py-3 px-4" elevation="2" rounded="lg">
-        <v-card-item>
+        <v-card-item class="px-sm-2 px-0 pb-0">
           <div class="d-flex flex-column">
             <div class="label">
               {{ props.category }}
             </div>
-            <div class="text-h5 mt-2 align-center d-flex">
-
+            <div class="card-title mt-2 align-center d-flex">
               {{ props.name }}
             </div>
           </div>
@@ -24,7 +23,7 @@
         </v-card-item>
 
         <v-card-item>
-          <div class="d-flex align-baseline ga-5 justify-end flex-wrap flex-sm-nowrap">
+          <div class="d-flex align-baseline justify-space-between flex-wrap flex-sm-nowrap">
             <div v-if="props.price"
               :class="[props.discountedPrice ? 'strike-through' : '', 'text-h4 discounted price']">
               {{ props.price }}<span class="ml-1">€</span>
@@ -52,6 +51,7 @@
 
 <script setup>
 import { computed } from 'vue';
+
 import BaseIcon from '../icons/BaseIcon.vue';
 
 const props = defineProps({
@@ -76,9 +76,24 @@ const ticketSaleInfo = computed(() => {
 .card-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  @media (max-width: 800px) and (min-width: 600px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 599.9px) {
+    flex-wrap: wrap;
+  }
+}
+
+.card-title {
+  font-size: 24px;
+
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
 }
 
 .desc-box {
@@ -88,20 +103,26 @@ const ticketSaleInfo = computed(() => {
   overflow: hidden;
 }
 
-.card-link {
-  width: min-content;
-  height: max-content;
-}
 
 .card-base {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 400px;
-  min-height: 260px;
+  width: calc(1000px / 3);
+  height: 220px;
   margin: auto;
   color: white;
+
+  @media (max-width: 800px) and (min-width: 600px) {
+    width: 280px;
+    height: 180px;
+  }
+
+  @media (max-width: 599.9px) {
+    width: 240px;
+    height: 160px;
+  }
 
   &:hover {
     box-shadow:
@@ -123,7 +144,14 @@ const ticketSaleInfo = computed(() => {
     z-index: -1;
     background: conic-gradient(from 180deg at 50% 50%,
         #131de9 0deg, #062ac9 43deg,
-        #0213fe 146deg, #101feb 360deg)
+        #0213fe 146deg, #101feb 360deg);
+
+
+    @media (max-width: 800px) {
+      width: 140px;
+      height: 140px;
+    }
+
   }
 
   &:after {
@@ -151,7 +179,7 @@ const ticketSaleInfo = computed(() => {
 
 .list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(max-content, auto);
   gap: 8px;
   margin-top: 20px;
   padding-left: 20px;
@@ -178,6 +206,27 @@ const ticketSaleInfo = computed(() => {
   line-height: 1;
   text-align: right;
   margin-bottom: 0;
+
+  &:not(.discounted) {
+    @media (max-width: 900px) {
+      font-size: 42px !important;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 36px !important;
+    }
+  }
+
+  &.discounted {
+    @media (max-width: 900px) {
+      font-size: 24px !important;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 20px !important;
+    }
+  }
+
 }
 
 .discounted {

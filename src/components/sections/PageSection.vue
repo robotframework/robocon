@@ -3,27 +3,27 @@
     <v-responsive :class="['content-wrapper', props.hasHeaderMargin ? '' : 'py-4']">
       <div v-if="props.isResponsiveContainer"
         :class="[props.hasHeaderMargin ? 'mb-3' : '', 'd-flex ga-3 align-baseline']">
-        <h2 v-if="computedData.data.target.fields?.showTitle"
-          :class="[props.offsetColor ? 'text-white' : 'text-secondary']">
+        <h1 v-if="computedData.data.target.fields?.showTitle"
+          :class="[props.offsetColor ? 'text-white' : 'text-secondary', 'section-title']">
           {{ computedData.data.target.fields.shownTitle }}
-        </h2>
+        </h1>
         <slot name="subTitle" />
       </div>
       <slot name="header" />
       <RichTextRenderer :document="computedData.data.target.fields.body" :nodeRenderers="renderNodes()" />
     </v-responsive>
-
   </template>
 </template>
 
 <script setup>
-import { EventCard, SponsorCard, TicketCard } from "@/components";
-import { isValidTicket } from "@/utils";
-import { BLOCKS } from "@contentful/rich-text-types";
 import RichTextRenderer from 'contentful-rich-text-vue-renderer';
 import { format } from "date-fns";
 import { get } from "lodash-es";
 import { computed, h } from "vue";
+
+import { EventCard, SponsorCard, TicketCard } from "@/components";
+import { isValidTicket } from "@/utils";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 const props = defineProps({
   data: {
@@ -106,11 +106,13 @@ function renderSponsor(fields) {
 
 function getListStyle(isSponsor, isSponsorPageSection) {
   if (!isSponsor && !isSponsorPageSection) return ({ class: 'list' })
-
-  return { class: `list${isSponsor ? " box ga-5 mt-0 mb-5" : ' cardGroup text-dark'}` }
+  return { class: `list${isSponsor ? " box ga-5 mt-0 mb-5" : ' text-dark'}` }
 }
 
-function getListItemStyle(isSponsorPage, isSponsorPageSection) {
+function getListItemStyle(isSponsorPage, sectionKey) {
+  const isSponsorPageSection = sectionKey?.startsWith("sponsor_")
+
+  if (sectionKey.startsWith('sponsor_page_intro')) return ({ class: 'mt-1 mb-2' })
   if (!isSponsorPage && !isSponsorPageSection) return ({ class: 'listItem' })
   return { class: `listItem${isSponsorPage ? " textOnly" : ' noBox text-dark'}` }
 }
@@ -122,8 +124,14 @@ function getH3Style(isSponsorPage) {
   return ({ class: "text-secondary", style: "font-size: 22px; word-spacing: -10px;" })
 }
 
-function getH4Style(isSponsorPage, isTicketIntro) {
-  if (isSponsorPage) return ({ class: "text-h6 text-dark mb-5" });
+function getH4Style(isSponsorPage, sectionKey) {
+  const isTicketIntro = sectionKey?.startsWith('ticket_page_intro_section');
+
+  if (isSponsorPage) {
+    return ({ class: "text-h6 text-dark mb-5" })
+  } else if (sectionKey.startsWith('sponsor_page_intro')) {
+    return ({ class: 'mt-3 mb-2' })
+  }
   return ({ class: isTicketIntro ? 'mb-2' : 'w-100' })
 }
 
@@ -150,10 +158,14 @@ function getH6Style(sectionKey) {
 
 
 function getParagraphStyle(sectionKey) {
+
+  console.log("sectionKey>>>", sectionKey)
   if (sectionKey.startsWith("sponsor_") && sectionKey.endsWith("_package")) {
     return undefined
   } else if (sectionKey?.startsWith('ticket_section_2025') || sectionKey?.endsWith('tickets_2025')) {
     return { class: sectionKey?.startsWith('ticket_section_2025') ? 'slider-group' : 'auto-fit-grid' }
+  } else if (sectionKey.startsWith("event_page_intro")) {
+    return { class: 'mt-5 mb-3' }
   }
 
   return props.numOfCards ? { style: `display: grid; grid-template-columns: repeat(${props.numOfCards}, 1fr); gap: ${isEventSection ? 0 : 12}px;` } : { class: 'w-100' };
@@ -170,12 +182,12 @@ function renderNodes() {
   return {
     [BLOCKS.PARAGRAPH]: (node, key, next) => h("p", getParagraphStyle(sectionKey), next(node.content, key, next)),
     [BLOCKS.UL_LIST]: (node, key, next) => h("div", isEventSection ? undefined : getListStyle(isSponsorPage, isSponsorPageSection), next(node.content, key, next)),
-    [BLOCKS.LIST_ITEM]: (node, key, next) => h("div", getListItemStyle(isSponsorPage, isSponsorPageSection), next(node.content, key, next)),
+    [BLOCKS.LIST_ITEM]: (node, key, next) => h("div", getListItemStyle(isSponsorPage, sectionKey), next(node.content, key, next)),
     [BLOCKS.HEADING_2]: (node, key, next) =>
       h("h2", fullWidth, next(node.content, key, next)),
     [BLOCKS.HEADING_3]: (node, key, next) => h("h3", getH3Style(isSponsorPage), next(node.content, key, next)),
     [BLOCKS.HEADING_4]: (node, key, next) =>
-      h("h4", getH4Style(isSponsorPage, sectionKey?.startsWith('ticket_page_intro_section')), next(node.content, key, next)),
+      h("h4", getH4Style(isSponsorPage, sectionKey), next(node.content, key, next)),
     [BLOCKS.HEADING_5]: (node, key, next) =>
       h("h5", getH5Style(sectionKey), next(node.content, key, next)),
     [BLOCKS.HEADING_6]: (node, key, next) =>
@@ -219,9 +231,18 @@ function renderNodes() {
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  gap: 20px;
+  gap: 12px;
   align-items: center;
   height: 280px;
+  justify-content: space-around;
+
+  @media (max-width: 800px) and (min-width: 600px) {
+    height: 220px;
+  }
+
+  @media (max-width: 599.9px) {
+    height: 170px;
+  }
 }
 
 .auto-fit-grid {
@@ -236,7 +257,7 @@ function renderNodes() {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   &:not(.cardGroup) {
-    gap: 16px;
+    gap: 8px 16px;
   }
 
   &.cardGroup {

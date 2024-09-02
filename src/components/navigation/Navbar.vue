@@ -25,9 +25,9 @@
   </v-app-bar>
 
   <v-navigation-drawer v-model="drawer" location="top" color="white">
-    <v-list dense v-if="isXs">
+    <v-list dense v-if="isXs" class="title-font">
       <v-list-item>
-        <a href="https://robotframework.org/"> Robot Framework </a>
+        <a href="https://robotframework.org/" class="text-black"> Robot Framework </a>
       </v-list-item>
 
       <v-list-item v-for="menu in menus" :key="menu.name">
@@ -40,10 +40,11 @@
 </template>
 
 <script setup>
-import { BaseIcon } from "@/components";
-import { useGlobalStore } from '@/store/modules';
 import { mapState } from "pinia";
 import { onMounted, reactive, ref, watch } from "vue";
+
+import { BaseIcon } from "@/components";
+import { useGlobalStore } from '@/store/modules';
 
 const drawer = ref(null);
 const isXs = ref(false);

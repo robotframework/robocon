@@ -66,7 +66,7 @@ const props = defineProps({
 
 .date-time {
   font-family: var(--v-font-body);
-  font-size: 16px;
+  font-size: 14px;
   word-spacing: -4px;
   width: max-content;
   flex-wrap: nowrap;

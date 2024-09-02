@@ -26,16 +26,17 @@
 
 
 <script setup lang="ts">
+import { computed, onBeforeMount, ref } from 'vue';
+
 import { getEntry } from '@/content';
 import { useGlobalStore } from '@/store/modules';
-import { computed, onBeforeMount, ref } from 'vue';
 
 const fallbackWhiteBg = ref("/src/assets/img/fallback-white-bg.png")
 const store = useGlobalStore();
 const bannerData = computed(() => store.get2025Banner)
 const links = {
   ticket: 'https://tickets.robotframework.org/robocon-2025',
-  sponsor: ''
+  sponsor: 'sponsor'
 }
 
 onBeforeMount(async () => {
