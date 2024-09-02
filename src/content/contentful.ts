@@ -1,20 +1,22 @@
-import { createClient } from 'contentful'
+import { createClient, EntryCollection } from 'contentful';
 
+/* ******************************************************** */
 const client = createClient({
-  space: '0375ld2k0qal',
-  environment: 'dev',
-  accessToken: 'QODt2cpA7LqQsSoqZd1oQ38yKLR7qQjh_UDHpOZYWOs'
-})
+  space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
+  environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT_ID || 'master',
+  accessToken: import.meta.env.VITE_CONTENTFUL_CMA_TOKEN
+});
 
-const getPages = () => client
-  .getEntries({ content_type: 'Page' })
+// 1. main.tx (root action)
+const getEntries = () => client.getEntries().then((res) => client.parseEntries((res as any).items));
 
-const getEntries = () => client
-  .getEntries()
-  .then((res) => client.parseEntries((res as any).items))
+const getEntry = async (
+  contentTypeID?: string
+): Promise<EntryCollection<any>> => {
+  return client.getEntries({
+    content_type: contentTypeID
+    // select: 'sys.id'
+  });
+};
 
-
-export {
-  getPages,
-  getEntries
-}
+export { getEntries, getEntry };

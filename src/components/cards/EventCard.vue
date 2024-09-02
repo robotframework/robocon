@@ -1,36 +1,104 @@
-<script setup lang="ts">
-import { PropType } from 'vue';
+<template>
+  <h3 v-if="props.title" class="event-title text-secondary mb-5">{{ props.title }}</h3>
 
-type Styling = 'primary' | 'secondary'
-defineProps({
+  <div v-if="props.datasets" class="card-wrapper">
+    <v-card v-for="(event) in props.datasets.data" color="surface-bright" class="py-1 card-border" elevation="0"
+      :to="props.href ?? ''">
+      <v-card-item>
+        <div class="d-flex justify-between align-baseline">
+          <h4 class="w-100 text-capitalize"> {{ event.name }}</h4>
+          <h5 v-if="event?.date" class="date-time"> {{ event.date }}</h5>
+        </div>
+      </v-card-item>
+
+      <v-card-text class="pt-4 card-text-base">
+        <div class="d-flex flex-column ga-3">
+          <p v-if="event?.title || event?.sub_title" :class="event?.sub_title ? 'card-subtitle' : 'card-title'">
+            {{ event?.title || event?.sub_title }}
+          </p>
+          <p class="text-grey-90">
+            {{ event.description }}
+          </p>
+
+          <v-list v-if="event.key_points" lines="one" bgColor="transparent">
+            <v-list-item class="text-grey-90 pa-0" v-for="(keyPoint) in event?.key_points" slim density="compact">
+              {{ keyPoint }}
+            </v-list-item>
+          </v-list>
+        </div>
+      </v-card-text>
+    </v-card>
+  </div>
+</template>
+
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+const props = defineProps({
   title: String,
-  description: String,
-  styling: String as PropType<Styling>
-})
+  variant: String,
+  isEventPage: [Boolean, undefined],
+  bg: {
+    type: String,
+    default: "white"
+  },
+  datasets: Object,
+  href: String
+});
 
 </script>
 
-<template>
-  <v-col cols="12" sm="4">
-    <v-card elevation="2" rounded="md">
+<style scoped>
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 8px;
 
-      <div style="height: 240px; width: 240px;"></div>
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
 
-      <v-card-item class="pt-0">
-        <h4 class="text-h5" v-text="title" :class="styling === 'secondary' ? 'text-white' : 'text-primary'"></h4>
-        <div class="d-flex align-center justify-space-between mt-1">
-          <div>
-            <span :class="[
-              styling === 'secondary' ? 'text-white' : 'text-black', 'text-body-1 text-medium-emphasis']"
-              v-text="description"></span>
-          </div>
-          <div class="d-flex justify-end">
-            <v-btn size="xs" variant="text" :color="styling === 'secondary' ? 'white' : 'secondary'" class="d-flex">
-              more
-            </v-btn>
-          </div>
-        </div>
-      </v-card-item>
-    </v-card>
-  </v-col>
-</template>
+.card-border {
+  border: 1px solid rgb(var(--v-theme-surface-dark)) !important;
+}
+
+.date-time {
+  font-family: var(--v-font-body);
+  font-size: 14px;
+  word-spacing: -4px;
+  width: max-content;
+  flex-wrap: nowrap;
+  display: flex;
+  white-space: nowrap;
+}
+
+.event-title {
+  font-size: 22px;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 46px;
+    font-size: 18px;
+  }
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--v-font-body);
+  color: rgb(var(--v-theme-grey-70));
+
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+.card-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  font-family: var(--v-font-body);
+  color: rgb(var(--v-theme-grey-70));
+}
+</style>
