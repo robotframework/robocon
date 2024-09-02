@@ -37,3 +37,9 @@ a {
 .w-max-content {
   width: max-content;
 }
+
+.section-title {
+  font-size: 30px;
+  word-spacing: -12px;
+  margin-bottom: 10px;
+}
