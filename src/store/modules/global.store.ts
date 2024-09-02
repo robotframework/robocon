@@ -1,8 +1,8 @@
-import { IBannerFields } from "@/types";
 import type { Entry } from "contentful";
 import { get } from "lodash-es";
 import { defineStore } from "pinia";
 
+import { IBannerFields } from "@/types";
 
 type contentType = { nodeType?: string } & { [key: string]: any }
 
