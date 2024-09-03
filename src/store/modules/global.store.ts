@@ -18,6 +18,7 @@ const useGlobalStore = defineStore("global", {
   }),
   getters: {
     getMainPage2025(): Array<Entry> {
+      console.log(this.mainPage2025)
       return this.mainPage2025;
     },
     getMainIntro2025(): Record<string, any> | undefined {
@@ -74,20 +75,22 @@ const useGlobalStore = defineStore("global", {
       this.main2025Banner = mainBanner.fields
     },
     setPages(pages: Array<Entry>) {
-      const page = pages.find((p) => {
-        if (p.fields.pageKey === "sponsor_page_2025") {
+      pages.forEach((p) => {
+        const key = p.fields?.pageKey
+        if (key === "sponsor_page_2025") {
           this.sponsorPage2025 = getEntryBlock(p);
-        } else if (p.fields.pageKey === "ticket_page_2025") {
+        } else if (key === "ticket_page_2025") {
           const entryBlock = getEntryBlock(p);
           this.ticketPage2025 = entryBlock
-        } else if (p.fields.pageKey === "event_page_2025") {
+        } else if (key === "event_page_2025") {
           const entryBlock = getEntryBlock(p);
           this.eventPage2025 = entryBlock
+        } else if (key === "main_page_2025") {
+          this.mainPage2025 = getEntryBlock(p);
         }
-        return p.fields.pageKey === "main_page_2025"
-      })
+      }
 
-      this.mainPage2025 = getEntryBlock(page)
+      )
 
     },
   },

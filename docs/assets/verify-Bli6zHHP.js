@@ -1,4 +1,4 @@
-import{_ as Q,o as Z,c as j,n as ee,s as te,v as re,a as O}from"./index-DD2Afd_L.js";const ne={name:"LinkIcon",props:{color:{type:String,default:"white"}}},W=e=>(te("data-v-0ca4f93a"),e=e(),re(),e),ae=W(()=>O("path",{d:`M22.8,6.6C22.9,6.3,23,5.9,23,5.5c0-0.9-0.4-1.9-1.2-2.6l-0.7-0.7l0,0c-0.7-0.7-1.5-1.1-2.4-1.1
+import{_ as Q,o as Z,c as j,n as ee,s as te,v as re,a as O}from"./index-DyxJy6I9.js";const ne={name:"LinkIcon",props:{color:{type:String,default:"white"}}},W=e=>(te("data-v-0ca4f93a"),e=e(),re(),e),ae=W(()=>O("path",{d:`M22.8,6.6C22.9,6.3,23,5.9,23,5.5c0-0.9-0.4-1.9-1.2-2.6l-0.7-0.7l0,0c-0.7-0.7-1.5-1.1-2.4-1.1
       c-0.9-0.1-1.7,0.2-2.2,0.8l-5,5c-0.6,0.6-0.8,1.4-0.8,2.2c0.1,0.6,0.3,1.2,0.6,1.8l0.1,0.1l0.1-0.1l1-1l0,0l0-0.1
       c-0.1-0.2-0.1-0.4-0.2-0.6c0-0.4,0.1-0.8,0.4-1l5-5c0.3-0.3,0.7-0.4,1.1-0.4c0.4,0,0.8,0.2,1.2,0.6L20.8,4
       c0.7,0.7,0.8,1.7,0.2,2.2l-5,5c-0.3,0.3-0.6,0.4-1,0.4c-0.2,0-0.4-0.1-0.6-0.2l-0.1,0l0,0l-1,1l-0.1,0.1l0.1,0.1

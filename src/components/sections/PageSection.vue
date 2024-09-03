@@ -1,5 +1,5 @@
 <template>
-  <template v-if="computedData.data.target.fields">
+  <template v-if="computedData.data?.target?.fields">
     <v-responsive :class="['content-wrapper', props.hasHeaderMargin ? '' : 'py-4']">
       <div v-if="props.isResponsiveContainer"
         :class="[props.hasHeaderMargin ? 'mb-3' : '', 'd-flex ga-3 align-baseline']">
@@ -158,8 +158,6 @@ function getH6Style(sectionKey) {
 
 
 function getParagraphStyle(sectionKey) {
-
-  console.log("sectionKey>>>", sectionKey)
   if (sectionKey.startsWith("sponsor_") && sectionKey.endsWith("_package")) {
     return undefined
   } else if (sectionKey?.startsWith('ticket_section_2025') || sectionKey?.endsWith('tickets_2025')) {

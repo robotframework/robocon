@@ -1,0 +1,1 @@
+import{_ as e,e as a,o as c,c as o}from"./index-DyxJy6I9.js";const n={name:"ConferencePage",components:{PageSection:a},data:()=>({}),async created(){},methods:{}},t={class:"container narrow row middle p-small pt-medium pb-medium"};function s(r,d,_,m,p,i){return c(),o("div",t)}const l=e(n,[["render",s],["__scopeId","data-v-f0c3bdc9"]]);export{l as default};
