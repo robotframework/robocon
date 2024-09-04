@@ -1,6 +1,6 @@
 import { Entry } from "contentful";
-import "Css/index.css";
 import { createApp } from "vue";
+
 import App from "./App.vue";
 import { getEntries } from "./content";
 import { i18nConfig } from "./i18n";
