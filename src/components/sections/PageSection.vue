@@ -166,6 +166,8 @@ function getParagraphStyle(sectionKey) {
     return { class: sectionKey?.startsWith('ticket_section_2025') ? 'slider-group' : 'auto-fit-grid' }
   } else if (sectionKey.startsWith("event_page_intro")) {
     return { class: 'mt-5 mb-3' }
+  } else if (sectionKey.startsWith("event_section_2025")) {
+    return { class: 'slider-event-card-group' }
   }
 
   return props.numOfCards ? { style: `display: grid; grid-template-columns: repeat(${props.numOfCards}, 1fr); gap: ${isEventSection ? 0 : 12}px;` } : { class: 'w-100' };
@@ -237,6 +239,7 @@ function renderNodes() {
 }
 
 
+.slider-event-card-group,
 .slider-group {
   display: flex;
   flex-wrap: nowrap;
@@ -244,15 +247,18 @@ function renderNodes() {
   overflow-y: hidden;
   gap: 12px;
   align-items: center;
-  height: 280px;
   justify-content: space-around;
+}
+
+.slider-group {
+  height: 260px;
 
   @media (max-width: 800px) and (min-width: 600px) {
-    height: 220px;
+    height: 230px;
   }
 
   @media (max-width: 599.9px) {
-    height: 170px;
+    height: 190px;
   }
 }
 

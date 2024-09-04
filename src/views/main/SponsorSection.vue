@@ -9,7 +9,7 @@
   </template>
   <div class="d-flex">
     <v-btn color="secondary" class="jumbo-btn mt-5 mx-auto" to="sponsor">
-      Find out more
+      Become a Sponsor
     </v-btn>
   </div>
 </template>

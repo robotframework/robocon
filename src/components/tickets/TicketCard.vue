@@ -6,9 +6,9 @@
       props.hasDescription ? 'mx-auto' : '',
     ]" :key="props.href ?? props.name">
 
-      <v-card color="secondary" :class="[props.hasDescription ? 'with-desc' : '', 'card-base y-3 px-4']" elevation="2"
-        rounded="lg">
-        <v-card-item class="px-sm-2 px-0 pb-0">
+      <v-card color="secondary" :class="[props.hasDescription ? 'with-desc' : '', 'card-base py-2 pl-2 pr-0']"
+        elevation="2" rounded="lg">
+        <v-card-item>
           <div class="d-flex flex-column">
             <div class="label">
               {{ props.category }}
@@ -24,14 +24,14 @@
           </template>
         </v-card-item>
 
-        <v-card-item class="px-sm-2 px-0">
+        <v-card-item>
           <div class="d-flex align-baseline justify-space-between flex-wrap flex-sm-nowrap">
             <div v-if="props.price"
               :class="[props.discountedPrice ? 'strike-through' : '', 'text-h4 discounted price']">
               {{ props.price }}<span class="ml-1">€</span>
             </div>
-            <div v-if="props.discountedPrice" class="text-h2 price">
-              {{ props.discountedPrice }}<span class="ml-2">€</span>
+            <div v-if="props.discountedPrice" class="text-h3 price">
+              {{ props.discountedPrice }}<span class="ml-1">€</span>
             </div>
           </div>
         </v-card-item>
@@ -84,13 +84,12 @@ const ticketSaleInfo = computed(() => {
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 22px;
 
   @media (max-width: 800px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
-
 
 .card-base {
   display: flex;
@@ -106,12 +105,12 @@ const ticketSaleInfo = computed(() => {
 
     @media (max-width: 800px) and (min-width: 600px) {
       width: 280px;
-      height: 180px;
+      height: 200px;
     }
 
     @media (max-width: 599.9px) {
       width: 240px;
-      height: 160px;
+      height: 180px;
     }
   }
 
@@ -180,6 +179,11 @@ const ticketSaleInfo = computed(() => {
 
 .label {
   font-size: 16px;
+  line-height: 1;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 }
 
 .list {
@@ -218,14 +222,15 @@ const ticketSaleInfo = computed(() => {
   line-height: 1;
   text-align: right;
   margin-bottom: 0;
+  font-family: var(--v-font-body);
 
   &:not(.discounted) {
     @media (max-width: 900px) {
-      font-size: 42px !important;
+      font-size: 38px !important;
     }
 
     @media (max-width: 600px) {
-      font-size: 36px !important;
+      font-size: 32px !important;
     }
   }
 
@@ -238,7 +243,6 @@ const ticketSaleInfo = computed(() => {
       font-size: 20px !important;
     }
   }
-
 }
 
 
