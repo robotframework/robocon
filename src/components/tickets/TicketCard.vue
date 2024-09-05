@@ -39,10 +39,10 @@
     </a>
 
     <template v-if="hasDescription">
-      <div class="desc-box">
+      <div class="desc-box courier-font">
         <h3>{{ ticketSaleInfo }} </h3>
         <ul class="list">
-          <li v-for="feature of props.features" :key="feature" class="text-h6 list-item">
+          <li v-for="feature of props.features" :key="feature" class="list-item courier-font">
             {{ feature }}
           </li>
         </ul>
@@ -197,6 +197,7 @@ const ticketSaleInfo = computed(() => {
     margin-top: 6px;
     grid-template-columns: repeat(1, 1fr);
     font-size: 15px;
+    gap: 4px;
   }
 }
 
@@ -256,8 +257,6 @@ const ticketSaleInfo = computed(() => {
     margin: 0 auto
   }
 }
-
-
 
 .discounted {
   font-size: 40px;
