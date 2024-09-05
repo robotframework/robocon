@@ -11,3 +11,8 @@ h5,
 .rbcn-font {
   font-family: var(--v-font-rbcn);
 }
+
+.courier-font {
+  font-family: var(--v-font-body);
+ 
+}

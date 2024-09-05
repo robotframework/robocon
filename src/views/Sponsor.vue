@@ -21,12 +21,12 @@
           <div v-for="(data) of content.data.target.fields.datasets" class="group-item">
             <ul v-for="item in data" class="text-subtitle-1 pl-3">
               <template v-if="Array.isArray(item)">
-                <li v-for="listItem in item">
+                <li v-for="listItem in item" class="courier-font">
                   {{ listItem }}
                 </li>
               </template>
               <template v-else>
-                <li> {{ item }}</li>
+                <li class="courier-font"> {{ item }}</li>
               </template>
             </ul>
           </div>
