@@ -6,7 +6,7 @@
           <v-col v-for="(footer) in store.getFooter" class="col-sm-6 col-md-3 ga-3">
             <div :class="[index > 0 ? 'mt-2' : '', 'd-flex flex-column']" v-for="(item, index) in footer">
               <template v-if="item?.address">
-                <div class="address">
+                <div class="address courier-font">
                   {{ item.address }}
                 </div>
               </template>

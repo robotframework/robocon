@@ -1,33 +1,35 @@
 <template>
   <h3 v-if="props.title" class="event-title text-secondary mb-5">{{ props.title }}</h3>
 
-  <div v-if="props.datasets" class="card-wrapper">
-    <v-card v-for="(event) in props.datasets.data" color="surface-bright" class="py-1 card-border" elevation="0"
-      :to="props.href ?? ''">
-      <v-card-item>
-        <div class="d-flex justify-between align-baseline">
-          <h4 class="w-100 text-capitalize"> {{ event.name }}</h4>
-          <h5 v-if="event?.date" class="date-time"> {{ event.date }}</h5>
-        </div>
-      </v-card-item>
+  <div v-if="props.datasets">
+    <div :class="[props.isEventPage ? 'card-wrapper' : 'card-slider']">
+      <v-card v-for="(event) in props.datasets.data" color="surface-bright"
+        :class="['py-1 card-border', props.isEventPage ? '' : 'fixed-width']" elevation="0" :to="props.href ?? ''">
+        <v-card-item>
+          <div class="d-flex justify-between align-baseline">
+            <h4 class="w-100 text-capitalize"> {{ event.name }}</h4>
+            <h5 v-if="event?.date" class="date-time"> {{ event.date }}</h5>
+          </div>
+        </v-card-item>
 
-      <v-card-text class="pt-4 card-text-base">
-        <div class="d-flex flex-column ga-3">
-          <p v-if="event?.title || event?.sub_title" :class="event?.sub_title ? 'card-subtitle' : 'card-title'">
-            {{ event?.title || event?.sub_title }}
-          </p>
-          <p class="text-grey-90">
-            {{ event.description }}
-          </p>
+        <v-card-text class="pt-4 card-text-base">
+          <div class="d-flex flex-column ga-3">
+            <p v-if="event?.title || event?.sub_title" :class="event?.sub_title ? 'card-subtitle' : 'card-title'">
+              {{ event?.title || event?.sub_title }}
+            </p>
+            <p class="text-grey-90">
+              {{ event.description }}
+            </p>
 
-          <v-list v-if="event.key_points" lines="one" bgColor="transparent">
-            <v-list-item class="text-grey-90 pa-0" v-for="(keyPoint) in event?.key_points" slim density="compact">
-              {{ keyPoint }}
-            </v-list-item>
-          </v-list>
-        </div>
-      </v-card-text>
-    </v-card>
+            <v-list v-if="event.key_points" lines="one" bgColor="transparent">
+              <v-list-item class="text-grey-90 pa-0" v-for="(keyPoint) in event?.key_points" slim density="compact">
+                {{ keyPoint }}
+              </v-list-item>
+            </v-list>
+          </div>
+        </v-card-text>
+      </v-card>
+    </div>
   </div>
 </template>
 
@@ -50,6 +52,15 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.card-slider {
+  display: flex;
+  overflow-x: auto;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+}
+
 .card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -62,6 +73,10 @@ const props = defineProps({
 
 .card-border {
   border: 1px solid rgb(var(--v-theme-surface-dark)) !important;
+
+  &.fixed-width {
+    width: 450px;
+  }
 }
 
 .date-time {
@@ -84,18 +99,18 @@ const props = defineProps({
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   font-family: var(--v-font-body);
   color: rgb(var(--v-theme-grey-70));
 
   @media screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 .card-subtitle {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.1;
   font-family: var(--v-font-body);

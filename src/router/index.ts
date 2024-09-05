@@ -1,5 +1,6 @@
 import type { RouteParams, RouteRecordRaw } from 'vue-router';
 import { createRouter, createWebHistory } from 'vue-router';
+
 import { Home, NotFound } from '../views';
 
 const ROUTE_PATHS = [
@@ -48,7 +49,14 @@ const routes: RouteRecordRaw[] = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(_to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
 });
 
 export function routerPush(

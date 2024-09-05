@@ -1,10 +1,12 @@
 <template>
-  <template v-if="computedData.data?.target?.fields">
-    <v-responsive :class="['content-wrapper', props.hasHeaderMargin ? '' : 'py-4']">
+  <template v-if="computedData.data.target.fields">
+    <v-responsive
+      :class="['content-wrapper', props.hasDescription ? 'compact-wrapper' : '', props.hasHeaderMargin ? '' : 'py-4']">
       <div v-if="props.isResponsiveContainer"
         :class="[props.hasHeaderMargin ? 'mb-3' : '', 'd-flex ga-3 align-baseline']">
-        <h1 v-if="computedData.data.target.fields?.showTitle"
-          :class="[props.offsetColor ? 'text-white' : 'text-secondary', 'section-title']">
+        <h1 v-if="computedData.data.target.fields?.showTitle" :class="[
+          props.offsetColor ? 'text-white' : 'text-secondary',
+          'section-title']">
           {{ computedData.data.target.fields.shownTitle }}
         </h1>
         <slot name="subTitle" />
@@ -164,6 +166,8 @@ function getParagraphStyle(sectionKey) {
     return { class: sectionKey?.startsWith('ticket_section_2025') ? 'slider-group' : 'auto-fit-grid' }
   } else if (sectionKey.startsWith("event_page_intro")) {
     return { class: 'mt-5 mb-3' }
+  } else if (sectionKey.startsWith("event_section_2025")) {
+    return { class: 'slider-event-card-group' }
   }
 
   return props.numOfCards ? { style: `display: grid; grid-template-columns: repeat(${props.numOfCards}, 1fr); gap: ${isEventSection ? 0 : 12}px;` } : { class: 'w-100' };
@@ -224,6 +228,18 @@ function renderNodes() {
 </script>
 
 <style lang="scss">
+.compact-wrapper {
+  margin: 0 auto;
+  max-width: 780px;
+
+
+  @media (max-width: 599.9px) {
+    max-width: 400px;
+  }
+}
+
+
+.slider-event-card-group,
 .slider-group {
   display: flex;
   flex-wrap: nowrap;
@@ -231,15 +247,18 @@ function renderNodes() {
   overflow-y: hidden;
   gap: 12px;
   align-items: center;
-  height: 280px;
   justify-content: space-around;
+}
+
+.slider-group {
+  height: 260px;
 
   @media (max-width: 800px) and (min-width: 600px) {
-    height: 220px;
+    height: 230px;
   }
 
   @media (max-width: 599.9px) {
-    height: 170px;
+    height: 190px;
   }
 }
 

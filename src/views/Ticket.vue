@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import { useGlobalStore } from '@/store/modules';
+
 const store = useGlobalStore();
 
 </script>

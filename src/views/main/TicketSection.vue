@@ -1,12 +1,10 @@
 <template>
   <page-section :data="store.getMainTickets2025" :activeView="activeView" :isResponsiveContainer="false" />
-  <v-container>
-    <v-responsive class="content-wrapper h-3xl">
-      <v-btn color="secondary" to="ticket" class="w-100 h-2xl">
-        Find out more
-      </v-btn>
-    </v-responsive>
-  </v-container>
+  <div class="content-wrapper d-flex align-center mt-2 mb-3">
+    <v-btn color="secondary" to="ticket" class="jumbo-btn h-3xl mx-auto">
+      Find out more
+    </v-btn>
+  </div>
 </template>
 
 <script setup lang="ts">

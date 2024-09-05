@@ -7,9 +7,11 @@
       </template>
     </template>
   </template>
-  <v-btn color="secondary" class="w-100 h-2xl mt-5" href="sponsor">
-    Find out more
-  </v-btn>
+  <div class="d-flex">
+    <v-btn color="secondary" class="jumbo-btn mt-5 mx-auto" to="sponsor">
+      Become a Sponsor
+    </v-btn>
+  </div>
 </template>
 
 

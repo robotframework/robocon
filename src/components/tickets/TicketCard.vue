@@ -1,12 +1,14 @@
 <template>
-  <div :class="[props.hasDescription ? 'card-wrapper' : '']">
+  <div
+    :class="[props.hasDescription ? 'card-wrapper w-100 mx-auto d-flex align-center flex-wrap ga-3 ga-md-7 flex-sm-nowrap' : '']">
     <a :href="props.href" target="_blank" :class="[
       props.href ? 'cursor-pointer' : 'suspended',
-      'card-link'
+      props.hasDescription ? 'mx-auto' : '',
     ]" :key="props.href ?? props.name">
 
-      <v-card color="secondary" class="card-base py-3 px-4" elevation="2" rounded="lg">
-        <v-card-item class="px-sm-2 px-0 pb-0">
+      <v-card color="secondary" :class="[props.hasDescription ? 'with-desc' : '', 'card-base py-2 pl-2 pr-0']"
+        elevation="2" rounded="lg">
+        <v-card-item>
           <div class="d-flex flex-column">
             <div class="label">
               {{ props.category }}
@@ -28,8 +30,8 @@
               :class="[props.discountedPrice ? 'strike-through' : '', 'text-h4 discounted price']">
               {{ props.price }}<span class="ml-1">€</span>
             </div>
-            <div v-if="props.discountedPrice" class="text-h2 price">
-              {{ props.discountedPrice }}<span class="ml-2">€</span>
+            <div v-if="props.discountedPrice" class="text-h3 price">
+              {{ props.discountedPrice }}<span class="ml-1">€</span>
             </div>
           </div>
         </v-card-item>
@@ -37,10 +39,10 @@
     </a>
 
     <template v-if="hasDescription">
-      <div class="desc-box">
+      <div class="desc-box courier-font">
         <h3>{{ ticketSaleInfo }} </h3>
         <ul class="list">
-          <li v-for="feature of props.features" :key="feature" class="text-h6 list-item">
+          <li v-for="feature of props.features" :key="feature" class="list-item courier-font">
             {{ feature }}
           </li>
         </ul>
@@ -74,54 +76,57 @@ const ticketSaleInfo = computed(() => {
 
 <style scoped lang="scss">
 .card-wrapper {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  @media (max-width: 800px) and (min-width: 600px) {
-    gap: 20px;
-  }
-
-  @media (max-width: 599.9px) {
-    flex-wrap: wrap;
+  @media (max-width: 960px) {
+    align-items: center;
   }
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 22px;
 
   @media (max-width: 800px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
-.desc-box {
-  display: flex;
-  width: 400px;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-
-
 .card-base {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: calc(1000px / 3);
-  height: 220px;
+
   margin: auto;
   color: white;
 
-  @media (max-width: 800px) and (min-width: 600px) {
-    width: 280px;
-    height: 180px;
+  &:not(.card-with-desc) {
+    height: 220px;
+
+    @media (max-width: 800px) and (min-width: 600px) {
+      width: 280px;
+      height: 200px;
+    }
+
+    @media (max-width: 599.9px) {
+      width: 240px;
+      height: 180px;
+    }
   }
 
-  @media (max-width: 599.9px) {
-    width: 240px;
-    height: 160px;
+  &.with-desc {
+    width: 360px;
+    height: 230px;
+
+    @media (max-width: 800px) and (min-width: 600px) {
+      width: 320px;
+      height: 220px;
+    }
+
+    @media (max-width: 599.9px) {
+      width: 280px;
+      height: 180px;
+    }
   }
 
   &:hover {
@@ -170,11 +175,15 @@ const ticketSaleInfo = computed(() => {
     background: conic-gradient(from 180deg at 50% 50%, #348bff 0deg, #103fe8 20deg, #000ecd 120deg, #1038e0 360deg);
 
   }
-
 }
 
 .label {
   font-size: 16px;
+  line-height: 1;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 }
 
 .list {
@@ -185,7 +194,10 @@ const ticketSaleInfo = computed(() => {
   padding-left: 20px;
 
   @media (max-width: 800px) {
+    margin-top: 6px;
     grid-template-columns: repeat(1, 1fr);
+    font-size: 15px;
+    gap: 4px;
   }
 }
 
@@ -200,20 +212,26 @@ const ticketSaleInfo = computed(() => {
   &:before {
     content: unset;
   }
+
+  @media (max-width: 800px) {
+    margin: 0 !important;
+  }
+
 }
 
 .price {
   line-height: 1;
   text-align: right;
   margin-bottom: 0;
+  font-family: var(--v-font-body);
 
   &:not(.discounted) {
     @media (max-width: 900px) {
-      font-size: 42px !important;
+      font-size: 38px !important;
     }
 
     @media (max-width: 600px) {
-      font-size: 36px !important;
+      font-size: 32px !important;
     }
   }
 
@@ -226,7 +244,18 @@ const ticketSaleInfo = computed(() => {
       font-size: 20px !important;
     }
   }
+}
 
+
+.desc-box {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  @media (max-width: 600px) {
+    margin: 0 auto
+  }
 }
 
 .discounted {
