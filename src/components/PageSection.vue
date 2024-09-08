@@ -1,48 +1,30 @@
 <template>
-  <div
-    class="mb-xlarge p-small"
-    tabindex="-1">
-    <a class="anchor" :id="anchorName"></a>
-    <div class="bar"></div>
-    <h2>{{ title }}</h2>
-    <slot></slot>
+  <div>
+    <div class="container narrow">
+      <a class="anchor" :id="'anchorName'"></a>
+      <!-- <div class="bar"></div> -->
+      <h2>{{ title }}</h2>
+      <RichTextRenderer
+        :document="body"
+        :nodeRenderers="renderNodes()"
+        :markRenderers="renderMarks()" />
+    </div>
   </div>
 </template>
 
-<script>
-import { useStore } from '../store';
-import { mapState } from 'pinia';
+<script setup lang="ts">
+import type { Entry } from 'contentful';
+import type { PageSection } from 'Content';
+import type { PropType } from 'vue';
+import RichTextRenderer from 'contentful-rich-text-vue-renderer';
+import { renderNodes, renderMarks } from 'Content/renderContent';
 
-export default {
-  name: 'PageSection',
-  props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    subtitle: {
-      type: String
-    },
-    body: {
-      type: String,
-      default: ''
-    },
-    titleId: {
-      type: String,
-      required: true
-    },
-    fullWidth: {
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    ...mapState(useStore, ['isMobile']),
-    anchorName() {
-      return this.title?.replaceAll(' ', '-').toLowerCase()
-    }
-  }
-}
+const props = defineProps({
+  content: Object as PropType<Entry<PageSection>>
+})
+
+const { title, body } = props.content.fields
+
 </script>
 
 <style scoped>
@@ -52,28 +34,32 @@ a.anchor {
   top: -15vh;
   visibility: hidden;
 }
+h2 {
+  margin-top: 0 !important;
+}
+h2::before {
+  display: block;
+  content: " ";
+  margin-top: -50px;
+  height: 50px;
+  visibility: hidden;
+  pointer-events: none;
+}
+@media screen and (max-width: 1280px) {
   h2::before {
-    display: block;
-    content: " ";
-    margin-top: -50px;
-    height: 50px;
-    visibility: hidden;
-    pointer-events: none;
+    margin-top: -80px;
+    height: 80px;
   }
-  @media screen and (max-width: 1280px) {
-    h2::before {
-      margin-top: -80px;
-      height: 80px;
-    }
-  }
-  @media screen and (min-width: 1281px) {
-    h2 {
-      position: sticky;
-      top: 2rem;
-    }
-    h3 {
-      position: sticky;
-      top: 7.5rem;
-    }
-  }
+}
+.container {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+.container > :deep(*:last-child) {
+  margin-bottom: 0;
+}
+.container :deep(.section-row) {
+  padding-inline: 1rem;
+  margin-inline: -1rem;
+}
 </style>

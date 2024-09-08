@@ -1,8 +1,9 @@
 :root {
-    --color-theme: #002F6C;
+    --color-theme: #020d67;
     --color-theme-p3: lab(29.06, 7.24, -36.98);
-    --color-theme-secondary: rgb(100, 108, 226);
+    --color-theme-secondary: #020d67;
     --color-background: #fff;
+    --color-background-secondary: #f3f3f3;
 
     --color-white: #f5f5f5;
     --color-grey-light: #e7e7e7;

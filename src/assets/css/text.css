@@ -40,6 +40,13 @@
   font-display: swap;
   font-weight: 600;
 }
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("/dist/fonts/SourceCodePro-Variable.ttf") format("truetype"),
+    url("/fonts/SourceCodePro-Variable.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 600;
+}
 
 html {
   font-size: var(--size-base-lg);
@@ -51,16 +58,14 @@ html {
   }
 }
 
-h1,
-h2 {
-  font-family: "RBCN";
+h1 {
+  font-family: var(--font-title);
 }
 
 h2 {
   font-family: var(--font-title);
   line-height: var(--line-height-headers);
-  color: var(--color-theme);
-  color: var(--color-theme-p3);
+  color: var(--color-theme-secondary);
 }
 h3,
 h4 {
@@ -296,7 +301,7 @@ strong,
 }
 
 .router-link {
-  color: var(--color-white);
+  color: var(--color-theme);
   font-family: var(--font-title);
   text-decoration: none;
   text-transform: uppercase;
@@ -321,4 +326,12 @@ ul li::before {
   color: var(--color-theme);
   display: inline-block;
   width: 1.5rem;
+}
+
+ul li p {
+  margin: 0;
+
+  &:first-child {
+    display: inline;
+  }
 }

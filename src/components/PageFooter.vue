@@ -1,10 +1,10 @@
 <template>
-  <div class="row bg-black color-secondary p-small pt-large pb-large" style="margin-top: auto">
+  <div class="row bg-theme color-white p-small pt-large pb-large" style="margin-top: auto">
     <div class="container" style="line-height: 2;">
       <div class="row">
         <div class="col-sm-6 col-md-3">
           <h3 class="mb-small">
-            <a class="color-secondary" href="https://robotframework.org/foundation/">Foundation</a>
+            <a class="color-white" href="https://robotframework.org/foundation/">Foundation</a>
           </h3>
           <div>
             Robot Framework ry
@@ -18,38 +18,38 @@
           <div>
             Finland
           </div>
-          <a class="color-secondary" href="mailto:robotframework-foundation@googlegroups.com">
+          <a class="color-white" href="mailto:robotframework-foundation@googlegroups.com">
             Contact
           </a>
         </div>
         <div
           class="col-sm-6 col-md-3"
           :class="isMobile ? 'type-right' : ''">
-          <h3 class="mb-small color-secondary">
+          <h3 class="mb-small color-white">
             Community
           </h3>
           <div>
-            <a class="color-secondary" href="https://github.com/robotframework/robotframework">
+            <a class="color-white" href="https://github.com/robotframework/robotframework">
               GitHub
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://forum.robotframework.org/">
+            <a class="color-white" href="https://forum.robotframework.org/">
               Forum
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://www.facebook.com/robotframeworkofficial">
+            <a class="color-white" href="https://www.facebook.com/robotframeworkofficial">
               Facebook
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://twitter.com/robotframework">
+            <a class="color-white" href="https://twitter.com/robotframework">
               Twitter
             </a>
           </div>
           <div>
-            <a class="color-secondary" href="https://www.linkedin.com/groups/3710899/">
+            <a class="color-white" href="https://www.linkedin.com/groups/3710899/">
               LinkedIn
             </a>
           </div>
@@ -61,13 +61,18 @@
           <div />
           <div :class="isMobile ? 'type-right' : ''">
             <div>
-              <a class="color-secondary" href="https://robotframework.org">
+              <a class="color-white" href="https://robotframework.org">
                 Robot Framework
               </a>
             </div>
             <div>
-              <a class="color-secondary" href="https://robotframework.org/privacy-policy">
+              <a class="color-white" href="https://robotframework.org/privacy-policy">
                 Privacy Policy
+              </a>
+            </div>
+            <div>
+              <a class="color-white" href="https://robotframework.org/code-of-ethics">
+                Code of Ethics
               </a>
             </div>
           </div>

@@ -1,58 +1,32 @@
 <template>
-  <!-- <nav-mobile /> -->
+  <nav-mobile />
   <!-- <news-banner v-if="$route.name === 'Home'" class="theme-germany">
     <h2>ROBOCON <span class="color-white">2022</span> GERMANY</h2>
     <h3>📣 <span class="color-theme">This October 5th</span> 📣</h3> First RoboCon outside of Finland will be held in Frankfurt am Main! <router-link :to="{name: 'Germany'}">More details of RoboCon 2022 DE</router-link>
   </news-banner> -->
-  <navbar />
-  <router-view />
-  <page-footer v-if="!fullScreen" />
+  <navbar class="nav-desktop" />
+  <router-view :key="route.path" />
+  <page-footer />
 </template>
 
-<script>
+<script setup lang="ts">
 import { Navbar, NavMobile, PageFooter } from 'Components'
+import { useRoute } from 'vue-router';
 
-export default {
-  components: {
-    Navbar,
-    NavMobile,
-    PageFooter
-  },
-  data: () => ({
-    fullScreen: false
-  }),
-  created() {
-    // document.documentElement.lang = this.$i18n.locale
-    // this.$store.commit('SET_IS_MOBILE', window.innerWidth < 768)
-    // this.$store.commit('SET_IS_DESKTOP', window.innerWidth > 1280)
-    // window.addEventListener('resize', () => {
-    //   this.$store.commit('SET_IS_MOBILE', window.innerWidth < 768)
-    //   this.$store.commit('SET_IS_DESKTOP', window.innerWidth > 1280)
-    // })
-    window.addEventListener('click', () => document.body.classList.remove('accessible'))
-    window.addEventListener('keydown', ({ key }) => {
-      if (key === 'Tab') { document.body.classList.add('accessible') }
-    })
-    // const params = new URLSearchParams(window.location.search)
-    // const attendee = Object.fromEntries(params.entries()).attendee
-    // if (attendee === 'gather') this.fullScreen = true
-  },
-  watch: {
-    '$i18n.locale'() {
-      document.documentElement.lang = this.$i18n.locale
-    }
-  },
-  methods: {
-    scrollTo(id) {
-      const el = document.getElementById(id)
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-}
+const route = useRoute()
+
 </script>
 
 <style>
-  #app {
-    min-height: 100vh;
+  .nav-mobile {
+    display: none !important;
+  }
+  @media screen and (max-width: 1024px) {
+    .nav-mobile {
+      display: flex !important;
+    }
+    .nav-desktop {
+      display: none !important;
+    }
   }
 </style>

@@ -4,9 +4,11 @@ import PageFooter from './PageFooter.vue'
 import Navbar from './Navbar.vue'
 import NavMobile from './NavMobile.vue'
 import PageSection from './PageSection.vue'
+import SectionRow from './SectionRow.vue'
 import TabBox from './TabBox.vue'
 import Sponsors from './Sponsors.vue'
 import TicketItem from './TicketItem.vue'
+import CardItem from './CardItem.vue'
 import Talks from './Talks.vue'
 import PreviousTalks from './PreviousTalks.vue'
 import Timeline from './Timeline.vue'
@@ -31,9 +33,11 @@ export {
   Navbar,
   NavMobile,
   PageSection,
+  SectionRow,
   TabBox,
   Sponsors,
   TicketItem,
+  CardItem,
   Talks,
   PreviousTalks,
   Timeline,
