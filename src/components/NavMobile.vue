@@ -2,15 +2,20 @@
   <transition name="fade">
     <div
       v-if="isOpen"
-      class="menu bg-black p-small pb-large pt-2xlarge">
+      class="menu bg-black pl-large pb-large pt-xlarge">
       <router-link
-        :to="{ name: 'Home' }"
-        class="block m-medium router-link type-no-underline type-small">
+        :to="{ path: '/' }"
+        class="color-white block m-medium router-link type-no-underline type-small">
         RBCN25
       </router-link>
       <router-link
+        :to="{ name: 'Sponsor' }"
+        class="color-white block m-medium router-link type-no-underline type-small">
+        sponsor
+      </router-link>
+      <router-link
         :to="{ name: 'Archive' }"
-        class="block m-medium router-link type-no-underline type-small">
+        class="color-white block m-medium router-link type-no-underline type-small">
         archive
       </router-link>
       <!-- <router-link
@@ -24,11 +29,11 @@
     </div>
   </transition>
   <div
-    class="navbar row between bg-black color-white"
+    class="nav-mobile row between bg-black color-white"
     :class="isOpen ? 'open' : ''">
     <div class="flex middle pl-small">
       <base-icon name="robot" color="white" size="1.75rem" />
-      <router-link :to="{ name: 'Home' }" class="router-link type-large mx-xsmall">
+      <router-link :to="{ path: '/' }" class="router-link type-large mx-xsmall">
         ROBOCON
       </router-link>
     </div>
@@ -83,7 +88,7 @@ export default {
   background-color: #292f33A0;
 }
 
-.navbar {
+.nav-mobile {
   width: 100%;
   position: sticky;
   top: 0;

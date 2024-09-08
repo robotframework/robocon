@@ -52,6 +52,10 @@
 .p-medium {
     padding: var(--size-medium);
 }
+.px-medium {
+    padding-left: var(--size-medium);
+    padding-right: var(--size-medium);
+}
 
 .p-large {
     padding: var(--size-large);

@@ -1,16 +1,16 @@
 <template>
   <div
     ref="nav"
-    class="row between p-small sticky bg-black color-white"
+    class="row between p-small sticky bg-white border-bottom-theme border-thin"
     style="top: 0; z-index: 2;">
     <div class="flex middle">
-      <base-icon name="robot" color="white" size="1.25rem" />
-      <router-link :to="{ name: 'Home' }" class="router-link type-large mx-xsmall color-white">
+      <base-icon name="robot" color="black" size="1.25rem" />
+      <router-link :to="{ path: '/' }" class="router-link type-large mx-xsmall color-theme">
         ROBOCON
       </router-link>
       <div class="type-xsmall flex">
         |
-        <a href="https://robotframework.org/" class="type-xsmall ml-xsmall mr-2xsmall color-secondary hover-color-secondary">
+        <a href="https://robotframework.org/" class="type-xsmall ml-xsmall mr-2xsmall color-theme hover-color-secondary">
           Robot Framework
         </a>
         Conference
@@ -18,22 +18,16 @@
     </div>
     <div class="flex">
       <router-link
-        :to="{ name: 'Home' }"
-        class="router-link mx-xsmall type-no-underline type-small">
-        2025
-      </router-link>
-      <div class="mx-small">|</div>
-      <router-link
-        :to="{ name: 'Sponsor' }"
+        :to="{ path: '/sponsor' }"
         class="router-link mx-xsmall type-no-underline type-small">
         Sponsor
       </router-link>
-      <div class="mx-small">|</div>
+      <!-- <div>|</div>
       <router-link
         :to="{ name: 'Archive' }"
         class="router-link mx-xsmall type-no-underline type-small">
         archive
-      </router-link>
+      </router-link> -->
     </div>
   </div>
 </template>

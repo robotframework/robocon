@@ -7,7 +7,7 @@
       <img v-if="isDarkMode" :src="`${publicPath}img/RF-white.svg`" />
       <img v-else :src="`${publicPath}img/RF.svg`" class="mt-small" />
       <div class="col-sm-12 mt-medium">
-        <router-link :to="{ name: 'Home' }">
+        <router-link :to="{ path: '/' }">
           Back to home
         </router-link>
       </div>
