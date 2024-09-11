@@ -34,6 +34,7 @@ const props = defineProps({
 h1 {
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
+  letter-spacing: -0.125rem;
 }
 :deep(ul) {
   padding-left: 0;

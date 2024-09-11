@@ -24,10 +24,13 @@ const components = renderEntryList(props.content)
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  column-gap: 1rem;
+  column-gap: 0.75rem;
+  scroll-snap-type: x mandatory;
 }
 .item-column {
-  flex: 0 0 calc(100% / 3);
+  flex: 0 0 calc(100% / 3.3);
+  scroll-snap-align: start;
+  scroll-margin-inline: 1rem;
 }
 @media screen and (max-width: 1024px) {
   .item-column {

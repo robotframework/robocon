@@ -14,7 +14,7 @@ export const renderNodes = () => {
         return h(PageSection, { content: node.data.target })
       }
       if (type === 'row') {
-        return h(SectionRow, { content: node.data.target.fields.content, class: 'p-large' })
+        return h(SectionRow, { content: node.data.target.fields.content, class: 'm-large pb-small' })
       }
       if (type === 'expandableContent') {
         return h('details', {}, [
