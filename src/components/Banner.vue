@@ -25,9 +25,10 @@ const props = defineProps({
 
 <style scoped>
 .banner-container {
-  height: min(30rem, 40vh);
+  height: min(50vh);
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 0 20px #555577;
 }
 h1 {
   font-size: 4rem;
@@ -43,7 +44,7 @@ h1 {
     &.theme {
       font-family: 'RBCN';
       letter-spacing: 0;
-      font-size: 5.25rem;
+      font-size: 7.125rem;
     }
   }
 }
@@ -56,7 +57,7 @@ h1 {
       &.theme {
         font-family: 'RBCN';
         letter-spacing: 0;
-        font-size: 21vw;
+        font-size: 21.5vw;
       }
     }
   }
@@ -66,11 +67,26 @@ h1 {
   align-items: center;
 }
 .banner-img {
-  height: 110%;
-  width: 100%;
+  min-height: 130%;
+  max-width: 100%;
   position: absolute;
-  top: -5%;
+  top: 0;
+  left: 0;
   object-fit: cover;
   filter: blur(3px) brightness(1.3) contrast(0.7) saturate(0.5) opacity(0.5);
+
+  animation-name: imgParallax;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-direction: alternate;
+  animation-timeline: scroll(block root);
+}
+
+@keyframes imgParallax {
+  from {
+    transform: translate(0, -1rem);
+  }
+  to {
+    transform: translate(0, -50%);
+  }
 }
 </style>
