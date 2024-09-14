@@ -63,6 +63,7 @@ const props = defineProps({
 .content {
   width: calc(100% - 7rem);
   height: calc(100% - 2.5rem);
+  z-index: 2;
   @media screen and (max-width: 701px) {
     width: calc(100% - 7rem);
     height: calc(100% - 4rem);
@@ -101,7 +102,7 @@ const props = defineProps({
   color: var(--color-theme-secondary);
 }
 .ticket-container:hover .specular {
-  filter: brightness(0.5) saturate(2.5);
+  filter: filter(1) brightness(1.5);
 }
 .ticket-container:hover rect {
   stroke: var(--color-theme);
@@ -137,16 +138,23 @@ svg {
   border-radius: 1.25rem;
 }
 .specular {
-  opacity: 0.2;
+  opacity: 0.25;
   left: 2rem;
   top: 1rem;
   width: calc(100% - 4rem);
   height: calc(100% - 2rem);
-  mix-blend-mode: difference;
-  background-image: linear-gradient(130deg, rgba(200,200,200,1) 9%, #3b2f00 10%, rgba(150,150,150,1) 30%, #3b2f00 36%, #eeddaa 57%, #3b2f00 65%, rgba(170,170,170,1) 92%);
-  background-attachment: fixed;
-  background-size: 100%;
+  background-image: linear-gradient(130deg, rgba(200, 200, 200, 1) 9%, #a38719 10%, rgba(150, 150, 150, 1) 30%, #6181ff 36%, #eeddaa 57%, #ede9ff 65%, rgb(54 115 255) 92%);
+  background-size: 150vw;
   transition: filter 0.1s;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  filter: brightness(1.5) blur(1px);
+  /* background-position: 100% 0%; */
+
+  animation-name: bling;
+  animation-duration: 1ms;
+  animation-direction: alternate;
+  animation-timeline: scroll(root);
 
   @media screen and (max-width: 701px) {
     width: calc(100% - 5rem);
@@ -155,8 +163,16 @@ svg {
     top: 1.5rem;
   }
 }
+@keyframes bling {
+  from {
+    background-position: 0vw 0;
+  }
+  to {
+    background-position: 150vw 0;
+  }
+}
 .golden {
-  background-image: linear-gradient(130deg, rgba(200, 200, 200, 1) 9%, #0f69d5 10%, rgba(150, 150, 150, 1) 30%, #1b43b1 36%, #7aacff 57%, #0016ff 65%, rgba(170, 170, 170, 1) 92%);
+  background-image: linear-gradient(130deg, rgba(200, 200, 200, 1) 9%, #ffc800 10%, rgb(255 175 0) 30%, #ffef00 36%, #d5cabf 57%, #ffd45e 65%, rgba(170, 170, 170, 1) 92%);
   opacity: 0.3;
   filter: saturate(2);
 }
@@ -170,14 +186,16 @@ svg {
   background-position: -6% -32%;
   background-repeat: repeat;
   background-image: url(/img/rf-pattern.jpg);
+  filter: brightness(1);
 }
 .mask2 {
-  mix-blend-mode: color-burn;
+  mix-blend-mode: hard-light;
+  transform: translate3d(0, 0, 0);
   background-size: cover;
   /* background-image: url(/docs/img/ticket-depth.jpg), url(/img/ticket-depth.jpg); */
   background-image: url(/img/ticket-depth.jpg);
-  opacity: 0.7;
-  filter: brightness(0.8);
+  opacity: 1;
+  filter: invert();
 
 }
 .text-container {
