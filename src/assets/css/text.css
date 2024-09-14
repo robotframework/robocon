@@ -1,49 +1,37 @@
 @font-face {
   font-family: "RBCN";
-  src: url("/dist/fonts/RBCN23.woff2") format("woff"),
-    url("/fonts/RBCN23.woff2") format("woff");
-  font-display: swap;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "RBCN22";
-  src: url("/dist/fonts/RBCN-thin.woff2") format("woff");
+  src: url("/fonts/RBCN23.woff2") format("woff");
   font-display: swap;
   font-weight: 500;
 }
 @font-face {
   font-family: "OCRA";
-  src: url("/dist/fonts/OCRA.woff") format("woff"),
-    url("/fonts/OCRA.woff") format("woff");
+  src: url("/fonts/OCRA.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Courier Code";
-  src: url("/dist/fonts/CourierCode-Roman.woff2") format("woff2"),
-    url("/fonts/CourierCode-Roman.woff2") format("woff2");
+  src: url("/fonts/CourierCode-Roman.woff2") format("woff2");
   font-display: swap;
   font-weight: 400;
 }
 @font-face {
   font-family: "Courier Code";
-  src: url("/dist/fonts/CourierCode-Italic.woff") format("woff"),
-    url("/fonts/CourierCode-Italic.woff") format("woff");
+  src: url("/fonts/CourierCode-Italic.woff") format("woff");
   font-display: swap;
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Courier Code";
-  src: url("/dist/fonts/CourierCode-Bold.woff") format("woff"),
-    url("/fonts/CourierCode-Bold.woff") format("woff");
+  src: url("/fonts/CourierCode-Bold.woff") format("woff");
   font-display: swap;
   font-weight: 600;
 }
 @font-face {
   font-family: "Source Code Pro";
-  src: url("/dist/fonts/SourceCodePro-Variable.ttf") format("truetype"),
-    url("/fonts/SourceCodePro-Variable.ttf") format("truetype");
+  src: url("/fonts/SourceCodePro-Variable.ttf") format("truetype");
   font-display: swap;
   font-weight: 600;
 }
@@ -218,6 +206,9 @@ li {
   text-transform: uppercase;
 }
 
+.font-theme {
+  font-family: 'RBCN';
+}
 .font-title {
   font-family: var(--font-title);
 }

@@ -52,7 +52,7 @@ const components = renderEntryList(props.content)
   }
 }
 .item-column {
-  flex: 0 0 calc(var(--layout-container-narrow-max-width) / 3);
+  flex: 0 0 calc(100% / 3.3);
   scroll-snap-align: start;
   scroll-margin-inline: 1rem;
 }

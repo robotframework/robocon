@@ -5,7 +5,7 @@
       <h1
         class="colo-white font-title"
         style="transition-delay: 0.25s;">
-        <span class="color-black" style="padding-right: 2rem;">RBCN</span><span class="color-black">2025</span><br>
+        <span class="color-black theme" style="padding-right: 2rem;">RBCN</span><span class="color-black theme">2025</span><br>
         <span class="bg-secondary color-white" style="padding-right: 2rem;">FROM</span><span class="bg-secondary color-white">FINLAND</span><br>
         <span class="color-black" style="padding-right: 2rem;">WITH</span><span class="color-black">LOVE</span><br>
       </h1>
@@ -39,11 +39,26 @@ h1 {
   span {
     padding-bottom: 0.25rem;
     padding-inline: 0.5rem;
+
+    &.theme {
+      font-family: 'RBCN';
+      letter-spacing: 0;
+      font-size: 5.25rem;
+    }
   }
 }
 @media screen and (max-width: 701px) {
   h1 {
     font-size: 12.5vw;
+
+    span {
+
+      &.theme {
+        font-family: 'RBCN';
+        letter-spacing: 0;
+        font-size: 21vw;
+      }
+    }
   }
 }
 .container {

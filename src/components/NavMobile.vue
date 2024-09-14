@@ -9,15 +9,15 @@
         RBCN25
       </router-link>
       <router-link
-        :to="{ name: 'Sponsor' }"
+        :to="{ path: '/sponsor' }"
         class="color-white block m-medium router-link type-no-underline type-small">
         sponsor
       </router-link>
-      <router-link
+      <!-- <router-link
         :to="{ name: 'Archive' }"
         class="color-white block m-medium router-link type-no-underline type-small">
         archive
-      </router-link>
+      </router-link> -->
       <!-- <router-link
         v-for="{ name, text } in $tm('navbar.links')"
         :to="{ name }"
@@ -33,7 +33,7 @@
     :class="isOpen ? 'open' : ''">
     <div class="flex middle pl-small">
       <base-icon name="robot" color="white" size="1.75rem" />
-      <router-link :to="{ path: '/' }" class="router-link type-large mx-xsmall">
+      <router-link :to="{ path: '/' }" class="color-white router-link type-large mx-xsmall">
         ROBOCON
       </router-link>
     </div>

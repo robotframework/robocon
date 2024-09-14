@@ -169,12 +169,13 @@ svg {
   mix-blend-mode: screen;
   background-position: -6% -32%;
   background-repeat: repeat;
-  background-image: url(/dist/img/rf-pattern.jpg), url(/img/rf-pattern.jpg);
+  background-image: url(/img/rf-pattern.jpg);
 }
 .mask2 {
   mix-blend-mode: color-burn;
   background-size: cover;
-  background-image: url(/dist/img/ticket-depth.jpg), url(/img/ticket-depth.jpg);
+  /* background-image: url(/docs/img/ticket-depth.jpg), url(/img/ticket-depth.jpg); */
+  background-image: url(/img/ticket-depth.jpg);
   opacity: 0.7;
   filter: brightness(0.8);
 
