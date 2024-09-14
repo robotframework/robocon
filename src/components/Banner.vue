@@ -1,11 +1,13 @@
 <template>
   <div class="banner-container">
     <img :src="content.image.fields.file.url as string" class="banner-img">
-    <div class="container narrow row">
+    <div class="container narrow flex h-100">
       <h1
         class="colo-white font-title"
         style="transition-delay: 0.25s;">
-        {{ content.title }}
+        <span class="color-black" style="padding-right: 2rem;">RBCN</span><span class="color-black">2025</span><br>
+        <span class="bg-secondary color-white" style="padding-right: 2rem;">FROM</span><span class="bg-secondary color-white">FINLAND</span><br>
+        <span class="color-black" style="padding-right: 2rem;">WITH</span><span class="color-black">LOVE</span><br>
       </h1>
     </div>
   </div>
@@ -28,20 +30,25 @@ const props = defineProps({
   overflow: hidden;
 }
 h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: -0.25rem;
   color: black;
   line-height: 1.25;
+
+  span {
+    padding-bottom: 0.25rem;
+    padding-inline: 0.5rem;
+  }
 }
 @media screen and (max-width: 701px) {
   h1 {
-    font-size: 7vw;
+    font-size: 12.5vw;
   }
 }
 .container {
-  padding-top: 5rem;
   position: relative;
+  align-items: center;
 }
 .banner-img {
   height: 110%;

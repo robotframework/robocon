@@ -69,7 +69,7 @@ h2 {
 }
 h3,
 h4 {
-  font-family: var(--font-title);
+  font-family: var(--font-body);
   line-height: var(--line-height-headers);
 }
 
@@ -99,7 +99,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--type-xlarge);
+  font-size: var(--type-large);
   font-weight: var(--weight-body);
   margin-bottom: var(--size-medium);
   line-height: var(--line-height-h2);
@@ -113,7 +113,6 @@ h2:not(:first-child) {
 h3 {
   font-size: var(--type-body);
   color: var(--color-theme);
-  color: var(--color-theme-p3);
   font-weight: var(--weight-semi-bold);
   margin-bottom: var(--size-3xsmall);
   line-height: var(--line-height-h3);
@@ -314,7 +313,6 @@ strong,
 }
 .router-link-active {
   color: var(--color-theme);
-  color: var(--color-theme-p3);
 }
 
 ul {

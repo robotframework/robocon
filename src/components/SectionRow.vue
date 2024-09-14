@@ -21,25 +21,39 @@ const components = renderEntryList(props.content)
 
 <style scoped>
 .section-row {
+  --gutter: max(calc((100vw - var(--layout-container-narrow-max-width)) * 0.5), 0rem);
+
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   column-gap: 0.75rem;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
+  width: 100vw;
+  transform: translateX(calc(var(--gutter) * -1));
+
+  & > div {
+    scroll-snap-align: start;
+    scroll-margin-inline: max(calc((100vw - var(--layout-container-narrow-max-width) * 1) / 2 + 1rem), 0rem);
+  }
+  & > div:first-child {
+    scroll-snap-align: start;
+    margin-left: max(calc((100vw - var(--layout-container-narrow-max-width) * 1) / 2 + 1rem), 0rem);
+  }
+  & > div:last-child {
+    scroll-snap-align: end;
+    margin-right: calc((100vw - (var(--layout-container-narrow-max-width) / 3)) / 2 + 1rem);
+    scroll-margin-right: 0;
+  }
+  @media screen and (max-width: 701px) {
+    & > div {
+      scroll-snap-align: center !important;
+      flex: 0 0 80vw;
+    }
+  }
 }
 .item-column {
-  flex: 0 0 calc(100% / 3.3);
+  flex: 0 0 calc(var(--layout-container-narrow-max-width) / 3);
   scroll-snap-align: start;
   scroll-margin-inline: 1rem;
-}
-@media screen and (max-width: 1024px) {
-  .item-column {
-    flex: 0 0 20rem;
-  }
-}
-@media screen and (max-width: 800px) {
-  .item-column {
-    flex: 0 0 80vw;
-  }
 }
 </style>

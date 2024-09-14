@@ -2,7 +2,6 @@
 
 .color-theme {
     color: var(--color-theme);
-    color: var(--color-theme-p3);
 }
 .color-theme-24 {
     color: var(--color-theme-24) !important;

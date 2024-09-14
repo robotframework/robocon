@@ -63,6 +63,10 @@ const props = defineProps({
 .content {
   width: calc(100% - 7rem);
   height: calc(100% - 2.5rem);
+  @media screen and (max-width: 701px) {
+    width: calc(100% - 7rem);
+    height: calc(100% - 4rem);
+  }
 
   .ticket-title {
     font-size: 1.5rem;
@@ -143,6 +147,13 @@ svg {
   background-attachment: fixed;
   background-size: 100%;
   transition: filter 0.1s;
+
+  @media screen and (max-width: 701px) {
+    width: calc(100% - 5rem);
+    height: calc(100% - 3rem);
+    left: 2.5rem;
+    top: 1.5rem;
+  }
 }
 .golden {
   background-image: linear-gradient(130deg, rgba(200, 200, 200, 1) 9%, #0f69d5 10%, rgba(150, 150, 150, 1) 30%, #1b43b1 36%, #7aacff 57%, #0016ff 65%, rgba(170, 170, 170, 1) 92%);
