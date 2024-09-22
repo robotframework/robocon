@@ -5,6 +5,7 @@ import Navbar from './Navbar.vue'
 import NavMobile from './NavMobile.vue'
 import PageSection from './PageSection.vue'
 import SectionRow from './SectionRow.vue'
+import SectionColumns from './SectionColumns.vue'
 import TabBox from './TabBox.vue'
 import Sponsors from './Sponsors.vue'
 import TicketItem from './TicketItem.vue'
@@ -34,6 +35,7 @@ export {
   NavMobile,
   PageSection,
   SectionRow,
+  SectionColumns,
   TabBox,
   Sponsors,
   TicketItem,

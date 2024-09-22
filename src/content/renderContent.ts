@@ -1,7 +1,7 @@
 import type { Node } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { endOfDay, isWithinInterval, startOfDay } from 'date-fns'
-import { PageSection, TicketItem, SponsorItem, SectionRow, Banner, CardItem } from 'Components'
+import { PageSection, TicketItem, SponsorItem, SectionRow, Banner, CardItem, SectionColumns } from 'Components'
 import { h } from 'vue'
 import type { Entry } from 'contentful';
 
@@ -12,6 +12,12 @@ export const renderNodes = () => {
       const type = target.sys.contentType.sys.id
       if (type === 'pageSection') {
         return h(PageSection, { content: node.data.target })
+      }
+      if (type === 'columns') {
+        return h(SectionColumns, {
+          left: node.data.target.fields.left,
+          right: node.data.target.fields.right
+        })
       }
       if (type === 'row') {
         return h(SectionRow, { content: node.data.target.fields.content, class: 'm-large pb-small' })

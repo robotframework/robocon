@@ -35,6 +35,10 @@
   position: sticky;
 }
 
+.gap-sm {
+  gap: var(--size-small);
+}
+
 .row {
   box-sizing: border-box;
   display: -webkit-box;
