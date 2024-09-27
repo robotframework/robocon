@@ -26,14 +26,18 @@ const props = defineProps({
 <style scoped>
 .sponsor {
   display: inline-block;
-  max-width: 15rem;
+  height: 10rem;
+  width: 15rem;
+  align-content: center;
 
   &.big {
     max-width: 25rem;
   }
 
   & > img {
-    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
     display: block;
   }
 }
