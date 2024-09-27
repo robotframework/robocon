@@ -154,8 +154,13 @@ p {
   margin: var(--size-xsmall) 0;
 }
 
-ul {
+
+div > ul {
   padding-left: 0;
+}
+
+ul {
+  padding-left: 1rem;
   list-style-position: outside;
   margin-block-end: 0;
 }
