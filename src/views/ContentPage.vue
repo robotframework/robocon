@@ -19,10 +19,8 @@ import { renderNodes, renderMarks } from 'Content/renderContent';
 
 const store = useStore()
 const route = useRoute()
-console.log(route.path, route)
 
 const page = store.pages.find((page) => page.fields.slug as unknown as string === route.path)
-console.log(page)
 
 </script>
 

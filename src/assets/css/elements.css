@@ -18,8 +18,54 @@
 .card {
   border: solid 2px #24282c;
   box-shadow: 0 2px 3px #020d6799;
-  background-color: #fff;
-  border-radius: 2px;
+  border-radius: 4px;
+}
+
+details {
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 3px #020d6755;
+
+  summary {
+    display: flex;
+    list-style-position: outside;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-grey-darkest);
+    border-radius: 4px;
+    cursor: pointer;
+    border: solid 2px #00000022;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::before {
+    content: "";
+    margin-left: 0;
+    margin-right: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #00c0b5;
+    border-radius: 0.5rem;
+    transition: background-color 0.1s;
+  }
+
+  &[open] summary::before {
+    background-color: #ffcb5b;
+  }
+
+  &[open] summary {
+    border-radius: 4px 4px 0 0;
+    border-bottom-style: none;
+  }
+
+  div {
+    padding: 0.25rem 1rem;
+    border: solid 2px #00000022;
+    border-top: none;
+  }
 }
 
 .rounded {
