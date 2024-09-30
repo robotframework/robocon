@@ -25,7 +25,7 @@ const props = defineProps({
 
 <style scoped>
 .banner-container {
-  height: min(50vh);
+  height: min(60vh);
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 0 20px #555577;
@@ -73,7 +73,7 @@ h1 {
   top: 0;
   left: 0;
   object-fit: cover;
-  filter: blur(3px) brightness(1.3) contrast(0.7) saturate(0.5) opacity(0.5);
+  filter: blur(1px) brightness(1.3) contrast(0.8) saturate(0.7) opacity(0.8);
 
   animation-name: imgParallax;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
