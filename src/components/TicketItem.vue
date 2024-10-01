@@ -9,7 +9,6 @@
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 370 200">
       <path d="M360,142.9c0-2.8,2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-5c-2.8,0-5-2.2-5-5s2.2-5,5-5v-9.5c-17.4-2.2-31.1-16-33.4-33.4H38.4c-2.2,17.4-16,31.1-33.4,33.4v11.6c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v5c2.8,0,5,2.2,5,5s-2.2,5-5,5v11.6c17.4,2.2,31.1,16,33.4,33.4H331.6c2.2-17.4,16-31.1,33.4-33.4v-13.7c-2.8,0-5-2.2-5-5Z"/>
-      <rect stroke-width="1px" stroke="var(--color-theme)" x="2rem" y="1rem" width="calc(100% - 4rem)" height="calc(100% - 2rem)" rx="25" ry="25"/>
     </svg>
     <div class="relative content flex flex-col between">
       <div>
@@ -56,7 +55,7 @@ const props = defineProps({
 .ticket-container {
   display: inline-flex;
   aspect-ratio: 1.8;
-  width: 20rem;
+  width: 100%;
   position: relative;
   backface-visibility: hidden;
 }
@@ -138,17 +137,18 @@ svg {
   border-radius: 1.25rem;
 }
 .specular {
-  opacity: 0.25;
+  box-shadow: inset 0px 0px 2px 1px #000;
+  opacity: 0.75;
   left: 2rem;
   top: 1rem;
   width: calc(100% - 4rem);
   height: calc(100% - 2rem);
-  background-image: linear-gradient(130deg, rgba(200, 200, 200, 1) 9%, #a38719 10%, rgba(150, 150, 150, 1) 30%, #6181ff 36%, #eeddaa 57%, #ede9ff 65%, rgb(54 115 255) 92%);
+  background-image: linear-gradient(130deg, #1940a3 0%, #aaa 30%, #1940a3 50%, #adb9d5 60%,  rgb(54 115 255) 100%);
   background-size: 150vw;
   transition: filter 0.1s;
   background-position: 0% 0%;
   background-repeat: repeat;
-  filter: brightness(1.5) blur(1px);
+  filter: brightness(1.5) blur(0.5px);
   /* background-position: 100% 0%; */
 
   animation-name: bling;
@@ -172,9 +172,7 @@ svg {
   }
 }
 .golden {
-  background-image: linear-gradient(130deg, rgba(200, 200, 200, 1) 9%, #ffc800 10%, rgb(255 175 0) 30%, #ffef00 36%, #d5cabf 57%, #ffd45e 65%, rgba(170, 170, 170, 1) 92%);
-  opacity: 0.3;
-  filter: saturate(2);
+  background-image: linear-gradient(130deg, #8d6200 0%, #f4cc6f 30%, #906500 50%, #adb9d5 60%,  rgb(255, 121, 54) 80%);
 }
 .mask, .mask2 {
   width: 100%;
@@ -186,16 +184,15 @@ svg {
   background-position: -6% -32%;
   background-repeat: repeat;
   background-image: url(/img/rf-pattern.jpg);
-  filter: brightness(1);
+  filter: invert(1) contrast(0.5) brightness(1.5);
 }
 .mask2 {
-  mix-blend-mode: hard-light;
+  mix-blend-mode: soft-light;
   transform: translate3d(0, 0, 0);
   background-size: cover;
   /* background-image: url(/docs/img/ticket-depth.jpg), url(/img/ticket-depth.jpg); */
   background-image: url(/img/ticket-depth.jpg);
   opacity: 1;
-  filter: invert();
 
 }
 .text-container {

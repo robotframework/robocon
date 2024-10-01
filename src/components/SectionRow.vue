@@ -53,7 +53,7 @@ const components = renderEntryList(props.content)
   }
 }
 .item-column {
-  flex: 0 0 calc(var(--layout-container-narrow-max-width) / 3);
+  flex: 0 0 calc(988px / 3 - 0.25rem);
   scroll-snap-align: start;
   scroll-margin-inline: 1rem;
 }

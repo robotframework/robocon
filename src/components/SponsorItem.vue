@@ -26,8 +26,8 @@ const props = defineProps({
 <style scoped>
 .sponsor {
   display: inline-block;
-  height: 10rem;
-  width: 15rem;
+  aspect-ratio: 1.7;
+  width: calc(100% / 3);
   align-content: center;
 
   &.big {

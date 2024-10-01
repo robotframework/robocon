@@ -43,8 +43,8 @@ h1 {
 
     &.theme {
       font-family: 'RBCN';
-      letter-spacing: 0;
-      font-size: 7.125rem;
+      letter-spacing: 2px;
+      font-size: 5rem;
     }
   }
 }
@@ -57,7 +57,8 @@ h1 {
       &.theme {
         font-family: 'RBCN';
         letter-spacing: 0;
-        font-size: 21.5vw;
+        font-size: 15vw;
+        padding-left: 0.75rem;
       }
     }
   }
