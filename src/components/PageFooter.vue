@@ -1,6 +1,6 @@
 <template>
   <div class="row bg-theme color-white p-small pt-large pb-large" style="margin-top: auto">
-    <div class="container" style="line-height: 2;">
+    <div class="container narrow" style="line-height: 2;">
       <div class="row">
         <div class="col-sm-6 col-md-3">
           <h3 class="mb-small">
