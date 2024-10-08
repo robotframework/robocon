@@ -29,6 +29,7 @@ const props = defineProps({
   aspect-ratio: 1.7;
   width: calc(100% / 3);
   align-content: center;
+  padding: 1rem;
 
   &.big {
     max-width: 25rem;
