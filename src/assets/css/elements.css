@@ -17,8 +17,12 @@
 
 .card {
   border: solid 2px #24282c;
-  box-shadow: 0 2px 3px #020d6799;
   border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(8, 25, 153, 0.3);
+  transition: box-shadow 0.2s;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(8, 25, 153, 0.6);
+  }
 }
 
 details {

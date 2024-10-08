@@ -59,7 +59,7 @@ h2::before {
   margin-bottom: 0;
 }
 .container :deep(.section-row) {
-  padding-inline: 1rem;
+  padding: 1rem;
   margin-inline: -1rem;
 }
 </style>
