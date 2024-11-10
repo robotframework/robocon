@@ -2,15 +2,15 @@
   <transition name="fade">
     <div
       v-if="isOpen"
-      class="menu bg-black pl-large pb-large pt-xlarge">
+      class="menu bg-white pl-large pb-large pt-xlarge">
       <router-link
         :to="{ path: '/' }"
-        class="color-white block m-medium router-link type-no-underline type-small">
+        class="block m-medium router-link type-no-underline type-small">
         RBCN25
       </router-link>
       <router-link
         :to="{ path: '/sponsor' }"
-        class="color-white block m-medium router-link type-no-underline type-small">
+        class="block m-medium router-link type-no-underline type-small">
         sponsor
       </router-link>
       <!-- <router-link
@@ -29,11 +29,11 @@
     </div>
   </transition>
   <div
-    class="nav-mobile row between bg-black color-white"
+    class="nav-mobile row between bg-white color-black border-bottom-theme border-thin"
     :class="isOpen ? 'open' : ''">
     <div class="flex middle pl-small">
-      <base-icon name="robot" color="white" size="1.75rem" />
-      <router-link :to="{ path: '/' }" class="color-white router-link type-large mx-xsmall">
+      <base-icon name="robot" color="black" size="1.75rem" />
+      <router-link :to="{ path: '/' }" class="color-black router-link type-large mx-xsmall">
         ROBOCON
       </router-link>
     </div>
@@ -85,7 +85,7 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #292f33A0;
+  background-color: #ffffff99;
 }
 
 .nav-mobile {
@@ -111,7 +111,7 @@ export default {
   position: absolute;
   height: 0.25rem;
   width: 100%;
-  background: var(--color-white);
+  background: var(--color-black);
   border-radius: 1px;
   opacity: 1;
   left: 0;

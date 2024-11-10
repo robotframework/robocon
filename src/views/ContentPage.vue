@@ -25,6 +25,9 @@ const page = store.pages.find((page) => page.fields.slug as unknown as string ==
 </script>
 
 <style>
+.sections-container > div {
+  background-color: var(--color-background);
+}
 .sections-container > div:nth-child(2n) {
   background-color: var(--color-background-secondary);
 }

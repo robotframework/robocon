@@ -16,18 +16,26 @@
 }
 
 .card {
-  border: solid 2px #24282c;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(8, 25, 153, 0.3);
+  background-color: #fff;
+  box-shadow: 4px 4px 0px var(--color-theme-secondary);
   transition: box-shadow 0.2s;
   &:hover {
-    box-shadow: 0 4px 8px rgba(8, 25, 153, 0.6);
+    box-shadow: 5px 5px 2px var(--color-theme-secondary);
   }
 }
 
+.badge {
+  padding: 0 0.75rem;
+  background-color: #fff;
+  display: block;
+  width: fit-content;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 1px 1px 0 var(--color-theme);
+}
+
 details {
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 3px #020d6755;
+  box-shadow: 2px 2px 0px var(--color-theme);
 
   summary {
     display: flex;
@@ -37,10 +45,8 @@ details {
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--color-grey-darkest);
-    border-radius: 4px;
     cursor: pointer;
-    border: solid 2px #00000022;
-    transform: translateY(0.0625rem);
+    background-color: #fffffffa;
   }
 
   summary::-webkit-details-marker {
@@ -73,8 +79,8 @@ details {
 
   div {
     padding: 0.25rem 1rem;
-    border: solid 2px #00000022;
     border-top: none;
+    background-color: #fffffffa;
   }
 }
 

@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <div class="row center type-center" style="margin-top: calc(100vh / 2 - 7rem)">
+    <div class="row center type-center" style="margin-top: 10rem">
       <div class="col-sm-12">
         <h3>404 - Not found</h3>
       </div>
-      <img v-if="isDarkMode" :src="`${publicPath}img/RF-white.svg`" />
-      <img v-else :src="`${publicPath}img/RF.svg`" class="mt-small" />
+      <!-- <img v-if="isDarkMode" :src="`/img/RF-white.svg`" /> -->
+      <img :src="`/img/RF.svg`" class="mt-small" />
       <div class="col-sm-12 mt-medium">
         <router-link :to="{ path: '/' }">
           Back to home
@@ -19,7 +19,6 @@
 export default {
   name: 'NotFound',
   data: () => ({
-    publicPath: process.env.BASE_URL,
     isDarkMode: false
   }),
   created() {

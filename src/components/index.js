@@ -18,6 +18,7 @@ import Talks24 from './Talks24.vue'
 import Workshops24 from './Workshops24.vue'
 import Tutorials24 from './Tutorials24.vue'
 import SponsorItem from './SponsorItem.vue'
+import PretalxSchedule from './PretalxSchedule.vue'
 
 import BaseIcon from './BaseIcon.vue'
 import GlobeIcon from './icons/GlobeIcon.vue'
@@ -48,6 +49,7 @@ export {
   Workshops24,
   Tutorials24,
   SponsorItem,
+  PretalxSchedule,
 
   BaseIcon,
   GlobeIcon,

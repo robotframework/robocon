@@ -1,9 +1,10 @@
 import type { Node } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { endOfDay, isWithinInterval, startOfDay } from 'date-fns'
-import { PageSection, TicketItem, SponsorItem, SectionRow, Banner, CardItem, SectionColumns } from 'Components'
+import { PageSection, TicketItem, SponsorItem, SectionRow, Banner, CardItem, SectionColumns, PretalxSchedule } from 'Components'
 import { h } from 'vue'
 import type { Entry } from 'contentful';
+import markdownit from 'markdown-it'
 
 export const renderNodes = () => {
   return {
@@ -30,6 +31,9 @@ export const renderNodes = () => {
       }
       if (type === 'banner') {
         return h(Banner, { content: node.data.target.fields })
+      }
+      if (type === 'pretalxSchedule') {
+        return h(PretalxSchedule, { content: node.data.target.fields })
       }
       return undefined
     }, 'embedded-entry-inline': (node: Node) => {
@@ -72,3 +76,8 @@ export const renderEntryList = (entries: Entry[]) => entries.map((entry) => {
 })
 
 export const renderMarks = () => {}
+
+export const renderMarkdown = (text: string) => {
+  const md = markdownit()
+  return md.render(text);
+}
