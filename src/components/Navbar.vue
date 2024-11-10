@@ -17,6 +17,11 @@
       </div>
     </div>
     <div class="flex">
+      <!-- <router-link
+        :to="{ path: '/program' }"
+        class="router-link mx-xsmall type-no-underline type-small">
+        Program
+      </router-link> -->
       <router-link
         :to="{ path: '/sponsor' }"
         class="router-link mx-xsmall type-no-underline type-small">

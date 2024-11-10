@@ -68,6 +68,13 @@ export interface Banner {
   }
 }
 
+export interface PretalxSchedule {
+  contentTypeId: 'pretalxSchedule';
+  fields: {
+    url: string;
+  }
+}
+
 export interface Card {
   contentTypeId: 'card';
   fields: {
