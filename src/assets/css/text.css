@@ -161,6 +161,12 @@ p {
   font-size: var(--type-body);
   margin: var(--size-xsmall) 0;
 }
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
 
 
 div > ul {
@@ -171,6 +177,10 @@ ul {
   padding-left: 1rem;
   list-style-position: outside;
   margin-block-end: 0;
+}
+
+ol {
+  padding-left: 2rem;
 }
 
 .ul-none {

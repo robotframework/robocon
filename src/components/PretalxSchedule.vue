@@ -50,7 +50,7 @@ import type { PretalxSchedule } from '@/content';
 import { computed, ref, type PropType } from 'vue';
 import { useFetch } from '@vueuse/core'
 import TalkItem from './TalkItem.vue'
-import type { ScheduleResponse } from '@/types/pretalx';
+import type { PretalxEvent, PretalxSession, ScheduleResponse, SubmissionsResponse } from '@/types/pretalx';
 import {getDate} from 'date-fns'
 
 
@@ -63,17 +63,22 @@ const props = defineProps({
 const shownTalks = ref<'live' | 'online'>('live')
 
 const { isFetching, error, data } = useFetch(props.content.url).get().json()
+const { isFetching: isFetchingSub, error: errorSub, data: dataSub } = useFetch('https://cfp.robocon.io/api/events/robocon-2025/submissions/?limit=50').get().json()
 
 const sortTalks = (talks: ScheduleResponse['slots']) => talks.sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
 
 const talks = computed(() => {
   if (isFetching.value || error.value) return undefined
+  if (isFetchingSub.value || errorSub.value) return undefined
   const schedule = data.value as ScheduleResponse
+  const submissions = dataSub.value as SubmissionsResponse
+
+  const addSubmissionData = (event: PretalxEvent): PretalxEvent & PretalxSession => ({...event, ...submissions.results.find((s) => s.code === event.code)})
   return {
-    live: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon')),
-    workshop: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Workshop - Full Day')),
-    tutorial: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Tutorial')),
-    online: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk'].includes(talk.submission_type.en)))
+    live: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon').map((event) => addSubmissionData(event))),
+    workshop: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Workshop - Full Day').map((event) => addSubmissionData(event))),
+    tutorial: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Tutorial').map((event) => addSubmissionData(event))),
+    online: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk'].includes(talk.submission_type.en)).map((event) => addSubmissionData(event)))
   }
 })
   // .sort((a, b) => {
