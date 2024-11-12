@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import type { PretalxSchedule } from '@/content';
-import { computed, ref, type PropType } from 'vue';
+import { computed, nextTick, ref, type PropType } from 'vue';
 import { useFetch } from '@vueuse/core'
 import TalkItem from './TalkItem.vue'
 import type { PretalxEvent, PretalxSession, ScheduleResponse, SubmissionsResponse } from '@/types/pretalx';
@@ -73,6 +73,14 @@ const talks = computed(() => {
   const schedule = data.value as ScheduleResponse
   const submissions = dataSub.value as SubmissionsResponse
 
+  nextTick(() => {
+    const hash = window.location.hash
+    if (hash) {
+      const talkTitle = document.getElementById(hash.slice(1))
+      if (talkTitle) talkTitle.scrollIntoView()
+    }
+  })
+
   const addSubmissionData = (event: PretalxEvent): PretalxEvent & PretalxSession => ({...event, ...submissions.results.find((s) => s.code === event.code)})
   return {
     live: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon').map((event) => addSubmissionData(event))),
@@ -81,6 +89,16 @@ const talks = computed(() => {
     online: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk'].includes(talk.submission_type.en)).map((event) => addSubmissionData(event)))
   }
 })
+
+const hash = window.location.hash
+if (hash) {
+  if (hash.includes('live-')) {
+    shownTalks.value = 'live'
+  }
+  if (hash.includes('online-')) {
+    shownTalks.value = 'online'
+  }
+}
   // .sort((a, b) => {
   //   if (new Date(a.slot?.start || a.start) < new Date(b.slot?.start || b.start)) return -1
   //   return 1

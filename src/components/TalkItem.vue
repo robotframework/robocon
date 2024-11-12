@@ -1,7 +1,7 @@
 <template>
   <article class="event mb-medium p-medium pt-none">
-    <div class="pt-xsmall pb-2xsmall" style="margin-left: -0.75rem">
-      <div class="badge">
+    <div class="pt-xsmall pb-2xsmall flex between" style="margin-left: -0.75rem">
+      <div class="badge h-fit">
         <template v-if="event.type === 'break'">
           Break
         </template>
@@ -12,8 +12,11 @@
           {{ getEventType(event.submission_type.en) }}
         </template>
       </div>
+      <a v-if="event.type === 'talk'" :href="`#${getSlug(event)}`">
+        <link-icon style="transform: translateY(2px)" color="black" />
+      </a>
     </div>
-    <h1 v-if="event.type === 'talk'" class="mb-2xsmall">
+    <h1 v-if="event.type === 'talk'" class="mb-2xsmall" :id="getSlug(event)">
       {{ event.title }}
     </h1>
     <h1 v-else-if="event.type === 'break'" class="mb-2xsmall">
@@ -51,6 +54,7 @@ import { renderMarkdown } from 'Content/renderContent';
 import { type PropType } from 'vue'
 import type { PretalxEvent, Break } from '@/types/pretalx';
 import SpeakerItem from './SpeakerItem.vue'
+import LinkIcon from './icons/LinkIcon.vue'
 
 
 const getEventType = (type: string) => {
@@ -58,15 +62,24 @@ const getEventType = (type: string) => {
   return type
 }
 
-defineProps({
+const props = defineProps({
   event: Object as PropType<PretalxEvent | Break>
 })
+
+const getSlug = (event: PretalxEvent) => {
+  if (!event.title) return ''
+  if (props.event.type === 'break') return
+  const isLive = props.event.slot.room.en === 'RoboCon' || props.event.submission_type.en === 'Workshop - Full Day'
+  if (isLive) return `live-${event.title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
+  return `online-${event.title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
+}
 
 </script>
 
 <style scoped>
 h1 {
   line-height: 1.35;
+  scroll-margin-top: 8rem;
 }
 .event {
   border: solid 0px var(--color-theme-secondary);
