@@ -86,7 +86,7 @@ const talks = computed(() => {
     live: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon').map((event) => addSubmissionData(event))),
     workshop: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Workshop - Full Day').map((event) => addSubmissionData(event))),
     tutorial: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Tutorial').map((event) => addSubmissionData(event))),
-    online: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk'].includes(talk.submission_type.en)).map((event) => addSubmissionData(event)))
+    online: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk', 'Keynote'].includes(talk.submission_type.en)).map((event) => addSubmissionData(event)))
   }
 })
 
