@@ -6,12 +6,17 @@
       <router-link
         :to="{ path: '/' }"
         class="block m-medium router-link type-no-underline type-small">
-        RBCN25
+        ROBOCON 2025
+      </router-link>
+      <router-link
+        :to="{ path: '/program' }"
+        class="block m-medium router-link type-no-underline type-small">
+        Program
       </router-link>
       <router-link
         :to="{ path: '/sponsor' }"
         class="block m-medium router-link type-no-underline type-small">
-        sponsor
+        Sponsor
       </router-link>
       <!-- <router-link
         :to="{ name: 'Archive' }"
