@@ -27,19 +27,19 @@
     <div v-else-if="data && talks">
       <template v-if="shownTalks === 'live'">
         <h2>Workshops</h2>
-        <TalkItem v-for="event in talks.workshop" :key="event.code" :event="{...event, type: 'talk'}" />
+        <TalkItem v-for="(event, i) in talks.workshop" :key="i" :event="{...event}" />
         <h2>Talks - Day 1</h2>
-        <TalkItem v-for="event in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 13)" :key="event.code" :event="{...event, type: 'talk'}" />
+        <TalkItem v-for="(event, i) in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 13)" :key="i" :event="{...event}" />
         <h2>Talks - Day 2</h2>
-        <TalkItem v-for="event in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 14)" :key="event.code" :event="{...event, type: 'talk'}" />
+        <TalkItem v-for="(event, i) in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 14)" :key="i" :event="{...event}" />
       </template>
       <template v-else-if="shownTalks === 'online'">
         <h2>Tutorials</h2>
-        <TalkItem v-for="event in talks.tutorial" :key="event.code" :event="{...event, type: 'talk'}" />
+        <TalkItem v-for="(event, i) in talks.tutorial" :key="i" :event="{...event}" />
         <h2>Talks - Day 1</h2>
-        <TalkItem v-for="event in talks.online.filter((event) => getDate(new Date(event.slot.start)) === 5)" :key="event.code" :event="{...event, type: 'talk'}" />
+        <TalkItem v-for="(event, i) in talks.online.filter((event) => getDate(new Date(event.slot.start)) === 5)" :key="i" :event="{...event}" />
         <h2>Talks - Day 2</h2>
-        <TalkItem v-for="event in talks.online.filter((event) => getDate(new Date(event.slot.start)) === 6)" :key="event.code" :event="{...event, type: 'talk'}" />
+        <TalkItem v-for="(event, i) in talks.online.filter((event) => getDate(new Date(event.slot.start)) === 6)" :key="i" :event="{...event}" />
       </template>
     </div>
   </div>
@@ -50,7 +50,7 @@ import type { PretalxSchedule } from '@/content';
 import { computed, nextTick, ref, type PropType } from 'vue';
 import { useFetch } from '@vueuse/core'
 import TalkItem from './TalkItem.vue'
-import type { PretalxEvent, PretalxSession, ScheduleResponse, SubmissionsResponse } from '@/types/pretalx';
+import type { Break, BreakParsed, PretalxEvent, PretalxSession, ScheduleResponse, SubmissionsResponse } from '@/types/pretalx';
 import {getDate} from 'date-fns'
 
 
@@ -65,7 +65,7 @@ const shownTalks = ref<'live' | 'online'>('live')
 const { isFetching, error, data } = useFetch(props.content.url).get().json()
 const { isFetching: isFetchingSub, error: errorSub, data: dataSub } = useFetch('https://cfp.robocon.io/api/events/robocon-2025/submissions/?limit=50').get().json()
 
-const sortTalks = (talks: ScheduleResponse['slots']) => talks.sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
+const sortTalks = (talks: (PretalxEvent | BreakParsed)[]) => talks.sort((a, b) => new Date(a.slot.start) < new Date(b.slot.end) ? -1 : 1)
 
 const talks = computed(() => {
   if (isFetching.value || error.value) return undefined
@@ -83,10 +83,44 @@ const talks = computed(() => {
 
   const addSubmissionData = (event: PretalxEvent): PretalxEvent & PretalxSession => ({...event, ...submissions.results.find((s) => s.code === event.code)})
   return {
-    live: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon').map((event) => addSubmissionData(event))),
+    live: sortTalks([
+      ...schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon').map((event) => addSubmissionData(event)),
+      ...schedule.breaks.map((b) => ({
+        ...b,
+        submission_type: {
+          en: 'Break' as const
+        },
+        title: 'Break',
+        description: b.description,
+        slot: {
+          room_id: b.room_id,
+          room: b.room,
+          start: b.start,
+          end: b.end
+        }
+      }))
+    ]),
     workshop: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Workshop - Full Day').map((event) => addSubmissionData(event))),
     tutorial: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en === 'Tutorial').map((event) => addSubmissionData(event))),
-    online: sortTalks(schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk', 'Keynote'].includes(talk.submission_type.en)).map((event) => addSubmissionData(event)))
+    online: sortTalks([
+      ...schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk', 'Keynote'].includes(talk.submission_type.en)).map((event) => addSubmissionData(event)),
+      ...schedule.breaks
+      .filter(({room}) => room.en === 'RoboCon Online')
+      .map((b) => ({
+        ...b,
+        submission_type: {
+          en: 'Break' as const
+        },
+        title: 'Break',
+        description: b.description,
+        slot: {
+          room_id: b.room_id,
+          room: b.room,
+          start: b.start,
+          end: b.end
+        }
+      }))
+    ])
   }
 })
 

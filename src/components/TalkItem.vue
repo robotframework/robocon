@@ -1,48 +1,45 @@
 <template>
-  <article class="event mb-medium p-medium pt-none">
+  <article class="event mb-medium p-medium pt-none" :class="event.submission_type.en === 'Break' && 'break'">
     <div class="pt-xsmall pb-2xsmall flex between" style="margin-left: -0.75rem">
-      <div class="badge h-fit">
-        <template v-if="event.type === 'break'">
-          Break
-        </template>
-        <template v-else-if="event.submission_type.en !== 'Workshop - Full Day'">
+      <div v-if="event.submission_type.en !== 'Break'" class="badge h-fit">
+        <template v-if="event.submission_type.en !== 'Workshop - Full Day'">
           {{ getEventType(event.submission_type.en) }} ({{ differenceInMinutes(new Date(event.slot.end), new Date(event.slot.start)) }}min)
         </template>
         <template v-else>
           {{ getEventType(event.submission_type.en) }}
         </template>
       </div>
-      <a v-if="event.type === 'talk'" :href="`#${getSlug(event)}`">
+      <a v-if="event.submission_type.en !== 'Break'" :href="`#${getSlug((event as PretalxEvent))}`">
         <link-icon style="transform: translateY(2px)" color="black" />
       </a>
     </div>
-    <h1 v-if="event.type === 'talk'" class="mb-2xsmall" :id="getSlug(event)">
-      {{ event.title }}
+    <h1 v-if="event.submission_type.en !== 'Break'" class="mb-2xsmall" :id="getSlug(event as PretalxEvent)">
+      {{ (event as PretalxEvent).title }}
     </h1>
-    <h1 v-else-if="event.type === 'break'" class="mb-2xsmall">
-      {{ event.description }}
+    <h1 v-else-if="event.submission_type.en === 'Break'" class="mb-2xsmall">
+      {{ (event as BreakParsed).description.en }}
     </h1>
-    <div class="type-small mb-xsmall">
-      <template v-if="event.type === 'talk'">
-        {{ format(new Date(event.slot.start), 'LLL dd kk:mm') }}
-      </template>
-      <template v-else-if="event.type === 'break'">
-        {{ format(new Date(event.start), 'LLL dd kk:mm') }}
-      </template>
+    <div v-if="event.submission_type.en !== 'Break'" class="type-small mb-xsmall">
+      {{ format(new Date(event.slot.start), 'LLL dd kk:mm') }}
     </div>
-    <div v-if="event.type === 'talk'">
-      <div v-html="renderMarkdown(event.abstract)" class="mb-small" />
+    <div v-else>
+      {{ format(new Date(event.slot.start), 'kk:mm') }}
+      -
+      {{ format(new Date(event.slot.end), 'kk:mm') }}
+    </div>
+    <div v-if="event.submission_type.en !== 'Break'">
+      <div v-html="renderMarkdown((event as PretalxEvent).abstract)" class="mb-small" />
       <details v-if="event.description !== ''" class="mb-medium">
         <summary>
           More info
         </summary>
-        <div v-html="renderMarkdown(event.description)" />
+        <div v-html="renderMarkdown((event as PretalxEvent).description)" />
       </details>
     </div>
-    <div v-if="event.type === 'talk'" class="row gap-sm">
+    <div v-if="event.submission_type.en !== 'Break'" class="row gap-sm">
       <SpeakerItem
-        v-for="speaker in event.speakers"
-        :key="`${speaker.code}${event.code}`"
+        v-for="speaker in (event as PretalxEvent).speakers"
+        :key="`${speaker.code}${(event as PretalxEvent).code}`"
         :speaker="speaker" />
     </div>
   </article>
@@ -52,7 +49,7 @@
 import { format, differenceInMinutes } from 'date-fns';
 import { renderMarkdown } from 'Content/renderContent';
 import { type PropType } from 'vue'
-import type { PretalxEvent, Break } from '@/types/pretalx';
+import type { PretalxEvent, Break, BreakParsed } from '@/types/pretalx';
 import SpeakerItem from './SpeakerItem.vue'
 import LinkIcon from './icons/LinkIcon.vue'
 
@@ -63,12 +60,12 @@ const getEventType = (type: string) => {
 }
 
 const props = defineProps({
-  event: Object as PropType<PretalxEvent | Break>
+  event: Object as PropType<PretalxEvent | BreakParsed>
 })
 
 const getSlug = (event: PretalxEvent) => {
   if (!event.title) return ''
-  if (props.event.type === 'break') return
+  if (props.event.submission_type.en === 'Break') return
   const isLive = props.event.slot.room.en === 'RoboCon' || props.event.submission_type.en === 'Workshop - Full Day'
   if (isLive) return `live-${event.title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
   return `online-${event.title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
@@ -86,6 +83,10 @@ h1 {
   border-left-width: 6px;
   background-color: var(--color-background-secondary);
   /* box-shadow: -4px 0px 1px var(--color-theme); */
+
+  &.break {
+    border-color: var(--color-grey);
+  }
 }
 details {
   width: fit-content;

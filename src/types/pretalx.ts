@@ -38,7 +38,6 @@ export type PretalxEvent = {
   image: string | null;
   resources: string[];
   answers: string[];
-  type: 'talk' | 'workshop'
 };
 
 export type PretalxSession = {
@@ -73,14 +72,25 @@ export type SubmissionsResponse = {
 }
 
 export type Break = {
-  room: {
+  room?: {
       en: string;
   };
-  room_id: number;
+  room_id?: number;
   start: string; // ISO 8601 date string
   end: string;   // ISO 8601 date string
   description: {
       en: string;
   };
-  type: 'break'
+}
+
+export type BreakParsed = {
+  room?: {
+      en: string;
+  };
+  room_id?: number;
+  slot: Slot;
+  description: {
+      en: string;
+  };
+  submission_type: {en: 'Break'};
 }
