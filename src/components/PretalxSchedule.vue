@@ -6,7 +6,7 @@
           HELSINKI
         </div>
         <div class="type-xsmall">
-          FEB 12th - 15th
+          FEB 11th - 15th
         </div>
       </button>
       <button @click="shownTalks = 'online'" class="event-select" :class="shownTalks === 'online' && 'active'">
