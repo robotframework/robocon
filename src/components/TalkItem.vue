@@ -2,7 +2,7 @@
   <article class="event mb-medium p-medium pt-none" :class="event.submission_type.en === 'Break' && 'break'">
     <div class="pt-xsmall pb-2xsmall flex between" style="margin-left: -0.75rem">
       <div v-if="event.submission_type.en !== 'Break'" class="badge h-fit">
-        <template v-if="event.submission_type.en !== 'Workshop - Full Day'">
+        <template v-if="!event.submission_type.en.includes('Workshop')">
           {{ getEventType(event.submission_type.en) }} ({{ differenceInMinutes(new Date(event.slot.end), new Date(event.slot.start)) }}min)
         </template>
         <template v-else>
