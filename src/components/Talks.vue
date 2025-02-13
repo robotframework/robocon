@@ -164,13 +164,7 @@ export default {
       const newUrl = `${window.location.href.split('?')[0].split('#')[0]}?talk=${this.slugify(talk.title)}`
       history.replaceState(null, null, newUrl)
     },
-    ongoing(talk) {
-      if (talk.room !== 1193) return false
-      const start = new Date(talk.start)
-      const end = new Date(talk.end)
-      if (isNaN(start) || isNaN(end)) return false
-      return isWithinInterval(new Date(), { start, end })
-    }
+
   }
 }
 </script>

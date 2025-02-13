@@ -26,6 +26,14 @@ const getRoutes = () => {
       children: []
     },
     {
+      path: '/cs',
+      name: 'CS',
+      beforeEnter: () => {
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfVuVGv4cimwv6rTHi869n2b9yFJFXqlV9AS5wQ9MgWIFu1ww/viewform'
+        return false
+      }
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: NotFound,
