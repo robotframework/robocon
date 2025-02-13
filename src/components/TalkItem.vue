@@ -1,5 +1,5 @@
 <template>
-  <article class="event mb-medium p-medium pt-none" :class="event.submission_type.en === 'Break' && 'break'">
+  <article class="event mb-medium p-medium pt-none" :class="event.submission_type.en === 'Break' && 'break'" ref="el">
     <div class="pt-xsmall pb-2xsmall flex between" style="margin-left: -0.75rem">
       <div v-if="event.submission_type.en !== 'Break'" class="badge h-fit">
         <template v-if="!event.submission_type.en.includes('Workshop')">
@@ -46,9 +46,9 @@
 </template>
 
 <script setup lang="ts">
-import { format, differenceInMinutes } from 'date-fns';
+import { format, differenceInMinutes, isWithinInterval } from 'date-fns';
 import { renderMarkdown } from 'Content/renderContent';
-import { type PropType } from 'vue'
+import { onMounted, ref, type PropType } from 'vue'
 import type { PretalxEvent, Break, BreakParsed } from '@/types/pretalx';
 import SpeakerItem from './SpeakerItem.vue'
 import LinkIcon from './icons/LinkIcon.vue'
@@ -70,6 +70,12 @@ const getSlug = (event: PretalxEvent) => {
   if (isLive) return `live-${event.title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
   return `online-${event.title.replace(/[ ]/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
 }
+
+const el = ref(null);
+const isOngoing = isWithinInterval(new Date(), { start: new Date(props.event.slot.start), end: new Date(props.event.slot.end) })
+onMounted(() => {
+  if (isOngoing) el.value?.scrollIntoView();
+});
 
 </script>
 
