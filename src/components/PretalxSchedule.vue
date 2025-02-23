@@ -1,20 +1,20 @@
 <template>
   <div style="min-height: 100vh;">
     <div class="row gap-sm mb-large">
-      <button @click="shownTalks = 'live'" class="event-select" :class="shownTalks === 'live' && 'active'">
-        <div class="type-xlarge">
-          HELSINKI
-        </div>
-        <div class="type-xsmall">
-          FEB 11th - 15th
-        </div>
-      </button>
       <button @click="shownTalks = 'online'" class="event-select" :class="shownTalks === 'online' && 'active'">
         <div class="type-xlarge">
           ONLINE
         </div>
         <div class="type-xsmall">
           MAR 04th - 06th
+        </div>
+      </button>
+      <button @click="shownTalks = 'live'" class="event-select" :class="shownTalks === 'live' && 'active'">
+        <div class="type-xlarge">
+          HELSINKI
+        </div>
+        <div class="type-xsmall">
+          FEB 11th - 15th
         </div>
       </button>
     </div>
@@ -60,7 +60,7 @@ const props = defineProps({
   content: Object as PropType<PretalxSchedule['fields']>
 })
 
-const shownTalks = ref<'live' | 'online'>('live')
+const shownTalks = ref<'live' | 'online'>('online')
 
 const { isFetching, error, data } = useFetch(props.content.url).get().json()
 const { isFetching: isFetchingSub, error: errorSub, data: dataSub } = useFetch('https://cfp.robocon.io/api/events/robocon-2025/submissions/?limit=50').get().json()
@@ -152,12 +152,15 @@ if (hash) {
 .event-select {
   padding: 0.5rem 1rem;
   border: solid 1px var(--color-theme);
-  font-family: 'Source Code Pro';
+  font-family: var(--font-body);
   font-size: 1.15rem;
 
   &.active {
     background-color: var(--color-theme);
     color: var(--color-white);
+  }
+  .type-xlarge {
+    font-family: var(--font-title) !important;
   }
 }
 </style>
