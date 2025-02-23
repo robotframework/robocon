@@ -1,5 +1,5 @@
 <template>
-  <article class="event mb-medium p-medium pt-none" :class="event.submission_type.en === 'Break' && 'break'" ref="el">
+  <article class="event mb-medium p-medium pt-none" :class="event.submission_type.en === 'Break' && 'break'" ref="el" :code="event.code">
     <div class="pt-xsmall pb-2xsmall flex between" style="margin-left: -0.75rem">
       <div v-if="event.submission_type.en !== 'Break'" class="badge h-fit">
         <template v-if="!event.submission_type.en.includes('Workshop')">
@@ -26,6 +26,11 @@
       {{ format(new Date(event.slot.start), 'kk:mm') }}
       -
       {{ format(new Date(event.slot.end), 'kk:mm') }}
+    </div>
+    <div v-if="event.videoURL" class="col-sm-12 col-md-10 col-md-offset-1">
+      <div width="100%" class="video mt-medium mb-medium">
+        <iframe width="100%" height="100%" class="rounded" :src="(event as PretalxEvent).videoURL" :title="`Recording: ${(event as PretalxEvent).title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
     <div v-if="event.submission_type.en !== 'Break'">
       <div v-html="renderMarkdown((event as PretalxEvent).abstract)" class="mb-small" />

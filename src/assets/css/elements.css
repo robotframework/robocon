@@ -9,9 +9,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  border: solid 1px var(--color-white);
-  border-radius: var(--border-radius-rounded);
-  filter: drop-shadow(0 0 3px var(--color-theme));
   pointer-events: none;
 }
 

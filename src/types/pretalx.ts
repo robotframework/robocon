@@ -38,6 +38,7 @@ export type PretalxEvent = {
   image: string | null;
   resources: string[];
   answers: string[];
+  videoURL: string | null;
 };
 
 export type PretalxSession = {
