@@ -27,7 +27,7 @@
     <div v-else-if="data && talks">
       <template v-if="shownTalks === 'live'">
         <h2>Talks - Day 1</h2>
-        <TalkItem v-for="(event, videoURL=getVideoUrl(event.code), i) in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 13)" :key="i" :event="{...event}" />
+        <TalkItem v-for="(event, i) in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 13)" :key="i" :event="{...event}" />
         <h2>Talks - Day 2</h2>
         <TalkItem v-for="(event, i) in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 14)" :key="i" :event="{...event}" />
         <h2>Workshops</h2>
