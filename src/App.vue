@@ -12,8 +12,10 @@
 <script setup lang="ts">
 import { Navbar, NavMobile, PageFooter } from 'Components'
 import { useRoute } from 'vue-router';
+import { initAuth } from 'Utils/ticket';
 
 const route = useRoute()
+initAuth()
 
 </script>
 
