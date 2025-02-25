@@ -20,7 +20,7 @@
       {{ (event as BreakParsed).description.en }}
     </h1>
     <div v-if="event.submission_type.en !== 'Break'" class="type-small mb-xsmall">
-      {{ format(new Date(event.slot.start), 'LLL dd kk:mm') }}
+      {{ formatInTimeZone(new Date(event.slot.start), 'Europe/Helsinki', 'LLL dd kk:mm') }} (Helsinki time)
     </div>
     <div v-else>
       {{ format(new Date(event.slot.start), 'kk:mm') }}
@@ -52,6 +52,7 @@
 
 <script setup lang="ts">
 import { format, differenceInMinutes, isWithinInterval } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 import { renderMarkdown } from 'Content/renderContent';
 import { onMounted, ref, type PropType } from 'vue'
 import type { PretalxEvent, Break, BreakParsed } from '@/types/pretalx';

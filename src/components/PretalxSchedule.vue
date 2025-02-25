@@ -51,7 +51,7 @@ import { computed, nextTick, onMounted, ref, type PropType } from 'vue';
 import { useFetch } from '@vueuse/core'
 import TalkItem from './TalkItem.vue'
 import type { Break, BreakParsed, PretalxEvent, PretalxSession, ScheduleResponse, SubmissionsResponse } from '@/types/pretalx';
-import {addISOWeekYears, getDate} from 'date-fns'
+import {getDate} from 'date-fns'
 import CryptoJS from 'crypto-js'
 import * as jose from 'jose'
 
