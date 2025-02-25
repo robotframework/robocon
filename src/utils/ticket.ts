@@ -1,4 +1,5 @@
 import { jwtVerify, importSPKI } from 'jose'
+import { useStore } from '../store';
 import CryptoJS from 'crypto-js'
 
 export interface Token {
@@ -25,37 +26,6 @@ oaCmENEyeZEnHlaEWeXhNPQv1/nZN5Z3Fq3uKWCQRry1HMoOGKrdATfUUIXc6vvk
 nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
 6IrJDlqg3BaMV5Hr8LdQtY8CAwEAAQ==
 -----END PUBLIC KEY-----`
-
-const recordings: Record<string, string> = {
-  "BLJHLG": "U2FsdGVkX1+sFc0vaGp5X7mTe+noVcSukyuO0DD6stM=",
-  "QX9NPR": "U2FsdGVkX1/mlNRFBmrhEXfbDyFA/u+mKwth9QbOIY4=",
-  "8QPMC3": "U2FsdGVkX1+C+BrEP7eBdsjxXoeW19cLKLBnIeKTefc=",
-  "9RTZJ8": "U2FsdGVkX1/8WJSCpcFAzAZocIQGdlNljCO/h6/clso=",
-  "E9WWVJ": "U2FsdGVkX1/LA18lKVW+j4rOvpqvMW9ZNkFrcmH2bjk=",
-  "ZXK33M": "U2FsdGVkX1/yYnQgU/ZZETz6DEnoN36LQTi3Qzpy2pY=",
-  "3F8E7U": "U2FsdGVkX197Qhe1GFm0Ye5fP8tLp+Z/UGWjc/d/wuo=",
-  "VDXHPW": "U2FsdGVkX1+SHTfijvhKCWo9Yk/QQLgyzBjb0Ybk7pc=",
-  "H8QSRH": "U2FsdGVkX1+3z/1WCaCsYUZq1UJ/BQdSpJDXO68y4Pc=",
-  "AAAAAA": "U2FsdGVkX1+ZsZJPXsRfnU5qnY3PDX4bH7m8wN3wyYY=",
-  "WPBD83": "U2FsdGVkX18HXE+A/v5JTjDXhhrO4cL9jatTniQBZh8=",
-  "K3MLM3": "U2FsdGVkX19OGm9vDnZDfQzAVdC+d88vm1R9dj8/B0E=",
-  "YFJMTW": "U2FsdGVkX1+khaXJ7AHqjTtRRlspTHLeMC/1nlHzMgY=",
-  "A3PKEU": "U2FsdGVkX1+dYGmr+beBESdT5RA9AyS1RZ0zaYzPxR0=",
-  "79LS7Z": "U2FsdGVkX1/lxCkCRhQutGyM7sRP53FJ6EKnLQ90srI=",
-  "N8UJZS": "U2FsdGVkX18i9nsCJ5B+hiLLiwOZY8qnovtSceUehJk=",
-  "9VKPTH": "U2FsdGVkX1+5o3N5XgIzgAeI4qHY8bJIxznQn9z9wco=",
-  "HNLUGZ": "U2FsdGVkX18ZfP/9AS78jB1UlG+H+JWss6PNMJFri/M=",
-  "FRRRLQ": "U2FsdGVkX1+zy9lXfQTjn5q4IeFEnpHtVUdrC2RQr+8=",
-  "day1": "U2FsdGVkX1+mbqTRgxjssKi6CExj0ryVIKAIdpbaSbg=",
-  "day2": "U2FsdGVkX19bIgb8XsaNDWAFD+quYNdxtImqbJnwIUY="
-}
-
-const freeRecordings: Record<string, string> = {
-  "KUXX8Y": "9H-oHhLFwcs",
-  "G838QP": "XiwSkNVciZY",
-  "9SUNSJ": "M8Dzq_Ieqhg",
-  "DQFP7F": "-DCJZNV-CFs"
-}
 
 /**
  * Saves a key/value pair to localStorage.
@@ -127,21 +97,27 @@ export async function initAuth(): Promise<void> {
 export function getVideoUrl(code: string): string | undefined {
   if (!code) return undefined
 
-  const freeRecording = freeRecordings[code]
-  if (freeRecording) {
-    return generateYouTubeUrl(freeRecording)
+  const store = useStore()
+  const allUrls = store.entries.items
+    .filter((item) => item.sys.contentType.sys.id === "youTubeLinks")
+    .reduce((acc, {fields}) => ({...acc, ...fields.json }), {})
+
+  const maybeUrl = allUrls[code]
+
+  if (!maybeUrl) {
+    return undefined
+  }
+
+  const isPublic = maybeUrl.length < 20 // todo: something better
+  if (isPublic) {
+    return generateYouTubeUrl(maybeUrl)
   }
 
   if (!authenticated) return undefined
 
-  const recording = recordings[code]
-  if (!recording) {
-    console.error(`Recording not found for code: ${code}`)
-    return undefined
-  }
 
   try {
-    const decrypted = CryptoJS.AES.decrypt(recording, token.hashKey || '')
+    const decrypted = CryptoJS.AES.decrypt(maybeUrl, token.hashKey || '')
     const url = decrypted.toString(CryptoJS.enc.Utf8)
     if (!url) return undefined
     return generateYouTubeUrl(url)
