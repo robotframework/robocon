@@ -40,6 +40,8 @@
         <TalkItem v-for="(event, i) in talks.online.filter((event) => getDate(new Date(event.slot.start)) === 5)" :key="i" :event="{...event}" />
         <h2>Talks - Day 2 (March 6th)</h2>
         <TalkItem v-for="(event, i) in talks.online.filter((event) => getDate(new Date(event.slot.start)) === 6)" :key="i" :event="{...event}" />
+        <h2>Community Day</h2>
+        <TalkItem v-for="(event, i) in talks.onlineWorkshop" :key="i" :event="{...event}" />
       </template>
     </div>
   </div>
@@ -105,7 +107,9 @@ const talks = computed(() => {
         code: 'BREAK'
       }))
     ]),
-    workshop: sortTalks(schedule.slots.filter((talk) => talk?.submission_type.en.includes('Workshop')).map((event) => addSubmissionData(event))),
+    workshop: sortTalks(schedule.slots
+      .filter((talk) => talk?.submission_type.en.includes('Workshop') && talk?.slot?.room?.en !== 'RoboCon Online')
+      .map((event) => addSubmissionData(event))),
     tutorial: sortTalks(schedule.slots
       .filter((talk) => talk?.submission_type.en === 'Tutorial')
       .map((event) => addSubmissionData(event)))
@@ -131,7 +135,10 @@ const talks = computed(() => {
           end: b.end
         }
       }))
-    ])
+    ]),
+    onlineWorkshop: sortTalks(schedule.slots
+      .filter((talk) => talk?.submission_type.en.includes('Workshop') && talk?.slot?.room?.en === 'RoboCon Online')
+      .map((event) => addSubmissionData(event)))
   }
 })
 
