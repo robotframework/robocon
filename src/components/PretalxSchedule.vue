@@ -55,10 +55,6 @@ import { useFetch } from '@vueuse/core'
 import TalkItem from './TalkItem.vue'
 import type { Break, BreakParsed, PretalxEvent, PretalxSession, ScheduleResponse, SubmissionsResponse } from '@/types/pretalx';
 import {getDate} from 'date-fns'
-import CryptoJS from 'crypto-js'
-import * as jose from 'jose'
-
-
 
 const props = defineProps({
   content: Object as PropType<PretalxSchedule['fields']>

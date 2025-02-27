@@ -115,14 +115,16 @@ export function getVideoUrl(code: string): string | undefined {
 
   if (!authenticated) return undefined
 
+  return generateYouTubeUrl(decrypt(maybeUrl))
+}
 
+export function decrypt(hash: string) {
   try {
-    const decrypted = CryptoJS.AES.decrypt(maybeUrl, token.hashKey || '')
+    const decrypted = CryptoJS.AES.decrypt(hash, token.hashKey || '')
     const url = decrypted.toString(CryptoJS.enc.Utf8)
     if (!url) return undefined
-    return generateYouTubeUrl(url)
+    return url
   } catch (e) {
-    console.error(`Error decrypting recording for code: ${code}`, e)
     return undefined
   }
 }

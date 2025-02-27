@@ -8,7 +8,9 @@ import type { Page } from '../content';
 export const useStore = defineStore("store", {
   state: () => ({
     pages: [] as Entry<Page>[],
-    entries: [] as Entry[]
+    entries: [] as Entry[],
+    name: undefined as string,
+    token: undefined as string
   })
 });
 

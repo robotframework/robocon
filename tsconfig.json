@@ -19,6 +19,7 @@
       "Fonts": ["./src/assets/fonts"],
       "Content": ["./src/content"],
       "Utils/*": ["./src/utils/*"],
+      "Store/*": ["./src/store/*"],
       "Components/*": ["./src/components/*"],
       "Img/*": ["./src/assets/img/*"],
       "Css/*": ["./src/assets/css/*"],

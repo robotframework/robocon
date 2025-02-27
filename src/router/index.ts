@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ContentPage from '../views/ContentPage.vue'
 import Archive from '../views/Archive.vue'
+import Stream from '../views/Stream.vue'
 import NotFound from '../views/NotFound.vue'
 import { useStore } from '../store'
 
@@ -24,6 +25,11 @@ const getRoutes = () => {
       name: 'Archive',
       component: Archive,
       children: []
+    },
+    {
+      path: '/stream',
+      name: 'Stream',
+      component: Stream
     },
     {
       path: '/cs',
