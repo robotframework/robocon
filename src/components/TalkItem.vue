@@ -1,5 +1,8 @@
 <template>
-  <article class="event mb-medium p-medium pt-none" :class="event.submission_type.en === 'Break' && 'break'" ref="el" :code="event.code">
+  <article
+    class="event mb-medium p-medium pt-none"
+    :class="event.submission_type.en === 'Break' && 'break', isOngoing && 'on-going'"
+    ref="el" :code="event.code">
     <div class="pt-xsmall pb-2xsmall flex between" style="margin-left: -0.75rem">
       <div v-if="event.submission_type.en !== 'Break'" class="badge h-fit">
         <template v-if="!event.submission_type.en.includes('Workshop')">
@@ -19,8 +22,13 @@
     <h1 v-else-if="event.submission_type.en === 'Break'" class="mb-2xsmall">
       {{ (event as BreakParsed).description.en }}
     </h1>
+    <div v-if="isOngoing">
+      <div class="type-small mb-xsmall badge h-fit on-air">
+        <h1>ON AIR</h1>
+      </div>
+    </div>
     <div v-if="event.submission_type.en !== 'Break'" class="type-small mb-xsmall">
-      {{ formatInTimeZone(new Date(event.slot.start), 'Europe/Helsinki', 'LLL dd kk:mm') }} (Helsinki time)
+      {{ formatInTimeZone(new Date(event.slot.start), Intl.DateTimeFormat().resolvedOptions().timeZone, 'LLL dd kk:mm') }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
     </div>
     <div v-else>
       {{ format(new Date(event.slot.start), 'kk:mm') }}
@@ -80,7 +88,7 @@ const getSlug = (event: PretalxEvent) => {
 const el = ref(null);
 const isOngoing = isWithinInterval(new Date(), { start: new Date(props.event.slot.start), end: new Date(props.event.slot.end) })
 onMounted(() => {
-  if (isOngoing) el.value?.scrollIntoView();
+  if (isOngoing && document.location.pathname === "/program") el.value?.scrollIntoView();
 });
 
 </script>
@@ -99,6 +107,15 @@ h1 {
   &.break {
     border-color: var(--color-grey);
   }
+}
+.on-going {
+  border: solid 3px var(--color-theme-secondary);
+  border-left-width: 6px;
+  border-color: var(--color-theme);
+}
+.badge.on-air {
+  background-color: red;
+  color: white;
 }
 details {
   width: fit-content;

@@ -30,9 +30,9 @@ import { useStore } from 'Store';
 import { decrypt, getVideoUrl } from 'Utils/ticket';
 import { computed, ref } from 'vue';
 
-const day1 = 'U2FsdGVkX1+iO3u49D3q6rlcds7ZJOz4N8+vuQz+VYo='
-const day2 = 'U2FsdGVkX19TiGQLj7xCUJBO02Zg78fjU1zyOE64GsQ='
-const chat = 'U2FsdGVkX1/BKQP6AzzQFrb28NyI/BbFuQvgO4Ipq6RMnvdrRMI/qd0Lwxi4grBNerT48tEJF/IKMcxZYMzdrA=='
+const day1 = "U2FsdGVkX1/hqJCaHUu7i562KNI4XKSxyGEx58CZuVA="
+const day2 = "U2FsdGVkX19ni702PG94jdIEMZ+p+WJz/c4OKrBG91k="
+const chat = 'U2FsdGVkX1+gSb33tfz6U6doTSeJvDfWihHORmgrcBmJTBILeyQlaBmAYh4gZmxksEH+fL5NzUrv5sFyk43D/w=='
 
 const selectedDay = ref(1)
 const showChat = ref(true)
@@ -40,7 +40,7 @@ const selectedStream = ref<string>(null!)
 
 selectedStream.value = day1
 
-const streamUrl = computed(() => getVideoUrl(selectedStream.value))
+const streamUrl = computed(() => getVideoUrl(selectedStream.value, true))
 const chatUrl = computed(() => decrypt(chat))
 
 const store = useStore()

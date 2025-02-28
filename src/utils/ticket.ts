@@ -55,8 +55,9 @@ function getParam(paramName: string): string | null {
  * @param id - The video identifier.
  * @returns The embed URL.
  */
-function generateYouTubeUrl(id: string): string {
-  return `https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
+function generateYouTubeUrl(id: string, autoplay: boolean = false): string {
+  const play = autoplay ? 1 : 0
+  return `https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=${play}&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
 }
 
 /**
@@ -94,7 +95,7 @@ export async function initAuth(): Promise<void> {
  * @param code - The recording code.
  * @returns The YouTube embed URL or undefined.
  */
-export function getVideoUrl(code: string): string | undefined {
+export function getVideoUrl(code: string, autoplay: boolean = false): string | undefined {
   if (!code) return undefined
 
   const store = useStore()
@@ -115,7 +116,7 @@ export function getVideoUrl(code: string): string | undefined {
 
   if (!authenticated) return undefined
 
-  return generateYouTubeUrl(decrypt(maybeUrl))
+  return generateYouTubeUrl(decrypt(maybeUrl), autoplay)
 }
 
 export function decrypt(hash: string) {
