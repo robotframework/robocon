@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="px-small py-xsmall row between">
+    <h1 v-if="!store.name" class="color-theme mt-2xlarge type-center type-xlarge">
+      INVALID AUTH
+    </h1>
+    <div v-else class="px-small py-xsmall row between">
       <div>
         <button class="theme mr-small" :class="selectedDay === 1 && 'active'" @click="selectedDay = 1">Day 1</button>
         <button class="theme" :class="selectedDay === 2 && 'active'" @click="selectedDay = 2">Day 2</button>
@@ -14,11 +17,6 @@
       <iframe v-show="showChat" class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
-  <h1 v-if="!store.name" class="color-white mt-2xlarge type-center type-xlarge">
-    <span class="color-theme">IN</span>
-    <span class="">VALID</span>
-    <span class="color-theme">AUTH</span>
-  </h1>
   <div v-if="!store.isFullscreen" class="container narrow">
     <PretalxSchedule :content="{url: 'https://pretalx.com/api/events/robocon-2025/schedules/latest/'}" />
   </div>
