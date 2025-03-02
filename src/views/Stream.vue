@@ -14,7 +14,7 @@
       <iframe v-show="showChat" class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
-  <h1 v-if="error" class="color-white mt-2xlarge type-center type-xlarge">
+  <h1 v-if="!store.name" class="color-white mt-2xlarge type-center type-xlarge">
     <span class="color-theme">IN</span>
     <span class="">VALID</span>
     <span class="color-theme">AUTH</span>

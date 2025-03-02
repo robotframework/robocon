@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-theme color-white p-small pt-large pb-large" style="margin-top: auto">
+  <div v-if="name !== 'gather'" class="row bg-theme color-white p-small pt-large pb-large" style="margin-top: auto">
     <div class="container narrow" style="line-height: 2;">
       <div class="row">
         <div class="col-sm-6 col-md-3">
@@ -101,7 +101,7 @@ export default {
         .map((lang) => ({ lang, name: this.$i18n.messages[lang].langName }))
         .filter(({ name }) => name !== 'translation')
     },
-    ...mapState(useStore, ['isMobile']),
+    ...mapState(useStore, ['isMobile', 'name']),
   },
   methods: {
     setLang(lang) {
