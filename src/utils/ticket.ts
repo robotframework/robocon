@@ -81,7 +81,7 @@ export async function initAuth(): Promise<void> {
       if (payload.name === attendee) {
         token = payload as Token
         const store = useStore()
-        store.name = attendee + 'asd'
+        store.name = attendee
         store.token = token as string
         history.replaceState(null, '', removeSearchParams(window.location.href))
       }
