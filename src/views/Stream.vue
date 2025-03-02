@@ -14,9 +14,9 @@
     <iframe v-show="showChat" class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
-  <h1 v-if="dataReady && error" class="color-white mt-2xlarge type-center type-xlarge">
+  <h1 v-if="error" class="color-white mt-2xlarge type-center type-xlarge">
     <span class="color-theme">IN</span>
-    <span>VALID</span>
+    <span class="">VALID</span>
     <span class="color-theme">AUTH</span>
   </h1>
   <div v-if="!isFullScreen" class="container narrow">
@@ -36,6 +36,7 @@ const selectedDay = ref(1)
 const showChat = ref(true)
 const streamUrl = ref('')
 const chatUrl = ref('')
+const error = ref(false)
 
 onMounted(async () => {
   await initAuth()
@@ -43,7 +44,6 @@ onMounted(async () => {
   console.log(streamUrl.value)
   chatUrl.value = await decrypt(chat)
 })
-
 
 const store = useStore()
 const isFullScreen = store.name === 'gather'

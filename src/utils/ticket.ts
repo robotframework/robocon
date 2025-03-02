@@ -10,7 +10,6 @@ export interface Token {
 }
 
 export let token: Token = {}
-export let authenticated = false
 
 const publicKey = `-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1RHu1qgXJ81+2tlBy4UF
@@ -47,7 +46,9 @@ function saveToLocalStorage(key: string, value: string): void {
  */
 function getParam(paramName: string): string | null {
   const params = new URLSearchParams(window.location.search)
-  return params.get(paramName) || window.localStorage.getItem(paramName)
+  const value = params.get(paramName) || window.localStorage.getItem(paramName)
+  if (value && value !== 'null') return value
+  return null
 }
 
 /**
@@ -79,12 +80,21 @@ export async function initAuth(): Promise<void> {
       // Assuming payload is of type JWTPayload & Token
       if (payload.name === attendee) {
         token = payload as Token
-        authenticated = true
+        const store = useStore()
+        store.name = attendee
+        store.token = token as string
+        history.replaceState(null, '', removeSearchParams(window.location.href))
       }
     } catch (error) {
       console.error('Invalid attendee authentication:', error)
     }
   }
+}
+
+function removeSearchParams(url) {
+  let parsedUrl = new URL(url);
+  parsedUrl.search = ''; // Remove search parameters
+  return parsedUrl.toString();
 }
 
 /**
@@ -114,7 +124,7 @@ export function getVideoUrl(code: string, autoplay: boolean = false): string | u
     return generateYouTubeUrl(maybeUrl)
   }
 
-  if (!authenticated) return undefined
+  if (!store.name) return undefined
 
   return generateYouTubeUrl(decrypt(maybeUrl), autoplay)
 }
