@@ -27,21 +27,23 @@
 <script setup lang="ts">
 import PretalxSchedule from 'Components/PretalxSchedule.vue';
 import { useStore } from 'Store';
-import { decrypt, getVideoUrl } from 'Utils/ticket';
-import { computed, ref } from 'vue';
+import { decrypt, getVideoUrl, initAuth } from 'Utils/ticket';
+import { ref, onMounted } from 'vue';
 
-const day1 = "U2FsdGVkX1/hqJCaHUu7i562KNI4XKSxyGEx58CZuVA="
-const day2 = "U2FsdGVkX19ni702PG94jdIEMZ+p+WJz/c4OKrBG91k="
 const chat = 'U2FsdGVkX1+gSb33tfz6U6doTSeJvDfWihHORmgrcBmJTBILeyQlaBmAYh4gZmxksEH+fL5NzUrv5sFyk43D/w=='
 
 const selectedDay = ref(1)
 const showChat = ref(true)
-const selectedStream = ref<string>(null!)
+const streamUrl = ref('')
+const chatUrl = ref('')
 
-selectedStream.value = day1
+onMounted(async () => {
+  await initAuth()
+  streamUrl.value = await getVideoUrl(`day${selectedDay.value}`, true)
+  console.log(streamUrl.value)
+  chatUrl.value = await decrypt(chat)
+})
 
-const streamUrl = computed(() => getVideoUrl(selectedStream.value, true))
-const chatUrl = computed(() => decrypt(chat))
 
 const store = useStore()
 const isFullScreen = store.name === 'gather'
