@@ -56,7 +56,7 @@ onMounted(async () => {
   min-height: calc(100vh - 7rem);
 }
 .stream-container.fullscreen {
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 71px);
 }
 @media screen and (max-width: 768px) {
   .chat {
