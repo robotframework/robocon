@@ -23,6 +23,7 @@
 
 <script setup lang="ts">
 import PretalxSchedule from 'Components/PretalxSchedule.vue';
+import { isSameDay } from 'date-fns';
 import { useStore } from 'Store';
 import { decrypt, getVideoUrl } from 'Utils/ticket';
 import { ref, computed } from 'vue';
@@ -47,6 +48,9 @@ const urls = computed(() => {
     chat: decrypt(chat)
   }
 })
+
+// hack, remove later
+if (isSameDay(new Date(), new Date('2025-03-06'))) selectedDay.value = 1
 
 </script>
 
