@@ -11,7 +11,10 @@ export const useStore = defineStore("store", {
     entries: [] as Entry[],
     name: undefined as string,
     token: undefined as string
-  })
+  }),
+  getters: {
+    isFullscreen: (state) => state.name === 'gather',
+  },
 });
 
 const store = createPinia();

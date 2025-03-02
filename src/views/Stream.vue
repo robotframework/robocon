@@ -9,9 +9,9 @@
         {{ showChat ? 'Hide Q&amp;A' : 'Show Q&amp;A' }}
       </button>
     </div>
-    <div class="stream-container" :class="isFullScreen && 'fullscreen'">
-    <iframe class="stream col-sm-12" :class="showChat && 'col-md-9'" :src=streamUrl title="Robocon stream" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <iframe v-show="showChat" class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
+    <div class="stream-container" :class="store.isFullscreen && 'fullscreen'">
+      <iframe class="stream col-sm-12" :class="showChat && 'col-md-9'" :src=streamUrl title="Robocon stream" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe v-show="showChat" class="chat col-sm-12 col-md-3" :src=chatUrl frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
   <h1 v-if="error" class="color-white mt-2xlarge type-center type-xlarge">
@@ -19,7 +19,7 @@
     <span class="">VALID</span>
     <span class="color-theme">AUTH</span>
   </h1>
-  <div v-if="!isFullScreen" class="container narrow">
+  <div v-if="!store.isFullscreen" class="container narrow">
     <PretalxSchedule :content="{url: 'https://pretalx.com/api/events/robocon-2025/schedules/latest/'}" />
   </div>
 </template>
@@ -29,6 +29,8 @@ import PretalxSchedule from 'Components/PretalxSchedule.vue';
 import { useStore } from 'Store';
 import { decrypt, getVideoUrl, initAuth } from 'Utils/ticket';
 import { ref, onMounted } from 'vue';
+
+const store = useStore()
 
 const chat = 'U2FsdGVkX1+gSb33tfz6U6doTSeJvDfWihHORmgrcBmJTBILeyQlaBmAYh4gZmxksEH+fL5NzUrv5sFyk43D/w=='
 
@@ -44,9 +46,6 @@ onMounted(async () => {
   console.log(streamUrl.value)
   chatUrl.value = await decrypt(chat)
 })
-
-const store = useStore()
-const isFullScreen = store.name === 'gather'
 
 </script>
 

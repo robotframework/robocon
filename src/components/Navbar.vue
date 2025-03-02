@@ -1,5 +1,6 @@
 <template>
   <div
+    v-show="!store.isFullscreen"
     ref="nav"
     class="row between p-small sticky bg-white border-bottom-theme border-thin"
     style="top: 0; z-index: 2;">
@@ -17,6 +18,12 @@
       </div>
     </div>
     <div class="flex">
+      <router-link
+        v-if="store.name"
+        :to="{ path: '/stream' }"
+        class="router-link mx-xsmall type-no-underline type-small">
+        Stream
+      </router-link>
       <router-link
         :to="{ path: '/program' }"
         class="router-link mx-xsmall type-no-underline type-small">
@@ -37,66 +44,9 @@
   </div>
 </template>
 
-<script>
-import BaseIcon from './BaseIcon.vue'
-import { useStore } from '../store';
-import { mapState } from 'pinia';
-
-export default {
-  name: 'Navbar',
-  components: {
-    BaseIcon
-  },
-  computed: {
-    ...mapState(useStore, ['pages'])
-  },
-  methods: {
-    itemClick(itemId) {
-      const el = document.getElementById(itemId)
-      if (!el) return
-      // setting window.location.hash causes instant page scroll to that position and we dont want that
-      // lets strip urlParams and hash from url and append new hash
-      history.replaceState(null, null, `${location.href.split('?')[0].split('#')[0]}#${itemId}`)
-      window.scrollTo({
-        top: el.offsetTop,
-        behavior: 'smooth'
-      })
-      window.plausible('Nav click', { props: { section: itemId } })
-    },
-    setLang(lang) {
-      this.$i18n.locale = lang
-      window.localStorage.setItem('lang', lang)
-    },
-    onClick(ev) {
-      // close link dropdown if clicked outside
-      if (this.linkDropdownOpen && this.$refs.dropdown && !this.$refs.dropdown.contains(ev.target)) this.linkDropdownOpen = false
-    },
-    scrollTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    }
-  },
-  mounted() {
-    const observer = new IntersectionObserver((e) => {
-      this.navSticky = !e[0].isIntersecting
-    }, { threshold: 1 })
-    observer.observe(this.$refs.nav)
-    document.addEventListener('click', this.onClick)
-  },
-  beforeUnmount() {
-    document.removeEventListener('click', this.onClick)
-  },
-  watch: {
-    linkDropdownOpen() {
-      if (this.linkDropdownOpen) this.langDropdownOpen = false
-    },
-    langDropdownOpen() {
-      if (this.langDropdownOpen) this.linkDropdownOpen = false
-    }
-  }
-}
+<script setup>
+import {useStore} from 'Store';
+const store = useStore()
 </script>
 
 <style scoped>
