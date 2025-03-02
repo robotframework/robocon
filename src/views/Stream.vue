@@ -1,8 +1,13 @@
 <template>
   <div>
-    <h1 v-if="!store.name" class="color-theme mt-2xlarge type-center type-xlarge">
-      INVALID AUTH
-    </h1>
+    <div v-if="!store.name" class="type-center">
+      <h1 class="color-theme mt-2xlarge type-center type-xlarge">
+        INVALID AUTH
+      </h1>
+      <p>
+        Please go to your ticket page and use the button to watch the stream.
+      </p>
+    </div>
     <div v-else class="px-small py-xsmall row between">
       <div>
         <button v-for="(stream, key) in streams" :key="stream.name" class="theme mr-small" :class="selectedDay === key && 'active'" @click="selectedDay = key">{{ stream.name }}</button>
@@ -16,7 +21,7 @@
       <iframe v-show="showChat" class="chat col-sm-12 col-md-3" :src=urls.chat frameBorder="0" title="Stream chat"></iframe>
     </div>
   </div>
-  <div v-if="!store.isFullscreen" class="container narrow">
+  <div v-if="!store.isFullscreen && store.name" class="mt-xlarge container">
     <PretalxSchedule :content="{url: 'https://pretalx.com/api/events/robocon-2025/schedules/latest/'}" />
   </div>
 </template>
@@ -61,7 +66,7 @@ if (isSameDay(new Date(), new Date('2025-03-06'))) selectedDay.value = 1
   min-height: calc(100vh - 7rem);
 }
 .stream-container.fullscreen {
-  min-height: calc(100vh - 71px);
+  min-height: calc(100vh - 72px);
 }
 @media screen and (max-width: 768px) {
   .chat {
