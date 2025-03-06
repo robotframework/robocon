@@ -34,6 +34,8 @@
         <TalkItem v-for="(event, i) in talks.workshop" :key="i" :event="{...event}" />
       </template>
       <template v-else-if="shownTalks === 'online'">
+        <h2>Community Day</h2>
+        <TalkItem v-for="(event, i) in talks.onlineWorkshop" :key="i" :event="{...event}" />
         <h2>Tutorials (March 4th)</h2>
         <TalkItem v-for="(event, i) in talks.tutorial" :key="i" :event="{...event}" />
         <h2>Talks - Day 1 (March 5th)</h2>
