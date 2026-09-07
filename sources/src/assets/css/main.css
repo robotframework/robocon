@@ -489,3 +489,9 @@ table {
 .toggle-content-enter, .toggle-content-leave-to {
   opacity: 0;
 }
+
+/* Embedded videos: talk recordings and the YouTube playlists */
+.embed-responsive .embed-responsive-item {
+  border: 1px solid #ff5152;
+  border-radius: 4px;
+}

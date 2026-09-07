@@ -168,6 +168,7 @@ export default {
                 },
                 {
                   title: "9:00 - Pekka Klärck (Eliga)",
+                  videos: [{ id: "wBhY5Z2RoqQ" }],
                   description: "Welcome back! What's new since RoboCon 2018?",
                   imgUrl: ["Pekka_Klarck.jpg"],
                   descriptionExpanded:
@@ -177,6 +178,7 @@ export default {
                 },
                 {
                   title: "9:30 - Antti Karjalainen (Siili Solutions)",
+                  videos: [{ id: "uv6dvcoxdvU" }],
                   description: "The start of the open source RPA movement",
                   imgUrl: ["Antti_Karjalainen.jpg"],
                   descriptionExpanded:
@@ -193,6 +195,7 @@ export default {
                 },
                 {
                   title: "10:30 - Juho Saarinen (Eficode)",
+                  videos: [{ id: "ynUmfWvZxpw" }],
                   description: "Evolution of Robot Framework user",
                   imgUrl: ["Juho_Saarinen.jpg"],
                   descriptionExpanded:
@@ -202,6 +205,7 @@ export default {
                 },
                 {
                   title: "11:00 - Tatu Aalto (F-Secure)",
+                  videos: [{ id: "HVAnWH8t4rU" }],
                   description:
                     "Decade with SeleniumLibrary and browsers' UI automation",
                   imgUrl: ["Tatu_Aalto.jpg"],
@@ -219,6 +223,7 @@ export default {
                 },
                 {
                   title: "12:30 - Brady Hill (Trimble)",
+                  videos: [{ id: "0q4-AjqpO9M" }],
                   description: "RobotFramework for Embedded Software Testing",
                   imgUrl: ["Brady_Hill.jpg"],
                   descriptionExpanded:
@@ -228,6 +233,7 @@ export default {
                 },
                 {
                   title: "12:55 - NGUYEN HUU BACH (NTT Communications)",
+                  videos: [{ id: "FSjmJLq4S4A" }],
                   description:
                     "RENAT - a network testing plugin based on Robot Framework",
                   imgUrl: ["Nguyen_Huu_Bach.png"],
@@ -238,6 +244,7 @@ export default {
                 },
                 {
                   title: "13:20 - Mikael Siirtola (GE Healthcare)",
+                  videos: [{ id: "gxbz5QJWdq4" }],
                   description:
                     "Robot Framework with Patient Monitors: Test Automation at GE Healthcare Finland",
                   imgUrl: ["Mikael_Siirtola.jpg"],
@@ -256,6 +263,7 @@ export default {
                 {
                   title:
                     "14:00 - Päivi Raulamo-Jurvanen (University of Oulu / ITEE / M3S)",
+                  videos: [{ id: "2qKa3GEqcvY" }],
                   description:
                     "Practical Experiences on Evaluating Software Testing Tools with focus on Robot Framework",
                   imgUrl: ["Paivi_Raulamo-Jurvanen.png"],
@@ -267,6 +275,7 @@ export default {
                 {
                   title:
                     "14:30 - Nicholas Bollweg (Georgia Tech Research Institute & Project Jupyter) / Asko Soukka (University of Jyväskylä)",
+                  videos: [{ id: "rbYF_RmiAR8" }],
                   description:
                     "Robots from Jupyter – The Future of Authoring Tests and Tasks in Robot Framework",
                   imgUrl: ["Nicholas_Bollweg.jpg", "Asko_Soukka.jpg"],
@@ -284,6 +293,7 @@ export default {
                 },
                 {
                   title: "15:30 - Joonas Lehtimäki (Eficode)",
+                  videos: [{ id: "ivLsjU77Q6c" }],
                   description:
                     "Dynamically scalable test environment on top of Kubernetes",
                   imgUrl: ["Joonas_Lehtimaki.jpg"],
@@ -294,6 +304,7 @@ export default {
                 },
                 {
                   title: "16:00 - Oleksandr Kravchenko  (Samsung Electronics)",
+                  videos: [{ id: "qtEYZ5Om1Qk" }],
                   description:
                     "Dynamic Generation of Model Based Testcases Using Listener Interface Version 3",
                   imgUrl: ["Oleksandr_Kravchenko.png"],
@@ -311,6 +322,15 @@ export default {
                 },
                 {
                   title: "17:00 - Lightning talks",
+                  videos: [
+                    { id: "ck_zvTq4zz8", title: "Lightning talk I" },
+                    { id: "a-27Ot_suEU", title: "Lightning talk II" },
+                    { id: "hA99dYnlb-s", title: "Lightning talk III" },
+                    { id: "g98m3XpE8gw", title: "Lightning talk IV" },
+                    { id: "YJ4FTjxVG3o", title: "Lightning talk V" },
+                    { id: "9HHgrLb41go", title: "Lightning talk VI" },
+                    { id: "fb42449bdz0", title: "Lightning talk VII" }
+                  ],
                   description:
                     "Topic of the day, you decide! Sign-up your name, topic, and contact information to the lightning talk list at the venue during the conference day and get ready to present a 10 minute lightning talk on the big stage.",
                   imgUrl: [],
