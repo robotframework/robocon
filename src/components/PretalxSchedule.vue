@@ -18,13 +18,7 @@
         </div>
       </button>
     </div>
-    <div v-if="isFetching">
-      loading...
-    </div>
-    <div v-else-if="error">
-      error loading schedule
-    </div>
-    <div v-else-if="data && talks">
+    <div v-if="talks">
       <template v-if="shownTalks === 'live'">
         <h2>Talks - Day 1</h2>
         <TalkItem v-for="(event, i) in talks.live.filter((event) => getDate(new Date(event.slot.start)) === 13)" :key="i" :event="{...event}" />
@@ -49,11 +43,13 @@
 
 <script setup lang="ts">
 import type { PretalxSchedule } from '@/content';
-import { getVideoUrl } from "Utils/ticket";
-import { computed, nextTick, onMounted, ref, type PropType } from 'vue';
-import { useFetch } from '@vueuse/core'
+import { computed, nextTick, ref, type PropType } from 'vue';
 import TalkItem from './TalkItem.vue'
-import type { Break, BreakParsed, PretalxEvent, PretalxSession, ScheduleResponse, SubmissionsResponse } from '@/types/pretalx';
+// The schedule used to be fetched from pretalx on every page load. That API
+// changed shape (`slots` became ids, `breaks` disappeared) and broke /program,
+// so the final programme is baked in.
+// Regenerate with: node scripts/build-agenda-2025.js
+import agenda from '../assets/pretalx/agenda2025.json'
 import {getDate} from 'date-fns'
 
 const props = defineProps({
@@ -62,17 +58,21 @@ const props = defineProps({
 
 const shownTalks = ref<'live' | 'online'>('online')
 
-const { isFetching, error, data } = useFetch(props.content.url).get().json()
-const { isFetching: isFetchingSub, error: errorSub, data: dataSub } = useFetch('https://cfp.robocon.io/api/events/robocon-2025/submissions/?limit=50').get().json()
+// Speaker avatars ship with the repo; Vite fingerprints them at build time.
+const avatarFiles = import.meta.glob('../assets/avatars/*', { eager: true, import: 'default' }) as Record<string, string>
+// null (not '') so SpeakerItem's `speaker.avatar ?? placeholder` still fires -
+// the API used to send null for speakers without a picture.
+const avatarUrl = (file: string) => (file ? avatarFiles[`../assets/avatars/${file}`] ?? null : null)
 
-const sortTalks = (talks: (PretalxEvent | BreakParsed)[]) => talks.sort((a, b) => new Date(a.slot.start) < new Date(b.slot.end) ? -1 : 1)
+const embedUrl = (videoId: string) => (videoId ? `https://www.youtube-nocookie.com/embed/${videoId}` : undefined)
+
+const hydrate = (event: any) => ({
+  ...event,
+  videoURL: embedUrl(event.videoId),
+  speakers: (event.speakers ?? []).map((speaker: any) => ({ ...speaker, avatar: avatarUrl(speaker.avatar) }))
+})
 
 const talks = computed(() => {
-  if (isFetching.value || error.value) return undefined
-  if (isFetchingSub.value || errorSub.value) return undefined
-  const schedule = data.value as ScheduleResponse
-  const submissions = dataSub.value as SubmissionsResponse
-
   nextTick(() => {
     const hash = window.location.hash
     if (hash) {
@@ -80,63 +80,15 @@ const talks = computed(() => {
       if (talkTitle) talkTitle.scrollIntoView()
     }
   })
-
-  const addSubmissionData = (event: PretalxEvent): PretalxEvent & PretalxSession => ({...event, ...submissions.results.find((s) => s.code === event.code)})
   return {
-    live: sortTalks([
-      ...schedule.slots.filter((talk) => talk?.slot?.room?.en === 'RoboCon')
-        .map((event) => addSubmissionData(event))
-        .map((event) => ({...event, videoURL: getVideoUrl(event.code)})),
-      ...schedule.breaks.map((b) => ({
-        ...b,
-        submission_type: {
-          en: 'Break' as const
-        },
-        title: 'Break',
-        description: b.description,
-        slot: {
-          room_id: b.room_id,
-          room: b.room,
-          start: b.start,
-          end: b.end
-        },
-        code: 'BREAK'
-      }))
-    ]),
-    workshop: sortTalks(schedule.slots
-      .filter((talk) => talk?.submission_type.en.includes('Workshop') && talk?.slot?.room?.en !== 'RoboCon Online')
-      .map((event) => addSubmissionData(event))),
-    tutorial: sortTalks(schedule.slots
-      .filter((talk) => talk?.submission_type.en === 'Tutorial')
-      .map((event) => addSubmissionData(event)))
-      .map((event) => ({...event, videoURL: 'code' in event ? getVideoUrl(event.code) : undefined})),
-    online: sortTalks([
-      ...schedule.slots
-        .filter((talk) => talk?.slot?.room?.en === 'RoboCon Online' && ['PreRecorded-Talk', 'Talk', 'Keynote'].includes(talk.submission_type.en))
-        .map((event) => addSubmissionData(event))
-        .map((event) => ({...event, videoURL: getVideoUrl(event.code)})),
-      ...schedule.breaks
-      .filter(({room}) => room.en === 'RoboCon Online')
-      .map((b) => ({
-        ...b,
-        submission_type: {
-          en: 'Break' as const
-        },
-        title: 'Break',
-        description: b.description,
-        slot: {
-          room_id: b.room_id,
-          room: b.room,
-          start: b.start,
-          end: b.end
-        }
-      }))
-    ]),
-    onlineWorkshop: sortTalks(schedule.slots
-      .filter((talk) => talk?.submission_type.en.includes('Workshop') && talk?.slot?.room?.en === 'RoboCon Online')
-      .map((event) => addSubmissionData(event)))
+    live: agenda.live.map(hydrate),
+    workshop: agenda.workshop.map(hydrate),
+    tutorial: agenda.tutorial.map(hydrate),
+    online: agenda.online.map(hydrate),
+    onlineWorkshop: agenda.onlineWorkshop.map(hydrate)
   }
 })
+
 
 const hash = window.location.hash
 if (hash) {
