@@ -42,6 +42,14 @@
                 class="mt-medium description"
                 v-html="parseMarkdown(talk.description)" />
             </transition>
+            <div v-if="talk.videoId" class="talkVideo mt-medium">
+              <iframe
+                :src="`https://www.youtube-nocookie.com/embed/${talk.videoId}`"
+                :title="talk.title.en || talk.title"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen />
+            </div>
           </div>
           <div class="col-sm-12 col-md-3 col-lg-5 mt-small">
             <div
@@ -220,5 +228,20 @@ export default {
   }
   .ticket:hover > a {
     color: var(--color-theme) !important;
+  }
+  /* Talk recording: a compact player, always visible on the collapsed card. */
+  .talkVideo {
+    max-width: 360px;
+  }
+  .talkVideo > iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+  }
+  @media screen and (max-width: 768px) {
+    .talkVideo {
+      max-width: 100%;
+    }
   }
 </style>
