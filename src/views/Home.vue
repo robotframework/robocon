@@ -207,6 +207,8 @@ Moreover, a wide array of exceptional online tutorials will be spread across the
 <script>
 // import { PageSection, NewsBanner, Ticket, Talks24, Workshops24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
 import { PageSection, NewsBanner, Ticket, Talks24, Tutorials24, Sponsors, GlobeRbcn } from 'Components'
+import agenda from '@/assets/pretalx/agenda2024.json'
+import { avatarUrl } from '@/assets/pretalx/avatars'
 import * as jose from 'jose'
 
 export default {
@@ -268,18 +270,9 @@ nRPuT57RDafiyxjektPLx0z2LvRZZb7lU5G9/+rO2yJ1f65Sd5k0drIb48YZ+OBj
         console.error(error)
       }
     }
-    Promise.all([
-      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/'),
-      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=25'),
-      fetch('https://cfp.robocon.io/api/events/robocon-2024/submissions/?offset=50')
-    ])
-      .then(async([first, second, third]) => {
-        const f = await first.json()
-        const s = await second.json()
-        const t = await third.json()
-        const arr = [...f.results, ...s.results, ...t.results]
-        this.speakers = arr.flatMap(({ speakers }) => speakers)
-      })
+    // Speakers used to be paged out of the pretalx submissions API at runtime.
+    // They ship with the baked agenda now.
+    this.speakers = agenda.speakers.map((s) => ({ ...s, avatar: avatarUrl(s.avatar) }))
   },
   methods: {
     getShownTime(time) {

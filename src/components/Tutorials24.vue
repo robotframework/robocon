@@ -124,38 +124,21 @@ export default {
     workshops: () => talksStatic.filter((talk) => talk['Session type'].en.includes('Workshop'))
   },
   created() {
-    fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
-      .then((res) => res.json())
-      .then((res) => {
-        this.tutorials = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'Eficode')
-          .sort((a, b) => {
-            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
-            return 1
-          })
-        this.tutorialsOnline = res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline' && talk?.submission_type?.en === 'Tutorial')
-          .sort((a, b) => {
-            if (new Date(a.slot?.start) < new Date(b.slot?.start)) return -1
-            return 1
-          })
-        this.tutorials = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'Eficode')
-          .sort((a, b) => {
-            if (new Date(a.Start) < new Date(b.Start)) return -1
-            return 1
-          })
-        this.tutorialsOnline = talksStatic.filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'RoboConOnline')
-          .sort((a, b) => {
-            if (new Date(a.Start) < new Date(b.Start)) return -1
-            return 1
-          })
-      })
-      .then(() => {
-        const hash = window.location.hash
-        if (hash.includes('live')) this.shownTutorials = 'Helsinki'
-        this.$nextTick(() => {
-          const el = document.getElementById(hash.slice(1))
-          if (el) el.scrollIntoView()
-        })
-      })
+    // The pretalx fetch here was dead weight: its result was immediately
+    // overwritten by the static session list below.
+    this.tutorials = talksStatic
+      .filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'Eficode')
+      .sort((a, b) => (new Date(a.Start) < new Date(b.Start) ? -1 : 1))
+    this.tutorialsOnline = talksStatic
+      .filter((talk) => talk['Session type']?.en === 'Tutorial' && talk.Room?.en === 'RoboConOnline')
+      .sort((a, b) => (new Date(a.Start) < new Date(b.Start) ? -1 : 1))
+
+    const hash = window.location.hash
+    if (hash.includes('live')) this.shownTutorials = 'Helsinki'
+    this.$nextTick(() => {
+      const el = document.getElementById(hash.slice(1))
+      if (el) el.scrollIntoView()
+    })
   },
   data: () => ({
     publicPath: process.env.BASE_URL,

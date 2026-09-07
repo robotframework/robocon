@@ -41,10 +41,17 @@
         <p class="type-small m-none">
           {{ format(new Date(talk.slot?.start || talk.start), 'MMM dd') }} {{ getShownTime(talk.slot?.start || talk.start) }} - {{ getShownTime(talk.slot?.end || talk.end) }} ({{Intl.DateTimeFormat().resolvedOptions().timeZone}})
         </p>
-        <div v-if="hashKey && getVideoUrl(talk.code)" class="col-sm-12 col-md-10 col-md-offset-1">
-          <div width="100%" class="video mt-medium mb-medium">
-            <iframe width="100%" height="100%" class="rounded" :src=getVideoUrl(talk.code) :title="`Recording: ${talk.title}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
+        <div
+          v-for="videoId in talk.videos"
+          :key="videoId"
+          class="talkVideo mt-medium mb-medium">
+          <iframe
+            class="rounded"
+            :src="`https://www.youtube-nocookie.com/embed/${videoId}`"
+            :title="`Recording: ${talk.title}`"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
         <div v-if="talk.abstract" v-html="parseText(talk.abstract)" />
         <details v-if="!talk.isBreak && talk.description" class="details">
@@ -85,7 +92,11 @@
 import { marked } from 'marked'
 import { format, isWithinInterval, getDate } from 'date-fns'
 import LinkIcon from './icons/LinkIcon.vue'
-import CryptoJS from 'crypto-js'
+// The schedule used to be fetched from pretalx on every load. That API has
+// changed shape and broke the agenda, so the final programme is baked in.
+// Regenerate with: node scripts/build-agenda-2024.js
+import agenda from '../assets/pretalx/agenda2024.json'
+import { withAvatars } from '../assets/pretalx/avatars'
 
 export default {
   name: 'Talks24',
@@ -121,36 +132,17 @@ export default {
     }
   },
   created() {
-    fetch('https://pretalx.com/api/events/robocon-2024/schedules/latest/')
-      .then((res) => res.json())
-      .then((res) => {
-        this.talksLive = [
-          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboCon').filter((talk) => talk?.submission_type?.en !== 'Tutorial'),
-          ...res?.breaks?.filter((b) => b?.room?.en === 'RoboCon').map((b) => ({ ...b, isBreak: true }))
-        ]
-          .sort((a, b) => {
-            if (new Date(a.slot?.start || a.start) < new Date(b.slot?.start || b.start)) return -1
-            return 1
-          })
-        this.talksOnline = [
-          ...res?.slots?.filter((talk) => talk?.slot?.room?.en === 'RoboConOnline').filter((talk) => talk?.submission_type?.en !== 'Tutorial'),
-          ...res?.breaks?.filter((b) => b?.room?.en === 'RoboConOnline').map((b) => ({ ...b, isBreak: true }))
-        ]
-          .sort((a, b) => {
-            if (new Date(a.slot?.start || a.start) < new Date(b.slot?.start || b.start)) return -1
-            return 1
-          })
+    this.talksLive = agenda.talksLive.map(withAvatars)
+    this.talksOnline = agenda.talksOnline.map(withAvatars)
+
+    const hash = window.location.hash
+    if (hash) {
+      this.selectedTrack = (hash.includes('live')) ? 'helsinki' : 'online'
+      this.$nextTick(() => {
+        const el = document.getElementById(hash.slice(1))
+        if (el) el.scrollIntoView()
       })
-      .then(() => {
-        const hash = window.location.hash
-        if (hash) {
-          this.selectedTrack = (hash.includes('live')) ? 'helsinki' : 'online'
-          this.$nextTick(() => {
-            const el = document.getElementById(hash.slice(1))
-            if (el) el.scrollIntoView()
-          })
-        }
-      })
+    }
     this.isStreamRoute = this.$route?.name === 'Stream'
   },
   data: () => ({
@@ -158,28 +150,7 @@ export default {
     selectedTrack: 'online',
     talksLive: [],
     talksOnline: [],
-    isStreamRoute: false,
-    recordings: {
-      TQTQQN: 'U2FsdGVkX1+CuAVK2bcpvFpHfbJL/3RWV1OaTvAL20I=',
-      SSECGZ: 'U2FsdGVkX1/9Jn9MfQ0ws09fTcXUmdFnIqgTkIEUdto=',
-      XFZ7KM: 'U2FsdGVkX1/b+d63VUyx580UkmwHP+9G0OLl0boSgMI=',
-      ECYJEF: 'U2FsdGVkX1+LuyQKFrozkPjMdIzChUQivAdB1lUyau4=',
-      XH9APF: 'U2FsdGVkX19Djl299vOrRwLyfz5sMp+rBrvl6s9fJ3I=',
-      JHXEQQ: 'U2FsdGVkX1+jsOwt1ZqnAYJHiEFvaeEcpJCcJ0qPGI0=',
-      QQSGJU: 'U2FsdGVkX1/Vsy1H1gihrEEa7PUrP/Hu0sa3tPMv8Wc=',
-      ZAGHBH: 'U2FsdGVkX1++eu97CvzexTIx59NjX0+Zt86xEdaPdJI=',
-      YLX3LV: 'U2FsdGVkX197kcmeS73sdQ40jmUtwoWsd5zYxgz2TYI=',
-      RYES8M: 'U2FsdGVkX18czVpZQJf2LziSJSQe2U18vCpc30HjdoY=',
-      C3JNDF: 'U2FsdGVkX19zPOJeF6Z0SMFUPTL4innPORLYzE45ExA=',
-      ATWZKG: 'U2FsdGVkX18wZ2SpxyQVwfp17O5ULwQmkfaNq0zAbBQ=',
-      JSZTRJ: 'U2FsdGVkX1/FSWBkO4RMc9sZliGZz5tBSXks2vNGtxs=',
-      K7ZSXM: 'U2FsdGVkX19RMJdfFNcY/EqbFS8TSTfxFymFmW0guZ4=',
-      KTU8MK: 'U2FsdGVkX1+EdSmDUwMth71XXjIlGv6v+T+KXz/QhNQ=',
-      HSDAHH: 'U2FsdGVkX1+H4DChYU2na70JMnmAY4uG3VoYU6Ieo5o=',
-      SCRLQS: 'U2FsdGVkX1/DkL5K/MSKvC3lsSgSimJkjO40Krb5Hlk=',
-      YF7RXZ: 'U2FsdGVkX1/4A0g2Ouk4jXH2DE9rbqg0wPDr0+JTCzs=',
-      '983ZBV': 'U2FsdGVkX18v/ovaT0gUtGtp7YTfxvThoSaf/viVb0o='
-    }
+    isStreamRoute: false
   }),
   methods: {
     format,
@@ -205,21 +176,6 @@ export default {
     },
     getSpeaker(speakerId) {
       return this.speakers.find(({ code }) => code === speakerId)
-    },
-    getVideoUrl(code) {
-      if (typeof code === 'undefined') return undefined
-      const recording = this.recordings[code]
-      if (!recording) {
-        // console.error(`Code ${code} did not have a recording.`)
-        return undefined
-      }
-      try {
-        const url = CryptoJS.AES.decrypt(recording, this.hashKey).toString(CryptoJS.enc.Utf8)
-        return `https://www.youtube-nocookie.com/embed/${url}?rel=0&autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Frobocon.io&playsinline=0&showinfo=0&modestbranding=1`
-      } catch (e) {
-        // console.error(`Code ${code} did not have a valid recording.`)
-        return undefined
-      }
     }
   }
 }
@@ -287,4 +243,20 @@ h3.sticky.stream {
     top: 4.8rem;
   }
 }
+
+  /* Talk recording: a compact player on the collapsed card. */
+  .talkVideo {
+    max-width: 360px;
+  }
+  .talkVideo > iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .talkVideo {
+      max-width: 100%;
+    }
+  }
 </style>
