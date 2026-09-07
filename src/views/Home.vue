@@ -110,13 +110,17 @@
       <sponsors :sponsors="$tm('home.sponsors')" />
     </page-section>
     <div v-if="talks.length">
-      <page-section title-id="talks" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Day 1 - Online'">
-        <button class="theme mb-large mt-small mr-small" :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
+      <!-- Sticky so the toggle stays reachable across both day sections. It has
+           to live outside the page-sections: sticky is bounded by its parent. -->
+      <div class="talksToggle p-small">
+        <button class="theme mr-small" :class="shownTalks === 'live' && 'active'" @click="shownTalks = 'live'">
           Live
         </button>
-        <button class="theme mb-large mt-small" :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
+        <button class="theme" :class="shownTalks === 'online' && 'active'" @click="shownTalks = 'online'">
           Online
         </button>
+      </div>
+      <page-section title-id="talks" title="Talks" :subtitle="shownTalks === 'live' ? 'Day 1 - Helsinki' : 'Day 1 - Online'">
         <talks-2023 v-if="shownTalks === 'live'" :items="talks.filter(({ slot }) => slot?.start?.includes('2023-01-19'))" />
         <talks-2023 v-else :items="talks.filter(({ slot }) => slot?.start?.includes('2023-03-01'))" />
       </page-section>
@@ -148,6 +152,25 @@ import {
 } from 'Components'
 import { isToday, format, isWithinInterval } from 'date-fns'
 
+// Both RoboCon 2023 events (Helsinki in January, Online in March) used to be
+// fetched from pretalx on every page load. The API has changed shape since then
+// and broke the agenda, so the final programme is baked in.
+// Regenerate with: node scripts/build-agenda-2023.js
+import agenda from '@/assets/pretalx/agenda.json'
+
+// agenda.json stores bare avatar filenames; webpack turns them into
+// fingerprinted asset URLs that honour publicPath.
+const avatars = require.context('../assets/avatars', false, /\.webp$/)
+const avatarUrl = (file) => {
+  if (!file) return ''
+  try {
+    const asset = avatars(`./${file}`)
+    return asset && asset.default ? asset.default : asset
+  } catch (e) {
+    return ''
+  }
+}
+
 export default {
   name: 'App',
   components: {
@@ -164,50 +187,26 @@ export default {
     shownTalks: 'live'
   }),
   created() {
-    Promise.all([
-      fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/'),
-      fetch('https://cfp.robocon.io/api/events/robocon-2023-online/submissions/'),
-      fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/'),
-      fetch('https://pretalx.com/api/events/robocon-2023-online/schedules/latest/')
-    ])
-      .then(async([submissions, submissionsOnline, schedule, scheduleOnline]) => {
-        const talks = await submissions.json()
-        const talksOnline = await submissionsOnline.json()
-        const { breaks } = await schedule.json()
-        const { breaks: breaksOnline } = await scheduleOnline.json()
-        return [[...talks.results, ...talksOnline.results], [...breaks, ...breaksOnline]]
-      })
-      .then(([list, breaks]) => {
-        const talks = list
-          .filter(({ submission_type }) => submission_type.en && ['Talk', 'Keynote', 'Pre-Recorded Full Talk'].includes(submission_type.en)) // eslint-disable-line
-        const workshops = list
-          .filter(({ submission_type }) => submission_type.en && submission_type.en.includes('Workshop')) // eslint-disable-line
-        const breaksParsed = breaks
-          .map((item) => ({
-            ...item,
-            submission_type: item.description.en.toLowerCase().includes('talk') ? 'Misc' : 'Break'
-          }))
-        this.talks = [...talks, ...breaksParsed]
-          .map((item) => ({
-            ...item,
-            slot: item.slot || { start: item.start, end: item.end },
-            type: item.submission_type.en || item.submission_type
-          }))
-          .sort((a, b) => new Date(a.slot.start) < new Date(b.slot.start) ? -1 : 1)
-        this.workshops = workshops
+    const withToggles = (talk) => ({
+      ...talk,
+      expanded: false,
+      speakers: talk.speakers.map((speaker) => ({
+        ...speaker,
+        avatar: avatarUrl(speaker.avatar),
+        expanded: false
+      }))
+    })
+    this.talks = agenda.talks.map(withToggles)
+    this.workshops = agenda.workshops.map(withToggles)
 
-        const hash = window.location.hash
-        if (!hash || hash === '') return
-        if (hash.substring(1, 8) === 'online-') this.shownTalks = 'online'
+    const hash = window.location.hash
+    if (!hash || hash === '') return
+    if (hash.substring(1, 8) === 'online-') this.shownTalks = 'online'
 
-        this.$nextTick(() => {
-          const el = document.getElementById(hash.slice(1))
-          if (el) el.scrollIntoView()
-        })
-      })
-    // fetch('https://cfp.robocon.io/api/events/robocon-2023/submissions/')
-    //   .then((res) => res.json())
-    //   fetch('https://pretalx.com/api/events/robocon-2023/schedules/latest/')
+    this.$nextTick(() => {
+      const el = document.getElementById(hash.slice(1))
+      if (el) el.scrollIntoView()
+    })
   },
   computed: {
     currentTalk() {
@@ -252,6 +251,27 @@ export default {
 @media screen and (max-width: 768px) {
   .nav-desktop {
     display: none;
+  }
+}
+/* Live/Online toggle, pinned just below the navbar. The offsets are in px
+   because the root font-size is responsive, and they match the two navbars:
+   70px for the desktop one, 84px for the mobile one below 1281px. */
+.talksToggle {
+  position: sticky;
+  top: 70px;
+  z-index: 1;
+  background-color: var(--color-background);
+}
+@media screen and (max-width: 1280px) {
+  .talksToggle {
+    top: 84px;
+  }
+}
+/* Above 1280px page-section puts its title in a 25% column and sticks it, so
+   keep the bar over the content column only and leave the titles uncovered. */
+@media screen and (min-width: 1281px) {
+  .talksToggle {
+    margin-left: 25%;
   }
 }
 </style>

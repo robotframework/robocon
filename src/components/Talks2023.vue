@@ -44,6 +44,14 @@
         Show more
       </button>
       <div v-if="talk.expanded" v-html="parseText(talk.description)" />
+      <div v-if="talk.videoId" class="talkVideo mt-small">
+        <iframe
+          :src="`https://www.youtube-nocookie.com/embed/${talk.videoId}`"
+          :title="talk.title"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen />
+      </div>
     </div>
     <div v-else-if="talk.submission_type === 'Break'" />
     <div v-if="talk.submission_type !== 'Break'" class="col-sm-12">
@@ -196,5 +204,20 @@ export default {
     height: 6rem;
     background: linear-gradient(0deg, var(--color-background), transparent);
     pointer-events: none;
+  }
+  /* Talk recording: a compact player, visible on the collapsed card. */
+  .talkVideo {
+    max-width: 360px;
+  }
+  .talkVideo > iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+  }
+  @media screen and (max-width: 768px) {
+    .talkVideo {
+      max-width: 100%;
+    }
   }
 </style>
