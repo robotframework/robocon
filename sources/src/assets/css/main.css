@@ -872,3 +872,13 @@ table {
     font-size: 16px;
   }
 }
+
+/* Talk recording: a compact always-visible player next to each agenda entry. */
+.talk-video {
+  max-width: 400px;
+}
+@media (max-width: 692px) {
+  .talk-video {
+    max-width: 100%;
+  }
+}

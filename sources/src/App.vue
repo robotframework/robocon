@@ -293,7 +293,7 @@ export default {
                     start: "2021-03-16T11:00:00+0000",
                     end: "2021-03-16T12:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[0] : '',
+                  videoId: "3NF8Or6LWq8",
                   previewImg: 'rf2021.jpeg'
                 },
 
@@ -307,7 +307,7 @@ export default {
                       start: "2021-03-16T12:00:00+0000",
                       end:   "2021-03-16T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[31] : '',
+                  videoId: "",
                   previewImg: 'knowit.png'
                 },
 
@@ -331,7 +331,7 @@ export default {
                     start: "2021-03-16T12:30:00+0000",
                     end: "2021-03-16T13:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[1] : '',
+                  videoId: "vZoyi2ObM8E",
                   previewImg: 'robocop.jpeg'
                 },
 
@@ -346,7 +346,7 @@ export default {
                       start: "2021-03-16T13:00:00+0000",
                       end:   "2021-03-16T13:30:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[2] : '',
+                  videoId: "qmpwlQoJ-nE",
                   previewImg: 'print.jpeg'
                 },
 
@@ -375,7 +375,7 @@ export default {
                     start: "2021-03-16T14:30:00+0000",
                     end: "2021-03-16T15:00:00+0000"
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[3] : 'a',
+                  videoId: "3BNVS6uiFeo",
                   previewImg: 'browser.jpeg'
                 },
 
@@ -390,7 +390,7 @@ export default {
                       start: "2021-03-16T15:00:00+0000",
                       end:   "2021-03-16T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[4] : '',
+                  videoId: "b-FO7GXY2Oo",
                   previewImg: 'ecommerce.jpeg'
                 },
 
@@ -413,7 +413,7 @@ export default {
                       start: "2021-03-16T16:00:00+0000",
                       end:   "2021-03-16T16:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[5] : '',
+                  videoId: "WTupl3gtM-g",
                   previewImg: 'rfhub2.jpeg'
                 },
 
@@ -428,7 +428,7 @@ export default {
                       start: "2021-03-16T16:15:00+0000",
                       end:   "2021-03-16T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[6] : '',
+                  videoId: "6fc2Cn_Sch0",
                   previewImg: 'requests.jpeg'
                 },
 
@@ -445,7 +445,7 @@ export default {
                       start: "2021-03-16T16:30:00+0000",
                       end:   "2021-03-16T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[7] : '',
+                  videoId: "Wnu9KVpylnM",
                   previewImg: 'bank.jpeg'
                 },
 
@@ -468,7 +468,7 @@ export default {
                       start: "2021-03-16T17:30:00+0000",
                       end:   "2021-03-16T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[8] : '',
+                  videoId: "Asjh7E1xoFI",
                   previewImg: 'robotmk.jpeg'
                 },
 
@@ -483,7 +483,7 @@ export default {
                       start: "2021-03-16T18:00:00+0000",
                       end:   "2021-03-16T18:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[9] : '',
+                  videoId: "o31z0NmruSo",
                   previewImg: 'robotmusic.jpeg'
                 }
               ]
@@ -512,7 +512,7 @@ export default {
                       start: "2021-03-17T11:00:00+0000",
                       end:   "2021-03-17T11:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[10] : '',
+                  videoId: "DxqCP_EJJXc",
                   previewImg: 'createlib.jpeg'
                 },
 
@@ -527,7 +527,7 @@ export default {
                       start: "2021-03-17T11:30:00+0000",
                       end:   "2021-03-17T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[11] : '',
+                  videoId: "r3GF6hjqRjQ",
                   previewImg: 'bazar.jpeg'
                 },
 
@@ -541,7 +541,7 @@ export default {
                       start: "2021-03-17T12:00:00+0000",
                       end:   "2021-03-17T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[30] : '',
+                  videoId: "",
                   previewImg: 'robocorp.png'
                 },
 
@@ -564,7 +564,7 @@ export default {
                       start: "2021-03-17T12:30:00+0000",
                       end:   "2021-03-17T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[12] : '',
+                  videoId: "MIaOIbiuYXs",
                   previewImg: 'rpastack.jpeg'
                 },
 
@@ -579,7 +579,7 @@ export default {
                       start: "2021-03-17T13:00:00+0000",
                       end:   "2021-03-17T13:15:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[13] : '',
+                  videoId: "8jX8fivBNg0",
                   previewImg: 'bestlibs.jpeg'
                 },
 
@@ -594,7 +594,7 @@ export default {
                       start: "2021-03-17T13:15:00+0000",
                       end:   "2021-03-17T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[14] : '',
+                  videoId: "aZN5_rvGohg",
                   previewImg: 'lsp.jpeg'
                 },
 
@@ -617,7 +617,7 @@ export default {
                       start: "2021-03-17T14:30:00+0000",
                       end:   "2021-03-17T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[15] : '',
+                  videoId: "yggxvDl0Ozc",
                   previewImg: 'howrpa.jpeg'
                 },
 
@@ -632,7 +632,7 @@ export default {
                       start: "2021-03-17T15:00:00+0000",
                       end:   "2021-03-17T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[16] : '',
+                  videoId: "D3lMuzRnvlU",
                   previewImg: 'customerjourney.jpeg'
                 },
 
@@ -656,7 +656,7 @@ export default {
                       start: "2021-03-17T16:00:00+0000",
                       end:   "2021-03-17T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[17] : '',
+                  videoId: "iEPiDX8YnB8",
                   previewImg: 'hyper.jpeg'
                 },
 
@@ -671,7 +671,7 @@ export default {
                       start: "2021-03-17T16:30:00+0000",
                       end:   "2021-03-17T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[18] : '',
+                  videoId: "y2OIqOPYklM",
                   previewImg: 'zerohero.jpeg'
                 },
 
@@ -694,7 +694,7 @@ export default {
                       start: "2021-03-17T17:30:00+0000",
                       end:   "2021-03-17T18:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[19] : '',
+                  videoId: "U5FzPgpMiqk",
                   previewImg: 'elisabeth.jpeg'
                 }
               ]
@@ -724,7 +724,7 @@ export default {
                       start: "2021-03-18T11:00:00+0000",
                       end:   "2021-03-18T12:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[20] : '',
+                  videoId: "Ju90-ewW_gM",
                   previewImg: 'what.jpeg'
                 },
 
@@ -738,7 +738,7 @@ export default {
                       start: "2021-03-18T12:00:00+0000",
                       end:   "2021-03-18T12:10:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[32] : '',
+                  videoId: "",
                   previewImg: 'qentinel.png'
                 },
 
@@ -761,7 +761,7 @@ export default {
                       start: "2021-03-18T12:30:00+0000",
                       end:   "2021-03-18T13:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[21] : '',
+                  videoId: "6F4659Ibf7o",
                   previewImg: 'jython.jpeg'
                 },
 
@@ -776,7 +776,7 @@ export default {
                       start: "2021-03-18T13:00:00+0000",
                       end:   "2021-03-18T13:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[22] : '',
+                  videoId: "FO7rWa2-s70",
                   previewImg: 'parsing.jpeg'
                 },
 
@@ -799,7 +799,7 @@ export default {
                       start: "2021-03-18T14:30:00+0000",
                       end:   "2021-03-18T15:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[23] : '',
+                  videoId: "_19SBMEObX8",
                   previewImg: 'libcore.jpeg'
                 },
 
@@ -825,7 +825,7 @@ export default {
                       start: "2021-03-18T15:00:00+0000",
                       end:   "2021-03-18T15:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[24] : '',
+                  videoId: "OiRm9Zv3edE",
                   previewImg: 'browser.jpeg'
                 },
 
@@ -850,7 +850,7 @@ export default {
                       start: "2021-03-18T16:00:00+0000",
                       end:   "2021-03-18T16:30:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[25] : '',
+                  videoId: "0vtj9Hg-LWU",
                   previewImg: 'kube.jpeg'
                 },
 
@@ -865,7 +865,7 @@ export default {
                       start: "2021-03-18T16:30:00+0000",
                       end:   "2021-03-18T16:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[26] : '',
+                  videoId: "uPv0DMMksuM",
                   previewImg: 'datadriver.jpeg'
                 },
 
@@ -880,7 +880,7 @@ export default {
                       start: "2021-03-18T16:45:00+0000",
                       end:   "2021-03-18T17:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[27] : '',
+                  videoId: "mSR-HPCBeEQ",
                   previewImg: 'soap.jpeg'
                 },
 
@@ -903,7 +903,7 @@ export default {
                       start: "2021-03-18T17:30:00+0000",
                       end:   "2021-03-18T17:45:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[28] : '',
+                  videoId: "ZPH4AMD5XZQ",
                   previewImg: 'camunda.jpeg'
                 },
 
@@ -918,7 +918,7 @@ export default {
                       start: "2021-03-18T17:45:00+0000",
                       end:   "2021-03-18T18:00:00+0000",
                   },
-                  videoId: this.videoIds && this.videoIds.length ? this.videoIds[29] : '',
+                  videoId: "nfoJXYNr3UA",
                   previewImg: 'takinglong.jpeg'
                 },
 
