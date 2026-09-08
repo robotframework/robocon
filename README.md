@@ -31,6 +31,7 @@ Each folder was exported from a branch of
 | 2023 | `archive-2023` | `index.html`, `404.html` + `dist/` |
 | 2024 | `archive-2024` | `index.html`, `404.html` + `dist/` |
 | 2025 | `archive-2025` | `docs/` (the Vite build output) |
+| 2026 | `archive/robocon-2026` in `samipe/rf-certs-page` | rebuilt, see below |
 
 ```bash
 git -C ../robocon archive archive-2023 index.html 404.html dist | tar -x -C 2023
@@ -76,6 +77,40 @@ base is passed, so a single line in the `<head>` sets it:
 That is the whole fix for 2022–2025. **No minified bundle was patched to change
 routing.**
 
+### 3. 2026 was rebuilt instead
+
+RoboCon 2026 is a Nuxt site whose repository still builds, so it was generated
+for its own address rather than patched:
+
+```bash
+NUXT_APP_BASE_URL=/2026/ npm run build:archive
+```
+
+Nuxt then writes `/2026/_nuxt/…`, `/2026/…/_payload.json` and its route base
+itself. Two things it does **not** touch, and they were fixed here afterwards:
+
+```bash
+python3 scripts/prefix-paths.py 2026 --only favicon,archive --write
+python3 scripts/prefix-paths.py 2026 --only helsinki,online --links --write
+```
+
+- the favicon links written literally in `nuxt.config.ts`, and the asset URLs
+  stored in content (`/archive/assets/…`). Served unfixed at `/2026/`, the
+  Helsinki page loads **112 broken images**; fixed, zero.
+- the two `<a href="/helsinki">` in the markup. Those are plain anchors, not
+  link components — a click is a real browser navigation, measured — so they
+  need the prefix. `--links` exists because the identical path also sits in the
+  router payload the same file carries, and prefixing *that* copy makes the
+  router prefix it twice (`/2026/2026/helsinki`).
+
+Nothing under `_nuxt/` is modified. Prefixing `buildAssetsDir:"/_nuxt/"` there
+is the same trap once more: Nuxt joins it with `baseURL` and the site then
+requests `/2026/2026/_nuxt/…` and loads nothing at all.
+
+One cosmetic leftover: `/2026/helsinki` and `/2026/online` log "Hydration
+completed but contains mismatches". Vue reconciles the DOM, and content,
+images, links and URLs were all verified correct; the front page logs nothing.
+
 ### Two 404s that were already there
 
 2019–2021 request a `site.webmanifest` that was never committed to the RoboCon
@@ -99,9 +134,10 @@ gets one thing wrong: from 2022 on each year is a single-page app that owns
 paths like `/2023/sponsor`, and opening one directly -- or just reloading after
 clicking through -- 404s there while it works in production.
 
-Verified against `serve.py`: `/2023/sponsor` and `/2025/program` render their
-real routes on a direct hit, assets still come from disk, the landing page is
-indexable and every year answers `X-Robots-Tag: noindex`.
+Verified against `serve.py`: `/2023/sponsor`, `/2025/program` and
+`/2026/helsinki` render their real routes on a direct hit, assets still come
+from disk, the landing page is indexable and every year answers
+`X-Robots-Tag: noindex`.
 
 ## The screenshots
 
