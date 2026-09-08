@@ -10,6 +10,7 @@ has to be deployable in ten years by copying files onto a host.
 ```
 index.html          the landing page
 serve.py            local dev server (mirrors vercel.json)
+scripts/            prefix-paths.py, for adding a year
 assets/             fonts + favicon for the landing page only
 thumbs/<year>.webp  1000x600 screenshot of each year's front page
 <year>/             the original build, essentially untouched
@@ -134,8 +135,160 @@ Domain: `archive.robocon.io` (CNAME to Vercel).
 
 ## Adding a year
 
-1. `mkdir 2026 && git -C ../robocon archive archive-2026 … | tar -x -C 2026`
-2. `python3 serve.py`, open `http://127.0.0.1:8099/2026/`, watch the console. Root-absolute
-   paths and a router 404 are the two things to look for; the fixes are above.
-3. Screenshot at 1000×600, convert to `thumbs/2026.webp`.
-4. Add a `<li>` to `index.html`.
+Two situations, and which one you are in decides almost everything.
+
+**The build can still be rebuilt** (a current Nuxt/Vite site, e.g. RoboCon
+2026) — then let the generator produce the year prefix and do almost nothing by
+hand. Case A.
+
+**The build is frozen** (old Node, no working toolchain — 2019 to 2025) — then
+the files get fixed where they lie. Case B.
+
+Either way, the pieces `vercel.json` and `serve.py` need no change: their rule
+matches `20[0-9]{2}`, so a new year is covered the moment the folder exists.
+
+---
+
+### Case A — the site can be rebuilt
+
+RoboCon 2026 lives in a Nuxt repository, and Nuxt reads its base path from
+`runtimeConfig.app.baseURL` — it strips exactly that prefix off
+`window.location.pathname` before routing. That is why the `<base href>` trick
+used for 2022–2025 **cannot** work here, and why rebuilding is not just the
+tidier option but the only clean one.
+
+**1. Build with the year as the base URL.**
+
+```bash
+cd ~/Source/robotframework/samipe/rf-certs-page
+# stop the dev server first -- build and dev share .nuxt/.data
+NUXT_APP_BASE_URL=/2026/ npm run build:archive
+```
+
+**2. Check that the prefix actually landed**, before doing anything else:
+
+```bash
+grep -o 'href="/[^"]*"' .output/public/index.html | sort -u | head
+```
+
+Every `/_nuxt/…`, `/_payload.json` and internal link must now start with
+`/2026/`. If they do not, the environment variable did not take: set it
+explicitly in `nuxt.config.ts` instead and rebuild.
+
+```ts
+app: { baseURL: '/2026/' }
+```
+
+**3. Copy the output in.**
+
+```bash
+cd ~/Source/robotframework/robocon-archive
+rm -rf 2026 && mkdir 2026
+cp -R ~/Source/robotframework/samipe/rf-certs-page/.output/public/ 2026/
+```
+
+**4. Fix what the generator does not prefix.** `baseURL` only governs paths the
+framework builds itself. Literal strings do not move: the favicon links written
+out in `nuxt.config.ts` (`/favicon/…`) and asset URLs stored in content
+(`/archive/assets/…`) both stay pointing at the domain root.
+
+```bash
+python3 scripts/prefix-paths.py 2026            # dry run, shows the count
+python3 scripts/prefix-paths.py 2026 --write
+```
+
+Then continue at **"Checking a new year"** below.
+
+---
+
+### Case B — the build is frozen
+
+**1. Export it** from its branch in `robotframework/robocon`:
+
+```bash
+mkdir 2026
+git -C ../robocon archive archive-2026 index.html 404.html dist | tar -x -C 2026
+```
+
+Look at the branch first — where the deployed build lives has moved around over
+the years (`static/`, then `dist/`, then `docs/`; see the table above).
+
+**2. Prefix the root-absolute paths.**
+
+```bash
+python3 scripts/prefix-paths.py 2026 --write
+```
+
+**3. If it is a single-page app, give it a base.** Open `/2026/` (step 1 under
+"Checking" below); if the site renders its own "404 – Not found" instead of the
+front page, its router does not know about the prefix. For a Vue Router built
+with `createWebHistory()` and no argument, one line in the `<head>` of
+`index.html` and `404.html` fixes it:
+
+```html
+<base href="/2026/">
+```
+
+That works because Vue Router falls back to the `<base href>` element when it
+is given no base. A Nuxt build does **not** — see Case A.
+
+**4. Webpack builds may also carry a runtime `publicPath`.** If assets are
+assembled in JavaScript rather than written into the HTML (2021 does this for
+one background video), find `.p="/"` in the runtime chunk and make it
+`.p="/2026/"`.
+
+---
+
+### Checking a new year
+
+```bash
+python3 serve.py
+```
+
+Open `http://127.0.0.1:8099/2026/` with the browser console visible, and check
+four things:
+
+1. **The front page renders** — not the site's own 404. If it does, the router
+   base is wrong (Case A step 2, or Case B step 3).
+2. **No failed requests.** A 404 on `/img/…` or `/assets/…` without the year
+   prefix means a literal path the rewrite did not catch.
+3. **The fonts are the conference's own**, not a fallback — those come from CSS
+   `url()` and are the usual thing to slip through.
+4. **Click an internal link, then reload the page.** The URL must stay under
+   `/2026/` and survive the reload; that is what `serve.py` reproduces from
+   `vercel.json` and what plain `http.server` gets wrong.
+
+404s that were already broken in the original build are worth keeping — the
+archive shows what was actually shipped. Note them here as with 2019–2021.
+
+### Putting it on the landing page
+
+**Screenshot** at 1000x600, matching the others:
+
+```bash
+# with serve.py running, capture http://127.0.0.1:8099/2026/ at 1000x600
+cwebp -q 80 2026.png -o thumbs/2026.webp && rm 2026.png
+```
+
+**Add a card** at the top of the `<ul class="years">` in `index.html`, copying
+the newest entry and changing year, dates and location. Take those from the
+archived page itself rather than from memory.
+
+```html
+<li>
+  <a class="card" href="/2026/">
+    <img class="shot" src="/thumbs/2026.webp" width="1000" height="600"
+         alt="The RoboCon 2026 website">
+    <span class="meta">
+      <span class="year">2026</span>
+      <span class="when">... Feb &middot; Helsinki<br>... Mar &middot; online</span>
+    </span>
+  </a>
+</li>
+```
+
+The second-newest card carries `loading="lazy"` from now on; the top two do
+not, so move that attribute down one card.
+
+Finally, note the new year in the table under "Where the years came from", and
+record anything you had to change to it under "What was changed, and why".
