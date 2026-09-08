@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoboCon Archive</title>
+<meta name="description" content="Every RoboCon website since 2019, preserved exactly as it was.">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="RoboCon Archive">
+<meta property="og:description" content="Every RoboCon website since 2019, preserved exactly as it was.">
+<meta property="og:url" content="https://archive.robocon.io/">
+<meta property="og:image" content="https://archive.robocon.io/thumbs/2025.webp">
+<link rel="canonical" href="https://archive.robocon.io/">
+
+<style>
+/* Fonts are copied from the 2024 build (assets/fonts) rather than loaded from a
+   CDN: this page has to keep working long after any font host has moved on. */
+@font-face {
+  font-family: 'RBCN';
+  src: url('/assets/fonts/RBCN23.woff2') format('woff2');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'OCRA';
+  src: url('/assets/fonts/OCRA.woff2') format('woff2');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+:root {
+  --bg: #141416;
+  --bg-card: #1c1c1f;
+  --line: #2e2e33;
+  --line-hover: #4a4a52;
+  --ink: #ffffff;
+  --ink-dim: #9a9aa4;
+  --accent: #00c0b5;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'OCRA', ui-monospace, SFMono-Regular, Menlo, monospace;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(3rem, 9vw, 7rem) clamp(1.1rem, 4vw, 2.5rem) 5rem;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────── */
+
+h1 {
+  font-family: 'RBCN', 'OCRA', monospace;
+  /* The RoboCon face is wide; clamp on vw keeps the wordmark on one line from
+     roughly 360px upwards, which is where the hyphen has to stay unbroken. */
+  font-size: clamp(1.55rem, 7.2vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  font-weight: normal;
+  color: var(--ink);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* RBCN23 has no visible hyphen -- the glyph advances exactly as wide as a space
+   and draws nothing (measured: both 60px at 100px font-size). The wordmark is
+   ROBOCON-ARCHIVE, so the dash is drawn instead, sized in em to match the
+   font's own stroke weight at any size. */
+.dash {
+  display: inline-block;
+  width: 0.46em;
+  height: 0.085em;
+  background: currentColor;
+  vertical-align: 0.28em;
+  margin: 0 0.06em;
+}
+
+.tagline {
+  font-family: 'OCRA', monospace;
+  color: var(--ink-dim);
+  margin: 1.4rem 0 0;
+  max-width: 46rem;
+  font-size: clamp(0.82rem, 2.2vw, 0.95rem);
+  letter-spacing: 0.02em;
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+  margin: clamp(2.5rem, 6vw, 4rem) 0 clamp(2rem, 5vw, 3rem);
+}
+
+/* ── Year grid ──────────────────────────────────────────────────────── */
+
+.years {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+  gap: clamp(1.2rem, 3vw, 2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--line-hover);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.card:focus-visible { border-color: var(--accent); }
+
+.shot {
+  display: block;
+  width: 100%;
+  /* Without this the width/height attributes on the img win as presentational
+     hints, both dimensions count as given, and aspect-ratio is ignored -- the
+     shot then renders 600px tall and object-fit crops into it. */
+  height: auto;
+  aspect-ratio: 1000 / 600;
+  object-fit: cover;
+  object-position: top center;
+  background: #0d0d0f;
+  border-bottom: 1px solid var(--line);
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem 1.15rem 1.1rem;
+}
+
+.year {
+  font-family: 'RBCN', 'OCRA', monospace;
+  font-size: 1.9rem;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+.when {
+  font-family: 'OCRA', monospace;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--ink-dim);
+  text-align: right;
+  letter-spacing: 0.02em;
+}
+
+.card:hover .year { color: var(--accent); }
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+
+footer {
+  font-family: 'OCRA', monospace;
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  letter-spacing: 0.02em;
+}
+
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+.note {
+  border-left: 2px solid var(--line);
+  padding-left: 1rem;
+  margin-bottom: 1.6rem;
+  max-width: 46rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+  .card:hover, .card:focus-visible { transform: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header>
+    <h1 aria-label="ROBOCON-ARCHIVE">ROBOCON<span class="dash" aria-hidden="true"></span>ARCHIVE</h1>
+    <p class="tagline">
+      Every RoboCon website since 2019, kept exactly as it was on the day the
+      conference ended. Nothing has been rebuilt or restyled.
+    </p>
+  </header>
+
+  <hr class="rule">
+
+  <ul class="years">
+
+    <li>
+      <a class="card" href="/2025/">
+        <img class="shot" src="/thumbs/2025.webp" width="1000" height="600"
+             alt="The RoboCon 2025 website">
+        <span class="meta">
+          <span class="year">2025</span>
+          <span class="when">11–14 Feb · Helsinki<br>4–7 Mar · online</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="card" href="/2024/">
+        <img class="shot" src="/thumbs/2024.webp" width="1000" height="600"
+             alt="The RoboCon 2024 website">
+        <span class="meta">
+          <span class="year">2024</span>
+          <span class="when">27 Feb – 1 Mar<br>Helsinki &amp; online</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="card" href="/2023/">
+        <img class="shot" src="/thumbs/2023.webp" width="1000" height="600"
+             alt="The RoboCon 2023 website" loading="lazy">
+        <span class="meta">
+          <span class="year">2023</span>
+          <span class="when">19–20 Jan<br>Helsinki &amp; online</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="card" href="/2022/">
+        <img class="shot" src="/thumbs/2022.webp" width="1000" height="600"
+             alt="The RoboCon 2022 website" loading="lazy">
+        <span class="meta">
+          <span class="year">2022</span>
+          <span class="when">17–20 May<br>Helsinki &amp; online</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="card" href="/2021/">
+        <img class="shot" src="/thumbs/2021.webp" width="1000" height="600"
+             alt="The RoboCon 2021 website" loading="lazy">
+        <span class="meta">
+          <span class="year">2021</span>
+          <span class="when">16–18 Mar<br>online</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="card" href="/2020/">
+        <img class="shot" src="/thumbs/2020.webp" width="1000" height="600"
+             alt="The RoboCon 2020 website" loading="lazy">
+        <span class="meta">
+          <span class="year">2020</span>
+          <span class="when">14–17 Jan<br>Helsinki</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="card" href="/2019/">
+        <img class="shot" src="/thumbs/2019.webp" width="1000" height="600"
+             alt="The RoboCon 2019 website" loading="lazy">
+        <span class="meta">
+          <span class="year">2019</span>
+          <span class="when">17 Jan<br>Helsinki</span>
+        </span>
+      </a>
+    </li>
+
+  </ul>
+
+  <footer>
+    <p class="note">
+      These are frozen snapshots. Ticket shops, live schedules and video
+      embeds pointed at services that have since moved on, so some of them no
+      longer answer.
+    </p>
+    <p>
+      <a href="https://robocon.io/">robocon.io</a> ·
+      <a href="https://robotframework.org/">robotframework.org</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# The landing page is the only thing worth indexing; the archived years carry
+# canonical tags pointing at the live robocon.io and would compete with it.
+# Enforced for real by the X-Robots-Tag header in vercel.json.
+User-agent: *
+Allow: /$
+Disallow: /2019/
+Disallow: /2020/
+Disallow: /2021/
+Disallow: /2022/
+Disallow: /2023/
+Disallow: /2024/
+Disallow: /2025/
+
+Sitemap: https://archive.robocon.io/sitemap.xml
