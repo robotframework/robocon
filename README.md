@@ -9,6 +9,7 @@ has to be deployable in ten years by copying files onto a host.
 
 ```
 index.html          the landing page
+serve.py            local dev server (mirrors vercel.json)
 assets/             fonts + favicon for the landing page only
 thumbs/<year>.webp  1000x600 screenshot of each year's front page
 <year>/             the original build, essentially untouched
@@ -84,6 +85,23 @@ was actually shipped.
 The same goes for `MÃ¤RZ` on the 2021 front page. That mojibake is in the
 original bundle (verified byte-identical), not something the migration caused.
 
+## Running it locally
+
+```bash
+python3 serve.py          # http://127.0.0.1:8099
+python3 serve.py 3001     # another port
+```
+
+`serve.py` mirrors the two rules in `vercel.json` and nothing else, so what you
+see locally is what Vercel serves. `python3 -m http.server` works too, but it
+gets one thing wrong: from 2022 on each year is a single-page app that owns
+paths like `/2023/sponsor`, and opening one directly -- or just reloading after
+clicking through -- 404s there while it works in production.
+
+Verified against `serve.py`: `/2023/sponsor` and `/2025/program` render their
+real routes on a direct hit, assets still come from disk, the landing page is
+indexable and every year answers `X-Robots-Tag: noindex`.
+
 ## The screenshots
 
 Taken once at a 1000×600 viewport against a local server, then converted to
@@ -95,7 +113,7 @@ blank tile no one notices.
 To retake them:
 
 ```bash
-python3 -m http.server 8099          # from the repository root
+python3 serve.py                     # from the repository root
 # then screenshot http://127.0.0.1:8099/<year>/ at 1000x600
 cwebp -q 80 2023.png -o thumbs/2023.webp
 ```
@@ -117,7 +135,7 @@ Domain: `archive.robocon.io` (CNAME to Vercel).
 ## Adding a year
 
 1. `mkdir 2026 && git -C ../robocon archive archive-2026 … | tar -x -C 2026`
-2. Open `http://127.0.0.1:8099/2026/` and watch the console. Root-absolute
+2. `python3 serve.py`, open `http://127.0.0.1:8099/2026/`, watch the console. Root-absolute
    paths and a router 404 are the two things to look for; the fixes are above.
 3. Screenshot at 1000×600, convert to `thumbs/2026.webp`.
 4. Add a `<li>` to `index.html`.
