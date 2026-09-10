@@ -1,4 +1,4 @@
-import{t as v,I as g,d as x,q as w,r as y,x as a,y as o,F as m,z as _,G as d,J as b,K as u,H as p,v as e,L as F}from"./BGxP2kZB.js";import{c as C,X as P,_ as k}from"./CfoI5HQk.js";import{_ as h}from"./DlAUqK2U.js";function G(r,t){const{title:f,titleTemplate:s,...i}=r;return v({title:f,titleTemplate:s,_flatMeta:i},{...t,transform(l){const n=g({...l._flatMeta});return delete l._flatMeta,{...l,meta:n}}})}/**
+import{t as v,I as g,d as x,q as w,r as y,x as a,y as o,F as m,z as _,G as d,J as b,K as u,H as p,v as e,L as F}from"./eGkcbNGJ.js";import{c as C,X as P,_ as k}from"./CwPtQz72.js";import{_ as h}from"./DlAUqK2U.js";function G(r,t){const{title:f,titleTemplate:s,...i}=r;return v({title:f,titleTemplate:s,_flatMeta:i},{...t,transform(l){const n=g({...l._flatMeta});return delete l._flatMeta,{...l,meta:n}}})}/**
  * @license lucide-vue-next v0.471.0 - ISC
  *
  * This source code is licensed under the ISC license.

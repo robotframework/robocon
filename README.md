@@ -257,7 +257,7 @@ app: { baseURL: '/2026/' }
 **3. Copy the output in.**
 
 ```bash
-cd ~/Source/robotframework/robocon-archive
+cd ~/Source/robotframework/robocon
 rm -rf 2026 && mkdir 2026
 cp -R ~/Source/robotframework/samipe/rf-certs-page/.output/public/ 2026/
 ```
