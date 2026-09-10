@@ -3,15 +3,118 @@
   "trailingSlash": true,
   "rewrites": [
     {
-      "source": "/:jahr(20[0-9]{2})/:path*",
-      "destination": "/:jahr/index.html"
+      "source": "/2019/:path*",
+      "destination": "/2019/index.html"
+    },
+    {
+      "source": "/2020/:path*",
+      "destination": "/2020/index.html"
+    },
+    {
+      "source": "/2021/:path*",
+      "destination": "/2021/index.html"
+    },
+    {
+      "source": "/2022/:path*",
+      "destination": "/2022/index.html"
+    },
+    {
+      "source": "/2023/:path*",
+      "destination": "/2023/index.html"
+    },
+    {
+      "source": "/2024/:path*",
+      "destination": "/2024/index.html"
+    },
+    {
+      "source": "/2025/:path*",
+      "destination": "/2025/index.html"
+    },
+    {
+      "source": "/2026/:path*",
+      "destination": "/2026/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/:jahr(20[0-9]{2})/:path*",
+      "source": "/2019/:path*",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/2020/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/2021/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/2022/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/2023/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/2024/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/2025/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/2026/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/:jahr(20[0-9][0-9])/:path*",
+      "headers": [
+        {
+          "key": "X-Rule-Regex",
+          "value": "matched"
+        }
       ]
     }
   ]
