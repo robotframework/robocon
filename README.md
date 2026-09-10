@@ -91,17 +91,18 @@ itself. Two things it does **not** touch, and they were fixed here afterwards:
 
 ```bash
 python3 scripts/prefix-paths.py 2026 --only favicon,archive --write
-python3 scripts/prefix-paths.py 2026 --only helsinki,online --links --write
 ```
 
 - the favicon links written literally in `nuxt.config.ts`, and the asset URLs
   stored in content (`/archive/assets/…`). Served unfixed at `/2026/`, the
   Helsinki page loads **112 broken images**; fixed, zero.
-- the two `<a href="/helsinki">` in the markup. Those are plain anchors, not
-  link components — a click is a real browser navigation, measured — so they
-  need the prefix. `--links` exists because the identical path also sits in the
-  router payload the same file carries, and prefixing *that* copy makes the
-  router prefix it twice (`/2026/2026/helsinki`).
+
+The navbar and the logo are plain `<a>` elements rather than link components, so
+a click is a real browser navigation and the router never joins the base path
+for them. They used to need a second pass (`--links`); the source repository now
+joins `runtimeConfig.app.baseURL` itself, so the build arrives with
+`/2026/`, `/2026/online` and `/2026/helsinki` already in place. `--links`
+remains in the script for a build that predates that fix.
 
 Nothing under `_nuxt/` is modified. Prefixing `buildAssetsDir:"/_nuxt/"` there
 is the same trap once more: Nuxt joins it with `baseURL` and the site then
@@ -228,9 +229,14 @@ framework builds itself. Literal strings do not move: the favicon links written
 out in `nuxt.config.ts` (`/favicon/…`) and asset URLs stored in content
 (`/archive/assets/…`) both stay pointing at the domain root.
 
+`--only` is not optional here. A site rebuilt with its own base URL also
+*stores* the pieces it joins at runtime, and prefixing those (`_nuxt`, the
+routes in the payload) yields `/2026/2026/…` — the page then loads nothing at
+all. Name only what no router and no config will touch:
+
 ```bash
-python3 scripts/prefix-paths.py 2026            # dry run, shows the count
-python3 scripts/prefix-paths.py 2026 --write
+python3 scripts/prefix-paths.py 2026 --only favicon,archive   # dry run
+python3 scripts/prefix-paths.py 2026 --only favicon,archive --write
 ```
 
 Then continue at **"Checking a new year"** below.
