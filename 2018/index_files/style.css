@@ -1,0 +1,226 @@
+/*
+Theme Name: StanleyWP
+Theme URI: http://gentsthemes.com
+Description: Responsive WordPress theme with all the Twitter Bootstrap elements and features.
+
+Author: Brad Williams & Carlos Alvarez & Carlos Alvarez
+Author URI: http://gentsthemes.com
+Version: 3.0.3
+Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, bootstrap, twitter
+
+Copyright (C) 2011-2014 Gents Themes
+License: GNU General Public License, version 3 (GPLv3)
+License URI: license.txt
+	
+CREATE CHILD THEME.
+See: http://codex.wordpress.org/Child_Themes
+	
+CSS Rules: Sorted alphabetically for better organization.
+*/
+
+
+
+body {
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+    background: #000;
+	color: #373437;
+	font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+	font-size: 17px;
+	font-weight: 400;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 { color: #000; font-family: OCR A, Courier New; font-weight: 700; }
+
+h1 { color: #f5f5f6; font-size: 28px; padding: 10px; background-color: #01c0b5; margin-bottom: 30px; text-transform: uppercase; }
+
+h2 { color: #01c0b5; font-size: 20px; padding-left: 10px; text-transform: uppercase; }
+
+h3 { color: #01c0b5; font-size: 20px; margin-bottom: 10px; text-transform: uppercase; }
+
+h4 { color: #01c0b5; font-size: 25px; padding: 10px; margin-bottom: 30px; }
+
+.author-avatar img { -webkit-border-radius: 95px; -moz-border-radius: 95px; border-radius: 95px; }
+
+
+/* Paragraph & Typographic */
+p { font-size: 17px; line-height: 25px; padding-left: 20px; padding-right: 20px; }
+
+/* Links */
+a {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	color: #01c0b5;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+	word-wrap: break-word;
+	cursor:pointer;
+}
+
+a:hover,
+a:focus { color: #d8dbdc; outline: 0; text-decoration: none; }
+
+a:before,
+a:after {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #01c0b5;
+	display: block;
+	height: 1px;
+    max-width: 80%;
+    margin-top: -8px;
+    margin-bottom: -3px;
+}
+
+
+.navbar { margin-bottom: 0px; text-transform: uppercase; font-family: OCR A, Courier New; }
+
+.navbar-inverse { padding-bottom: 0px; padding-top: 0px; }
+
+.navbar-inverse { background-color: #f5f5f6; border-color: #f5f5f6; }
+
+.navbar-inverse .navbar-nav > li > a { color: #01c0b5; font-size: 20px; font-weight: bold; padding-top: 15px; }
+
+.navbar-inverse .navbar-nav > li > a:hover { color: #01c0b5; }
+
+.navbar-brand { display: none; }
+
+.navbar-inverse .navbar-brand { color: #f5f5f6; }
+
+.navbar-inverse .navbar-toggle { border-color: transparent; background-color: #01c0b5; }
+
+.navbar-inverse .navbar-toggle:hover { border-color: transparent; background-color: #000000; }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover { background-color: transparent; color: #01c0b5; }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { background-color: transparent; color: #01c0b5; font-weight: bold; }
+
+.progress-bar-theme { background-color: #01c0b5; }
+
+/* Helpers */
+
+.mt { margin-bottom: 40px; margin-top: 40px; }
+
+.pt { padding-bottom: 50px; padding-top: 50px; }
+
+
+/* +++++ WRAP SECTIONS +++++ */
+
+#ww { background-color: transparent; }
+
+#footer { background-color: #01c0b5; padding-top: 60px; text-align: center; min-height: 300px; }
+
+#footer p { color: #f5f5f6; }
+
+#footer a { color: #f5f5f6; }
+
+#footer a:hover { color: #f5f5f6; }
+
+#footer h4 { color: #000000; text-transform: uppercase; }
+
+
+/* +++++ Color Wraps / Blog Page +++++ */
+
+#grey { background-color: #f5f5f6; padding-bottom: 60px; padding-top: 60px; }
+
+#white { background-color: #f5f5f6; padding-bottom: 60px; padding-top: 60px; }
+
+
+
+/* Blog Date*/
+bd {
+	color: #d2d2d2;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* Blog Author*/
+ba { font-size: 12px; padding-left: 5px; text-transform: uppercase; }
+
+/* Blog Quote */
+.bq { font-size: 22px; padding-top: 30px; }
+
+/* Blog Tags */
+bt { font-size: 12px; }
+
+/* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
+/* Effects also are controled by hover.zoom.js */
+.zoom { 
+    display:block; 
+    position:relative; 
+    overflow:hidden; 
+    background:transparent url(/web/20180309163213im_/https://robocon.io/wp-content/themes/stanleywp/images/loader.gif) no-repeat center;
+}
+
+
+.zoomOverlay {
+    position:absolute;
+    top:0; left:0;
+    bottom:0; right:0;
+    display:none;
+    background-image:url(/web/20180309163213im_/https://robocon.io/wp-content/themes/stanleywp/images/zoom.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.zoom2 {
+	opacity: 1;
+}
+
+.zoom2:hover {
+	opacity: 0.5;
+}
+
+/* glyphicon Configuration */
+
+.glyphicon { color: #f5f5f6; font-size: 20px; padding-top: 9px; }
+
+/* WP User Avatar */
+
+.wp-user-avatar {margin: 0;}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+font-family: OCR A;
+src: url(./fonts/OCR_A_Std_Regular.ttf) format("truetype");
+}
+/*
+     FILE ARCHIVED ON 16:32:13 Mar 09, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:36:39 Sep 10, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.399
+  load_resource: 67.372
+  PetaboxLoader3.resolve: 30.621
+  PetaboxLoader3.datanode: 10.584
+*/

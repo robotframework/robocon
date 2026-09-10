@@ -20,10 +20,12 @@ vercel.json         SPA rewrites + noindex for the archived years
 ## Where the years came from
 
 Each folder was exported from a branch of
-[`robotframework/robocon`](https://github.com/robotframework/robocon):
+[`robotframework/robocon`](https://github.com/robotframework/robocon), except
+2018, which predates that repository and was recovered from the Wayback Machine:
 
 | Year | Branch | Exported from |
 |------|--------|---------------|
+| 2018 | none | Wayback Machine, snapshot of 2018-02-18 — see below |
 | 2019 | `archive-2019` | `index.html` + `static/` |
 | 2020 | `archive-2020` | `index.html` + `static/` |
 | 2021 | `archive-2021` | `index.html` + `static/` |
@@ -41,8 +43,11 @@ git -C ../robocon archive archive-2023 index.html 404.html dist | tar -x -C 2023
 
 The builds were made for a site at the **root** of `robocon.io`. Two things
 break when the same files are served from `/2023/` instead, and each needed one
-kind of edit. Everything else is byte-identical to the original — 2019, 2020 and
-2021 have two changed files each, 2022 has two, 2023 and 2024 four.
+kind of edit. Beyond that, only two deliberate departures from the original
+exist: the Wayback cleanup in 2018, and the removal of Google Analytics from
+2018–2021 (both below). Everything else is byte-identical — 2019, 2020 and 2021
+have two changed files each plus that one script block, 2022 has two, 2023 and
+2024 four.
 
 ### 1. Root-absolute asset paths
 
@@ -111,6 +116,39 @@ requests `/2026/2026/_nuxt/…` and loads nothing at all.
 One cosmetic leftover: `/2026/helsinki` and `/2026/online` log "Hydration
 completed but contains mismatches". Vue reconciles the DOM, and content,
 images, links and URLs were all verified correct; the front page logs nothing.
+
+### 4. 2018 was recovered from the Wayback Machine
+
+There is no branch for 2018 — the site predates the `robocon` repository. The
+page was saved from a Wayback snapshot of 2018-02-18, which means the file
+arrived carrying the archive's own scaffolding rather than only the original
+site. Removed, in this order:
+
+- the injected toolbar, the playback engine (`bundle-playback.js`, `wombat.js`,
+  `ruffle.js`, the `__wm.*` calls) and the "FILE ARCHIVED ON" note. The HTML went
+  from 43 KB to 24 KB.
+- every `web.archive.org/web/<timestamp>/` prefix, so the original URLs stand on
+  their own again. They come in two shapes — with protocol and protocol-relative
+  (`//web.archive.org/…`), the latter under a *different* timestamp — and both
+  occur inside `style.css` and `magnific.min.js` as well as the HTML.
+- two counters that would otherwise have fired on every visit: `athena.js` and
+  `analytics.js`, both **archive.org** telemetry rather than the site's own.
+- the WordPress emoji block, which pulled `wp-emoji-release.min.js` from the live
+  domain and got a 403 there. That file is not in the archive and could not be
+  recovered.
+
+Three things had to be fetched, because they were referenced but never saved:
+13 favicons, `manifest.json`, and the OCR font that `style.css` asks for. The
+video came in as a saved copy of the YouTube player; the iframe now points at
+the real playlist instead, so it plays again.
+
+### 5. Google Analytics removed from 2018–2021
+
+Those four years shipped the classic `analytics.js` snippet (`UA-106835747-1`,
+2019 uses `-2`). It was taken out of each `index.html`. Universal Analytics was
+shut down in 2023, so the property is dead and the request pointless — and an
+archive that quietly reports its visitors to a third party is not what anyone
+is looking for here. 2022 onwards never had it.
 
 ### Two 404s that were already there
 
